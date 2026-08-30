@@ -1,0 +1,94 @@
+version: 0.1
+name: TurtleBlock WorldSpec Core Lexicon
+
+interaction_modes:
+  direct:
+    description: Concrete enough to compile without hiding a major interpretive choice.
+  interpretive:
+    description: Uses semantic, aesthetic, cultural, social, or narrative language that can map to multiple designs.
+  reflective:
+    description: Evaluates an existing world, build, choice, or revision.
+
+operations:
+  create:
+    aliases: [make, build, add, generate, place, compose]
+  modify:
+    aliases: [change, alter, edit, revise, adjust, transform]
+  move:
+    aliases: [move, shift, relocate, translate]
+  scale:
+    aliases: [scale, enlarge, shrink, widen, narrow, raise, lower]
+  rotate:
+    aliases: [rotate, turn, angle, orient]
+  duplicate:
+    aliases: [copy, repeat, clone]
+  remove:
+    aliases: [remove, delete, clear]
+  replace:
+    aliases: [replace, swap, substitute]
+  connect:
+    aliases: [connect, join, bridge, link]
+  separate:
+    aliases: [separate, divide, isolate, disconnect]
+  juxtapose:
+    aliases: [juxtapose, compare, place-beside, contrast]
+  remix:
+    aliases: [remix, mashup, combine, merge]
+  preserve:
+    aliases: [preserve, protect, keep, retain, lock]
+  restore:
+    aliases: [restore, revert, undo]
+  fork:
+    aliases: [fork, branch, alternate, duplicate-version]
+  test:
+    aliases: [test, simulate, try, probe, check]
+  inspect:
+    aliases: [inspect, observe, examine, measure]
+  reflect:
+    aliases: [reflect, explain, evaluate, critique, reconsider]
+
+form:
+  dimensions: [height, width, length, thickness, volume, scale]
+  composition: [symmetry, asymmetry, repetition, variation, density, openness, enclosure, hierarchy, rhythm]
+  geometry: [linear, curved, angular, stepped, radial, organic, irregular, modular]
+  orientation: [north, south, east, west, vertical, horizontal, diagonal, facing, alignment]
+
+space:
+  elements: [room, path, threshold, entrance, exit, corridor, courtyard, plaza, edge, center, district, boundary, bridge, tower, wall, landscape]
+  relationships: [inside, outside, above, below, beside, between, near, far, connected, separated, nested, overlapping]
+  circulation: [access, route, flow, bottleneck, gathering, dispersal, visibility, sightline]
+
+material:
+  properties: [palette, texture, contrast, translucency, roughness, weathering, decay, repair, ornament, pattern]
+  qualities: [warm, cool, heavy, light, polished, raw, improvised, monumental, fragile]
+
+function:
+  concepts: [capacity, accessibility, shelter, defense, movement, gathering, production, storage, power, food, water, transport, communication, visibility, privacy]
+
+meaning:
+  dimensions:
+    aesthetic: [beautiful, ugly, playful, austere, ornate, minimal, chaotic, harmonious]
+    emotional: [welcoming, intimidating, calm, anxious, joyful, lonely, oppressive, hopeful]
+    narrative: [ancient, futuristic, abandoned, repaired, ceremonial, improvised, prosperous, contested]
+    social: [communal, private, hierarchical, democratic, controlled, inclusive, exclusive, collaborative]
+    cultural: [sacred, civic, domestic, industrial, vernacular, monumental]
+  resolution_rule: >-
+    Meaning terms are interpretive hypotheses, not fixed truth. When a term could reasonably map to substantially different spatial or material choices, Turtle should ask the learner what the term means to them or present a small set of revisable interpretations.
+
+inquiry:
+  verbs: [wonder, ask, explore, discover, investigate, compare, test, notice, explain, challenge]
+  prompts:
+    - What are you trying to make possible here?
+    - What do you notice when you walk through it?
+    - What feels wrong or unfinished?
+    - Which part matters most to preserve?
+    - What would you like to test rather than decide in advance?
+
+reflection:
+  dimensions: [intention, observation, surprise, problem, consequence, interpretation, next_move]
+
+constraints:
+  types: [preserve, exclude, require, prefer, avoid, limit, minimum, maximum]
+
+history:
+  events: [created, revised, tested, reflected, forked, restored, published]
