@@ -1,0 +1,10 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "turtleblockai-platform",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-08-30",
+  "assets": {
+    "directory": "./public",
+    "binding": "ASSETS"
+  }
+}
