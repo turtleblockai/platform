@@ -3,25 +3,60 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>TurtleBlock AI</title>
+  <title>TurtleBlock AI — WorldSpec</title>
   <meta name="description" content="Constructivist AI agents for building, exploring, and iterating computational worlds in Minecraft and beyond." />
   <style>
     :root { color-scheme: dark; font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
     * { box-sizing: border-box; }
-    body { margin: 0; min-height: 100vh; display: grid; place-items: center; background: #0b0f0d; color: #eef7f0; }
-    main { width: min(900px, calc(100% - 2rem)); padding: 4rem 1rem; }
+    body { margin: 0; background: #0b0f0d; color: #eef7f0; }
+    main { width: min(1050px, calc(100% - 2rem)); margin: 0 auto; padding: 4rem 1rem 6rem; }
     .mark { font-size: clamp(3rem, 12vw, 7rem); line-height: 1; }
     h1 { margin: 1rem 0 .5rem; font-size: clamp(2.5rem, 8vw, 5.5rem); letter-spacing: -.04em; }
-    p { max-width: 720px; margin: 0; font-size: clamp(1.1rem, 2.4vw, 1.6rem); line-height: 1.5; color: #b9c9bc; }
+    h2 { margin-top: 4rem; font-size: clamp(1.6rem, 4vw, 2.5rem); }
+    p, li { font-size: 1.08rem; line-height: 1.65; color: #b9c9bc; }
+    a { color: #9fe0ad; }
+    .lede { max-width: 760px; font-size: clamp(1.1rem, 2.4vw, 1.6rem); }
     .tag { margin-top: 2rem; display: inline-block; padding: .55rem .8rem; border: 1px solid #36513c; border-radius: 999px; color: #d8eadb; font-size: .95rem; }
+    .loop { margin: 2rem 0; padding: 1rem 1.2rem; border-left: 3px solid #6fa87a; background: #101712; color: #d8eadb; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; line-height: 1.7; overflow-x: auto; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 1rem; margin-top: 1.5rem; }
+    .card { padding: 1.25rem; border: 1px solid #26382b; border-radius: 14px; background: #0f1511; }
+    .card strong { display: block; margin-bottom: .4rem; color: #eef7f0; }
+    .card p { margin: 0; font-size: .98rem; }
+    .quote { max-width: 820px; margin: 2rem 0; padding: 1.2rem 1.4rem; border: 1px solid #26382b; border-radius: 14px; color: #d8eadb; font-size: 1.12rem; line-height: 1.6; }
+    footer { margin-top: 5rem; padding-top: 2rem; border-top: 1px solid #26382b; color: #78947e; font-size: .9rem; }
   </style>
 </head>
 <body>
   <main>
     <div class="mark" aria-hidden="true">🐢🧱</div>
     <h1>TurtleBlock AI</h1>
-    <p>Constructivist AI agents for building, exploring, and iterating computational worlds in Minecraft and beyond.</p>
+    <p class="lede">Constructivist AI agents for building, exploring, and iterating computational worlds in Minecraft and beyond.</p>
     <div class="tag">Building in public.</div>
+
+    <h2>WorldSpec is underway.</h2>
+    <p>WorldSpec is the edition-independent representation layer between a learner's idea, a conversation with Turtle, and a world that can be built, inhabited, tested, reflected upon, and revised.</p>
+
+    <div class="loop">learner intent → agent dialogue → WorldSpec → build → inhabit → notice → reflect → revise ↺</div>
+
+    <div class="grid">
+      <div class="card"><strong>Schema</strong><p>What a world can represent: objects, relationships, form, function, materials, meaning, constraints, reflection, and history.</p></div>
+      <div class="card"><strong>Lexicon</strong><p>The shared vocabulary for making and thinking: create, move, scale, remix, preserve, test, inspect, reflect, fork, restore, and more.</p></div>
+      <div class="card"><strong>Interaction grammar</strong><p>Rules for when Turtle should execute directly, expose an interpretation, ask a question, preserve ambiguity, or invite reflection.</p></div>
+    </div>
+
+    <h2>Not an AI world vending machine.</h2>
+    <p>The learner remains the designer and producer. A concrete request can become a direct operation. A statement such as “make this place feel less authoritarian” should not silently become a universal architectural recipe. Turtle should help the learner articulate what that idea means here, make assumptions visible, and keep the resulting interpretation revisable.</p>
+
+    <div class="quote">Ideas become things to think with. Build them. Walk through them. Notice what happened. Change them.</div>
+
+    <h2>Intellectual lineage</h2>
+    <p>TurtleBlock AI grows from Dr. Bryan P. Sanders' work on Critical Techno Constructivism, STEAMHAMLET, Minecraft as a learning environment, purposeful play, and co-active emergence. That work emphasizes student voice, open-ended inquiry, collaborative making, multiple entry points, and computers as construction spaces rather than delivery machines.</p>
+    <p><a href="https://steamhamlet.com">Explore the Temporal Scrolls of STEAMHAMLET</a> · <a href="https://github.com/turtleblockai/platform/tree/main/worldspec">Read WorldSpec on GitHub</a> · <a href="https://github.com/turtleblockai/platform">Follow the public build</a></p>
+
+    <h2>Current build</h2>
+    <p>WorldSpec v0.1 now includes a public schema, core lexicon, interaction grammar, and first example. Next: turn natural-language learner interactions into proposed WorldSpec operations, then connect those operations to Minecraft Java/Paper and Minecraft Education/Bedrock adapters.</p>
+
+    <footer>TurtleBlock AI · open research and development · built in public by the turtleblockai organization.</footer>
   </main>
 </body>
 </html>
