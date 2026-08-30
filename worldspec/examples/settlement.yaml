@@ -1,0 +1,129 @@
+version: "0.1"
+
+project:
+  id: riverside-settlement
+  title: Riverside Settlement
+  authors:
+    - learner
+  platform: agnostic
+
+intent:
+  mode: interpretive
+  statement: >-
+    Build a small riverside settlement that feels communal and improvised,
+    but not chaotic. Keep the river important to daily life.
+  inquiries:
+    - How should people move between homes, food, water, and gathering spaces?
+    - What makes a place feel communal without making every building the same?
+  assumptions:
+    - Communal is not being treated as a fixed architectural style.
+    - The learner should review how the social meaning maps to spatial choices.
+
+world:
+  setting:
+    biome: temperate-river
+    terrain: existing
+  objects:
+    - id: gathering-square
+      kind: plaza
+      name: Shared Square
+      geometry:
+        shape: irregular
+        width: 13
+        length: 17
+      materials:
+        - mixed-stone
+        - timber
+      functions:
+        - gathering
+        - communication
+      meaning:
+        - communal
+        - improvised
+      manual_edits_preserved: true
+
+    - id: fishing-dock
+      kind: dock
+      name: River Dock
+      functions:
+        - food
+        - transport
+      meaning:
+        - practical
+        - shared
+      manual_edits_preserved: true
+
+    - id: homes
+      kind: district
+      name: Homes
+      geometry:
+        repetition: low
+        variation: high
+      functions:
+        - shelter
+        - privacy
+      meaning:
+        - vernacular
+        - communal
+      manual_edits_preserved: true
+
+  relationships:
+    - type: near
+      from: fishing-dock
+      to: gathering-square
+    - type: connected
+      from: homes
+      to: gathering-square
+      properties:
+        route: walkable
+
+meaning:
+  aesthetic:
+    - irregular
+    - handmade
+  emotional:
+    - welcoming
+  social:
+    - communal
+  learner_definitions:
+    communal: >-
+      Shared spaces should matter, but residents should still have visibly distinct homes.
+    improvised: >-
+      The settlement should look as if it grew through many small decisions over time.
+
+operations:
+  - action: create
+    target: gathering-square
+    status: proposed
+  - action: create
+    target: fishing-dock
+    status: proposed
+  - action: create
+    target: homes
+    status: proposed
+
+constraints:
+  - type: preserve
+    property: terrain.river
+  - type: avoid
+    property: world.objects.uniformity
+    value: high
+  - type: require
+    property: circulation.homes-to-water
+
+reflection:
+  intention: >-
+    Make the river and shared square feel like reasons for the settlement to exist.
+  observation: ""
+  surprise: ""
+  problem: ""
+  consequence: ""
+  interpretation: ""
+  next_move: Walk through the first build and decide whether the square actually feels shared.
+
+history:
+  - event: created
+    timestamp: "2026-08-30T23:00:00Z"
+    actor: learner+turtle
+    summary: First provisional settlement spec.
+    revision: r1
