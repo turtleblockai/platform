@@ -1,0 +1,156 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://turtleblockai.com/worldspec/schema/v0.1.json",
+  "title": "TurtleBlock WorldSpec",
+  "description": "Edition-independent representation of a learner-directed computational world and its revision state.",
+  "type": "object",
+  "required": ["version", "project", "intent", "world", "history"],
+  "properties": {
+    "version": { "const": "0.1" },
+    "project": {
+      "type": "object",
+      "required": ["id", "title"],
+      "properties": {
+        "id": { "type": "string" },
+        "title": { "type": "string" },
+        "authors": { "type": "array", "items": { "type": "string" } },
+        "platform": { "type": "string", "enum": ["minecraft-java", "minecraft-education", "bedrock", "agnostic"] }
+      },
+      "additionalProperties": true
+    },
+    "intent": {
+      "type": "object",
+      "required": ["mode", "statement"],
+      "properties": {
+        "mode": { "type": "string", "enum": ["direct", "interpretive", "reflective"] },
+        "statement": { "type": "string" },
+        "inquiries": { "type": "array", "items": { "type": "string" } },
+        "assumptions": { "type": "array", "items": { "type": "string" } }
+      },
+      "additionalProperties": true
+    },
+    "world": {
+      "type": "object",
+      "required": ["objects"],
+      "properties": {
+        "setting": { "type": "object", "additionalProperties": true },
+        "objects": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/worldObject" }
+        },
+        "relationships": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/relationship" }
+        }
+      },
+      "additionalProperties": true
+    },
+    "meaning": {
+      "type": "object",
+      "properties": {
+        "aesthetic": { "type": "array", "items": { "type": "string" } },
+        "emotional": { "type": "array", "items": { "type": "string" } },
+        "narrative": { "type": "array", "items": { "type": "string" } },
+        "social": { "type": "array", "items": { "type": "string" } },
+        "cultural": { "type": "array", "items": { "type": "string" } },
+        "learner_definitions": {
+          "type": "object",
+          "additionalProperties": { "type": "string" }
+        }
+      },
+      "additionalProperties": true
+    },
+    "operations": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/operation" }
+    },
+    "constraints": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/constraint" }
+    },
+    "reflection": {
+      "type": "object",
+      "properties": {
+        "intention": { "type": "string" },
+        "observation": { "type": "string" },
+        "surprise": { "type": "string" },
+        "problem": { "type": "string" },
+        "consequence": { "type": "string" },
+        "interpretation": { "type": "string" },
+        "next_move": { "type": "string" }
+      },
+      "additionalProperties": true
+    },
+    "history": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/historyEvent" }
+    }
+  },
+  "$defs": {
+    "worldObject": {
+      "type": "object",
+      "required": ["id", "kind"],
+      "properties": {
+        "id": { "type": "string" },
+        "kind": { "type": "string" },
+        "name": { "type": "string" },
+        "geometry": { "type": "object", "additionalProperties": true },
+        "position": { "type": "object", "additionalProperties": true },
+        "orientation": { "type": "object", "additionalProperties": true },
+        "materials": { "type": "array", "items": { "type": "string" } },
+        "functions": { "type": "array", "items": { "type": "string" } },
+        "meaning": { "type": "array", "items": { "type": "string" } },
+        "provenance": { "type": "object", "additionalProperties": true },
+        "manual_edits_preserved": { "type": "boolean", "default": true }
+      },
+      "additionalProperties": true
+    },
+    "relationship": {
+      "type": "object",
+      "required": ["type", "from", "to"],
+      "properties": {
+        "type": { "type": "string" },
+        "from": { "type": "string" },
+        "to": { "type": "string" },
+        "properties": { "type": "object", "additionalProperties": true }
+      }
+    },
+    "operation": {
+      "type": "object",
+      "required": ["action"],
+      "properties": {
+        "action": { "type": "string" },
+        "target": { "type": ["string", "object"] },
+        "changes": { "type": "object", "additionalProperties": true },
+        "status": { "type": "string", "enum": ["proposed", "clarify", "approved", "applied", "tested", "rejected"] },
+        "assumptions": { "type": "array", "items": { "type": "string" } }
+      },
+      "additionalProperties": true
+    },
+    "constraint": {
+      "type": "object",
+      "required": ["type"],
+      "properties": {
+        "type": { "type": "string", "enum": ["preserve", "exclude", "require", "prefer", "avoid", "limit", "minimum", "maximum"] },
+        "target": { "type": ["string", "object"] },
+        "property": { "type": "string" },
+        "value": {}
+      },
+      "additionalProperties": true
+    },
+    "historyEvent": {
+      "type": "object",
+      "required": ["event", "timestamp"],
+      "properties": {
+        "event": { "type": "string", "enum": ["created", "revised", "tested", "reflected", "forked", "restored", "published"] },
+        "timestamp": { "type": "string", "format": "date-time" },
+        "actor": { "type": "string" },
+        "summary": { "type": "string" },
+        "parent_revision": { "type": "string" },
+        "revision": { "type": "string" }
+      },
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": true
+}
