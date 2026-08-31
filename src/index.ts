@@ -128,6 +128,7 @@ const appRoutes = new Set([
   "/try", "/try/",
   "/about", "/about/",
   "/worldspec", "/worldspec/",
+  "/charter", "/charter/",
   "/research", "/research/",
   "/build", "/build/",
   "/steamhamlet", "/steamhamlet/",
