@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 260" role="img" aria-labelledby="title desc">
+  <title id="title">TurtleBlock AI</title>
+  <desc id="desc">A friendly turtle and stacked bricks resting on a tilted AI chip.</desc>
+  <defs>
+    <linearGradient id="chip" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#31475a"/><stop offset="1" stop-color="#172532"/>
+    </linearGradient>
+    <linearGradient id="shell" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#88c76f"/><stop offset="1" stop-color="#3f7f55"/>
+    </linearGradient>
+    <linearGradient id="brick" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ee7b4f"/><stop offset="1" stop-color="#b84e30"/>
+    </linearGradient>
+  </defs>
+  <g transform="translate(25 64) rotate(-7 140 90)">
+    <rect x="34" y="74" width="235" height="125" rx="23" fill="url(#chip)" stroke="#60798c" stroke-width="5"/>
+    <rect x="47" y="87" width="209" height="95" rx="15" fill="#213444" stroke="#415c70" stroke-width="3"/>
+    <g fill="#c9b594">
+      <rect x="51" y="194" width="18" height="19" rx="4"/><rect x="84" y="198" width="18" height="19" rx="4"/><rect x="117" y="201" width="18" height="19" rx="4"/><rect x="150" y="203" width="18" height="19" rx="4"/><rect x="183" y="201" width="18" height="19" rx="4"/><rect x="216" y="197" width="18" height="19" rx="4"/>
+      <rect x="25" y="93" width="19" height="17" rx="4"/><rect x="24" y="126" width="19" height="17" rx="4"/><rect x="25" y="159" width="19" height="17" rx="4"/>
+      <rect x="263" y="92" width="19" height="17" rx="4"/><rect x="267" y="125" width="19" height="17" rx="4"/><rect x="268" y="158" width="19" height="17" rx="4"/>
+    </g>
+    <text x="150" y="163" text-anchor="middle" font-family="Inter,system-ui,sans-serif" font-size="54" font-weight="800" fill="#dce9f2">AI</text>
+  </g>
+  <g transform="translate(28 18)">
+    <ellipse cx="111" cy="105" rx="64" ry="50" fill="#63a964"/>
+    <ellipse cx="111" cy="97" rx="55" ry="43" fill="url(#shell)" stroke="#285b43" stroke-width="5"/>
+    <path d="M64 92c21-20 72-22 94 0M72 118c24 16 58 17 82 0M108 56v82M78 70l58 58M140 70l-58 58" fill="none" stroke="#2c6548" stroke-width="4" opacity=".8"/>
+    <path d="M53 94C31 85 29 52 39 29c7-17 27-22 38-10 10 11 4 27-7 34-10 7-14 20-13 39z" fill="#8fce68"/>
+    <circle cx="58" cy="31" r="8" fill="#0b0f0d"/><circle cx="60" cy="28" r="2.5" fill="#fff"/>
+    <path d="M34 49c8 4 18 4 27-1" fill="none" stroke="#4e7d47" stroke-width="3" stroke-linecap="round"/>
+    <ellipse cx="76" cy="143" rx="21" ry="13" fill="#86c96a"/><ellipse cx="145" cy="143" rx="21" ry="13" fill="#86c96a"/>
+    <ellipse cx="55" cy="119" rx="17" ry="12" fill="#86c96a"/>
+  </g>
+  <g transform="translate(188 65)">
+    <g fill="url(#brick)" stroke="#7f3525" stroke-width="3">
+      <rect x="0" y="64" width="82" height="54" rx="7" transform="skewY(-5)"/>
+      <rect x="53" y="39" width="72" height="51" rx="7" transform="skewY(4)"/>
+      <rect x="18" y="4" width="72" height="49" rx="7" transform="rotate(8 54 29)"/>
+    </g>
+    <path d="M11 77h60M66 53h48M27 17h52" stroke="#f59b72" stroke-width="4" opacity=".55"/>
+  </g>
+</svg>
