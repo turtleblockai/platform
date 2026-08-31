@@ -1,94 +1,192 @@
 version: 0.1
 name: TurtleBlock WorldSpec Core Lexicon
 
+principles:
+  learner_position: designer-producer
+  agent_position: collaborator-sounding-board
+  default_posture: inquiry-before-closure
+  interpretation_rule: expose-consequential-assumptions
+  revision_rule: make-change-cheap-and-visible
+  failure_rule: preserve-failed-states-long-enough-to-think-with
+
 interaction_modes:
   direct:
     description: Concrete enough to compile without hiding a major interpretive choice.
   interpretive:
-    description: Uses semantic, aesthetic, cultural, social, or narrative language that can map to multiple designs.
+    description: Uses semantic, aesthetic, cultural, social, political, emotional, or narrative language that can map to multiple designs.
   reflective:
-    description: Evaluates an existing world, build, choice, or revision.
+    description: Evaluates an existing world, build, choice, consequence, contradiction, or revision.
+  exploratory:
+    description: Learner is probing possibilities without yet committing to a build decision.
+  comparative:
+    description: Learner asks to compare alternatives, versions, viewpoints, consequences, or interpretations.
+  social:
+    description: Learner is negotiating shared ownership, collaboration, conflict, access, or collective meaning.
+
+speech_acts:
+  propose: [propose, imagine, suppose, what-if, maybe, perhaps]
+  request: [make, build, change, move, add, remove, show, try]
+  question: [ask, wonder, why, how, what-if, what-happens]
+  notice: [notice, see, observe, realize, discover]
+  judge: [like, dislike, prefer, evaluate, critique, feels, seems]
+  hypothesize: [think, predict, expect, suspect, hypothesize]
+  explain: [explain, describe, justify, reason]
+  negotiate: [agree, disagree, compromise, share, vote, decide-together]
+  reject: [no, reject, undo-that, not-that, stop]
+  defer: [later, not-yet, leave-it, keep-open, undecided]
 
 operations:
   create:
-    aliases: [make, build, add, generate, place, compose]
+    aliases: [make, build, add, generate, place, compose, invent, instantiate]
   modify:
-    aliases: [change, alter, edit, revise, adjust, transform]
+    aliases: [change, alter, edit, revise, adjust, transform, reshape, tune]
   move:
-    aliases: [move, shift, relocate, translate]
+    aliases: [move, shift, relocate, translate, nudge]
   scale:
-    aliases: [scale, enlarge, shrink, widen, narrow, raise, lower]
+    aliases: [scale, enlarge, shrink, widen, narrow, raise, lower, stretch, compress]
   rotate:
-    aliases: [rotate, turn, angle, orient]
+    aliases: [rotate, turn, angle, orient, face]
   duplicate:
-    aliases: [copy, repeat, clone]
+    aliases: [copy, repeat, clone, echo]
   remove:
-    aliases: [remove, delete, clear]
+    aliases: [remove, delete, clear, erase, dismantle]
   replace:
-    aliases: [replace, swap, substitute]
+    aliases: [replace, swap, substitute, exchange]
   connect:
-    aliases: [connect, join, bridge, link]
+    aliases: [connect, join, bridge, link, attach, network]
   separate:
-    aliases: [separate, divide, isolate, disconnect]
+    aliases: [separate, divide, isolate, disconnect, partition]
   juxtapose:
-    aliases: [juxtapose, compare, place-beside, contrast]
+    aliases: [juxtapose, compare, place-beside, contrast, set-against]
   remix:
-    aliases: [remix, mashup, combine, merge]
+    aliases: [remix, mashup, combine, merge, recombine, hybridize]
   preserve:
-    aliases: [preserve, protect, keep, retain, lock]
+    aliases: [preserve, protect, keep, retain, lock, hold]
   restore:
-    aliases: [restore, revert, undo]
+    aliases: [restore, revert, undo, rewind, recover]
   fork:
-    aliases: [fork, branch, alternate, duplicate-version]
+    aliases: [fork, branch, alternate, duplicate-version, parallel-version]
   test:
-    aliases: [test, simulate, try, probe, check]
+    aliases: [test, simulate, try, probe, check, stress-test, experiment]
   inspect:
-    aliases: [inspect, observe, examine, measure]
+    aliases: [inspect, observe, examine, measure, trace, map]
   reflect:
-    aliases: [reflect, explain, evaluate, critique, reconsider]
+    aliases: [reflect, explain, evaluate, critique, reconsider, interpret]
+  compare:
+    aliases: [compare, contrast, diff, weigh, rank-side-by-side]
+  annotate:
+    aliases: [annotate, label, note, tag, mark]
+  publish:
+    aliases: [publish, share, exhibit, release]
+  adopt:
+    aliases: [adopt, accept, keep-this, make-baseline]
+  reject:
+    aliases: [reject, discard, refuse, abandon-this-version]
+  pause:
+    aliases: [pause, leave, defer, hold-open]
+
+change_operators:
+  direction: [increase, decrease, more, less, higher, lower, wider, narrower, denser, sparser]
+  magnitude: [slightly, somewhat, moderately, strongly, dramatically, exactly]
+  quantity: [one, several, many, all, none, half, most, few]
+  locality: [this, that, here, there, nearby, around, inside, outside, edge, center]
+  temporal: [now, before, after, first, next, later, temporarily, permanently]
+  scope: [object, group, region, district, world, version]
 
 form:
-  dimensions: [height, width, length, thickness, volume, scale]
-  composition: [symmetry, asymmetry, repetition, variation, density, openness, enclosure, hierarchy, rhythm]
-  geometry: [linear, curved, angular, stepped, radial, organic, irregular, modular]
-  orientation: [north, south, east, west, vertical, horizontal, diagonal, facing, alignment]
+  dimensions: [height, width, length, thickness, volume, area, perimeter, scale, proportion]
+  composition: [symmetry, asymmetry, repetition, variation, density, openness, enclosure, hierarchy, rhythm, balance, fragmentation, continuity]
+  geometry: [linear, curved, angular, stepped, radial, organic, irregular, modular, rectilinear, circular, elliptical, arched, vaulted, terraced]
+  orientation: [north, south, east, west, vertical, horizontal, diagonal, facing, alignment, axis]
+  topology: [inside, outside, adjacent, connected, disconnected, nested, overlapping, continuous, bounded]
 
 space:
-  elements: [room, path, threshold, entrance, exit, corridor, courtyard, plaza, edge, center, district, boundary, bridge, tower, wall, landscape]
-  relationships: [inside, outside, above, below, beside, between, near, far, connected, separated, nested, overlapping]
-  circulation: [access, route, flow, bottleneck, gathering, dispersal, visibility, sightline]
+  elements: [room, path, threshold, entrance, exit, corridor, courtyard, plaza, edge, center, district, boundary, bridge, tower, wall, landscape, street, alley, garden, commons, platform, stage, shelter, landmark]
+  relationships: [inside, outside, above, below, beside, between, near, far, connected, separated, nested, overlapping, facing, surrounding, crossing]
+  circulation: [access, route, flow, bottleneck, gathering, dispersal, visibility, sightline, approach, crossing, dead-end, shortcut]
+  occupancy: [empty, occupied, crowded, sparse, shared, private, public, restricted]
 
 material:
-  properties: [palette, texture, contrast, translucency, roughness, weathering, decay, repair, ornament, pattern]
-  qualities: [warm, cool, heavy, light, polished, raw, improvised, monumental, fragile]
+  properties: [palette, texture, contrast, translucency, roughness, weathering, decay, repair, ornament, pattern, reflectivity, weight, permeability]
+  qualities: [warm, cool, heavy, light, polished, raw, improvised, monumental, fragile, durable, repaired, reused, local, synthetic]
+  lifecycle: [new, aging, weathered, damaged, repaired, adapted, reused, abandoned]
 
 function:
-  concepts: [capacity, accessibility, shelter, defense, movement, gathering, production, storage, power, food, water, transport, communication, visibility, privacy]
+  concepts: [capacity, accessibility, shelter, defense, movement, gathering, production, storage, power, food, water, transport, communication, visibility, privacy, play, learning, performance, ritual, trade, care, rest, maintenance]
+  performance: [reachable, navigable, usable, visible, defensible, habitable, powered, lit, ventilated, supplied, repairable]
 
 meaning:
   dimensions:
-    aesthetic: [beautiful, ugly, playful, austere, ornate, minimal, chaotic, harmonious]
-    emotional: [welcoming, intimidating, calm, anxious, joyful, lonely, oppressive, hopeful]
-    narrative: [ancient, futuristic, abandoned, repaired, ceremonial, improvised, prosperous, contested]
-    social: [communal, private, hierarchical, democratic, controlled, inclusive, exclusive, collaborative]
-    cultural: [sacred, civic, domestic, industrial, vernacular, monumental]
+    aesthetic: [beautiful, ugly, playful, austere, ornate, minimal, chaotic, harmonious, improvised, polished, uncanny]
+    emotional: [welcoming, intimidating, calm, anxious, joyful, lonely, oppressive, hopeful, cozy, threatening, peaceful, precarious]
+    narrative: [ancient, futuristic, abandoned, repaired, ceremonial, improvised, prosperous, contested, ruined, emerging, transformed]
+    social: [communal, private, hierarchical, democratic, controlled, inclusive, exclusive, collaborative, competitive, segregated, shared, centralized, decentralized]
+    cultural: [sacred, civic, domestic, industrial, vernacular, monumental, traditional, hybrid, local, institutional]
+    political: [authoritarian, participatory, equitable, unequal, surveilled, open, restricted, contested, liberated]
   resolution_rule: >-
-    Meaning terms are interpretive hypotheses, not fixed truth. When a term could reasonably map to substantially different spatial or material choices, Turtle should ask the learner what the term means to them or present a small set of revisable interpretations.
+    Meaning terms are interpretive hypotheses, not fixed truth. Turtle must not compile them through a universal style recipe. When a term could reasonably map to substantially different spatial, material, functional, social, or cultural choices, Turtle should ask the learner what the term means here, offer a small set of revisable interpretations, or clearly label a provisional interpretation.
+  learner_definition_rule: >-
+    A learner's situated definition outranks Turtle's default interpretation for the current project unless it conflicts with a hard platform or safety constraint.
 
 inquiry:
-  verbs: [wonder, ask, explore, discover, investigate, compare, test, notice, explain, challenge]
+  verbs: [wonder, ask, explore, discover, investigate, compare, test, notice, explain, challenge, imagine, hypothesize, trace, revisit]
   prompts:
     - What are you trying to make possible here?
     - What do you notice when you walk through it?
+    - What changed that you did not expect?
     - What feels wrong or unfinished?
     - Which part matters most to preserve?
     - What would you like to test rather than decide in advance?
+    - Whose experience changes if we make this change?
+    - Is this your interpretation, a shared interpretation, or Turtle's provisional interpretation?
+    - What would count as evidence that this worked?
 
 reflection:
-  dimensions: [intention, observation, surprise, problem, consequence, interpretation, next_move]
+  dimensions: [intention, observation, surprise, problem, consequence, contradiction, interpretation, evidence, value_judgment, next_move]
+  comparison_axes: [before-after, expected-observed, version-version, person-person, local-world, form-function, intention-consequence]
+
+social:
+  roles: [learner, collaborator, teacher, observer, visitor, maintainer, agent]
+  ownership: [mine, yours, ours, shared, borrowed, public, private]
+  coordination: [invite, join, leave, handoff, merge, fork, negotiate, consent, credit]
+  conflict: [disagree, contest, block, compromise, mediate, restore, coexist]
 
 constraints:
-  types: [preserve, exclude, require, prefer, avoid, limit, minimum, maximum]
+  types: [preserve, exclude, require, prefer, avoid, limit, minimum, maximum, conditional, until, unless]
+  strengths: [hard, soft, preference]
+  provenance: [learner, collaborator, platform, world, teacher, agent-proposal]
+
+uncertainty:
+  states: [known, assumed, inferred, ambiguous, contested, unknown, undecided, provisional]
+  actions: [ask, expose, defer, test, compare, annotate, leave-open]
+
+reference:
+  deixis: [this, that, here, there, these, those, right-here, over-there]
+  resolution_inputs: [selected-object, player-position, view-direction, cursor-target, named-region, recent-operation, conversation-context]
+  unresolved_rule: >-
+    If a deictic reference cannot be resolved with high confidence from world context, Turtle should ask or offer candidate referents rather than mutate an arbitrary target.
+
+negation:
+  markers: [not, no, never, without, except, but-not, do-not, don't]
+  scope_rule: >-
+    Negation attaches to the narrowest clearly stated proposition. If scope is ambiguous, preserve the ambiguity and clarify before applying a destructive or difficult-to-reverse operation.
+
+comparison:
+  markers: [more-than, less-than, same-as, unlike, similar-to, closer-to, farther-from, before, after, versus]
+  output: [difference, tradeoff, consequence, preference, evidence]
 
 history:
-  events: [created, revised, tested, reflected, forked, restored, published]
+  events: [created, revised, tested, reflected, compared, forked, merged, restored, rejected, adopted, published, manually-edited]
+  provenance_fields: [actor, source, timestamp, parent_revision, assumptions, consent, rationale]
+
+hostile_pass_rules:
+  - Do not let a semantic adjective silently trigger a fixed architectural recipe.
+  - Do not let the latest utterance erase earlier hard constraints without explicit learner intent.
+  - Do not treat agent-generated assumptions as learner-authored facts.
+  - Do not interpret manual world edits as mistakes to be repaired automatically.
+  - Do not collapse social disagreement into a single synthetic preference.
+  - Do not convert exploratory questions into build commands.
+  - Do not resolve ambiguous pronouns or deictic terms to arbitrary objects.
+  - Do not mistake negated terms for requested properties.
+  - Do not optimize away productive contradiction, incompleteness, or failure.
+  - Do not allow curricular standards to become hidden world-generation goals.
