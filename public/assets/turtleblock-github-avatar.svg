@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">TurtleBlock AI GitHub organization avatar</title>
+  <desc id="desc">Turtle and bricks standing on an AI chip, framed for a square organization avatar.</desc>
+  <rect width="512" height="512" rx="96" fill="#0b0f0d"/>
+  <circle cx="256" cy="256" r="218" fill="#0f1511" stroke="#9fe0ad" stroke-width="12"/>
+  <g transform="translate(68 102) scale(1.18)">
+    <g transform="translate(25 64) rotate(-7 140 90)">
+      <rect x="34" y="74" width="235" height="125" rx="23" fill="#213444" stroke="#60798c" stroke-width="5"/>
+      <rect x="47" y="87" width="209" height="95" rx="15" fill="#172532" stroke="#415c70" stroke-width="3"/>
+      <g fill="#c9b594"><rect x="51" y="194" width="18" height="19" rx="4"/><rect x="84" y="198" width="18" height="19" rx="4"/><rect x="117" y="201" width="18" height="19" rx="4"/><rect x="150" y="203" width="18" height="19" rx="4"/><rect x="183" y="201" width="18" height="19" rx="4"/><rect x="216" y="197" width="18" height="19" rx="4"/></g>
+      <text x="150" y="163" text-anchor="middle" font-family="Inter,system-ui,sans-serif" font-size="54" font-weight="800" fill="#dce9f2">AI</text>
+    </g>
+    <g transform="translate(28 18)">
+      <ellipse cx="111" cy="105" rx="64" ry="50" fill="#63a964"/><ellipse cx="111" cy="97" rx="55" ry="43" fill="#70b764" stroke="#285b43" stroke-width="5"/>
+      <path d="M64 92c21-20 72-22 94 0M72 118c24 16 58 17 82 0M108 56v82M78 70l58 58M140 70l-58 58" fill="none" stroke="#2c6548" stroke-width="4" opacity=".8"/>
+      <path d="M53 94C31 85 29 52 39 29c7-17 27-22 38-10 10 11 4 27-7 34-10 7-14 20-13 39z" fill="#8fce68"/>
+      <circle cx="58" cy="31" r="8" fill="#0b0f0d"/><circle cx="60" cy="28" r="2.5" fill="#fff"/><ellipse cx="76" cy="143" rx="21" ry="13" fill="#86c96a"/><ellipse cx="145" cy="143" rx="21" ry="13" fill="#86c96a"/>
+    </g>
+    <g transform="translate(188 65)" fill="#d7653f" stroke="#7f3525" stroke-width="3"><rect x="0" y="64" width="82" height="54" rx="7"/><rect x="53" y="39" width="72" height="51" rx="7"/><rect x="18" y="4" width="72" height="49" rx="7" transform="rotate(8 54 29)"/></g>
+  </g>
+</svg>
