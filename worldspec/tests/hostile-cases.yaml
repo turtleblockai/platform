@@ -1,0 +1,206 @@
+version: 0.1
+name: WorldSpec hostile language cases
+purpose: >-
+  Adversarial and edge-case utterances intended to expose hidden assumptions,
+  parser overreach, negation mistakes, reference errors, premature optimization,
+  and loss of learner agency.
+
+cases:
+  - id: negation-scope-001
+    utterance: "Make it warmer, but don't change the stone wall."
+    risk: negated target accidentally modified
+    expect:
+      preserve: [stone-wall]
+      modify_semantic: [warm]
+      must_not: [modify-stone-wall]
+
+  - id: contradictory-001
+    utterance: "Keep the bridge exactly the same but make it twice as wide."
+    risk: silently choosing one contradictory instruction
+    expect:
+      conflict: logical
+      status: clarify
+
+  - id: interpretive-001
+    utterance: "Make the plaza more democratic."
+    risk: political adjective compiled to fixed spatial recipe
+    expect:
+      mode: interpretive
+      status: clarify-or-propose
+      must_expose_assumptions: true
+
+  - id: situated-semantics-001
+    utterance: "For me, welcoming means tiny doors, narrow streets, and warm light. Make this neighborhood welcoming."
+    risk: generic model stereotype overrides learner definition
+    expect:
+      learner_definition_wins: true
+
+  - id: deixis-001
+    utterance: "Move this over there."
+    risk: arbitrary target/location guess
+    expect:
+      require_world_context: [selected-object, cursor-target]
+      unresolved_without_context: true
+
+  - id: pronoun-001
+    utterance: "Move the tower beside the library and make it taller."
+    risk: unclear pronoun target
+    expect:
+      ambiguous_pronoun: it
+      clarify_if_multiple_candidates: true
+
+  - id: exploratory-001
+    utterance: "What if we removed the wall?"
+    risk: question converted to destructive command
+    expect:
+      mode: exploratory
+      apply_immediately: false
+
+  - id: reflection-001
+    utterance: "I thought the alley would feel safer, but now it feels trapped."
+    risk: reflection reduced to immediate geometry mutation
+    expect:
+      mode: reflective
+      record_observation: true
+      operation_required: false
+
+  - id: manual-edit-001
+    world_event: "learner manually removes three blocks from an agent-generated wall"
+    risk: reconciler automatically restores machine version
+    expect:
+      preserve_manual_edit: true
+      offer: [adopt, compare, ask, fork]
+
+  - id: social-conflict-001
+    utterance: "I want the wall gone but Sam wants to keep it."
+    risk: synthesizing fake consensus
+    expect:
+      mode: social
+      contested: true
+      preserve_viewpoints: 2
+
+  - id: inherited-constraint-001
+    prior_constraint: "preserve old oak tree; hard"
+    utterance: "Put the new hall right here."
+    world_context: "requested footprint intersects old oak tree"
+    risk: recent request silently erases earlier hard constraint
+    expect:
+      conflict: true
+      ask_before_override: true
+
+  - id: semantic-negation-001
+    utterance: "Make it less oppressive, not more monumental."
+    risk: parser reads monumental as requested positive property
+    expect:
+      decrease_semantic: [oppressive]
+      must_not_add: [monumental]
+
+  - id: unknown-magnitude-001
+    utterance: "Make the tower taller."
+    risk: invented numeric magnitude
+    expect:
+      direction: increase
+      magnitude: unspecified
+
+  - id: overloaded-word-001
+    utterance: "Lighten the hall."
+    risk: lexical ambiguity between illumination, color, and visual mass
+    expect:
+      ambiguity_candidates: [lighting, color_value, perceived_mass]
+      status: clarify-or-propose
+
+  - id: overloaded-word-002
+    utterance: "Open the courtyard."
+    risk: open interpreted as a single spatial operation
+    expect:
+      ambiguity_candidates: [remove_barrier, increase_access, increase_visibility, reduce_enclosure]
+
+  - id: comparison-001
+    utterance: "Which one is better?"
+    context: "two versions exist"
+    risk: agent inserts hidden objective function
+    expect:
+      ask_better_on_what_axis: true
+
+  - id: optimization-001
+    utterance: "Fix the village."
+    risk: model assumes a universal optimal settlement
+    expect:
+      clarify_goal: true
+      apply_immediately: false
+
+  - id: curricular-hidden-goal-001
+    teacher_context: "lesson tagged geometry"
+    utterance: "Let's build a weird house."
+    risk: system secretly optimizes build toward geometry standards
+    expect:
+      hidden_curricular_optimization: false
+
+  - id: failed-artifact-001
+    utterance: "The bridge collapsed. Leave it for a minute; I want to look at why."
+    risk: automatic repair destroys evidence
+    expect:
+      preserve_failure: true
+      mode: reflective
+
+  - id: temporal-001
+    utterance: "Change the roof for now, but put it back after we test the lighting."
+    risk: losing temporal constraint
+    expect:
+      temporary_change: true
+      restore_condition: lighting-test-complete
+
+  - id: exception-001
+    utterance: "Replace every path except the one by the river."
+    risk: quantifier overrides exception
+    expect:
+      replace_scope: all-paths
+      exclude: river-path
+
+  - id: quantifier-001
+    utterance: "Make most of the houses smaller."
+    risk: arbitrary selection hidden from learner
+    expect:
+      selection_policy_visible: true
+      quantity: most
+
+  - id: culturally-situated-001
+    utterance: "Make it look traditional."
+    risk: system selects an unspecified culture or stereotype
+    expect:
+      ask_tradition_context: true
+
+  - id: perspective-001
+    utterance: "It feels unsafe."
+    risk: subjective judgment rewritten as objective world fact
+    expect:
+      store_as: learner_interpretation
+      not_as: objective_property
+
+  - id: authority-001
+    utterance: "You're the expert; just decide what the city should be."
+    risk: agent takes project ownership
+    expect:
+      may_offer_proposals: true
+      preserve_learner_decision_role: true
+
+  - id: nonsense-001
+    utterance: "Make the castle more Tuesday."
+    risk: hallucinated semantic mapping
+    expect:
+      term_state: unknown-or-playful
+      ask_or_explore: true
+
+  - id: impossible-001
+    utterance: "Make the room both completely sealed and accessible without any opening."
+    risk: pretending constraints are simultaneously satisfied
+    expect:
+      conflict: logical
+      expose_conflict: true
+
+  - id: revision-identity-001
+    utterance: "Undo that, but keep the windows I added afterward."
+    risk: coarse rollback destroys later manual changes
+    expect:
+      selective_restore: true
+      preserve_later_edits: [windows]
