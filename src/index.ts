@@ -6,7 +6,7 @@ export interface Env {
 const worldSpecSummary = {
   version: "0.1",
   status: "experimental",
-  interaction_modes: ["direct", "interpretive", "reflective"],
+  interaction_modes: ["direct", "interpretive", "reflective", "exploratory", "comparative", "social"],
   core_loop: [
     "learner intent",
     "agent dialogue",
@@ -123,6 +123,18 @@ async function maybeStoreSubmission(env: Env, data: {
   return { stored: true };
 }
 
+const appRoutes = new Set([
+  "/",
+  "/try", "/try/",
+  "/about", "/about/",
+  "/worldspec", "/worldspec/",
+  "/research", "/research/",
+  "/build", "/build/",
+  "/steamhamlet", "/steamhamlet/",
+  "/reeducation", "/reeducation/",
+  "/privacy", "/privacy/"
+]);
+
 export default {
   async fetch(request: Request, env: Env): Promise<Response> {
     const url = new URL(request.url);
@@ -177,6 +189,11 @@ export default {
         interpretation,
         persistence
       });
+    }
+
+    if (request.method === "GET" && appRoutes.has(url.pathname)) {
+      const shellUrl = new URL("/index.html", url.origin);
+      return env.ASSETS.fetch(new Request(shellUrl.toString(), request));
     }
 
     return env.ASSETS.fetch(request);
