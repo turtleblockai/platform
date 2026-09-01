@@ -231,6 +231,41 @@ const appRoutes = new Set([
   "/privacy", "/privacy/"
 ]);
 
+async function renderAppShell(request: Request, env: Env, origin: string) {
+  const shellUrl = new URL("/index.html", origin);
+  const assetResponse = await env.ASSETS.fetch(new Request(shellUrl.toString(), request));
+  if (!assetResponse.ok) return assetResponse;
+
+  let html = await assetResponse.text();
+
+  const desktopLayout = `
+<style id="desktop-scroll-layout">
+@media (min-width:821px){
+  body{overflow-y:hidden}
+  main{height:calc(100vh - var(--footer-h));padding-top:28px;padding-bottom:18px}
+  .shell{height:100%;align-items:stretch}
+  .content{height:100%;min-height:0;overflow-y:auto;overscroll-behavior:contain;padding-right:12px;padding-bottom:48px;scrollbar-gutter:stable}
+  .panel{position:sticky;top:0;align-self:start;max-height:calc(100vh - var(--footer-h) - 46px);overflow-y:auto}
+}
+</style>`;
+
+  if (!html.includes('id="desktop-scroll-layout"')) {
+    html = html.replace("</head>", `${desktopLayout}\n</head>`);
+  }
+
+  if (!html.includes("orcid.org/0000-0001-6866-7280")) {
+    html = html.replace(
+      '<span class="dot">•</span><a href="https://read.bryansanders.com"',
+      '<span class="dot">•</span><a href="https://orcid.org/0000-0001-6866-7280" target="_blank" rel="me noopener noreferrer" aria-label="ORCID 0000-0001-6866-7280">ORCID</a><span class="dot">•</span><a href="https://read.bryansanders.com"'
+    );
+  }
+
+  const headers = new Headers(assetResponse.headers);
+  headers.set("content-type", "text/html; charset=UTF-8");
+  headers.delete("content-length");
+  return new Response(html, { status: assetResponse.status, headers });
+}
+
 export default {
   async fetch(request: Request, env: Env): Promise<Response> {
     const url = new URL(request.url);
@@ -288,8 +323,7 @@ export default {
     }
 
     if (request.method === "GET" && appRoutes.has(url.pathname)) {
-      const shellUrl = new URL("/index.html", url.origin);
-      return env.ASSETS.fetch(new Request(shellUrl.toString(), request));
+      return renderAppShell(request, env, url.origin);
     }
 
     return env.ASSETS.fetch(request);
