@@ -3,6 +3,10 @@
   "name": "turtleblockai-platform",
   "main": "src/index.ts",
   "compatibility_date": "2026-08-30",
+  "vars": {
+    "DISCORD_APPLICATION_ID": "1544175868471943279",
+    "DISCORD_PUBLIC_KEY": "a1efc3af6a53120223741a31d39e75f98e0f115fbe65f25473af48f9488b1b3c"
+  },
   "assets": {
     "directory": "./public",
     "binding": "ASSETS"
