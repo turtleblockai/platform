@@ -1,8 +1,11 @@
+import { handleDiscordInteraction, minecraftStagingResponse } from "./discord";
 import { candidateDatasetStatus, screenResearchInput } from "./researchData";
 
 export interface Env {
   ASSETS: Fetcher;
   DB?: D1Database;
+  DISCORD_PUBLIC_KEY?: string;
+  DISCORD_APPLICATION_ID?: string;
 }
 
 const worldSpecSummary = {
@@ -55,7 +58,7 @@ function extractConstraints(utterance: string) {
 }
 
 function extractTargets(utterance: string) {
-  const known = ["village","house","houses","tower","bridge","entrance","courtyard","garden","road","roads","path","paths","city","building","buildings","room","rooms","wall","walls","castle","school","farm","river","mountain","forest"];
+  const known = ["village","house","houses","tower","bridge","entrance","courtyard","garden","road","roads","path","paths","city","building","buildings","room","rooms","wall","walls","castle","school","farm","river","mountain","forest","lake","restaurant","kitchen","water","animals","beasts"];
   const text = utterance.toLowerCase();
   return known.filter((word) => new RegExp(`\\b${word}\\b`).test(text));
 }
@@ -64,24 +67,29 @@ function makeInterpretation(utterance: string) {
   const mode = classifyInteraction(utterance);
   const targets = extractTargets(utterance);
   const constraints = extractConstraints(utterance);
-  const semanticWords = utterance.toLowerCase().match(/\b(welcoming|authoritarian|oppressive|democratic|sacred|hopeful|precarious|communal|playful|threatening|peaceful|intimidating|friendly|cozy|grand|mysterious)\b/g) || [];
-  const needsClarification = mode === "interpretive" && semanticWords.length > 0;
+  const semanticWords = utterance.toLowerCase().match(/\b(welcoming|authoritarian|oppressive|democratic|sacred|hopeful|precarious|communal|playful|threatening|peaceful|intimidating|friendly|cozy|grand|mysterious|dangerous|integrated|dark|rich|safe|fair|natural|beautiful|evil)\b/g) || [];
+  const isQuestion = /\?\s*$/.test(utterance) || /\b(thoughts|what do you think|what if|should we|could we|can we)\b/i.test(utterance);
+  const needsClarification = semanticWords.length > 0 || isQuestion;
+  const effectiveMode = isQuestion ? "exploratory" : mode;
 
   return {
-    mode,
+    mode: effectiveMode,
     utterance,
     targets,
     constraints,
     semantic_terms: [...new Set(semanticWords)],
     needs_clarification: needsClarification,
     clarification_question: needsClarification
-      ? `When you say ${semanticWords.map((w) => `“${w}”`).join(" and ")}, what qualities in the world would make that true for you?`
+      ? semanticWords.length > 0
+        ? `When you say ${[...new Set(semanticWords)].map((w) => `“${w}”`).join(" and ")}, what qualities or consequences in the world would make that true for you?`
+        : "Do you want Turtle to discuss possibilities first, or stage a provisional build so you can test it?"
       : null,
     proposed_worldspec: {
       version: "0.1",
       intent: {
-        mode,
-        statement: utterance
+        mode: effectiveMode,
+        statement: utterance,
+        speech_act: isQuestion ? "consult" : "request_change"
       },
       world: {
         targets
@@ -274,8 +282,20 @@ export default {
       return Response.json({
         ok: true,
         service: "turtleblockai-platform",
-        message: "TurtleBlock AI is awake."
+        message: "TurtleBlock AI is awake.",
+        discord_interactions: "/api/discord/interactions",
+        minecraft_adapter: "staging-only"
       });
+    }
+
+    if (url.pathname === "/api/discord/interactions") {
+      return handleDiscordInteraction(request, env, makeInterpretation);
+    }
+
+    if (url.pathname === "/api/minecraft/build" && request.method === "POST") {
+      let body: unknown = null;
+      try { body = await request.json(); } catch { body = null; }
+      return minecraftStagingResponse(body);
     }
 
     if (url.pathname === "/api/worldspec" && request.method === "GET") {
