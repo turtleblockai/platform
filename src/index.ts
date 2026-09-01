@@ -1,3 +1,5 @@
+import { candidateDatasetStatus, screenResearchInput } from "./researchData";
+
 export interface Env {
   ASSETS: Fetcher;
   DB?: D1Database;
@@ -102,25 +104,118 @@ async function maybeStoreSubmission(env: Env, data: {
   worldspec_version: string;
   interpretation_json: string;
 }) {
-  if (!env.DB) return { stored: false, reason: "D1 binding not configured" };
+  const screening = screenResearchInput(data.input_text);
+  const datasetStatus = candidateDatasetStatus(screening);
 
-  await env.DB.prepare(`
-    INSERT INTO playground_submissions (
-      id, created_at, anonymous_session_id, input_text, consent_version,
-      worldspec_version, interpretation_json, moderation_status,
-      redacted_text, dataset_status
-    ) VALUES (?, ?, ?, ?, ?, ?, ?, 'unreviewed', NULL, 'raw')
-  `).bind(
-    data.id,
-    data.created_at,
-    data.anonymous_session_id,
-    data.input_text,
-    data.consent_version,
-    data.worldspec_version,
-    data.interpretation_json
-  ).run();
+  if (!env.DB) {
+    return {
+      stored: false,
+      reason: "D1 binding not configured",
+      screening: {
+        version: screening.version,
+        status: screening.status,
+        redaction_applied: screening.redaction_applied,
+        finding_count: screening.findings.length,
+        dataset_status_if_stored: datasetStatus
+      }
+    };
+  }
 
-  return { stored: true };
+  const provenance = {
+    pipeline_version: "0.2",
+    source: "public_playground",
+    consent_version: data.consent_version,
+    worldspec_version: data.worldspec_version,
+    screening_version: screening.version,
+    raw_retained_separately: true,
+    approved_dataset_requires_explicit_review: true,
+    intentional_ip_storage: false
+  };
+
+  await env.DB.batch([
+    env.DB.prepare(`
+      INSERT INTO playground_submissions (
+        id, created_at, anonymous_session_id, input_text, redacted_text,
+        consent_version, worldspec_version, interpretation_json,
+        screening_version, screened_at, screening_status, redaction_applied,
+        review_status, dataset_status, dataset_candidate_at, provenance_json
+      ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 'pending', ?, ?, ?)
+    `).bind(
+      data.id,
+      data.created_at,
+      data.anonymous_session_id,
+      data.input_text,
+      screening.redacted_text,
+      data.consent_version,
+      data.worldspec_version,
+      data.interpretation_json,
+      screening.version,
+      data.created_at,
+      screening.status,
+      screening.redaction_applied ? 1 : 0,
+      datasetStatus,
+      datasetStatus === "candidate" ? data.created_at : null,
+      JSON.stringify(provenance)
+    ),
+    env.DB.prepare(`
+      INSERT INTO research_data_events (
+        id, submission_id, created_at, event_type, actor_type,
+        from_status, to_status, notes, metadata_json
+      ) VALUES (?, ?, ?, 'submission_received', 'system', NULL, 'raw', NULL, ?)
+    `).bind(
+      crypto.randomUUID(),
+      data.id,
+      data.created_at,
+      JSON.stringify({ consent_version: data.consent_version })
+    ),
+    env.DB.prepare(`
+      INSERT INTO research_data_events (
+        id, submission_id, created_at, event_type, actor_type,
+        from_status, to_status, notes, metadata_json
+      ) VALUES (?, ?, ?, 'automated_screening', 'system', 'raw', ?, NULL, ?)
+    `).bind(
+      crypto.randomUUID(),
+      data.id,
+      data.created_at,
+      screening.status,
+      JSON.stringify({
+        screening_version: screening.version,
+        finding_count: screening.findings.length,
+        redaction_applied: screening.redaction_applied,
+        dataset_status: datasetStatus
+      })
+    ),
+    ...screening.findings.map((finding) =>
+      env.DB!.prepare(`
+        INSERT INTO screening_findings (
+          id, submission_id, created_at, screening_version,
+          finding_type, severity, start_offset, end_offset, replacement_label
+        ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+      `).bind(
+        finding.id,
+        data.id,
+        data.created_at,
+        screening.version,
+        finding.type,
+        finding.severity,
+        finding.start,
+        finding.end,
+        finding.replacement
+      )
+    )
+  ]);
+
+  return {
+    stored: true,
+    screening: {
+      version: screening.version,
+      status: screening.status,
+      redaction_applied: screening.redaction_applied,
+      finding_count: screening.findings.length,
+      dataset_status: datasetStatus,
+      review_status: "pending"
+    }
+  };
 }
 
 const appRoutes = new Set([
