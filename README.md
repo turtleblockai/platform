@@ -12,7 +12,7 @@ The project grows directly from Bryan P. Sanders' work on Critical Techno Constr
 
 The goal is not to have AI simply generate finished Minecraft builds. The goal is to create a computational partner that helps learners make ideas constructible, encounter the consequences of those constructions, and iterate.
 
-## WorldSpec v0.1
+## WorldSpec v0.1 
 
 WorldSpec development is now underway in [`worldspec/`](worldspec/).
 
