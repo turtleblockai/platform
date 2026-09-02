@@ -1,3 +1,5 @@
+import { generateTurtleReply, type TurtleLLMEnv } from "./turtleLLM";
+
 type DiscordInteraction = {
   type: number;
   id?: string;
@@ -12,7 +14,7 @@ type DiscordInteraction = {
   };
 };
 
-export type DiscordEnv = {
+export type DiscordEnv = TurtleLLMEnv & {
   DISCORD_PUBLIC_KEY?: string;
   DISCORD_APPLICATION_ID?: string;
 };
@@ -53,11 +55,6 @@ function getStringOption(interaction: DiscordInteraction, name: string) {
   return typeof option?.value === "string" ? option.value.trim() : "";
 }
 
-function shortJson(value: unknown, max = 700) {
-  const text = JSON.stringify(value, null, 2);
-  return text.length <= max ? text : text.slice(0, max - 1) + "…";
-}
-
 function buildMinecraftHandoff(interpretation: TurtleInterpretation, interaction: DiscordInteraction) {
   return {
     build_id: crypto.randomUUID(),
@@ -86,10 +83,94 @@ function commandResponse(content: string) {
   });
 }
 
+function deferredResponse() {
+  return Response.json({ type: 5 });
+}
+
+async function replaceOriginalInteraction(
+  env: DiscordEnv,
+  interaction: DiscordInteraction,
+  content: string
+) {
+  if (!env.DISCORD_APPLICATION_ID || !interaction.token) {
+    console.error("Cannot replace deferred Discord response: missing application ID or interaction token");
+    return;
+  }
+
+  const url = `https://discord.com/api/v10/webhooks/${env.DISCORD_APPLICATION_ID}/${interaction.token}/messages/@original`;
+  const response = await fetch(url, {
+    method: "PATCH",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      content: content.slice(0, 1990),
+      allowed_mentions: { parse: [] }
+    })
+  });
+
+  if (!response.ok) {
+    console.error("Discord deferred response update failed", response.status, (await response.text()).slice(0, 500));
+  }
+}
+
+function fallbackConversation(idea: string, interpretation: TurtleInterpretation) {
+  const question = interpretation.clarification_question
+    ? `\n\n${interpretation.clarification_question}`
+    : "\n\nWhat part of this idea feels most important for us to understand before we try building it?";
+
+  return `I’m holding onto your whole idea, not just the keywords I can normalize. I can already see that **${idea.slice(0, 220)}${idea.length > 220 ? "…" : ""}** contains more than a construction command—it carries choices about meaning, relationships, atmosphere, and what the world might communicate.${question}`;
+}
+
+async function processTurtleCommand(
+  env: DiscordEnv,
+  interaction: DiscordInteraction,
+  idea: string,
+  interpret: (utterance: string) => TurtleInterpretation
+) {
+  const interpretation = interpret(idea);
+  const handoff = buildMinecraftHandoff(interpretation, interaction);
+  const sessionId = crypto.randomUUID();
+  const worldspecId = crypto.randomUUID();
+
+  let conversation = fallbackConversation(idea, interpretation);
+  let llmLabel = "deterministic fallback";
+
+  try {
+    const generated = await generateTurtleReply(env, {
+      learner_text: idea,
+      interpretation,
+      session: {
+        id: sessionId,
+        worldspec_id: worldspecId,
+        revision: 1
+      }
+    });
+    if (generated.ok) {
+      conversation = generated.text;
+      llmLabel = generated.model;
+    } else {
+      console.warn("Turtle used fallback conversation", generated.reason);
+    }
+  } catch (error) {
+    console.error("Turtle LLM processing error", error);
+  }
+
+  const content = [
+    "🐢 **Turtle**",
+    conversation,
+    "",
+    `**Turtle Lab:** \`${sessionId}\` · **WorldSpec:** \`${worldspecId}\` · revision 0001`,
+    `_Conversation engine: ${llmLabel}. WorldSpec is provisional; no Minecraft build has been executed._`,
+    `_${handoff.status}: ${handoff.build_id}_`
+  ].join("\n");
+
+  await replaceOriginalInteraction(env, interaction, content);
+}
+
 export async function handleDiscordInteraction(
   request: Request,
   env: DiscordEnv,
-  interpret: (utterance: string) => TurtleInterpretation
+  interpret: (utterance: string) => TurtleInterpretation,
+  executionContext?: ExecutionContext
 ) {
   if (request.method !== "POST") return new Response("Method Not Allowed", { status: 405 });
   if (!env.DISCORD_PUBLIC_KEY) return new Response("Discord public key is not configured", { status: 503 });
@@ -120,24 +201,13 @@ export async function handleDiscordInteraction(
   if (idea.length < 3) return commandResponse("🐢 Give Turtle an idea to think with. Example: `/turtle idea:make a bridge across the lake`");
   if (idea.length > 1800) return commandResponse("🐢 That idea is too long for the Discord command right now. Please keep it under 1,800 characters or continue in the Playground: https://turtleblockai.com/try/");
 
-  const interpretation = interpret(idea);
-  const handoff = buildMinecraftHandoff(interpretation, interaction);
-  const next = interpretation.needs_clarification && interpretation.clarification_question
-    ? `\n\n**Turtle asks:** ${interpretation.clarification_question}`
-    : "\n\n**Turtle:** I have enough to stage a provisional WorldSpec.";
-
-  const content = [
-    `🐢 **TurtleBlock AI**`,
-    `**Mode:** ${interpretation.mode}`,
-    next.trim(),
-    `\n**Minecraft handoff:** \`${handoff.build_id}\` → \`${handoff.adapter}\``,
-    `_Status: ${handoff.status}. Nothing has been sent to a Minecraft server yet._`,
-    `\n**WorldSpec preview**\n\`\`\`json\n${shortJson(interpretation.proposed_worldspec)}\n\`\`\``,
-    `Continue in the Playground: https://turtleblockai.com/try/`,
-    `Discord interactions are not automatically added to the research dataset.`
-  ].join("\n");
-
-  return commandResponse(content.slice(0, 1950));
+  const work = processTurtleCommand(env, interaction, idea, interpret);
+  if (executionContext) {
+    executionContext.waitUntil(work);
+  } else {
+    await work;
+  }
+  return deferredResponse();
 }
 
 export function minecraftStagingResponse(payload: unknown) {
