@@ -261,10 +261,14 @@ async function renderAppShell(request: Request, env: Env, origin: string) {
     html = html.replace("</head>", `${desktopLayout}\n</head>`);
   }
 
+  html = html
+    .replace(/<strong>STEAMHAMLET<\/strong>/g, '<strong>STEAM<br>HAMLET</strong>')
+    .replace(/<strong>RE\/EDUCATION<\/strong>/g, '<strong>RE\/<br>EDUCATION</strong>');
+
   if (!html.includes("orcid.org/0000-0001-6866-7280")) {
     html = html.replace(
-      '<span class="dot">•</span><a href="https://read.bryansanders.com"',
-      '<span class="dot">•</span><a href="https://orcid.org/0000-0001-6866-7280" target="_blank" rel="me noopener noreferrer" aria-label="ORCID 0000-0001-6866-7280">ORCID</a><span class="dot">•</span><a href="https://read.bryansanders.com"'
+      /(<a href="https:\/\/github\.com\/turtleblockai"[^>]*>GitHub<\/a>)(<span class="dot">•<\/span>)(<a href="https:\/\/read\.bryansanders\.com")/,
+      '$1$2<a href="https://orcid.org/0000-0001-6866-7280" target="_blank" rel="me noopener noreferrer" aria-label="ORCID 0000-0001-6866-7280">ORCID</a>$2$3'
     );
   }
 
