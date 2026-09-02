@@ -249,11 +249,12 @@ async function renderAppShell(request: Request, env: Env, origin: string) {
   const desktopLayout = `
 <style id="desktop-scroll-layout">
 @media (min-width:821px){
-  body{overflow-y:hidden}
-  main{height:calc(100vh - var(--footer-h));padding-top:28px;padding-bottom:18px}
-  .shell{height:100%;align-items:stretch}
-  .content{height:100%;min-height:0;overflow-y:auto;overscroll-behavior:contain;padding-right:12px;padding-bottom:48px;scrollbar-gutter:stable}
-  .panel{position:sticky;top:0;align-self:start;max-height:calc(100vh - var(--footer-h) - 46px);overflow-y:auto}
+  html,body{height:100%;overflow:hidden}
+  body{padding-bottom:0}
+  main{height:calc(100vh - var(--footer-h));min-height:0;padding-top:28px;padding-bottom:18px}
+  .shell{height:100%;min-height:0;align-items:stretch}
+  .content{height:100%;min-height:0;overflow-y:auto;overscroll-behavior:contain;padding-right:16px;padding-bottom:64px;scrollbar-gutter:stable}
+  .panel{position:relative;top:auto;align-self:stretch;height:fit-content;max-height:calc(100vh - var(--footer-h) - 46px);overflow-y:auto;overscroll-behavior:contain}
 }
 </style>`;
 
@@ -274,6 +275,9 @@ async function renderAppShell(request: Request, env: Env, origin: string) {
 
   const headers = new Headers(assetResponse.headers);
   headers.set("content-type", "text/html; charset=UTF-8");
+  headers.set("cache-control", "no-store, no-cache, must-revalidate, max-age=0");
+  headers.set("pragma", "no-cache");
+  headers.set("expires", "0");
   headers.delete("content-length");
   return new Response(html, { status: assetResponse.status, headers });
 }
