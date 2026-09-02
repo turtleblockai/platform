@@ -5,10 +5,12 @@
   "compatibility_date": "2026-08-30",
   "vars": {
     "DISCORD_APPLICATION_ID": "1544175868471943279",
-    "DISCORD_PUBLIC_KEY": "a1efc3af6a53120223741a31d39e75f98e0f115fbe65f25473af48f9488b1b3c"
+    "DISCORD_PUBLIC_KEY": "a1efc3af6a53120223741a31d39e75f98e0f115fbe65f25473af48f9488b1b3c",
+    "OPENAI_MODEL": "gpt-5.6-luna"
   },
   "assets": {
     "directory": "./public",
-    "binding": "ASSETS"
+    "binding": "ASSETS",
+    "run_worker_first": true
   }
 }
