@@ -17,6 +17,7 @@ type DiscordInteraction = {
 export type DiscordEnv = TurtleLLMEnv & {
   DISCORD_PUBLIC_KEY?: string;
   DISCORD_APPLICATION_ID?: string;
+  DB?: D1Database;
 };
 
 export type TurtleInterpretation = {
@@ -120,6 +121,114 @@ function fallbackConversation(idea: string, interpretation: TurtleInterpretation
   return `I’m holding onto your whole idea, not just the keywords I can normalize. I can already see that **${idea.slice(0, 220)}${idea.length > 220 ? "…" : ""}** contains more than a construction command—it carries choices about meaning, relationships, atmosphere, and what the world might communicate.${question}`;
 }
 
+async function persistOpeningSession(
+  env: DiscordEnv,
+  interaction: DiscordInteraction,
+  sessionId: string,
+  worldspecId: string,
+  learnerTurnId: string,
+  idea: string,
+  interpretation: TurtleInterpretation,
+  createdAt: string
+) {
+  if (!env.DB) return false;
+
+  const learnerId = interaction.member?.user?.id ?? interaction.user?.id ?? null;
+  const provenance = JSON.stringify({
+    source: "discord",
+    learner_explicit: true,
+    turtle_inferred: false,
+    raw_language_retained: true,
+    research_dataset_consent: false
+  });
+
+  try {
+    await env.DB.batch([
+      env.DB.prepare(`
+        INSERT INTO turtle_sessions (
+          id, worldspec_id, created_at, updated_at, source,
+          discord_guild_id, discord_channel_id, learner_id,
+          status, visibility
+        ) VALUES (?, ?, ?, ?, 'discord', ?, ?, ?, 'exploring', 'private')
+      `).bind(
+        sessionId,
+        worldspecId,
+        createdAt,
+        createdAt,
+        interaction.guild_id ?? null,
+        interaction.channel_id ?? null,
+        learnerId
+      ),
+      env.DB.prepare(`
+        INSERT INTO turtle_turns (
+          id, session_id, created_at, actor, raw_text,
+          interpretation_json, worldspec_delta_json, provenance_json
+        ) VALUES (?, ?, ?, 'learner', ?, ?, NULL, ?)
+      `).bind(
+        learnerTurnId,
+        sessionId,
+        createdAt,
+        idea,
+        JSON.stringify(interpretation),
+        provenance
+      ),
+      env.DB.prepare(`
+        INSERT INTO worldspec_revisions (
+          id, worldspec_id, session_id, revision_number,
+          created_at, created_by_turn_id, worldspec_json,
+          delta_json, provenance_json
+        ) VALUES (?, ?, ?, 1, ?, ?, ?, NULL, ?)
+      `).bind(
+        crypto.randomUUID(),
+        worldspecId,
+        sessionId,
+        createdAt,
+        learnerTurnId,
+        JSON.stringify(interpretation.proposed_worldspec),
+        provenance
+      )
+    ]);
+    return true;
+  } catch (error) {
+    console.error("Turtle Lab opening persistence failed", error);
+    return false;
+  }
+}
+
+async function persistTurtleTurn(
+  env: DiscordEnv,
+  sessionId: string,
+  text: string,
+  modelLabel: string
+) {
+  if (!env.DB) return;
+  const now = new Date().toISOString();
+  try {
+    await env.DB.batch([
+      env.DB.prepare(`
+        INSERT INTO turtle_turns (
+          id, session_id, created_at, actor, raw_text,
+          interpretation_json, worldspec_delta_json, provenance_json
+        ) VALUES (?, ?, ?, 'turtle', ?, NULL, NULL, ?)
+      `).bind(
+        crypto.randomUUID(),
+        sessionId,
+        now,
+        text,
+        JSON.stringify({
+          source: "turtle_conversation_engine",
+          model: modelLabel,
+          turtle_inferred: true,
+          learner_explicit: false
+        })
+      ),
+      env.DB.prepare(`UPDATE turtle_sessions SET updated_at = ? WHERE id = ?`).bind(now, sessionId)
+    ]);
+  } catch (error) {
+    console.error("Turtle turn persistence failed", error);
+  }
+}
+
 async function processTurtleCommand(
   env: DiscordEnv,
   interaction: DiscordInteraction,
@@ -130,6 +239,19 @@ async function processTurtleCommand(
   const handoff = buildMinecraftHandoff(interpretation, interaction);
   const sessionId = crypto.randomUUID();
   const worldspecId = crypto.randomUUID();
+  const learnerTurnId = crypto.randomUUID();
+  const createdAt = new Date().toISOString();
+
+  const stored = await persistOpeningSession(
+    env,
+    interaction,
+    sessionId,
+    worldspecId,
+    learnerTurnId,
+    idea,
+    interpretation,
+    createdAt
+  );
 
   let conversation = fallbackConversation(idea, interpretation);
   let llmLabel = "deterministic fallback";
@@ -154,12 +276,18 @@ async function processTurtleCommand(
     console.error("Turtle LLM processing error", error);
   }
 
+  await persistTurtleTurn(env, sessionId, conversation, llmLabel);
+
+  const storageLabel = stored
+    ? "persistent WorldSpec revision 0001 saved"
+    : "session IDs created; persistent D1 storage not active yet";
+
   const content = [
     "🐢 **Turtle**",
     conversation,
     "",
     `**Turtle Lab:** \`${sessionId}\` · **WorldSpec:** \`${worldspecId}\` · revision 0001`,
-    `_Conversation engine: ${llmLabel}. WorldSpec is provisional; no Minecraft build has been executed._`,
+    `_Conversation engine: ${llmLabel}. ${storageLabel}. No Minecraft build has been executed._`,
     `_${handoff.status}: ${handoff.build_id}_`
   ].join("\n");
 
