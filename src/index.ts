@@ -6,6 +6,8 @@ export interface Env {
   DB?: D1Database;
   DISCORD_PUBLIC_KEY?: string;
   DISCORD_APPLICATION_ID?: string;
+  OPENAI_API_KEY?: string;
+  OPENAI_MODEL?: string;
 }
 
 const worldSpecSummary = {
@@ -283,7 +285,7 @@ async function renderAppShell(request: Request, env: Env, origin: string) {
 }
 
 export default {
-  async fetch(request: Request, env: Env): Promise<Response> {
+  async fetch(request: Request, env: Env, ctx: ExecutionContext): Promise<Response> {
     const url = new URL(request.url);
 
     if (url.pathname === "/api/health") {
@@ -292,12 +294,14 @@ export default {
         service: "turtleblockai-platform",
         message: "TurtleBlock AI is awake.",
         discord_interactions: "/api/discord/interactions",
+        turtle_conversation_engine: env.OPENAI_API_KEY ? "llm-enabled" : "deterministic-fallback",
+        turtle_model: env.OPENAI_MODEL || null,
         minecraft_adapter: "staging-only"
       });
     }
 
     if (url.pathname === "/api/discord/interactions") {
-      return handleDiscordInteraction(request, env, makeInterpretation);
+      return handleDiscordInteraction(request, env, makeInterpretation, ctx);
     }
 
     if (url.pathname === "/api/minecraft/build" && request.method === "POST") {
