@@ -20,6 +20,25 @@ const worldSpecSummary = {
   repository: "https://github.com/turtleblockai/platform/tree/main/worldspec"
 };
 
+const SOCIAL_DESCRIPTION = "An educational research platform investigating constructivist human-AI collaboration, persistent computational worlds, and learner agency in Minecraft and beyond.";
+
+function applySocialMetadata(html: string, pageUrl: string) {
+  if (html.includes('property="og:title"')) return html;
+  const meta = [
+    '<meta property="og:type" content="website">',
+    '<meta property="og:title" content="TurtleBlock AI">',
+    `<meta property="og:description" content="${SOCIAL_DESCRIPTION}">`,
+    `<meta property="og:url" content="${pageUrl}">`,
+    '<meta property="og:image" content="https://turtleblockai.com/assets/turtleblock-mark.svg">',
+    '<meta property="og:image:alt" content="TurtleBlock AI logo">',
+    '<meta name="twitter:card" content="summary">',
+    '<meta name="twitter:title" content="TurtleBlock AI">',
+    `<meta name="twitter:description" content="${SOCIAL_DESCRIPTION}">`,
+    '<meta name="twitter:image" content="https://turtleblockai.com/assets/turtleblock-mark.svg">'
+  ].join("\n  ");
+  return html.replace("</head>", `  ${meta}\n</head>`);
+}
+
 function classifyInteraction(utterance: string) {
   const text = utterance.toLowerCase();
   const reflective = /\b(why|notice|noticed|feel|felt|worked|didn't work|did not work|what happened|reflect|compare)\b/.test(text);
@@ -184,7 +203,7 @@ async function renderAppShell(request: Request, env: Env, origin: string) {
   html = html
     .replace(/<strong>STEAMHAMLET<\/strong>/g, '<strong>STEAM<br>HAMLET</strong>')
     .replace(/<strong>RE\/EDUCATION<\/strong>/g, '<strong>RE\/<br>EDUCATION</strong>')
-    .replace('Constructivist AI agents for building, exploring, and iterating computational worlds in Minecraft and beyond.', 'An educational research platform investigating constructivist human-AI collaboration, persistent computational worlds, and learner agency in Minecraft and beyond.')
+    .replace('Constructivist AI agents for building, exploring, and iterating computational worlds in Minecraft and beyond.', SOCIAL_DESCRIPTION)
     .replace('A public educational research playground · building the ship while flying the ship.', 'A build-in-public educational research program by Dr. Bryan P. Sanders · developed through RE/EDUCATION.')
     .replace('A public educational research and development playground exploring how constructivist AI agents can help learners turn ideas into computational worlds, inhabit those worlds, notice what happens, and revise what they made.', 'An educational research and development program led by Dr. Bryan P. Sanders exploring how constructivist AI agents can help learners turn ideas into computational worlds, inhabit those worlds, notice consequences, reflect, and revise what they make.')
     .replace('The project grows from Dr. Bryan P. Sanders\' work as a credentialed educator, school builder, doctoral researcher, educational technologist, and published author.', 'The project grows from Dr. Bryan P. Sanders\' work as a credentialed educator, educational researcher, school builder, educational technologist, and published author.')
@@ -199,6 +218,7 @@ async function renderAppShell(request: Request, env: Env, origin: string) {
     .replace('TurtleBlock AI is a build-in-public educational research project associated with RE/EDUCATION and the ongoing educational and doctoral research of Dr. Bryan P. Sanders.', 'TurtleBlock AI is a build-in-public educational research and development program led by Dr. Bryan P. Sanders and developed through RE/EDUCATION, connecting ongoing scholarly work with educational practice and technical implementation.')
     .replace('<div class="stage"><span class="date">Current edge</span><strong>→ Native Discord conversation</strong>', '<div class="stage"><span class="date">Sep 2, 2026</span><strong class="done">✓ Research ontology formalized</strong><p>The <em>Dr_Bryan_P_Sanders_TurtleBlockAI_Taxonomy</em> now preserves the dissertation\'s original Dedoose codes as a foundational research ontology and defines versioned mappings to later scholarship, the Turtle Charter, WorldSpec, and Turtle behavior.</p></div><div class="stage"><span class="date">Current edge</span><strong>→ Native Discord conversation</strong>');
   html = applyCanonicalFooter(html);
+  html = applySocialMetadata(html, new URL(request.url).toString());
   const headers = new Headers(assetResponse.headers);
   headers.set("content-type", "text/html; charset=UTF-8");
   headers.set("cache-control", "no-store, no-cache, must-revalidate, max-age=0");
@@ -212,7 +232,8 @@ async function renderStaticAsset(request: Request, env: Env) {
   const assetResponse = await env.ASSETS.fetch(request);
   const contentType = assetResponse.headers.get("content-type") || "";
   if (!assetResponse.ok || !contentType.includes("text/html")) return assetResponse;
-  const html = applyCanonicalFooter(await assetResponse.text());
+  let html = applyCanonicalFooter(await assetResponse.text());
+  html = applySocialMetadata(html, new URL(request.url).toString());
   const headers = new Headers(assetResponse.headers);
   headers.delete("content-length");
   headers.set("cache-control", "no-store, no-cache, must-revalidate, max-age=0");
