@@ -91,6 +91,13 @@ function mergeWorldSpec(current: any, proposed: any, learnerText: string) {
   };
 }
 
+function applyCanonicalFooter(html: string) {
+  return html
+    .replace(/<span>Created and researched by<\/span><a[^>]*>@nayrbgo<\/a><span class="dot">•<\/span>/g, '<span>Created and researched by <a href="https://read.bryansanders.com" target="_blank" rel="noopener noreferrer">Dr. Bryan P. Sanders</a></span><span class="dot">•</span>')
+    .replace(/<span>Created and researched by<\/span><a[^>]*>Dr\. Bryan P\. Sanders<\/a><span class="dot">•<\/span>/g, '<span>Created and researched by <a href="https://read.bryansanders.com" target="_blank" rel="noopener noreferrer">Dr. Bryan P. Sanders</a></span><span class="dot">•</span>')
+    .replace(/<span class="dot">•<\/span><a href="https:\/\/read\.bryansanders\.com"[^>]*>read\.bryansanders\.com<\/a>/g, '');
+}
+
 async function maybeStoreSubmission(env: Env, data: { id: string; created_at: string; anonymous_session_id: string; input_text: string; consent_version: string; worldspec_version: string; interpretation_json: string; }) {
   const screening = screenResearchInput(data.input_text);
   const datasetStatus = candidateDatasetStatus(screening);
@@ -190,15 +197,25 @@ async function renderAppShell(request: Request, env: Env, origin: string) {
     .replace('Not a detached software demo', 'Research translated into working infrastructure')
     .replace('TurtleBlock AI is intended as a functional playground for actual educational work:', 'TurtleBlock AI is intended as working research infrastructure for authentic educational practice:')
     .replace('TurtleBlock AI is a build-in-public educational research project associated with RE/EDUCATION and the ongoing educational and doctoral research of Dr. Bryan P. Sanders.', 'TurtleBlock AI is a build-in-public educational research and development program led by Dr. Bryan P. Sanders and developed through RE/EDUCATION, connecting ongoing scholarly work with educational practice and technical implementation.')
-    .replace('<div class="stage"><span class="date">Current edge</span><strong>→ Native Discord conversation</strong>', '<div class="stage"><span class="date">Sep 2, 2026</span><strong class="done">✓ Research ontology formalized</strong><p>The <em>Dr_Bryan_P_Sanders_TurtleBlockAI_Taxonomy</em> now preserves the dissertation\'s original Dedoose codes as a foundational research ontology and defines versioned mappings to later scholarship, the Turtle Charter, WorldSpec, and Turtle behavior.</p></div><div class="stage"><span class="date">Current edge</span><strong>→ Native Discord conversation</strong>')
-    .replace('<span>Created and researched by</span><a href="https://www.google.com/search?q=nayrbgo" target="_blank" rel="noopener noreferrer">@nayrbgo</a>', '<span>Created and researched by</span><a href="https://orcid.org/0000-0001-6866-7280" target="_blank" rel="me noopener noreferrer">Dr. Bryan P. Sanders</a>')
-    .replace('<span class="dot">•</span><a href="https://orcid.org/0000-0001-6866-7280" target="_blank" rel="me noopener noreferrer">ORCID</a>', '<span class="dot">•</span><a href="https://orcid.org/0000-0001-6866-7280" target="_blank" rel="me noopener noreferrer">ORCID</a>');
+    .replace('<div class="stage"><span class="date">Current edge</span><strong>→ Native Discord conversation</strong>', '<div class="stage"><span class="date">Sep 2, 2026</span><strong class="done">✓ Research ontology formalized</strong><p>The <em>Dr_Bryan_P_Sanders_TurtleBlockAI_Taxonomy</em> now preserves the dissertation\'s original Dedoose codes as a foundational research ontology and defines versioned mappings to later scholarship, the Turtle Charter, WorldSpec, and Turtle behavior.</p></div><div class="stage"><span class="date">Current edge</span><strong>→ Native Discord conversation</strong>');
+  html = applyCanonicalFooter(html);
   const headers = new Headers(assetResponse.headers);
   headers.set("content-type", "text/html; charset=UTF-8");
   headers.set("cache-control", "no-store, no-cache, must-revalidate, max-age=0");
   headers.set("pragma", "no-cache");
   headers.set("expires", "0");
   headers.delete("content-length");
+  return new Response(html, { status: assetResponse.status, headers });
+}
+
+async function renderStaticAsset(request: Request, env: Env) {
+  const assetResponse = await env.ASSETS.fetch(request);
+  const contentType = assetResponse.headers.get("content-type") || "";
+  if (!assetResponse.ok || !contentType.includes("text/html")) return assetResponse;
+  const html = applyCanonicalFooter(await assetResponse.text());
+  const headers = new Headers(assetResponse.headers);
+  headers.delete("content-length");
+  headers.set("cache-control", "no-store, no-cache, must-revalidate, max-age=0");
   return new Response(html, { status: assetResponse.status, headers });
 }
 
@@ -238,6 +255,6 @@ export default {
     }
 
     if (request.method === "GET" && appRoutes.has(url.pathname)) return renderAppShell(request, env, url.origin);
-    return env.ASSETS.fetch(request);
+    return renderStaticAsset(request, env);
   }
 } satisfies ExportedHandler<Env>;
