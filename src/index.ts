@@ -22,6 +22,61 @@ const worldSpecSummary = {
 
 const SOCIAL_DESCRIPTION = "An educational research platform investigating constructivist human-AI collaboration, persistent computational worlds, and learner agency in Minecraft and beyond.";
 
+const RAIL_SUMMARIES: Record<string, string> = {
+  home: "We built a place to build places: learner ideas become persistent, revisable worlds through dialogue, construction, experience, and reflection.",
+  try: "Talk with Turtle, shape a WorldSpec, export it into Minecraft, enter what was built, then revise the world through dialogue.",
+  about: "TurtleBlock AI continues decades of recursive educational practice connecting learner agency, construction, research, dialogue, computational environments, and human–machine collaboration.",
+  worldspec: "WorldSpec preserves learner meaning as a persistent, inspectable representation that can move between dialogue, Minecraft construction, experience, and revision.",
+  charter: "The Turtle Charter keeps the learner in control: Turtle may collaborate, question, suggest, and build, but meaning and judgment remain human.",
+  research: "The research lineage connects Logo, experimental teaching, Critical Techno Constructivism, Minecraft, custom agents, Sunshine Machine, co-active emergence, and TurtleBlock AI.",
+  build: "The Build Log records working infrastructure, reversals, research decisions, and the next edge as TurtleBlock AI is built in public.",
+  steamhamlet: "STEAMHAMLET is the earlier room of possibilities: ideas become manipulable objects, environments generate inquiry, and experience recursively changes the representation.",
+  reeducation: "RE/EDUCATION is the focused practice-and-R&D setting where TurtleBlock AI connects live teaching, research, school design, and technical experimentation.",
+  privacy: "Turtle conversations are private by default; research capture, provenance, redaction, consent, and intentional publication are designed as explicit boundaries.",
+  disclaimer: "TurtleBlock AI is experimental software: outputs can be wrong, integrations can fail, and consequential decisions still require human judgment.",
+  lab: "Turtle Lab is the opt-in public artifact layer: selected WorldSpecs, builds, reflections, and dialogue—not raw private conversations.",
+  terms: "These terms define experimental use, learner responsibility, acceptable conduct, data boundaries, third-party services, and the limits of TurtleBlock AI."
+};
+
+function routeKeyFromPath(pathname: string) {
+  const key = pathname.replace(/^\/+|\/+$/g, "");
+  return key || "home";
+}
+
+function railSummaryFor(pathname: string) {
+  return RAIL_SUMMARIES[routeKeyFromPath(pathname)] || RAIL_SUMMARIES.home;
+}
+
+function applyCanonicalRailChrome(html: string) {
+  const css = `<style id="canonical-rail-chrome">
+.navgrid{display:grid!important;grid-template-columns:1fr 1fr!important;gap:.52rem!important;align-items:stretch!important;min-width:0!important}
+.navcard{display:block!important;text-align:left!important;padding:.66rem .7rem!important;border:1px solid var(--border)!important;border-radius:11px!important;background:var(--card)!important;color:var(--text)!important;cursor:pointer!important;min-height:76px!important;height:auto!important;min-width:0!important;overflow:hidden!important;text-decoration:none!important}
+.navcard:hover,.navcard.active{border-color:#6fa87a!important;background:#142019!important}
+.navcard strong{display:block!important;margin:0 0 .12rem!important;font-size:.86rem!important;line-height:1.12!important;overflow-wrap:normal!important;word-break:normal!important;text-align:left!important}
+.navcard span{display:block!important;margin:0!important;font-size:.67rem!important;line-height:1.2!important;color:var(--soft)!important;text-align:left!important}
+.status,.railstatus{margin-top:.66rem!important;padding:.65rem .72rem!important;border-radius:11px!important;background:var(--bg)!important;color:#78947e!important;font-size:.74rem!important;line-height:1.3!important;text-align:left!important}
+@media(max-width:1040px) and (min-width:821px){.navcard{min-height:70px!important;padding:.58rem .62rem!important}.navcard span{font-size:.63rem!important}.navcard strong{font-size:.8rem!important}}
+@media(max-width:820px){.panel{padding:.75rem!important}.navgrid{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:.5rem!important;padding:.55rem 0 0!important}.navcard{min-height:50px!important;padding:.68rem .72rem!important;display:flex!important;align-items:center!important}.navcard strong{margin:0!important;font-size:.88rem!important}.navcard span{display:none!important}.panel.compact .navgrid{display:none!important}.status,.railstatus{display:none!important}}
+</style>`;
+  if (html.includes('id="canonical-rail-chrome"')) return html;
+  return html.replace("</head>", `${css}\n</head>`);
+}
+
+function applyRailSummary(html: string, pathname: string) {
+  const summary = `<div class="status railstatus">🐢 ${railSummaryFor(pathname)}</div>`;
+  if (/<div class="(?:status|railstatus|status railstatus|railstatus status)">[\s\S]*?<\/div>/.test(html)) {
+    return html.replace(/<div class="(?:status|railstatus|status railstatus|railstatus status)">[\s\S]*?<\/div>/, summary);
+  }
+  return html.replace(/(<\/div>\s*<\/aside>)/, `${summary}$1`);
+}
+
+function injectRailSummaryRuntime(html: string) {
+  if (html.includes('id="rail-summary-runtime"')) return html;
+  const summaries = JSON.stringify(RAIL_SUMMARIES);
+  const script = `<script id="rail-summary-runtime">(()=>{const summaries=${summaries};const key=()=>location.pathname.replace(/^\\/+|\\/+$/g,'')||'home';const update=()=>{const el=document.querySelector('.status,.railstatus');if(el)el.textContent='🐢 '+(summaries[key()]||summaries.home)};const observer=new MutationObserver(update);observer.observe(document.body,{subtree:true,attributes:true,attributeFilter:['class']});addEventListener('popstate',update);document.addEventListener('click',()=>setTimeout(update,0));update()})();</script>`;
+  return html.replace("</body>", `${script}\n</body>`);
+}
+
 function applySocialMetadata(html: string, pageUrl: string) {
   if (html.includes('property="og:title"')) return html;
   const meta = [
@@ -220,6 +275,9 @@ async function renderAppShell(request: Request, env: Env, origin: string) {
     .replace('TurtleBlock AI is intended as a functional playground for actual educational work:', 'TurtleBlock AI is intended as working research infrastructure for authentic educational practice:')
     .replace('TurtleBlock AI is a build-in-public educational research project associated with RE/EDUCATION and the ongoing educational and doctoral research of Dr. Bryan P. Sanders.', 'TurtleBlock AI is a build-in-public educational research and development program led by Dr. Bryan P. Sanders and developed through RE/EDUCATION, connecting ongoing scholarly work with educational practice and technical implementation.')
     .replace('<div class="stage"><span class="date">Current edge</span><strong>→ Native Discord conversation</strong>', '<div class="stage"><span class="date">Sep 2, 2026</span><strong class="done">✓ Research ontology formalized</strong><p>The <em>Dr_Bryan_P_Sanders_TurtleBlockAI_Taxonomy</em> now preserves the dissertation\'s original Dedoose codes as a foundational research ontology and defines versioned mappings to later scholarship, the Turtle Charter, WorldSpec, and Turtle behavior.</p></div><div class="stage"><span class="date">Current edge</span><strong>→ Native Discord conversation</strong>');
+  html = applyCanonicalRailChrome(html);
+  html = applyRailSummary(html, new URL(request.url).pathname);
+  html = injectRailSummaryRuntime(html);
   html = applyCanonicalFooter(html);
   html = applySocialMetadata(html, new URL(request.url).toString());
   const headers = new Headers(assetResponse.headers);
@@ -235,7 +293,10 @@ async function renderStaticAsset(request: Request, env: Env) {
   const assetResponse = await env.ASSETS.fetch(request);
   const contentType = assetResponse.headers.get("content-type") || "";
   if (!assetResponse.ok || !contentType.includes("text/html")) return assetResponse;
+  const pathname = new URL(request.url).pathname;
   let html = applyCanonicalFooter(await assetResponse.text());
+  html = applyCanonicalRailChrome(html);
+  html = applyRailSummary(html, pathname);
   html = applySocialMetadata(html, new URL(request.url).toString());
   const headers = new Headers(assetResponse.headers);
   headers.delete("content-length");
