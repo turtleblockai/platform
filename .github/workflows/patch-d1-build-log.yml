@@ -1,0 +1,34 @@
+name: Patch D1 build log
+
+on:
+  push:
+    paths:
+      - .github/workflows/patch-d1-build-log.yml
+
+permissions:
+  contents: write
+
+jobs:
+  patch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Expand D1 build-log milestones
+        shell: python
+        run: |
+          from pathlib import Path
+          p = Path('public/index.html')
+          s = p.read_text()
+          old = '''<div class="stage"><span class="date">Current edge</span><strong>→ Activate + query the ontology</strong><p>Apply the new D1 migrations in production, then expose bounded ontology retrieval to Turtle so a conversation can retrieve relevant codes, authored tools, and source passages without dumping the full corpus into the model context.</p></div><div class="stage"><span class="date">Next</span><strong>→ Native Discord conversation + Minecraft adapter</strong>'''
+          new = '''<div class="stage"><span class="date">Sep 4, 2026</span><strong class="done">✓ D1 longitudinal research corpus designed in Git</strong><p>Migrations 0001–0006 now define the persistent Turtle research layer: consent-aware Playground submissions, Turtle sessions and turns, WorldSpec revisions, the original dissertation ontology, authored tools, publications and source passages, pedagogical experiments, source artifacts, research lineage, provenance, completeness audits, and retrieval views.</p></div><div class="stage"><span class="date">Sep 4, 2026</span><strong class="done">✓ Career archive becomes queryable ontology</strong><p>The research catalog now connects publications, chapters, presentations, authored tools, STEAMHAMLET, Minecraft work, GPT-building experiments, structured agent-design databases, ingestion systems, Sunshine Machine, co-active emergence, RE/EDUCATION, and TurtleBlock field tests without collapsing historical sources into later interpretations.</p></div><div class="stage"><span class="date">Sep 4, 2026 · current Cloudflare state</span><strong>→ D1 database exists; production schema not yet activated</strong><p>The Cloudflare D1 database has been created and bound to TurtleBlock AI, but the remote database can still show zero user tables until migrations 0001–0006 are applied. Git contains the schema and seed data; applying the migrations turns those definitions into live Cloudflare tables, rows, indexes, full-text search, and research views.</p><div class="codebox">Git migrations → apply to remote D1 → tables + seeded research rows → Turtle persistence + bounded retrieval ↺</div></div><div class="stage"><span class="date">Current edge</span><strong>→ Apply + verify D1 migrations, then query the ontology</strong><p>Run the production migrations, confirm the schema and seeded rows in Cloudflare D1 Studio, then expose bounded ontology retrieval to Turtle so conversations can retrieve relevant codes, authored tools, experiments, citations, and source passages without dumping the full corpus into model context.</p></div><div class="stage"><span class="date">Next</span><strong>→ Native Discord conversation + Minecraft adapter</strong>'''
+          if old not in s:
+              raise SystemExit('Target build-log block was not found; refusing to rewrite stale content.')
+          p.write_text(s.replace(old, new, 1))
+      - name: Remove one-time workflow and commit
+        run: |
+          rm .github/workflows/patch-d1-build-log.yml
+          git config user.name "turtleblockai-build-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add public/index.html .github/workflows/patch-d1-build-log.yml
+          git commit -m "Make D1 research infrastructure explicit in build log"
+          git push
