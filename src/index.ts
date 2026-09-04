@@ -50,13 +50,13 @@ function railSummaryFor(pathname: string) {
 function applyCanonicalRailChrome(html: string) {
   const css = `<style id="canonical-rail-chrome">
 .navgrid{display:grid!important;grid-template-columns:1fr 1fr!important;gap:.52rem!important;align-items:stretch!important;min-width:0!important}
-.navcard{display:block!important;text-align:left!important;padding:.66rem .7rem!important;border:1px solid var(--border)!important;border-radius:11px!important;background:var(--card)!important;color:var(--text)!important;cursor:pointer!important;min-height:76px!important;height:auto!important;min-width:0!important;overflow:hidden!important;text-decoration:none!important}
+.navcard{display:flex!important;flex-direction:column!important;justify-content:center!important;align-items:flex-start!important;text-align:left!important;padding:.66rem .7rem!important;border:1px solid var(--border)!important;border-radius:11px!important;background:var(--card)!important;color:var(--text)!important;cursor:pointer!important;min-height:76px!important;height:76px!important;min-width:0!important;overflow:hidden!important;text-decoration:none!important;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif!important;font-size:inherit!important;line-height:normal!important;letter-spacing:normal!important;-webkit-appearance:none!important;appearance:none!important}
 .navcard:hover,.navcard.active{border-color:#6fa87a!important;background:#142019!important}
-.navcard strong{display:block!important;margin:0 0 .12rem!important;font-size:.86rem!important;line-height:1.12!important;overflow-wrap:normal!important;word-break:normal!important;text-align:left!important}
-.navcard span{display:block!important;margin:0!important;font-size:.67rem!important;line-height:1.2!important;color:var(--soft)!important;text-align:left!important}
+.navcard strong{display:block!important;margin:0 0 .12rem!important;padding:0!important;font-family:inherit!important;font-size:.86rem!important;font-weight:700!important;line-height:1.12!important;letter-spacing:0!important;overflow-wrap:normal!important;word-break:normal!important;text-align:left!important}
+.navcard span{display:block!important;margin:0!important;padding:0!important;font-family:inherit!important;font-size:.67rem!important;font-weight:400!important;line-height:1.2!important;letter-spacing:0!important;color:var(--soft)!important;text-align:left!important}
 .status,.railstatus{margin-top:.66rem!important;padding:.65rem .72rem!important;border-radius:11px!important;background:var(--bg)!important;color:#78947e!important;font-size:.74rem!important;line-height:1.3!important;text-align:left!important}
-@media(max-width:1040px) and (min-width:821px){.navcard{min-height:70px!important;padding:.58rem .62rem!important}.navcard span{font-size:.63rem!important}.navcard strong{font-size:.8rem!important}}
-@media(max-width:820px){.panel{padding:.75rem!important}.navgrid{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:.5rem!important;padding:.55rem 0 0!important}.navcard{min-height:50px!important;padding:.68rem .72rem!important;display:flex!important;align-items:center!important}.navcard strong{margin:0!important;font-size:.88rem!important}.navcard span{display:none!important}.panel.compact .navgrid{display:none!important}.status,.railstatus{display:none!important}}
+@media(max-width:1040px) and (min-width:821px){.navcard{min-height:70px!important;height:70px!important;padding:.58rem .62rem!important}.navcard span{font-size:.63rem!important}.navcard strong{font-size:.8rem!important}}
+@media(max-width:820px){.panel{padding:.75rem!important}.navgrid{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:.5rem!important;padding:.55rem 0 0!important}.navcard{min-height:50px!important;height:50px!important;padding:.68rem .72rem!important;display:flex!important;flex-direction:row!important;justify-content:flex-start!important;align-items:center!important}.navcard strong{margin:0!important;font-size:.88rem!important}.navcard span{display:none!important}.panel.compact .navgrid{display:none!important}.status,.railstatus{display:none!important}}
 </style>`;
   if (html.includes('id="canonical-rail-chrome"')) return html;
   return html.replace("</head>", `${css}\n</head>`);
@@ -73,7 +73,7 @@ function applyRailSummary(html: string, pathname: string) {
 function injectRailSummaryRuntime(html: string) {
   if (html.includes('id="rail-summary-runtime"')) return html;
   const summaries = JSON.stringify(RAIL_SUMMARIES);
-  const script = `<script id="rail-summary-runtime">(()=>{const summaries=${summaries};const key=()=>location.pathname.replace(/^\\/+|\\/+$/g,'')||'home';const update=()=>{const el=document.querySelector('.status,.railstatus');if(el)el.textContent='🐢 '+(summaries[key()]||summaries.home)};const observer=new MutationObserver(update);observer.observe(document.body,{subtree:true,attributes:true,attributeFilter:['class']});addEventListener('popstate',update);document.addEventListener('click',()=>setTimeout(update,0));update()})();</script>`;
+  const script = `<script id="rail-summary-runtime">(()=>{const summaries=${summaries};const key=()=>location.pathname.replace(/^\\/+|\\/+$/g,'')||'home';const ensure=()=>{let el=document.querySelector('.railstatus,.status');if(!el){const panel=document.querySelector('.panel');if(panel){el=document.createElement('div');el.className='status railstatus';panel.appendChild(el)}}return el};const update=()=>{const el=ensure();if(el)el.textContent='🐢 '+(summaries[key()]||summaries.home)};const notify=()=>setTimeout(update,0);const originalPush=history.pushState.bind(history);history.pushState=(...args)=>{originalPush(...args);notify()};const originalReplace=history.replaceState.bind(history);history.replaceState=(...args)=>{originalReplace(...args);notify()};addEventListener('popstate',update);document.addEventListener('DOMContentLoaded',update);document.addEventListener('click',notify);update()})();</script>`;
   return html.replace("</body>", `${script}\n</body>`);
 }
 
@@ -297,6 +297,7 @@ async function renderStaticAsset(request: Request, env: Env) {
   let html = applyCanonicalFooter(await assetResponse.text());
   html = applyCanonicalRailChrome(html);
   html = applyRailSummary(html, pathname);
+  html = injectRailSummaryRuntime(html);
   html = applySocialMetadata(html, new URL(request.url).toString());
   const headers = new Headers(assetResponse.headers);
   headers.delete("content-length");
