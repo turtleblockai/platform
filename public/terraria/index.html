@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Turtle Terraria — TurtleBlock AI</title>
+  <meta name="description" content="Turtle Terraria is the umbrella research environment for bounded Human + Turtle and Recursive Turtle habitats inside TurtleBlock AI.">
+  <link rel="canonical" href="https://turtleblockai.com/terraria/">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <style>
+    :root{color-scheme:dark;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;--bg:#0b0f0d;--panel:#0f1511;--card:#101712;--border:#26382b;--border2:#36513c;--text:#eef7f0;--muted:#b9c9bc;--soft:#8fae95;--accent:#9fe0ad;--dim:#607565;--footer-h:58px}
+    *{box-sizing:border-box}html{background:var(--bg);overflow-x:hidden}body{margin:0;background:var(--bg);color:var(--text);overflow-x:hidden;padding-bottom:calc(var(--footer-h) + 24px)}a{color:var(--accent)}button{font:inherit}
+    main{width:min(1160px,calc(100% - 2rem));margin:0 auto;padding:28px 1rem 54px}.shell{display:grid;grid-template-columns:minmax(0,800px) 288px;gap:32px;justify-content:center;align-items:start;min-width:0}.content{min-width:0;width:100%}.panel{width:288px;min-width:0;border:1px solid var(--border);border-radius:16px;background:var(--panel);padding:.82rem;position:sticky;top:28px}
+    .markrow{display:flex;align-items:center;gap:.7rem;min-height:132px}.brandhome{border:0;background:transparent;padding:0;margin:0;cursor:pointer;border-radius:16px;display:block}.brandmark{width:150px;height:122px;object-fit:contain;display:block}.pageicon{display:grid;place-items:center;width:48px;height:48px;flex:0 0 48px;border:1px solid var(--border2);border-radius:14px;background:var(--card);font-size:1.7rem;line-height:1}.buildpill{margin-left:auto;align-self:flex-start;margin-top:18px;display:inline-flex;align-items:center;gap:.35rem;padding:.42rem .72rem;border:1px solid var(--border2);border-radius:999px;color:var(--accent);background:var(--card);font-size:.82rem;font-weight:750;white-space:nowrap}
+    h1{font-size:clamp(2.8rem,7vw,5.5rem);line-height:.95;margin:.2rem 0 1rem;letter-spacing:-.05em}h2{margin-top:2.2rem}h3{margin:.1rem 0 .4rem}p,li{color:var(--muted);line-height:1.65}.lede{font-size:1.25rem}.card{border:1px solid var(--border);border-radius:16px;background:var(--card);padding:1rem 1.15rem;margin:1rem 0}.loop{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;color:#d8eadb;overflow-wrap:anywhere}.gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem;margin:1rem 0}.project{border:1px solid var(--border);border-radius:16px;background:var(--card);padding:1rem}.project strong{display:block;margin-bottom:.35rem}.muted{color:#78947e}.ctc{display:grid;gap:.55rem;margin:1rem 0}.ctc div{border-left:3px solid #6fa87a;padding:.45rem .8rem;background:#0f1511;border-radius:0 10px 10px 0}.ctc strong{color:var(--text)}
+    .panelhead{display:none;align-items:center;justify-content:flex-end;margin:0 0 .55rem}.menutoggle{display:none;border:1px solid var(--border2);background:var(--card);color:var(--text);border-radius:999px;padding:.5rem .7rem;font-weight:800;cursor:pointer}.navgrid{display:grid;grid-template-columns:1fr 1fr;grid-auto-rows:76px;gap:.52rem;align-items:stretch;min-width:0}.navcard{display:flex;flex-direction:column;justify-content:center;text-align:left;padding:.66rem .7rem;border:1px solid var(--border);border-radius:11px;background:var(--card);color:var(--text);cursor:pointer;min-height:76px;height:76px;margin:0;min-width:0;overflow:hidden;text-decoration:none}.navcard:hover,.navcard.active{border-color:#6fa87a;background:#142019}.navcard strong{display:block;margin:0 0 .12rem;font-size:.86rem;line-height:1.12;overflow-wrap:normal;word-break:normal;text-align:left}.navcard span{display:block;margin:0;font-size:.67rem;line-height:1.2;color:var(--soft);text-align:left}.railstatus{margin-top:.72rem;min-height:64px;padding:.65rem .72rem;border-radius:11px;background:var(--bg);color:#78947e;font-size:.74rem;line-height:1.3;text-align:left}
+    .sitefooter{position:fixed;left:0;right:0;bottom:0;z-index:50;min-height:var(--footer-h);border-top:1px solid var(--border);background:rgba(11,15,13,.94);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);padding:14px 1rem 16px;text-align:center;color:var(--dim);font-size:.88rem}.sitefooter nav{display:flex;justify-content:center;align-items:center;gap:.65rem;flex-wrap:wrap}.sitefooter a{color:var(--soft);font-weight:700;text-decoration:none}.dot{opacity:.45}
+    @media(min-width:821px){html,body{height:auto;min-height:100%;overflow-x:hidden;overflow-y:auto}main{min-height:calc(100vh - var(--footer-h));height:auto;padding-bottom:calc(var(--footer-h) + 34px)}.shell{height:auto;min-height:0;align-items:start}.content{height:auto;min-height:0;overflow:visible;padding-right:16px;padding-bottom:64px}.panel{position:sticky;top:28px;align-self:start;max-height:none;overflow:visible}}
+    @media(max-width:1040px) and (min-width:821px){main{width:min(980px,calc(100% - 1.5rem))}.shell{grid-template-columns:minmax(0,1fr) 250px;gap:20px}.panel{width:250px}.navgrid{grid-auto-rows:70px}.navcard{min-height:70px;height:70px;padding:.58rem .62rem}.navcard span{font-size:.63rem}.navcard strong{font-size:.8rem}.buildpill{font-size:.76rem;padding:.38rem .62rem}}
+    @media(max-width:820px){:root{--footer-h:72px}main{width:100%;max-width:100%;padding:14px 14px 48px}.shell{display:flex;flex-direction:column;gap:1rem;width:100%;max-width:100%;min-width:0}.panel{width:100%;max-width:100%;position:static;order:-1;padding:.75rem}.panelhead{display:flex}.menutoggle{display:inline-flex}.navgrid{grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-rows:50px;gap:.5rem;padding:.55rem 0 0}.panel.compact .navgrid{display:none}.panel.compact .railstatus{display:none}.navcard{min-height:50px;height:50px;padding:.68rem .72rem;display:flex;flex-direction:row;align-items:center;justify-content:flex-start}.navcard strong{margin:0;font-size:.88rem}.navcard span{display:none}.railstatus{display:none}.gallery{grid-template-columns:1fr}.content{min-height:0;width:100%;max-width:100%;overflow:hidden}.brandmark{width:112px;height:94px}.markrow{min-height:102px}.buildpill{margin-top:12px;font-size:.74rem}}
+    @media(max-width:560px){:root{--footer-h:82px}main{padding:10px 12px 46px}.brandmark{width:94px;height:80px}.pageicon{width:40px;height:40px;flex-basis:40px;font-size:1.3rem}.sitefooter{font-size:.78rem;padding:11px 10px 13px}.buildpill{font-size:.68rem;padding:.34rem .52rem}}
+  </style>
+</head>
+<body>
+<main>
+  <section class="shell">
+    <section class="content">
+      <div class="markrow"><a class="brandhome" href="/" aria-label="TurtleBlock AI home"><img class="brandmark" src="/assets/turtleblock-mark.svg" alt="TurtleBlock AI turtle and bricks on an AI chip"></a><span class="pageicon" aria-label="Turtle Terraria">🌿</span><span class="buildpill">🐢 Building in public</span></div>
+      <h1>Turtle Terraria</h1>
+      <p class="lede"><strong>Places where ideas live long enough to change.</strong></p>
+      <p>Turtle Terraria is the umbrella research environment inside TurtleBlock AI. It contains bounded habitats for observing what emerges when people and computers construct, question, reflect, and revise together — and what happens when human-made computational agents recursively do the same with one another.</p>
+      <div class="card loop">cohabitation without provenance collapse: human meaning ≠ Turtle interpretation ≠ synthetic self-play ≠ scholarly source</div>
+
+      <h2>Two habitats to begin</h2>
+      <div class="gallery">
+        <div class="project"><strong>🧑‍💻🐢 Human + Turtle Terrarium</strong><p>A person drives the inquiry. Turtle contributes questions, interpretations, alternatives, information, construction, and technical assistance. Human purpose, correction, judgment, reflection, values, and ownership remain human-authored evidence.</p><p class="muted">Research question: what happens when people think and make with computers?</p></div>
+        <div class="project"><strong>🐢🐢 Recursive Turtle Terrarium</strong><p>Synthetic Turtle roles construct interpretations, challenge one another's assumptions, run hostile cases, test the Turtle Charter and Sanders ontology, and revise their representations.</p><p class="muted">All traces are explicitly synthetic_self_play, never learner evidence, and carry no production authority.</p></div>
+      </div>
+
+      <h2>More habitats are expected</h2>
+      <p>The architecture intentionally leaves open space for future terrariums. New habitats should be added only when a genuinely different research condition, participant relationship, artifact pathway, or observational boundary appears. Terraria is plural because the project should be able to compare environments without pretending they are the same environment.</p>
+
+      <h2>Critical Techno Constructivism as an observational frame</h2>
+      <p>The seven established CTC domains remain the primary operational frame. Every meaningful Terrarium event can map to all supported domains with rationale rather than a single forced tag.</p>
+      <div class="ctc">
+        <div><strong>1. Personal Inquiry</strong> — who originated the problem, purpose, or direction?</div>
+        <div><strong>2. Compelling Problem or Question</strong> — what uncertainty sustains investigation?</div>
+        <div><strong>3. Technology as Tool to Think With</strong> — what did Turtle make visible, manipulable, comparable, or testable?</div>
+        <div><strong>4. Formative Demonstration of Learning</strong> — what artifact, representation, behavior, or state changed?</div>
+        <div><strong>5. Reflection as Learning</strong> — what caused reconsideration or revision?</div>
+        <div><strong>6. Social and Cultural Critique</strong> — what assumptions, values, positionalities, power, or consequences surfaced?</div>
+        <div><strong>7. Sharing and Collaborating</strong> — whose contribution affected what emerged next?</div>
+      </div>
+
+      <h2>And room for CTC 8, 9, 10… if evidence earns them</h2>
+      <p>Observations that do not fit the seven established domains are preserved rather than force-fit. The database can accumulate uncaptured residue, identify recurring patterns, and propose provisional candidate domains. A machine may notice a pattern; it cannot canonize a new CTC domain. Promotion remains a human scholarly decision.</p>
+      <div class="card loop">established CTC 1–7 → uncaptured observations → recurring pattern? → provisional candidate → human scholarly judgment</div>
+
+      <h2>Exhaustive tagging</h2>
+      <p>Terraria treats questions, responses, interpretations, revisions, artifacts, failures, disagreements, rejected alternatives, tests, source signals, implementation decisions, and observations as potentially researchable objects. Each object can carry actor, evidence class, privacy class, source, model/configuration, version, CTC mappings, Sanders ontology mappings, emergent tags, relationships, and unresolved residue.</p>
+      <p>The rule is exhaustive within a bounded capture batch, not infinite recursion. Tags themselves remain metadata unless the act of tagging becomes intellectually significant — for example, a disagreement about a tag changes the research or the system.</p>
+
+      <h2>What one Terrarium can teach another</h2>
+      <p>The overarching comparative question is deliberately difficult: what can observations from one terrarium teach us about another without confusing synthetic machine behavior with human learning? The environments may cohabitate in one research system while retaining distinct provenance and evidentiary status.</p>
+
+      <h2>Research lineage in practice</h2>
+      <p>STEAMHAMLET was the room of possibilities. TurtleBlock AI makes the participants computational. Turtle Terraria lets the project study what happens when they live together. The same lineage connects Critical Techno Constructivism, purposeful play, Minecraft as an inhabitable learning environment, persistent computing environments, and co-active emergence.</p>
+
+      <div class="card"><strong>Current implementation edge</strong><p>Migrations <code>0007</code> and <code>0008</code> define Terraria habitats, runs, participants, events, artifacts, observations, universal research objects, CTC and ontology mappings, emergent tags, uncaptured observations, auto-build records, and the first structured seed traces. The next step is to apply and verify the live D1 schema, then begin writing Human + Turtle and synthetic Recursive Turtle traces into it without collapsing their evidence classes.</p></div>
+    </section>
+    <aside class="panel compact" id="navpanel" aria-label="TurtleBlock sections">
+      <div class="panelhead" id="panelhead" role="button" tabindex="0" aria-expanded="false"><button class="menutoggle" id="menutoggle" type="button" tabindex="-1">Menu ▸</button></div>
+      <div class="navgrid">
+        <a class="navcard" href="/try/"><strong>Try It</strong><span>Playground.</span></a>
+        <a class="navcard" href="/about/"><strong>About</strong><span>Why it exists.</span></a>
+        <a class="navcard" href="/worldspec/"><strong>WorldSpec</strong><span>Constructible ideas.</span></a>
+        <a class="navcard" href="/charter/"><strong>Turtle Charter</strong><span>How Turtle behaves.</span></a>
+        <a class="navcard" href="/research/"><strong>Research</strong><span>Research + lineage.</span></a>
+        <a class="navcard" href="/build/"><strong>Build Log</strong><span>Running history.</span></a>
+        <a class="navcard active" href="/terraria/"><strong>Turtle Terraria</strong><span>Multiple habitats.</span></a>
+        <a class="navcard" href="/steamhamlet/"><strong>STEAM<br>HAMLET</strong><span>Earlier work.</span></a>
+        <a class="navcard" href="/reeducation/"><strong>RE/<br>EDUCATION</strong><span>Practice + R&amp;D.</span></a>
+        <a class="navcard" href="/privacy/"><strong>Privacy</strong><span>Data use.</span></a>
+        <a class="navcard" href="/terms/"><strong>Terms</strong><span>Use + boundaries.</span></a>
+        <a class="navcard" href="/disclaimer/"><strong>Disclaimer</strong><span>Experimental limits.</span></a>
+      </div>
+      <div class="railstatus">🐢 Turtle Terraria contains multiple bounded habitats where human, Turtle, synthetic, world, and scholarly traces can cohabitate without losing provenance.</div>
+    </aside>
+  </section>
+</main>
+<footer class="sitefooter"><nav aria-label="Creator and policy links"><span>Created and researched by</span><a href="https://read.bryansanders.com" target="_blank" rel="noopener noreferrer">Dr. Bryan P. Sanders</a><span class="dot">•</span><a href="https://github.com/turtleblockai" target="_blank" rel="noopener noreferrer">GitHub</a><span class="dot">•</span><a href="https://orcid.org/0000-0001-6866-7280" target="_blank" rel="me noopener noreferrer">ORCID</a><span class="dot">•</span><a href="https://www.google.com/search?q=nayrbgo" target="_blank" rel="noopener noreferrer">@nayrbgo</a><span class="dot">•</span><a href="/terms/">Terms</a><span class="dot">•</span><a href="/disclaimer/">Disclaimer</a></nav></footer>
+<script>
+const navpanel=document.getElementById('navpanel'),panelhead=document.getElementById('panelhead'),menutoggle=document.getElementById('menutoggle');
+function setMenu(compact){navpanel.classList.toggle('compact',compact);panelhead.setAttribute('aria-expanded',String(!compact));menutoggle.textContent=compact?'Menu ▸':'Menu ▾'}
+function toggleMenu(){if(matchMedia('(max-width:820px)').matches)setMenu(!navpanel.classList.contains('compact'))}
+panelhead.addEventListener('click',toggleMenu);
+panelhead.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();toggleMenu()}});
+</script>
+</body>
+</html>
