@@ -1,0 +1,45 @@
+/* Shared shell overrides for standalone pages such as Terms and Turtle Terraria.
+   Keep these pages visually locked to the main SPA so navigation does not jump. */
+
+main{width:min(1160px,calc(100% - 2rem))!important;margin:0 auto!important}
+.shell{display:grid!important;grid-template-columns:minmax(0,800px) 288px!important;gap:32px!important;justify-content:center!important;align-items:start!important;min-width:0!important}
+.content{min-width:0!important;width:100%!important;min-height:720px!important}
+.markrow{min-height:132px!important}
+.brandmark{width:150px!important;height:122px!important}
+.pageicon{width:48px!important;height:48px!important;flex:0 0 48px!important;font-size:1.7rem!important}
+
+h1{margin:.25rem 0 .7rem!important;font-size:clamp(3rem,6.5vw,5.65rem)!important;letter-spacing:-.055em!important;line-height:.96!important;overflow-wrap:anywhere!important}
+h2{margin:2rem 0 .55rem!important;font-size:1.45rem!important}
+h3{margin:0 0 .4rem!important}
+p,li{font-size:1rem!important;line-height:1.6!important}
+.lede{margin:0!important;font-size:clamp(1.05rem,2vw,1.42rem)!important;line-height:1.5!important}
+
+@media(min-width:821px){
+  html{height:auto!important;min-height:100%!important;overflow-x:hidden!important;overflow-y:auto!important}
+  body{height:auto!important;min-height:100vh!important;overflow:visible!important;padding-bottom:calc(var(--footer-h) + 34px)!important}
+  main{min-height:calc(100vh - var(--footer-h))!important;padding:28px 1rem 86px!important}
+  .shell{height:auto!important;min-height:0!important;align-items:start!important}
+  .content{height:auto!important;min-height:720px!important;overflow:visible!important;padding-right:16px!important;padding-bottom:32px!important}
+  .panel{position:sticky!important;top:28px!important;align-self:start!important;height:max-content!important;max-height:calc(100vh - 56px)!important;overflow-y:auto!important;overflow-x:hidden!important;overscroll-behavior:contain!important;scrollbar-width:thin!important}
+}
+
+@media(max-width:1040px) and (min-width:821px){
+  main{width:min(980px,calc(100% - 1.5rem))!important}
+  .shell{grid-template-columns:minmax(0,1fr) 250px!important;gap:20px!important}
+  .panel{width:250px!important}
+}
+
+@media(max-width:820px){
+  main{width:100%!important;max-width:100%!important;padding:14px 14px 48px!important}
+  .shell{display:flex!important;flex-direction:column!important;gap:1rem!important;width:100%!important;max-width:100%!important}
+  .content{min-height:0!important;padding-right:0!important;padding-bottom:0!important}
+  .panel{position:static!important;top:auto!important;width:100%!important;max-width:100%!important;order:-1!important;height:auto!important;max-height:none!important;overflow:visible!important}
+  .markrow{min-height:102px!important}
+  .brandmark{width:112px!important;height:94px!important}
+}
+
+@media(max-width:560px){
+  main{padding:10px 12px 46px!important}
+  .brandmark{width:94px!important;height:80px!important}
+  .pageicon{width:40px!important;height:40px!important;flex-basis:40px!important;font-size:1.3rem!important}
+}
