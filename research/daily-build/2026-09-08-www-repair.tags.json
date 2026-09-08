@@ -1,0 +1,148 @@
+{
+  "schema": "turtleblockai.daily-build-tags.v0.1",
+  "date": "2026-09-08",
+  "capture_batch": "www-navigation-and-deployment-repair",
+  "ontology_version": "sanders-ontology-v0.1",
+  "research_objects": [
+    {
+      "id": "human_observation:2026-09-08-www-stale-incognito",
+      "object_type": "human_observation",
+      "title": "Incognito browser still showed stale TurtleBlock AI WWW",
+      "evidence_class": "human_reported",
+      "privacy_class": "public"
+    },
+    {
+      "id": "repo_file:src/siteChrome.ts",
+      "object_type": "repository_change",
+      "title": "Canonical rail spacing and route-aware contextual blurb layer",
+      "repo_path": "src/siteChrome.ts",
+      "evidence_class": "system_implementation",
+      "privacy_class": "public"
+    },
+    {
+      "id": "repo_file:src/entry.ts#terraria-route",
+      "object_type": "repository_change",
+      "title": "Canonical /terraria/ route with /lab/ compatibility redirect",
+      "repo_path": "src/entry.ts",
+      "evidence_class": "system_implementation",
+      "privacy_class": "public"
+    },
+    {
+      "id": "repo_file:.github/workflows/deploy.yml",
+      "object_type": "repository_change",
+      "title": "Continuous Cloudflare deployment workflow",
+      "repo_path": ".github/workflows/deploy.yml",
+      "evidence_class": "system_implementation",
+      "privacy_class": "public"
+    },
+    {
+      "id": "system_test:github-actions-typecheck-2026-09-08",
+      "object_type": "test",
+      "title": "GitHub Actions TypeScript check",
+      "evidence_class": "system_record",
+      "result": "passed after tsconfig.json was added",
+      "privacy_class": "public"
+    },
+    {
+      "id": "system_failure:cloudflare-token-missing-2026-09-08",
+      "object_type": "failure",
+      "title": "Production deployment blocked by missing Cloudflare Actions credentials",
+      "evidence_class": "system_record",
+      "result": "CLOUDFLARE_API_TOKEN unavailable to GitHub Actions; production remained unchanged",
+      "privacy_class": "public"
+    }
+  ],
+  "ctc_tags": [
+    {
+      "object_id": "human_observation:2026-09-08-www-stale-incognito",
+      "domain": "Formative Demonstration of Learning",
+      "role": "evidence",
+      "rationale": "The human observed that committed repository state and experienced public state diverged; the observation materially changed the implementation path."
+    },
+    {
+      "object_id": "repo_file:src/siteChrome.ts",
+      "domain": "Technology as Tool to Think With",
+      "role": "operationalizes",
+      "rationale": "The interface now exposes page-specific contextual meaning consistently instead of leaving navigation as undifferentiated controls."
+    },
+    {
+      "object_id": "system_failure:cloudflare-token-missing-2026-09-08",
+      "domain": "Reflection as Learning",
+      "role": "evidence",
+      "rationale": "A failed deployment exposed an infrastructural assumption and generated a revised deployment design rather than being hidden."
+    },
+    {
+      "object_id": "repo_file:.github/workflows/deploy.yml",
+      "domain": "Sharing and Collaborating",
+      "role": "supports",
+      "rationale": "The build-in-public environment requires repository work to become visible public state; deployment is part of the collaboration boundary."
+    }
+  ],
+  "ontology_tags": [
+    {
+      "object_id": "human_observation:2026-09-08-www-stale-incognito",
+      "concept_key": "recursive_learning_loop",
+      "role": "evidence",
+      "rationale": "Human observation returned the artifact to revision: commit -> experience -> notice stale state -> diagnose -> revise infrastructure."
+    },
+    {
+      "object_id": "repo_file:.github/workflows/deploy.yml",
+      "concept_key": "persistent_computing_environment",
+      "role": "supports",
+      "rationale": "A persistent environment requires a reproducible bridge between repository state and the running public system."
+    },
+    {
+      "object_id": "system_failure:cloudflare-token-missing-2026-09-08",
+      "concept_key": "provenance_aware_retrieval",
+      "role": "analogy",
+      "rationale": "The failure demonstrates the need to distinguish committed source state, tested state, deployed state, and experienced public state rather than collapsing them into one claim of completion."
+    }
+  ],
+  "emergent_tags": [
+    {
+      "object_id": "system_failure:cloudflare-token-missing-2026-09-08",
+      "tag": "publication-lag",
+      "type": "infrastructure",
+      "status": "provisional"
+    },
+    {
+      "object_id": "human_observation:2026-09-08-www-stale-incognito",
+      "tag": "repository-live-state-divergence",
+      "type": "provenance-risk",
+      "status": "provisional"
+    },
+    {
+      "object_id": "repo_file:src/siteChrome.ts",
+      "tag": "contextual-navigation",
+      "type": "interface",
+      "status": "provisional"
+    }
+  ],
+  "relationships": [
+    {
+      "subject": "human_observation:2026-09-08-www-stale-incognito",
+      "predicate": "revealed",
+      "object": "system_failure:cloudflare-token-missing-2026-09-08"
+    },
+    {
+      "subject": "human_observation:2026-09-08-www-stale-incognito",
+      "predicate": "prompted",
+      "object": "repo_file:src/siteChrome.ts"
+    },
+    {
+      "subject": "system_failure:cloudflare-token-missing-2026-09-08",
+      "predicate": "prompted",
+      "object": "repo_file:.github/workflows/deploy.yml"
+    }
+  ],
+  "uncaptured_observations": [
+    {
+      "id": "unknown-2026-09-08-www-01",
+      "object_id": "system_failure:cloudflare-token-missing-2026-09-08",
+      "observation": "Build-in-public has at least four distinguishable states: authored/committed, mechanically tested, deployed, and publicly experienced. Treating these as one state creates false claims of completion.",
+      "reason_unmapped": "This appears to be a cross-cutting provenance and research-method principle rather than clearly one of the seven learner-facing CTC domains.",
+      "status": "open",
+      "candidate_domain": null
+    }
+  ]
+}
