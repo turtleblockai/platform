@@ -5,7 +5,7 @@
   "title": "Make the edge of curiosity observable",
   "question": "Can TurtleBlock AI continuously synthesize one irresistible next question from the whole ecology of the project without turning curiosity into a backlog or letting the machine mistake a suggestion for authority?",
   "why_now": "Today's Terraria, tagging, deployment, Build Log, and navigation work made more of the project itself observable. The next possibility is to make the horizon observable too: one living question that appears only after the newest meaningful build is actually committed.",
-  "follows_commit": "d60e8d4af4d2014adb3d95fa0af6b360c60e019e",
+  "follows_commit": "f5035256b7657d831a31fb8f6dc96150f0a8a315",
   "follows_commit_role": "latest_completed_build_commit_in_capture_batch",
   "inputs": [
     "repository state and committed changes",
