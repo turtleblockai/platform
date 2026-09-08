@@ -1,5 +1,5 @@
 (()=>{
-  const VERSION='2026-09-08.4';
+  const VERSION='2026-09-08.5';
   const summaries={
     home:'We built a place to build places: learner ideas become persistent, revisable worlds through dialogue, construction, experience, and reflection.',
     try:'Talk with Turtle, shape a WorldSpec, move toward Minecraft construction, experience what was built, and revise through dialogue.',
@@ -23,15 +23,14 @@
   const esc=s=>String(s).replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[m]));
   const entryHtml=e=>`<div class="stage"><span class="date">${esc(e.date)}</span><strong${e.done?' class="done"':''}>${e.done?'✓ ':'→ '}${esc(e.title)}</strong><p>${esc(e.body)}</p></div>`;
   const routeKey=()=>{const key=location.pathname.replace(/^\/+|\/+$/g,'')||'home';return key==='lab'?'terraria':key};
+  const routeForCard=el=>{const data=el.getAttribute('data-route');if(data)return data==='lab'?'terraria':data;const href=el.getAttribute('href')||'';const key=href.replace(/^\/+|\/+$/g,'')||'home';return key==='lab'?'terraria':key};
   const rewriteTerrariaLinks=()=>{
     document.querySelectorAll('a[href="/lab/"]').forEach(a=>{a.setAttribute('href','/terraria/');const strong=a.querySelector('strong');const span=a.querySelector('span');if(strong)strong.textContent='Turtle Terraria';else if(a.classList.contains('secondary')||a.classList.contains('pill'))a.textContent='Turtle Terraria';if(span)span.textContent='Multiple habitats.'});
     document.querySelectorAll('.navcard').forEach(el=>{if((el.textContent||'').includes('Turtle Lab')){const strong=el.querySelector('strong');const span=el.querySelector('span');if(strong)strong.textContent='Turtle Terraria';if(span)span.textContent='Multiple habitats.'}});
   };
-  const ensureTermsCard=()=>{
-    const grid=document.querySelector('.navgrid');
-    if(!grid||grid.querySelector('a[href="/terms/"]'))return;
-    const a=document.createElement('a');a.className='navcard';a.href='/terms/';a.innerHTML='<strong>Terms</strong><span>Use + boundaries.</span>';grid.appendChild(a);
-  };
+  const appendCard=(grid,href,title,subtitle)=>{if(grid.querySelector(`a[href="${href}"]`))return;const a=document.createElement('a');a.className='navcard';a.href=href;a.innerHTML=`<strong>${title}</strong><span>${subtitle}</span>`;grid.appendChild(a)};
+  const ensurePolicyCards=()=>{const grid=document.querySelector('.navgrid');if(!grid)return;appendCard(grid,'/terms/','Terms','Use + boundaries.');appendCard(grid,'/disclaimer/','Disclaimer','Experimental limits.')};
+  const updateActiveCard=()=>{const current=routeKey();document.querySelectorAll('.navcard').forEach(el=>el.classList.toggle('active',routeForCard(el)===current))};
   const updateBlurb=()=>{
     const key=routeKey();
     let el=document.querySelector('.railstatus,.status');
@@ -40,7 +39,8 @@
   };
   const patchVisibleText=()=>{
     rewriteTerrariaLinks();
-    ensureTermsCard();
+    ensurePolicyCards();
+    updateActiveCard();
     document.querySelectorAll('#conversationmeta').forEach(el=>{if(el.textContent.includes('Turtle Lab '))el.textContent=el.textContent.replace('Turtle Lab ','Turtle session ')});
     updateBlurb();
     document.documentElement.dataset.turtleAssetVersion=VERSION;
@@ -63,14 +63,16 @@
   };
   const patchPages=()=>{
     try{
-      if(typeof pages==='undefined'||pages.__terrariaPatched)return;
+      if(typeof pages==='undefined'||pages.__terrariaPatched)return false;
       Object.defineProperty(pages,'__terrariaPatched',{value:true,enumerable:false});
       if(pages.build){const original=pages.build;pages.build=()=>reorderBuildHtml(original())}
       if(pages.privacy){const original=pages.privacy;pages.privacy=()=>original().replace(/Turtle Lab/g,'Turtle Terraria').replace(/\/lab\//g,'/terraria/')}
       if(pages.disclaimer){const original=pages.disclaimer;pages.disclaimer=()=>original().replace(/Turtle Lab/g,'Turtle Terraria').replace(/\/lab\//g,'/terraria/')}
-    }catch(error){console.error('Turtle direct-asset page patch failed',error)}
+      return true;
+    }catch(error){console.error('Turtle direct-asset page patch failed',error);return false}
   };
-  patchPages();
+  const patched=patchPages();
+  if(patched){const key=routeKey();if(['build','privacy','disclaimer'].includes(key)&&typeof go==='function')go(key,false)}
   patchVisibleText();
   document.addEventListener('click',()=>setTimeout(patchVisibleText,0),true);
   addEventListener('popstate',()=>setTimeout(patchVisibleText,0));
