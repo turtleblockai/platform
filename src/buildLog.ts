@@ -11,6 +11,13 @@ export interface BuildLogEntry {
 // are reversed at runtime so the whole public Build Log reads newest -> oldest.
 export const BUILD_LOG_ENTRIES: BuildLogEntry[] = [
   {
+    id: "2026-09-08-turtle-terraria-tagging",
+    date: "Sep 8, 2026",
+    title: "Turtle Terraria + exhaustive research tagging architecture",
+    body: "Turtle Lab is becoming Turtle Terraria: an umbrella for multiple bounded research habitats, beginning with Human + Turtle and Recursive Turtle self-play. Migration 0007 adds first-class Terraria runs, events, artifacts, observations, auto-build research records, a universal research-object registry, ontology tags, the seven established CTC domains, emergent tags, and an explicit holding area for observations that may someday justify an eighth, ninth, or later CTC domain. The WWW now uses Turtle Terraria language while preserving the existing /lab/ path for compatibility.",
+    done: true
+  },
+  {
     id: "2026-09-08-daily-coactive-loop",
     date: "Sep 8, 2026",
     title: "Daily co-active build loop activated",
