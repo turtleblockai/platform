@@ -1,0 +1,144 @@
+{
+  "manifest_version": "0.1",
+  "date": "2026-09-08",
+  "scope": "system_research_not_student_learning_evidence",
+  "capture_batch": "2026-09-08-next-edge",
+  "research_objects": [
+    {
+      "id": "human-direction-next-edge",
+      "type": "human_override",
+      "actor": "human_researcher",
+      "evidence_class": "human_authored",
+      "privacy_class": "public",
+      "summary": "Bryan directs the Build Log to separate completed committed work from a single living Next Edge horizon and to preserve a deliberately open X factor.",
+      "repo_paths": [
+        "research/NEXT_EDGE.md",
+        "public/data/next-edge.json",
+        "public/assets/site-runtime.js"
+      ]
+    },
+    {
+      "id": "implementation-next-edge-runtime",
+      "type": "implementation",
+      "actor": "human_plus_turtle",
+      "evidence_class": "system_record",
+      "privacy_class": "public",
+      "summary": "The direct-asset WWW runtime renders one Next Edge above newest-first completed Build Log entries and reads the horizon from a machine-readable JSON artifact."
+    },
+    {
+      "id": "implementation-terraria-sticky-rail",
+      "type": "implementation",
+      "actor": "human_plus_turtle",
+      "evidence_class": "system_record",
+      "privacy_class": "public",
+      "summary": "The Turtle Terraria desktop navigation rail is constrained to the viewport so it remains sticky, with internal overflow only when its contents exceed available height."
+    },
+    {
+      "id": "unresolved-edge-synthesizer",
+      "type": "question",
+      "actor": "human_plus_turtle",
+      "evidence_class": "system_record",
+      "privacy_class": "public",
+      "summary": "Can the project synthesize a useful horizon from repo, D1, R2, project context, ontology, observations, failures, and an X factor without reducing inquiry to backlog automation or granting machine suggestions authority?"
+    }
+  ],
+  "relationships": [
+    {
+      "from": "human-direction-next-edge",
+      "relation": "caused",
+      "to": "implementation-next-edge-runtime"
+    },
+    {
+      "from": "human-direction-next-edge",
+      "relation": "opened_question",
+      "to": "unresolved-edge-synthesizer"
+    }
+  ],
+  "ctc_tags": [
+    {
+      "object": "human-direction-next-edge",
+      "domain": "Personal Inquiry",
+      "status": "accepted",
+      "rationale": "The horizon architecture originates in the human researcher's own question about what should tug the project forward next."
+    },
+    {
+      "object": "unresolved-edge-synthesizer",
+      "domain": "Compelling Problem or Question",
+      "status": "accepted",
+      "rationale": "The Next Edge is explicitly designed to preserve a question that sustains inquiry rather than a predetermined task."
+    },
+    {
+      "object": "implementation-next-edge-runtime",
+      "domain": "Technology as Tool to Think With",
+      "status": "accepted",
+      "rationale": "The public interface makes the project's evolving horizon visible and manipulable as an object for reflection rather than hiding it in a private backlog."
+    },
+    {
+      "object": "human-direction-next-edge",
+      "domain": "Reflection as Learning",
+      "status": "accepted",
+      "rationale": "The change emerged from reflection on the difference between already-completed work and genuinely open inquiry after observing the live Build Log."
+    },
+    {
+      "object": "implementation-next-edge-runtime",
+      "domain": "Formative Demonstration of Learning",
+      "status": "accepted",
+      "rationale": "The changed public artifact demonstrates the revised research-process model while remaining system-research evidence, not student assessment evidence."
+    },
+    {
+      "object": "human-direction-next-edge",
+      "domain": "Sharing and Collaborating",
+      "status": "accepted",
+      "rationale": "Human direction changed the machine-assisted implementation, and the resulting horizon remains visibly open to subsequent human replacement or revision."
+    }
+  ],
+  "ontology_tags": [
+    {
+      "object": "human-direction-next-edge",
+      "concept": "Possible Possibles",
+      "role": "extends",
+      "rationale": "The Next Edge preserves multiple possible directions without collapsing them into one predetermined outcome."
+    },
+    {
+      "object": "implementation-next-edge-runtime",
+      "concept": "Persistent Computing Environment",
+      "role": "operationalizes",
+      "rationale": "The horizon becomes a persistent project artifact carried between build cycles instead of disappearing with each conversation."
+    },
+    {
+      "object": "human-direction-next-edge",
+      "concept": "Co-active Emergence",
+      "role": "operationalizes",
+      "rationale": "The concept emerged through human observation and machine-assisted design, while final direction remains attributable to the human researcher."
+    },
+    {
+      "object": "unresolved-edge-synthesizer",
+      "concept": "Provenance-Aware Retrieval",
+      "role": "tests",
+      "rationale": "A future synthesizer must combine heterogeneous signals without erasing where they came from or their evidentiary status."
+    },
+    {
+      "object": "unresolved-edge-synthesizer",
+      "concept": "Recursive Learning Loop",
+      "role": "extends",
+      "rationale": "Each completed build changes the evidence available for generating the next question, creating a recursive build-observe-question cycle."
+    }
+  ],
+  "emergent_tags": [
+    "next-edge",
+    "possible-possibles",
+    "x-factor",
+    "edge-of-curiosity",
+    "public-horizon",
+    "build-log-provenance",
+    "sticky-research-console"
+  ],
+  "uncaptured_observations": [
+    {
+      "id": "unknown-horizon-quality",
+      "text": "It is not yet known whether the quality described as 'I would keep working on this if I did not have to go to bed' can be operationalized without sterilizing the very unpredictability that makes the Next Edge useful.",
+      "status": "open",
+      "force_fit_ctc": false
+    }
+  ]
+}
