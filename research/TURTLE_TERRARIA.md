@@ -141,6 +141,31 @@ not merely the final revision.
 
 A machine misunderstanding followed by a human correction is different data from an interpretation the human accepted immediately. A failed auto-build candidate is different data from a selected contribution. A synthetic critique that catches a problem is different data from a human noticing the same problem. All can be connected; none should be collapsed.
 
+## Exhaustive does not mean infinite regress
+
+If every tag were itself required to become a newly tagged research object, the metadata process would recurse forever. Turtle Terraria therefore uses **capture-batch closure**.
+
+A bounded episode — a daily auto-build run, a Human + Turtle session, a Recursive Turtle self-play run, a publication cycle, or another defined research episode — is the capture batch. The meaningful events and artifacts inside that batch are registered and tagged. The tag records themselves are treated as metadata about those objects, not automatically promoted into new primary research objects.
+
+A tag or relationship becomes a primary research object only when there is a reason to study the tagging act itself, for example:
+
+- a human rejects a machine-generated ontology tag;
+- two tagging methods disagree;
+- a recurring misclassification appears;
+- a tag changes the direction of a build or inquiry;
+- the ontology itself is being revised.
+
+This closes the batch without erasing the possibility of studying the metadata later.
+
+```text
+capture batch
+  → meaningful events + artifacts
+  → exhaustive justified tags + relationships
+  → uncaptured residue
+  → closure record
+  → later batch may reopen anything worth studying
+```
+
 ## Auto-build as a research participant
 
 The daily auto-build process is itself part of the research history and should be mineable later. Migration `0007_turtle_terraria_and_exhaustive_tagging.sql` therefore provides first-class structures for:
@@ -192,7 +217,8 @@ The system should prefer **over-preserving relationships and provenance** to pre
 See:
 
 - `migrations/0007_turtle_terraria_and_exhaustive_tagging.sql`
+- `migrations/0008_seed_terraria_and_autobuild_tags.sql`
 - `worldspec/Dr_Bryan_P_Sanders_TurtleBlockAI_Taxonomy.md`
 - `research/daily-build/`
 
-Migration 0007 adds the universal `research_objects` registry, ontology/CTC/emergent tagging tables, open CTC candidate-domain structures, two initial Terraria habitats, auto-build research tables, automatic registration triggers for operational Turtle records, and audit views that expose objects still needing tags.
+Migration 0007 adds the universal `research_objects` registry, ontology/CTC/emergent tagging tables, open CTC candidate-domain structures, two initial Terraria habitats, auto-build research tables, automatic registration triggers for operational Turtle records, and audit views that expose objects still needing tags. Migration 0008 seeds the first daily-build and Terraria research trace through those structures.
