@@ -11,6 +11,13 @@ export interface BuildLogEntry {
 // are reversed at runtime so the whole public Build Log reads newest -> oldest.
 export const BUILD_LOG_ENTRIES: BuildLogEntry[] = [
   {
+    id: "2026-09-08-www-rail-deploy-repair",
+    date: "Sep 8, 2026",
+    title: "WWW rail normalized + continuous Cloudflare deployment added",
+    body: "The right-hand navigation now has one canonical spacing layer across SPA and static pages, Turtle Terraria has the canonical /terraria/ route with /lab/ redirect compatibility, and the contextual blurb beneath the menu is wired to every route including Terraria, Terms, Privacy, and Disclaimer. A GitHub Actions production workflow now typechecks and deploys the Worker plus assets to Cloudflare on every main-branch push so repository progress no longer waits for a separate manual Wrangler deployment.",
+    done: true
+  },
+  {
     id: "2026-09-08-turtle-terraria-tagging",
     date: "Sep 8, 2026",
     title: "Turtle Terraria + exhaustive research tagging architecture",
