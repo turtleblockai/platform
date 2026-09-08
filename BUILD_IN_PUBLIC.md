@@ -48,9 +48,54 @@ Every daily run should:
 5. add or run a tiny test or observable success criterion when practical;
 6. write the detailed daily note under `research/daily-build/`;
 7. prepend a concise public entry to `src/buildLog.ts`;
-8. make a conservative version judgment.
+8. produce structured research metadata for the run: source signals, questions, candidates, rejections, implementation, tests, version judgment, and ontology/CTC tags;
+9. make a conservative version judgment.
 
 Version numbers are earned by implemented and tested capability, not by calendar cadence.
+
+## Exhaustive tagging rule
+
+The Sanders research ontology is infrastructure for the whole project, not a separate bibliography page.
+
+Whenever TurtleBlock AI creates, changes, questions, tests, rejects, observes, reflects upon, or publishes something that may matter later, preserve enough metadata to register it as a research object and tag it as exhaustively as the evidence supports.
+
+Tagging may include:
+
+- one or more established Critical Techno Constructivism domains;
+- one or more concepts from the longitudinal Sanders ontology;
+- emergent/free tags that are useful but not yet ontology concepts;
+- explicit relationships to other research objects;
+- provenance, actor, evidence class, privacy class, model/configuration, source, and version information;
+- an uncaptured observation when the current ontology does **not** adequately describe what happened.
+
+Do not force every observation into the existing categories. The seven authored CTC domains remain established, while `ctc_uncaptured_observations` and `ctc_candidate_domains` deliberately leave room for evidence that may eventually justify an eighth, ninth, tenth, or other domain. Machines may propose candidate structure; promotion into the established CTC framework requires an explicit human scholarly decision.
+
+A useful default sequence is:
+
+```text
+something happens
+→ preserve provenance
+→ register research object
+→ tag CTC domains
+→ tag Sanders ontology concepts
+→ add emergent tags
+→ preserve unmapped residue
+→ relate to other objects
+→ keep it queryable
+```
+
+Tag the **movement** as well as the artifact. A question, machine interpretation, human disagreement, correction, revision, rejected build candidate, failed test, synthetic critique, and final output are distinct research events even when they belong to the same recursive cycle.
+
+## Turtle Terraria
+
+The former Turtle Lab is becoming **Turtle Terraria**, an umbrella of bounded research habitats. The first two are:
+
+1. **Human + Turtle Terrarium** — human-driven inquiry and iteration with TurtleBlock AI;
+2. **Recursive Turtle Terrarium** — explicitly synthetic machine-to-machine self-play for critique, regression, interpretation, and ontology testing.
+
+Human evidence and synthetic evidence may cohabitate the broader research system but must never lose their provenance distinction.
+
+The current schema is documented in `migrations/0007_turtle_terraria_and_exhaustive_tagging.sql` and `research/TURTLE_TERRARIA.md`.
 
 ## No false polish
 
@@ -64,11 +109,19 @@ Synthetic Turtle self-play, if introduced, must remain explicitly labeled as syn
 
 ## Operational expectation
 
-When code and documentation diverge, treat that as a defect. The website, repository documentation, and running platform should describe the same current architecture as closely as practical.
+When code and documentation diverge, treat that as a defect. The website, repository documentation, running platform, research database, and ontology metadata should describe the same current architecture as closely as practical.
 
 ---
 
 ## Build log
+
+### 2026-09-08 — Turtle Terraria + exhaustive tagging architecture
+
+Turtle Lab is becoming Turtle Terraria: an umbrella of bounded habitats for studying human-machine co-active inquiry and synthetic recursive machine self-play. The first two habitats are Human + Turtle and Recursive Turtle.
+
+Migration `0007_turtle_terraria_and_exhaustive_tagging.sql` adds a universal research-object registry; first-class Terraria runs, events, artifacts, and observations; auto-build research tables; established CTC domains; ontology and emergent tagging; automatic registration of Turtle operational records; and explicit structures for observations that do not yet fit the seven CTC domains. Migration `0008_seed_terraria_and_autobuild_tags.sql` demonstrates the approach by making the first auto-build deliberation and Terraria design queryable through CTC and ontology mappings.
+
+The WWW now uses Turtle Terraria language while temporarily retaining the `/lab/` path for compatibility.
 
 ### 2026-09-08 — WWW Build Log reversed + daily build made operational
 
