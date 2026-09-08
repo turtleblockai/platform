@@ -1,5 +1,6 @@
 import app, { type Env } from "./index";
 import { injectBuildLogRuntime } from "./buildLog";
+import { applySiteChrome } from "./siteChrome";
 
 function applyTerrariaLanguage(html: string) {
   let next = html.replace(/Turtle Lab/g, "Turtle Terraria");
@@ -21,12 +22,30 @@ function applyTerrariaLanguage(html: string) {
 
 export default {
   async fetch(request: Request, env: Env, ctx: ExecutionContext): Promise<Response> {
-    const response = await app.fetch(request, env, ctx);
+    const originalUrl = new URL(request.url);
+
+    // /lab/ was the original public research page. Keep old links working while
+    // making /terraria/ the canonical public habitat URL.
+    if (originalUrl.pathname === "/lab" || originalUrl.pathname === "/lab/") {
+      const target = new URL("/terraria/", originalUrl.origin);
+      return Response.redirect(target.toString(), 301);
+    }
+
+    let internalRequest = request;
+    if (originalUrl.pathname === "/terraria" || originalUrl.pathname === "/terraria/") {
+      const internalUrl = new URL(request.url);
+      internalUrl.pathname = "/lab/";
+      internalRequest = new Request(internalUrl.toString(), request);
+    }
+
+    const response = await app.fetch(internalRequest, env, ctx);
     const contentType = response.headers.get("content-type") || "";
     if (!contentType.includes("text/html")) return response;
 
     let html = applyTerrariaLanguage(await response.text());
     html = injectBuildLogRuntime(html);
+    html = applySiteChrome(html, originalUrl.pathname);
+
     const headers = new Headers(response.headers);
     headers.delete("content-length");
     headers.set("cache-control", "no-store, no-cache, must-revalidate, max-age=0");
