@@ -30,7 +30,7 @@
     {
       "id": "repo_file:.github/workflows/deploy.yml",
       "object_type": "repository_change",
-      "title": "Continuous Cloudflare deployment workflow",
+      "title": "Main-branch TypeScript validation workflow",
       "repo_path": ".github/workflows/deploy.yml",
       "evidence_class": "system_implementation",
       "privacy_class": "public"
@@ -44,11 +44,20 @@
       "privacy_class": "public"
     },
     {
-      "id": "system_failure:cloudflare-token-missing-2026-09-08",
+      "id": "system_failure:redundant-cloudflare-actions-path-2026-09-08",
       "object_type": "failure",
-      "title": "Production deployment blocked by missing Cloudflare Actions credentials",
+      "title": "Redundant GitHub Actions deploy path lacked Cloudflare token",
       "evidence_class": "system_record",
-      "result": "CLOUDFLARE_API_TOKEN unavailable to GitHub Actions; production remained unchanged",
+      "result": "The attempted Wrangler deploy exposed that GitHub Actions did not have a Cloudflare API token. Further inspection then showed this path was unnecessary because the Cloudflare Workers Builds GitHub integration was already the canonical deployment mechanism.",
+      "privacy_class": "public"
+    },
+    {
+      "id": "system_deployment:cloudflare-workers-build-2026-09-08",
+      "object_type": "deployment",
+      "title": "Cloudflare Workers Builds accepted repaired WWW bundle",
+      "evidence_class": "system_record",
+      "result": "success",
+      "deployment_provider": "Cloudflare Workers Builds GitHub integration",
       "privacy_class": "public"
     }
   ],
@@ -66,16 +75,16 @@
       "rationale": "The interface now exposes page-specific contextual meaning consistently instead of leaving navigation as undifferentiated controls."
     },
     {
-      "object_id": "system_failure:cloudflare-token-missing-2026-09-08",
+      "object_id": "system_failure:redundant-cloudflare-actions-path-2026-09-08",
       "domain": "Reflection as Learning",
       "role": "evidence",
-      "rationale": "A failed deployment exposed an infrastructural assumption and generated a revised deployment design rather than being hidden."
+      "rationale": "A failed implementation assumption was preserved, investigated, and revised after discovering the already-working native Cloudflare deployment pathway."
     },
     {
-      "object_id": "repo_file:.github/workflows/deploy.yml",
+      "object_id": "system_deployment:cloudflare-workers-build-2026-09-08",
       "domain": "Sharing and Collaborating",
       "role": "supports",
-      "rationale": "The build-in-public environment requires repository work to become visible public state; deployment is part of the collaboration boundary."
+      "rationale": "The build-in-public environment requires repository work to become public running state; the existing Cloudflare integration performs that bridge."
     }
   ],
   "ontology_tags": [
@@ -86,25 +95,19 @@
       "rationale": "Human observation returned the artifact to revision: commit -> experience -> notice stale state -> diagnose -> revise infrastructure."
     },
     {
-      "object_id": "repo_file:.github/workflows/deploy.yml",
+      "object_id": "system_deployment:cloudflare-workers-build-2026-09-08",
       "concept_key": "persistent_computing_environment",
       "role": "supports",
       "rationale": "A persistent environment requires a reproducible bridge between repository state and the running public system."
     },
     {
-      "object_id": "system_failure:cloudflare-token-missing-2026-09-08",
+      "object_id": "system_failure:redundant-cloudflare-actions-path-2026-09-08",
       "concept_key": "provenance_aware_retrieval",
       "role": "analogy",
-      "rationale": "The failure demonstrates the need to distinguish committed source state, tested state, deployed state, and experienced public state rather than collapsing them into one claim of completion."
+      "rationale": "The episode demonstrates the need to distinguish committed source state, tested state, deployment mechanism, deployed state, and experienced public state rather than collapsing them into one claim of completion."
     }
   ],
   "emergent_tags": [
-    {
-      "object_id": "system_failure:cloudflare-token-missing-2026-09-08",
-      "tag": "publication-lag",
-      "type": "infrastructure",
-      "status": "provisional"
-    },
     {
       "object_id": "human_observation:2026-09-08-www-stale-incognito",
       "tag": "repository-live-state-divergence",
@@ -116,29 +119,40 @@
       "tag": "contextual-navigation",
       "type": "interface",
       "status": "provisional"
+    },
+    {
+      "object_id": "system_deployment:cloudflare-workers-build-2026-09-08",
+      "tag": "native-deployment-path",
+      "type": "infrastructure",
+      "status": "provisional"
     }
   ],
   "relationships": [
-    {
-      "subject": "human_observation:2026-09-08-www-stale-incognito",
-      "predicate": "revealed",
-      "object": "system_failure:cloudflare-token-missing-2026-09-08"
-    },
     {
       "subject": "human_observation:2026-09-08-www-stale-incognito",
       "predicate": "prompted",
       "object": "repo_file:src/siteChrome.ts"
     },
     {
-      "subject": "system_failure:cloudflare-token-missing-2026-09-08",
+      "subject": "human_observation:2026-09-08-www-stale-incognito",
       "predicate": "prompted",
-      "object": "repo_file:.github/workflows/deploy.yml"
+      "object": "repo_file:src/entry.ts#terraria-route"
+    },
+    {
+      "subject": "system_failure:redundant-cloudflare-actions-path-2026-09-08",
+      "predicate": "led_to_discovery_of",
+      "object": "system_deployment:cloudflare-workers-build-2026-09-08"
+    },
+    {
+      "subject": "repo_file:src/siteChrome.ts",
+      "predicate": "was_deployed_by",
+      "object": "system_deployment:cloudflare-workers-build-2026-09-08"
     }
   ],
   "uncaptured_observations": [
     {
       "id": "unknown-2026-09-08-www-01",
-      "object_id": "system_failure:cloudflare-token-missing-2026-09-08",
+      "object_id": "system_deployment:cloudflare-workers-build-2026-09-08",
       "observation": "Build-in-public has at least four distinguishable states: authored/committed, mechanically tested, deployed, and publicly experienced. Treating these as one state creates false claims of completion.",
       "reason_unmapped": "This appears to be a cross-cutting provenance and research-method principle rather than clearly one of the seven learner-facing CTC domains.",
       "status": "open",
