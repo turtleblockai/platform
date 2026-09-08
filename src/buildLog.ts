@@ -13,9 +13,9 @@ export const BUILD_LOG_ENTRIES: BuildLogEntry[] = [
   {
     id: "2026-09-08-www-rail-deploy-repair",
     date: "Sep 8, 2026",
-    title: "WWW rail normalized + continuous Cloudflare deployment added",
-    body: "The right-hand navigation now has one canonical spacing layer across SPA and static pages, Turtle Terraria has the canonical /terraria/ route with /lab/ redirect compatibility, and the contextual blurb beneath the menu is wired to every route including Terraria, Terms, Privacy, and Disclaimer. A GitHub Actions production workflow now typechecks and deploys the Worker plus assets to Cloudflare on every main-branch push so repository progress no longer waits for a separate manual Wrangler deployment.",
-    done: true
+    title: "WWW rail normalized; continuous deployment awaiting Cloudflare token",
+    body: "The right-hand navigation now has one canonical spacing layer across SPA and static pages, Turtle Terraria has the canonical /terraria/ route with /lab/ redirect compatibility, and the contextual blurb beneath the menu is wired to every route including Terraria, Terms, Privacy, and Disclaimer. A GitHub Actions production workflow now installs, typechecks, and is ready to deploy the Worker plus assets on every main-branch push. The first CI pass exposed the actual publication gap: the repository does not yet contain the required CLOUDFLARE_API_TOKEN / CLOUDFLARE_ACCOUNT_ID Actions secrets, so the new code is committed and typechecked but production deployment is still gated on that one-time credential setup.",
+    done: false
   },
   {
     id: "2026-09-08-turtle-terraria-tagging",
