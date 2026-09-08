@@ -13,8 +13,8 @@ export const BUILD_LOG_ENTRIES: BuildLogEntry[] = [
   {
     id: "2026-09-08-www-rail-deploy-repair",
     date: "Sep 8, 2026",
-    title: "WWW rail + route blurbs repaired; native Cloudflare deploy confirmed",
-    body: "The right-hand navigation now uses one canonical spacing layer across SPA and static pages, Turtle Terraria has the canonical /terraria/ route with /lab/ redirect compatibility, and the contextual blurb beneath the menu is wired to every route including Terraria, Terms, Privacy, and Disclaimer. TypeScript validation now runs on main-branch pushes, while the already-connected Cloudflare Workers Builds integration remains the canonical production deployment path. The repaired WWW bundle was accepted by Cloudflare Workers Builds successfully.",
+    title: "WWW middleware finally reaches the pages people actually see",
+    body: "A human incognito check caught a real deployment/rendering defect: Cloudflare Workers Builds was successfully deploying the repository, but Workers Static Assets defaulted to asset-first delivery. That meant public/index.html and other matching HTML assets could bypass src/entry.ts entirely, so the newest-first Build Log, Turtle Terraria language, canonical menu spacing, and route-aware rail blurbs existed in deployed code without appearing in the browser. wrangler.jsonc now sets assets.run_worker_first=true, forcing WWW requests through the Worker before it fetches the static asset. TypeScript validation and the Cloudflare production build both passed after the change. This makes the committed, deployed, and publicly rendered states materially closer to one another.",
     done: true
   },
   {
