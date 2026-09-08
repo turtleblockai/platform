@@ -1,0 +1,41 @@
+{
+  "version": "0.1",
+  "updated_at": "2026-09-08",
+  "status": "open_question",
+  "title": "Make the edge of curiosity observable",
+  "question": "Can TurtleBlock AI continuously synthesize one irresistible next question from the whole ecology of the project without turning curiosity into a backlog or letting the machine mistake a suggestion for authority?",
+  "why_now": "Today's Terraria, tagging, deployment, and build-in-public work made more of the project itself observable. The next possibility is to make the horizon observable too: one living question that appears only after the newest work is actually committed.",
+  "follows_commit": "68ff6794f48d1f6e11bc3bf72516048a867cd20c",
+  "inputs": [
+    "repository state and committed changes",
+    "D1 research objects, CTC mappings, ontology mappings, uncaptured observations, Terraria traces, and auto-build records when available",
+    "R2 artifact metadata and evidence objects when available",
+    "runtime/environment metadata when useful, never secret values",
+    "project documents and research materials available to the active TurtleBlock AI context",
+    "Sanders research ontology with source/later-layer provenance",
+    "consented learner/world observations where appropriate",
+    "daily primary-source research signals",
+    "failures, reversals, rejected candidates, and contradictions",
+    "X factor"
+  ],
+  "possible_possibles": [
+    "A recurring uncaptured observation suggests a new Terrarium rather than a new feature.",
+    "A D1 pattern suggests a regression test nobody explicitly planned.",
+    "A Minecraft affordance unexpectedly collides with an old Logo or STEAMHAMLET idea.",
+    "A human correction reveals a weakness in the Turtle Charter or provenance model.",
+    "A synthetic Turtle disagreement exposes a representation problem worth testing with humans later.",
+    "The best next move is an unglamorous refactor that makes a stranger experiment possible.",
+    "Something important appears that the current ontology cannot name yet."
+  ],
+  "x_factor": "whoooo knooooowwwssssssssssss",
+  "constraints": [
+    "The Next Edge must point forward, never describe already-completed work.",
+    "The newest completed work must appear separately as a committed Build Log entry.",
+    "Preserve provenance and evidence-class boundaries.",
+    "Never inspect, publish, or infer secret values from environment configuration.",
+    "A machine may propose the Next Edge; it does not gain production authority from doing so.",
+    "Publish one primary horizon question at a time while preserving alternate possible possibles as research metadata."
+  ],
+  "selected_by": "human_plus_turtle",
+  "scope": "system_research_not_student_learning_evidence"
+}
