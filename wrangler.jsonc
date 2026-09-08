@@ -1,7 +1,7 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "turtleblockai-platform",
-  "main": "src/index.ts",
+  "main": "src/entry.ts",
   "compatibility_date": "2026-08-30",
   "vars": {
     "DISCORD_APPLICATION_ID": "1544175868471943279",
