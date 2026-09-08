@@ -1,0 +1,274 @@
+{
+  "schema": "turtleblockai.daily-build-tags.v0.1",
+  "date": "2026-09-08",
+  "ontology_version": "sanders-ontology-v0.1",
+  "autobuild_run_id": "autobuild-2026-09-08",
+  "principles": {
+    "multi_tag": true,
+    "preserve_unmapped_residue": true,
+    "synthetic_is_not_human_evidence": true,
+    "ctc_domain_promotion_requires_human_scholarly_decision": true
+  },
+  "research_objects": [
+    {
+      "id": "autobuild_run:autobuild-2026-09-08",
+      "object_type": "autobuild_run",
+      "title": "First TurtleBlock AI daily co-active build cycle",
+      "evidence_class": "system_record",
+      "privacy_class": "public"
+    },
+    {
+      "id": "repo_file:research/TURTLE_TERRARIA.md",
+      "object_type": "repository_artifact",
+      "title": "Turtle Terraria research design",
+      "repo_path": "research/TURTLE_TERRARIA.md",
+      "evidence_class": "human_authored",
+      "privacy_class": "public"
+    },
+    {
+      "id": "repo_file:migrations/0007_turtle_terraria_and_exhaustive_tagging.sql",
+      "object_type": "repository_artifact",
+      "title": "Turtle Terraria and exhaustive tagging database architecture",
+      "repo_path": "migrations/0007_turtle_terraria_and_exhaustive_tagging.sql",
+      "evidence_class": "human_authored",
+      "privacy_class": "public"
+    },
+    {
+      "id": "repo_file:migrations/0008_seed_terraria_and_autobuild_tags.sql",
+      "object_type": "repository_artifact",
+      "title": "First Terraria and auto-build ontology trace seeds",
+      "repo_path": "migrations/0008_seed_terraria_and_autobuild_tags.sql",
+      "evidence_class": "human_authored",
+      "privacy_class": "public"
+    },
+    {
+      "id": "repo_file:src/entry.ts#terraria-language",
+      "object_type": "repository_change",
+      "title": "WWW Turtle Terraria terminology and habitat exposure",
+      "repo_path": "src/entry.ts",
+      "evidence_class": "mixed",
+      "privacy_class": "public"
+    },
+    {
+      "id": "build_log_entry:2026-09-08-turtle-terraria-tagging",
+      "object_type": "build_log_entry",
+      "title": "Turtle Terraria + exhaustive research tagging architecture",
+      "repo_path": "src/buildLog.ts",
+      "evidence_class": "human_authored",
+      "privacy_class": "public"
+    }
+  ],
+  "ctc_tags": [
+    {
+      "object_id": "repo_file:research/TURTLE_TERRARIA.md",
+      "domain": "Personal Inquiry",
+      "role": "supports",
+      "rationale": "Human + Turtle preserves human-originated inquiry and human authorship as primary evidence."
+    },
+    {
+      "object_id": "repo_file:research/TURTLE_TERRARIA.md",
+      "domain": "Compelling Problem or Question",
+      "role": "supports",
+      "rationale": "Terraria traces retain unresolved questions and allow new problems to emerge from prior cycles."
+    },
+    {
+      "object_id": "repo_file:research/TURTLE_TERRARIA.md",
+      "domain": "Technology as Tool to Think With",
+      "role": "primary",
+      "rationale": "The environments study computers as participants and objects-to-think-with rather than answer-delivery terminals."
+    },
+    {
+      "object_id": "repo_file:research/TURTLE_TERRARIA.md",
+      "domain": "Formative Demonstration of Learning",
+      "role": "supports",
+      "rationale": "Intermediate interpretations, corrections, traces, artifacts, and revisions remain visible rather than reducing evidence to a final output."
+    },
+    {
+      "object_id": "repo_file:research/TURTLE_TERRARIA.md",
+      "domain": "Reflection as Learning",
+      "role": "primary",
+      "rationale": "Reflection and revision are first-class events in both the human and synthetic recursive loops."
+    },
+    {
+      "object_id": "repo_file:research/TURTLE_TERRARIA.md",
+      "domain": "Social and Cultural Critique",
+      "role": "primary",
+      "rationale": "The trace is designed to expose assumptions, values, positionality, and machine-imposed interpretations rather than conceal them."
+    },
+    {
+      "object_id": "repo_file:research/TURTLE_TERRARIA.md",
+      "domain": "Sharing and Collaborating",
+      "role": "primary",
+      "rationale": "Cohabitation and mutual influence among human and computational participants are central to the research environment."
+    },
+    {
+      "object_id": "autobuild_run:autobuild-2026-09-08",
+      "domain": "Technology as Tool to Think With",
+      "role": "tests",
+      "rationale": "The auto-build is itself being studied as a computational thinking partner; this is system-research mapping, not student evidence."
+    },
+    {
+      "object_id": "autobuild_run:autobuild-2026-09-08",
+      "domain": "Reflection as Learning",
+      "role": "tests",
+      "rationale": "The daily loop preserves deliberation, rejection, testing, version judgment, and subsequent human redirection."
+    },
+    {
+      "object_id": "autobuild_run:autobuild-2026-09-08",
+      "domain": "Social and Cultural Critique",
+      "role": "tests",
+      "rationale": "External technical signals are filtered through learner-agency and critical-theory commitments rather than adopted as neutral progress."
+    },
+    {
+      "object_id": "autobuild_run:autobuild-2026-09-08",
+      "domain": "Sharing and Collaborating",
+      "role": "tests",
+      "rationale": "Machine research/build contribution and human scholarly direction visibly co-determine the resulting work."
+    }
+  ],
+  "ontology_tags": [
+    {
+      "object_id": "repo_file:research/TURTLE_TERRARIA.md",
+      "concept_key": "turtle_terraria",
+      "role": "primary",
+      "rationale": "Defines the new umbrella research environment."
+    },
+    {
+      "object_id": "repo_file:research/TURTLE_TERRARIA.md",
+      "concept_key": "co_active_emergence",
+      "role": "operationalizes",
+      "rationale": "Human + Turtle makes purposeful human-machine reciprocal influence observable over time."
+    },
+    {
+      "object_id": "repo_file:research/TURTLE_TERRARIA.md",
+      "concept_key": "recursive_learning_loop",
+      "role": "extends",
+      "rationale": "Both habitats turn recursion into a first-class trace of interpretation, observation, reflection, and revision."
+    },
+    {
+      "object_id": "repo_file:research/TURTLE_TERRARIA.md",
+      "concept_key": "persistent_computing_environment",
+      "role": "extends",
+      "rationale": "Each habitat carries actors, conditions, history, artifacts, and provenance forward."
+    },
+    {
+      "object_id": "repo_file:research/TURTLE_TERRARIA.md",
+      "concept_key": "provenance_aware_retrieval",
+      "role": "extends",
+      "rationale": "Human, machine, synthetic, world, and scholarship are allowed to cohabit without origin collapse."
+    },
+    {
+      "object_id": "repo_file:research/TURTLE_TERRARIA.md",
+      "concept_key": "synthetic_recursive_dialogue",
+      "role": "primary",
+      "rationale": "Defines the Recursive Turtle habitat as synthetic self-play with no human-evidence status or production authority."
+    },
+    {
+      "object_id": "autobuild_run:autobuild-2026-09-08",
+      "concept_key": "co_active_emergence",
+      "role": "tests",
+      "rationale": "The machine proposed an architecture; human direction reframed it into Terraria, which changed subsequent repository state."
+    },
+    {
+      "object_id": "autobuild_run:autobuild-2026-09-08",
+      "concept_key": "recursive_learning_loop",
+      "role": "primary",
+      "rationale": "Research, deliberation, build, documentation, human response, and revised build form a recursive development cycle."
+    },
+    {
+      "object_id": "autobuild_run:autobuild-2026-09-08",
+      "concept_key": "provenance_aware_retrieval",
+      "role": "supports",
+      "rationale": "Signals, candidates, rejections, chosen changes, and human overrides are now represented as separable research records."
+    },
+    {
+      "object_id": "repo_file:migrations/0007_turtle_terraria_and_exhaustive_tagging.sql",
+      "concept_key": "agent_design_as_structured_data",
+      "role": "extends",
+      "rationale": "The research process, agents, events, tags, and decisions become inspectable structured data."
+    },
+    {
+      "object_id": "repo_file:migrations/0007_turtle_terraria_and_exhaustive_tagging.sql",
+      "concept_key": "provenance_aware_retrieval",
+      "role": "operationalizes",
+      "rationale": "The schema makes provenance and evidence class queryable across human, synthetic, system, and world records."
+    }
+  ],
+  "emergent_tags": [
+    {
+      "object_id": "repo_file:research/TURTLE_TERRARIA.md",
+      "tag": "cohabitation",
+      "type": "environment",
+      "status": "provisional"
+    },
+    {
+      "object_id": "repo_file:research/TURTLE_TERRARIA.md",
+      "tag": "habitat",
+      "type": "environment",
+      "status": "provisional"
+    },
+    {
+      "object_id": "repo_file:research/TURTLE_TERRARIA.md",
+      "tag": "provenance-collapse-risk",
+      "type": "risk",
+      "status": "provisional"
+    },
+    {
+      "object_id": "autobuild_run:autobuild-2026-09-08",
+      "tag": "human-override",
+      "type": "method",
+      "status": "provisional"
+    },
+    {
+      "object_id": "autobuild_run:autobuild-2026-09-08",
+      "tag": "research-to-build-loop",
+      "type": "method",
+      "status": "provisional"
+    }
+  ],
+  "relationships": [
+    {
+      "subject": "autobuild_run:autobuild-2026-09-08",
+      "predicate": "produced",
+      "object": "repo_file:research/TURTLE_TERRARIA.md"
+    },
+    {
+      "subject": "repo_file:research/TURTLE_TERRARIA.md",
+      "predicate": "is_implemented_by",
+      "object": "repo_file:migrations/0007_turtle_terraria_and_exhaustive_tagging.sql"
+    },
+    {
+      "subject": "repo_file:migrations/0007_turtle_terraria_and_exhaustive_tagging.sql",
+      "predicate": "is_seeded_by",
+      "object": "repo_file:migrations/0008_seed_terraria_and_autobuild_tags.sql"
+    },
+    {
+      "subject": "repo_file:research/TURTLE_TERRARIA.md",
+      "predicate": "is_exposed_on_www_by",
+      "object": "repo_file:src/entry.ts#terraria-language"
+    },
+    {
+      "subject": "repo_file:research/TURTLE_TERRARIA.md",
+      "predicate": "is_announced_by",
+      "object": "build_log_entry:2026-09-08-turtle-terraria-tagging"
+    }
+  ],
+  "uncaptured_observations": [
+    {
+      "id": "unknown-2026-09-08-01",
+      "object_id": "repo_file:research/TURTLE_TERRARIA.md",
+      "observation": "Synthetic Turtle-to-Turtle recursive activity can be analyzed through the existing CTC domains, but the seven authored domains were framed around student learning and educational practice. It is not yet clear whether system-system recursive emergence is best understood as an application of CTC, a research method around CTC, or evidence for a genuinely new domain.",
+      "reason_unmapped": "Current domains may describe the qualities being tested but not the ontological status of non-human recursive participants.",
+      "status": "open",
+      "candidate_domain": null
+    },
+    {
+      "id": "unknown-2026-09-08-02",
+      "object_id": "repo_file:research/TURTLE_TERRARIA.md",
+      "observation": "Cohabitation-without-provenance-collapse appears to cut across all seven CTC domains and the later provenance ontology. It may remain a cross-cutting design principle rather than a new CTC domain.",
+      "reason_unmapped": "Cross-cutting provenance may not be a learner-development domain at all.",
+      "status": "open",
+      "candidate_domain": null
+    }
+  ]
+}
