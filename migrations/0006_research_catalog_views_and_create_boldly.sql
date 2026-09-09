@@ -103,7 +103,7 @@ INSERT OR IGNORE INTO pedagogical_experiment_sources
 ('exp-sunshine-machine','src-sanders-2026-sunshine-machine','documents','Sunshine Machine','Persistent computing environment research-development model.'),
 ('exp-coactive-writing','src-sanders-2023-ai','prefigures','Engaging with AI','Machine responses treated as material for critical evaluation.'),
 ('exp-coactive-writing','src-sanders-2025-coactive','documents','GPT and Me / Co-active Emergence','Published theoretical articulation.'),
-('exp-reeducation-focused','src-sanders-2022-reeducation','instantiates','RE/EDUCATION','Focused practice and R&D environment.'),
+('exp-reeducation-focused-practice','src-sanders-2022-reeducation','instantiates','RE/EDUCATION','Focused practice and R&D environment.'),
 ('exp-turtleblock-field-tests','src-sanders-2026-turtleblock','instantiates','TurtleBlock AI','Current executable research environment.');
 
 -- A concise source lineage. These are explicitly later interpretations unless a source itself states the relationship.
