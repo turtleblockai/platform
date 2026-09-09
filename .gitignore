@@ -34,14 +34,14 @@ bower_components
 # node-waf configuration
 .lock-wscript
 
-# Compiled binary addons (https://nodejs.org/api/addons.html)
+# Compiled binary addons
 build/Release
 
 # Dependency directories
 node_modules/
 jspm_packages/
 
-# Snowpack dependency directory (https://snowpack.dev/)
+# Snowpack dependency directory
 web_modules/
 
 # TypeScript cache
@@ -65,12 +65,18 @@ web_modules/
 # Yarn Integrity file
 .yarn-integrity
 
-# dotenv environment variable files
+# Local environment / secrets
 .env
 .env.*
 !.env.example
+.dev.vars
+.dev.vars.*
+!.dev.vars.example
 
-# parcel-bundler cache (https://parceljs.org/)
+# Cloudflare Wrangler local state
+.wrangler/
+
+# parcel-bundler cache
 .cache
 .parcel-cache
 
@@ -85,9 +91,6 @@ dist
 
 # Gatsby files
 .cache/
-# Comment in the public line in if your project uses Gatsby and not Next.js
-# https://nextjs.org/blog/next-9-1#public-directory-support
-# public
 
 # vuepress build output
 .vuepress/dist
