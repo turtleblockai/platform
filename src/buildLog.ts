@@ -11,6 +11,13 @@ export interface BuildLogEntry {
 // through the Worker. Open inquiry belongs in Next Edge, not in completed entries.
 export const BUILD_LOG_ENTRIES: BuildLogEntry[] = [
   {
+    id: "2026-09-09-next-edge-validator",
+    date: "Sep 9, 2026",
+    title: "Next Edge gets a deterministic provenance contract",
+    body: "The public research horizon is still generative, playful, and human-revisable, but its structure is no longer allowed to drift silently. A new validator checks that Next Edge preserves one explicit question, alternate possible possibles, an X factor, completed-build provenance, source classes, rationalized Sanders-ontology and CTC mappings, uncaptured residue, privacy/evidence metadata, and the boundary against secret-bearing configuration fields. GitHub Actions now runs the contract beside the TypeScript check; both passed in the first live run. No product version bump.",
+    done: true
+  },
+  {
     id: "2026-09-08-next-edge-horizon",
     date: "Sep 8, 2026",
     title: "Next Edge becomes a living possible-possibles horizon",
@@ -41,10 +48,10 @@ export const BUILD_LOG_ENTRIES: BuildLogEntry[] = [
 ];
 
 export const NEXT_EDGE_FALLBACK = {
-  date: "Sep 8, 2026",
-  title: "Make the edge of curiosity observable",
-  question: "Can TurtleBlock AI continuously synthesize one irresistible next question from the whole ecology of the project without turning curiosity into a backlog or letting the machine mistake a suggestion for authority?",
-  xFactor: "whoooo knooooowwwssssssssssss"
+  date: "Sep 9, 2026",
+  title: "Make verification something the learner can construct",
+  question: "Can TurtleBlock AI make verification itself into a learner-authored, inspectable construction rather than a hidden machine check, so that challenge, evidence, revision, and uncertainty become part of what the learner makes?",
+  xFactor: "whoooo knooooowwwssssssssssss — maybe the Turtle should occasionally ask the learner to build the thing that would prove the Turtle wrong"
 };
 
 function escapeHtml(value: string) {
