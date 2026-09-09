@@ -5,8 +5,8 @@
   "title": "Make verification something the learner can construct",
   "question": "Can TurtleBlock AI make verification itself into a learner-authored, inspectable construction rather than a hidden machine check, so that challenge, evidence, revision, and uncertainty become part of what the learner makes?",
   "why_now": "The September 9 build adds a deterministic provenance contract for the public Next Edge. The fresh research hunt also converged on verification rather than raw autonomy: OpenAI paired large-scale multi-agent mathematical exploration with a formal Lean proof; NVIDIA keeps evidence, judgments, and corrections inspectably distinct; Minecraft Education explicitly teaches learners to train and verify AI agents under human oversight; and MIT's current education work continues to favor bounded pilots, making, sharing, and human-centered collaboration. The next horizon therefore moves past validating TurtleBlock's own research metadata and asks whether verification can become material for learner inquiry and construction.",
-  "follows_commit": "ac1d77806a68ae7a415fd35217686cb59bbe7dcc",
-  "follows_commit_role": "completed_next_edge_validation_contribution_before_ci_integration",
+  "follows_commit": "1c1bd35d785191535678c261e00efcb5786090e9",
+  "follows_commit_role": "latest_completed_build_log_commit_for_2026_09_09_cycle",
   "inputs": [
     "current repository and commit state",
     "BUILD_IN_PUBLIC.md standing process",
