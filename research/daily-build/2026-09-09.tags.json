@@ -1,0 +1,593 @@
+{
+  "schema": "turtleblockai.daily-build-tags.v0.1",
+  "date": "2026-09-09",
+  "ontology_version": "sanders-ontology-v0.1",
+  "autobuild_run_id": "autobuild-2026-09-09",
+  "principles": {
+    "multi_tag": true,
+    "preserve_unmapped_residue": true,
+    "synthetic_is_not_human_evidence": true,
+    "ctc_domain_promotion_requires_human_scholarly_decision": true,
+    "immutable_dissertation_source_layer": true,
+    "human_override_preserved": true,
+    "no_generalized_persistent_personal_memory": true,
+    "no_autonomous_production_self_modification": true
+  },
+  "run": {
+    "trigger_type": "manual",
+    "status": "completed",
+    "version_before": "0.1.0",
+    "version_after": "0.1.0",
+    "selected_contribution": "Deterministic validation for the public Next Edge research/provenance contract",
+    "human_review_state": "not_reviewed",
+    "detailed_note_path": "research/daily-build/2026-09-09.md",
+    "public_log_entry_id": "2026-09-09-next-edge-validator",
+    "model": "GPT-5.6 Sol",
+    "privacy_class": "public",
+    "evidence_class": "system_record"
+  },
+  "research_objects": [
+    {
+      "id": "autobuild_run:autobuild-2026-09-09",
+      "object_type": "autobuild_run",
+      "title": "September 9 bounded TurtleBlock AI build-in-public cycle",
+      "evidence_class": "system_record",
+      "privacy_class": "public"
+    },
+    {
+      "id": "source_signal:2026-09-09-openai-navier-stokes",
+      "object_type": "external_source_signal",
+      "title": "OpenAI Navier-Stokes agent exploration plus Lean formal verification",
+      "source_uri": "https://openai.com/index/navier-stokes-solution/",
+      "external_date": "2026-09-08",
+      "actor": "external_source",
+      "evidence_class": "external_source",
+      "privacy_class": "public"
+    },
+    {
+      "id": "source_signal:2026-09-09-openai-research-acceleration",
+      "object_type": "external_source_signal",
+      "title": "OpenAI research acceleration under human supervision",
+      "source_uri": "https://openai.com/index/research-acceleration-view-inside-openai/",
+      "external_date": "2026-09-06",
+      "actor": "external_source",
+      "evidence_class": "external_source",
+      "privacy_class": "public"
+    },
+    {
+      "id": "source_signal:2026-09-09-nvidia-nemoclaw",
+      "object_type": "external_source_signal",
+      "title": "NVIDIA NemoClaw evidence, judgment, correction, and audit separation",
+      "source_uri": "https://developer.nvidia.com/blog/building-a-memory-driven-agent-with-nvidia-nemoclaw/",
+      "external_date": "2026-09-04",
+      "actor": "external_source",
+      "evidence_class": "external_source",
+      "privacy_class": "public"
+    },
+    {
+      "id": "source_signal:2026-09-09-minecraft-hour-of-ai",
+      "object_type": "external_source_signal",
+      "title": "Minecraft Education learner training and verification of AI agents",
+      "source_uri": "https://education.minecraft.net/en-us/lessons/hour-of-ai-the-first-night",
+      "external_date": "2026",
+      "actor": "external_source",
+      "evidence_class": "external_source",
+      "privacy_class": "public"
+    },
+    {
+      "id": "source_signal:2026-09-09-minecraft-26-32",
+      "object_type": "external_source_signal",
+      "title": "Minecraft Education 26.32 cross-tenant dedicated-server collaboration",
+      "source_uri": "https://edusupport.minecraft.net/hc/en-us/articles/360047556451-Minecraft-Education-Change-Log",
+      "external_date": "2026-08-05",
+      "actor": "external_source",
+      "evidence_class": "external_source",
+      "privacy_class": "public"
+    },
+    {
+      "id": "source_signal:2026-09-09-mit-bps-ambassadors",
+      "object_type": "external_source_signal",
+      "title": "MIT Media Lab and BPS bounded AI educator pilots shared openly",
+      "source_uri": "https://www.media.mit.edu/posts/boston-and-boston-public-schools-launch-inaugural-cohort-of-bps-ai-educator-ambassadors/",
+      "external_date": "2026-09-01",
+      "actor": "external_source",
+      "evidence_class": "external_source",
+      "privacy_class": "public"
+    },
+    {
+      "id": "question:2026-09-09-what-to-build",
+      "object_type": "autobuild_question",
+      "title": "What one bounded contribution is justified by today's evidence?",
+      "actor": "turtle",
+      "evidence_class": "system_record",
+      "privacy_class": "public"
+    },
+    {
+      "id": "candidate:2026-09-09-coactive-trace",
+      "object_type": "autobuild_candidate",
+      "title": "Implement Co-Active Trace learner UI",
+      "decision": "rejected_for_today",
+      "evidence_class": "system_record",
+      "privacy_class": "public"
+    },
+    {
+      "id": "candidate:2026-09-09-persistent-memory",
+      "object_type": "autobuild_candidate",
+      "title": "Add generalized persistent personal memory",
+      "decision": "rejected",
+      "evidence_class": "system_record",
+      "privacy_class": "public"
+    },
+    {
+      "id": "candidate:2026-09-09-recursive-turtle",
+      "object_type": "autobuild_candidate",
+      "title": "Add Recursive Turtle Builder/Reflector self-play",
+      "decision": "rejected_for_today",
+      "evidence_class": "system_record",
+      "privacy_class": "public"
+    },
+    {
+      "id": "candidate:2026-09-09-minecraft-collaboration",
+      "object_type": "autobuild_candidate",
+      "title": "Pull cross-school Minecraft collaboration forward",
+      "decision": "rejected_for_today",
+      "evidence_class": "system_record",
+      "privacy_class": "public"
+    },
+    {
+      "id": "selection:2026-09-09-next-edge-validator",
+      "object_type": "autobuild_selection",
+      "title": "Select deterministic Next Edge provenance validator",
+      "actor": "turtle",
+      "evidence_class": "system_record",
+      "privacy_class": "public"
+    },
+    {
+      "id": "failure:2026-09-09-prior-validator-write",
+      "object_type": "implementation_failure",
+      "title": "Earlier validator repository write failed at tool layer",
+      "actor": "system",
+      "evidence_class": "system_record",
+      "privacy_class": "public"
+    },
+    {
+      "id": "repo_change:2026-09-09-validator-script",
+      "object_type": "repo_change",
+      "title": "Create deterministic Next Edge validator",
+      "repo_path": "scripts/validate-next-edge.mjs",
+      "commit_sha": "ed809f8095ea639f13f38cbfe963109eaf79a306",
+      "change_type": "create",
+      "evidence_class": "system_record",
+      "privacy_class": "public"
+    },
+    {
+      "id": "repo_change:2026-09-09-package-command",
+      "object_type": "repo_change",
+      "title": "Expose npm Next Edge validation command",
+      "repo_path": "package.json",
+      "commit_sha": "ac1d77806a68ae7a415fd35217686cb59bbe7dcc",
+      "change_type": "update",
+      "evidence_class": "system_record",
+      "privacy_class": "public"
+    },
+    {
+      "id": "repo_change:2026-09-09-next-edge-manifest",
+      "object_type": "repo_change",
+      "title": "Advance and enrich public Next Edge manifest",
+      "repo_path": "public/data/next-edge.json",
+      "commit_sha": "d912acaa80d9a83a54b99f0d902aba7b0fd71922",
+      "change_type": "update",
+      "evidence_class": "system_record",
+      "privacy_class": "public"
+    },
+    {
+      "id": "repo_change:2026-09-09-ci-validation",
+      "object_type": "repo_change",
+      "title": "Add Next Edge contract validation to GitHub Actions",
+      "repo_path": ".github/workflows/deploy.yml",
+      "commit_sha": "bfa5820a5645de34d7152025d00b8f18b5884c38",
+      "change_type": "update",
+      "evidence_class": "system_record",
+      "privacy_class": "public"
+    },
+    {
+      "id": "test:2026-09-09-next-edge-contract",
+      "object_type": "test",
+      "title": "GitHub Actions validates Next Edge research contract",
+      "test_command": "npm run validate:next-edge",
+      "status": "passed",
+      "run_id": "34384757421",
+      "head_sha": "bfa5820a5645de34d7152025d00b8f18b5884c38",
+      "evidence_class": "system_record",
+      "privacy_class": "public"
+    },
+    {
+      "id": "test:2026-09-09-typecheck",
+      "object_type": "test",
+      "title": "Repository TypeScript typecheck",
+      "test_command": "npm run typecheck",
+      "status": "passed",
+      "run_id": "34384757421",
+      "head_sha": "bfa5820a5645de34d7152025d00b8f18b5884c38",
+      "evidence_class": "system_record",
+      "privacy_class": "public"
+    },
+    {
+      "id": "version_judgment:2026-09-09",
+      "object_type": "version_judgment",
+      "title": "Remain at v0.1.0",
+      "decision": "no_version_bump",
+      "evidence_class": "system_record",
+      "privacy_class": "public"
+    },
+    {
+      "id": "public_note:2026-09-09-daily-build",
+      "object_type": "research_note",
+      "title": "September 9 daily build research note",
+      "repo_path": "research/daily-build/2026-09-09.md",
+      "commit_sha": "0cdedd569199fe05cb42c0b082bec67e2067be3b",
+      "evidence_class": "system_record",
+      "privacy_class": "public"
+    },
+    {
+      "id": "next_edge:2026-09-09-learner-constructed-verification",
+      "object_type": "next_edge",
+      "title": "Make verification something the learner can construct",
+      "repo_path": "public/data/next-edge.json",
+      "evidence_class": "system_record",
+      "privacy_class": "public"
+    }
+  ],
+  "relationships": [
+    {
+      "subject": "autobuild_run:autobuild-2026-09-09",
+      "predicate": "consulted",
+      "object": "source_signal:2026-09-09-openai-navier-stokes",
+      "rationale": "Fresh primary-source signal strengthened the distinction between generative exploration and inspectable verification."
+    },
+    {
+      "subject": "autobuild_run:autobuild-2026-09-09",
+      "predicate": "consulted",
+      "object": "source_signal:2026-09-09-nvidia-nemoclaw",
+      "rationale": "Correction and audit separation informed provenance requirements without authorizing generalized memory."
+    },
+    {
+      "subject": "autobuild_run:autobuild-2026-09-09",
+      "predicate": "consulted",
+      "object": "source_signal:2026-09-09-minecraft-hour-of-ai",
+      "rationale": "Learner verification and human oversight helped surface the future-facing learner-constructed-verification question."
+    },
+    {
+      "subject": "autobuild_run:autobuild-2026-09-09",
+      "predicate": "consulted",
+      "object": "source_signal:2026-09-09-mit-bps-ambassadors",
+      "rationale": "Bounded pilot and open-sharing practice supported choosing infrastructure over feature velocity."
+    },
+    {
+      "subject": "question:2026-09-09-what-to-build",
+      "predicate": "generated_candidate",
+      "object": "candidate:2026-09-09-coactive-trace"
+    },
+    {
+      "subject": "question:2026-09-09-what-to-build",
+      "predicate": "generated_candidate",
+      "object": "candidate:2026-09-09-persistent-memory"
+    },
+    {
+      "subject": "question:2026-09-09-what-to-build",
+      "predicate": "generated_candidate",
+      "object": "candidate:2026-09-09-recursive-turtle"
+    },
+    {
+      "subject": "question:2026-09-09-what-to-build",
+      "predicate": "generated_candidate",
+      "object": "candidate:2026-09-09-minecraft-collaboration"
+    },
+    {
+      "subject": "question:2026-09-09-what-to-build",
+      "predicate": "resolved_by",
+      "object": "selection:2026-09-09-next-edge-validator"
+    },
+    {
+      "subject": "failure:2026-09-09-prior-validator-write",
+      "predicate": "was_retried_by",
+      "object": "repo_change:2026-09-09-validator-script",
+      "rationale": "The earlier write failure remains distinct from the later successful implementation."
+    },
+    {
+      "subject": "selection:2026-09-09-next-edge-validator",
+      "predicate": "implemented_by",
+      "object": "repo_change:2026-09-09-validator-script"
+    },
+    {
+      "subject": "repo_change:2026-09-09-validator-script",
+      "predicate": "exposed_by",
+      "object": "repo_change:2026-09-09-package-command"
+    },
+    {
+      "subject": "repo_change:2026-09-09-validator-script",
+      "predicate": "integrated_into_ci_by",
+      "object": "repo_change:2026-09-09-ci-validation"
+    },
+    {
+      "subject": "repo_change:2026-09-09-ci-validation",
+      "predicate": "verified_by",
+      "object": "test:2026-09-09-next-edge-contract"
+    },
+    {
+      "subject": "autobuild_run:autobuild-2026-09-09",
+      "predicate": "recorded_by",
+      "object": "public_note:2026-09-09-daily-build"
+    },
+    {
+      "subject": "selection:2026-09-09-next-edge-validator",
+      "predicate": "opens_future_question",
+      "object": "next_edge:2026-09-09-learner-constructed-verification",
+      "rationale": "The completed system validator makes the next unresolved question learner-facing verification, not more metadata validation."
+    }
+  ],
+  "ctc_tags": [
+    {
+      "object_id": "source_signal:2026-09-09-openai-navier-stokes",
+      "domain": "Formative Demonstration of Learning",
+      "role": "questions",
+      "rationale": "The source distinguishes exploratory agent work from a separately inspectable formal verification artifact; this is mapped as a system-research analogy, not student evidence."
+    },
+    {
+      "object_id": "source_signal:2026-09-09-openai-navier-stokes",
+      "domain": "Reflection as Learning",
+      "role": "questions",
+      "rationale": "Intermediate results, verification, and subsequent responsibility framing suggest that conclusions should remain open to inspection and reflection rather than being accepted because of model scale."
+    },
+    {
+      "object_id": "source_signal:2026-09-09-nvidia-nemoclaw",
+      "domain": "Technology as Tool to Think With",
+      "role": "supports",
+      "rationale": "Inspectable evidence and correction layers make the agent state material that a person can examine and revise instead of opaque authority."
+    },
+    {
+      "object_id": "source_signal:2026-09-09-minecraft-hour-of-ai",
+      "domain": "Technology as Tool to Think With",
+      "role": "primary",
+      "rationale": "Learners code, train, test, and debug an AI agent as part of their thinking process."
+    },
+    {
+      "object_id": "source_signal:2026-09-09-minecraft-hour-of-ai",
+      "domain": "Formative Demonstration of Learning",
+      "role": "primary",
+      "rationale": "Training and verifying agent behavior creates observable intermediate demonstrations rather than only a final answer."
+    },
+    {
+      "object_id": "source_signal:2026-09-09-minecraft-hour-of-ai",
+      "domain": "Reflection as Learning",
+      "role": "supports",
+      "rationale": "Debugging and verification require learners to compare expected and observed behavior and revise their rules."
+    },
+    {
+      "object_id": "source_signal:2026-09-09-mit-bps-ambassadors",
+      "domain": "Sharing and Collaborating",
+      "role": "supports",
+      "rationale": "The bounded classroom pilots are explicitly intended to produce findings that are shared across the district."
+    },
+    {
+      "object_id": "selection:2026-09-09-next-edge-validator",
+      "domain": "Technology as Tool to Think With",
+      "role": "tests",
+      "rationale": "The validator makes the system's own research horizon inspectable structured material; this is system-research mapping rather than learner evidence."
+    },
+    {
+      "object_id": "selection:2026-09-09-next-edge-validator",
+      "domain": "Reflection as Learning",
+      "role": "tests",
+      "rationale": "The build loop makes its own selection criteria, rejected alternatives, verification, and next question visible for later reflection."
+    },
+    {
+      "object_id": "next_edge:2026-09-09-learner-constructed-verification",
+      "domain": "Personal Inquiry",
+      "role": "primary",
+      "rationale": "The learner, not Turtle, should be able to define or revise what would count as convincing evidence for the inquiry."
+    },
+    {
+      "object_id": "next_edge:2026-09-09-learner-constructed-verification",
+      "domain": "Compelling Problem or Question",
+      "role": "supports",
+      "rationale": "Failed verification and counterexamples should generate new questions rather than enforce premature closure."
+    },
+    {
+      "object_id": "next_edge:2026-09-09-learner-constructed-verification",
+      "domain": "Technology as Tool to Think With",
+      "role": "primary",
+      "rationale": "WorldSpec, code, Turtle, and Minecraft may become manipulable verification media rather than hidden judges."
+    },
+    {
+      "object_id": "next_edge:2026-09-09-learner-constructed-verification",
+      "domain": "Formative Demonstration of Learning",
+      "role": "primary",
+      "rationale": "Tests, failures, evidence, corrections, and revisions can demonstrate learning throughout the construction process."
+    },
+    {
+      "object_id": "next_edge:2026-09-09-learner-constructed-verification",
+      "domain": "Reflection as Learning",
+      "role": "primary",
+      "rationale": "Learners can inspect how expectations, evidence, and criteria changed over the inquiry."
+    },
+    {
+      "object_id": "next_edge:2026-09-09-learner-constructed-verification",
+      "domain": "Social and Cultural Critique",
+      "role": "supports",
+      "rationale": "Visible criteria can be challenged for embedded assumptions, norms, categories, and power."
+    },
+    {
+      "object_id": "next_edge:2026-09-09-learner-constructed-verification",
+      "domain": "Sharing and Collaborating",
+      "role": "supports",
+      "rationale": "Shared verification artifacts allow collaborators to compare evidence and disagreement without losing attribution."
+    }
+  ],
+  "ontology_tags": [
+    {
+      "object_id": "autobuild_run:autobuild-2026-09-09",
+      "concept_key": "co_active_emergence",
+      "role": "tests",
+      "rationale": "The machine conducts a bounded research/build cycle under a standing human-authored framework, while the human retains authority to redirect or replace the result."
+    },
+    {
+      "object_id": "autobuild_run:autobuild-2026-09-09",
+      "concept_key": "recursive_learning_loop",
+      "role": "primary",
+      "rationale": "Research, candidate generation, rejection, implementation, CI verification, public recording, and a new question form a recursive development loop."
+    },
+    {
+      "object_id": "failure:2026-09-09-prior-validator-write",
+      "concept_key": "provenance_aware_retrieval",
+      "role": "supports",
+      "rationale": "The failed earlier implementation remains distinguishable from the successful retry instead of being rewritten out of history."
+    },
+    {
+      "object_id": "selection:2026-09-09-next-edge-validator",
+      "concept_key": "agent_design_as_structured_data",
+      "role": "operationalizes",
+      "rationale": "The horizon's source classes, mappings, alternatives, authority boundaries, and uncaptured residue become deterministic structured data."
+    },
+    {
+      "object_id": "selection:2026-09-09-next-edge-validator",
+      "concept_key": "provenance_aware_retrieval",
+      "role": "operationalizes",
+      "rationale": "The validator requires provenance and evidence/privacy metadata without inspecting secret configuration values."
+    },
+    {
+      "object_id": "next_edge:2026-09-09-learner-constructed-verification",
+      "concept_key": "machine_responses_as_material_for_evaluation",
+      "role": "primary",
+      "rationale": "Turtle's claims and interpretations become material learners can test rather than authoritative answers."
+    },
+    {
+      "object_id": "next_edge:2026-09-09-learner-constructed-verification",
+      "concept_key": "invisible_ideas_become_visible_and_manipulable",
+      "role": "supports",
+      "rationale": "Criteria, uncertainty, counterexamples, and revisions become inspectable objects."
+    },
+    {
+      "object_id": "next_edge:2026-09-09-learner-constructed-verification",
+      "concept_key": "co_active_emergence",
+      "role": "tests",
+      "rationale": "Human criteria, machine interpretation, evidence from construction, and revision can reciprocally alter the shared artifact while preserving origin."
+    },
+    {
+      "object_id": "next_edge:2026-09-09-learner-constructed-verification",
+      "concept_key": "possible_possibles",
+      "role": "supports",
+      "rationale": "Competing tests and counterexamples preserve multiple plausible explanations long enough for inquiry."
+    },
+    {
+      "object_id": "next_edge:2026-09-09-learner-constructed-verification",
+      "concept_key": "purposeful_play",
+      "role": "supports",
+      "rationale": "Verification may be learned through playful breaking, rebuilding, testing, and explanation rather than detached scoring."
+    },
+    {
+      "object_id": "next_edge:2026-09-09-learner-constructed-verification",
+      "concept_key": "steamhamlet",
+      "role": "supports",
+      "rationale": "Inhabitable and revisable construction can expose consequences and counterexamples that remain invisible in prose-only evaluation."
+    },
+    {
+      "object_id": "next_edge:2026-09-09-learner-constructed-verification",
+      "concept_key": "cohabitation_without_provenance_collapse",
+      "role": "operationalizes",
+      "rationale": "Learner criteria, Turtle claims, synthetic critiques, world observations, and external evidence must remain attributable when they cohabit a verification trace."
+    }
+  ],
+  "emergent_tags": [
+    {
+      "object_id": "selection:2026-09-09-next-edge-validator",
+      "tag": "deterministic-research-contract",
+      "type": "method",
+      "status": "provisional",
+      "rationale": "A generative horizon is bounded by deterministic structural/provenance checks without mechanizing the intellectual selection itself."
+    },
+    {
+      "object_id": "test:2026-09-09-next-edge-contract",
+      "tag": "verification-after-generation",
+      "type": "method",
+      "status": "provisional",
+      "rationale": "The generated research artifact must pass an independent deterministic contract in CI."
+    },
+    {
+      "object_id": "failure:2026-09-09-prior-validator-write",
+      "tag": "failed-write-preserved",
+      "type": "method",
+      "status": "provisional",
+      "rationale": "Infrastructure failure remains part of the research history rather than being erased by a later successful retry."
+    },
+    {
+      "object_id": "next_edge:2026-09-09-learner-constructed-verification",
+      "tag": "learner-authored-verification",
+      "type": "question",
+      "status": "provisional",
+      "rationale": "The horizon asks whether learners can construct the criteria and evidence structures used to challenge a machine interpretation."
+    },
+    {
+      "object_id": "next_edge:2026-09-09-learner-constructed-verification",
+      "tag": "counterexample-as-construction",
+      "type": "artifact",
+      "status": "provisional",
+      "rationale": "A world, program, or shareable artifact may function as a built counterexample rather than only a finished product."
+    },
+    {
+      "object_id": "next_edge:2026-09-09-learner-constructed-verification",
+      "tag": "epistemic-infrastructure",
+      "type": "emergent",
+      "status": "provisional",
+      "rationale": "Verification/provenance may be infrastructure spanning CTC activity rather than a new domain."
+    }
+  ],
+  "uncaptured_observations": [
+    {
+      "id": "unknown-2026-09-09-01",
+      "object_id": "selection:2026-09-09-next-edge-validator",
+      "observation": "Verification and provenance appear to cut across all seven established CTC domains but may be epistemic infrastructure around learning activity rather than a learner-development domain.",
+      "reason_unmapped": "The seven established domains describe educational activity and development; they do not necessarily name the infrastructure that makes competing claims auditable.",
+      "observer_actor_type": "turtle",
+      "status": "open",
+      "candidate_domain": null
+    },
+    {
+      "id": "unknown-2026-09-09-02",
+      "object_id": "next_edge:2026-09-09-learner-constructed-verification",
+      "observation": "A constructed counterexample can move rapidly among artifact, formative demonstration, reflection trigger, critique, and new question; the transition itself may be the significant research object.",
+      "reason_unmapped": "The meaningful phenomenon is movement among established domains rather than stable membership in one domain.",
+      "observer_actor_type": "turtle",
+      "status": "open",
+      "candidate_domain": null
+    },
+    {
+      "id": "unknown-2026-09-09-03",
+      "object_id": "test:2026-09-09-next-edge-contract",
+      "observation": "System-level deterministic verification and learner-authored verification share vocabulary but are not equivalent evidence classes or pedagogical events.",
+      "reason_unmapped": "The seven CTC domains may describe a learner verification episode but not the ontological distinction between infrastructure validation and human learning evidence.",
+      "observer_actor_type": "turtle",
+      "status": "open",
+      "candidate_domain": null
+    }
+  ],
+  "d1_persistence": {
+    "migration_target": "migrations/0007_turtle_terraria_and_exhaustive_tagging.sql",
+    "live_write_attempted": false,
+    "reason": "No appropriately authorized live D1 write path was established in the active task context; environment secrets and private configuration were not inspected or inferred.",
+    "staging_record_is_lossless": true,
+    "intended_tables": [
+      "autobuild_runs",
+      "autobuild_events",
+      "autobuild_repo_changes",
+      "autobuild_tests",
+      "research_objects",
+      "research_object_relationships",
+      "research_object_ctc_tags",
+      "research_object_ontology_tags",
+      "research_tags",
+      "research_object_tags",
+      "ctc_uncaptured_observations"
+    ]
+  }
+}
