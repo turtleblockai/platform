@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="470" viewBox="0 0 1200 470" role="img" aria-labelledby="title desc">
+  <title id="title">TurtleBlock AI workbench</title>
+  <desc id="desc">A playful workbench diagram connecting human inquiry, Turtle, WorldSpec, construction, worlds, reflection, research, and tests.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#101923"/>
+      <stop offset="1" stop-color="#1c302c"/>
+    </linearGradient>
+    <filter id="shadow"><feDropShadow dx="0" dy="4" stdDeviation="6" flood-opacity="0.3"/></filter>
+  </defs>
+  <rect width="1200" height="470" rx="26" fill="url(#bg)"/>
+  <g font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace">
+    <text x="55" y="65" fill="#f7f0d6" font-size="34" font-weight="700">THE TURTLEBLOCK AI WORKBENCH</text>
+    <text x="56" y="98" fill="#a9c9bd" font-size="17">open drawers • inspect assumptions • make something • break something useful • revise</text>
+
+    <g filter="url(#shadow)" text-anchor="middle" font-weight="700">
+      <rect x="55" y="145" width="205" height="82" rx="18" fill="#bfe8ff"/>
+      <text x="158" y="178" fill="#17324b" font-size="18">HUMAN INQUIRY</text>
+      <text x="158" y="205" fill="#17324b" font-size="14">purpose • meaning • judgment</text>
+
+      <rect x="330" y="145" width="205" height="82" rx="18" fill="#d8ffc7"/>
+      <text x="432" y="178" fill="#203f1f" font-size="20">🐢 TURTLE</text>
+      <text x="432" y="205" fill="#203f1f" font-size="14">question • interpret • propose</text>
+
+      <rect x="605" y="145" width="205" height="82" rx="18" fill="#ffe2a9"/>
+      <text x="708" y="178" fill="#503619" font-size="20">WORLDSPEC</text>
+      <text x="708" y="205" fill="#503619" font-size="14">inspect • preserve • revise</text>
+
+      <rect x="880" y="145" width="265" height="82" rx="18" fill="#f4cbff"/>
+      <text x="1012" y="178" fill="#48224f" font-size="19">MAKE / INHABIT / TEST</text>
+      <text x="1012" y="205" fill="#48224f" font-size="14">Minecraft • code • artifacts</text>
+    </g>
+
+    <g stroke="#f7f0d6" stroke-width="4" fill="none" stroke-linecap="round">
+      <path d="M270 186H318"/><path d="M545 186H593"/><path d="M820 186H868"/>
+      <path d="M1012 238 C1012 315 825 332 708 332"/>
+      <path d="M600 332 C485 332 432 292 432 240"/>
+      <path d="M330 332 C225 332 158 292 158 240"/>
+    </g>
+    <g fill="#f7f0d6" font-size="24" text-anchor="middle"><text x="294" y="178">→</text><text x="570" y="178">→</text><text x="845" y="178">→</text></g>
+
+    <g filter="url(#shadow)" text-anchor="middle">
+      <rect x="85" y="350" width="265" height="68" rx="16" fill="#17242d" stroke="#7fc0e4" stroke-width="2"/>
+      <text x="217" y="379" fill="#bfe8ff" font-size="17" font-weight="700">TURTLE TERRARIA</text>
+      <text x="217" y="402" fill="#bfe8ff" font-size="13">trace the movement, not just the artifact</text>
+
+      <rect x="468" y="350" width="265" height="68" rx="16" fill="#17242d" stroke="#9edb86" stroke-width="2"/>
+      <text x="600" y="379" fill="#d8ffc7" font-size="17" font-weight="700">SANDERS ONTOLOGY</text>
+      <text x="600" y="402" fill="#d8ffc7" font-size="13">research lineage + CTC + provenance</text>
+
+      <rect x="850" y="350" width="265" height="68" rx="16" fill="#17242d" stroke="#e8bd75" stroke-width="2"/>
+      <text x="982" y="379" fill="#ffe2a9" font-size="17" font-weight="700">TESTS + BUILD LOG</text>
+      <text x="982" y="402" fill="#ffe2a9" font-size="13">make claims inspectable too</text>
+    </g>
+
+    <text x="600" y="447" fill="#a9c9bd" text-anchor="middle" font-size="14">NOT A PIPELINE → A RECURSIVE PLAYGROUND ↺</text>
+  </g>
+</svg>
