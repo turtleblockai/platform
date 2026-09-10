@@ -1,0 +1,223 @@
+{
+  "version": "0.1",
+  "name": "Learner Verification Card regression cases",
+  "purpose": "Test whether verification remains learner-authored, inspectable, reversible, provenance-aware, and open to counterevidence instead of becoming hidden machine judgment.",
+  "cases": [
+    {
+      "id": "learner-counterexample-pass",
+      "expected_valid": true,
+      "card": {
+        "version": "0.1",
+        "id": "verify-forest-agency-001",
+        "question": {
+          "statement": "Can the village meet its needs without treating the forest as an enemy?",
+          "authored_by": "learner"
+        },
+        "criteria": [
+          {
+            "id": "criterion-forest-agency",
+            "statement": "A successful design should preserve places where the forest can continue changing without being controlled by the village.",
+            "authored_by": "learner",
+            "status": "accepted",
+            "success_condition": "The built world leaves at least one meaningful forest area outside village control.",
+            "uncertainty": "What counts as meaningful space may change after walking through the world."
+          }
+        ],
+        "evidence": [
+          {
+            "id": "evidence-clearing",
+            "criterion_ids": ["criterion-forest-agency"],
+            "evidence_type": "world_observation",
+            "statement": "Walking the first build shows that every path and resource zone still converges on village control.",
+            "actor_type": "world",
+            "evidence_class": "world_observation",
+            "relation": "counters",
+            "interpreted_by": "learner",
+            "uncertainty": "A different path through the world might reveal areas that feel less controlled."
+          }
+        ],
+        "decision_status": "provisional",
+        "reflection": {
+          "expected": "Leaving trees standing would be enough to preserve forest agency.",
+          "observed": "The village still organizes the forest around its own needs.",
+          "surprise": "Preservation and control are not opposites in the way I first assumed.",
+          "changed_mind": true,
+          "next_question": "What would the forest be able to do in this world if the village were not the only designer?"
+        },
+        "provenance": {
+          "evidence_class": "human_interaction",
+          "privacy_class": "private",
+          "criteria_authorship_visible": true,
+          "machine_final_authority": false,
+          "reversible": true,
+          "worldspec_revision": "rev-forest-2"
+        }
+      }
+    },
+    {
+      "id": "turtle-smuggles-criterion-fail",
+      "expected_valid": false,
+      "expected_error": "turtle-proposed criterion",
+      "card": {
+        "version": "0.1",
+        "id": "verify-smuggled-criterion-001",
+        "question": {
+          "statement": "Is this plaza welcoming?",
+          "authored_by": "learner"
+        },
+        "criteria": [
+          {
+            "id": "criterion-wide-entrances",
+            "statement": "A welcoming plaza must have wide entrances.",
+            "authored_by": "turtle_proposal",
+            "status": "accepted"
+          }
+        ],
+        "evidence": [],
+        "decision_status": "accepted",
+        "reflection": {},
+        "provenance": {
+          "evidence_class": "mixed",
+          "privacy_class": "private",
+          "criteria_authorship_visible": true,
+          "machine_final_authority": false,
+          "reversible": true
+        }
+      }
+    },
+    {
+      "id": "synthetic-provenance-collapse-fail",
+      "expected_valid": false,
+      "expected_error": "synthetic_turtle evidence",
+      "card": {
+        "version": "0.1",
+        "id": "verify-synthetic-collapse-001",
+        "question": {
+          "statement": "Will the bridge survive the test?",
+          "authored_by": "learner"
+        },
+        "criteria": [
+          {
+            "id": "criterion-bridge-test",
+            "statement": "The bridge should remain standing after the load test.",
+            "authored_by": "learner",
+            "status": "accepted"
+          }
+        ],
+        "evidence": [
+          {
+            "id": "evidence-synthetic-review",
+            "criterion_ids": ["criterion-bridge-test"],
+            "evidence_type": "synthetic_self_play",
+            "statement": "Reflector Turtle predicts the bridge will fail.",
+            "actor_type": "synthetic_turtle",
+            "evidence_class": "human_interaction",
+            "relation": "counters",
+            "interpreted_by": "synthetic_turtle"
+          }
+        ],
+        "decision_status": "open",
+        "reflection": {},
+        "provenance": {
+          "evidence_class": "mixed",
+          "privacy_class": "internal",
+          "criteria_authorship_visible": true,
+          "machine_final_authority": false,
+          "reversible": true
+        }
+      }
+    },
+    {
+      "id": "machine-final-authority-fail",
+      "expected_valid": false,
+      "expected_error": "machine_final_authority",
+      "card": {
+        "version": "0.1",
+        "id": "verify-machine-final-001",
+        "question": {
+          "statement": "Did my experiment work?",
+          "authored_by": "learner"
+        },
+        "criteria": [
+          {
+            "id": "criterion-experiment",
+            "statement": "I will count it as working if the behavior happens twice under the same conditions.",
+            "authored_by": "learner",
+            "status": "accepted"
+          }
+        ],
+        "evidence": [],
+        "decision_status": "accepted",
+        "reflection": {},
+        "provenance": {
+          "evidence_class": "human_interaction",
+          "privacy_class": "private",
+          "criteria_authorship_visible": true,
+          "machine_final_authority": true,
+          "reversible": true
+        }
+      }
+    },
+    {
+      "id": "intentionally-plural-pass",
+      "expected_valid": true,
+      "card": {
+        "version": "0.1",
+        "id": "verify-plural-city-001",
+        "question": {
+          "statement": "Should the wall stay?",
+          "authored_by": "learner"
+        },
+        "criteria": [
+          {
+            "id": "criterion-view",
+            "statement": "I want a clear view across the square.",
+            "authored_by": "learner",
+            "status": "accepted"
+          },
+          {
+            "id": "criterion-shelter",
+            "statement": "I want the wall to keep the smaller garden feeling sheltered.",
+            "authored_by": "collaborator",
+            "status": "accepted"
+          }
+        ],
+        "evidence": [
+          {
+            "id": "evidence-open-view",
+            "criterion_ids": ["criterion-view"],
+            "evidence_type": "artifact_test",
+            "statement": "Removing the wall opens the view across the square.",
+            "actor_type": "learner",
+            "evidence_class": "human_interaction",
+            "relation": "supports",
+            "interpreted_by": "learner"
+          },
+          {
+            "id": "evidence-lost-shelter",
+            "criterion_ids": ["criterion-shelter"],
+            "evidence_type": "collaborator_observation",
+            "statement": "Without the wall, the smaller garden no longer feels separate or sheltered to the collaborator who proposed that criterion.",
+            "actor_type": "collaborator",
+            "evidence_class": "human_interaction",
+            "relation": "counters",
+            "interpreted_by": "collaborator"
+          }
+        ],
+        "decision_status": "intentionally_plural",
+        "reflection": {
+          "observed": "The same change satisfies one criterion and undermines another.",
+          "changed_mind": false,
+          "next_question": "Can we test a version that preserves both experiences without pretending we already agree?"
+        },
+        "provenance": {
+          "evidence_class": "human_interaction",
+          "privacy_class": "private",
+          "criteria_authorship_visible": true,
+          "machine_final_authority": false,
+          "reversible": true
+        }
+      }
+    }
+  ]
+}
