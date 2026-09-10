@@ -1,0 +1,1079 @@
+{
+  "schema": "turtleblockai.daily-build-tags.v0.1",
+  "date": "2026-09-10",
+  "ontology_version": "sanders-ontology-v0.1",
+  "autobuild_run_id": "autobuild-2026-09-10",
+  "principles": {
+    "multi_tag": true,
+    "preserve_unmapped_residue": true,
+    "synthetic_is_not_human_evidence": true,
+    "ctc_domain_promotion_requires_human_scholarly_decision": true,
+    "immutable_dissertation_source_layer": true,
+    "human_override_preserved": true,
+    "criteria_authorship_visible": true,
+    "machine_final_authority": false,
+    "reversible": true,
+    "no_generalized_persistent_personal_memory": true,
+    "no_autonomous_production_self_modification": true
+  },
+  "run": {
+    "trigger_type": "scheduled",
+    "status": "completed",
+    "version_before": "0.1.0",
+    "version_after": "0.1.0",
+    "selected_contribution": "Provisional Learner Verification Card v0.1 research contract plus five-case deterministic regression suite",
+    "human_review_state": "not_reviewed",
+    "detailed_note_path": "research/daily-build/2026-09-10.md",
+    "public_log_entry_id": "2026-09-10-learner-verification-card",
+    "model": "GPT-5.6 Sol",
+    "privacy_class": "public",
+    "evidence_class": "system_record",
+    "capture_batch_closed": true
+  },
+  "research_objects": [
+    {
+      "id": "autobuild_run:autobuild-2026-09-10",
+      "object_type": "autobuild_run",
+      "title": "September 10 bounded TurtleBlock AI build-in-public cycle",
+      "actor": "turtle",
+      "evidence_class": "system_record",
+      "privacy_class": "public",
+      "model": "GPT-5.6 Sol",
+      "version": "0.1.0"
+    },
+    {
+      "id": "human_direction:2026-09-10-daily-build-standing-rule",
+      "object_type": "human_direction",
+      "title": "Run one bounded daily build under the existing research, tagging, Next Edge, Terraria, and conservative-version rules",
+      "actor": "human",
+      "evidence_class": "human_authored",
+      "privacy_class": "internal",
+      "raw_text_published": false
+    },
+    {
+      "id": "source_signal:2026-09-10-openai-policy-window",
+      "object_type": "external_source_signal",
+      "title": "OpenAI policy proposal emphasizes independent assessment, audit standards, evaluation gates, and meaningful human control",
+      "source_uri": "https://openai.com/index/ai-policy-window/",
+      "external_date": "2026-09-09",
+      "actor": "external_source",
+      "evidence_class": "external_source",
+      "privacy_class": "public"
+    },
+    {
+      "id": "source_signal:2026-09-10-openai-navier-stokes",
+      "object_type": "external_source_signal",
+      "title": "OpenAI separates large-scale agent exploration from formal Lean verification",
+      "source_uri": "https://openai.com/index/navier-stokes-solution/",
+      "external_date": "2026-09-08",
+      "actor": "external_source",
+      "evidence_class": "external_source",
+      "privacy_class": "public"
+    },
+    {
+      "id": "source_signal:2026-09-10-nvidia-nemoclaw",
+      "object_type": "external_source_signal",
+      "title": "NVIDIA NemoClaw separates evidence, derived judgment, user correction, and append-only audit history",
+      "source_uri": "https://developer.nvidia.com/blog/building-a-memory-driven-agent-with-nvidia-nemoclaw/",
+      "external_date": "2026-09-04",
+      "actor": "external_source",
+      "evidence_class": "external_source",
+      "privacy_class": "public"
+    },
+    {
+      "id": "source_signal:2026-09-10-minecraft-reed-smart",
+      "object_type": "external_source_signal",
+      "title": "Minecraft Education Reed Smart makes source verification and evidence organization a learner-manipulated activity",
+      "source_uri": "https://education.minecraft.net/en-us/lessons/reed-smart-ai-detective",
+      "external_date": "2026-07-06",
+      "actor": "external_source",
+      "evidence_class": "external_source",
+      "privacy_class": "public"
+    },
+    {
+      "id": "source_signal:2026-09-10-minecraft-26-32",
+      "object_type": "external_source_signal",
+      "title": "Minecraft Education 26.32 remains the latest client release and keeps cross-tenant dedicated-server collaboration available",
+      "source_uri": "https://edusupport.minecraft.net/hc/en-us/articles/360047556451-Minecraft-Education-Change-Log",
+      "external_date": "2026-08-05",
+      "actor": "external_source",
+      "evidence_class": "external_source",
+      "privacy_class": "public"
+    },
+    {
+      "id": "source_signal:2026-09-10-mit-jambot",
+      "object_type": "external_source_signal",
+      "title": "MIT Media Lab jam_bot frames real-time human-AI improvisation as expanded creative possibility rather than replacement",
+      "source_uri": "https://www.media.mit.edu/posts/media-alert/",
+      "external_date": "2026-09-04",
+      "actor": "external_source",
+      "evidence_class": "external_source",
+      "privacy_class": "public"
+    },
+    {
+      "id": "source_signal:2026-09-10-mit-bps-ambassadors",
+      "object_type": "external_source_signal",
+      "title": "MIT-linked BPS AI Educator Ambassadors use bounded classroom pilots with findings intended for open sharing",
+      "source_uri": "https://www.media.mit.edu/posts/boston-and-boston-public-schools-launch-inaugural-cohort-of-bps-ai-educator-ambassadors/",
+      "external_date": "2026-09-01",
+      "actor": "external_source",
+      "evidence_class": "external_source",
+      "privacy_class": "public"
+    },
+    {
+      "id": "question:2026-09-10-inherited-next-edge",
+      "object_type": "autobuild_question",
+      "title": "Can verification become a learner-authored inspectable construction instead of a hidden machine check?",
+      "actor": "turtle",
+      "evidence_class": "system_record",
+      "privacy_class": "public"
+    },
+    {
+      "id": "question:2026-09-10-what-to-build",
+      "object_type": "autobuild_question",
+      "title": "What one bounded contribution can test learner-authored verification without making Turtle a rubric engine?",
+      "actor": "turtle",
+      "evidence_class": "system_record",
+      "privacy_class": "public"
+    },
+    {
+      "id": "candidate:2026-09-10-core-worldspec-verification",
+      "object_type": "autobuild_candidate",
+      "title": "Add verification directly to core WorldSpec v0.1",
+      "decision": "rejected_for_today",
+      "rejection_reason": "The representation is not mature enough to make a verification structure core production architecture; a separate reversible experimental contract is safer.",
+      "evidence_class": "system_record",
+      "privacy_class": "public"
+    },
+    {
+      "id": "candidate:2026-09-10-verification-ui",
+      "object_type": "autobuild_candidate",
+      "title": "Build a learner-facing verification interface",
+      "decision": "rejected_for_today",
+      "rejection_reason": "A visible interface could hide a conceptual authority error if the underlying criteria/evidence/provenance contract is not hostile-tested first.",
+      "evidence_class": "system_record",
+      "privacy_class": "public"
+    },
+    {
+      "id": "candidate:2026-09-10-recursive-verifier",
+      "object_type": "autobuild_candidate",
+      "title": "Use Recursive Turtle Builder/Reflector self-play as verifier",
+      "decision": "rejected_for_today",
+      "rejection_reason": "Adding more synthetic production before the human artifact is mature would invert the research priority; future synthetic evidence must remain synthetic_self_play and human-gated.",
+      "evidence_class": "system_record",
+      "privacy_class": "public"
+    },
+    {
+      "id": "candidate:2026-09-10-minecraft-verification",
+      "object_type": "autobuild_candidate",
+      "title": "Implement Minecraft/world verification behavior",
+      "decision": "rejected_for_today",
+      "rejection_reason": "The world adapter is a larger v0.4-v0.5 path; representation and hostile cases should exist first.",
+      "evidence_class": "system_record",
+      "privacy_class": "public"
+    },
+    {
+      "id": "candidate:2026-09-10-persistent-memory",
+      "object_type": "autobuild_candidate",
+      "title": "Add generalized persistent learner memory",
+      "decision": "rejected",
+      "rejection_reason": "It is unnecessary for the verification problem and introduces separate privacy, identity, deletion, consent, and v0.3 governance questions.",
+      "evidence_class": "system_record",
+      "privacy_class": "public"
+    },
+    {
+      "id": "selection:2026-09-10-learner-verification-card",
+      "object_type": "autobuild_selection",
+      "title": "Select provisional Learner Verification Card v0.1 plus deterministic regression suite",
+      "actor": "turtle",
+      "evidence_class": "system_record",
+      "privacy_class": "public"
+    },
+    {
+      "id": "implementation_decision:2026-09-10-separate-experimental-contract",
+      "object_type": "implementation_decision",
+      "title": "Keep Learner Verification Card separate from core WorldSpec v0.1",
+      "actor": "turtle",
+      "decision": "experimental_and_reversible",
+      "evidence_class": "system_record",
+      "privacy_class": "public"
+    },
+    {
+      "id": "implementation_decision:2026-09-10-human-criterion-gate",
+      "object_type": "implementation_decision",
+      "title": "Require at least one human-authored criterion and explicit human acceptance before a Turtle proposal can stop being merely proposed",
+      "actor": "turtle",
+      "evidence_class": "system_record",
+      "privacy_class": "public"
+    },
+    {
+      "id": "repo_change:2026-09-10-verification-schema",
+      "object_type": "repo_change",
+      "title": "Create Learner Verification Card v0.1 schema",
+      "repo_path": "worldspec/schema/learner-verification-card.schema.json",
+      "commit_sha": "e7c58f0ecb6583af4e61995bd3ceef5b3c1ab7e1",
+      "change_type": "create",
+      "evidence_class": "system_record",
+      "privacy_class": "public"
+    },
+    {
+      "id": "repo_change:2026-09-10-verification-cases",
+      "object_type": "repo_change",
+      "title": "Create five Learner Verification Card regression cases",
+      "repo_path": "worldspec/tests/learner-verification-cases.json",
+      "commit_sha": "52fb843d8f6562c2cab394a5374e656f42106d81",
+      "change_type": "create",
+      "evidence_class": "system_record",
+      "privacy_class": "public"
+    },
+    {
+      "id": "repo_change:2026-09-10-verification-evaluator",
+      "object_type": "repo_change",
+      "title": "Create deterministic Learner Verification evaluator",
+      "repo_path": "scripts/validate-learner-verification.mjs",
+      "commit_sha": "25e75b790de1efbf42432e274dd6fa16912a741b",
+      "change_type": "create",
+      "evidence_class": "system_record",
+      "privacy_class": "public"
+    },
+    {
+      "id": "repo_change:2026-09-10-package-command",
+      "object_type": "repo_change",
+      "title": "Expose learner verification validation command",
+      "repo_path": "package.json",
+      "commit_sha": "8bd65c65250d6118410cd34d06e1b2c07459e358",
+      "change_type": "update",
+      "evidence_class": "system_record",
+      "privacy_class": "public"
+    },
+    {
+      "id": "repo_change:2026-09-10-ci-suite",
+      "object_type": "repo_change",
+      "title": "Run Learner Verification regression suite in GitHub Actions",
+      "repo_path": ".github/workflows/deploy.yml",
+      "commit_sha": "5b491c2c465bd97175e39229cb1b38a1bf6523e2",
+      "change_type": "update",
+      "evidence_class": "system_record",
+      "privacy_class": "public"
+    },
+    {
+      "id": "test:2026-09-10-verification-suite",
+      "object_type": "test",
+      "title": "Learner Verification Card five-case regression suite",
+      "test_command": "npm run validate:learner-verification",
+      "status": "passed",
+      "run_id": "34429554174",
+      "head_sha": "5b491c2c465bd97175e39229cb1b38a1bf6523e2",
+      "result": "Two intentionally valid traces accepted; three authority/provenance hostile traces rejected for the intended reason.",
+      "evidence_class": "system_record",
+      "privacy_class": "public"
+    },
+    {
+      "id": "test_case:2026-09-10-learner-counterexample-pass",
+      "object_type": "synthetic_regression_case",
+      "title": "Learner-authored forest-agency criterion revised after world counterevidence",
+      "status": "passed_as_valid_fixture",
+      "actor": "system",
+      "evidence_class": "system_record",
+      "privacy_class": "public",
+      "human_learning_evidence": false
+    },
+    {
+      "id": "test_case:2026-09-10-turtle-smuggled-criterion",
+      "object_type": "synthetic_regression_case",
+      "title": "Turtle-proposed criterion cannot silently become accepted",
+      "status": "rejected_as_intended",
+      "actor": "system",
+      "evidence_class": "system_record",
+      "privacy_class": "public",
+      "human_learning_evidence": false
+    },
+    {
+      "id": "test_case:2026-09-10-synthetic-provenance-collapse",
+      "object_type": "synthetic_regression_case",
+      "title": "Synthetic Turtle evidence cannot masquerade as human interaction",
+      "status": "rejected_as_intended",
+      "actor": "system",
+      "evidence_class": "system_record",
+      "privacy_class": "public",
+      "human_learning_evidence": false
+    },
+    {
+      "id": "test_case:2026-09-10-machine-final-authority",
+      "object_type": "synthetic_regression_case",
+      "title": "Machine final authority is forbidden",
+      "status": "rejected_as_intended",
+      "actor": "system",
+      "evidence_class": "system_record",
+      "privacy_class": "public",
+      "human_learning_evidence": false
+    },
+    {
+      "id": "test_case:2026-09-10-intentionally-plural",
+      "object_type": "synthetic_regression_case",
+      "title": "Learner and collaborator can retain competing criteria without manufactured consensus",
+      "status": "passed_as_valid_fixture",
+      "actor": "system",
+      "evidence_class": "system_record",
+      "privacy_class": "public",
+      "human_learning_evidence": false
+    },
+    {
+      "id": "test:2026-09-10-typecheck",
+      "object_type": "test",
+      "title": "Repository TypeScript typecheck",
+      "test_command": "npm run typecheck",
+      "status": "passed",
+      "run_id": "34429554174",
+      "head_sha": "5b491c2c465bd97175e39229cb1b38a1bf6523e2",
+      "evidence_class": "system_record",
+      "privacy_class": "public"
+    },
+    {
+      "id": "test:2026-09-10-next-edge-contract",
+      "object_type": "test",
+      "title": "Existing Next Edge research contract remained valid during contribution test",
+      "test_command": "npm run validate:next-edge",
+      "status": "passed",
+      "run_id": "34429554174",
+      "head_sha": "5b491c2c465bd97175e39229cb1b38a1bf6523e2",
+      "evidence_class": "system_record",
+      "privacy_class": "public"
+    },
+    {
+      "id": "version_judgment:2026-09-10",
+      "object_type": "version_judgment",
+      "title": "Remain at v0.1.0",
+      "decision": "no_version_bump",
+      "rationale": "The new card and regression suite materially strengthen the repeatable evaluation set for v0.2 but do not yet satisfy the full ontology behavior, versioned model/config, broader evaluation, and mature changelog requirements.",
+      "evidence_class": "system_record",
+      "privacy_class": "public"
+    },
+    {
+      "id": "persistence_decision:2026-09-10-d1-staging",
+      "object_type": "persistence_decision",
+      "title": "Use lossless tags JSON staging because no authorized live D1 write action is available",
+      "decision": "stage_json_only",
+      "actor": "turtle",
+      "evidence_class": "system_record",
+      "privacy_class": "public"
+    },
+    {
+      "id": "public_note:2026-09-10-daily-build",
+      "object_type": "research_note",
+      "title": "September 10 daily build research note",
+      "repo_path": "research/daily-build/2026-09-10.md",
+      "commit_sha": "2becb679dc9381ea535acfd59597e70e3361b6a6",
+      "evidence_class": "system_record",
+      "privacy_class": "public"
+    },
+    {
+      "id": "build_log_entry:2026-09-10-learner-verification-card",
+      "object_type": "build_log_entry",
+      "title": "Learner Verification becomes a thing we can break before learners depend on it",
+      "repo_path": "src/buildLog.ts",
+      "commit_sha": "c0d203b232f6c344a6847e5e4d77c2e257ef709c",
+      "evidence_class": "system_record",
+      "privacy_class": "public"
+    },
+    {
+      "id": "next_edge:2026-09-10-world-talks-back",
+      "object_type": "next_edge",
+      "title": "Let the world talk back without making it the judge",
+      "repo_path": "public/data/next-edge.json",
+      "commit_sha": "c0ea7ee4a005aeab27cc0d71aba05ea77028ce0c",
+      "evidence_class": "system_record",
+      "privacy_class": "public"
+    }
+  ],
+  "relationships": [
+    {
+      "subject": "human_direction:2026-09-10-daily-build-standing-rule",
+      "predicate": "authorized",
+      "object": "autobuild_run:autobuild-2026-09-10",
+      "rationale": "The run executes under an explicit human-authored standing process while selection remains reviewable."
+    },
+    {
+      "subject": "autobuild_run:autobuild-2026-09-10",
+      "predicate": "consulted",
+      "object": "source_signal:2026-09-10-openai-policy-window",
+      "rationale": "Independent assessment and meaningful human control reinforced explicit machine-authority boundaries."
+    },
+    {
+      "subject": "autobuild_run:autobuild-2026-09-10",
+      "predicate": "consulted",
+      "object": "source_signal:2026-09-10-openai-navier-stokes",
+      "rationale": "Formal verification after large-scale generative exploration reinforced the separation between generation and checking."
+    },
+    {
+      "subject": "autobuild_run:autobuild-2026-09-10",
+      "predicate": "consulted",
+      "object": "source_signal:2026-09-10-nvidia-nemoclaw",
+      "rationale": "Evidence/judgment/correction separation reinforced provenance but did not justify generalized learner memory."
+    },
+    {
+      "subject": "autobuild_run:autobuild-2026-09-10",
+      "predicate": "consulted",
+      "object": "source_signal:2026-09-10-minecraft-reed-smart",
+      "rationale": "Evidence boards, source comparison, human judgment, and reflection directly supported verification as manipulable learner material."
+    },
+    {
+      "subject": "autobuild_run:autobuild-2026-09-10",
+      "predicate": "consulted",
+      "object": "source_signal:2026-09-10-mit-jambot",
+      "rationale": "Open-ended human-AI improvisation supplied a negative case against universalizing verification into rubric compliance."
+    },
+    {
+      "subject": "question:2026-09-10-inherited-next-edge",
+      "predicate": "generated",
+      "object": "question:2026-09-10-what-to-build"
+    },
+    {
+      "subject": "question:2026-09-10-what-to-build",
+      "predicate": "generated_candidate",
+      "object": "candidate:2026-09-10-core-worldspec-verification"
+    },
+    {
+      "subject": "question:2026-09-10-what-to-build",
+      "predicate": "generated_candidate",
+      "object": "candidate:2026-09-10-verification-ui"
+    },
+    {
+      "subject": "question:2026-09-10-what-to-build",
+      "predicate": "generated_candidate",
+      "object": "candidate:2026-09-10-recursive-verifier"
+    },
+    {
+      "subject": "question:2026-09-10-what-to-build",
+      "predicate": "generated_candidate",
+      "object": "candidate:2026-09-10-minecraft-verification"
+    },
+    {
+      "subject": "question:2026-09-10-what-to-build",
+      "predicate": "generated_candidate",
+      "object": "candidate:2026-09-10-persistent-memory"
+    },
+    {
+      "subject": "question:2026-09-10-what-to-build",
+      "predicate": "resolved_by",
+      "object": "selection:2026-09-10-learner-verification-card"
+    },
+    {
+      "subject": "selection:2026-09-10-learner-verification-card",
+      "predicate": "constrained_by",
+      "object": "implementation_decision:2026-09-10-separate-experimental-contract"
+    },
+    {
+      "subject": "selection:2026-09-10-learner-verification-card",
+      "predicate": "constrained_by",
+      "object": "implementation_decision:2026-09-10-human-criterion-gate"
+    },
+    {
+      "subject": "selection:2026-09-10-learner-verification-card",
+      "predicate": "implemented_by",
+      "object": "repo_change:2026-09-10-verification-schema"
+    },
+    {
+      "subject": "selection:2026-09-10-learner-verification-card",
+      "predicate": "implemented_by",
+      "object": "repo_change:2026-09-10-verification-cases"
+    },
+    {
+      "subject": "selection:2026-09-10-learner-verification-card",
+      "predicate": "implemented_by",
+      "object": "repo_change:2026-09-10-verification-evaluator"
+    },
+    {
+      "subject": "repo_change:2026-09-10-verification-evaluator",
+      "predicate": "verified_by",
+      "object": "test:2026-09-10-verification-suite"
+    },
+    {
+      "subject": "test:2026-09-10-verification-suite",
+      "predicate": "contains_case",
+      "object": "test_case:2026-09-10-learner-counterexample-pass"
+    },
+    {
+      "subject": "test:2026-09-10-verification-suite",
+      "predicate": "contains_case",
+      "object": "test_case:2026-09-10-turtle-smuggled-criterion"
+    },
+    {
+      "subject": "test:2026-09-10-verification-suite",
+      "predicate": "contains_case",
+      "object": "test_case:2026-09-10-synthetic-provenance-collapse"
+    },
+    {
+      "subject": "test:2026-09-10-verification-suite",
+      "predicate": "contains_case",
+      "object": "test_case:2026-09-10-machine-final-authority"
+    },
+    {
+      "subject": "test:2026-09-10-verification-suite",
+      "predicate": "contains_case",
+      "object": "test_case:2026-09-10-intentionally-plural"
+    },
+    {
+      "subject": "autobuild_run:autobuild-2026-09-10",
+      "predicate": "recorded_by",
+      "object": "public_note:2026-09-10-daily-build"
+    },
+    {
+      "subject": "selection:2026-09-10-learner-verification-card",
+      "predicate": "announced_by",
+      "object": "build_log_entry:2026-09-10-learner-verification-card"
+    },
+    {
+      "subject": "build_log_entry:2026-09-10-learner-verification-card",
+      "predicate": "opens_future_question",
+      "object": "next_edge:2026-09-10-world-talks-back",
+      "rationale": "After representation and hostile testing of verification, the unresolved edge becomes how world-generated evidence enters a Human + Turtle inquiry without becoming authority."
+    }
+  ],
+  "ctc_tags": [
+    {
+      "object_id": "source_signal:2026-09-10-openai-policy-window",
+      "domain": "Social and Cultural Critique",
+      "role": "questions",
+      "rationale": "The source foregrounds institutional governance, audit authority, youth protections, and human control; this is an external governance signal, not student-learning evidence."
+    },
+    {
+      "object_id": "source_signal:2026-09-10-openai-navier-stokes",
+      "domain": "Formative Demonstration of Learning",
+      "role": "questions",
+      "rationale": "The separation of intermediate generative work from formal verification is used as a system-research analogy for keeping process and checking distinct, not as evidence about learners."
+    },
+    {
+      "object_id": "source_signal:2026-09-10-nvidia-nemoclaw",
+      "domain": "Technology as Tool to Think With",
+      "role": "supports",
+      "rationale": "Inspectable evidence, derived judgment, and user correction make agent state material that can be examined rather than opaque authority."
+    },
+    {
+      "object_id": "source_signal:2026-09-10-nvidia-nemoclaw",
+      "domain": "Reflection as Learning",
+      "role": "questions",
+      "rationale": "Visible correction history suggests a useful design analogy for comparing prior and revised interpretations while remaining external system research."
+    },
+    {
+      "object_id": "source_signal:2026-09-10-minecraft-reed-smart",
+      "domain": "Personal Inquiry",
+      "role": "supports",
+      "rationale": "Learners actively decide which clues and sources are credible enough to support their investigation."
+    },
+    {
+      "object_id": "source_signal:2026-09-10-minecraft-reed-smart",
+      "domain": "Compelling Problem or Question",
+      "role": "supports",
+      "rationale": "Case evidence and contradictions drive further investigation rather than passive receipt of AI claims."
+    },
+    {
+      "object_id": "source_signal:2026-09-10-minecraft-reed-smart",
+      "domain": "Technology as Tool to Think With",
+      "role": "primary",
+      "rationale": "Evidence boards, cameras, clues, source comparison, and AI literacy mechanics become tools used in the reasoning process."
+    },
+    {
+      "object_id": "source_signal:2026-09-10-minecraft-reed-smart",
+      "domain": "Formative Demonstration of Learning",
+      "role": "primary",
+      "rationale": "Students organize evidence, explain connections, and document verification methodology throughout the investigation."
+    },
+    {
+      "object_id": "source_signal:2026-09-10-minecraft-reed-smart",
+      "domain": "Reflection as Learning",
+      "role": "primary",
+      "rationale": "The lesson includes checkpoints asking which evidence mattered, what it supports or refutes, and what should be investigated next."
+    },
+    {
+      "object_id": "source_signal:2026-09-10-minecraft-reed-smart",
+      "domain": "Social and Cultural Critique",
+      "role": "supports",
+      "rationale": "The false AI-plagiarism case challenges over-reliance on automated detection and asks learners to examine fairness and human judgment."
+    },
+    {
+      "object_id": "source_signal:2026-09-10-minecraft-reed-smart",
+      "domain": "Sharing and Collaborating",
+      "role": "supports",
+      "rationale": "Students can work in pairs and explain investigative methodology to peers using shared evidence."
+    },
+    {
+      "object_id": "source_signal:2026-09-10-minecraft-26-32",
+      "domain": "Sharing and Collaborating",
+      "role": "supports",
+      "rationale": "Cross-tenant dedicated servers expand potential shared-world collaboration, while remaining a deferred platform direction."
+    },
+    {
+      "object_id": "source_signal:2026-09-10-mit-jambot",
+      "domain": "Technology as Tool to Think With",
+      "role": "supports",
+      "rationale": "The model listens and responds during live improvisation as material for human creative action rather than replacing the musician."
+    },
+    {
+      "object_id": "source_signal:2026-09-10-mit-jambot",
+      "domain": "Sharing and Collaborating",
+      "role": "primary",
+      "rationale": "The research is explicitly organized around real-time human-AI collaborative improvisation and expands to student musicians."
+    },
+    {
+      "object_id": "source_signal:2026-09-10-mit-jambot",
+      "domain": "Compelling Problem or Question",
+      "role": "questions",
+      "rationale": "Improvisational co-creation supplies a negative case for assuming every meaningful computational activity should have a predeclared success criterion."
+    },
+    {
+      "object_id": "source_signal:2026-09-10-mit-bps-ambassadors",
+      "domain": "Formative Demonstration of Learning",
+      "role": "supports",
+      "rationale": "Defined classroom pilots create bounded opportunities to observe and revise practice rather than assume implementation success."
+    },
+    {
+      "object_id": "source_signal:2026-09-10-mit-bps-ambassadors",
+      "domain": "Sharing and Collaborating",
+      "role": "supports",
+      "rationale": "Pilot findings are intended to be shared across the district."
+    },
+    {
+      "object_id": "selection:2026-09-10-learner-verification-card",
+      "domain": "Personal Inquiry",
+      "role": "tests",
+      "rationale": "The contract requires human-authored criteria and blocks silent promotion of Turtle criteria, testing whether inquiry standards remain human-controlled."
+    },
+    {
+      "object_id": "selection:2026-09-10-learner-verification-card",
+      "domain": "Compelling Problem or Question",
+      "role": "tests",
+      "rationale": "Open, provisional, counterevidence, and next-question states let verification generate further inquiry rather than only closure."
+    },
+    {
+      "object_id": "selection:2026-09-10-learner-verification-card",
+      "domain": "Technology as Tool to Think With",
+      "role": "primary",
+      "rationale": "Criteria, evidence, uncertainty, and disagreement are made into inspectable representational material rather than an opaque scoring service."
+    },
+    {
+      "object_id": "selection:2026-09-10-learner-verification-card",
+      "domain": "Formative Demonstration of Learning",
+      "role": "tests",
+      "rationale": "The proposed trace preserves intermediate evidence and revision states that could later support learning-in-process observation."
+    },
+    {
+      "object_id": "selection:2026-09-10-learner-verification-card",
+      "domain": "Reflection as Learning",
+      "role": "primary",
+      "rationale": "Expected, observed, surprise, changed-mind, and next-question fields make reflection structurally possible without assigning it to Turtle."
+    },
+    {
+      "object_id": "selection:2026-09-10-learner-verification-card",
+      "domain": "Social and Cultural Critique",
+      "role": "tests",
+      "rationale": "Visible criteria authorship lets participants challenge whose assumptions define success and the suite rejects a silently adopted machine criterion."
+    },
+    {
+      "object_id": "selection:2026-09-10-learner-verification-card",
+      "domain": "Sharing and Collaborating",
+      "role": "tests",
+      "rationale": "The intentionally plural fixture preserves competing learner and collaborator criteria instead of manufacturing consensus."
+    },
+    {
+      "object_id": "next_edge:2026-09-10-world-talks-back",
+      "domain": "Personal Inquiry",
+      "role": "primary",
+      "rationale": "Unexpected world evidence should return to the learner's own question and may change what they choose to investigate."
+    },
+    {
+      "object_id": "next_edge:2026-09-10-world-talks-back",
+      "domain": "Compelling Problem or Question",
+      "role": "primary",
+      "rationale": "Contradictory world consequences can transform an apparent answer into a better problem."
+    },
+    {
+      "object_id": "next_edge:2026-09-10-world-talks-back",
+      "domain": "Technology as Tool to Think With",
+      "role": "primary",
+      "rationale": "An inhabitable computational world becomes an object-to-think-with whose consequences can challenge an interpretation."
+    },
+    {
+      "object_id": "next_edge:2026-09-10-world-talks-back",
+      "domain": "Formative Demonstration of Learning",
+      "role": "supports",
+      "rationale": "Predictions, events, interpretations, and revisions can remain visible across the inquiry."
+    },
+    {
+      "object_id": "next_edge:2026-09-10-world-talks-back",
+      "domain": "Reflection as Learning",
+      "role": "primary",
+      "rationale": "The horizon centers comparison among intended, observed, interpreted, and revised states."
+    },
+    {
+      "object_id": "next_edge:2026-09-10-world-talks-back",
+      "domain": "Social and Cultural Critique",
+      "role": "supports",
+      "rationale": "Different readings of the same built environment can expose assumptions about access, authority, safety, fairness, and whose experience counts."
+    },
+    {
+      "object_id": "next_edge:2026-09-10-world-talks-back",
+      "domain": "Sharing and Collaborating",
+      "role": "supports",
+      "rationale": "Multiple participants may interpret one event differently while retaining attribution and intentional plurality."
+    }
+  ],
+  "ontology_tags": [
+    {
+      "object_id": "source_signal:2026-09-10-openai-policy-window",
+      "concept_key": "cohabitation_without_provenance_collapse",
+      "role": "questions",
+      "rationale": "The external policy signal strengthens the need to preserve human-control and audit boundaries, while remaining an external source rather than Sanders-authored theory."
+    },
+    {
+      "object_id": "source_signal:2026-09-10-openai-navier-stokes",
+      "concept_key": "machine_responses_as_material_for_evaluation",
+      "role": "supports",
+      "rationale": "Agent-generated intermediate work and a separately formalized proof exemplify machine output becoming material for checking rather than self-authenticating authority."
+    },
+    {
+      "object_id": "source_signal:2026-09-10-nvidia-nemoclaw",
+      "concept_key": "provenance_aware_retrieval",
+      "role": "supports",
+      "rationale": "NVIDIA's evidence, derived judgment, correction, and audit separation parallels TurtleBlock's requirement to preserve origin and revision state without importing the memory architecture itself."
+    },
+    {
+      "object_id": "source_signal:2026-09-10-minecraft-reed-smart",
+      "concept_key": "machine_responses_as_material_for_evaluation",
+      "role": "primary",
+      "rationale": "Students examine AI-generated or AI-evaluated claims as evidence candidates rather than taking machine confidence as truth."
+    },
+    {
+      "object_id": "source_signal:2026-09-10-minecraft-reed-smart",
+      "concept_key": "invisible_ideas_become_visible_and_manipulable",
+      "role": "primary",
+      "rationale": "The case-board mechanic makes evidence relationships physically visible and manipulable during reasoning."
+    },
+    {
+      "object_id": "source_signal:2026-09-10-minecraft-reed-smart",
+      "concept_key": "purposeful_play",
+      "role": "supports",
+      "rationale": "Narrative detective play is used as a vehicle for active evidence-based inquiry and reflection."
+    },
+    {
+      "object_id": "source_signal:2026-09-10-minecraft-26-32",
+      "concept_key": "persistent_computing_environment",
+      "role": "supports",
+      "rationale": "Cross-tenant dedicated servers expand the technical possibility of persistent shared worlds, but do not yet alter the current milestone."
+    },
+    {
+      "object_id": "source_signal:2026-09-10-mit-jambot",
+      "concept_key": "co_active_emergence",
+      "role": "questions",
+      "rationale": "Real-time reciprocal human-AI improvisation is a useful external comparison for co-created emergence, without claiming the MIT work validates Sanders' concept."
+    },
+    {
+      "object_id": "source_signal:2026-09-10-mit-jambot",
+      "concept_key": "purposeful_play",
+      "role": "supports",
+      "rationale": "Improvisation demonstrates productive open-ended interaction that can be harmed by prematurely imposed success criteria."
+    },
+    {
+      "object_id": "source_signal:2026-09-10-mit-jambot",
+      "concept_key": "possible_possibles",
+      "role": "supports",
+      "rationale": "Live generative response opens creative moves that are not fully predetermined before the interaction."
+    },
+    {
+      "object_id": "source_signal:2026-09-10-mit-bps-ambassadors",
+      "concept_key": "recursive_learning_loop",
+      "role": "supports",
+      "rationale": "Bounded pilots with openly shared findings support a build-observe-reflect-revise research pattern."
+    },
+    {
+      "object_id": "selection:2026-09-10-learner-verification-card",
+      "concept_key": "machine_responses_as_material_for_evaluation",
+      "role": "primary",
+      "rationale": "The card treats Turtle proposals and observations as attributable claims that can be supported, countered, or left inconclusive."
+    },
+    {
+      "object_id": "selection:2026-09-10-learner-verification-card",
+      "concept_key": "invisible_ideas_become_visible_and_manipulable",
+      "role": "primary",
+      "rationale": "Criteria, uncertainty, evidence relations, interpretation, and decision state become explicit manipulable data."
+    },
+    {
+      "object_id": "selection:2026-09-10-learner-verification-card",
+      "concept_key": "co_active_emergence",
+      "role": "tests",
+      "rationale": "The experimental trace permits learner criteria, Turtle interpretation, world evidence, and reflection to alter one another while preserving authorship."
+    },
+    {
+      "object_id": "selection:2026-09-10-learner-verification-card",
+      "concept_key": "possible_possibles",
+      "role": "supports",
+      "rationale": "Open, provisional, mixed, inconclusive, and intentionally plural states resist collapsing uncertainty too early."
+    },
+    {
+      "object_id": "selection:2026-09-10-learner-verification-card",
+      "concept_key": "purposeful_play",
+      "role": "questions",
+      "rationale": "The card can support testing through play but is explicitly treated as optional because formal criteria may damage some improvisational inquiry."
+    },
+    {
+      "object_id": "selection:2026-09-10-learner-verification-card",
+      "concept_key": "steamhamlet",
+      "role": "supports",
+      "rationale": "An inhabitable, revisable construction can produce evidence and consequences that return to the learner's representation."
+    },
+    {
+      "object_id": "selection:2026-09-10-learner-verification-card",
+      "concept_key": "cohabitation_without_provenance_collapse",
+      "role": "operationalizes",
+      "rationale": "Human criteria, machine proposals, world observations, external sources, and synthetic evidence may coexist only with explicit actor and evidence-class provenance."
+    },
+    {
+      "object_id": "selection:2026-09-10-learner-verification-card",
+      "concept_key": "agent_design_as_structured_data",
+      "role": "extends",
+      "rationale": "Verification authority and evidence relations become deterministic structured constraints rather than implied prompt behavior."
+    },
+    {
+      "object_id": "test:2026-09-10-verification-suite",
+      "concept_key": "recursive_learning_loop",
+      "role": "tests",
+      "rationale": "The evaluation set makes proposed representation, hostile cases, deterministic checking, and later revision into a repeatable recursive research loop."
+    },
+    {
+      "object_id": "test_case:2026-09-10-synthetic-provenance-collapse",
+      "concept_key": "synthetic_recursive_dialogue",
+      "role": "tests",
+      "rationale": "The hostile case explicitly tests that a synthetic Turtle contribution cannot be mislabeled as human evidence even though no live self-play is performed."
+    },
+    {
+      "object_id": "next_edge:2026-09-10-world-talks-back",
+      "concept_key": "co_active_emergence",
+      "role": "primary",
+      "rationale": "The future inquiry asks how learner intention, Turtle interpretation, world consequence, and reflection can recursively change one another without provenance collapse."
+    },
+    {
+      "object_id": "next_edge:2026-09-10-world-talks-back",
+      "concept_key": "purposeful_play",
+      "role": "primary",
+      "rationale": "The world may surprise the participants through inhabitation and play without becoming a compulsory rubric."
+    },
+    {
+      "object_id": "next_edge:2026-09-10-world-talks-back",
+      "concept_key": "steamhamlet",
+      "role": "supports",
+      "rationale": "The horizon extends the room-of-possibilities idea toward environments whose consequences become material for further making."
+    },
+    {
+      "object_id": "next_edge:2026-09-10-world-talks-back",
+      "concept_key": "invisible_ideas_become_visible_and_manipulable",
+      "role": "supports",
+      "rationale": "Built consequences externalize assumptions that can then be inspected and changed."
+    },
+    {
+      "object_id": "next_edge:2026-09-10-world-talks-back",
+      "concept_key": "machine_responses_as_material_for_evaluation",
+      "role": "extends",
+      "rationale": "Turtle's interpretation of what happened becomes one attributable reading among others rather than the final account."
+    },
+    {
+      "object_id": "next_edge:2026-09-10-world-talks-back",
+      "concept_key": "cohabitation_without_provenance_collapse",
+      "role": "operationalizes",
+      "rationale": "World events and human, Turtle, collaborator, and synthetic interpretations must remain distinguishable."
+    },
+    {
+      "object_id": "next_edge:2026-09-10-world-talks-back",
+      "concept_key": "recursive_learning_loop",
+      "role": "supports",
+      "rationale": "Intent, construction, inhabitation, observation, reflection, revision, and new inquiry form the future loop."
+    }
+  ],
+  "dissertation_code_mappings": [
+    {
+      "object_id": "selection:2026-09-10-learner-verification-card",
+      "source_layer": "immutable_dissertation_dedoose",
+      "code_label": "Problem Posing Education",
+      "relationship_layer": "later_interpretation",
+      "rationale": "Counterevidence and next-question states let verification reopen inquiry rather than force closure."
+    },
+    {
+      "object_id": "selection:2026-09-10-learner-verification-card",
+      "source_layer": "immutable_dissertation_dedoose",
+      "code_label": "Predetermined Outcomes",
+      "relationship_layer": "later_interpretation",
+      "rationale": "The card explicitly rejects hidden machine-owned criteria as the universal definition of success."
+    },
+    {
+      "object_id": "selection:2026-09-10-learner-verification-card",
+      "source_layer": "immutable_dissertation_dedoose",
+      "code_label": "Freedom and Individuality",
+      "relationship_layer": "later_interpretation",
+      "rationale": "Human authorship, disagreement, criteria revision, and no machine final authority preserve learner judgment."
+    },
+    {
+      "object_id": "selection:2026-09-10-learner-verification-card",
+      "source_layer": "immutable_dissertation_dedoose",
+      "code_label": "Constructivism",
+      "relationship_layer": "later_interpretation",
+      "rationale": "Evidence and meaning are represented as developing through interaction with artifacts and observations rather than delivered as a verdict."
+    },
+    {
+      "object_id": "selection:2026-09-10-learner-verification-card",
+      "source_layer": "immutable_dissertation_dedoose",
+      "code_label": "Discovery Learning",
+      "relationship_layer": "later_interpretation",
+      "rationale": "Unexpected evidence and deliberately preserved failure may change the learner's understanding and next question."
+    },
+    {
+      "object_id": "test_case:2026-09-10-intentionally-plural",
+      "source_layer": "immutable_dissertation_dedoose",
+      "code_label": "Shared Democracy",
+      "relationship_layer": "later_interpretation",
+      "rationale": "Competing participant criteria are retained instead of silently synthesized into false consensus."
+    },
+    {
+      "object_id": "next_edge:2026-09-10-world-talks-back",
+      "source_layer": "immutable_dissertation_dedoose",
+      "code_label": "Observations on Life Itself",
+      "relationship_layer": "later_interpretation",
+      "rationale": "Situated world experience may challenge a prior representation, while the observation remains contextual rather than universalized."
+    }
+  ],
+  "emergent_tags": [
+    {
+      "object_id": "selection:2026-09-10-learner-verification-card",
+      "tag": "learner-authored-verification",
+      "type": "method",
+      "status": "provisional",
+      "rationale": "Learners author or explicitly adopt the criteria used to examine a claim."
+    },
+    {
+      "object_id": "selection:2026-09-10-learner-verification-card",
+      "tag": "criterion-authorship",
+      "type": "value",
+      "status": "provisional",
+      "rationale": "Who authored the standard of judgment is treated as first-class provenance."
+    },
+    {
+      "object_id": "selection:2026-09-10-learner-verification-card",
+      "tag": "verification-as-construction",
+      "type": "artifact",
+      "status": "provisional",
+      "rationale": "Verification is represented as an inspectable thing participants can revise rather than a hidden score."
+    },
+    {
+      "object_id": "selection:2026-09-10-learner-verification-card",
+      "tag": "intentionally-plural",
+      "type": "method",
+      "status": "provisional",
+      "rationale": "The representation can preserve unresolved or legitimately competing interpretations without manufacturing consensus."
+    },
+    {
+      "object_id": "test:2026-09-10-verification-suite",
+      "tag": "hostile-evaluation",
+      "type": "method",
+      "status": "provisional",
+      "rationale": "Valid and intentionally invalid fixtures test authority and provenance invariants before production use."
+    },
+    {
+      "object_id": "test_case:2026-09-10-synthetic-provenance-collapse",
+      "tag": "provenance-collapse-risk",
+      "type": "risk",
+      "status": "provisional",
+      "rationale": "The case tests a synthetic contribution falsely presented as human evidence."
+    },
+    {
+      "object_id": "next_edge:2026-09-10-world-talks-back",
+      "tag": "world-talks-back",
+      "type": "question",
+      "status": "provisional",
+      "rationale": "An inhabitable environment may generate consequences that surprise all intentional participants without itself becoming final authority."
+    },
+    {
+      "object_id": "next_edge:2026-09-10-world-talks-back",
+      "tag": "rubricification-risk",
+      "type": "risk",
+      "status": "provisional",
+      "rationale": "Verification structures can damage exploratory or improvisational play if they become compulsory."
+    },
+    {
+      "object_id": "next_edge:2026-09-10-world-talks-back",
+      "tag": "relational-evidence",
+      "type": "emergent",
+      "status": "provisional",
+      "rationale": "Support or counterevidence may be a relation among event, criterion, observer, and interpretation rather than a fixed property of evidence."
+    },
+    {
+      "object_id": "next_edge:2026-09-10-world-talks-back",
+      "tag": "non-intentional-environmental-agency",
+      "type": "emergent",
+      "status": "provisional",
+      "rationale": "The built world can have consequences within an inquiry without possessing human intention or interpretation."
+    }
+  ],
+  "uncaptured_observations": [
+    {
+      "id": "unknown-2026-09-10-01",
+      "object_id": "selection:2026-09-10-learner-verification-card",
+      "observation": "Authorship of the criterion by which a claim is judged appears to cut across Personal Inquiry, Reflection, Social and Cultural Critique, and Shared Democracy, but may be epistemic infrastructure rather than a learner-development domain.",
+      "reason_unmapped": "The seven established CTC domains can describe the learning activity but do not explicitly name ownership of evaluation criteria as its own domain.",
+      "observer_actor_type": "turtle",
+      "status": "open",
+      "candidate_domain": null
+    },
+    {
+      "id": "unknown-2026-09-10-02",
+      "object_id": "selection:2026-09-10-learner-verification-card",
+      "observation": "The same observation may support one criterion, counter another, and remain inconclusive under a third, suggesting that evidence relation belongs to an interpretation edge rather than intrinsically to the evidence object.",
+      "reason_unmapped": "The significant phenomenon is a relation among event, criterion, observer, and interpretation rather than stable membership in a single educational domain.",
+      "observer_actor_type": "turtle",
+      "status": "open",
+      "candidate_domain": null
+    },
+    {
+      "id": "unknown-2026-09-10-03",
+      "object_id": "source_signal:2026-09-10-mit-jambot",
+      "observation": "Some purposeful play, improvisation, aesthetic exploration, and co-creation may become less generative when formal success criteria are introduced even if the criteria are human-authored.",
+      "reason_unmapped": "This appears to be a boundary condition on when verification should exist, not evidence for a new CTC domain.",
+      "observer_actor_type": "turtle",
+      "status": "open",
+      "candidate_domain": null
+    },
+    {
+      "id": "unknown-2026-09-10-04",
+      "object_id": "next_edge:2026-09-10-world-talks-back",
+      "observation": "A computational world can function as a consequential participant in inquiry without possessing human intention, authorship, or interpretation; the current evidence classes preserve provenance but do not settle the theoretical status of this non-intentional environmental agency.",
+      "reason_unmapped": "The existing CTC domains and provenance categories do not fully describe how environmental consequences participate in co-active emergence without anthropomorphizing the environment.",
+      "observer_actor_type": "turtle",
+      "status": "open",
+      "candidate_domain": null
+    }
+  ],
+  "failures": [],
+  "human_overrides": [],
+  "turtle_terraria": {
+    "habitat_relevance": "Human + Turtle Terrarium",
+    "live_terrarium_run_performed": false,
+    "synthetic_self_play_performed": false,
+    "note": "Today's synthetic regression fixtures test future Human + Turtle and Recursive Turtle provenance boundaries, but no fixture is human-learning evidence and no live Recursive Turtle dialogue occurred."
+  },
+  "d1_persistence": {
+    "migration_target": "migrations/0007_turtle_terraria_and_exhaustive_tagging.sql",
+    "live_write_attempted": false,
+    "reason": "No appropriately authorized live D1 write action was available in the active task context; secret values and private configuration were not inspected or inferred.",
+    "staging_record_is_lossless": true,
+    "intended_tables": [
+      "autobuild_runs",
+      "autobuild_events",
+      "autobuild_repo_changes",
+      "autobuild_tests",
+      "research_objects",
+      "research_object_relationships",
+      "research_object_ctc_tags",
+      "research_object_ontology_tags",
+      "research_tags",
+      "research_object_tags",
+      "ctc_uncaptured_observations"
+    ]
+  }
+}
