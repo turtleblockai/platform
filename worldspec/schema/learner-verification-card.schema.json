@@ -1,0 +1,174 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://turtleblockai.com/worldspec/schema/learner-verification-card/v0.1.json",
+  "title": "TurtleBlock AI Learner Verification Card",
+  "description": "Provisional, inspectable verification artifact in which human-authored criteria, evidence, interpretation, uncertainty, reflection, and revision remain attributable. This is a research contract, not a grading engine or production authority.",
+  "type": "object",
+  "required": [
+    "version",
+    "id",
+    "question",
+    "criteria",
+    "evidence",
+    "decision_status",
+    "reflection",
+    "provenance"
+  ],
+  "properties": {
+    "version": { "const": "0.1" },
+    "id": { "type": "string", "minLength": 1 },
+    "question": {
+      "type": "object",
+      "required": ["statement", "authored_by"],
+      "properties": {
+        "statement": { "type": "string", "minLength": 1 },
+        "authored_by": {
+          "type": "string",
+          "enum": ["learner", "collaborator", "turtle_proposal"]
+        }
+      },
+      "additionalProperties": true
+    },
+    "criteria": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/criterion" }
+    },
+    "evidence": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/evidence" }
+    },
+    "decision_status": {
+      "type": "string",
+      "enum": ["open", "provisional", "accepted", "rejected", "intentionally_plural"]
+    },
+    "reflection": {
+      "type": "object",
+      "properties": {
+        "expected": { "type": "string" },
+        "observed": { "type": "string" },
+        "surprise": { "type": "string" },
+        "changed_mind": { "type": "boolean" },
+        "next_question": { "type": "string" }
+      },
+      "additionalProperties": true
+    },
+    "provenance": {
+      "type": "object",
+      "required": [
+        "evidence_class",
+        "privacy_class",
+        "criteria_authorship_visible",
+        "machine_final_authority",
+        "reversible"
+      ],
+      "properties": {
+        "evidence_class": {
+          "type": "string",
+          "enum": ["human_interaction", "mixed"]
+        },
+        "privacy_class": {
+          "type": "string",
+          "enum": ["private", "internal", "unlisted", "public"]
+        },
+        "criteria_authorship_visible": { "const": true },
+        "machine_final_authority": { "const": false },
+        "reversible": { "const": true },
+        "worldspec_revision": { "type": "string" },
+        "source_turn_refs": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      },
+      "additionalProperties": true
+    }
+  },
+  "$defs": {
+    "humanActor": {
+      "type": "object",
+      "required": ["actor_type"],
+      "properties": {
+        "actor_type": {
+          "type": "string",
+          "enum": ["learner", "collaborator"]
+        },
+        "actor_ref": { "type": "string" }
+      },
+      "additionalProperties": true
+    },
+    "criterion": {
+      "type": "object",
+      "required": ["id", "statement", "authored_by", "status"],
+      "properties": {
+        "id": { "type": "string", "minLength": 1 },
+        "statement": { "type": "string", "minLength": 1 },
+        "authored_by": {
+          "type": "string",
+          "enum": ["learner", "collaborator", "turtle_proposal"]
+        },
+        "status": {
+          "type": "string",
+          "enum": ["proposed", "accepted", "revised", "rejected"]
+        },
+        "accepted_by": { "$ref": "#/$defs/humanActor" },
+        "success_condition": { "type": "string" },
+        "uncertainty": { "type": "string" }
+      },
+      "additionalProperties": true
+    },
+    "evidence": {
+      "type": "object",
+      "required": [
+        "id",
+        "criterion_ids",
+        "evidence_type",
+        "statement",
+        "actor_type",
+        "evidence_class",
+        "relation",
+        "interpreted_by"
+      ],
+      "properties": {
+        "id": { "type": "string", "minLength": 1 },
+        "criterion_ids": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "type": "string" }
+        },
+        "evidence_type": {
+          "type": "string",
+          "enum": [
+            "world_observation",
+            "learner_observation",
+            "collaborator_observation",
+            "turtle_observation",
+            "external_source",
+            "artifact_test",
+            "synthetic_self_play"
+          ]
+        },
+        "statement": { "type": "string", "minLength": 1 },
+        "actor_type": {
+          "type": "string",
+          "enum": ["learner", "collaborator", "turtle", "world", "external_source", "synthetic_turtle"]
+        },
+        "evidence_class": {
+          "type": "string",
+          "enum": ["human_interaction", "system_record", "world_observation", "external_source", "synthetic_self_play", "mixed"]
+        },
+        "relation": {
+          "type": "string",
+          "enum": ["supports", "counters", "mixed", "inconclusive"]
+        },
+        "interpreted_by": {
+          "type": "string",
+          "enum": ["learner", "collaborator", "turtle", "synthetic_turtle"]
+        },
+        "source_ref": { "type": "string" },
+        "uncertainty": { "type": "string" }
+      },
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": true
+}
