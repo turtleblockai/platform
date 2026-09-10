@@ -33,5 +33,8 @@ jobs:
       - name: Validate Next Edge research contract
         run: npm run validate:next-edge
 
+      - name: Validate learner-authored verification contract
+        run: npm run validate:learner-verification
+
       - name: Deployment note
         run: echo "Production deployment is handled by the connected Cloudflare Workers Builds GitHub integration."
