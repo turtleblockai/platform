@@ -1,50 +1,54 @@
 {
-  "version": "0.2",
-  "updated_at": "2026-09-09",
+  "version": "0.3",
+  "updated_at": "2026-09-10",
   "status": "open_question",
-  "title": "Make verification something the learner can construct",
-  "question": "Can TurtleBlock AI make verification itself into a learner-authored, inspectable construction rather than a hidden machine check, so that challenge, evidence, revision, and uncertainty become part of what the learner makes?",
-  "why_now": "The September 9 build adds a deterministic provenance contract for the public Next Edge. The fresh research hunt also converged on verification rather than raw autonomy: OpenAI paired large-scale multi-agent mathematical exploration with a formal Lean proof; NVIDIA keeps evidence, judgments, and corrections inspectably distinct; Minecraft Education explicitly teaches learners to train and verify AI agents under human oversight; and MIT's current education work continues to favor bounded pilots, making, sharing, and human-centered collaboration. The next horizon therefore moves past validating TurtleBlock's own research metadata and asks whether verification can become material for learner inquiry and construction.",
-  "follows_commit": "1c1bd35d785191535678c261e00efcb5786090e9",
-  "follows_commit_role": "latest_completed_build_log_commit_for_2026_09_09_cycle",
+  "title": "Let the world talk back without making it the judge",
+  "question": "Can TurtleBlock AI treat an inhabitable world as a source of surprising evidence that can challenge both learner and Turtle interpretations without pretending the world has one objective verdict or turning play into rubric compliance?",
+  "why_now": "The September 10 build made learner-authored verification representable and hostile-testable without changing live WorldSpec behavior. Its strongest unresolved tension is now downstream of the card: evidence from an inhabitable construction can surprise a learner, a collaborator, and Turtle, but the event does not interpret itself. Minecraft Education's current detective work makes evidence physically manipulable; OpenAI and NVIDIA reinforce independent checking and provenance; MIT's jam_bot work keeps human-AI creation improvisational enough to resist universal success criteria. The next edge is therefore not another verification field. It is whether a world can push inquiry somewhere unexpected while learner judgment, multiple interpretations, purposeful play, and provenance remain intact.",
+  "follows_commit": "c0d203b232f6c344a6847e5e4d77c2e257ef709c",
+  "follows_commit_role": "latest_completed_build_log_commit_for_2026_09_10_cycle",
   "inputs": [
     "current repository and commit state",
+    "September 10 Learner Verification Card schema and five-case regression suite",
+    "September 10 successful GitHub Actions validation run",
     "BUILD_IN_PUBLIC.md standing process",
     "research/NEXT_EDGE.md horizon doctrine",
-    "Turtle Terraria provenance and capture-batch rules",
-    "migration 0007 research-object, CTC, ontology, autobuild, and uncaptured-observation structures",
+    "Turtle Terraria evidence-class and provenance boundaries",
     "Sanders immutable dissertation Dedoose source layer and later ontology layers",
     "seven established Critical Techno Constructivism operational domains",
     "STEAMHAMLET, Purposeful Play, constructionism, Possible Possibles, and Co-active Emergence lineage",
-    "September 9 primary-source research hunt across OpenAI, NVIDIA, Minecraft Education, and MIT Media Lab",
-    "September 8 rejected candidates and uncaptured ontology residue",
-    "latest repository failures and reversals, including the prior failed validator write attempt",
+    "current WorldSpec v0.1 schema and Turtle Charter",
+    "September 10 primary-source hunt across OpenAI, NVIDIA, Minecraft Education, and MIT Media Lab",
+    "September 9 rejected candidates and uncaptured verification residue",
     "X factor"
   ],
   "source_classes_consulted": [
     "repository_state",
     "repository_research_documents",
-    "repository_schema_and_tests",
+    "repository_schema_and_regression_tests",
     "Sanders_research_ontology",
     "prior_daily_build_research",
     "external_primary_sources",
-    "failure_and_reversal_history",
+    "Turtle_Charter_and_WorldSpec",
     "uncaptured_observations"
   ],
   "possible_possibles": [
-    "A learner builds the success criteria for a Turtle or Minecraft construction before Turtle evaluates it.",
-    "A WorldSpec revision carries competing verification claims instead of collapsing immediately to one accepted interpretation.",
-    "A Recursive Turtle Builder and Reflector generate synthetic verification disagreements that remain synthetic_self_play until a human chooses whether they are useful regression material.",
-    "Minecraft play produces inhabitable counterexamples: the world itself becomes evidence that a rule or interpretation was incomplete.",
-    "A shared artifact lets collaborators disagree about what counts as evidence without losing attribution or revision history.",
-    "The best verification interface is not a rubric at all but a playful construction the learner can break, repair, and explain.",
-    "A verification trace reveals a kind of epistemic movement not adequately represented by the seven established CTC domains."
+    "A learner predicts that a Minecraft bridge will create easy movement, then walking the built world reveals crowding or exclusion that neither learner nor Turtle anticipated.",
+    "One world event supports a learner's criterion while countering a collaborator's criterion, and both interpretations remain attributable instead of being averaged into consensus.",
+    "Turtle describes what happened in the world, the learner rejects Turtle's interpretation, and that disagreement becomes a first-class revision event rather than an error to hide.",
+    "A deliberately failed construction remains in place long enough to function as evidence and produce a better question.",
+    "A playful or improvisational build has no useful success criterion at all, and Turtle learns not to force a Verification Card onto it.",
+    "A Recursive Turtle Reflector proposes a synthetic interpretation of a world event that stays synthetic_self_play until a human chooses whether it is useful hostile-test material.",
+    "Repeated world surprises expose a relationship among event, observer, criterion, and interpretation that the current ontology cannot yet name cleanly."
   ],
-  "x_factor": "whoooo knooooowwwssssssssssss — maybe the Turtle should occasionally ask the learner to build the thing that would prove the Turtle wrong",
+  "x_factor": "whoooo knooooowwwssssssssssss — what if the world is the participant who disagrees first?",
   "constraints": [
-    "The Next Edge points forward and does not describe the validator just completed.",
-    "Learner meaning and success criteria must not be silently replaced by machine-generated evaluation criteria.",
-    "Verification artifacts must preserve authorship, evidence class, model/configuration, revisions, and uncertainty.",
+    "The Next Edge points beyond the completed Learner Verification Card and regression suite.",
+    "A world event may be evidence but must not be represented as a self-interpreting or objectively final verdict.",
+    "Learner interpretation and learner-authored criteria outrank Turtle's interpretation of what a world event means for the learner.",
+    "Multiple participant interpretations may remain intentionally plural.",
+    "Verification must remain optional enough that playful, aesthetic, exploratory, or improvisational work is not forced into rubric compliance.",
+    "World observations, human interpretations, Turtle interpretations, external sources, and synthetic self-play must retain distinct provenance and evidence classes.",
     "Synthetic self-play remains synthetic_self_play and has no production authority.",
     "No generalized persistent personal memory is introduced by this horizon.",
     "No autonomous production self-modification is authorized.",
@@ -53,88 +57,94 @@
   ],
   "ontology_mappings": [
     {
-      "concept_key": "machine_responses_as_material_for_evaluation",
-      "role": "primary",
-      "rationale": "The horizon asks learners to treat Turtle's claims and interpretations as inspectable material to test rather than authoritative answers."
-    },
-    {
-      "concept_key": "invisible_ideas_become_visible_and_manipulable",
-      "role": "supports",
-      "rationale": "Verification criteria, uncertainty, counterexamples, and revisions become explicit artifacts that can be manipulated and discussed."
-    },
-    {
       "concept_key": "co_active_emergence",
-      "role": "tests",
-      "rationale": "Human criteria, machine interpretation, evidence from construction, and subsequent revision can reciprocally change the shared artifact without erasing origin."
-    },
-    {
-      "concept_key": "possible_possibles",
-      "role": "supports",
-      "rationale": "Competing tests and counterexamples keep several plausible interpretations alive rather than prematurely forcing closure."
+      "role": "primary",
+      "rationale": "The horizon asks whether learner intention, machine interpretation, world consequence, and subsequent reflection can recursively change one another while their origins remain visible."
     },
     {
       "concept_key": "purposeful_play",
-      "role": "supports",
-      "rationale": "A verification artifact may be learned through playful breaking, rebuilding, testing, and explanation rather than detached scoring."
+      "role": "primary",
+      "rationale": "Walking through, testing, breaking, noticing, and revising an inhabitable construction can make play itself a source of new evidence and questions without requiring predetermined success."
     },
     {
       "concept_key": "steamhamlet",
       "role": "supports",
-      "rationale": "STEAMHAMLET's inhabitable, revisable construction lineage supports verification through making and walking around inside consequences rather than merely reading an answer."
+      "rationale": "STEAMHAMLET's room-of-possibilities lineage treats spatial and informational constructions as things people can inhabit, juxtapose, change, and learn from."
+    },
+    {
+      "concept_key": "invisible_ideas_become_visible_and_manipulable",
+      "role": "supports",
+      "rationale": "A world can externalize assumptions so that consequences and contradictions become visible enough to inspect and manipulate."
+    },
+    {
+      "concept_key": "machine_responses_as_material_for_evaluation",
+      "role": "extends",
+      "rationale": "Turtle's interpretation of a world event becomes another claim to examine alongside learner and collaborator interpretations rather than the final account of what happened."
     },
     {
       "concept_key": "cohabitation_without_provenance_collapse",
       "role": "operationalizes",
-      "rationale": "Learner criteria, Turtle claims, synthetic critiques, world observations, and external evidence can cohabit only if their origins remain distinguishable."
+      "rationale": "World events, learner interpretations, collaborator interpretations, Turtle interpretations, and synthetic critiques can coexist only if evidence class and authorship remain distinguishable."
+    },
+    {
+      "concept_key": "recursive_learning_loop",
+      "role": "supports",
+      "rationale": "Intent, construction, inhabitation, observation, interpretation, reflection, revision, and a new question form a recursive loop rather than a one-time verification verdict."
     }
   ],
   "ctc_mappings": [
     {
       "domain": "Personal Inquiry",
       "role": "primary",
-      "rationale": "The learner should be able to decide what would count as convincing evidence for the question they are pursuing."
+      "rationale": "Unexpected world evidence should return to the learner's question and may change what the learner chooses to investigate next."
     },
     {
       "domain": "Compelling Problem or Question",
-      "role": "supports",
-      "rationale": "Failed verification and counterexamples should generate better questions rather than terminate inquiry."
+      "role": "primary",
+      "rationale": "A world that contradicts expectations can turn an apparent answer into a more compelling problem instead of closing the task."
     },
     {
       "domain": "Technology as Tool to Think With",
       "role": "primary",
-      "rationale": "Turtle, WorldSpec, code, and Minecraft can function as manipulable verification media rather than answer-delivery mechanisms."
+      "rationale": "The inhabitable computational world functions as an object-to-think-with whose behavior and consequences can challenge an interpretation."
     },
     {
       "domain": "Formative Demonstration of Learning",
-      "role": "primary",
-      "rationale": "The evolving test, evidence, failure, correction, and revised artifact visibly demonstrate learning throughout the process."
+      "role": "supports",
+      "rationale": "Predictions, world events, competing interpretations, criteria changes, and revisions can remain visible as learning-in-process rather than only a final artifact."
     },
     {
       "domain": "Reflection as Learning",
       "role": "primary",
-      "rationale": "Learners can compare what they expected, what the artifact demonstrated, and how their criteria or interpretation changed."
+      "rationale": "The edge centers the reflective comparison among what was intended, what happened, how participants interpreted it, and what changed afterward."
     },
     {
       "domain": "Social and Cultural Critique",
       "role": "supports",
-      "rationale": "Making evaluation criteria explicit creates an opportunity to question whose assumptions, norms, categories, and values define success."
+      "rationale": "Different readings of a built environment can expose hidden assumptions about access, fairness, authority, safety, culture, or whose experience defines a successful world."
     },
     {
       "domain": "Sharing and Collaborating",
       "role": "supports",
-      "rationale": "Inspectable verification artifacts let collaborators compare criteria, evidence, disagreement, and revisions without flattening authorship."
+      "rationale": "Learners and collaborators may interpret the same world event differently while retaining attribution and intentionally plural positions."
     }
   ],
   "uncaptured_residue": [
     {
-      "observation": "Verification and provenance may operate as cross-cutting epistemic infrastructure across all seven CTC domains rather than as a learner-development domain of their own.",
-      "reason_unmapped": "The seven established domains describe educational activity and development; they may not name the infrastructure that makes competing knowledge claims auditable.",
+      "observation": "A world event does not interpret itself: its relation to a criterion can change with observer, context, and question, suggesting that evidence may need an explicit event-observer-interpretation relationship rather than a single intrinsic support/counter label.",
+      "reason_unmapped": "The seven established CTC domains describe educational activity but do not directly specify the ontology of evidence relations among computational events and multiple interpreters.",
       "candidate_domain": null,
       "status": "open"
     },
     {
-      "observation": "A constructed counterexample can be simultaneously an artifact, a reflection, an assessment event, and a new question; preserving this movement may matter more than assigning one canonical domain.",
-      "reason_unmapped": "The significant phenomenon is the transition among roles rather than a stable categorical location.",
+      "observation": "Some purposeful play and improvisational co-creation may become less generative when formal verification criteria are introduced, even when those criteria are learner-authored.",
+      "reason_unmapped": "This is a boundary condition on when an assessment/verification structure should exist at all, not obviously a new learner-development domain.",
+      "candidate_domain": null,
+      "status": "open"
+    },
+    {
+      "observation": "The computational world may function as a consequential participant in an inquiry without possessing human intention, interpretation, or authorship.",
+      "reason_unmapped": "Current human/machine/world evidence classes preserve provenance, but the theoretical status of non-intentional environmental agency inside co-active emergence remains unresolved.",
       "candidate_domain": null,
       "status": "open"
     }
@@ -145,19 +155,19 @@
     "selection_method": "machine_synthesis_from_authorized_project_ecology_with_human_override_preserved",
     "actor": "turtle_daily_build",
     "model": "GPT-5.6 Sol",
-    "generated_at": "2026-09-09T10:40:00-07:00",
+    "generated_at": "2026-09-10T09:26:49+07:00",
     "primary_sources": [
+      {
+        "publisher": "OpenAI",
+        "date": "2026-09-09",
+        "title": "The AI policy window is open. We need to act.",
+        "url": "https://openai.com/index/ai-policy-window/"
+      },
       {
         "publisher": "OpenAI",
         "date": "2026-09-08",
         "title": "On the Navier–Stokes Millennium Prize Problem",
         "url": "https://openai.com/index/navier-stokes-solution/"
-      },
-      {
-        "publisher": "OpenAI",
-        "date": "2026-09-06",
-        "title": "Research acceleration: The view inside OpenAI",
-        "url": "https://openai.com/index/research-acceleration-view-inside-openai/"
       },
       {
         "publisher": "NVIDIA",
@@ -167,15 +177,21 @@
       },
       {
         "publisher": "Minecraft Education",
-        "date": "2026-08-05",
-        "title": "Minecraft Education Change Log",
-        "url": "https://edusupport.minecraft.net/hc/en-us/articles/360047556451-Minecraft-Education-Change-Log"
+        "date": "2026-07-06",
+        "title": "Reed Smart: AI Detective",
+        "url": "https://education.minecraft.net/en-us/lessons/reed-smart-ai-detective"
       },
       {
         "publisher": "Minecraft Education",
-        "date": "2026",
-        "title": "Hour of AI: The First Night",
-        "url": "https://education.minecraft.net/en-us/lessons/hour-of-ai-the-first-night"
+        "date": "2026-08-05",
+        "title": "Minecraft Education Change Log — version 26.32",
+        "url": "https://edusupport.minecraft.net/hc/en-us/articles/360047556451-Minecraft-Education-Change-Log"
+      },
+      {
+        "publisher": "MIT Media Lab",
+        "date": "2026-09-04",
+        "title": "Jordan Rudess + jam_bot: A Human-AI Musical Dialogue",
+        "url": "https://www.media.mit.edu/posts/media-alert/"
       },
       {
         "publisher": "MIT Media Lab",
