@@ -11,6 +11,13 @@ export interface BuildLogEntry {
 // through the Worker. Open inquiry belongs in Next Edge, not in completed entries.
 export const BUILD_LOG_ENTRIES: BuildLogEntry[] = [
   {
+    id: "2026-09-10-learner-verification-card",
+    date: "Sep 10, 2026",
+    title: "Learner Verification becomes a thing we can break before learners depend on it",
+    body: "A provisional Learner Verification Card now makes inquiry criteria, authorship, evidence, counterevidence, interpretation, uncertainty, reflection, disagreement, privacy, and reversibility inspectable without wiring a rubric into live WorldSpec. A five-case regression suite accepts learner-authored and intentionally plural traces while rejecting a smuggled Turtle criterion, synthetic evidence mislabeled as human, and machine final authority. GitHub Actions passed the new suite beside TypeScript and Next Edge validation. The experiment remains system-research infrastructure, not evidence of learner learning, and the product stays at v0.1.0.",
+    done: true
+  },
+  {
     id: "2026-09-09-next-edge-validator",
     date: "Sep 9, 2026",
     title: "Next Edge gets a deterministic provenance contract",
@@ -48,10 +55,10 @@ export const BUILD_LOG_ENTRIES: BuildLogEntry[] = [
 ];
 
 export const NEXT_EDGE_FALLBACK = {
-  date: "Sep 9, 2026",
-  title: "Make verification something the learner can construct",
-  question: "Can TurtleBlock AI make verification itself into a learner-authored, inspectable construction rather than a hidden machine check, so that challenge, evidence, revision, and uncertainty become part of what the learner makes?",
-  xFactor: "whoooo knooooowwwssssssssssss — maybe the Turtle should occasionally ask the learner to build the thing that would prove the Turtle wrong"
+  date: "Sep 10, 2026",
+  title: "Let the world talk back without making it the judge",
+  question: "Can TurtleBlock AI treat an inhabitable world as a source of surprising evidence that can challenge both learner and Turtle interpretations without pretending the world has one objective verdict or turning play into rubric compliance?",
+  xFactor: "whoooo knooooowwwssssssssssss — what if the world is the participant who disagrees first?"
 };
 
 function escapeHtml(value: string) {
@@ -59,7 +66,7 @@ function escapeHtml(value: string) {
     .replace(/&/g, "&amp;")
     .replace(/</g, "&lt;")
     .replace(/>/g, "&gt;")
-    .replace(/"/g, "&quot;")
+    .replace(/\"/g, "&quot;")
     .replace(/'/g, "&#039;");
 }
 
