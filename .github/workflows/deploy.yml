@@ -36,5 +36,8 @@ jobs:
       - name: Validate learner-authored verification contract
         run: npm run validate:learner-verification
 
+      - name: Validate World Evidence Envelope
+        run: npm run validate:world-evidence
+
       - name: Deployment note
         run: echo "Production deployment is handled by the connected Cloudflare Workers Builds GitHub integration."
