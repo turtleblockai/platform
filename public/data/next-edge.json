@@ -1,25 +1,26 @@
 {
-  "version": "0.3",
-  "updated_at": "2026-09-10",
+  "version": "0.4",
+  "updated_at": "2026-09-11",
   "status": "open_question",
-  "title": "Let the world talk back without making it the judge",
-  "question": "Can TurtleBlock AI treat an inhabitable world as a source of surprising evidence that can challenge both learner and Turtle interpretations without pretending the world has one objective verdict or turning play into rubric compliance?",
-  "why_now": "The September 10 build made learner-authored verification representable and hostile-testable without changing live WorldSpec behavior. Its strongest unresolved tension is now downstream of the card: evidence from an inhabitable construction can surprise a learner, a collaborator, and Turtle, but the event does not interpret itself. Minecraft Education's current detective work makes evidence physically manipulable; OpenAI and NVIDIA reinforce independent checking and provenance; MIT's jam_bot work keeps human-AI creation improvisational enough to resist universal success criteria. The next edge is therefore not another verification field. It is whether a world can push inquiry somewhere unexpected while learner judgment, multiple interpretations, purposeful play, and provenance remain intact.",
-  "follows_commit": "c0d203b232f6c344a6847e5e4d77c2e257ef709c",
-  "follows_commit_role": "latest_completed_build_log_commit_for_2026_09_10_cycle",
+  "title": "Who decides what Turtle notices?",
+  "question": "Can TurtleBlock AI decide when a world event is worth surfacing to a learner without turning observability into surveillance, every measurement into evaluation, or every surprise into an unsolicited lesson?",
+  "why_now": "The September 11 World Evidence Envelope makes one distinction executable: a computational world may report facts without interpreting their meaning or becoming final authority. That immediately exposes the next power problem. An inhabitable world can generate thousands of potentially observable events, and choosing which ones deserve attention is itself consequential. OpenAI's newest K-12 workflow guidance keeps agentic work reviewable and human-approved; NVIDIA's September 10 workflow shows humans outperforming a solver when they possess context it cannot see; Minecraft Education's Velocity Prize shows that precise local metrics such as capture and elapsed time can be useful learner material; MIT's jam_bot work warns that consequential creative interaction can be improvisational enough that constant measurement or interruption would miss the point. The horizon therefore moves from observation to salience: not whether Turtle can notice, but who authorizes noticing, surfacing, silence, and interruption.",
+  "follows_commit": "31d79c11c2377c31156f5b86dcecbd1b5544e8e4",
+  "follows_commit_role": "latest_completed_build_log_commit_for_2026_09_11_cycle",
   "inputs": [
     "current repository and commit state",
-    "September 10 Learner Verification Card schema and five-case regression suite",
-    "September 10 successful GitHub Actions validation run",
+    "September 11 World Evidence Envelope schema and six-case hostile regression suite",
+    "September 11 successful GitHub Actions validation run",
+    "September 10 Learner Verification Card and regression suite",
     "BUILD_IN_PUBLIC.md standing process",
     "research/NEXT_EDGE.md horizon doctrine",
-    "Turtle Terraria evidence-class and provenance boundaries",
+    "Turtle Terraria evidence-class, provenance, and capture-batch boundaries",
     "Sanders immutable dissertation Dedoose source layer and later ontology layers",
     "seven established Critical Techno Constructivism operational domains",
     "STEAMHAMLET, Purposeful Play, constructionism, Possible Possibles, and Co-active Emergence lineage",
-    "current WorldSpec v0.1 schema and Turtle Charter",
-    "September 10 primary-source hunt across OpenAI, NVIDIA, Minecraft Education, and MIT Media Lab",
-    "September 9 rejected candidates and uncaptured verification residue",
+    "Turtle Charter rules on agency, ambiguity, disagreement, failure, memory, and human judgment",
+    "September 11 primary-source hunt across OpenAI, NVIDIA, Minecraft Education, and MIT Media Lab",
+    "September 11 uncaptured residue concerning instrumentation, environmental agency, and selective noticing",
     "X factor"
   ],
   "source_classes_consulted": [
@@ -30,28 +31,32 @@
     "prior_daily_build_research",
     "external_primary_sources",
     "Turtle_Charter_and_WorldSpec",
-    "uncaptured_observations"
+    "uncaptured_observations",
+    "test_and_failure_history"
   ],
   "possible_possibles": [
-    "A learner predicts that a Minecraft bridge will create easy movement, then walking the built world reveals crowding or exclusion that neither learner nor Turtle anticipated.",
-    "One world event supports a learner's criterion while countering a collaborator's criterion, and both interpretations remain attributable instead of being averaged into consensus.",
-    "Turtle describes what happened in the world, the learner rejects Turtle's interpretation, and that disagreement becomes a first-class revision event rather than an error to hide.",
-    "A deliberately failed construction remains in place long enough to function as evidence and produce a better question.",
-    "A playful or improvisational build has no useful success criterion at all, and Turtle learns not to force a Verification Card onto it.",
-    "A Recursive Turtle Reflector proposes a synthetic interpretation of a world event that stays synthetic_self_play until a human chooses whether it is useful hostile-test material.",
-    "Repeated world surprises expose a relationship among event, observer, criterion, and interpretation that the current ontology cannot yet name cleanly."
+    "A learner authors explicit watchpoints such as 'tell me if the bridge collapses' while leaving unrelated world telemetry uncollected or unsurfaced.",
+    "Turtle proposes that an event may be worth noticing, explains why, and lets the learner mute, reject, narrow, or revise that attention rule.",
+    "A world event is retained privately for undo or debugging but deliberately never promoted into a learner-facing reflection prompt or research record.",
+    "Collaborators maintain different attention filters so one participant can care about speed while another watches access, congestion, aesthetics, or something no metric currently captures.",
+    "A surprising event becomes surfacing-worthy only because it contradicts a learner-authored hypothesis, not because an anomaly detector declares it interesting.",
+    "A Recursive Turtle Reflector proposes synthetic salience candidates that remain synthetic_self_play and cannot become production attention policy without an external human gate.",
+    "Turtle deliberately notices something and chooses not to interrupt because the learner is in the middle of purposeful play or improvisational making.",
+    "Repeated attention choices reveal that what is easy to measure is quietly becoming what the system treats as important."
   ],
-  "x_factor": "whoooo knooooowwwssssssssssss — what if the world is the participant who disagrees first?",
+  "x_factor": "whoooo knooooowwwssssssssssss — what if the most intelligent Turtle move is to notice something and deliberately say nothing?",
   "constraints": [
-    "The Next Edge points beyond the completed Learner Verification Card and regression suite.",
-    "A world event may be evidence but must not be represented as a self-interpreting or objectively final verdict.",
-    "Learner interpretation and learner-authored criteria outrank Turtle's interpretation of what a world event means for the learner.",
-    "Multiple participant interpretations may remain intentionally plural.",
-    "Verification must remain optional enough that playful, aesthetic, exploratory, or improvisational work is not forced into rubric compliance.",
-    "World observations, human interpretations, Turtle interpretations, external sources, and synthetic self-play must retain distinct provenance and evidence classes.",
+    "The Next Edge points beyond the completed World Evidence Envelope and does not merely add more observation fields.",
+    "Learners must be able to authorize, revise, mute, or reject attention rules that affect their experience when practical.",
+    "Observability must not become continuous surveillance by default.",
+    "A measurable event must not gain pedagogical importance merely because it is easy for the machine to detect.",
+    "Turtle may propose salience but must not silently convert its own interests into the learner's purpose or reflection agenda.",
+    "World events, learner interpretations, collaborator interpretations, Turtle interpretations, and synthetic critiques retain distinct provenance and evidence classes.",
+    "Private operational observations are not automatically research data or public artifacts.",
+    "Silence and non-interruption may be legitimate system behavior when surfacing would hijack purposeful play or inquiry.",
     "Synthetic self-play remains synthetic_self_play and has no production authority.",
     "No generalized persistent personal memory is introduced by this horizon.",
-    "No autonomous production self-modification is authorized.",
+    "No autonomous production self-modification or self-retraining is authorized.",
     "Environment configuration may contribute metadata only; secret values are never inspected, inferred, recorded, or published.",
     "New CTC domains remain provisional observations until an explicit human scholarly decision promotes one."
   ],
@@ -59,92 +64,97 @@
     {
       "concept_key": "co_active_emergence",
       "role": "primary",
-      "rationale": "The horizon asks whether learner intention, machine interpretation, world consequence, and subsequent reflection can recursively change one another while their origins remain visible."
+      "rationale": "Attention is part of reciprocal influence: what Turtle surfaces can alter learner reflection and the next construction, so the surfacing act must remain visible and human-revisable."
     },
     {
       "concept_key": "purposeful_play",
       "role": "primary",
-      "rationale": "Walking through, testing, breaking, noticing, and revising an inhabitable construction can make play itself a source of new evidence and questions without requiring predetermined success."
+      "rationale": "Purposeful play can generate meaningful surprise without requiring Turtle to interrupt every observable event or convert play into continuous assessment."
     },
     {
-      "concept_key": "steamhamlet",
+      "concept_key": "possible_possibles",
       "role": "supports",
-      "rationale": "STEAMHAMLET's room-of-possibilities lineage treats spatial and informational constructions as things people can inhabit, juxtapose, change, and learn from."
+      "rationale": "Selective noticing should keep unexpected possibilities available without treating every detected anomaly as a mandated next task."
+    },
+    {
+      "concept_key": "machine_responses_as_material_for_evaluation",
+      "role": "tests",
+      "rationale": "Turtle's decision to surface or withhold an observation becomes itself inspectable material rather than invisible pedagogical authority."
     },
     {
       "concept_key": "invisible_ideas_become_visible_and_manipulable",
       "role": "supports",
-      "rationale": "A world can externalize assumptions so that consequences and contradictions become visible enough to inspect and manipulate."
+      "rationale": "Attention rules can make otherwise hidden system judgments about relevance visible enough for learners and researchers to inspect and revise."
     },
     {
-      "concept_key": "machine_responses_as_material_for_evaluation",
-      "role": "extends",
-      "rationale": "Turtle's interpretation of a world event becomes another claim to examine alongside learner and collaborator interpretations rather than the final account of what happened."
+      "concept_key": "steamhamlet",
+      "role": "supports",
+      "rationale": "A room of possibilities should permit wandering, juxtaposition, surprise, and learner-directed attention rather than having the environment narrate every consequence for its inhabitants."
     },
     {
       "concept_key": "cohabitation_without_provenance_collapse",
       "role": "operationalizes",
-      "rationale": "World events, learner interpretations, collaborator interpretations, Turtle interpretations, and synthetic critiques can coexist only if evidence class and authorship remain distinguishable."
+      "rationale": "A surfaced observation must distinguish the world event, the attention rule that selected it, the actor who authored that rule, and any later human or machine interpretation."
     },
     {
       "concept_key": "recursive_learning_loop",
       "role": "supports",
-      "rationale": "Intent, construction, inhabitation, observation, interpretation, reflection, revision, and a new question form a recursive loop rather than a one-time verification verdict."
+      "rationale": "A noticed event may feed reflection and revision, but the loop should remain contingent on learner purpose rather than an automatic machine-triggered lesson cycle."
     }
   ],
   "ctc_mappings": [
     {
       "domain": "Personal Inquiry",
       "role": "primary",
-      "rationale": "Unexpected world evidence should return to the learner's question and may change what the learner chooses to investigate next."
+      "rationale": "The learner's question and purpose should strongly shape what counts as worth surfacing rather than Turtle imposing an independent attention agenda."
     },
     {
       "domain": "Compelling Problem or Question",
-      "role": "primary",
-      "rationale": "A world that contradicts expectations can turn an apparent answer into a more compelling problem instead of closing the task."
+      "role": "supports",
+      "rationale": "A genuinely surprising event can produce a better question, but the system should not manufacture significance from every anomaly."
     },
     {
       "domain": "Technology as Tool to Think With",
       "role": "primary",
-      "rationale": "The inhabitable computational world functions as an object-to-think-with whose behavior and consequences can challenge an interpretation."
+      "rationale": "Inspectable attention rules can make computational noticing a tool learners think with instead of an opaque surveillance or evaluation layer."
     },
     {
       "domain": "Formative Demonstration of Learning",
       "role": "supports",
-      "rationale": "Predictions, world events, competing interpretations, criteria changes, and revisions can remain visible as learning-in-process rather than only a final artifact."
+      "rationale": "Learner-authored watchpoints and later revisions could reveal changing hypotheses and interests without equating machine-collected telemetry with learning evidence."
     },
     {
       "domain": "Reflection as Learning",
       "role": "primary",
-      "rationale": "The edge centers the reflective comparison among what was intended, what happened, how participants interpreted it, and what changed afterward."
+      "rationale": "Surfacing should invite reflection when relevant while preserving the learner's right not to be interrupted or pushed into reflection on the machine's timetable."
     },
     {
       "domain": "Social and Cultural Critique",
-      "role": "supports",
-      "rationale": "Different readings of a built environment can expose hidden assumptions about access, fairness, authority, safety, culture, or whose experience defines a successful world."
+      "role": "primary",
+      "rationale": "Choosing what to measure and surface is a power-laden design act that can privilege speed, efficiency, visibility, compliance, or other values unless those choices are inspectable and contestable."
     },
     {
       "domain": "Sharing and Collaborating",
       "role": "supports",
-      "rationale": "Learners and collaborators may interpret the same world event differently while retaining attribution and intentionally plural positions."
+      "rationale": "Different collaborators may legitimately attend to different consequences of the same world, and the system should preserve those differences rather than impose one shared salience filter."
     }
   ],
   "uncaptured_residue": [
     {
-      "observation": "A world event does not interpret itself: its relation to a criterion can change with observer, context, and question, suggesting that evidence may need an explicit event-observer-interpretation relationship rather than a single intrinsic support/counter label.",
-      "reason_unmapped": "The seven established CTC domains describe educational activity but do not directly specify the ontology of evidence relations among computational events and multiple interpreters.",
+      "observation": "Attention governance may be a cross-cutting epistemic and power layer: the system can preserve perfect provenance for observed events while still shaping inquiry through what it chooses to surface or ignore.",
+      "reason_unmapped": "The seven established CTC domains can critique and contextualize attention choices but do not directly name the infrastructure that selects which potential evidence enters awareness.",
       "candidate_domain": null,
       "status": "open"
     },
     {
-      "observation": "Some purposeful play and improvisational co-creation may become less generative when formal verification criteria are introduced, even when those criteria are learner-authored.",
-      "reason_unmapped": "This is a boundary condition on when an assessment/verification structure should exist at all, not obviously a new learner-development domain.",
+      "observation": "Deliberate non-interruption is meaningful agent behavior but is difficult to preserve as research data without creating an infinite audit of everything Turtle could have said but did not say.",
+      "reason_unmapped": "Capture-batch closure handles recorded events well; absence, restraint, and unrealized interventions are a different representational problem.",
       "candidate_domain": null,
       "status": "open"
     },
     {
-      "observation": "The computational world may function as a consequential participant in an inquiry without possessing human intention, interpretation, or authorship.",
-      "reason_unmapped": "Current human/machine/world evidence classes preserve provenance, but the theoretical status of non-intentional environmental agency inside co-active emergence remains unresolved.",
+      "observation": "Instrumentation can shape curriculum before any interpretation occurs because easy-to-measure variables may become disproportionately visible and therefore disproportionately important.",
+      "reason_unmapped": "This is partly Social and Cultural Critique and partly a technical affordance problem, but its status as a recurring relationship among measurement, visibility, and pedagogical attention remains unresolved.",
       "candidate_domain": null,
       "status": "open"
     }
@@ -155,13 +165,13 @@
     "selection_method": "machine_synthesis_from_authorized_project_ecology_with_human_override_preserved",
     "actor": "turtle_daily_build",
     "model": "GPT-5.6 Sol",
-    "generated_at": "2026-09-10T09:26:49+07:00",
+    "generated_at": "2026-09-11T01:46:00Z",
     "primary_sources": [
       {
-        "publisher": "OpenAI",
-        "date": "2026-09-09",
-        "title": "The AI policy window is open. We need to act.",
-        "url": "https://openai.com/index/ai-policy-window/"
+        "publisher": "OpenAI Academy",
+        "date": "2026-09-10",
+        "title": "ChatGPT Edu 102 for K-12",
+        "url": "https://academy.openai.com/public/clubs/k-12-education-aacga/events/chatgpt-edu-102-for-k-12-8as21sxvmc"
       },
       {
         "publisher": "OpenAI",
@@ -171,33 +181,21 @@
       },
       {
         "publisher": "NVIDIA",
-        "date": "2026-09-04",
-        "title": "Building a Memory-Driven Agent with NVIDIA NemoClaw",
-        "url": "https://developer.nvidia.com/blog/building-a-memory-driven-agent-with-nvidia-nemoclaw/"
+        "date": "2026-09-10",
+        "title": "From Wafer-Out to First Token: Codifying Supply Chain Expertise with Nemotron and Palantir Foundry",
+        "url": "https://developer.nvidia.com/blog/from-wafer-out-to-first-token-codifying-supply-chain-expertise-with-nemotron-and-palantir-foundry/"
       },
       {
         "publisher": "Minecraft Education",
-        "date": "2026-07-06",
-        "title": "Reed Smart: AI Detective",
-        "url": "https://education.minecraft.net/en-us/lessons/reed-smart-ai-detective"
-      },
-      {
-        "publisher": "Minecraft Education",
-        "date": "2026-08-05",
-        "title": "Minecraft Education Change Log — version 26.32",
-        "url": "https://edusupport.minecraft.net/hc/en-us/articles/360047556451-Minecraft-Education-Change-Log"
+        "date": "accessed 2026-09-11; challenge opens 2026-10",
+        "title": "The Velocity Prize",
+        "url": "https://education.minecraft.net/en-us/discover/velocity-prize"
       },
       {
         "publisher": "MIT Media Lab",
         "date": "2026-09-04",
         "title": "Jordan Rudess + jam_bot: A Human-AI Musical Dialogue",
         "url": "https://www.media.mit.edu/posts/media-alert/"
-      },
-      {
-        "publisher": "MIT Media Lab",
-        "date": "2026-09-01",
-        "title": "Boston and Boston Public Schools Launch Inaugural Cohort of BPS AI Educator Ambassadors",
-        "url": "https://www.media.mit.edu/posts/boston-and-boston-public-schools-launch-inaugural-cohort-of-bps-ai-educator-ambassadors/"
       }
     ]
   },
