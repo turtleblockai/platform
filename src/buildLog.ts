@@ -62,10 +62,10 @@ export const BUILD_LOG_ENTRIES: BuildLogEntry[] = [
 ];
 
 export const NEXT_EDGE_FALLBACK = {
-  date: "Sep 10, 2026",
-  title: "Let the world talk back without making it the judge",
-  question: "Can TurtleBlock AI treat an inhabitable world as a source of surprising evidence that can challenge both learner and Turtle interpretations without pretending the world has one objective verdict or turning play into rubric compliance?",
-  xFactor: "whoooo knooooowwwssssssssssss — what if the world is the participant who disagrees first?"
+  date: "Sep 11, 2026",
+  title: "Who decides what Turtle notices?",
+  question: "Can TurtleBlock AI decide when a world event is worth surfacing to a learner without turning observability into surveillance, every measurement into evaluation, or every surprise into an unsolicited lesson?",
+  xFactor: "whoooo knooooowwwssssssssssss — what if the most intelligent Turtle move is to notice something and deliberately say nothing?"
 };
 
 function escapeHtml(value: string) {
