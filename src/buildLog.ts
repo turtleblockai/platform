@@ -11,6 +11,13 @@ export interface BuildLogEntry {
 // through the Worker. Open inquiry belongs in Next Edge, not in completed entries.
 export const BUILD_LOG_ENTRIES: BuildLogEntry[] = [
   {
+    id: "2026-09-11-world-evidence-envelope",
+    date: "Sep 11, 2026",
+    title: "The world can report facts without becoming the judge",
+    body: "A provisional World Evidence Envelope now separates machine-checkable world events from learner, collaborator, Turtle, and synthetic interpretations and from criterion relations. A six-case hostile suite accepts factual and intentionally plural traces while rejecting a world-authored semantic verdict, synthetic provenance collapse, relation-authorship collapse, and any claim that the world has final authority. GitHub Actions passed the suite beside TypeScript, Next Edge, and Learner Verification checks. The experiment remains outside core WorldSpec and live telemetry, and the product stays at v0.1.0.",
+    done: true
+  },
+  {
     id: "2026-09-10-learner-verification-card",
     date: "Sep 10, 2026",
     title: "Learner Verification becomes a thing we can break before learners depend on it",
