@@ -1,0 +1,1043 @@
+{
+  "schema": "turtleblockai.daily-build-tags.v0.1",
+  "date": "2026-09-11",
+  "ontology_version": "sanders-ontology-v0.1",
+  "autobuild_run_id": "autobuild-2026-09-11",
+  "principles": {
+    "multi_tag": true,
+    "preserve_unmapped_residue": true,
+    "immutable_dissertation_source_layer": true,
+    "synthetic_is_not_human_evidence": true,
+    "ctc_domain_promotion_requires_human_scholarly_decision": true,
+    "human_override_preserved": true,
+    "world_observation_is_not_self_interpreting": true,
+    "interpretation_authorship_visible": true,
+    "world_final_authority": false,
+    "machine_final_authority": false,
+    "reversible": true,
+    "no_generalized_persistent_personal_memory": true,
+    "no_autonomous_production_self_modification": true
+  },
+  "run": {
+    "trigger_type": "manual",
+    "status": "completed",
+    "version_before": "0.1.0",
+    "version_after": "0.1.0",
+    "selected_contribution": "Provisional World Evidence Envelope v0.1 research contract plus six-case deterministic hostile regression suite",
+    "human_review_state": "not_reviewed",
+    "detailed_note_path": "research/daily-build/2026-09-11.md",
+    "public_log_entry_id": "2026-09-11-world-evidence-envelope",
+    "model": "GPT-5.6 Sol",
+    "privacy_class": "public",
+    "evidence_class": "system_record",
+    "capture_batch_closed": true,
+    "d1_persistence": "staged_only_no_authorized_live_write_action",
+    "r2_consultation": "not_available_in_active_task_context"
+  },
+  "research_objects": [
+    {
+      "id": "autobuild_run:autobuild-2026-09-11",
+      "object_type": "autobuild_run",
+      "title": "September 11 bounded TurtleBlock AI build-in-public cycle",
+      "actor": "turtle",
+      "evidence_class": "system_record",
+      "privacy_class": "public",
+      "model": "GPT-5.6 Sol",
+      "version": "0.1.0"
+    },
+    {
+      "id": "human_direction:2026-09-11-daily-build-standing-rule",
+      "object_type": "human_direction",
+      "title": "Run one bounded daily build under the research, tagging, Next Edge, Terraria, agency, privacy, and conservative-version rules",
+      "actor": "human",
+      "evidence_class": "human_authored",
+      "privacy_class": "internal",
+      "raw_text_published": false
+    },
+    {
+      "id": "source_signal:2026-09-11-openai-research-index",
+      "object_type": "external_source_signal",
+      "title": "OpenAI Research index still lists September 8 Navier-Stokes as newest research publication",
+      "source_uri": "https://openai.com/research/index/",
+      "external_date": "2026-09-11-accessed",
+      "actor": "external_source",
+      "evidence_class": "external_source",
+      "privacy_class": "public",
+      "relevance": "freshness_check"
+    },
+    {
+      "id": "source_signal:2026-09-11-openai-navier-stokes",
+      "object_type": "external_source_signal",
+      "title": "OpenAI publishes machine-generated Navier-Stokes work with a separate Lean formal proof",
+      "source_uri": "https://openai.com/index/navier-stokes-solution/",
+      "external_date": "2026-09-08",
+      "actor": "external_source",
+      "evidence_class": "external_source",
+      "privacy_class": "public"
+    },
+    {
+      "id": "source_signal:2026-09-11-openai-k12-edu-102",
+      "object_type": "external_source_signal",
+      "title": "OpenAI K-12 Edu 102 emphasizes iterative review, approved sources, structured workflows, permissions, and human approval",
+      "source_uri": "https://academy.openai.com/public/clubs/k-12-education-aacga/events/chatgpt-edu-102-for-k-12-8as21sxvmc",
+      "external_date": "2026-09-10",
+      "actor": "external_source",
+      "evidence_class": "external_source",
+      "privacy_class": "public"
+    },
+    {
+      "id": "source_signal:2026-09-11-nvidia-supply-chain",
+      "object_type": "external_source_signal",
+      "title": "NVIDIA and Palantir separate solver output, human context, rationale, decision, override, and actual outcome",
+      "source_uri": "https://developer.nvidia.com/blog/from-wafer-out-to-first-token-codifying-supply-chain-expertise-with-nemotron-and-palantir-foundry/",
+      "external_date": "2026-09-10",
+      "actor": "external_source",
+      "evidence_class": "external_source",
+      "privacy_class": "public"
+    },
+    {
+      "id": "source_signal:2026-09-11-minecraft-velocity-prize",
+      "object_type": "external_source_signal",
+      "title": "Minecraft Education Velocity Prize exposes precise local game outcomes while leaving broader educational meaning open",
+      "source_uri": "https://education.minecraft.net/en-us/discover/velocity-prize",
+      "external_date": null,
+      "accessed_at": "2026-09-11",
+      "actor": "external_source",
+      "evidence_class": "external_source",
+      "privacy_class": "public",
+      "source_note": "Page states the challenge opens October 2026."
+    },
+    {
+      "id": "source_signal:2026-09-11-minecraft-ai-foundations",
+      "object_type": "external_source_signal",
+      "title": "Minecraft Education AI materials continue to foreground designing, building, testing, debugging, fairness, transparency, privacy, safety, and accountability",
+      "source_uri": "https://education.minecraft.net/en-us/discover/ai",
+      "external_date": null,
+      "accessed_at": "2026-09-11",
+      "actor": "external_source",
+      "evidence_class": "external_source",
+      "privacy_class": "public"
+    },
+    {
+      "id": "source_signal:2026-09-11-mit-jambot",
+      "object_type": "external_source_signal",
+      "title": "MIT Media Lab jam_bot frames real-time human-AI improvisation as expanded creative possibility rather than replacement",
+      "source_uri": "https://www.media.mit.edu/posts/media-alert/",
+      "external_date": "2026-09-04",
+      "actor": "external_source",
+      "evidence_class": "external_source",
+      "privacy_class": "public"
+    },
+    {
+      "id": "question:2026-09-11-inherited-next-edge",
+      "object_type": "autobuild_question",
+      "title": "Can an inhabitable world challenge learner and Turtle interpretations without pretending the world has one objective verdict or turning play into rubric compliance?",
+      "actor": "turtle",
+      "evidence_class": "system_record",
+      "privacy_class": "public"
+    },
+    {
+      "id": "question:2026-09-11-event-vs-meaning",
+      "object_type": "autobuild_question",
+      "title": "What can the world report as fact without smuggling interpretation into the event?",
+      "actor": "turtle",
+      "evidence_class": "system_record",
+      "privacy_class": "public"
+    },
+    {
+      "id": "candidate:2026-09-11-core-worldspec-observation",
+      "object_type": "autobuild_candidate",
+      "title": "Add world observation directly to core WorldSpec",
+      "decision": "rejected_for_today",
+      "rejection_reason": "The event/observer semantics have not yet earned core-architecture status and should remain reversible research infrastructure.",
+      "actor": "turtle",
+      "evidence_class": "system_record",
+      "privacy_class": "public"
+    },
+    {
+      "id": "candidate:2026-09-11-modify-verification-card",
+      "object_type": "autobuild_candidate",
+      "title": "Split the existing Learner Verification Card evidence record in place",
+      "decision": "rejected_for_today",
+      "rejection_reason": "World evidence may serve future uses beyond verification; a separate envelope tests the distinction without destabilizing yesterday's passing contract.",
+      "actor": "turtle",
+      "evidence_class": "system_record",
+      "privacy_class": "public"
+    },
+    {
+      "id": "candidate:2026-09-11-live-minecraft-telemetry",
+      "object_type": "autobuild_candidate",
+      "title": "Implement live Minecraft telemetry",
+      "decision": "rejected_for_today",
+      "rejection_reason": "Instrumentation before an evidence/meaning contract risks building surveillance and evaluation semantics before deciding what observations are allowed to mean.",
+      "actor": "turtle",
+      "evidence_class": "system_record",
+      "privacy_class": "public"
+    },
+    {
+      "id": "candidate:2026-09-11-auto-turtle-interpretation",
+      "object_type": "autobuild_candidate",
+      "title": "Automatically have Turtle interpret noteworthy world events",
+      "decision": "rejected_for_today",
+      "rejection_reason": "Automatic interpretation would collapse the very distinction under investigation and could turn observation into unsolicited evaluation.",
+      "actor": "turtle",
+      "evidence_class": "system_record",
+      "privacy_class": "public"
+    },
+    {
+      "id": "candidate:2026-09-11-recursive-world-interpretation",
+      "object_type": "autobuild_candidate",
+      "title": "Run Recursive Turtle Builder/Reflector interpretation of world events",
+      "decision": "rejected_for_today",
+      "rejection_reason": "Synthetic interpretation can be represented without generating additional self-play; any future machine-to-machine trace must remain synthetic_self_play and human-gated.",
+      "actor": "turtle",
+      "evidence_class": "system_record",
+      "privacy_class": "public"
+    },
+    {
+      "id": "candidate:2026-09-11-persistent-memory",
+      "object_type": "autobuild_candidate",
+      "title": "Add generalized persistent personal memory",
+      "decision": "rejected",
+      "rejection_reason": "It is unnecessary to the event/interpretation problem and introduces separate consent, deletion, identity, privacy, and v0.3 governance questions.",
+      "actor": "turtle",
+      "evidence_class": "system_record",
+      "privacy_class": "public"
+    },
+    {
+      "id": "selection:2026-09-11-world-evidence-envelope",
+      "object_type": "autobuild_selection",
+      "title": "Select World Evidence Envelope v0.1 plus six-case hostile regression suite",
+      "actor": "turtle",
+      "evidence_class": "system_record",
+      "privacy_class": "public"
+    },
+    {
+      "id": "implementation_decision:2026-09-11-event-interpretation-separation",
+      "object_type": "implementation_decision",
+      "title": "Represent world event, interpretation, and criterion relation as separate provenance states",
+      "decision": "accepted_for_experimental_contract",
+      "actor": "turtle",
+      "evidence_class": "system_record",
+      "privacy_class": "public"
+    },
+    {
+      "id": "implementation_decision:2026-09-11-world-observation-only",
+      "object_type": "implementation_decision",
+      "title": "Forbid semantic verdicts and learner feelings inside the world-event object",
+      "decision": "accepted_for_experimental_contract",
+      "actor": "turtle",
+      "evidence_class": "system_record",
+      "privacy_class": "public"
+    },
+    {
+      "id": "implementation_decision:2026-09-11-actor-aligned-relations",
+      "object_type": "implementation_decision",
+      "title": "Require criterion-relation authorship to match the interpretation actor",
+      "decision": "accepted_for_experimental_contract",
+      "actor": "turtle",
+      "evidence_class": "system_record",
+      "privacy_class": "public"
+    },
+    {
+      "id": "implementation_decision:2026-09-11-stay-experimental",
+      "object_type": "implementation_decision",
+      "title": "Keep World Evidence Envelope outside core WorldSpec and live telemetry",
+      "decision": "experimental_and_reversible",
+      "actor": "turtle",
+      "evidence_class": "system_record",
+      "privacy_class": "public"
+    },
+    {
+      "id": "repo_change:2026-09-11-world-evidence-schema",
+      "object_type": "repo_change",
+      "title": "Create World Evidence Envelope v0.1 schema",
+      "repo_path": "worldspec/schema/world-evidence-envelope.schema.json",
+      "commit_sha": "23ef60c9ca468175a936cd9c88f8ab1e72231b8f",
+      "change_type": "create",
+      "evidence_class": "system_record",
+      "privacy_class": "public"
+    },
+    {
+      "id": "repo_change:2026-09-11-world-evidence-cases",
+      "object_type": "repo_change",
+      "title": "Create six World Evidence Envelope hostile regression cases",
+      "repo_path": "worldspec/tests/world-evidence-envelope-cases.json",
+      "commit_sha": "5963ceb83b711a4029d7219d53da163133fdc8a9",
+      "change_type": "create",
+      "evidence_class": "system_record",
+      "privacy_class": "public"
+    },
+    {
+      "id": "repo_change:2026-09-11-world-evidence-validator",
+      "object_type": "repo_change",
+      "title": "Create deterministic World Evidence Envelope validator",
+      "repo_path": "scripts/validate-world-evidence-envelope.mjs",
+      "commit_sha": "cbfa90c764488de60a9ac38bce52aace3ef2a66b",
+      "change_type": "create",
+      "evidence_class": "system_record",
+      "privacy_class": "public"
+    },
+    {
+      "id": "repo_change:2026-09-11-package-command",
+      "object_type": "repo_change",
+      "title": "Expose World Evidence Envelope validation command",
+      "repo_path": "package.json",
+      "commit_sha": "8b5d774ef741016e04bb4570be1ca58ebb376be7",
+      "change_type": "update",
+      "evidence_class": "system_record",
+      "privacy_class": "public"
+    },
+    {
+      "id": "repo_change:2026-09-11-ci-suite",
+      "object_type": "repo_change",
+      "title": "Run World Evidence Envelope validation in GitHub Actions",
+      "repo_path": ".github/workflows/deploy.yml",
+      "commit_sha": "d4b0fbdca3c42a7935bbe82df6ee017219b0c638",
+      "change_type": "update",
+      "evidence_class": "system_record",
+      "privacy_class": "public"
+    },
+    {
+      "id": "test:2026-09-11-world-evidence-suite",
+      "object_type": "test",
+      "title": "World Evidence Envelope six-case regression suite",
+      "test_command": "npm run validate:world-evidence",
+      "status": "passed",
+      "run_id": "34551943751",
+      "head_sha": "d4b0fbdca3c42a7935bbe82df6ee017219b0c638",
+      "result": "Two intentionally valid envelopes accepted; four authority/provenance hostile envelopes rejected for the intended reason.",
+      "evidence_class": "system_record",
+      "privacy_class": "public"
+    },
+    {
+      "id": "test_case:2026-09-11-timed-world-fact-human-meaning",
+      "object_type": "synthetic_regression_case",
+      "title": "Machine-checkable flag capture and timing remain separate from learner interpretation",
+      "status": "passed_as_valid_fixture",
+      "actor": "system",
+      "evidence_class": "system_record",
+      "privacy_class": "public",
+      "human_learning_evidence": false
+    },
+    {
+      "id": "test_case:2026-09-11-plural-interpretations",
+      "object_type": "synthetic_regression_case",
+      "title": "One plaza count supports intentionally plural human interpretations",
+      "status": "passed_as_valid_fixture",
+      "actor": "system",
+      "evidence_class": "system_record",
+      "privacy_class": "public",
+      "human_learning_evidence": false
+    },
+    {
+      "id": "test_case:2026-09-11-world-smuggles-verdict",
+      "object_type": "synthetic_regression_case",
+      "title": "World event cannot declare the city fair",
+      "status": "rejected_as_intended",
+      "actor": "system",
+      "evidence_class": "system_record",
+      "privacy_class": "public",
+      "human_learning_evidence": false
+    },
+    {
+      "id": "test_case:2026-09-11-synthetic-provenance-collapse",
+      "object_type": "synthetic_regression_case",
+      "title": "Synthetic Turtle interpretation cannot masquerade as human interaction",
+      "status": "rejected_as_intended",
+      "actor": "system",
+      "evidence_class": "system_record",
+      "privacy_class": "public",
+      "human_learning_evidence": false
+    },
+    {
+      "id": "test_case:2026-09-11-relation-authorship-collapse",
+      "object_type": "synthetic_regression_case",
+      "title": "Turtle interpretation cannot be laundered through learner-assigned criterion provenance",
+      "status": "rejected_as_intended",
+      "actor": "system",
+      "evidence_class": "system_record",
+      "privacy_class": "public",
+      "human_learning_evidence": false
+    },
+    {
+      "id": "test_case:2026-09-11-world-final-authority",
+      "object_type": "synthetic_regression_case",
+      "title": "World final authority remains forbidden",
+      "status": "rejected_as_intended",
+      "actor": "system",
+      "evidence_class": "system_record",
+      "privacy_class": "public",
+      "human_learning_evidence": false
+    },
+    {
+      "id": "test:2026-09-11-typecheck",
+      "object_type": "test",
+      "title": "Repository TypeScript typecheck",
+      "test_command": "npm run typecheck",
+      "status": "passed",
+      "run_id": "34551943751",
+      "head_sha": "d4b0fbdca3c42a7935bbe82df6ee017219b0c638",
+      "evidence_class": "system_record",
+      "privacy_class": "public"
+    },
+    {
+      "id": "test:2026-09-11-next-edge-contract",
+      "object_type": "test",
+      "title": "Existing Next Edge contract remained valid during contribution test",
+      "test_command": "npm run validate:next-edge",
+      "status": "passed",
+      "run_id": "34551943751",
+      "head_sha": "d4b0fbdca3c42a7935bbe82df6ee017219b0c638",
+      "evidence_class": "system_record",
+      "privacy_class": "public"
+    },
+    {
+      "id": "test:2026-09-11-learner-verification-contract",
+      "object_type": "test",
+      "title": "Learner Verification contract remained valid during contribution test",
+      "test_command": "npm run validate:learner-verification",
+      "status": "passed",
+      "run_id": "34551943751",
+      "head_sha": "d4b0fbdca3c42a7935bbe82df6ee017219b0c638",
+      "evidence_class": "system_record",
+      "privacy_class": "public"
+    },
+    {
+      "id": "terraria_observation:2026-09-11-no-recursive-run",
+      "object_type": "terraria_observation",
+      "title": "No Recursive Turtle self-play run was executed; synthetic Turtle fixture remains test data only",
+      "actor": "turtle",
+      "evidence_class": "system_record",
+      "privacy_class": "public",
+      "human_learning_evidence": false
+    },
+    {
+      "id": "version_judgment:2026-09-11",
+      "object_type": "version_judgment",
+      "title": "Remain at v0.1.0",
+      "decision": "no_version_bump",
+      "rationale": "The envelope adds a meaningful executable ontology/provenance distinction and expands repeatable evaluation, but v0.2 still requires the ontology layer, versioned model/config behavior, broad repeatable evaluation, and visible research-to-change history to operate coherently together.",
+      "evidence_class": "system_record",
+      "privacy_class": "public"
+    },
+    {
+      "id": "persistence_decision:2026-09-11-d1-staging",
+      "object_type": "persistence_decision",
+      "title": "Use lossless tags JSON staging because no authorized live D1 write action is available",
+      "decision": "stage_json_only",
+      "actor": "turtle",
+      "evidence_class": "system_record",
+      "privacy_class": "public"
+    },
+    {
+      "id": "public_note:2026-09-11-daily-build",
+      "object_type": "research_note",
+      "title": "September 11 daily build research note",
+      "repo_path": "research/daily-build/2026-09-11.md",
+      "commit_sha": "55c8fd544d8471e26384d68d324afc739da8c825",
+      "evidence_class": "system_record",
+      "privacy_class": "public"
+    },
+    {
+      "id": "build_log_entry:2026-09-11-world-evidence-envelope",
+      "object_type": "build_log_entry",
+      "title": "The world can report facts without becoming the judge",
+      "repo_path": "src/buildLog.ts",
+      "commit_sha": "31d79c11c2377c31156f5b86dcecbd1b5544e8e4",
+      "evidence_class": "system_record",
+      "privacy_class": "public"
+    },
+    {
+      "id": "next_edge:2026-09-11-selective-noticing",
+      "object_type": "next_edge",
+      "title": "Who decides what Turtle notices?",
+      "repo_path": "public/data/next-edge.json",
+      "commit_sha": "3094100acc1e2afab9b0ede902e72fb902e16090",
+      "evidence_class": "system_record",
+      "privacy_class": "public"
+    },
+    {
+      "id": "repo_change:2026-09-11-next-edge-fallback",
+      "object_type": "repo_change",
+      "title": "Align Worker-side Next Edge fallback with September 11 horizon",
+      "repo_path": "src/buildLog.ts",
+      "commit_sha": "22fe18bf027906f7e7e279b1c762925fcdb6461f",
+      "change_type": "update",
+      "evidence_class": "system_record",
+      "privacy_class": "public"
+    }
+  ],
+  "relationships": [
+    {
+      "subject": "human_direction:2026-09-11-daily-build-standing-rule",
+      "predicate": "authorized",
+      "object": "autobuild_run:autobuild-2026-09-11",
+      "rationale": "The human standing rule authorizes a bounded build while preserving later human review and override."
+    },
+    {
+      "subject": "autobuild_run:autobuild-2026-09-11",
+      "predicate": "consulted",
+      "object": "source_signal:2026-09-11-openai-navier-stokes",
+      "rationale": "Formal verification after generative exploration reinforced the distinction between generated material and a separately inspectable check."
+    },
+    {
+      "subject": "autobuild_run:autobuild-2026-09-11",
+      "predicate": "consulted",
+      "object": "source_signal:2026-09-11-openai-k12-edu-102",
+      "rationale": "Human approval, permissions, source grounding, and iterative review reinforced explicit authority boundaries for agentic work."
+    },
+    {
+      "subject": "autobuild_run:autobuild-2026-09-11",
+      "predicate": "consulted",
+      "object": "source_signal:2026-09-11-nvidia-supply-chain",
+      "rationale": "The separation of quantitative output, contextual evidence, human rationale, decision, override, and actual outcome strongly supported event/interpretation separation."
+    },
+    {
+      "subject": "autobuild_run:autobuild-2026-09-11",
+      "predicate": "consulted",
+      "object": "source_signal:2026-09-11-minecraft-velocity-prize",
+      "rationale": "A timed flag challenge supplied a concrete counterexample showing that local world facts may be objective inside a rule system without becoming complete educational meaning."
+    },
+    {
+      "subject": "autobuild_run:autobuild-2026-09-11",
+      "predicate": "consulted",
+      "object": "source_signal:2026-09-11-mit-jambot",
+      "rationale": "Improvisational human-AI making supplied a negative case against treating every observable event as a metric or evaluation trigger."
+    },
+    {
+      "subject": "question:2026-09-11-inherited-next-edge",
+      "predicate": "generated",
+      "object": "question:2026-09-11-event-vs-meaning"
+    },
+    {
+      "subject": "question:2026-09-11-event-vs-meaning",
+      "predicate": "generated_candidate",
+      "object": "candidate:2026-09-11-core-worldspec-observation"
+    },
+    {
+      "subject": "question:2026-09-11-event-vs-meaning",
+      "predicate": "generated_candidate",
+      "object": "candidate:2026-09-11-modify-verification-card"
+    },
+    {
+      "subject": "question:2026-09-11-event-vs-meaning",
+      "predicate": "generated_candidate",
+      "object": "candidate:2026-09-11-live-minecraft-telemetry"
+    },
+    {
+      "subject": "question:2026-09-11-event-vs-meaning",
+      "predicate": "generated_candidate",
+      "object": "candidate:2026-09-11-auto-turtle-interpretation"
+    },
+    {
+      "subject": "question:2026-09-11-event-vs-meaning",
+      "predicate": "generated_candidate",
+      "object": "candidate:2026-09-11-recursive-world-interpretation"
+    },
+    {
+      "subject": "question:2026-09-11-event-vs-meaning",
+      "predicate": "generated_candidate",
+      "object": "candidate:2026-09-11-persistent-memory"
+    },
+    {
+      "subject": "question:2026-09-11-event-vs-meaning",
+      "predicate": "resolved_by",
+      "object": "selection:2026-09-11-world-evidence-envelope"
+    },
+    {
+      "subject": "selection:2026-09-11-world-evidence-envelope",
+      "predicate": "constrained_by",
+      "object": "implementation_decision:2026-09-11-event-interpretation-separation"
+    },
+    {
+      "subject": "selection:2026-09-11-world-evidence-envelope",
+      "predicate": "constrained_by",
+      "object": "implementation_decision:2026-09-11-world-observation-only"
+    },
+    {
+      "subject": "selection:2026-09-11-world-evidence-envelope",
+      "predicate": "constrained_by",
+      "object": "implementation_decision:2026-09-11-actor-aligned-relations"
+    },
+    {
+      "subject": "selection:2026-09-11-world-evidence-envelope",
+      "predicate": "constrained_by",
+      "object": "implementation_decision:2026-09-11-stay-experimental"
+    },
+    {
+      "subject": "selection:2026-09-11-world-evidence-envelope",
+      "predicate": "implemented_by",
+      "object": "repo_change:2026-09-11-world-evidence-schema"
+    },
+    {
+      "subject": "selection:2026-09-11-world-evidence-envelope",
+      "predicate": "implemented_by",
+      "object": "repo_change:2026-09-11-world-evidence-cases"
+    },
+    {
+      "subject": "selection:2026-09-11-world-evidence-envelope",
+      "predicate": "implemented_by",
+      "object": "repo_change:2026-09-11-world-evidence-validator"
+    },
+    {
+      "subject": "repo_change:2026-09-11-world-evidence-validator",
+      "predicate": "verified_by",
+      "object": "test:2026-09-11-world-evidence-suite"
+    },
+    {
+      "subject": "test:2026-09-11-world-evidence-suite",
+      "predicate": "contains_case",
+      "object": "test_case:2026-09-11-timed-world-fact-human-meaning"
+    },
+    {
+      "subject": "test:2026-09-11-world-evidence-suite",
+      "predicate": "contains_case",
+      "object": "test_case:2026-09-11-plural-interpretations"
+    },
+    {
+      "subject": "test:2026-09-11-world-evidence-suite",
+      "predicate": "contains_case",
+      "object": "test_case:2026-09-11-world-smuggles-verdict"
+    },
+    {
+      "subject": "test:2026-09-11-world-evidence-suite",
+      "predicate": "contains_case",
+      "object": "test_case:2026-09-11-synthetic-provenance-collapse"
+    },
+    {
+      "subject": "test:2026-09-11-world-evidence-suite",
+      "predicate": "contains_case",
+      "object": "test_case:2026-09-11-relation-authorship-collapse"
+    },
+    {
+      "subject": "test:2026-09-11-world-evidence-suite",
+      "predicate": "contains_case",
+      "object": "test_case:2026-09-11-world-final-authority"
+    },
+    {
+      "subject": "autobuild_run:autobuild-2026-09-11",
+      "predicate": "recorded_by",
+      "object": "public_note:2026-09-11-daily-build"
+    },
+    {
+      "subject": "selection:2026-09-11-world-evidence-envelope",
+      "predicate": "announced_by",
+      "object": "build_log_entry:2026-09-11-world-evidence-envelope"
+    },
+    {
+      "subject": "build_log_entry:2026-09-11-world-evidence-envelope",
+      "predicate": "opens_future_question",
+      "object": "next_edge:2026-09-11-selective-noticing",
+      "rationale": "Once event and interpretation are distinguishable, the unresolved power question becomes which potential observations Turtle is allowed to select and surface."
+    }
+  ],
+  "ctc_tags": [
+    {
+      "object_id": "source_signal:2026-09-11-openai-k12-edu-102",
+      "domain": "Technology as Tool to Think With",
+      "role": "questions",
+      "rationale": "Structured, reviewable workflows and approved source materials support inspectable tool use while remaining an external implementation signal, not learner evidence."
+    },
+    {
+      "object_id": "source_signal:2026-09-11-openai-k12-edu-102",
+      "domain": "Reflection as Learning",
+      "role": "questions",
+      "rationale": "Iterative review and human approval provide a design analogy for keeping machine-generated intermediate states available for human reconsideration."
+    },
+    {
+      "object_id": "source_signal:2026-09-11-nvidia-supply-chain",
+      "domain": "Technology as Tool to Think With",
+      "role": "supports",
+      "rationale": "The solver and language model are treated as decision-support tools whose outputs are contextualized and sometimes overridden by humans rather than final authority."
+    },
+    {
+      "object_id": "source_signal:2026-09-11-nvidia-supply-chain",
+      "domain": "Formative Demonstration of Learning",
+      "role": "questions",
+      "rationale": "Decision, rationale, expected outcome, actual outcome, and override are preserved as separate stages; this is mapped as a system-research analogy rather than student-learning evidence."
+    },
+    {
+      "object_id": "source_signal:2026-09-11-minecraft-velocity-prize",
+      "domain": "Personal Inquiry",
+      "role": "supports",
+      "rationale": "The practice world invites learners to try different strategies and decide how to improve their own approach within an explicit challenge."
+    },
+    {
+      "object_id": "source_signal:2026-09-11-minecraft-velocity-prize",
+      "domain": "Technology as Tool to Think With",
+      "role": "primary",
+      "rationale": "Code Builder, AI-assisted approaches, and a timed world become manipulable computational media for strategy testing."
+    },
+    {
+      "object_id": "source_signal:2026-09-11-minecraft-velocity-prize",
+      "domain": "Formative Demonstration of Learning",
+      "role": "supports",
+      "rationale": "Repeated strategies and times can make changes in approach visible, although speed itself must not be mistaken for complete learning evidence."
+    },
+    {
+      "object_id": "source_signal:2026-09-11-mit-jambot",
+      "domain": "Technology as Tool to Think With",
+      "role": "supports",
+      "rationale": "The AI responds inside live performance as creative material rather than replacing the musician's interpretive role."
+    },
+    {
+      "object_id": "source_signal:2026-09-11-mit-jambot",
+      "domain": "Sharing and Collaborating",
+      "role": "supports",
+      "rationale": "Real-time human-machine musical dialogue exemplifies reciprocal collaboration while remaining external research rather than TurtleBlock learner evidence."
+    },
+    {
+      "object_id": "source_signal:2026-09-11-mit-jambot",
+      "domain": "Reflection as Learning",
+      "role": "questions",
+      "rationale": "Improvisation supplies a boundary case where too much explicit measuring or prompting could disrupt the activity being studied."
+    },
+    {
+      "object_id": "selection:2026-09-11-world-evidence-envelope",
+      "domain": "Personal Inquiry",
+      "role": "tests",
+      "rationale": "Criterion relations are attributed to interpreters instead of to the world, preserving the learner's role in deciding what an observation means for their inquiry."
+    },
+    {
+      "object_id": "selection:2026-09-11-world-evidence-envelope",
+      "domain": "Compelling Problem or Question",
+      "role": "tests",
+      "rationale": "A world event can counter an expectation and create a new problem without closing the inquiry with an automated verdict."
+    },
+    {
+      "object_id": "selection:2026-09-11-world-evidence-envelope",
+      "domain": "Technology as Tool to Think With",
+      "role": "primary",
+      "rationale": "The world becomes an inspectable computational object-to-think-with whose facts can constrain thought without owning semantic meaning."
+    },
+    {
+      "object_id": "selection:2026-09-11-world-evidence-envelope",
+      "domain": "Formative Demonstration of Learning",
+      "role": "tests",
+      "rationale": "The contract preserves event, interpretation, relation, disagreement, and revision as distinguishable states that could later show learning-in-process."
+    },
+    {
+      "object_id": "selection:2026-09-11-world-evidence-envelope",
+      "domain": "Reflection as Learning",
+      "role": "primary",
+      "rationale": "Interpretations are separate from observations so people can compare what happened with what they thought it meant and revise accordingly."
+    },
+    {
+      "object_id": "selection:2026-09-11-world-evidence-envelope",
+      "domain": "Social and Cultural Critique",
+      "role": "tests",
+      "rationale": "The world may expose distributions, movement, access, or consequences but cannot label those facts fair, democratic, welcoming, or oppressive without an attributable interpreter."
+    },
+    {
+      "object_id": "selection:2026-09-11-world-evidence-envelope",
+      "domain": "Sharing and Collaborating",
+      "role": "tests",
+      "rationale": "The plural fixture demonstrates that collaborators can interpret the same world measurement differently without manufactured consensus."
+    },
+    {
+      "object_id": "candidate:2026-09-11-live-minecraft-telemetry",
+      "domain": "Social and Cultural Critique",
+      "role": "counters",
+      "rationale": "The candidate was rejected because instrumentation itself can become surveillance or privilege measurable behavior before learner purpose and privacy boundaries are defined."
+    },
+    {
+      "object_id": "candidate:2026-09-11-auto-turtle-interpretation",
+      "domain": "Personal Inquiry",
+      "role": "counters",
+      "rationale": "Automatic interpretation could replace learner-directed inquiry with machine-selected significance."
+    },
+    {
+      "object_id": "next_edge:2026-09-11-selective-noticing",
+      "domain": "Personal Inquiry",
+      "role": "primary",
+      "rationale": "The next question asks whether learner purpose can govern what Turtle surfaces rather than letting machine salience become the curriculum."
+    },
+    {
+      "object_id": "next_edge:2026-09-11-selective-noticing",
+      "domain": "Technology as Tool to Think With",
+      "role": "primary",
+      "rationale": "Inspectable attention rules could make computational noticing manipulable rather than opaque."
+    },
+    {
+      "object_id": "next_edge:2026-09-11-selective-noticing",
+      "domain": "Reflection as Learning",
+      "role": "primary",
+      "rationale": "The horizon asks when surfacing an event helps reflection and when restraint better preserves the learner's flow and agency."
+    },
+    {
+      "object_id": "next_edge:2026-09-11-selective-noticing",
+      "domain": "Social and Cultural Critique",
+      "role": "primary",
+      "rationale": "Selecting what is measurable and noteworthy is a power-laden act that can privilege efficiency, compliance, visibility, or other values."
+    },
+    {
+      "object_id": "next_edge:2026-09-11-selective-noticing",
+      "domain": "Sharing and Collaborating",
+      "role": "supports",
+      "rationale": "Different participants may legitimately want different attention filters around the same shared world."
+    }
+  ],
+  "ontology_tags": [
+    {
+      "object_id": "selection:2026-09-11-world-evidence-envelope",
+      "concept_key": "co_active_emergence",
+      "role": "operationalizes",
+      "rationale": "The envelope makes the reciprocal sequence from intention to world consequence to attributed interpretation and later revision inspectable without collapsing the participants."
+    },
+    {
+      "object_id": "selection:2026-09-11-world-evidence-envelope",
+      "concept_key": "purposeful_play",
+      "role": "supports",
+      "rationale": "Play can generate concrete surprises and measurements that become material for further inquiry without requiring a predetermined semantic verdict."
+    },
+    {
+      "object_id": "selection:2026-09-11-world-evidence-envelope",
+      "concept_key": "steamhamlet",
+      "role": "supports",
+      "rationale": "An inhabitable room of possibilities matters because represented ideas produce consequences people can encounter, interpret, and change."
+    },
+    {
+      "object_id": "selection:2026-09-11-world-evidence-envelope",
+      "concept_key": "invisible_ideas_become_visible_and_manipulable",
+      "role": "primary",
+      "rationale": "The world event makes previously abstract assumptions visible as inspectable state while preserving the distinction between state and meaning."
+    },
+    {
+      "object_id": "selection:2026-09-11-world-evidence-envelope",
+      "concept_key": "machine_responses_as_material_for_evaluation",
+      "role": "extends",
+      "rationale": "Turtle's interpretation is represented as another attributable claim that can be examined rather than the authoritative account of the event."
+    },
+    {
+      "object_id": "selection:2026-09-11-world-evidence-envelope",
+      "concept_key": "possible_possibles",
+      "role": "supports",
+      "rationale": "One event may sustain competing interpretations, counterexamples, and new questions rather than forcing one normalized conclusion."
+    },
+    {
+      "object_id": "selection:2026-09-11-world-evidence-envelope",
+      "concept_key": "cohabitation_without_provenance_collapse",
+      "role": "primary",
+      "rationale": "World observation, learner interpretation, collaborator interpretation, Turtle interpretation, and synthetic interpretation can coexist only when their origins and evidence classes remain distinct."
+    },
+    {
+      "object_id": "selection:2026-09-11-world-evidence-envelope",
+      "concept_key": "recursive_learning_loop",
+      "role": "supports",
+      "rationale": "World consequence becomes pedagogically useful when it can return to reflection, revision, and another question rather than end as a verdict."
+    },
+    {
+      "object_id": "repo_change:2026-09-11-world-evidence-schema",
+      "concept_key": "agent_design_as_structured_data",
+      "role": "extends",
+      "rationale": "Event, interpretation, criterion relation, authority, privacy, and reversibility become explicit machine-checkable research structure."
+    },
+    {
+      "object_id": "repo_change:2026-09-11-world-evidence-validator",
+      "concept_key": "provenance_aware_retrieval",
+      "role": "tests",
+      "rationale": "The validator enforces evidence-class and actor distinctions that future retrieval must preserve rather than flatten."
+    },
+    {
+      "object_id": "test_case:2026-09-11-synthetic-provenance-collapse",
+      "concept_key": "synthetic_recursive_dialogue",
+      "role": "tests",
+      "rationale": "The fixture tests the standing rule that synthetic Turtle material can never be reclassified as human interaction, although no actual self-play dialogue was run."
+    },
+    {
+      "object_id": "next_edge:2026-09-11-selective-noticing",
+      "concept_key": "co_active_emergence",
+      "role": "questions",
+      "rationale": "Surfacing an observation changes what participants attend to and therefore becomes part of the reciprocal system rather than a neutral transport act."
+    },
+    {
+      "object_id": "next_edge:2026-09-11-selective-noticing",
+      "concept_key": "purposeful_play",
+      "role": "primary",
+      "rationale": "The edge explicitly asks when machine interruption would undermine the playful inquiry it intends to support."
+    },
+    {
+      "object_id": "next_edge:2026-09-11-selective-noticing",
+      "concept_key": "machine_responses_as_material_for_evaluation",
+      "role": "extends",
+      "rationale": "A Turtle decision to surface or remain silent can itself become inspectable material rather than invisible authority."
+    },
+    {
+      "object_id": "next_edge:2026-09-11-selective-noticing",
+      "concept_key": "cohabitation_without_provenance_collapse",
+      "role": "operationalizes",
+      "rationale": "Future attention records should preserve the event, selector, attention rule, surfacing decision, and later interpretation as distinct provenance states."
+    }
+  ],
+  "dissertation_code_mappings": [
+    {
+      "object_id": "selection:2026-09-11-world-evidence-envelope",
+      "source_layer": "immutable_dissertation_dedoose",
+      "code_label": "Observations on Life Itself",
+      "role": "later_interpretation_mapping",
+      "rationale": "Situated observation matters to the experiment, while the build explicitly refuses to equate observation with self-authenticating interpretation."
+    },
+    {
+      "object_id": "selection:2026-09-11-world-evidence-envelope",
+      "source_layer": "immutable_dissertation_dedoose",
+      "code_label": "Constructivism",
+      "role": "later_interpretation_mapping",
+      "rationale": "Meaning is constructed through interaction with experienced consequences rather than stored as an intrinsic property of the world event."
+    },
+    {
+      "object_id": "selection:2026-09-11-world-evidence-envelope",
+      "source_layer": "immutable_dissertation_dedoose",
+      "code_label": "Discovery Learning",
+      "role": "later_interpretation_mapping",
+      "rationale": "Unexpected world behavior can create a discoverable contradiction that changes subsequent inquiry."
+    },
+    {
+      "object_id": "selection:2026-09-11-world-evidence-envelope",
+      "source_layer": "immutable_dissertation_dedoose",
+      "code_label": "Problem Posing Education",
+      "role": "later_interpretation_mapping",
+      "rationale": "A world observation may complicate a provisional answer and generate a better problem instead of closing the task."
+    },
+    {
+      "object_id": "selection:2026-09-11-world-evidence-envelope",
+      "source_layer": "immutable_dissertation_dedoose",
+      "code_label": "Predetermined Outcomes",
+      "role": "later_interpretation_mapping",
+      "rationale": "Forbidding a world-authored semantic verdict prevents machine-readable outcomes from quietly becoming predetermined educational success criteria."
+    },
+    {
+      "object_id": "selection:2026-09-11-world-evidence-envelope",
+      "source_layer": "immutable_dissertation_dedoose",
+      "code_label": "Freedom and Individuality",
+      "role": "later_interpretation_mapping",
+      "rationale": "Learner judgment remains attributable, revisable, and distinct from Turtle or world claims."
+    },
+    {
+      "object_id": "selection:2026-09-11-world-evidence-envelope",
+      "source_layer": "immutable_dissertation_dedoose",
+      "code_label": "Shared Democracy",
+      "role": "later_interpretation_mapping",
+      "rationale": "The plural fixture preserves divergent participant interpretations rather than manufacturing consensus from one shared measurement."
+    },
+    {
+      "object_id": "next_edge:2026-09-11-selective-noticing",
+      "source_layer": "immutable_dissertation_dedoose",
+      "code_label": "Social Impact",
+      "role": "later_interpretation_mapping",
+      "rationale": "What the system measures and surfaces can shape whose experiences and consequences become visible, making attention itself socially consequential."
+    }
+  ],
+  "emergent_tags": [
+    {
+      "object_id": "selection:2026-09-11-world-evidence-envelope",
+      "tag": "world-event-not-verdict",
+      "type": "value",
+      "status": "provisional",
+      "rationale": "Names the central executable distinction introduced by the contribution."
+    },
+    {
+      "object_id": "selection:2026-09-11-world-evidence-envelope",
+      "tag": "event-interpretation-separation",
+      "type": "method",
+      "status": "provisional",
+      "rationale": "Describes the representation pattern under test without promoting it into the formal ontology."
+    },
+    {
+      "object_id": "selection:2026-09-11-world-evidence-envelope",
+      "tag": "interpretive-plurality",
+      "type": "value",
+      "status": "provisional",
+      "rationale": "One observed fact may support different attributable readings."
+    },
+    {
+      "object_id": "candidate:2026-09-11-live-minecraft-telemetry",
+      "tag": "instrumentation-before-epistemology-risk",
+      "type": "risk",
+      "status": "provisional",
+      "rationale": "Captures why the telemetry candidate was rejected before live instrumentation existed."
+    },
+    {
+      "object_id": "next_edge:2026-09-11-selective-noticing",
+      "tag": "salience-governance",
+      "type": "question",
+      "status": "provisional",
+      "rationale": "Names the unresolved question of who controls which observable events enter learner attention."
+    },
+    {
+      "object_id": "next_edge:2026-09-11-selective-noticing",
+      "tag": "deliberate-silence",
+      "type": "method",
+      "status": "provisional",
+      "rationale": "Preserves the possibility that non-interruption may sometimes be the most agency-protective Turtle action."
+    },
+    {
+      "object_id": "next_edge:2026-09-11-selective-noticing",
+      "tag": "measurement-selection-power",
+      "type": "risk",
+      "status": "provisional",
+      "rationale": "Easy-to-measure variables may become overrepresented in what the system treats as important."
+    }
+  ],
+  "uncaptured_observations": [
+    {
+      "id": "unknown-2026-09-11-01",
+      "object_id": "selection:2026-09-11-world-evidence-envelope",
+      "observation": "Measurement is not interpretation, but measurement selection is not neutral by definition: choosing elapsed time, crowd count, entrances, or resource flow can already encode a human or system value before any later interpretation occurs.",
+      "reason_unmapped": "This may be best represented as instrumentation provenance and Social/Cultural Critique rather than as a new learner-development domain, but the recurring relationship between measurement selection and epistemic authority remains unsettled.",
+      "observer_actor_type": "turtle",
+      "status": "open",
+      "candidate_domain": null
+    },
+    {
+      "id": "unknown-2026-09-11-02",
+      "object_id": "selection:2026-09-11-world-evidence-envelope",
+      "observation": "A computational world may materially constrain an interpretation without possessing human intention or interpretive agency; the phrase 'world as participant' is useful but theoretically incomplete.",
+      "reason_unmapped": "The existing evidence classes preserve origin, while the ontological status of non-intentional environmental influence inside co-active emergence remains unresolved.",
+      "observer_actor_type": "turtle",
+      "status": "open",
+      "candidate_domain": null
+    },
+    {
+      "id": "unknown-2026-09-11-03",
+      "object_id": "next_edge:2026-09-11-selective-noticing",
+      "observation": "Once observation is technically possible, selective noticing becomes a new power problem: deciding which of thousands of possible events deserve attention could become surveillance, unsolicited pedagogy, or rubricification even with perfect event provenance.",
+      "reason_unmapped": "This cuts across Personal Inquiry, Reflection, Social and Cultural Critique, privacy, and agency; it does not yet justify an eighth CTC domain.",
+      "observer_actor_type": "turtle",
+      "status": "open",
+      "candidate_domain": null
+    },
+    {
+      "id": "unknown-2026-09-11-04",
+      "object_id": "next_edge:2026-09-11-selective-noticing",
+      "observation": "Deliberate non-interruption can be meaningful agent behavior, yet recording every potential intervention Turtle chose not to make would create an impossible counterfactual audit and threaten capture-batch closure.",
+      "reason_unmapped": "Absence, restraint, and unrealized speech acts are not naturally represented by the current event-centric research object model.",
+      "observer_actor_type": "turtle",
+      "status": "open",
+      "candidate_domain": null
+    }
+  ],
+  "persistence": {
+    "d1": {
+      "status": "staged_only",
+      "target_schema": "migration_0007_autobuild_research_objects_ctc_ontology_relationships_uncaptured",
+      "reason": "No authorized live D1 write action was available in the active task tooling.",
+      "secret_values_inspected": false
+    },
+    "r2": {
+      "status": "not_consulted",
+      "reason": "No direct R2 metadata or write action was available in the active task context.",
+      "secret_values_inspected": false
+    }
+  },
+  "capture_batch_closure": {
+    "status": "closed",
+    "primary_artifacts_recorded": true,
+    "source_signals_recorded": true,
+    "questions_candidates_rejections_recorded": true,
+    "implementation_and_tests_recorded": true,
+    "ctc_and_ontology_mappings_rationalized": true,
+    "unmapped_residue_preserved": true,
+    "self_reference_rule": "This tags manifest is the metadata closure artifact for the batch. Its own commit is not recursively promoted into another primary research object merely to avoid an infinite self-tagging loop."
+  }
+}
