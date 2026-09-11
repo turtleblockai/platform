@@ -9,6 +9,7 @@
     "typecheck": "tsc --noEmit",
     "validate:next-edge": "node scripts/validate-next-edge.mjs",
     "validate:learner-verification": "node scripts/validate-learner-verification.mjs",
+    "validate:world-evidence": "node scripts/validate-world-evidence-envelope.mjs",
     "discord:register": "node scripts/register-discord-command.mjs"
   },
   "devDependencies": {
