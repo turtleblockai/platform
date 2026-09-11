@@ -1,0 +1,115 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://turtleblockai.com/worldspec/schema/world-evidence-envelope/v0.1.json",
+  "title": "TurtleBlock AI World Evidence Envelope",
+  "description": "Experimental research contract separating what an inhabitable computational world reports from what a person or Turtle interprets that report to mean. World facts may constrain inquiry; they do not interpret themselves or become final learner judgment.",
+  "type": "object",
+  "required": ["version", "id", "question_ref", "world_event", "interpretations", "criterion_relations", "provenance"],
+  "properties": {
+    "version": { "const": "0.1" },
+    "id": { "type": "string", "minLength": 1 },
+    "question_ref": { "type": "string", "minLength": 1 },
+    "world_event": {
+      "type": "object",
+      "required": ["id", "event_type", "actor_type", "evidence_class", "observation_only", "facts", "source_ref"],
+      "properties": {
+        "id": { "type": "string", "minLength": 1 },
+        "event_type": {
+          "type": "string",
+          "enum": ["world_state_change", "world_measurement", "simulation_result", "artifact_behavior"]
+        },
+        "actor_type": { "const": "world" },
+        "evidence_class": { "const": "world_observation" },
+        "observation_only": { "const": true },
+        "facts": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": ["metric", "value"],
+            "properties": {
+              "metric": { "type": "string", "minLength": 1 },
+              "value": {},
+              "unit": { "type": "string" },
+              "location_ref": { "type": "string" },
+              "time_ref": { "type": "string" }
+            },
+            "additionalProperties": false
+          }
+        },
+        "source_ref": { "type": "string", "minLength": 1 },
+        "uncertainty": { "type": "string" }
+      },
+      "additionalProperties": false
+    },
+    "interpretations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "event_id", "actor_type", "evidence_class", "statement", "status"],
+        "properties": {
+          "id": { "type": "string", "minLength": 1 },
+          "event_id": { "type": "string", "minLength": 1 },
+          "actor_type": {
+            "type": "string",
+            "enum": ["learner", "collaborator", "turtle", "synthetic_turtle"]
+          },
+          "evidence_class": {
+            "type": "string",
+            "enum": ["human_interaction", "system_record", "synthetic_self_play"]
+          },
+          "statement": { "type": "string", "minLength": 1 },
+          "status": {
+            "type": "string",
+            "enum": ["proposed", "held", "revised", "rejected", "intentionally_plural"]
+          },
+          "uncertainty": { "type": "string" },
+          "supersedes_interpretation_id": { "type": "string" }
+        },
+        "additionalProperties": false
+      }
+    },
+    "criterion_relations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["criterion_id", "interpretation_id", "relation", "assigned_by"],
+        "properties": {
+          "criterion_id": { "type": "string", "minLength": 1 },
+          "interpretation_id": { "type": "string", "minLength": 1 },
+          "relation": {
+            "type": "string",
+            "enum": ["supports", "counters", "mixed", "inconclusive"]
+          },
+          "assigned_by": {
+            "type": "string",
+            "enum": ["learner", "collaborator", "turtle", "synthetic_turtle"]
+          },
+          "status": {
+            "type": "string",
+            "enum": ["proposed", "held", "revised", "rejected"]
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "provenance": {
+      "type": "object",
+      "required": ["privacy_class", "world_is_final_authority", "machine_final_authority", "reversible", "interpretation_authorship_visible"],
+      "properties": {
+        "privacy_class": {
+          "type": "string",
+          "enum": ["private", "internal", "unlisted", "public"]
+        },
+        "world_is_final_authority": { "const": false },
+        "machine_final_authority": { "const": false },
+        "reversible": { "const": true },
+        "interpretation_authorship_visible": { "const": true },
+        "worldspec_revision": { "type": "string" },
+        "verification_card_ref": { "type": "string" }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}
