@@ -1,0 +1,109 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://turtleblockai.com/worldspec/schema/selective-attention-envelope/v0.1.json",
+  "title": "TurtleBlock AI Selective Attention Envelope",
+  "description": "Experimental research contract separating an observable world event from retention, salience, surfacing, and interruption. Turtle may make a reversible attention proposal; learner-authored attention settings and watchpoints constrain interruption. The envelope references an existing world event and does not authorize broader collection.",
+  "type": "object",
+  "required": ["version", "id", "question_ref", "world_event_ref", "attention_context", "attention_rule", "decision", "provenance"],
+  "properties": {
+    "version": { "const": "0.1" },
+    "id": { "type": "string", "minLength": 1 },
+    "question_ref": { "type": "string", "minLength": 1 },
+    "world_event_ref": { "type": "string", "minLength": 1 },
+    "attention_context": {
+      "type": "object",
+      "required": ["mode", "source"],
+      "properties": {
+        "mode": {
+          "type": "string",
+          "enum": ["do_not_interrupt", "watchpoint_only", "interruptible", "unspecified"]
+        },
+        "source": {
+          "type": "string",
+          "enum": ["learner_stated", "project_default"]
+        }
+      },
+      "additionalProperties": false
+    },
+    "attention_rule": {
+      "type": "object",
+      "required": ["id", "purpose_ref", "authored_by", "evidence_class", "basis", "status", "trigger_description", "new_collection_authorized"],
+      "properties": {
+        "id": { "type": "string", "minLength": 1 },
+        "purpose_ref": { "type": "string", "minLength": 1 },
+        "authored_by": {
+          "type": "string",
+          "enum": ["learner", "collaborator", "turtle", "synthetic_turtle", "system"]
+        },
+        "evidence_class": {
+          "type": "string",
+          "enum": ["human_interaction", "system_record", "synthetic_self_play"]
+        },
+        "basis": {
+          "type": "string",
+          "enum": ["learner_watchpoint", "explicit_learner_request", "learner_session_setting", "collaborator_agreement", "turtle_proposal", "synthetic_proposal", "system_policy"]
+        },
+        "status": {
+          "type": "string",
+          "enum": ["active", "proposed", "muted", "rejected", "superseded"]
+        },
+        "trigger_description": { "type": "string", "minLength": 1 },
+        "new_collection_authorized": { "const": false }
+      },
+      "additionalProperties": false
+    },
+    "decision": {
+      "type": "object",
+      "required": ["actor_type", "evidence_class", "action", "rationale", "interruptive", "delivery_audience", "retention", "status"],
+      "properties": {
+        "actor_type": {
+          "type": "string",
+          "enum": ["learner", "collaborator", "turtle", "synthetic_turtle", "system"]
+        },
+        "evidence_class": {
+          "type": "string",
+          "enum": ["human_interaction", "system_record", "synthetic_self_play"]
+        },
+        "action": {
+          "type": "string",
+          "enum": ["surface_now", "defer", "log_without_surfacing", "remain_silent", "discard"]
+        },
+        "rationale": { "type": "string", "minLength": 1 },
+        "interruptive": { "type": "boolean" },
+        "delivery_audience": {
+          "type": "string",
+          "enum": ["learner", "collaborators", "public", "none"]
+        },
+        "retention": {
+          "type": "string",
+          "enum": ["discard_after_decision", "ephemeral_private", "project_record"]
+        },
+        "status": {
+          "type": "string",
+          "enum": ["proposed", "executed", "rejected"]
+        }
+      },
+      "additionalProperties": false
+    },
+    "provenance": {
+      "type": "object",
+      "required": ["source_event_privacy_class", "event_content_duplicated", "learner_can_mute", "learner_can_revise", "machine_salience_is_proposal", "machine_final_authority", "surveillance_expansion_authorized", "reversible", "non_interruption_is_valid"],
+      "properties": {
+        "source_event_privacy_class": {
+          "type": "string",
+          "enum": ["private", "internal", "unlisted", "public"]
+        },
+        "event_content_duplicated": { "const": false },
+        "learner_can_mute": { "const": true },
+        "learner_can_revise": { "const": true },
+        "machine_salience_is_proposal": { "const": true },
+        "machine_final_authority": { "const": false },
+        "surveillance_expansion_authorized": { "const": false },
+        "reversible": { "const": true },
+        "non_interruption_is_valid": { "const": true }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}
