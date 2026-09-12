@@ -1,0 +1,86 @@
+{
+  "schema": "turtleblockai.d1-reconciliation.v0.1",
+  "date": "2026-09-12",
+  "status": "staged_no_live_d1_write_path",
+  "scope": [
+    "repository",
+    "public_www",
+    "build_log",
+    "turtle_terraria",
+    "try_it",
+    "daily_build_process"
+  ],
+  "principles": {
+    "canonical_payloads_remain_canonical": true,
+    "raw_private_dialogue_duplicated_into_research_registry": false,
+    "live_d1_persistence_claimed": false,
+    "secrets_inspected_or_inferred": false
+  },
+  "findings": [
+    {
+      "id": "recon-20260912-build-log-drift",
+      "type": "repo_www_divergence",
+      "status": "resolved_in_repository",
+      "summary": "The Worker-side Build Log and asset-first WWW runtime carried separate embedded daily-entry lists, allowing the public history to lag src/buildLog.ts.",
+      "resolution": "Added a read-only /api/build-log endpoint backed by BUILD_LOG_ENTRIES and changed the asset-first runtime to load canonical completed entries from it, retaining an embedded fallback only for endpoint failure.",
+      "canonical_source": "src/buildLog.ts",
+      "related_paths": [
+        "src/buildLog.ts",
+        "src/entry.ts",
+        "public/assets/site-runtime.js"
+      ],
+      "d1_action": "Stage this divergence/resolution as system research history; no live write path was available in this session."
+    },
+    {
+      "id": "recon-20260912-try-it-terraria",
+      "type": "new_research_bearing_behavior",
+      "status": "staged_for_runtime_capture",
+      "summary": "TRY IT now has explicit Human + Turtle Terrarium entry modes and a provenance bridge that can write terraria_runs and terraria_events without copying raw dialogue.",
+      "canonical_source": "public/assets/terraria-try.js",
+      "related_paths": [
+        "public/assets/terraria-try.js",
+        "src/entry.ts",
+        "scripts/validate-terraria-try.mjs"
+      ],
+      "intended_d1_objects": [
+        "terraria_runs",
+        "terraria_events",
+        "research_objects via migration-0007 triggers where applicable"
+      ],
+      "privacy_boundary": "Raw human and Turtle text remains canonical in turtle_turns; Terrarium events carry pointers/context rather than duplicated raw dialogue.",
+      "runtime_dependency": "Requires the relevant Terraria tables to exist in the bound D1 database. Write failure is reported as not stored rather than silently asserted."
+    },
+    {
+      "id": "recon-20260912-d1-sweep-doctrine",
+      "type": "standing_process_change",
+      "status": "represented_in_git_not_confirmed_live_d1",
+      "summary": "The daily build now includes a repository + WWW to D1 reconciliation sweep with represented/backfilled/intentionally-not-captured outcomes.",
+      "canonical_source": "research/D1_RECONCILIATION.md",
+      "related_paths": [
+        "research/D1_RECONCILIATION.md",
+        "scripts/audit-d1-coverage.mjs",
+        "BUILD_IN_PUBLIC.md",
+        ".github/workflows/deploy.yml"
+      ],
+      "d1_action": "Register these public system artifacts and process relationships when an authorized live D1 write path is available."
+    },
+    {
+      "id": "recon-20260912-migration-status",
+      "type": "schema_application_unknown",
+      "status": "open",
+      "summary": "Repository migrations define Terraria and TurtleAsk structures, but this session did not have an authorized live D1 inspection/write path and therefore cannot confirm which migrations are applied remotely.",
+      "related_paths": [
+        "migrations/0007_turtle_terraria_and_exhaustive_tagging.sql",
+        "migrations/0008_seed_terraria_and_autobuild_tags.sql",
+        "migrations/0009_human_tamagotchi_terrarium_and_turtle_ask.sql"
+      ],
+      "required_future_check": "When authorized D1 access is available, inspect migration/schema state before claiming live Terraria/TurtleAsk persistence."
+    }
+  ],
+  "closure": {
+    "capture_batch": "2026-09-12-user-directed-terraria-try-and-reconciliation-expansion",
+    "live_backfill_performed": false,
+    "material_gaps_preserved": true,
+    "next_daily_build_should_reopen_open_findings": true
+  }
+}
