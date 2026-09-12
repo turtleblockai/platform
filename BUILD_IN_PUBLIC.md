@@ -43,15 +43,61 @@ Every daily run should:
 
 1. scan recent primary-source work from OpenAI, NVIDIA, Minecraft / Minecraft Education, and the MIT Media Lab;
 2. compare meaningful signals against the Sanders research ontology and current TurtleBlock architecture;
-3. choose one bounded contribution;
-4. implement it in the most appropriate repository location;
-5. add or run a tiny test or observable success criterion when practical;
-6. write the detailed daily note under `research/daily-build/`;
-7. prepend a concise public entry to `src/buildLog.ts`;
-8. produce structured research metadata for the run: source signals, questions, candidates, rejections, implementation, tests, version judgment, and ontology/CTC tags;
-9. make a conservative version judgment.
+3. sweep the repository and public WWW for meaningful research-bearing artifacts that are missing, stale, or intentionally excluded from D1 representation;
+4. choose one bounded contribution;
+5. implement it in the most appropriate repository location;
+6. add or run a tiny test or observable success criterion when practical;
+7. write the detailed daily note under `research/daily-build/`;
+8. prepend a concise public entry to `src/buildLog.ts`;
+9. produce structured research metadata for the run: source signals, questions, candidates, rejections, implementation, tests, reconciliation findings, version judgment, and ontology/CTC tags;
+10. make a conservative version judgment.
 
 Version numbers are earned by implemented and tested capability, not by calendar cadence.
+
+## Daily D1 reconciliation sweep
+
+The living project should not know something today that the research substrate cannot find tomorrow.
+
+Every daily build therefore includes a bounded **repository + WWW → D1 reconciliation sweep**. The sweep checks whether meaningful research-bearing artifacts, concepts, behaviors, tests, reversals, public pages, Build Log entries, Next Edge records, Terraria/TurtleAsk structures, and consent-safe operational traces are adequately represented, linked, or intentionally excluded in the D1 research substrate.
+
+The goal is not to copy every file or paragraph into D1. Preserve **research identity, provenance, relationships, and discoverability** while leaving the canonical payload where it belongs.
+
+Useful canonical patterns include:
+
+```text
+public/repository artifact → research_object → repo_path / source URI
+private operational record → research_object → source_table / source_id
+```
+
+A meaningful reconciliation candidate should resolve to one of three states:
+
+1. **represented** — D1 already has an adequate object/pointer and supported relationships/tags;
+2. **backfilled** — a safe missing representation was created or strengthened;
+3. **intentionally not captured** — privacy, duplication, unsupported provenance, an unapplied migration, or another explicit boundary prevents capture.
+
+Silence is not a fourth state.
+
+When a live, appropriately authorized D1 write path is available, safely backfill supported records and metadata. When it is not available, never claim that persistence occurred: preserve material gaps in `research/d1-reconciliation/` and/or the daily `.tags.json` staging manifest with enough information to reconcile later.
+
+Do not duplicate raw private dialogue into generalized research text merely to satisfy the sweep. Do not inspect, infer, copy, or publish secret values or private configuration payloads. Meaningful WWW concepts count as research representations; cosmetic copy changes do not require a database row per paragraph.
+
+The standing doctrine is documented in `research/D1_RECONCILIATION.md`; `scripts/audit-d1-coverage.mjs` provides a conservative static repository audit. A missing static declaration is a reconciliation candidate, not proof that live D1 lacks the object.
+
+## Consented TRY IT play
+
+TRY IT is becoming an entry into the Human + Turtle Terrarium rather than merely a demonstration textbox.
+
+When the current explicit Playground research consent boundary is satisfied, the system may preserve:
+
+- the private Turtle session;
+- human and Turtle turns with distinct provenance;
+- WorldSpec revisions;
+- the separately screened Playground research submission;
+- a Human + Turtle Terrarium run/event trace that points back to the canonical operational records without unnecessarily duplicating raw dialogue.
+
+Human play is not automatically public, not automatically approved training/evaluation data, and not automatically evidence of learning. The Terrarium trace describes the interaction context and provenance; it does not transform participation into a learning claim.
+
+The initial TRY IT Terrarium entry modes are intentionally open-ended: **Wander with Turtle**, **Make a world**, and **Throw in something weird**. These are starting conditions, not curricular tracks or learner classifications.
 
 ## Exhaustive tagging rule
 
@@ -84,7 +130,7 @@ something happens
 → keep it queryable
 ```
 
-Tag the **movement** as well as the artifact. A question, machine interpretation, human disagreement, correction, revision, rejected build candidate, failed test, synthetic critique, and final output are distinct research events even when they belong to the same recursive cycle.
+Tag the **movement** as well as the artifact. A question, machine interpretation, human disagreement, correction, revision, rejected build candidate, failed test, synthetic critique, reconciliation gap, and final output are distinct research events even when they belong to the same recursive cycle.
 
 ## Turtle Terraria
 
@@ -114,13 +160,25 @@ Synthetic Turtle self-play, if introduced, must remain explicitly labeled as syn
 
 The Human Tamagotchi Terrarium does not authorize surveillance, inferred availability, simulated human answers, generalized personal memory, or proactive production messaging. A future TurtleAsk implementation must preserve the source inquiry, reason for the ask, surfacing decision, response status, response provenance, and return trajectory when practical.
 
+The D1 reconciliation sweep does not weaken these boundaries. Missing private material is not a defect merely because it is absent from a generalized research table; an intentional privacy boundary is a valid reconciliation outcome.
+
 ## Operational expectation
 
-When code and documentation diverge, treat that as a defect. The website, repository documentation, running platform, research database, and ontology metadata should describe the same current architecture as closely as practical.
+When code and documentation diverge, treat that as a defect. The website, repository documentation, running platform, research database, ontology metadata, and public research trail should describe the same current architecture as closely as practical.
+
+The D1 reconciliation sweep is one defense against that drift. Another is avoiding unnecessary duplicate sources of truth: when the same public state is hard-coded in multiple places, either reconcile them explicitly or refactor toward one canonical source when practical.
 
 ---
 
 ## Build log
+
+### 2026-09-12 — TRY IT enters Turtle Terraria + daily D1 reconciliation
+
+TRY IT now has an initial Human + Turtle Terrarium layer. Visitors can begin by **Wandering with Turtle**, **Making a world**, or **Throwing in something weird**. The same consented conversation engine remains underneath, but the entry mode and habitat are now explicit provenance rather than merely interface copy.
+
+A new `/api/terraria/play` bridge keeps the canonical private session, human/Turtle turns, WorldSpec revisions, and screened Playground submission in their existing stores while adding a Human + Turtle Terrarium run/event trace when D1 is available. Raw dialogue is deliberately not duplicated into the Terrarium event payload.
+
+The daily build also gains a standing D1 reconciliation sweep. `research/D1_RECONCILIATION.md` defines the preservation rule; `scripts/audit-d1-coverage.mjs` provides a conservative repository audit; CI runs the audit and a new Terraria TRY IT contract check. Live D1 backfill remains conditional on an authorized runtime path.
 
 ### 2026-09-11 — Human Tamagotchi Terrarium + TurtleAsk architecture
 
