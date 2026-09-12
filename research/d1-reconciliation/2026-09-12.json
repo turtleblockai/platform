@@ -38,6 +38,7 @@
       "summary": "TRY IT now has explicit Human + Turtle Terrarium entry modes and a provenance bridge that can write terraria_runs and terraria_events without copying raw dialogue.",
       "canonical_source": "public/assets/terraria-try.js",
       "related_paths": [
+        "research/TERRARIA_ENGINE.md",
         "public/assets/terraria-try.js",
         "src/entry.ts",
         "scripts/validate-terraria-try.mjs"
@@ -49,6 +50,14 @@
       ],
       "privacy_boundary": "Raw human and Turtle text remains canonical in turtle_turns; Terrarium events carry pointers/context rather than duplicated raw dialogue.",
       "runtime_dependency": "Requires the relevant Terraria tables to exist in the bound D1 database. Write failure is reported as not stored rather than silently asserted."
+    },
+    {
+      "id": "recon-20260912-terraria-engine-artifact",
+      "type": "new_research_artifact",
+      "status": "represented_in_git_not_confirmed_live_d1",
+      "summary": "The first Terraria Engine is now explicitly defined as a thin orchestration/provenance layer over the existing conversation engine rather than a second chatbot or autonomous agent.",
+      "canonical_source": "research/TERRARIA_ENGINE.md",
+      "d1_action": "Register the public research artifact and relate it to Turtle Terraria, Human + Turtle habitat, consented play, provenance, and current implementation when an authorized live D1 path is available."
     },
     {
       "id": "recon-20260912-d1-sweep-doctrine",
