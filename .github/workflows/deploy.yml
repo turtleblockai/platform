@@ -39,5 +39,8 @@ jobs:
       - name: Validate World Evidence Envelope
         run: npm run validate:world-evidence
 
+      - name: Validate Selective Attention Envelope
+        run: npm run validate:selective-attention
+
       - name: Deployment note
         run: echo "Production deployment is handled by the connected Cloudflare Workers Builds GitHub integration."
