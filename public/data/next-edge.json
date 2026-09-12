@@ -1,26 +1,27 @@
 {
-  "version": "0.4",
-  "updated_at": "2026-09-11",
+  "version": "0.5",
+  "updated_at": "2026-09-12",
   "status": "open_question",
-  "title": "Who decides what Turtle notices?",
-  "question": "Can TurtleBlock AI decide when a world event is worth surfacing to a learner without turning observability into surveillance, every measurement into evaluation, or every surprise into an unsolicited lesson?",
-  "why_now": "The September 11 World Evidence Envelope makes one distinction executable: a computational world may report facts without interpreting their meaning or becoming final authority. That immediately exposes the next power problem. An inhabitable world can generate thousands of potentially observable events, and choosing which ones deserve attention is itself consequential. OpenAI's newest K-12 workflow guidance keeps agentic work reviewable and human-approved; NVIDIA's September 10 workflow shows humans outperforming a solver when they possess context it cannot see; Minecraft Education's Velocity Prize shows that precise local metrics such as capture and elapsed time can be useful learner material; MIT's jam_bot work warns that consequential creative interaction can be improvisational enough that constant measurement or interruption would miss the point. The horizon therefore moves from observation to salience: not whether Turtle can notice, but who authorizes noticing, surfacing, silence, and interruption.",
-  "follows_commit": "31d79c11c2377c31156f5b86dcecbd1b5544e8e4",
-  "follows_commit_role": "latest_completed_build_log_commit_for_2026_09_11_cycle",
+  "title": "Can one shared world hold different foregrounds?",
+  "question": "Can TurtleBlock AI support a shared world in which different collaborators keep distinct attention agendas—and sometimes choose to share or negotiate them—without collapsing everyone into one machine-selected foreground?",
+  "why_now": "The September 12 Selective Attention Envelope makes single-context attention governance inspectable: an observable event is not automatically retained, salient, surfaced, interrupt-worthy, or important; learner-authored watchpoints can authorize interruption; Turtle salience remains a proposal; deliberate silence is valid; and attention cannot expand collection. That immediately exposes the collaborative problem. The same bridge collapse, crowd movement, timing result, or improvised event can matter differently to different people. Minecraft Education continues to emphasize multiple learner strategies and collaborative agent design; NVIDIA's newest workflow shows that participants can possess consequential context unavailable to a model; OpenAI's full-duplex work makes listening, pausing, and interrupting explicit interaction decisions; and MIT's jam_bot work shows reciprocal creative collaboration where timing and foreground are part of the interaction itself. The next horizon is therefore not a smarter shared alert system. It is whether a shared computational world can preserve several legitimate foregrounds at once without Turtle averaging, broadcasting, surveilling, or silently deciding what the group ought to care about.",
+  "follows_commit": "84cdbee2598d94a2b88b1109d5626ec0778dd042",
+  "follows_commit_role": "latest_completed_build_log_commit_for_2026_09_12_cycle",
   "inputs": [
     "current repository and commit state",
-    "September 11 World Evidence Envelope schema and six-case hostile regression suite",
-    "September 11 successful GitHub Actions validation run",
+    "September 12 Selective Attention Envelope schema and eight-case hostile regression suite",
+    "September 12 successful GitHub Actions validation run",
+    "September 11 World Evidence Envelope and selective-noticing residue",
     "September 10 Learner Verification Card and regression suite",
     "BUILD_IN_PUBLIC.md standing process",
     "research/NEXT_EDGE.md horizon doctrine",
-    "Turtle Terraria evidence-class, provenance, and capture-batch boundaries",
+    "Turtle Terraria provenance, evidence-class, privacy, and capture-batch boundaries",
     "Sanders immutable dissertation Dedoose source layer and later ontology layers",
     "seven established Critical Techno Constructivism operational domains",
     "STEAMHAMLET, Purposeful Play, constructionism, Possible Possibles, and Co-active Emergence lineage",
-    "Turtle Charter rules on agency, ambiguity, disagreement, failure, memory, and human judgment",
-    "September 11 primary-source hunt across OpenAI, NVIDIA, Minecraft Education, and MIT Media Lab",
-    "September 11 uncaptured residue concerning instrumentation, environmental agency, and selective noticing",
+    "Turtle Charter rules on agency, disagreement, plurality, reflection, reversibility, and human judgment",
+    "September 12 primary-source hunt across OpenAI, NVIDIA, Minecraft Education, and MIT Media Lab",
+    "September 12 uncaptured residue concerning salience, restraint, bounded project attention, and multiple foregrounds",
     "X factor"
   ],
   "source_classes_consulted": [
@@ -35,126 +36,126 @@
     "test_and_failure_history"
   ],
   "possible_possibles": [
-    "A learner authors explicit watchpoints such as 'tell me if the bridge collapses' while leaving unrelated world telemetry uncollected or unsurfaced.",
-    "Turtle proposes that an event may be worth noticing, explains why, and lets the learner mute, reject, narrow, or revise that attention rule.",
-    "A world event is retained privately for undo or debugging but deliberately never promoted into a learner-facing reflection prompt or research record.",
-    "Collaborators maintain different attention filters so one participant can care about speed while another watches access, congestion, aesthetics, or something no metric currently captures.",
-    "A surprising event becomes surfacing-worthy only because it contradicts a learner-authored hypothesis, not because an anomaly detector declares it interesting.",
-    "A Recursive Turtle Reflector proposes synthetic salience candidates that remain synthetic_self_play and cannot become production attention policy without an external human gate.",
-    "Turtle deliberately notices something and chooses not to interrupt because the learner is in the middle of purposeful play or improvisational making.",
-    "Repeated attention choices reveal that what is easy to measure is quietly becoming what the system treats as important."
+    "Each collaborator keeps a private attention layer over the same shared world and chooses which watchpoints, if any, become visible to others.",
+    "A shared event can surface immediately to one learner, remain silent for another, and be deferred for a third without treating those different foregrounds as inconsistency.",
+    "Collaborators explicitly negotiate a temporary shared watchpoint such as 'tell all of us if the bridge collapses' while unrelated personal attention rules remain private.",
+    "Turtle exposes an attention conflict instead of averaging it: one participant wants speed foregrounded while another wants access, aesthetics, ecological impact, or nothing at all foregrounded.",
+    "A participant can share the reason for a watchpoint without revealing the underlying private project history that made it important.",
+    "A world event becomes a collaborative question only after participants choose to bring their different interpretations or attention priorities into the same conversation.",
+    "A Recursive Turtle Terrarium generates synthetic multi-participant attention conflicts as regression material, clearly labeled synthetic_self_play and unable to promote its own policy.",
+    "The group intentionally keeps no shared foreground at all for a period of purposeful play, allowing each participant to wander before deciding what deserves collective attention."
   ],
-  "x_factor": "whoooo knooooowwwssssssssssss — what if the most intelligent Turtle move is to notice something and deliberately say nothing?",
+  "x_factor": "whoooo knooooowwwssssssssssss — what if the same collapsing bridge is urgent to one learner, delightful to another, and none of Turtle's business to a third?",
   "constraints": [
-    "The Next Edge points beyond the completed World Evidence Envelope and does not merely add more observation fields.",
-    "Learners must be able to authorize, revise, mute, or reject attention rules that affect their experience when practical.",
-    "Observability must not become continuous surveillance by default.",
-    "A measurable event must not gain pedagogical importance merely because it is easy for the machine to detect.",
-    "Turtle may propose salience but must not silently convert its own interests into the learner's purpose or reflection agenda.",
-    "World events, learner interpretations, collaborator interpretations, Turtle interpretations, and synthetic critiques retain distinct provenance and evidence classes.",
-    "Private operational observations are not automatically research data or public artifacts.",
-    "Silence and non-interruption may be legitimate system behavior when surfacing would hijack purposeful play or inquiry.",
+    "The Next Edge points beyond the completed Selective Attention Envelope and does not merely add more single-user attention fields.",
+    "A shared world must not imply a shared attention agenda by default.",
+    "One participant's watchpoint, purpose, interpretation, or urgency must not silently become another participant's curriculum.",
+    "Private attention rules and project history are not automatically visible to collaborators merely because the world is shared.",
+    "Participants should be able to share, revise, withdraw, mute, or negotiate collaborative attention rules when practical.",
+    "Turtle may help expose attention disagreement but must not average meaningful disagreement into synthetic consensus.",
+    "The easiest event to measure must not become the group's most important event by default.",
+    "World events, participant attention rules, Turtle proposals, surfacing decisions, interpretations, and later group decisions retain distinct provenance.",
     "Synthetic self-play remains synthetic_self_play and has no production authority.",
     "No generalized persistent personal memory is introduced by this horizon.",
     "No autonomous production self-modification or self-retraining is authorized.",
-    "Environment configuration may contribute metadata only; secret values are never inspected, inferred, recorded, or published.",
+    "Environment configuration may contribute metadata only; private configuration values are never inspected, inferred, recorded, or published.",
     "New CTC domains remain provisional observations until an explicit human scholarly decision promotes one."
   ],
   "ontology_mappings": [
     {
       "concept_key": "co_active_emergence",
       "role": "primary",
-      "rationale": "Attention is part of reciprocal influence: what Turtle surfaces can alter learner reflection and the next construction, so the surfacing act must remain visible and human-revisable."
+      "rationale": "Several human participants, Turtle, and the shared world may reciprocally alter what becomes meaningful; preserving distinct foregrounds prevents co-active emergence from being reduced to one machine-normalized group state."
     },
     {
       "concept_key": "purposeful_play",
       "role": "primary",
-      "rationale": "Purposeful play can generate meaningful surprise without requiring Turtle to interrupt every observable event or convert play into continuous assessment."
+      "rationale": "Different participants may notice different consequences during shared play, and a group should be able to remain exploratory without Turtle forcing one collective reflection agenda."
     },
     {
       "concept_key": "possible_possibles",
       "role": "supports",
-      "rationale": "Selective noticing should keep unexpected possibilities available without treating every detected anomaly as a mandated next task."
+      "rationale": "Distinct participant foregrounds can preserve several possible directions at once instead of converting shared space into a single ranked task list."
     },
     {
       "concept_key": "machine_responses_as_material_for_evaluation",
       "role": "tests",
-      "rationale": "Turtle's decision to surface or withhold an observation becomes itself inspectable material rather than invisible pedagogical authority."
+      "rationale": "Turtle's choices about whose watchpoint to surface, defer, or mediate should themselves remain inspectable rather than becoming invisible group authority."
     },
     {
       "concept_key": "invisible_ideas_become_visible_and_manipulable",
       "role": "supports",
-      "rationale": "Attention rules can make otherwise hidden system judgments about relevance visible enough for learners and researchers to inspect and revise."
+      "rationale": "Participant-specific attention priorities and conflicts can become explicit enough to inspect and negotiate without forcing their private rationale into a public shared state."
     },
     {
       "concept_key": "steamhamlet",
-      "role": "supports",
-      "rationale": "A room of possibilities should permit wandering, juxtaposition, surprise, and learner-directed attention rather than having the environment narrate every consequence for its inhabitants."
+      "role": "primary",
+      "rationale": "A room of possibilities is richer when several inhabitants can move through the same environment with different questions and foregrounds rather than receiving one system-authored narration."
     },
     {
       "concept_key": "cohabitation_without_provenance_collapse",
-      "role": "operationalizes",
-      "rationale": "A surfaced observation must distinguish the world event, the attention rule that selected it, the actor who authored that rule, and any later human or machine interpretation."
+      "role": "primary",
+      "rationale": "A shared world can hold many participant attention rules only if authorship, privacy, evidence class, surfacing decisions, and later negotiation remain distinguishable."
     },
     {
       "concept_key": "recursive_learning_loop",
       "role": "supports",
-      "rationale": "A noticed event may feed reflection and revision, but the loop should remain contingent on learner purpose rather than an automatic machine-triggered lesson cycle."
+      "rationale": "Different participants may enter reflection and revision from different events or at different times; the recursive loop need not synchronize everyone into one machine-selected moment."
     }
   ],
   "ctc_mappings": [
     {
       "domain": "Personal Inquiry",
       "role": "primary",
-      "rationale": "The learner's question and purpose should strongly shape what counts as worth surfacing rather than Turtle imposing an independent attention agenda."
+      "rationale": "A shared environment should preserve each participant's ability to pursue and revise their own inquiry rather than letting shared infrastructure overwrite individual purpose."
     },
     {
       "domain": "Compelling Problem or Question",
       "role": "supports",
-      "rationale": "A genuinely surprising event can produce a better question, but the system should not manufacture significance from every anomaly."
+      "rationale": "An event can become a collective problem when participants choose to bring it into shared inquiry, while remaining irrelevant or differently meaningful to others."
     },
     {
       "domain": "Technology as Tool to Think With",
       "role": "primary",
-      "rationale": "Inspectable attention rules can make computational noticing a tool learners think with instead of an opaque surveillance or evaluation layer."
+      "rationale": "Inspectable participant-specific and shared attention layers could make the computational foreground itself a manipulable object-to-think-with rather than an opaque group recommendation engine."
     },
     {
       "domain": "Formative Demonstration of Learning",
       "role": "supports",
-      "rationale": "Learner-authored watchpoints and later revisions could reveal changing hypotheses and interests without equating machine-collected telemetry with learning evidence."
+      "rationale": "Changes in what collaborators choose to watch, share, dispute, or ignore may eventually expose evolving inquiry, but those system records are not automatically evidence that learning occurred."
     },
     {
       "domain": "Reflection as Learning",
       "role": "primary",
-      "rationale": "Surfacing should invite reflection when relevant while preserving the learner's right not to be interrupted or pushed into reflection on the machine's timetable."
+      "rationale": "Collaborators should be able to reflect on different observations and on the disagreement among their foregrounds without Turtle imposing a single reflective timetable or conclusion."
     },
     {
       "domain": "Social and Cultural Critique",
       "role": "primary",
-      "rationale": "Choosing what to measure and surface is a power-laden design act that can privilege speed, efficiency, visibility, compliance, or other values unless those choices are inspectable and contestable."
+      "rationale": "Shared attention governance makes power visible: whose concerns are broadcast, whose remain private, which metrics dominate, and who gets interrupted are socially consequential design choices."
     },
     {
       "domain": "Sharing and Collaborating",
-      "role": "supports",
-      "rationale": "Different collaborators may legitimately attend to different consequences of the same world, and the system should preserve those differences rather than impose one shared salience filter."
+      "role": "primary",
+      "rationale": "The horizon directly asks how collaborators can intentionally share or negotiate attention while preserving difference, privacy, disagreement, and authorship."
     }
   ],
   "uncaptured_residue": [
     {
-      "observation": "Attention governance may be a cross-cutting epistemic and power layer: the system can preserve perfect provenance for observed events while still shaping inquiry through what it chooses to surface or ignore.",
-      "reason_unmapped": "The seven established CTC domains can critique and contextualize attention choices but do not directly name the infrastructure that selects which potential evidence enters awareness.",
+      "observation": "Collaborative attention has both individual and collective states: the same event may be privately salient, jointly salient, or deliberately unshared, and those states may change without the world event itself changing.",
+      "reason_unmapped": "The seven CTC domains describe inquiry, reflection, critique, and collaboration but do not directly specify a privacy-aware foreground layer that can be individual and collective at the same time.",
       "candidate_domain": null,
       "status": "open"
     },
     {
-      "observation": "Deliberate non-interruption is meaningful agent behavior but is difficult to preserve as research data without creating an infinite audit of everything Turtle could have said but did not say.",
-      "reason_unmapped": "Capture-batch closure handles recorded events well; absence, restraint, and unrealized interventions are a different representational problem.",
+      "observation": "Negotiating a shared foreground may itself become a learning artifact, but forcing every attention disagreement into explicit negotiation could burden collaboration and destroy the value of tacit wandering.",
+      "reason_unmapped": "This tension sits between Sharing and Collaborating, Personal Inquiry, and purposeful play; it may be a design principle rather than a new learner-development domain.",
       "candidate_domain": null,
       "status": "open"
     },
     {
-      "observation": "Instrumentation can shape curriculum before any interpretation occurs because easy-to-measure variables may become disproportionately visible and therefore disproportionately important.",
-      "reason_unmapped": "This is partly Social and Cultural Critique and partly a technical affordance problem, but its status as a recurring relationship among measurement, visibility, and pedagogical attention remains unresolved.",
+      "observation": "A participant may wish to reveal that an event matters without revealing why it matters, creating a provenance requirement for selective disclosure rather than simple public/private classification.",
+      "reason_unmapped": "Current privacy classes describe an object's visibility but do not yet model partial disclosure of attention rationale inside a shared inquiry.",
       "candidate_domain": null,
       "status": "open"
     }
@@ -165,18 +166,18 @@
     "selection_method": "machine_synthesis_from_authorized_project_ecology_with_human_override_preserved",
     "actor": "turtle_daily_build",
     "model": "GPT-5.6 Sol",
-    "generated_at": "2026-09-11T01:46:00Z",
+    "generated_at": "2026-09-12T02:30:00Z",
     "primary_sources": [
       {
-        "publisher": "OpenAI Academy",
+        "publisher": "OpenAI",
         "date": "2026-09-10",
-        "title": "ChatGPT Edu 102 for K-12",
-        "url": "https://academy.openai.com/public/clubs/k-12-education-aacga/events/chatgpt-edu-102-for-k-12-8as21sxvmc"
+        "title": "Build more natural voice experiences with GPT-Live-1 in the API",
+        "url": "https://openai.com/index/introducing-gpt-live-1-in-the-api/"
       },
       {
         "publisher": "OpenAI",
         "date": "2026-09-08",
-        "title": "On the Navier–Stokes Millennium Prize Problem",
+        "title": "An OpenAI model proposes a solution to the Navier-Stokes problem",
         "url": "https://openai.com/index/navier-stokes-solution/"
       },
       {
@@ -187,7 +188,13 @@
       },
       {
         "publisher": "Minecraft Education",
-        "date": "accessed 2026-09-11; challenge opens 2026-10",
+        "date": "2026-04-01",
+        "title": "Mini Agent Mission",
+        "url": "https://education.minecraft.net/en-us/challenges/mini-agent-mission"
+      },
+      {
+        "publisher": "Minecraft Education",
+        "date": "accessed 2026-09-12; challenge opens 2026-10",
         "title": "The Velocity Prize",
         "url": "https://education.minecraft.net/en-us/discover/velocity-prize"
       },
@@ -196,6 +203,12 @@
         "date": "2026-09-04",
         "title": "Jordan Rudess + jam_bot: A Human-AI Musical Dialogue",
         "url": "https://www.media.mit.edu/posts/media-alert/"
+      },
+      {
+        "publisher": "MIT Media Lab",
+        "date": "2026-08-10",
+        "title": "A tiny AI listens for Patagonia's giant bumblebee",
+        "url": "https://www.media.mit.edu/posts/a-tiny-ai-listens-for-patagonia-s-giant-bumblebee/"
       }
     ]
   },
