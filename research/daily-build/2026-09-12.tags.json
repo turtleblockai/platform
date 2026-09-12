@@ -1,0 +1,1163 @@
+{
+  "schema": "turtleblockai.daily-build-tags.v0.1",
+  "date": "2026-09-12",
+  "ontology_version": "sanders-ontology-v0.1",
+  "autobuild_run_id": "autobuild-2026-09-12",
+  "principles": {
+    "multi_tag": true,
+    "preserve_unmapped_residue": true,
+    "immutable_dissertation_source_layer": true,
+    "synthetic_is_not_human_evidence": true,
+    "ctc_domain_promotion_requires_human_scholarly_decision": true,
+    "human_override_preserved": true,
+    "observable_is_not_interrupt_worthy": true,
+    "learner_attention_is_revisable": true,
+    "machine_salience_is_proposal": true,
+    "non_interruption_is_valid": true,
+    "attention_does_not_expand_collection": true,
+    "machine_final_authority": false,
+    "reversible": true,
+    "no_generalized_persistent_personal_memory": true,
+    "no_autonomous_production_self_modification": true
+  },
+  "run": {
+    "trigger_type": "manual",
+    "status": "completed",
+    "version_before": "0.1.0",
+    "version_after": "0.1.0",
+    "selected_contribution": "Provisional Selective Attention Envelope v0.1 research contract plus eight-case deterministic hostile regression suite",
+    "human_review_state": "not_reviewed",
+    "detailed_note_path": "research/daily-build/2026-09-12.md",
+    "public_log_entry_id": "2026-09-12-selective-attention-envelope",
+    "model": "GPT-5.6 Sol",
+    "privacy_class": "public",
+    "evidence_class": "system_record",
+    "capture_batch_closed": true,
+    "d1_persistence": "staged_only_no_authorized_live_write_action",
+    "r2_consultation": "not_available_in_active_task_context"
+  },
+  "research_objects": [
+    {
+      "id": "autobuild_run:autobuild-2026-09-12",
+      "object_type": "autobuild_run",
+      "title": "September 12 bounded TurtleBlock AI build-in-public cycle",
+      "actor": "turtle",
+      "evidence_class": "system_record",
+      "privacy_class": "public",
+      "model": "GPT-5.6 Sol",
+      "version": "0.1.0"
+    },
+    {
+      "id": "human_direction:2026-09-12-daily-build-standing-rule",
+      "object_type": "human_direction",
+      "title": "Run one bounded daily build under the research, tagging, Next Edge, Terraria, agency, privacy, and conservative-version rules",
+      "actor": "human",
+      "evidence_class": "human_authored",
+      "privacy_class": "internal",
+      "raw_text_published": false
+    },
+    {
+      "id": "source_signal:2026-09-12-openai-research-index",
+      "object_type": "external_source_signal",
+      "title": "OpenAI Research index still lists September 8 Navier-Stokes as newest research publication while September 10 GPT-Live-1 is the newest listed product item",
+      "source_uri": "https://openai.com/research/index/",
+      "external_date": "2026-09-12-accessed",
+      "actor": "external_source",
+      "evidence_class": "external_source",
+      "privacy_class": "public",
+      "relevance": "freshness_check"
+    },
+    {
+      "id": "source_signal:2026-09-12-openai-gpt-live-api",
+      "object_type": "external_source_signal",
+      "title": "OpenAI GPT-Live-1 treats pauses, interruption handling, silence, and listening as explicit interaction behavior",
+      "source_uri": "https://openai.com/index/introducing-gpt-live-1-in-the-api/",
+      "external_date": "2026-09-10",
+      "actor": "external_source",
+      "evidence_class": "external_source",
+      "privacy_class": "public"
+    },
+    {
+      "id": "source_signal:2026-09-12-openai-gpt-live-continuous",
+      "object_type": "external_source_signal",
+      "title": "OpenAI GPT-Live continuous interaction repeatedly decides whether to speak, listen, pause, interrupt, or invoke a tool",
+      "source_uri": "https://openai.com/index/introducing-gpt-live/",
+      "external_date": "2026-07-08",
+      "actor": "external_source",
+      "evidence_class": "external_source",
+      "privacy_class": "public"
+    },
+    {
+      "id": "source_signal:2026-09-12-nvidia-supply-chain",
+      "object_type": "external_source_signal",
+      "title": "NVIDIA and Palantir separate solver output from human context, rationale, override, decision, and actual outcome",
+      "source_uri": "https://developer.nvidia.com/blog/from-wafer-out-to-first-token-codifying-supply-chain-expertise-with-nemotron-and-palantir-foundry/",
+      "external_date": "2026-09-10",
+      "actor": "external_source",
+      "evidence_class": "external_source",
+      "privacy_class": "public"
+    },
+    {
+      "id": "source_signal:2026-09-12-minecraft-mini-agent",
+      "object_type": "external_source_signal",
+      "title": "Minecraft Education Mini Agent Mission begins agent sensing and action from learner-selected school or community problems",
+      "source_uri": "https://education.minecraft.net/en-us/challenges/mini-agent-mission",
+      "external_date": "2026-04-01",
+      "actor": "external_source",
+      "evidence_class": "external_source",
+      "privacy_class": "public"
+    },
+    {
+      "id": "source_signal:2026-09-12-minecraft-velocity",
+      "object_type": "external_source_signal",
+      "title": "Minecraft Education Velocity Prize combines measurable local outcomes with multiple learner strategies and experimentation",
+      "source_uri": "https://education.minecraft.net/en-us/discover/velocity-prize",
+      "external_date": null,
+      "accessed_at": "2026-09-12",
+      "source_note": "Page states challenge opens October 2026.",
+      "actor": "external_source",
+      "evidence_class": "external_source",
+      "privacy_class": "public"
+    },
+    {
+      "id": "source_signal:2026-09-12-mit-jambot",
+      "object_type": "external_source_signal",
+      "title": "MIT Media Lab jam_bot frames live human-AI improvisation around expanding human creative possibility",
+      "source_uri": "https://www.media.mit.edu/posts/media-alert/",
+      "external_date": "2026-09-04",
+      "actor": "external_source",
+      "evidence_class": "external_source",
+      "privacy_class": "public"
+    },
+    {
+      "id": "source_signal:2026-09-12-mit-buzzcam",
+      "object_type": "external_source_signal",
+      "title": "MIT Media Lab BuzzCam separates continuous acoustic input, on-device detection, selective logging, and selective recording around a tightly defined research purpose",
+      "source_uri": "https://www.media.mit.edu/posts/a-tiny-ai-listens-for-patagonia-s-giant-bumblebee/",
+      "external_date": "2026-08-10",
+      "actor": "external_source",
+      "evidence_class": "external_source",
+      "privacy_class": "public"
+    },
+    {
+      "id": "question:2026-09-12-inherited-next-edge",
+      "object_type": "autobuild_question",
+      "title": "Can Turtle decide when a world event is worth surfacing without turning observability into surveillance, measurement into evaluation, or surprise into an unsolicited lesson?",
+      "actor": "turtle",
+      "evidence_class": "system_record",
+      "privacy_class": "public"
+    },
+    {
+      "id": "question:2026-09-12-observable-vs-interrupt-worthy",
+      "object_type": "autobuild_question",
+      "title": "How can Turtle represent retention, salience, surfacing, interruption, and silence without treating observability as authority?",
+      "actor": "turtle",
+      "evidence_class": "system_record",
+      "privacy_class": "public"
+    },
+    {
+      "id": "candidate:2026-09-12-live-attention-controls",
+      "object_type": "autobuild_candidate",
+      "title": "Add live learner-facing attention controls",
+      "decision": "rejected_for_today",
+      "rejection_reason": "A learner-facing UI would prematurely imply that attention semantics have earned production status before hostile evaluation.",
+      "actor": "turtle",
+      "evidence_class": "system_record",
+      "privacy_class": "public"
+    },
+    {
+      "id": "candidate:2026-09-12-merge-world-evidence",
+      "object_type": "autobuild_candidate",
+      "title": "Add attention fields directly to the World Evidence Envelope",
+      "decision": "rejected_for_today",
+      "rejection_reason": "Observation and attention are distinct layers; merging them would make every observed event look inherently retention- or surfacing-worthy and destabilize the passing September 11 contract.",
+      "actor": "turtle",
+      "evidence_class": "system_record",
+      "privacy_class": "public"
+    },
+    {
+      "id": "candidate:2026-09-12-live-telemetry",
+      "object_type": "autobuild_candidate",
+      "title": "Implement continuous Minecraft telemetry and anomaly detection",
+      "decision": "rejected_for_today",
+      "rejection_reason": "Collection machinery should not precede authority, privacy, retention, and learner-attention governance.",
+      "actor": "turtle",
+      "evidence_class": "system_record",
+      "privacy_class": "public"
+    },
+    {
+      "id": "candidate:2026-09-12-infer-learner-state",
+      "object_type": "autobuild_candidate",
+      "title": "Infer learner flow, boredom, confusion, or engagement automatically",
+      "decision": "rejected",
+      "rejection_reason": "Those are semantic interpretations of a person rather than neutral world observations and would create substantial privacy, authorship, and agency problems.",
+      "actor": "turtle",
+      "evidence_class": "system_record",
+      "privacy_class": "public"
+    },
+    {
+      "id": "candidate:2026-09-12-recursive-salience",
+      "object_type": "autobuild_candidate",
+      "title": "Run Recursive Turtle self-play to rank noteworthy events",
+      "decision": "rejected_for_today",
+      "rejection_reason": "Synthetic salience is unnecessary to establish the single-context attention contract and would require explicit synthetic_self_play provenance plus an external human production gate.",
+      "actor": "turtle",
+      "evidence_class": "system_record",
+      "privacy_class": "public"
+    },
+    {
+      "id": "candidate:2026-09-12-persistent-memory",
+      "object_type": "autobuild_candidate",
+      "title": "Add generalized persistent personal memory to learn attention preferences",
+      "decision": "rejected",
+      "rejection_reason": "Project-local watchpoints do not authorize a generalized cross-project behavioral profile; persistent personal memory carries separate v0.3 consent, deletion, identity, and privacy questions.",
+      "actor": "turtle",
+      "evidence_class": "system_record",
+      "privacy_class": "public"
+    },
+    {
+      "id": "selection:2026-09-12-selective-attention-envelope",
+      "object_type": "autobuild_selection",
+      "title": "Select Selective Attention Envelope v0.1 plus eight-case hostile regression suite",
+      "actor": "turtle",
+      "evidence_class": "system_record",
+      "privacy_class": "public"
+    },
+    {
+      "id": "implementation_decision:2026-09-12-reference-not-duplicate",
+      "object_type": "implementation_decision",
+      "title": "Reference an existing world event instead of duplicating its content inside attention records",
+      "decision": "accepted_for_experimental_contract",
+      "actor": "turtle",
+      "evidence_class": "system_record",
+      "privacy_class": "public"
+    },
+    {
+      "id": "implementation_decision:2026-09-12-learner-authorized-interruption",
+      "object_type": "implementation_decision",
+      "title": "Require active learner-authored attention authority for interruptive immediate surfacing",
+      "decision": "accepted_for_experimental_contract",
+      "actor": "turtle",
+      "evidence_class": "system_record",
+      "privacy_class": "public"
+    },
+    {
+      "id": "implementation_decision:2026-09-12-silence-valid",
+      "object_type": "implementation_decision",
+      "title": "Represent remain_silent as a valid explicit attention decision",
+      "decision": "accepted_for_experimental_contract",
+      "actor": "turtle",
+      "evidence_class": "system_record",
+      "privacy_class": "public"
+    },
+    {
+      "id": "implementation_decision:2026-09-12-no-collection-expansion",
+      "object_type": "implementation_decision",
+      "title": "Forbid the attention wrapper from authorizing new sensing or collection",
+      "decision": "accepted_for_experimental_contract",
+      "actor": "turtle",
+      "evidence_class": "system_record",
+      "privacy_class": "public"
+    },
+    {
+      "id": "implementation_decision:2026-09-12-machine-proposal-only",
+      "object_type": "implementation_decision",
+      "title": "Keep Turtle and synthetic salience proposals non-authoritative and human-revisable",
+      "decision": "accepted_for_experimental_contract",
+      "actor": "turtle",
+      "evidence_class": "system_record",
+      "privacy_class": "public"
+    },
+    {
+      "id": "implementation_decision:2026-09-12-project-default-conservative",
+      "object_type": "implementation_decision",
+      "title": "Forbid project defaults from silently enabling interruptible mode",
+      "decision": "accepted_for_experimental_contract",
+      "actor": "turtle",
+      "evidence_class": "system_record",
+      "privacy_class": "public"
+    },
+    {
+      "id": "repo_change:2026-09-12-attention-schema",
+      "object_type": "repo_change",
+      "title": "Create Selective Attention Envelope v0.1 schema",
+      "repo_path": "worldspec/schema/selective-attention-envelope.schema.json",
+      "commit_sha": "a6c7839656aa2239c8551b51e8515354916c0baf",
+      "change_type": "create",
+      "evidence_class": "system_record",
+      "privacy_class": "public"
+    },
+    {
+      "id": "repo_change:2026-09-12-attention-cases",
+      "object_type": "repo_change",
+      "title": "Create eight Selective Attention Envelope hostile regression cases",
+      "repo_path": "worldspec/tests/selective-attention-envelope-cases.json",
+      "commit_sha": "7acd8dff720978cdb00d7117f6a80da7864991ca",
+      "change_type": "create",
+      "evidence_class": "system_record",
+      "privacy_class": "public"
+    },
+    {
+      "id": "repo_change:2026-09-12-attention-validator",
+      "object_type": "repo_change",
+      "title": "Create deterministic Selective Attention Envelope validator",
+      "repo_path": "scripts/validate-selective-attention-envelope.mjs",
+      "commit_sha": "03a1eb16755000b7e79bb46b8d10aa70c4fbbb7c",
+      "change_type": "create",
+      "evidence_class": "system_record",
+      "privacy_class": "public"
+    },
+    {
+      "id": "repo_change:2026-09-12-package-command",
+      "object_type": "repo_change",
+      "title": "Expose Selective Attention validation command",
+      "repo_path": "package.json",
+      "commit_sha": "cf34d9701cf16638f2b859bbaef51c809b150b23",
+      "change_type": "update",
+      "evidence_class": "system_record",
+      "privacy_class": "public"
+    },
+    {
+      "id": "repo_change:2026-09-12-ci-suite",
+      "object_type": "repo_change",
+      "title": "Run Selective Attention validation in GitHub Actions",
+      "repo_path": ".github/workflows/deploy.yml",
+      "commit_sha": "80860045bbf7231870e13ef77b140c9a8243bdbc",
+      "change_type": "update",
+      "evidence_class": "system_record",
+      "privacy_class": "public"
+    },
+    {
+      "id": "test:2026-09-12-selective-attention-suite",
+      "object_type": "test",
+      "title": "Selective Attention Envelope eight-case regression suite",
+      "test_command": "npm run validate:selective-attention",
+      "status": "passed",
+      "run_id": "34667740528",
+      "head_sha": "80860045bbf7231870e13ef77b140c9a8243bdbc",
+      "result": "Three intentionally valid envelopes accepted; five hostile authority/privacy/provenance/interruption/collection envelopes rejected for the intended reason.",
+      "evidence_class": "system_record",
+      "privacy_class": "public"
+    },
+    {
+      "id": "test_case:2026-09-12-learner-watchpoint",
+      "object_type": "synthetic_regression_case",
+      "title": "Active learner-authored bridge-collapse watchpoint permits bounded interruption",
+      "status": "passed_as_valid_fixture",
+      "actor": "system",
+      "evidence_class": "system_record",
+      "privacy_class": "public",
+      "human_learning_evidence": false
+    },
+    {
+      "id": "test_case:2026-09-12-deliberate-silence",
+      "object_type": "synthetic_regression_case",
+      "title": "Learner-requested uninterrupted making permits Turtle to notice and deliberately remain silent",
+      "status": "passed_as_valid_fixture",
+      "actor": "system",
+      "evidence_class": "system_record",
+      "privacy_class": "public",
+      "human_learning_evidence": false
+    },
+    {
+      "id": "test_case:2026-09-12-turtle-proposal-defer",
+      "object_type": "synthetic_regression_case",
+      "title": "Turtle may propose attention and defer without learner interruption authority",
+      "status": "passed_as_valid_fixture",
+      "actor": "system",
+      "evidence_class": "system_record",
+      "privacy_class": "public",
+      "human_learning_evidence": false
+    },
+    {
+      "id": "test_case:2026-09-12-unsolicited-interruption",
+      "object_type": "synthetic_regression_case",
+      "title": "Turtle proposal cannot self-authorize an interruptive surface",
+      "status": "rejected_as_intended",
+      "actor": "system",
+      "evidence_class": "system_record",
+      "privacy_class": "public",
+      "human_learning_evidence": false
+    },
+    {
+      "id": "test_case:2026-09-12-default-interruptible",
+      "object_type": "synthetic_regression_case",
+      "title": "Project default cannot silently enable interruptible mode",
+      "status": "rejected_as_intended",
+      "actor": "system",
+      "evidence_class": "system_record",
+      "privacy_class": "public",
+      "human_learning_evidence": false
+    },
+    {
+      "id": "test_case:2026-09-12-synthetic-execution",
+      "object_type": "synthetic_regression_case",
+      "title": "Synthetic Turtle proposal cannot execute a production attention action",
+      "status": "rejected_as_intended",
+      "actor": "system",
+      "evidence_class": "system_record",
+      "privacy_class": "public",
+      "human_learning_evidence": false
+    },
+    {
+      "id": "test_case:2026-09-12-private-public-broadcast",
+      "object_type": "synthetic_regression_case",
+      "title": "Private source-event attention cannot escalate into public broadcast",
+      "status": "rejected_as_intended",
+      "actor": "system",
+      "evidence_class": "system_record",
+      "privacy_class": "public",
+      "human_learning_evidence": false
+    },
+    {
+      "id": "test_case:2026-09-12-collection-expansion",
+      "object_type": "synthetic_regression_case",
+      "title": "Attention wrapper cannot authorize broader sensing or collection",
+      "status": "rejected_as_intended",
+      "actor": "system",
+      "evidence_class": "system_record",
+      "privacy_class": "public",
+      "human_learning_evidence": false
+    },
+    {
+      "id": "test:2026-09-12-typecheck",
+      "object_type": "test",
+      "title": "Repository TypeScript typecheck",
+      "test_command": "npm run typecheck",
+      "status": "passed",
+      "run_id": "34667740528",
+      "head_sha": "80860045bbf7231870e13ef77b140c9a8243bdbc",
+      "evidence_class": "system_record",
+      "privacy_class": "public"
+    },
+    {
+      "id": "test:2026-09-12-next-edge-contract",
+      "object_type": "test",
+      "title": "Existing Next Edge contract remained valid during contribution test",
+      "test_command": "npm run validate:next-edge",
+      "status": "passed",
+      "run_id": "34667740528",
+      "head_sha": "80860045bbf7231870e13ef77b140c9a8243bdbc",
+      "evidence_class": "system_record",
+      "privacy_class": "public"
+    },
+    {
+      "id": "test:2026-09-12-learner-verification-contract",
+      "object_type": "test",
+      "title": "Learner Verification contract remained valid during contribution test",
+      "test_command": "npm run validate:learner-verification",
+      "status": "passed",
+      "run_id": "34667740528",
+      "head_sha": "80860045bbf7231870e13ef77b140c9a8243bdbc",
+      "evidence_class": "system_record",
+      "privacy_class": "public"
+    },
+    {
+      "id": "test:2026-09-12-world-evidence-contract",
+      "object_type": "test",
+      "title": "World Evidence contract remained valid during contribution test",
+      "test_command": "npm run validate:world-evidence",
+      "status": "passed",
+      "run_id": "34667740528",
+      "head_sha": "80860045bbf7231870e13ef77b140c9a8243bdbc",
+      "evidence_class": "system_record",
+      "privacy_class": "public"
+    },
+    {
+      "id": "terraria_observation:2026-09-12-no-recursive-run",
+      "object_type": "terraria_observation",
+      "title": "No Recursive Turtle self-play run was executed; synthetic Turtle fixture remains deterministic test data only",
+      "actor": "turtle",
+      "evidence_class": "system_record",
+      "privacy_class": "public",
+      "human_learning_evidence": false
+    },
+    {
+      "id": "version_judgment:2026-09-12",
+      "object_type": "version_judgment",
+      "title": "Remain at v0.1.0",
+      "decision": "no_version_bump",
+      "rationale": "The contribution expands the repeatable evaluation set and makes another Charter/ontology boundary executable, but v0.2 still requires ontology, model/config behavior, evaluation, and research-to-change history to operate coherently as one system.",
+      "evidence_class": "system_record",
+      "privacy_class": "public"
+    },
+    {
+      "id": "persistence_decision:2026-09-12-d1-staging",
+      "object_type": "persistence_decision",
+      "title": "Use lossless tags JSON staging because no authorized live D1 write action is available",
+      "decision": "stage_json_only",
+      "actor": "turtle",
+      "evidence_class": "system_record",
+      "privacy_class": "public"
+    },
+    {
+      "id": "public_note:2026-09-12-daily-build",
+      "object_type": "research_note",
+      "title": "September 12 daily build research note",
+      "repo_path": "research/daily-build/2026-09-12.md",
+      "commit_sha": "ab61b8374ec4ca01c953ea7b6c33184a9ca35603",
+      "evidence_class": "system_record",
+      "privacy_class": "public"
+    },
+    {
+      "id": "build_log_entry:2026-09-12-selective-attention-envelope",
+      "object_type": "build_log_entry",
+      "title": "Turtle learns that noticing is not the same as interrupting",
+      "repo_path": "src/buildLog.ts",
+      "commit_sha": "84cdbee2598d94a2b88b1109d5626ec0778dd042",
+      "evidence_class": "system_record",
+      "privacy_class": "public"
+    },
+    {
+      "id": "next_edge:2026-09-12-plural-attention",
+      "object_type": "next_edge",
+      "title": "Can one shared world hold different foregrounds?",
+      "repo_path": "public/data/next-edge.json",
+      "commit_sha": "3fe67c044f862e611d81c6fe8e8db5ab40642c70",
+      "evidence_class": "system_record",
+      "privacy_class": "public"
+    },
+    {
+      "id": "repo_change:2026-09-12-next-edge-fallback",
+      "object_type": "repo_change",
+      "title": "Align Worker-side Next Edge fallback with September 12 horizon",
+      "repo_path": "src/buildLog.ts",
+      "commit_sha": "010c4d177c4a1a10d93c05b741da4cee891d261e",
+      "change_type": "update",
+      "evidence_class": "system_record",
+      "privacy_class": "public"
+    }
+  ],
+  "relationships": [
+    {
+      "subject": "human_direction:2026-09-12-daily-build-standing-rule",
+      "predicate": "authorized",
+      "object": "autobuild_run:autobuild-2026-09-12",
+      "rationale": "The human standing instruction authorizes a bounded build while retaining human review and override."
+    },
+    {
+      "subject": "autobuild_run:autobuild-2026-09-12",
+      "predicate": "consulted",
+      "object": "source_signal:2026-09-12-openai-gpt-live-api",
+      "rationale": "Explicit pause, interruption, and silence behavior informed the distinction between noticing and speaking."
+    },
+    {
+      "subject": "autobuild_run:autobuild-2026-09-12",
+      "predicate": "consulted",
+      "object": "source_signal:2026-09-12-nvidia-supply-chain",
+      "rationale": "Missing human context and inspectable overrides reinforced that machine salience cannot be final authority."
+    },
+    {
+      "subject": "autobuild_run:autobuild-2026-09-12",
+      "predicate": "consulted",
+      "object": "source_signal:2026-09-12-minecraft-mini-agent",
+      "rationale": "The lesson begins sensing/action from learner-selected purpose rather than treating sensing as self-justifying."
+    },
+    {
+      "subject": "autobuild_run:autobuild-2026-09-12",
+      "predicate": "consulted",
+      "object": "source_signal:2026-09-12-mit-jambot",
+      "rationale": "Improvisational collaboration supplied a negative case against constant interruption."
+    },
+    {
+      "subject": "autobuild_run:autobuild-2026-09-12",
+      "predicate": "consulted",
+      "object": "source_signal:2026-09-12-mit-buzzcam",
+      "rationale": "Selective on-device recognition demonstrated that detection, retention, and recording can be separate decisions under an explicit purpose."
+    },
+    {
+      "subject": "question:2026-09-12-inherited-next-edge",
+      "predicate": "generated",
+      "object": "question:2026-09-12-observable-vs-interrupt-worthy"
+    },
+    {
+      "subject": "question:2026-09-12-observable-vs-interrupt-worthy",
+      "predicate": "generated_candidate",
+      "object": "candidate:2026-09-12-live-attention-controls"
+    },
+    {
+      "subject": "question:2026-09-12-observable-vs-interrupt-worthy",
+      "predicate": "generated_candidate",
+      "object": "candidate:2026-09-12-merge-world-evidence"
+    },
+    {
+      "subject": "question:2026-09-12-observable-vs-interrupt-worthy",
+      "predicate": "generated_candidate",
+      "object": "candidate:2026-09-12-live-telemetry"
+    },
+    {
+      "subject": "question:2026-09-12-observable-vs-interrupt-worthy",
+      "predicate": "generated_candidate",
+      "object": "candidate:2026-09-12-infer-learner-state"
+    },
+    {
+      "subject": "question:2026-09-12-observable-vs-interrupt-worthy",
+      "predicate": "generated_candidate",
+      "object": "candidate:2026-09-12-recursive-salience"
+    },
+    {
+      "subject": "question:2026-09-12-observable-vs-interrupt-worthy",
+      "predicate": "generated_candidate",
+      "object": "candidate:2026-09-12-persistent-memory"
+    },
+    {
+      "subject": "question:2026-09-12-observable-vs-interrupt-worthy",
+      "predicate": "resolved_by",
+      "object": "selection:2026-09-12-selective-attention-envelope"
+    },
+    {
+      "subject": "selection:2026-09-12-selective-attention-envelope",
+      "predicate": "constrained_by",
+      "object": "implementation_decision:2026-09-12-reference-not-duplicate"
+    },
+    {
+      "subject": "selection:2026-09-12-selective-attention-envelope",
+      "predicate": "constrained_by",
+      "object": "implementation_decision:2026-09-12-learner-authorized-interruption"
+    },
+    {
+      "subject": "selection:2026-09-12-selective-attention-envelope",
+      "predicate": "constrained_by",
+      "object": "implementation_decision:2026-09-12-silence-valid"
+    },
+    {
+      "subject": "selection:2026-09-12-selective-attention-envelope",
+      "predicate": "constrained_by",
+      "object": "implementation_decision:2026-09-12-no-collection-expansion"
+    },
+    {
+      "subject": "selection:2026-09-12-selective-attention-envelope",
+      "predicate": "implemented_by",
+      "object": "repo_change:2026-09-12-attention-schema"
+    },
+    {
+      "subject": "selection:2026-09-12-selective-attention-envelope",
+      "predicate": "implemented_by",
+      "object": "repo_change:2026-09-12-attention-cases"
+    },
+    {
+      "subject": "selection:2026-09-12-selective-attention-envelope",
+      "predicate": "implemented_by",
+      "object": "repo_change:2026-09-12-attention-validator"
+    },
+    {
+      "subject": "repo_change:2026-09-12-attention-validator",
+      "predicate": "verified_by",
+      "object": "test:2026-09-12-selective-attention-suite"
+    },
+    {
+      "subject": "test:2026-09-12-selective-attention-suite",
+      "predicate": "contains_case",
+      "object": "test_case:2026-09-12-deliberate-silence"
+    },
+    {
+      "subject": "selection:2026-09-12-selective-attention-envelope",
+      "predicate": "recorded_by",
+      "object": "public_note:2026-09-12-daily-build"
+    },
+    {
+      "subject": "selection:2026-09-12-selective-attention-envelope",
+      "predicate": "announced_by",
+      "object": "build_log_entry:2026-09-12-selective-attention-envelope"
+    },
+    {
+      "subject": "build_log_entry:2026-09-12-selective-attention-envelope",
+      "predicate": "opens_future_question",
+      "object": "next_edge:2026-09-12-plural-attention",
+      "rationale": "Once single-context attention can be made explicit and learner-revisable, the unresolved horizon becomes how different collaborators can inhabit the same world with different foregrounds."
+    }
+  ],
+  "ctc_tags": [
+    {
+      "object_id": "source_signal:2026-09-12-openai-gpt-live-api",
+      "domain": "Technology as Tool to Think With",
+      "role": "questions",
+      "rationale": "The external signal makes pause, listening, interruption, and silence explicit technical behavior; it is a design analogy, not TurtleBlock learner evidence."
+    },
+    {
+      "object_id": "source_signal:2026-09-12-openai-gpt-live-api",
+      "domain": "Reflection as Learning",
+      "role": "questions",
+      "rationale": "Giving a person time to think before a system responds supports the research question of whether reflection timing should remain human-controlled."
+    },
+    {
+      "object_id": "source_signal:2026-09-12-nvidia-supply-chain",
+      "domain": "Technology as Tool to Think With",
+      "role": "supports",
+      "rationale": "The model/solver operates as decision support whose limitations and missing context are visible rather than as final authority."
+    },
+    {
+      "object_id": "source_signal:2026-09-12-nvidia-supply-chain",
+      "domain": "Social and Cultural Critique",
+      "role": "questions",
+      "rationale": "The source highlights that formal optimization omits consequential contextual knowledge, supporting critique of apparently neutral machine prioritization."
+    },
+    {
+      "object_id": "source_signal:2026-09-12-minecraft-mini-agent",
+      "domain": "Personal Inquiry",
+      "role": "primary",
+      "rationale": "Students begin by selecting a school or community problem, grounding sensing and agent action in learner-authored purpose."
+    },
+    {
+      "object_id": "source_signal:2026-09-12-minecraft-mini-agent",
+      "domain": "Technology as Tool to Think With",
+      "role": "primary",
+      "rationale": "Students design and test sense-think-act agents as hands-on computational objects rather than consume finished answers."
+    },
+    {
+      "object_id": "source_signal:2026-09-12-minecraft-mini-agent",
+      "domain": "Social and Cultural Critique",
+      "role": "supports",
+      "rationale": "The lesson explicitly asks learners to consider who their agent helps, making purpose and impact part of responsible design."
+    },
+    {
+      "object_id": "source_signal:2026-09-12-mit-jambot",
+      "domain": "Technology as Tool to Think With",
+      "role": "supports",
+      "rationale": "The AI contributes inside creative practice without replacing the human musician's interpretive role."
+    },
+    {
+      "object_id": "source_signal:2026-09-12-mit-jambot",
+      "domain": "Sharing and Collaborating",
+      "role": "supports",
+      "rationale": "Live improvisation supplies an external example of reciprocal human-machine collaboration where timing and response matter."
+    },
+    {
+      "object_id": "source_signal:2026-09-12-mit-buzzcam",
+      "domain": "Technology as Tool to Think With",
+      "role": "questions",
+      "rationale": "Purpose-bounded on-device classification demonstrates selective sensing and retention but remains ecological instrumentation, not learner evidence."
+    },
+    {
+      "object_id": "selection:2026-09-12-selective-attention-envelope",
+      "domain": "Personal Inquiry",
+      "role": "primary",
+      "rationale": "A visible purpose_ref and learner-authored watchpoints prevent Turtle's own salience from silently replacing the learner's inquiry."
+    },
+    {
+      "object_id": "selection:2026-09-12-selective-attention-envelope",
+      "domain": "Compelling Problem or Question",
+      "role": "tests",
+      "rationale": "An event can be surfaced when it matters to a learner-authored problem, while mere anomaly does not automatically become a question."
+    },
+    {
+      "object_id": "selection:2026-09-12-selective-attention-envelope",
+      "domain": "Technology as Tool to Think With",
+      "role": "primary",
+      "rationale": "The computational foreground becomes inspectable, mutable structure instead of an opaque relevance engine."
+    },
+    {
+      "object_id": "selection:2026-09-12-selective-attention-envelope",
+      "domain": "Formative Demonstration of Learning",
+      "role": "tests",
+      "rationale": "Changes to watchpoints and attention rules may later help show evolving inquiry but are explicitly not treated as automatic learning evidence."
+    },
+    {
+      "object_id": "selection:2026-09-12-selective-attention-envelope",
+      "domain": "Reflection as Learning",
+      "role": "primary",
+      "rationale": "Surfacing can invite reflection while deliberate silence preserves the learner's right to remain in making or reflect on their own timing."
+    },
+    {
+      "object_id": "selection:2026-09-12-selective-attention-envelope",
+      "domain": "Social and Cultural Critique",
+      "role": "primary",
+      "rationale": "What is measured, retained, surfaced, and interrupted for is a power-laden design choice; the envelope makes that infrastructure contestable."
+    },
+    {
+      "object_id": "selection:2026-09-12-selective-attention-envelope",
+      "domain": "Sharing and Collaborating",
+      "role": "tests",
+      "rationale": "The single-context envelope preserves actor and privacy provenance needed before multi-user attention can be negotiated without collapse."
+    },
+    {
+      "object_id": "candidate:2026-09-12-live-telemetry",
+      "domain": "Social and Cultural Critique",
+      "role": "counters",
+      "rationale": "The candidate was rejected because building continuous collection first would privilege instrumentation and surveillance before learner purpose and privacy governance."
+    },
+    {
+      "object_id": "candidate:2026-09-12-infer-learner-state",
+      "domain": "Personal Inquiry",
+      "role": "counters",
+      "rationale": "Inferring boredom, flow, or confusion could let machine interpretation substitute for learner-authored meaning."
+    },
+    {
+      "object_id": "test_case:2026-09-12-deliberate-silence",
+      "domain": "Reflection as Learning",
+      "role": "tests",
+      "rationale": "The valid silence fixture tests whether the system can preserve space for human-timed reflection instead of equating helpfulness with interruption."
+    },
+    {
+      "object_id": "test_case:2026-09-12-unsolicited-interruption",
+      "domain": "Personal Inquiry",
+      "role": "tests",
+      "rationale": "Rejecting unsolicited interruption makes learner purpose an executable constraint rather than a rhetorical principle."
+    },
+    {
+      "object_id": "next_edge:2026-09-12-plural-attention",
+      "domain": "Personal Inquiry",
+      "role": "primary",
+      "rationale": "The horizon protects distinct participant inquiries inside a shared world."
+    },
+    {
+      "object_id": "next_edge:2026-09-12-plural-attention",
+      "domain": "Compelling Problem or Question",
+      "role": "supports",
+      "rationale": "Participants may intentionally turn an event into a collective problem without requiring every collaborator to experience the event as equally salient."
+    },
+    {
+      "object_id": "next_edge:2026-09-12-plural-attention",
+      "domain": "Technology as Tool to Think With",
+      "role": "primary",
+      "rationale": "Participant-specific and shared foregrounds could become computational objects that collaborators inspect and change."
+    },
+    {
+      "object_id": "next_edge:2026-09-12-plural-attention",
+      "domain": "Formative Demonstration of Learning",
+      "role": "supports",
+      "rationale": "Changes in shared attention may become process evidence while remaining distinct from claims that learning occurred."
+    },
+    {
+      "object_id": "next_edge:2026-09-12-plural-attention",
+      "domain": "Reflection as Learning",
+      "role": "primary",
+      "rationale": "Different collaborators can reflect on different observations or on their disagreement without forced synchronization."
+    },
+    {
+      "object_id": "next_edge:2026-09-12-plural-attention",
+      "domain": "Social and Cultural Critique",
+      "role": "primary",
+      "rationale": "Whose concerns are foregrounded, broadcast, muted, or kept private is a social and power question inside shared technical infrastructure."
+    },
+    {
+      "object_id": "next_edge:2026-09-12-plural-attention",
+      "domain": "Sharing and Collaborating",
+      "role": "primary",
+      "rationale": "The horizon directly concerns intentional sharing and negotiation without erasing difference, privacy, or disagreement."
+    }
+  ],
+  "ontology_tags": [
+    {
+      "object_id": "selection:2026-09-12-selective-attention-envelope",
+      "concept_key": "co_active_emergence",
+      "role": "operationalizes",
+      "rationale": "Surfacing or withholding an event can alter learner attention and subsequent construction, making the attention act part of reciprocal emergence."
+    },
+    {
+      "object_id": "selection:2026-09-12-selective-attention-envelope",
+      "concept_key": "purposeful_play",
+      "role": "primary",
+      "rationale": "Deliberate non-interruption protects wandering, making, testing, and improvisation from being converted into continuous machine commentary."
+    },
+    {
+      "object_id": "selection:2026-09-12-selective-attention-envelope",
+      "concept_key": "possible_possibles",
+      "role": "supports",
+      "rationale": "Turtle salience remains a proposal among possible directions rather than an automatically promoted next task."
+    },
+    {
+      "object_id": "selection:2026-09-12-selective-attention-envelope",
+      "concept_key": "machine_responses_as_material_for_evaluation",
+      "role": "primary",
+      "rationale": "The decision to surface, defer, discard, log, or remain silent becomes inspectable material rather than invisible agent authority."
+    },
+    {
+      "object_id": "selection:2026-09-12-selective-attention-envelope",
+      "concept_key": "steamhamlet",
+      "role": "supports",
+      "rationale": "A room of possibilities requires room for participants to choose what they foreground rather than receive continuous environmental narration."
+    },
+    {
+      "object_id": "selection:2026-09-12-selective-attention-envelope",
+      "concept_key": "cohabitation_without_provenance_collapse",
+      "role": "primary",
+      "rationale": "World event, attention rule, rule author, machine proposal, decision, privacy, and later interpretation remain separate provenance states."
+    },
+    {
+      "object_id": "selection:2026-09-12-selective-attention-envelope",
+      "concept_key": "recursive_learning_loop",
+      "role": "supports",
+      "rationale": "An observation can feed reflection and revision only when its surfacing is appropriate to learner purpose rather than automatically closing the loop."
+    },
+    {
+      "object_id": "repo_change:2026-09-12-attention-schema",
+      "concept_key": "agent_design_as_structured_data",
+      "role": "extends",
+      "rationale": "Attention context, authorship, basis, decision, retention, privacy, silence, and authority become machine-checkable structured research data."
+    },
+    {
+      "object_id": "repo_change:2026-09-12-attention-validator",
+      "concept_key": "provenance_aware_retrieval",
+      "role": "tests",
+      "rationale": "The validator enforces actor/evidence/privacy boundaries future retrieval and reasoning must preserve."
+    },
+    {
+      "object_id": "test_case:2026-09-12-synthetic-execution",
+      "concept_key": "synthetic_recursive_dialogue",
+      "role": "tests",
+      "rationale": "The hostile fixture verifies that a synthetic actor cannot acquire production authority, while no actual Recursive Turtle dialogue was run."
+    },
+    {
+      "object_id": "next_edge:2026-09-12-plural-attention",
+      "concept_key": "co_active_emergence",
+      "role": "questions",
+      "rationale": "Different participant foregrounds may shape a shared world recursively without collapsing into one group state."
+    },
+    {
+      "object_id": "next_edge:2026-09-12-plural-attention",
+      "concept_key": "purposeful_play",
+      "role": "primary",
+      "rationale": "Shared play may require participants to wander with different foregrounds before choosing what to make collective."
+    },
+    {
+      "object_id": "next_edge:2026-09-12-plural-attention",
+      "concept_key": "possible_possibles",
+      "role": "supports",
+      "rationale": "Several participant foregrounds can keep multiple future directions alive without one machine ranking becoming the group's backlog."
+    },
+    {
+      "object_id": "next_edge:2026-09-12-plural-attention",
+      "concept_key": "steamhamlet",
+      "role": "primary",
+      "rationale": "The shared room-of-possibilities lineage supports multiple inhabitants moving through the same environment with different questions and perceptions."
+    },
+    {
+      "object_id": "next_edge:2026-09-12-plural-attention",
+      "concept_key": "cohabitation_without_provenance_collapse",
+      "role": "primary",
+      "rationale": "Plural attention requires distinct authorship, visibility, privacy, evidence, and negotiation states to coexist."
+    },
+    {
+      "object_id": "next_edge:2026-09-12-plural-attention",
+      "concept_key": "machine_responses_as_material_for_evaluation",
+      "role": "tests",
+      "rationale": "Turtle mediation of competing foregrounds must remain inspectable rather than become invisible group authority."
+    },
+    {
+      "object_id": "source_signal:2026-09-12-openai-gpt-live-api",
+      "concept_key": "co_active_emergence",
+      "role": "questions",
+      "rationale": "Full-duplex timing and interruption supply an external technical example of interaction decisions changing conversational flow; this is not a claim that the system instantiates Sanders' theory."
+    },
+    {
+      "object_id": "source_signal:2026-09-12-minecraft-mini-agent",
+      "concept_key": "learner_as_designer_and_producer",
+      "role": "supports",
+      "rationale": "Learners design agents around problems they identify, aligning with the later Sanders emphasis on learner authorship."
+    },
+    {
+      "object_id": "source_signal:2026-09-12-mit-jambot",
+      "concept_key": "purposeful_play",
+      "role": "questions",
+      "rationale": "Improvisational human-AI performance is used as a boundary case against assuming helpful systems should constantly interrupt or explain."
+    }
+  ],
+  "dissertation_code_mappings": [
+    {
+      "object_id": "selection:2026-09-12-selective-attention-envelope",
+      "source_layer": "immutable_dissertation_dedoose",
+      "code_label": "Engagement",
+      "role": "later_interpretation_mapping",
+      "rationale": "The contribution treats engagement as compatible with pauses, silence, and learner-led flow rather than maximum machine activity."
+    },
+    {
+      "object_id": "selection:2026-09-12-selective-attention-envelope",
+      "source_layer": "immutable_dissertation_dedoose",
+      "code_label": "Freedom and Individuality",
+      "role": "later_interpretation_mapping",
+      "rationale": "Learners retain the ability to mute, revise, reject, or author attention rules around their own inquiry."
+    },
+    {
+      "object_id": "selection:2026-09-12-selective-attention-envelope",
+      "source_layer": "immutable_dissertation_dedoose",
+      "code_label": "Observations on Life Itself",
+      "role": "later_interpretation_mapping",
+      "rationale": "Situated observations may inform inquiry while the system refuses to treat every observable event as necessarily important."
+    },
+    {
+      "object_id": "selection:2026-09-12-selective-attention-envelope",
+      "source_layer": "immutable_dissertation_dedoose",
+      "code_label": "Predetermined Outcomes",
+      "role": "later_interpretation_mapping",
+      "rationale": "Rejecting machine-selected compulsory interruptions guards against a hidden predetermined sequence of what learners are expected to notice next."
+    },
+    {
+      "object_id": "selection:2026-09-12-selective-attention-envelope",
+      "source_layer": "immutable_dissertation_dedoose",
+      "code_label": "Problem Posing Education",
+      "role": "later_interpretation_mapping",
+      "rationale": "A surfaced event may open a learner-relevant problem rather than deliver a machine-defined conclusion."
+    },
+    {
+      "object_id": "selection:2026-09-12-selective-attention-envelope",
+      "source_layer": "immutable_dissertation_dedoose",
+      "code_label": "Shared Democracy",
+      "role": "later_interpretation_mapping",
+      "rationale": "The attention model preserves provenance needed for later plural and negotiated foregrounds rather than assuming one system agenda."
+    },
+    {
+      "object_id": "selection:2026-09-12-selective-attention-envelope",
+      "source_layer": "immutable_dissertation_dedoose",
+      "code_label": "Social Impact",
+      "role": "later_interpretation_mapping",
+      "rationale": "Measurement, retention, and foregrounding influence which consequences become visible and therefore carry social power."
+    },
+    {
+      "object_id": "selection:2026-09-12-selective-attention-envelope",
+      "source_layer": "immutable_dissertation_dedoose",
+      "code_label": "Pedagogy",
+      "role": "later_interpretation_mapping",
+      "rationale": "Timing, restraint, interruption, and non-interruption are treated as consequential pedagogical behavior rather than neutral interface mechanics."
+    },
+    {
+      "object_id": "next_edge:2026-09-12-plural-attention",
+      "source_layer": "immutable_dissertation_dedoose",
+      "code_label": "Shared Democracy",
+      "role": "later_interpretation_mapping",
+      "rationale": "The future question asks whether collaborators can negotiate shared foregrounds without erasing distinct positions."
+    },
+    {
+      "object_id": "next_edge:2026-09-12-plural-attention",
+      "source_layer": "immutable_dissertation_dedoose",
+      "code_label": "Freedom and Individuality",
+      "role": "later_interpretation_mapping",
+      "rationale": "Individual inquiry and private attention should survive inside a shared environment."
+    },
+    {
+      "object_id": "next_edge:2026-09-12-plural-attention",
+      "source_layer": "immutable_dissertation_dedoose",
+      "code_label": "Social Impact",
+      "role": "later_interpretation_mapping",
+      "rationale": "Whose foreground becomes collectively visible is a socially consequential system choice."
+    }
+  ],
+  "emergent_tags": [
+    {
+      "object_id": "selection:2026-09-12-selective-attention-envelope",
+      "tag": "observable-not-interrupt-worthy",
+      "type": "value",
+      "status": "provisional",
+      "rationale": "Names the central executable distinction introduced by the contribution."
+    },
+    {
+      "object_id": "selection:2026-09-12-selective-attention-envelope",
+      "tag": "salience-governance",
+      "type": "method",
+      "status": "provisional",
+      "rationale": "Describes the explicit governance layer between world observation and learner-facing surfacing."
+    },
+    {
+      "object_id": "selection:2026-09-12-selective-attention-envelope",
+      "tag": "deliberate-silence",
+      "type": "method",
+      "status": "provisional",
+      "rationale": "Preserves non-interruption as an intentional system decision rather than missing activity."
+    },
+    {
+      "object_id": "selection:2026-09-12-selective-attention-envelope",
+      "tag": "no-surveillance-expansion",
+      "type": "risk",
+      "status": "provisional",
+      "rationale": "The attention wrapper is prevented from becoming authority for broader sensing or retention."
+    },
+    {
+      "object_id": "selection:2026-09-12-selective-attention-envelope",
+      "tag": "learner-watchpoint",
+      "type": "artifact",
+      "status": "provisional",
+      "rationale": "A learner-authored trigger is the strongest explicit basis for bounded interruptive surfacing in the experiment."
+    },
+    {
+      "object_id": "candidate:2026-09-12-infer-learner-state",
+      "tag": "semantic-inference-about-person-risk",
+      "type": "risk",
+      "status": "provisional",
+      "rationale": "Names why automatic flow/boredom/confusion inference was kept outside the contribution."
+    },
+    {
+      "object_id": "next_edge:2026-09-12-plural-attention",
+      "tag": "plural-foregrounds",
+      "type": "question",
+      "status": "provisional",
+      "rationale": "Names the future possibility that participants in one world can legitimately foreground different events."
+    },
+    {
+      "object_id": "next_edge:2026-09-12-plural-attention",
+      "tag": "selective-disclosure",
+      "type": "risk",
+      "status": "provisional",
+      "rationale": "A participant may need to reveal that something matters without revealing the private reason it matters."
+    }
+  ],
+  "uncaptured_observations": [
+    {
+      "id": "unknown-2026-09-12-01",
+      "object_id": "selection:2026-09-12-selective-attention-envelope",
+      "observation": "An actual decision to remain silent can be represented, but recording every possible intervention Turtle considered and did not make would create an impossible counterfactual audit and undermine capture-batch closure.",
+      "reason_unmapped": "Current event-centric research structures represent realized decisions well; the ontology does not naturally represent the infinite space of unrealized speech acts.",
+      "observer_actor_type": "turtle",
+      "status": "open",
+      "candidate_domain": null
+    },
+    {
+      "id": "unknown-2026-09-12-02",
+      "object_id": "selection:2026-09-12-selective-attention-envelope",
+      "observation": "Salience is neither world observation nor semantic interpretation exactly; it is a selection layer that can shape later meaning before an explicit interpretation exists.",
+      "reason_unmapped": "The seven CTC domains can critique how attention affects inquiry and power but do not directly name the infrastructure that selects which observations reach awareness.",
+      "observer_actor_type": "turtle",
+      "status": "open",
+      "candidate_domain": null
+    },
+    {
+      "id": "unknown-2026-09-12-03",
+      "object_id": "selection:2026-09-12-selective-attention-envelope",
+      "observation": "A bounded project watchpoint may reasonably persist within a session or project without implying permission to construct a generalized cross-project personal attention model.",
+      "reason_unmapped": "The exact boundary between project continuity and broader personalization belongs partly to privacy and memory architecture rather than a learner-development domain.",
+      "observer_actor_type": "turtle",
+      "status": "open",
+      "candidate_domain": null
+    },
+    {
+      "id": "unknown-2026-09-12-04",
+      "object_id": "next_edge:2026-09-12-plural-attention",
+      "observation": "One shared event may be urgent to one collaborator, irrelevant to another, and private to a third; shared-world state therefore does not imply shared foreground or shared disclosure.",
+      "reason_unmapped": "This cuts across Personal Inquiry, Sharing and Collaborating, Social and Cultural Critique, and privacy architecture without yet justifying a new CTC domain.",
+      "observer_actor_type": "turtle",
+      "status": "open",
+      "candidate_domain": null
+    },
+    {
+      "id": "unknown-2026-09-12-05",
+      "object_id": "next_edge:2026-09-12-plural-attention",
+      "observation": "A participant may want to disclose that an event matters while withholding the private rationale that made it salient, requiring selective disclosure rather than a single public/private state.",
+      "reason_unmapped": "Current privacy classification does not yet model partial disclosure of attention rationale within collaboration.",
+      "observer_actor_type": "turtle",
+      "status": "open",
+      "candidate_domain": null
+    }
+  ],
+  "persistence": {
+    "d1": {
+      "status": "staged_only",
+      "target_schema": "migration_0007_autobuild_research_objects_ctc_ontology_relationships_uncaptured",
+      "reason": "No authorized live D1 write action was available in the active task tooling.",
+      "private_values_inspected": false
+    },
+    "r2": {
+      "status": "not_consulted",
+      "reason": "No direct R2 metadata or write action was available in the active task context.",
+      "private_values_inspected": false
+    }
+  },
+  "capture_batch_closure": {
+    "status": "closed",
+    "primary_artifacts_recorded": true,
+    "source_signals_recorded": true,
+    "questions_candidates_rejections_recorded": true,
+    "implementation_and_tests_recorded": true,
+    "ctc_and_ontology_mappings_rationalized": true,
+    "unmapped_residue_preserved": true,
+    "self_reference_rule": "This tags manifest is the metadata closure artifact for the batch. Its own commit is not recursively promoted into another primary research object merely to avoid an infinite self-tagging loop."
+  }
+}
