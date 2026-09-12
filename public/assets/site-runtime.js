@@ -1,8 +1,8 @@
 (()=>{
-  const VERSION='2026-09-08.6';
+  const VERSION='2026-09-12.1';
   const summaries={
     home:'We built a place to build places: learner ideas become persistent, revisable worlds through dialogue, construction, experience, and reflection.',
-    try:'Talk with Turtle, shape a WorldSpec, move toward Minecraft construction, experience what was built, and revise through dialogue.',
+    try:'Talk with Turtle inside the Human + Turtle Terrarium: wander, build, or throw in something weird while provenance stays visible.',
     about:'TurtleBlock AI continues decades of recursive educational practice connecting learner agency, construction, research, dialogue, computational environments, and human-machine collaboration.',
     worldspec:'WorldSpec preserves learner meaning as a persistent, inspectable representation that can move between dialogue, construction, experience, and revision.',
     charter:'The Turtle Charter keeps the learner in control: Turtle may collaborate, question, suggest, and build, but meaning and judgment remain human.',
@@ -98,9 +98,17 @@
       return true;
     }catch(error){console.error('Turtle direct-asset page patch failed',error);return false}
   };
+  const loadTerrariaTry=()=>{
+    if(document.querySelector('script[src*="/assets/terraria-try.js"]'))return;
+    const script=document.createElement('script');
+    script.src='/assets/terraria-try.js?v=20260912.1';
+    script.defer=true;
+    document.head.appendChild(script);
+  };
   const patched=patchPages();
   if(patched){const key=routeKey();if(['build','privacy','disclaimer'].includes(key)&&typeof go==='function')go(key,false)}
   patchVisibleText();
+  loadTerrariaTry();
   loadNextEdge();
   document.addEventListener('click',()=>setTimeout(patchVisibleText,0),true);
   addEventListener('popstate',()=>setTimeout(patchVisibleText,0));
