@@ -11,6 +11,13 @@ export interface BuildLogEntry {
 // through the Worker. Open inquiry belongs in Next Edge, not in completed entries.
 export const BUILD_LOG_ENTRIES: BuildLogEntry[] = [
   {
+    id: "2026-09-11-human-tamagotchi-turtle-ask",
+    date: "Sep 11, 2026",
+    title: "A third Terrarium waits for Turtle to ask a human",
+    body: "Turtle Terraria now has a third theoretical habitat: Human Tamagotchi Terrarium. Humans mostly do human things there while an intentionally silly virtual-human representation points to a real person without simulating that person's mind, mood, availability, or willingness to engage. A new TurtleAsk boundary event lets a Turtle form a provenance-preserving request for genuine human perturbation when machine-only inquiry appears saturated, contradictory, repetitive, or bounded by meaning. Ask formation remains separate from surfacing authority; Recursive Turtle can form only a candidate ask; human silence is valid; and no proactive production messaging has been authorized. Migration 0009 and research/TURTLE_ASK.md make the hypothesis inspectable without pretending Turtle literally experiences boredom.",
+    done: true
+  },
+  {
     id: "2026-09-12-selective-attention-envelope",
     date: "Sep 12, 2026",
     title: "Turtle learns that noticing is not the same as interrupting",
