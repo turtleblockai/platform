@@ -1,5 +1,5 @@
 (()=>{
-  const VERSION='2026-09-12.1';
+  const VERSION='2026-09-12.2';
   const summaries={
     home:'We built a place to build places: learner ideas become persistent, revisable worlds through dialogue, construction, experience, and reflection.',
     try:'Talk with Turtle inside the Human + Turtle Terrarium: wander, build, or throw in something weird while provenance stays visible.',
@@ -15,19 +15,25 @@
     disclaimer:'TurtleBlock AI is experimental software: outputs can be wrong, integrations can fail, and consequential decisions still require human judgment.',
     terms:'These terms define experimental use, learner responsibility, acceptable conduct, data boundaries, third-party services, and the limits of TurtleBlock AI.'
   };
-  const dailyEntries=[
-    {date:'Sep 8, 2026',title:'Next Edge becomes a living possible-possibles horizon',body:'The Build Log now separates completed work from open inquiry. One Next Edge question stays at the top and is read from a machine-readable public artifact; the newest committed build follows beneath it. The edge can eventually synthesize repository, research-store, ontology, project-context, failure, and X-factor signals without pretending a possibility is already a decision.',done:true},
-    {date:'Sep 8, 2026',title:'WWW direct-asset publication path restored',body:'A Worker-first routing experiment briefly blacked out SPA routes while true static pages such as Terms and Terraria remained visible. The setting was rolled back, and WWW presentation work moved into direct public assets so Cloudflare can keep its stable asset-first delivery model.',done:true},
-    {date:'Sep 8, 2026',title:'Turtle Terraria + exhaustive research tagging architecture',body:'Turtle Lab became Turtle Terraria: an umbrella for multiple bounded habitats, beginning with Human + Turtle and Recursive Turtle self-play. Migrations 0007 and 0008 add Terraria runs, events, artifacts, observations, auto-build research records, universal research objects, the seven established CTC domains, emergent tags, uncaptured observations, and structured seed traces.',done:true},
-    {date:'Sep 8, 2026',title:'Daily co-active build loop activated',body:'TurtleBlock AI now runs a daily primary-source hunt across OpenAI, NVIDIA, Minecraft / Minecraft Education, and the MIT Media Lab; maps useful signals against the Sanders research ontology; makes one bounded repository contribution when justified; records the deliberation; and updates the public log.',done:true}
+  let dailyEntries=[
+    {date:'Sep 12, 2026',title:'TRY IT enters Turtle Terraria and the daily build gets a memory-hole sweep',body:'TRY IT now offers Wander with Turtle, Make a world, and Throw in something weird as Human + Turtle Terrarium entry modes. Consented play keeps canonical private session/turn/WorldSpec records while adding a provenance-only Terrarium trace when D1 is active. A standing repository + WWW to D1 reconciliation sweep and CI audit now look for research-bearing artifacts that might otherwise fall outside the research substrate.',done:true},
+    {date:'Sep 11, 2026',title:'A third Terrarium waits for Turtle to ask a human',body:'Human Tamagotchi Terrarium and the TurtleAsk boundary event make room for a Turtle to seek genuine human perturbation after inquiry saturation without simulating a human, acquiring interruption authority, or turning synthetic self-play into human evidence.',done:true},
+    {date:'Sep 12, 2026',title:'Turtle learns that noticing is not the same as interrupting',body:'A provisional Selective Attention Envelope separates observability, retention, salience, surfacing, interruption, and importance while preserving deliberate silence and learner authority.',done:true},
+    {date:'Sep 11, 2026',title:'The world can report facts without becoming the judge',body:'A provisional World Evidence Envelope separates machine-checkable world events from interpretation and final learner judgment.',done:true},
+    {date:'Sep 10, 2026',title:'Learner Verification becomes a thing we can break before learners depend on it',body:'A provisional Learner Verification Card makes criteria, evidence, uncertainty, disagreement, authorship, and reversibility inspectable in a hostile regression suite.',done:true},
+    {date:'Sep 9, 2026',title:'Next Edge gets a deterministic provenance contract',body:'The public research horizon remains generative and human-revisable while a deterministic validator prevents its provenance and research structure from drifting silently.',done:true},
+    {date:'Sep 8, 2026',title:'Next Edge becomes a living possible-possibles horizon',body:'The Build Log now separates completed work from open inquiry. One Next Edge question stays at the top and is read from a machine-readable public artifact.',done:true},
+    {date:'Sep 8, 2026',title:'WWW direct-asset publication path restored',body:'WWW presentation work moved back into direct public assets after a Worker-first routing experiment briefly blacked out SPA routes.',done:true},
+    {date:'Sep 8, 2026',title:'Turtle Terraria + exhaustive research tagging architecture',body:'Turtle Lab became Turtle Terraria with multiple bounded habitats, universal research objects, CTC/ontology/emergent tags, uncaptured observations, and provenance-preserving research traces.',done:true},
+    {date:'Sep 8, 2026',title:'Daily co-active build loop activated',body:'TurtleBlock AI now runs a daily primary-source hunt, ontology comparison, one bounded contribution, testing, exhaustive research capture, Build Log update, and Next Edge synthesis.',done:true}
   ];
   const nextEdgeFallback={
-    updated_at:'2026-09-08',
-    title:'Make the edge of curiosity observable',
-    question:'Can TurtleBlock AI continuously synthesize one irresistible next question from the whole ecology of the project without turning curiosity into a backlog or letting the machine mistake a suggestion for authority?',
-    why_now:'The project is becoming increasingly observable. The next possibility is to make the horizon observable too: one living question that appears only after the newest work is actually committed.',
-    possible_possibles:['A recurring uncaptured observation suggests a new Terrarium rather than a new feature.','A D1 pattern suggests a regression test nobody explicitly planned.','Something important appears that the current ontology cannot name yet.'],
-    x_factor:'whoooo knooooowwwssssssssssss'
+    updated_at:'2026-09-12',
+    title:'Can one shared world hold different foregrounds?',
+    question:'Can TurtleBlock AI support a shared world in which different collaborators keep distinct attention agendas—and sometimes choose to share or negotiate them—without collapsing everyone into one machine-selected foreground?',
+    why_now:'Selective attention creates a new question: one shared world may contain several legitimate foregrounds at once.',
+    possible_possibles:['Collaborators keep private watchpoints and selectively reveal them.','A shared event may matter differently to different people.','Someone may reveal that something matters without revealing why.'],
+    x_factor:'whoooo knooooowwwssssssssssss — what if the same collapsing bridge is urgent to one learner, delightful to another, and none of Turtle’s business to a third?'
   };
   let nextEdge={...nextEdgeFallback};
   const esc=s=>String(s).replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[m]));
@@ -50,6 +56,18 @@
     }catch(error){console.warn('Next Edge feed unavailable; using embedded fallback',error)}
   };
   const routeKey=()=>{const key=location.pathname.replace(/^\/+|\/+$/g,'')||'home';return key==='lab'?'terraria':key};
+  const rerenderBuild=()=>{if(routeKey()==='build'&&typeof go==='function')go('build',false)};
+  const loadBuildLog=async()=>{
+    try{
+      const response=await fetch('/api/build-log',{cache:'no-store'});
+      if(!response.ok)return;
+      const data=await response.json();
+      if(data&&Array.isArray(data.entries)&&data.entries.length){
+        dailyEntries=data.entries;
+        rerenderBuild();
+      }
+    }catch(error){console.warn('Canonical Build Log feed unavailable; using embedded fallback',error)}
+  };
   const routeForCard=el=>{const data=el.getAttribute('data-route');if(data)return data==='lab'?'terraria':data;const href=el.getAttribute('href')||'';const key=href.replace(/^\/+|\/+$/g,'')||'home';return key==='lab'?'terraria':key};
   const rewriteTerrariaLinks=()=>{
     document.querySelectorAll('a[href="/lab/"]').forEach(a=>{a.setAttribute('href','/terraria/');const strong=a.querySelector('strong');const span=a.querySelector('span');if(strong)strong.textContent='Turtle Terraria';else if(a.classList.contains('secondary')||a.classList.contains('pill'))a.textContent='Turtle Terraria';if(span)span.textContent='Multiple habitats.'});
@@ -109,6 +127,7 @@
   if(patched){const key=routeKey();if(['build','privacy','disclaimer'].includes(key)&&typeof go==='function')go(key,false)}
   patchVisibleText();
   loadTerrariaTry();
+  loadBuildLog();
   loadNextEdge();
   document.addEventListener('click',()=>setTimeout(patchVisibleText,0),true);
   addEventListener('popstate',()=>setTimeout(patchVisibleText,0));
