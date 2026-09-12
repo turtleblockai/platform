@@ -1,5 +1,5 @@
 import app, { type Env } from "./index";
-import { injectBuildLogRuntime } from "./buildLog";
+import { BUILD_LOG_ENTRIES, injectBuildLogRuntime } from "./buildLog";
 import { applySiteChrome } from "./siteChrome";
 
 const TERRARIA_TRY_SCRIPT = '<script src="/assets/terraria-try.js?v=20260912.1"></script>';
@@ -87,7 +87,7 @@ async function handleTerrariaPlay(request: Request, env: Env, ctx: ExecutionCont
   const contentType = response.headers.get("content-type") || "";
   if (!contentType.includes("application/json")) return response;
 
-  const data = await response.json<any>();
+  const data: any = await response.json();
   if (!response.ok) return Response.json(data, { status: response.status, headers: response.headers });
 
   const terrariaPersistence = await storeTerrariaPlayTrace(env, forwardedBody, data);
@@ -102,6 +102,10 @@ function injectTerrariaTryScript(html: string) {
 export default {
   async fetch(request: Request, env: Env, ctx: ExecutionContext): Promise<Response> {
     const originalUrl = new URL(request.url);
+
+    if (originalUrl.pathname === "/api/build-log" && request.method === "GET") {
+      return Response.json({ entries: BUILD_LOG_ENTRIES, source: "src/buildLog.ts" }, { headers: { "cache-control": "no-store" } });
+    }
 
     if (originalUrl.pathname === "/api/terraria/play" && request.method === "POST") {
       return handleTerrariaPlay(request, env, ctx);
