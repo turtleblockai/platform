@@ -11,6 +11,8 @@
     "validate:learner-verification": "node scripts/validate-learner-verification.mjs",
     "validate:world-evidence": "node scripts/validate-world-evidence-envelope.mjs",
     "validate:selective-attention": "node scripts/validate-selective-attention-envelope.mjs",
+    "validate:terraria-try": "node scripts/validate-terraria-try.mjs",
+    "audit:d1-coverage": "node scripts/audit-d1-coverage.mjs",
     "discord:register": "node scripts/register-discord-command.mjs"
   },
   "devDependencies": {
