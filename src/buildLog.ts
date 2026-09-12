@@ -69,10 +69,10 @@ export const BUILD_LOG_ENTRIES: BuildLogEntry[] = [
 ];
 
 export const NEXT_EDGE_FALLBACK = {
-  date: "Sep 11, 2026",
-  title: "Who decides what Turtle notices?",
-  question: "Can TurtleBlock AI decide when a world event is worth surfacing to a learner without turning observability into surveillance, every measurement into evaluation, or every surprise into an unsolicited lesson?",
-  xFactor: "whoooo knooooowwwssssssssssss — what if the most intelligent Turtle move is to notice something and deliberately say nothing?"
+  date: "Sep 12, 2026",
+  title: "Can one shared world hold different foregrounds?",
+  question: "Can TurtleBlock AI support a shared world in which different collaborators keep distinct attention agendas—and sometimes choose to share or negotiate them—without collapsing everyone into one machine-selected foreground?",
+  xFactor: "whoooo knooooowwwssssssssssss — what if the same collapsing bridge is urgent to one learner, delightful to another, and none of Turtle's business to a third?"
 };
 
 function escapeHtml(value: string) {
