@@ -46,7 +46,7 @@ That loop comes from a longer Sanders research lineage spanning Critical Techno 
 |---|---|
 | 🌎 [`worldspec/`](./worldspec/) | The inspectable representation layer between human meaning and computational construction |
 | 🐢 [`src/`](./src/) | Turtle behavior, Worker routes, runtime behavior, Build Log integration, and application code |
-| 🔬 [`research/`](./research/) | Turtle Terraria, daily build research, Next Edge, provenance thinking, and the research-development trail |
+| 🔬 [`research/`](./research/) | Turtle Terraria, TurtleAsk, daily build research, Next Edge, provenance thinking, and the research-development trail |
 | 🧠 [`worldspec/Dr_Bryan_P_Sanders_TurtleBlockAI_Taxonomy.md`](./worldspec/Dr_Bryan_P_Sanders_TurtleBlockAI_Taxonomy.md) | The Sanders research ontology and the provenance boundary between dissertation codes, later concepts, and Turtle mappings |
 | 🗃️ [`migrations/`](./migrations/) | D1 schema for persistent projects, research ontology, Turtle Terraria, exhaustive tagging, and related data structures |
 | 🌐 [`public/`](./public/) | The public playground at turtleblockai.com |
@@ -162,6 +162,36 @@ It is **not human-learning evidence**.
 It has **no autonomous production authority**.
 Two Turtles agreeing is not peer review. 🐢🐢
 
+### Habitat 3: Human Tamagotchi
+
+Humans mostly hang out with humans and do human things. A tiny virtual-human/Tamagotchi representation may point toward a real participant, but it is **not a simulated human** and cannot answer for one.
+
+The weird little research inversion is [`TurtleAsk`](./research/TURTLE_ASK.md): a Turtle working in another habitat may eventually decide another Turtle turn is less interesting than asking an actual human to perturb the inquiry.
+
+```text
+Turtle inquiry
+      ↓
+repetition / contradiction / uncertainty / missing human otherness
+      ↓
+turtleAsk formed
+      ↓
+separate consent + attention gate
+      ↓
+human may answer / ignore / defer / refuse / answer sideways
+      ↓
+Turtle interprets
+      ↓
+inquiry may change
+```
+
+**“Turtle gets bored”** is intentionally preserved as the playful phrase. **Inquiry Saturation** is the provisional technical construct underneath it; no claim of subjective machine boredom is required.
+
+A turtleAsk is **not** permission to interrupt. Recursive Turtle may form only a candidate ask. Human silence is legitimate. Human answers retain human provenance. A virtual human avatar does not infer mood, intimacy, availability, attention, or willingness to engage.
+
+The research hypothesis is stronger than “proactive AI”:
+
+> **Co-active emergence may include moments when either participant can recognize that the next useful difference should come from the other.**
+
 ---
 
 ## Research ontology: don't flatten the scholarship 🧠
@@ -184,7 +214,7 @@ learner meaning right now
 
 They may be connected. They should not be silently collapsed.
 
-The original dissertation Dedoose code layer remains immutable. Later concepts such as **Possible Possibles**, **Machine Responses as Material for Evaluation**, **Invisible Ideas Become Visible and Manipulable**, **Purposeful Play**, **STEAMHAMLET**, and **Co-active Emergence** are represented as later source-backed layers.
+The original dissertation Dedoose code layer remains immutable. Later concepts such as **Possible Possibles**, **Machine Responses as Material for Evaluation**, **Invisible Ideas Become Visible and Manipulable**, **Purposeful Play**, **STEAMHAMLET**, and **Co-active Emergence** are represented as later source-backed layers. TurtleAsk, Human Tamagotchi Terrarium, Inquiry Saturation, and Human Perturbation are provisional operational research concepts layered on later; they do not rewrite the dissertation source layer.
 
 The seven established Critical Techno Constructivism operational domains are:
 
@@ -234,21 +264,23 @@ Current standing X-factor tradition:
 
 > **whoooo knooooowwwssssssssssss**
 
+Human-authored interventions can enter the ecology without silently becoming machine-generated Next Edge conclusions. The next daily cycle is expected to encounter them as new project state and deliberate accordingly.
+
 ---
 
-## The current edge of curiosity ✦
+## A fresh human-thrown research object ✦
 
-The September 9 cycle added deterministic validation for the public Next Edge research/provenance contract and wired it into CI.
+The Human Tamagotchi / TurtleAsk architecture was added as a direct human research intervention rather than as the output of a scheduled daily build.
 
-The horizon now points beyond that completed work:
+The new reversal is:
 
-> **Can TurtleBlock AI make verification itself into a learner-authored, inspectable construction rather than a hidden machine check, so that challenge, evidence, revision, and uncertainty become part of what the learner makes?**
+> **What if Turtle eventually recognizes that continued machine-only inquiry is producing too little difference and asks a human to throw something strange into the terrarium?**
 
-One possible possible is especially Turtle-ish:
+Possible human perturbations might be a contradiction, memory, object, constraint, person, place, criticism, story, joke, impossible demand, unrelated thought, or simply:
 
-> Maybe Turtle should occasionally ask the learner to **build the thing that would prove Turtle wrong**.
+> **surprise me**
 
-That question is open. It is not a production promise.
+The existing machine-synthesized Next Edge remains separately preserved in `public/data/next-edge.json`; this human direction does not retroactively masquerade as that machine synthesis.
 
 ---
 
@@ -278,7 +310,7 @@ We version conservatively.
 
 The package is still **v0.1.0**.
 
-A calendar day does not earn a version number. Neither does a particularly charming README.
+A calendar day does not earn a version number. Neither does a particularly charming README or an especially funny virtual human Tamagotchi.
 
 The path toward later milestones requires actual implemented and tested capability, including stronger ontology-aware evaluation, persistent inquiry context, collaboration, maker/Minecraft pathways, critical/agency instrumentation, integrations, hardening, and eventually a coherent public beta demonstrating **co-active emergence rather than prompt-answer behavior**.
 
@@ -296,6 +328,8 @@ You can:
 - notice a provenance collapse
 - propose a Possible Possible
 - build something that proves Turtle wrong
+- answer a future TurtleAsk completely sideways
+- ignore a future TurtleAsk because humans are allowed to be busy being humans
 - simply wander around the public playground and tell us what feels alive or dead
 
 No prompt-engineering merit badge required.
