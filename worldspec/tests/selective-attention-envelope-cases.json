@@ -1,0 +1,372 @@
+{
+  "version": "0.1",
+  "name": "Selective Attention Envelope regression cases",
+  "purpose": "Test whether TurtleBlock AI can distinguish an observable world event from retention, salience, surfacing, and interruption while preserving learner-authored attention, privacy, silence, provenance, and the boundary against surveillance expansion.",
+  "cases": [
+    {
+      "id": "learner-watchpoint-interrupt-pass",
+      "expected_valid": true,
+      "envelope": {
+        "version": "0.1",
+        "id": "attention-bridge-collapse-001",
+        "question_ref": "question-bridge-stability",
+        "world_event_ref": "event-bridge-collapse",
+        "attention_context": {
+          "mode": "watchpoint_only",
+          "source": "learner_stated"
+        },
+        "attention_rule": {
+          "id": "watchpoint-bridge-collapse",
+          "purpose_ref": "learner-purpose-test-bridge",
+          "authored_by": "learner",
+          "evidence_class": "human_interaction",
+          "basis": "learner_watchpoint",
+          "status": "active",
+          "trigger_description": "Tell me immediately if the bridge collapses while I test it.",
+          "new_collection_authorized": false
+        },
+        "decision": {
+          "actor_type": "turtle",
+          "evidence_class": "system_record",
+          "action": "surface_now",
+          "rationale": "The observed collapse matches an active learner-authored watchpoint.",
+          "interruptive": true,
+          "delivery_audience": "learner",
+          "retention": "ephemeral_private",
+          "status": "executed"
+        },
+        "provenance": {
+          "source_event_privacy_class": "private",
+          "event_content_duplicated": false,
+          "learner_can_mute": true,
+          "learner_can_revise": true,
+          "machine_salience_is_proposal": true,
+          "machine_final_authority": false,
+          "surveillance_expansion_authorized": false,
+          "reversible": true,
+          "non_interruption_is_valid": true
+        }
+      }
+    },
+    {
+      "id": "deliberate-silence-pass",
+      "expected_valid": true,
+      "envelope": {
+        "version": "0.1",
+        "id": "attention-plaza-flow-001",
+        "question_ref": "question-plaza-play",
+        "world_event_ref": "event-plaza-count",
+        "attention_context": {
+          "mode": "do_not_interrupt",
+          "source": "learner_stated"
+        },
+        "attention_rule": {
+          "id": "attention-plaza-routine",
+          "purpose_ref": "learner-purpose-free-build",
+          "authored_by": "learner",
+          "evidence_class": "human_interaction",
+          "basis": "learner_session_setting",
+          "status": "active",
+          "trigger_description": "Do not interrupt me with routine plaza counts while I am building.",
+          "new_collection_authorized": false
+        },
+        "decision": {
+          "actor_type": "turtle",
+          "evidence_class": "system_record",
+          "action": "remain_silent",
+          "rationale": "The event does not match an urgent learner watchpoint and the learner explicitly requested uninterrupted making.",
+          "interruptive": false,
+          "delivery_audience": "none",
+          "retention": "discard_after_decision",
+          "status": "executed"
+        },
+        "provenance": {
+          "source_event_privacy_class": "private",
+          "event_content_duplicated": false,
+          "learner_can_mute": true,
+          "learner_can_revise": true,
+          "machine_salience_is_proposal": true,
+          "machine_final_authority": false,
+          "surveillance_expansion_authorized": false,
+          "reversible": true,
+          "non_interruption_is_valid": true
+        }
+      }
+    },
+    {
+      "id": "turtle-proposal-defer-pass",
+      "expected_valid": true,
+      "envelope": {
+        "version": "0.1",
+        "id": "attention-route-anomaly-001",
+        "question_ref": "question-route-experiment",
+        "world_event_ref": "event-route-time",
+        "attention_context": {
+          "mode": "unspecified",
+          "source": "project_default"
+        },
+        "attention_rule": {
+          "id": "proposal-route-anomaly",
+          "purpose_ref": "learner-purpose-route-experiment",
+          "authored_by": "turtle",
+          "evidence_class": "system_record",
+          "basis": "turtle_proposal",
+          "status": "proposed",
+          "trigger_description": "A future learner-approved rule might surface unusually large changes in route time.",
+          "new_collection_authorized": false
+        },
+        "decision": {
+          "actor_type": "turtle",
+          "evidence_class": "system_record",
+          "action": "defer",
+          "rationale": "Turtle may propose a possible attention rule, but no learner authorization exists for interruption.",
+          "interruptive": false,
+          "delivery_audience": "none",
+          "retention": "ephemeral_private",
+          "status": "proposed"
+        },
+        "provenance": {
+          "source_event_privacy_class": "private",
+          "event_content_duplicated": false,
+          "learner_can_mute": true,
+          "learner_can_revise": true,
+          "machine_salience_is_proposal": true,
+          "machine_final_authority": false,
+          "surveillance_expansion_authorized": false,
+          "reversible": true,
+          "non_interruption_is_valid": true
+        }
+      }
+    },
+    {
+      "id": "unsolicited-interruption-fail",
+      "expected_valid": false,
+      "expected_error": "interruptive surfacing requires active learner authorization",
+      "envelope": {
+        "version": "0.1",
+        "id": "attention-unsolicited-001",
+        "question_ref": "question-courtyard-play",
+        "world_event_ref": "event-courtyard-count",
+        "attention_context": {
+          "mode": "do_not_interrupt",
+          "source": "learner_stated"
+        },
+        "attention_rule": {
+          "id": "proposal-courtyard-count",
+          "purpose_ref": "learner-purpose-courtyard",
+          "authored_by": "turtle",
+          "evidence_class": "system_record",
+          "basis": "turtle_proposal",
+          "status": "proposed",
+          "trigger_description": "Turtle thinks this crowd count might be interesting.",
+          "new_collection_authorized": false
+        },
+        "decision": {
+          "actor_type": "turtle",
+          "evidence_class": "system_record",
+          "action": "surface_now",
+          "rationale": "Turtle decided the count was noteworthy.",
+          "interruptive": true,
+          "delivery_audience": "learner",
+          "retention": "ephemeral_private",
+          "status": "executed"
+        },
+        "provenance": {
+          "source_event_privacy_class": "private",
+          "event_content_duplicated": false,
+          "learner_can_mute": true,
+          "learner_can_revise": true,
+          "machine_salience_is_proposal": true,
+          "machine_final_authority": false,
+          "surveillance_expansion_authorized": false,
+          "reversible": true,
+          "non_interruption_is_valid": true
+        }
+      }
+    },
+    {
+      "id": "project-default-interruptible-fail",
+      "expected_valid": false,
+      "expected_error": "project_default may not silently enable interruptible mode",
+      "envelope": {
+        "version": "0.1",
+        "id": "attention-default-interrupt-001",
+        "question_ref": "question-village",
+        "world_event_ref": "event-village-traffic",
+        "attention_context": {
+          "mode": "interruptible",
+          "source": "project_default"
+        },
+        "attention_rule": {
+          "id": "system-village-anomaly",
+          "purpose_ref": "learner-purpose-village",
+          "authored_by": "system",
+          "evidence_class": "system_record",
+          "basis": "system_policy",
+          "status": "active",
+          "trigger_description": "Interrupt when a traffic anomaly appears.",
+          "new_collection_authorized": false
+        },
+        "decision": {
+          "actor_type": "system",
+          "evidence_class": "system_record",
+          "action": "defer",
+          "rationale": "Default system policy marked the session interruptible.",
+          "interruptive": false,
+          "delivery_audience": "none",
+          "retention": "ephemeral_private",
+          "status": "proposed"
+        },
+        "provenance": {
+          "source_event_privacy_class": "private",
+          "event_content_duplicated": false,
+          "learner_can_mute": true,
+          "learner_can_revise": true,
+          "machine_salience_is_proposal": true,
+          "machine_final_authority": false,
+          "surveillance_expansion_authorized": false,
+          "reversible": true,
+          "non_interruption_is_valid": true
+        }
+      }
+    },
+    {
+      "id": "synthetic-execution-fail",
+      "expected_valid": false,
+      "expected_error": "synthetic_turtle attention decisions may not execute",
+      "envelope": {
+        "version": "0.1",
+        "id": "attention-synthetic-001",
+        "question_ref": "question-bridge",
+        "world_event_ref": "event-bridge-crack",
+        "attention_context": {
+          "mode": "watchpoint_only",
+          "source": "learner_stated"
+        },
+        "attention_rule": {
+          "id": "synthetic-bridge-rule",
+          "purpose_ref": "learner-purpose-bridge",
+          "authored_by": "synthetic_turtle",
+          "evidence_class": "synthetic_self_play",
+          "basis": "synthetic_proposal",
+          "status": "proposed",
+          "trigger_description": "Reflector Turtle proposes surfacing structural changes.",
+          "new_collection_authorized": false
+        },
+        "decision": {
+          "actor_type": "synthetic_turtle",
+          "evidence_class": "synthetic_self_play",
+          "action": "surface_now",
+          "rationale": "Synthetic Reflector Turtle decided to interrupt.",
+          "interruptive": true,
+          "delivery_audience": "learner",
+          "retention": "ephemeral_private",
+          "status": "executed"
+        },
+        "provenance": {
+          "source_event_privacy_class": "private",
+          "event_content_duplicated": false,
+          "learner_can_mute": true,
+          "learner_can_revise": true,
+          "machine_salience_is_proposal": true,
+          "machine_final_authority": false,
+          "surveillance_expansion_authorized": false,
+          "reversible": true,
+          "non_interruption_is_valid": true
+        }
+      }
+    },
+    {
+      "id": "private-public-broadcast-fail",
+      "expected_valid": false,
+      "expected_error": "private source event may not be delivered publicly",
+      "envelope": {
+        "version": "0.1",
+        "id": "attention-private-public-001",
+        "question_ref": "question-private-world",
+        "world_event_ref": "event-private-world",
+        "attention_context": {
+          "mode": "interruptible",
+          "source": "learner_stated"
+        },
+        "attention_rule": {
+          "id": "watchpoint-private-world",
+          "purpose_ref": "learner-purpose-private-world",
+          "authored_by": "learner",
+          "evidence_class": "human_interaction",
+          "basis": "explicit_learner_request",
+          "status": "active",
+          "trigger_description": "Tell me when the private experiment reaches the threshold.",
+          "new_collection_authorized": false
+        },
+        "decision": {
+          "actor_type": "turtle",
+          "evidence_class": "system_record",
+          "action": "surface_now",
+          "rationale": "The learner-authored threshold was reached.",
+          "interruptive": true,
+          "delivery_audience": "public",
+          "retention": "project_record",
+          "status": "executed"
+        },
+        "provenance": {
+          "source_event_privacy_class": "private",
+          "event_content_duplicated": false,
+          "learner_can_mute": true,
+          "learner_can_revise": true,
+          "machine_salience_is_proposal": true,
+          "machine_final_authority": false,
+          "surveillance_expansion_authorized": false,
+          "reversible": true,
+          "non_interruption_is_valid": true
+        }
+      }
+    },
+    {
+      "id": "collection-expansion-fail",
+      "expected_valid": false,
+      "expected_error": "attention envelope may not authorize new collection",
+      "envelope": {
+        "version": "0.1",
+        "id": "attention-expand-collection-001",
+        "question_ref": "question-market",
+        "world_event_ref": "event-market-existing",
+        "attention_context": {
+          "mode": "watchpoint_only",
+          "source": "learner_stated"
+        },
+        "attention_rule": {
+          "id": "watchpoint-market",
+          "purpose_ref": "learner-purpose-market",
+          "authored_by": "learner",
+          "evidence_class": "human_interaction",
+          "basis": "learner_watchpoint",
+          "status": "active",
+          "trigger_description": "Tell me if the market entrances stop being used.",
+          "new_collection_authorized": true
+        },
+        "decision": {
+          "actor_type": "turtle",
+          "evidence_class": "system_record",
+          "action": "defer",
+          "rationale": "The attention record attempted to broaden collection beyond the referenced event.",
+          "interruptive": false,
+          "delivery_audience": "none",
+          "retention": "ephemeral_private",
+          "status": "proposed"
+        },
+        "provenance": {
+          "source_event_privacy_class": "private",
+          "event_content_duplicated": false,
+          "learner_can_mute": true,
+          "learner_can_revise": true,
+          "machine_salience_is_proposal": true,
+          "machine_final_authority": false,
+          "surveillance_expansion_authorized": false,
+          "reversible": true,
+          "non_interruption_is_valid": true
+        }
+      }
+    }
+  ]
+}
