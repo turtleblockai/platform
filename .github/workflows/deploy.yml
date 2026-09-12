@@ -42,5 +42,11 @@ jobs:
       - name: Validate Selective Attention Envelope
         run: npm run validate:selective-attention
 
+      - name: Validate Terraria TRY IT contract
+        run: npm run validate:terraria-try
+
+      - name: Audit repository-to-D1 reconciliation candidates
+        run: npm run audit:d1-coverage
+
       - name: Deployment note
         run: echo "Production deployment is handled by the connected Cloudflare Workers Builds GitHub integration."
