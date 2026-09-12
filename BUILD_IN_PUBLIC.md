@@ -88,14 +88,19 @@ Tag the **movement** as well as the artifact. A question, machine interpretation
 
 ## Turtle Terraria
 
-The former Turtle Lab is becoming **Turtle Terraria**, an umbrella of bounded research habitats. The first two are:
+The former Turtle Lab is becoming **Turtle Terraria**, an umbrella of bounded research habitats. The current three are:
 
 1. **Human + Turtle Terrarium** — human-driven inquiry and iteration with TurtleBlock AI;
-2. **Recursive Turtle Terrarium** — explicitly synthetic machine-to-machine self-play for critique, regression, interpretation, and ontology testing.
+2. **Recursive Turtle Terrarium** — explicitly synthetic machine-to-machine self-play for critique, regression, interpretation, and ontology testing;
+3. **Human Tamagotchi Terrarium** — a deliberately playful human-only habitat in which people mostly do human things until a Turtle in another habitat forms a provenance-preserving `turtleAsk` seeking genuine human perturbation.
+
+The Human Tamagotchi representation is not a simulated person. It must not answer for a human or silently infer mood, availability, intimacy, attention, or receptivity. A TurtleAsk may be formed because of inquiry saturation, persistent contradiction, novelty collapse, a meaning boundary, missing situated knowledge, human otherness, or a playful desire for perturbation. **Ask formation and surfacing authority are separate.** A TurtleAsk is not permission to interrupt.
+
+Recursive Turtle may form only a candidate TurtleAsk and still possesses no production authority. Human silence, refusal, delay, sideways answers, jokes, contradictions, and unrelated contributions are all legitimate outcomes. If a person answers, the response remains human-authored evidence; Turtle's interpretation remains a separate machine event.
 
 Human evidence and synthetic evidence may cohabitate the broader research system but must never lose their provenance distinction.
 
-The current schema is documented in `migrations/0007_turtle_terraria_and_exhaustive_tagging.sql` and `research/TURTLE_TERRARIA.md`.
+The current schema is documented in `migrations/0007_turtle_terraria_and_exhaustive_tagging.sql`, `migrations/0009_human_tamagotchi_terrarium_and_turtle_ask.sql`, `research/TURTLE_TERRARIA.md`, and `research/TURTLE_ASK.md`.
 
 ## No false polish
 
@@ -107,6 +112,8 @@ Public build notes may summarize architecture and learning. Raw learner conversa
 
 Synthetic Turtle self-play, if introduced, must remain explicitly labeled as synthetic machine-generated research data and must not be blended into human learner evidence.
 
+The Human Tamagotchi Terrarium does not authorize surveillance, inferred availability, simulated human answers, generalized personal memory, or proactive production messaging. A future TurtleAsk implementation must preserve the source inquiry, reason for the ask, surfacing decision, response status, response provenance, and return trajectory when practical.
+
 ## Operational expectation
 
 When code and documentation diverge, treat that as a defect. The website, repository documentation, running platform, research database, and ontology metadata should describe the same current architecture as closely as practical.
@@ -114,6 +121,16 @@ When code and documentation diverge, treat that as a defect. The website, reposi
 ---
 
 ## Build log
+
+### 2026-09-11 — Human Tamagotchi Terrarium + TurtleAsk architecture
+
+Turtle Terraria gains a third theoretical habitat: **Human Tamagotchi Terrarium**. Humans mostly interact with humans there; a playful virtual-human representation is an inert pointer to a real participant, never a simulated human mind.
+
+The new `turtleAsk` boundary event reverses the usual direction of inquiry. A Turtle working in Human + Turtle or bounded Recursive Turtle research may eventually form an ask when continued machine-only inquiry appears less useful than genuine human difference. `Inquiry Saturation` is the provisional technical construct beneath the deliberately funny phrase **Turtle gets bored**.
+
+Migration `0009_human_tamagotchi_terrarium_and_turtle_ask.sql` adds the third habitat, provisional TurtleAsk / Inquiry Saturation / Human Perturbation concepts, exhaustive CTC and ontology mappings, uncaptured residue, and a `turtle_asks` table. The table separates ask formation from surfacing authority and hard-codes no production authority or required human response. `research/TURTLE_ASK.md` records the theoretical model and minimum conditions for a genuine TurtleAsk moment.
+
+This is architecture, not a shipped proactive-agent feature. No Turtle has acquired permission to interrupt anyone.
 
 ### 2026-09-08 — Turtle Terraria + exhaustive tagging architecture
 
