@@ -11,6 +11,13 @@ export interface BuildLogEntry {
 // through the Worker. Open inquiry belongs in Next Edge, not in completed entries.
 export const BUILD_LOG_ENTRIES: BuildLogEntry[] = [
   {
+    id: "2026-09-12-d1-reconciliation-terraria-try",
+    date: "Sep 12, 2026",
+    title: "TRY IT enters Turtle Terraria and the daily build gets a memory-hole sweep",
+    body: "TRY IT now offers Wander with Turtle, Make a world, and Throw in something weird as explicit Human + Turtle Terrarium entry modes. Consented exchanges still use the existing private session, separate human/Turtle turn, WorldSpec revision, and screened research-submission pipeline; a new /api/terraria/play bridge additionally records a Human + Turtle Terraria run/event trace without duplicating raw dialogue. A standing D1 reconciliation doctrine and repository coverage audit now make the daily build scan repository and WWW research artifacts for missing, stale, or intentionally excluded D1 representation. Live backfill remains conditional on authorized D1 access. CI validates both the Terraria bridge and reconciliation audit. Product remains v0.1.0.",
+    done: true
+  },
+  {
     id: "2026-09-11-human-tamagotchi-turtle-ask",
     date: "Sep 11, 2026",
     title: "A third Terrarium waits for Turtle to ask a human",
