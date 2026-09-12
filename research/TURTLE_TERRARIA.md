@@ -6,7 +6,7 @@ Turtle Terraria is the umbrella term for bounded habitats in which people, compu
 
 The term deliberately shifts emphasis away from a generic "lab." A terrarium is an environment with inhabitants, boundaries, conditions, interactions, traces, and consequences. TurtleBlock AI can therefore study not only a finished output but what happens among participants over time.
 
-## Initial habitats
+## Current habitats
 
 ### 1. Human + Turtle Terrarium
 
@@ -45,6 +45,65 @@ synthetic problem
 
 All machine-to-machine traces are `synthetic_self_play`. They are never counted as evidence of human learning and possess no authority to promote their own changes directly into production.
 
+### 3. Human Tamagotchi Terrarium
+
+Humans mostly hang out with humans and do human things. Turtle is not continuously present.
+
+A playful virtual-human / Tamagotchi representation may stand in for an actual participant in the interface, but it is **not a synthetic human**. It must not answer for the person or silently infer mood, attention, intimacy, availability, receptivity, or willingness to engage.
+
+The research purpose is to create a genuinely different condition: a Turtle in either of the other habitats may eventually decide that another Turtle turn is less useful than a new human perturbation and form a **`turtleAsk`**.
+
+Core trace:
+
+```text
+Turtle inquiry in another habitat
+  → repetition / contradiction / uncertainty / missing human otherness
+  → turtleAsk formed
+  → separate consent + attention gate
+  → human may answer / ignore / defer / refuse / answer sideways
+  → human response preserves human provenance
+  → Turtle interpretation
+  → inquiry may change direction
+```
+
+The funny inversion is intentional: the humans are the little Tamagotchi creatures on the other side of the glass, mostly occupied with human life, while Turtle has to decide whether it has a worthwhile enough question to knock.
+
+A turtleAsk is not a notification privilege. Forming an ask does not authorize interruption. Human silence is a valid outcome. Recursive Turtle can form only a candidate ask and has no authority to surface it directly to a person.
+
+See `research/TURTLE_ASK.md` and migration `0009_human_tamagotchi_terrarium_and_turtle_ask.sql`.
+
+## TurtleAsk as a cross-habitat boundary event
+
+Most current Human + Turtle interaction begins when a person brings curiosity to Turtle. TurtleAsk makes the reverse direction researchable:
+
+```text
+human curiosity → Turtle
+```
+
+can coexist with:
+
+```text
+Turtle inquiry → need for difference → human
+```
+
+The hypothesis is not that Turtle becomes sentient or literally bored. **Inquiry saturation** is the provisional technical construct: repeated bounded inquiry may stop producing enough difference, continue circling an unresolved contradiction, or reach a meaning boundary that should not be silently filled by machine interpretation.
+
+`boredom` remains useful as a playful emergent label precisely because it captures the interactional idea quickly, while provenance keeps the claim modest.
+
+A genuine TurtleAsk moment should preserve:
+
+- the source habitat;
+- the preceding bounded Turtle trace;
+- the reason the ask was formed;
+- the ask itself;
+- the independent decision about whether it may surface;
+- whether the human answered, ignored, deferred, refused, or never saw it;
+- the human response as human-authored evidence when applicable;
+- Turtle's later interpretation as a separate machine event;
+- whether the subsequent trajectory changed.
+
+The human is being invited as a source of difference, not recruited as clerical labor for the agent.
+
 ## Cohabitation without provenance collapse
 
 The habitats are allowed to mix many kinds of material while refusing to pretend they all came from the same place.
@@ -55,6 +114,9 @@ human reflection ≠ machine critique
 synthetic self-play ≠ learner evidence
 research source ≠ later ontology mapping
 WorldSpec state ≠ the meaning of the learner
+candidate turtleAsk ≠ permission to interrupt
+human perturbation ≠ Turtle interpretation of that perturbation
+virtual human avatar ≠ simulated human mind
 ```
 
 Cohabitation is the feature. Provenance collapse is the failure mode.
@@ -72,6 +134,8 @@ The seven Sanders-authored Critical Techno Constructivism domains remain the est
 7. Sharing and Collaborating
 
 Turtle Terraria is designed to record evidence across those domains rather than merely attach a single summary tag to a session.
+
+The Human Tamagotchi / TurtleAsk design does not establish a new domain. It currently maps across the seven while leaving open uncaptured residue around initiative-transfer, voluntary non-response, and human otherness as an epistemic resource.
 
 ## Room for an eighth, ninth, or tenth domain
 
@@ -102,6 +166,7 @@ Anything that may later matter becomes a `research_object` or is linked to one:
 - reflections;
 - Terraria runs, events, artifacts, and observations;
 - synthetic Builder/Reflector exchanges;
+- TurtleAsk formations, surfacing decisions, responses, non-responses, and return trajectories;
 - publications and source passages;
 - external research signals;
 - daily auto-build runs and deliberations;
@@ -137,15 +202,21 @@ An exhaustive ontology should capture transitions:
 question → interpretation → disagreement → correction → revision
 ```
 
+and now also cross-habitat movement such as:
+
+```text
+synthetic inquiry → saturation → candidate turtleAsk → human gate → human perturbation → Turtle interpretation → redirected inquiry
+```
+
 not merely the final revision.
 
-A machine misunderstanding followed by a human correction is different data from an interpretation the human accepted immediately. A failed auto-build candidate is different data from a selected contribution. A synthetic critique that catches a problem is different data from a human noticing the same problem. All can be connected; none should be collapsed.
+A machine misunderstanding followed by a human correction is different data from an interpretation the human accepted immediately. A failed auto-build candidate is different data from a selected contribution. A synthetic critique that catches a problem is different data from a human noticing the same problem. A human not answering Turtle is different data from Turtle never asking. All can be connected; none should be collapsed.
 
 ## Exhaustive does not mean infinite regress
 
 If every tag were itself required to become a newly tagged research object, the metadata process would recurse forever. Turtle Terraria therefore uses **capture-batch closure**.
 
-A bounded episode — a daily auto-build run, a Human + Turtle session, a Recursive Turtle self-play run, a publication cycle, or another defined research episode — is the capture batch. The meaningful events and artifacts inside that batch are registered and tagged. The tag records themselves are treated as metadata about those objects, not automatically promoted into new primary research objects.
+A bounded episode — a daily auto-build run, a Human + Turtle session, a Recursive Turtle self-play run, a TurtleAsk boundary episode, a publication cycle, or another defined research episode — is the capture batch. The meaningful events and artifacts inside that batch are registered and tagged. The tag records themselves are treated as metadata about those objects, not automatically promoted into new primary research objects.
 
 A tag or relationship becomes a primary research object only when there is a reason to study the tagging act itself, for example:
 
@@ -191,6 +262,8 @@ This makes it possible to ask questions later such as:
 - Which external research sources generate useful changes rather than noise?
 - What kinds of machine assumptions are most frequently corrected by people?
 - What recurring observations fail to fit the current seven CTC domains?
+- Which TurtleAsk reasons actually lead to meaningful trajectory change?
+- Does Turtle learn to ask humans less often but more usefully?
 
 ## Database principle
 
@@ -218,7 +291,11 @@ See:
 
 - `migrations/0007_turtle_terraria_and_exhaustive_tagging.sql`
 - `migrations/0008_seed_terraria_and_autobuild_tags.sql`
+- `migrations/0009_human_tamagotchi_terrarium_and_turtle_ask.sql`
 - `worldspec/Dr_Bryan_P_Sanders_TurtleBlockAI_Taxonomy.md`
+- `research/TURTLE_ASK.md`
 - `research/daily-build/`
 
-Migration 0007 adds the universal `research_objects` registry, ontology/CTC/emergent tagging tables, open CTC candidate-domain structures, two initial Terraria habitats, auto-build research tables, automatic registration triggers for operational Turtle records, and audit views that expose objects still needing tags. Migration 0008 seeds the first daily-build and Terraria research trace through those structures.
+Migration 0007 adds the universal `research_objects` registry, ontology/CTC/emergent tagging tables, open CTC candidate-domain structures, the first two Terraria habitats, auto-build research tables, automatic registration triggers for operational Turtle records, and audit views that expose objects still needing tags. Migration 0008 seeds the first daily-build and Terraria research trace through those structures.
+
+Migration 0009 adds the experimental **Human Tamagotchi Terrarium**, provisional TurtleAsk / Inquiry Saturation / Human Perturbation concepts, a `turtle_asks` boundary-event table, automatic research-object registration for asks, exhaustive initial CTC/ontology mappings, and explicit uncaptured residue. It authorizes no proactive production messaging by itself.
