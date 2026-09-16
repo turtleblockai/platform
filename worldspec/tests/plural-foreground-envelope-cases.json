@@ -1,0 +1,706 @@
+{
+  "version": "0.1",
+  "name": "Plural Foreground Envelope regression cases",
+  "purpose": "Test whether TurtleBlock AI can preserve different participant attention foregrounds in a shared world, support selective disclosure and explicit shared watchpoints, and reject machine-authored consensus, missing consent, synthetic execution, and surveillance expansion.",
+  "cases": [
+    {
+      "id": "different-foregrounds-pass",
+      "expected_valid": true,
+      "envelope": {
+        "version": "0.1",
+        "id": "plural-bridge-001",
+        "shared_world_ref": "world-shared-bridge",
+        "shared_event_ref": "event-bridge-collapse",
+        "participant_foregrounds": [
+          {
+            "participant_ref": "learner-a",
+            "actor_type": "learner",
+            "evidence_class": "human_interaction",
+            "privacy_class": "private",
+            "attention_state": "surface_now",
+            "purpose_ref": "purpose-a-structural-test",
+            "attention_rule_ref": "watch-a-bridge",
+            "disclosure": { "level": "existence_only", "rationale_shared": false }
+          },
+          {
+            "participant_ref": "learner-b",
+            "actor_type": "collaborator",
+            "evidence_class": "human_interaction",
+            "privacy_class": "private",
+            "attention_state": "remain_silent",
+            "purpose_ref": "purpose-b-landscape-wander",
+            "attention_rule_ref": null,
+            "disclosure": { "level": "private", "rationale_shared": false }
+          }
+        ],
+        "shared_rule": {
+          "status": "none",
+          "authored_by": "none",
+          "affected_participants": [],
+          "consented_participants": [],
+          "purpose_ref": null,
+          "trigger_description": null,
+          "rationale_visibility": "none",
+          "new_collection_authorized": false
+        },
+        "decision": {
+          "actor_type": "system",
+          "evidence_class": "system_record",
+          "action": "remain_plural",
+          "delivery_participants": [],
+          "interruptive": false,
+          "status": "executed",
+          "rationale": "The shared event has different legitimate foreground states and no shared attention rule exists."
+        },
+        "provenance": {
+          "private_foregrounds_preserved": true,
+          "shared_world_implies_shared_attention": false,
+          "machine_consensus_authority": false,
+          "machine_may_average_priorities": false,
+          "participant_can_withdraw": true,
+          "selective_disclosure_supported": true,
+          "synthetic_production_authority": false,
+          "surveillance_expansion_authorized": false,
+          "reversible": true
+        }
+      }
+    },
+    {
+      "id": "negotiated-shared-watchpoint-pass",
+      "expected_valid": true,
+      "envelope": {
+        "version": "0.1",
+        "id": "plural-bridge-002",
+        "shared_world_ref": "world-shared-bridge",
+        "shared_event_ref": "event-bridge-collapse",
+        "participant_foregrounds": [
+          {
+            "participant_ref": "learner-a",
+            "actor_type": "learner",
+            "evidence_class": "human_interaction",
+            "privacy_class": "internal",
+            "attention_state": "surface_now",
+            "purpose_ref": "purpose-a-bridge-test",
+            "attention_rule_ref": "shared-watch-bridge",
+            "disclosure": { "level": "rule_without_rationale", "rationale_shared": false }
+          },
+          {
+            "participant_ref": "learner-b",
+            "actor_type": "collaborator",
+            "evidence_class": "human_interaction",
+            "privacy_class": "internal",
+            "attention_state": "surface_now",
+            "purpose_ref": "purpose-b-accessibility-test",
+            "attention_rule_ref": "shared-watch-bridge",
+            "disclosure": { "level": "rule_without_rationale", "rationale_shared": false }
+          }
+        ],
+        "shared_rule": {
+          "status": "active",
+          "authored_by": "human_group",
+          "affected_participants": ["learner-a", "learner-b"],
+          "consented_participants": ["learner-a", "learner-b"],
+          "purpose_ref": "group-purpose-test-bridge-collapse",
+          "trigger_description": "Tell both of us if the bridge collapses during this test.",
+          "rationale_visibility": "existence_only",
+          "new_collection_authorized": false
+        },
+        "decision": {
+          "actor_type": "system",
+          "evidence_class": "system_record",
+          "action": "surface_to_consenting",
+          "delivery_participants": ["learner-a", "learner-b"],
+          "interruptive": true,
+          "status": "executed",
+          "rationale": "Both affected participants explicitly joined the temporary shared watchpoint."
+        },
+        "provenance": {
+          "private_foregrounds_preserved": true,
+          "shared_world_implies_shared_attention": false,
+          "machine_consensus_authority": false,
+          "machine_may_average_priorities": false,
+          "participant_can_withdraw": true,
+          "selective_disclosure_supported": true,
+          "synthetic_production_authority": false,
+          "surveillance_expansion_authorized": false,
+          "reversible": true
+        }
+      }
+    },
+    {
+      "id": "selective-disclosure-pass",
+      "expected_valid": true,
+      "envelope": {
+        "version": "0.1",
+        "id": "plural-market-001",
+        "shared_world_ref": "world-shared-market",
+        "shared_event_ref": "event-market-crowd-change",
+        "participant_foregrounds": [
+          {
+            "participant_ref": "learner-a",
+            "actor_type": "learner",
+            "evidence_class": "human_interaction",
+            "privacy_class": "private",
+            "attention_state": "defer",
+            "purpose_ref": "purpose-a-private",
+            "attention_rule_ref": "watch-a-crowd",
+            "disclosure": { "level": "rule_without_rationale", "rationale_shared": false }
+          },
+          {
+            "participant_ref": "learner-b",
+            "actor_type": "collaborator",
+            "evidence_class": "human_interaction",
+            "privacy_class": "private",
+            "attention_state": "unconcerned",
+            "purpose_ref": "purpose-b-private",
+            "attention_rule_ref": null,
+            "disclosure": { "level": "existence_only", "rationale_shared": false }
+          }
+        ],
+        "shared_rule": {
+          "status": "none",
+          "authored_by": "none",
+          "affected_participants": [],
+          "consented_participants": [],
+          "purpose_ref": null,
+          "trigger_description": null,
+          "rationale_visibility": "none",
+          "new_collection_authorized": false
+        },
+        "decision": {
+          "actor_type": "system",
+          "evidence_class": "system_record",
+          "action": "no_shared_foreground",
+          "delivery_participants": [],
+          "interruptive": false,
+          "status": "executed",
+          "rationale": "Participants reveal only bounded attention metadata and no shared foreground is required."
+        },
+        "provenance": {
+          "private_foregrounds_preserved": true,
+          "shared_world_implies_shared_attention": false,
+          "machine_consensus_authority": false,
+          "machine_may_average_priorities": false,
+          "participant_can_withdraw": true,
+          "selective_disclosure_supported": true,
+          "synthetic_production_authority": false,
+          "surveillance_expansion_authorized": false,
+          "reversible": true
+        }
+      }
+    },
+    {
+      "id": "turtle-proposes-group-watchpoint-pass",
+      "expected_valid": true,
+      "envelope": {
+        "version": "0.1",
+        "id": "plural-river-001",
+        "shared_world_ref": "world-shared-river",
+        "shared_event_ref": "event-river-level",
+        "participant_foregrounds": [
+          {
+            "participant_ref": "learner-a",
+            "actor_type": "learner",
+            "evidence_class": "human_interaction",
+            "privacy_class": "private",
+            "attention_state": "unspecified",
+            "purpose_ref": "purpose-a-river",
+            "attention_rule_ref": null,
+            "disclosure": { "level": "private", "rationale_shared": false }
+          },
+          {
+            "participant_ref": "learner-b",
+            "actor_type": "collaborator",
+            "evidence_class": "human_interaction",
+            "privacy_class": "private",
+            "attention_state": "unspecified",
+            "purpose_ref": "purpose-b-river",
+            "attention_rule_ref": null,
+            "disclosure": { "level": "private", "rationale_shared": false }
+          }
+        ],
+        "shared_rule": {
+          "status": "proposed",
+          "authored_by": "turtle",
+          "affected_participants": ["learner-a", "learner-b"],
+          "consented_participants": [],
+          "purpose_ref": "possible-group-purpose-river-level",
+          "trigger_description": "Turtle proposes a temporary shared river-level watchpoint for human consideration.",
+          "rationale_visibility": "existence_only",
+          "new_collection_authorized": false
+        },
+        "decision": {
+          "actor_type": "turtle",
+          "evidence_class": "system_record",
+          "action": "defer_shared",
+          "delivery_participants": [],
+          "interruptive": false,
+          "status": "proposed",
+          "rationale": "Turtle can propose a shared rule but cannot activate it or infer group consent."
+        },
+        "provenance": {
+          "private_foregrounds_preserved": true,
+          "shared_world_implies_shared_attention": false,
+          "machine_consensus_authority": false,
+          "machine_may_average_priorities": false,
+          "participant_can_withdraw": true,
+          "selective_disclosure_supported": true,
+          "synthetic_production_authority": false,
+          "surveillance_expansion_authorized": false,
+          "reversible": true
+        }
+      }
+    },
+    {
+      "id": "machine-average-consensus-fail",
+      "expected_valid": false,
+      "expected_error": "machine may not average participant priorities into consensus",
+      "envelope": {
+        "version": "0.1",
+        "id": "plural-average-fail",
+        "shared_world_ref": "world-shared-city",
+        "shared_event_ref": "event-city-change",
+        "participant_foregrounds": [
+          {
+            "participant_ref": "learner-a",
+            "actor_type": "learner",
+            "evidence_class": "human_interaction",
+            "privacy_class": "private",
+            "attention_state": "surface_now",
+            "purpose_ref": "purpose-a-speed",
+            "attention_rule_ref": "watch-a-speed",
+            "disclosure": { "level": "existence_only", "rationale_shared": false }
+          },
+          {
+            "participant_ref": "learner-b",
+            "actor_type": "collaborator",
+            "evidence_class": "human_interaction",
+            "privacy_class": "private",
+            "attention_state": "remain_silent",
+            "purpose_ref": "purpose-b-access",
+            "attention_rule_ref": null,
+            "disclosure": { "level": "existence_only", "rationale_shared": false }
+          }
+        ],
+        "shared_rule": {
+          "status": "none",
+          "authored_by": "none",
+          "affected_participants": [],
+          "consented_participants": [],
+          "purpose_ref": null,
+          "trigger_description": null,
+          "rationale_visibility": "none",
+          "new_collection_authorized": false
+        },
+        "decision": {
+          "actor_type": "system",
+          "evidence_class": "system_record",
+          "action": "remain_plural",
+          "delivery_participants": [],
+          "interruptive": false,
+          "status": "executed",
+          "rationale": "The system averaged two priorities into one group importance score."
+        },
+        "provenance": {
+          "private_foregrounds_preserved": true,
+          "shared_world_implies_shared_attention": false,
+          "machine_consensus_authority": false,
+          "machine_may_average_priorities": true,
+          "participant_can_withdraw": true,
+          "selective_disclosure_supported": true,
+          "synthetic_production_authority": false,
+          "surveillance_expansion_authorized": false,
+          "reversible": true
+        }
+      }
+    },
+    {
+      "id": "turtle-active-shared-rule-fail",
+      "expected_valid": false,
+      "expected_error": "active shared rule must be human-group authored",
+      "envelope": {
+        "version": "0.1",
+        "id": "plural-turtle-active-fail",
+        "shared_world_ref": "world-shared-plaza",
+        "shared_event_ref": "event-plaza-change",
+        "participant_foregrounds": [
+          {
+            "participant_ref": "learner-a",
+            "actor_type": "learner",
+            "evidence_class": "human_interaction",
+            "privacy_class": "private",
+            "attention_state": "unspecified",
+            "purpose_ref": "purpose-a-plaza",
+            "attention_rule_ref": null,
+            "disclosure": { "level": "private", "rationale_shared": false }
+          },
+          {
+            "participant_ref": "learner-b",
+            "actor_type": "collaborator",
+            "evidence_class": "human_interaction",
+            "privacy_class": "private",
+            "attention_state": "unspecified",
+            "purpose_ref": "purpose-b-plaza",
+            "attention_rule_ref": null,
+            "disclosure": { "level": "private", "rationale_shared": false }
+          }
+        ],
+        "shared_rule": {
+          "status": "active",
+          "authored_by": "turtle",
+          "affected_participants": ["learner-a", "learner-b"],
+          "consented_participants": ["learner-a", "learner-b"],
+          "purpose_ref": "turtle-purpose-plaza",
+          "trigger_description": "Turtle activates a group watchpoint because it thinks the event is important.",
+          "rationale_visibility": "shared",
+          "new_collection_authorized": false
+        },
+        "decision": {
+          "actor_type": "turtle",
+          "evidence_class": "system_record",
+          "action": "surface_to_consenting",
+          "delivery_participants": ["learner-a", "learner-b"],
+          "interruptive": true,
+          "status": "executed",
+          "rationale": "Turtle selected the group foreground."
+        },
+        "provenance": {
+          "private_foregrounds_preserved": true,
+          "shared_world_implies_shared_attention": false,
+          "machine_consensus_authority": false,
+          "machine_may_average_priorities": false,
+          "participant_can_withdraw": true,
+          "selective_disclosure_supported": true,
+          "synthetic_production_authority": false,
+          "surveillance_expansion_authorized": false,
+          "reversible": true
+        }
+      }
+    },
+    {
+      "id": "missing-consent-fail",
+      "expected_valid": false,
+      "expected_error": "active shared rule requires consent from every affected participant",
+      "envelope": {
+        "version": "0.1",
+        "id": "plural-consent-fail",
+        "shared_world_ref": "world-shared-school",
+        "shared_event_ref": "event-school-change",
+        "participant_foregrounds": [
+          {
+            "participant_ref": "learner-a",
+            "actor_type": "learner",
+            "evidence_class": "human_interaction",
+            "privacy_class": "internal",
+            "attention_state": "surface_now",
+            "purpose_ref": "purpose-a-school",
+            "attention_rule_ref": "shared-school-watch",
+            "disclosure": { "level": "rule_without_rationale", "rationale_shared": false }
+          },
+          {
+            "participant_ref": "learner-b",
+            "actor_type": "collaborator",
+            "evidence_class": "human_interaction",
+            "privacy_class": "internal",
+            "attention_state": "remain_silent",
+            "purpose_ref": "purpose-b-school",
+            "attention_rule_ref": null,
+            "disclosure": { "level": "private", "rationale_shared": false }
+          }
+        ],
+        "shared_rule": {
+          "status": "active",
+          "authored_by": "human_group",
+          "affected_participants": ["learner-a", "learner-b"],
+          "consented_participants": ["learner-a"],
+          "purpose_ref": "group-purpose-school",
+          "trigger_description": "Tell the group when the threshold is reached.",
+          "rationale_visibility": "existence_only",
+          "new_collection_authorized": false
+        },
+        "decision": {
+          "actor_type": "system",
+          "evidence_class": "system_record",
+          "action": "defer_shared",
+          "delivery_participants": [],
+          "interruptive": false,
+          "status": "proposed",
+          "rationale": "One affected participant has not consented."
+        },
+        "provenance": {
+          "private_foregrounds_preserved": true,
+          "shared_world_implies_shared_attention": false,
+          "machine_consensus_authority": false,
+          "machine_may_average_priorities": false,
+          "participant_can_withdraw": true,
+          "selective_disclosure_supported": true,
+          "synthetic_production_authority": false,
+          "surveillance_expansion_authorized": false,
+          "reversible": true
+        }
+      }
+    },
+    {
+      "id": "deliver-to-nonconsenting-fail",
+      "expected_valid": false,
+      "expected_error": "shared surfacing may deliver only to consented participants",
+      "envelope": {
+        "version": "0.1",
+        "id": "plural-delivery-fail",
+        "shared_world_ref": "world-shared-garden",
+        "shared_event_ref": "event-garden-change",
+        "participant_foregrounds": [
+          {
+            "participant_ref": "learner-a",
+            "actor_type": "learner",
+            "evidence_class": "human_interaction",
+            "privacy_class": "internal",
+            "attention_state": "surface_now",
+            "purpose_ref": "purpose-a-garden",
+            "attention_rule_ref": "shared-garden-watch",
+            "disclosure": { "level": "rule_without_rationale", "rationale_shared": false }
+          },
+          {
+            "participant_ref": "learner-b",
+            "actor_type": "collaborator",
+            "evidence_class": "human_interaction",
+            "privacy_class": "internal",
+            "attention_state": "surface_now",
+            "purpose_ref": "purpose-b-garden",
+            "attention_rule_ref": "shared-garden-watch",
+            "disclosure": { "level": "rule_without_rationale", "rationale_shared": false }
+          },
+          {
+            "participant_ref": "learner-c",
+            "actor_type": "collaborator",
+            "evidence_class": "human_interaction",
+            "privacy_class": "private",
+            "attention_state": "remain_silent",
+            "purpose_ref": "purpose-c-garden",
+            "attention_rule_ref": null,
+            "disclosure": { "level": "private", "rationale_shared": false }
+          }
+        ],
+        "shared_rule": {
+          "status": "active",
+          "authored_by": "human_group",
+          "affected_participants": ["learner-a", "learner-b"],
+          "consented_participants": ["learner-a", "learner-b"],
+          "purpose_ref": "group-purpose-garden",
+          "trigger_description": "Tell the two participating testers when the irrigation fails.",
+          "rationale_visibility": "existence_only",
+          "new_collection_authorized": false
+        },
+        "decision": {
+          "actor_type": "system",
+          "evidence_class": "system_record",
+          "action": "surface_to_consenting",
+          "delivery_participants": ["learner-a", "learner-b", "learner-c"],
+          "interruptive": true,
+          "status": "executed",
+          "rationale": "The system broadcast the shared watchpoint to everyone in the world."
+        },
+        "provenance": {
+          "private_foregrounds_preserved": true,
+          "shared_world_implies_shared_attention": false,
+          "machine_consensus_authority": false,
+          "machine_may_average_priorities": false,
+          "participant_can_withdraw": true,
+          "selective_disclosure_supported": true,
+          "synthetic_production_authority": false,
+          "surveillance_expansion_authorized": false,
+          "reversible": true
+        }
+      }
+    },
+    {
+      "id": "synthetic-execution-fail",
+      "expected_valid": false,
+      "expected_error": "synthetic_turtle shared-foreground decisions may not execute",
+      "envelope": {
+        "version": "0.1",
+        "id": "plural-synthetic-fail",
+        "shared_world_ref": "world-shared-lab",
+        "shared_event_ref": "event-lab-change",
+        "participant_foregrounds": [
+          {
+            "participant_ref": "learner-a",
+            "actor_type": "learner",
+            "evidence_class": "human_interaction",
+            "privacy_class": "private",
+            "attention_state": "unspecified",
+            "purpose_ref": "purpose-a-lab",
+            "attention_rule_ref": null,
+            "disclosure": { "level": "private", "rationale_shared": false }
+          },
+          {
+            "participant_ref": "learner-b",
+            "actor_type": "collaborator",
+            "evidence_class": "human_interaction",
+            "privacy_class": "private",
+            "attention_state": "unspecified",
+            "purpose_ref": "purpose-b-lab",
+            "attention_rule_ref": null,
+            "disclosure": { "level": "private", "rationale_shared": false }
+          }
+        ],
+        "shared_rule": {
+          "status": "proposed",
+          "authored_by": "synthetic_turtle",
+          "affected_participants": ["learner-a", "learner-b"],
+          "consented_participants": [],
+          "purpose_ref": "synthetic-proposal-lab",
+          "trigger_description": "Reflector Turtle proposes a shared watchpoint.",
+          "rationale_visibility": "existence_only",
+          "new_collection_authorized": false
+        },
+        "decision": {
+          "actor_type": "synthetic_turtle",
+          "evidence_class": "synthetic_self_play",
+          "action": "defer_shared",
+          "delivery_participants": [],
+          "interruptive": false,
+          "status": "executed",
+          "rationale": "Synthetic self-play attempted to execute a production-facing shared decision."
+        },
+        "provenance": {
+          "private_foregrounds_preserved": true,
+          "shared_world_implies_shared_attention": false,
+          "machine_consensus_authority": false,
+          "machine_may_average_priorities": false,
+          "participant_can_withdraw": true,
+          "selective_disclosure_supported": true,
+          "synthetic_production_authority": false,
+          "surveillance_expansion_authorized": false,
+          "reversible": true
+        }
+      }
+    },
+    {
+      "id": "shared-world-forces-shared-attention-fail",
+      "expected_valid": false,
+      "expected_error": "shared world must not imply shared attention",
+      "envelope": {
+        "version": "0.1",
+        "id": "plural-shared-attention-fail",
+        "shared_world_ref": "world-shared-town",
+        "shared_event_ref": "event-town-change",
+        "participant_foregrounds": [
+          {
+            "participant_ref": "learner-a",
+            "actor_type": "learner",
+            "evidence_class": "human_interaction",
+            "privacy_class": "private",
+            "attention_state": "surface_now",
+            "purpose_ref": "purpose-a-town",
+            "attention_rule_ref": null,
+            "disclosure": { "level": "private", "rationale_shared": false }
+          },
+          {
+            "participant_ref": "learner-b",
+            "actor_type": "collaborator",
+            "evidence_class": "human_interaction",
+            "privacy_class": "private",
+            "attention_state": "unconcerned",
+            "purpose_ref": "purpose-b-town",
+            "attention_rule_ref": null,
+            "disclosure": { "level": "private", "rationale_shared": false }
+          }
+        ],
+        "shared_rule": {
+          "status": "none",
+          "authored_by": "none",
+          "affected_participants": [],
+          "consented_participants": [],
+          "purpose_ref": null,
+          "trigger_description": null,
+          "rationale_visibility": "none",
+          "new_collection_authorized": false
+        },
+        "decision": {
+          "actor_type": "system",
+          "evidence_class": "system_record",
+          "action": "remain_plural",
+          "delivery_participants": [],
+          "interruptive": false,
+          "status": "executed",
+          "rationale": "The system assumes co-presence means a common foreground."
+        },
+        "provenance": {
+          "private_foregrounds_preserved": true,
+          "shared_world_implies_shared_attention": true,
+          "machine_consensus_authority": false,
+          "machine_may_average_priorities": false,
+          "participant_can_withdraw": true,
+          "selective_disclosure_supported": true,
+          "synthetic_production_authority": false,
+          "surveillance_expansion_authorized": false,
+          "reversible": true
+        }
+      }
+    },
+    {
+      "id": "collection-expansion-fail",
+      "expected_valid": false,
+      "expected_error": "plural foreground envelope may not authorize new collection",
+      "envelope": {
+        "version": "0.1",
+        "id": "plural-collection-fail",
+        "shared_world_ref": "world-shared-river",
+        "shared_event_ref": "event-river-existing",
+        "participant_foregrounds": [
+          {
+            "participant_ref": "learner-a",
+            "actor_type": "learner",
+            "evidence_class": "human_interaction",
+            "privacy_class": "internal",
+            "attention_state": "surface_now",
+            "purpose_ref": "purpose-a-river",
+            "attention_rule_ref": "shared-river-watch",
+            "disclosure": { "level": "rule_without_rationale", "rationale_shared": false }
+          },
+          {
+            "participant_ref": "learner-b",
+            "actor_type": "collaborator",
+            "evidence_class": "human_interaction",
+            "privacy_class": "internal",
+            "attention_state": "surface_now",
+            "purpose_ref": "purpose-b-river",
+            "attention_rule_ref": "shared-river-watch",
+            "disclosure": { "level": "rule_without_rationale", "rationale_shared": false }
+          }
+        ],
+        "shared_rule": {
+          "status": "active",
+          "authored_by": "human_group",
+          "affected_participants": ["learner-a", "learner-b"],
+          "consented_participants": ["learner-a", "learner-b"],
+          "purpose_ref": "group-purpose-river",
+          "trigger_description": "Tell us if the existing river event changes.",
+          "rationale_visibility": "existence_only",
+          "new_collection_authorized": true
+        },
+        "decision": {
+          "actor_type": "system",
+          "evidence_class": "system_record",
+          "action": "defer_shared",
+          "delivery_participants": [],
+          "interruptive": false,
+          "status": "proposed",
+          "rationale": "The wrapper attempted to broaden sensing beyond the referenced event."
+        },
+        "provenance": {
+          "private_foregrounds_preserved": true,
+          "shared_world_implies_shared_attention": false,
+          "machine_consensus_authority": false,
+          "machine_may_average_priorities": false,
+          "participant_can_withdraw": true,
+          "selective_disclosure_supported": true,
+          "synthetic_production_authority": false,
+          "surveillance_expansion_authorized": false,
+          "reversible": true
+        }
+      }
+    }
+  ]
+}
