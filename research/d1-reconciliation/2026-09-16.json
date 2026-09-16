@@ -1,0 +1,64 @@
+{
+  "schema": "turtleblockai.d1-reconciliation.v0.1",
+  "date": "2026-09-16",
+  "status": "staged_no_live_d1_write_claimed",
+  "sweep_scope": [
+    "research",
+    "worldspec",
+    "public",
+    "src",
+    "scripts",
+    "migrations",
+    ".github/workflows"
+  ],
+  "findings": [
+    {
+      "id": "recon-20260916-plural-cases",
+      "type": "new_research_artifact",
+      "status": "represented_in_git_staged_for_d1",
+      "canonical_source": "worldspec/tests/plural-foreground-envelope-cases.json",
+      "intended_object_type": "evaluation_fixture_set",
+      "summary": "Eleven plural-foreground regression cases test consent, selective disclosure, contradictory foregrounds, synthetic authority, shared-rule delivery, and surveillance boundaries."
+    },
+    {
+      "id": "recon-20260916-plural-validator",
+      "type": "new_research_artifact",
+      "status": "represented_in_git_staged_for_d1",
+      "canonical_source": "scripts/validate-plural-foreground-envelope.mjs",
+      "intended_object_type": "deterministic_evaluation",
+      "summary": "Validator enforces the invariant that a shared world does not imply shared attention and that active shared rules remain human-consented and reversible."
+    },
+    {
+      "id": "recon-20260916-build-log",
+      "type": "public_research_representation",
+      "status": "represented_in_git_staged_for_d1",
+      "canonical_source": "src/buildLog.ts",
+      "intended_object_type": "build_log_entry",
+      "summary": "Newest-first public record closes the September 16 contribution rather than leaving the regression suite as an unregistered code artifact."
+    },
+    {
+      "id": "recon-20260916-next-edge",
+      "type": "public_research_horizon",
+      "status": "represented_in_git_staged_for_d1",
+      "canonical_source": "public/data/next-edge.json",
+      "intended_object_type": "next_edge",
+      "summary": "Horizon advances beyond plural-foreground validation toward productive disagreement and parallel construction."
+    },
+    {
+      "id": "recon-20260916-www-search",
+      "type": "www_verification_boundary",
+      "status": "intentionally_not_used_as_runtime_proof",
+      "canonical_source": "public/",
+      "summary": "External search did not expose reliable indexed TRY IT or Terraria pages during this sweep; repository-backed public assets remain the inspectable canonical source for the cycle."
+    },
+    {
+      "id": "recon-20260916-live-d1",
+      "type": "runtime_persistence_boundary",
+      "status": "intentionally_not_captured",
+      "summary": "No appropriately authorized live D1 write action is available in the active execution context, so no live backfill or migration-state claim is made.",
+      "d1_action": "When an authorized live D1 path is available, register the new fixtures, validator, build entry, daily record, next edge, and supported relationships/tags using canonical repo pointers rather than duplicating payloads."
+    }
+  ],
+  "privacy_boundary": "No private dialogue, secret configuration, token, credential, or private environment payload was inspected or copied during reconciliation.",
+  "capture_batch_closed": true
+}
