@@ -11,6 +11,13 @@ export interface BuildLogEntry {
 // through the Worker. Open inquiry belongs in Next Edge, not in completed entries.
 export const BUILD_LOG_ENTRIES: BuildLogEntry[] = [
   {
+    id: "2026-09-16-plural-foreground-regression",
+    date: "Sep 16, 2026",
+    title: "Plural foregrounds get hostile tests instead of a group-think UI",
+    body: "The Plural Foreground Envelope now has an eleven-case deterministic hostile suite and validator. Passing cases preserve different foregrounds, selective disclosure, human-negotiated temporary shared watchpoints, and Turtle proposals that remain proposals. Failing cases reject machine-averaged consensus, Turtle-activated group rules, incomplete consent, delivery to non-consenting participants, synthetic production execution, shared-world-equals-shared-attention assumptions, and collection expansion. CI now runs the contract beside the existing Next Edge, learner verification, world evidence, selective attention, Terraria TRY IT, and D1 reconciliation checks. Product remains v0.1.0.",
+    done: true
+  },
+  {
     id: "2026-09-15-plural-foreground-envelope",
     date: "Sep 15, 2026",
     title: "A shared world can keep more than one foreground",
@@ -77,7 +84,7 @@ export const BUILD_LOG_ENTRIES: BuildLogEntry[] = [
     id: "2026-09-08-turtle-terraria-tagging",
     date: "Sep 8, 2026",
     title: "Turtle Terraria + exhaustive research tagging architecture",
-    body: "Turtle Lab became Turtle Terraria: an umbrella for multiple bounded research habitats, beginning with Human + Turtle and Recursive Turtle self-play. Migration 0007 adds first-class Terraria runs, events, artifacts, observations, auto-build research records, a universal research-object registry, ontology tags, the seven established CTC domains, emergent tags, and an explicit holding area for observations that may someday justify an eighth, ninth, or later CTC domain. Migration 0008 seeds the first structured traces.",
+    body: "Turtle Lab became Turtle Terraria: an umbrella for multiple bounded habitats, beginning with Human + Turtle and Recursive Turtle self-play. Migration 0007 adds first-class Terraria runs, events, artifacts, observations, auto-build research records, a universal research-object registry, ontology tags, the seven established CTC domains, emergent tags, and an explicit holding area for observations that may someday justify an eighth, ninth, or later CTC domain. Migration 0008 seeds the first structured traces.",
     done: true
   },
   {
@@ -90,10 +97,10 @@ export const BUILD_LOG_ENTRIES: BuildLogEntry[] = [
 ];
 
 export const NEXT_EDGE_FALLBACK = {
-  date: "Sep 15, 2026",
-  title: "Can plural foregrounds survive disagreement?",
-  question: "Can TurtleBlock AI deterministically preserve several collaborators' distinct foregrounds through consent, selective disclosure, withdrawal, and contradictory priorities without inventing consensus or leaking private rationale?",
-  xFactor: "whoooo knooooowwwssssssssssss — what if the group needs a shared rule precisely when one person does not consent to having a shared rule?"
+  date: "Sep 16, 2026",
+  title: "Can disagreement stay productive without becoming consensus work?",
+  question: "Can TurtleBlock AI help collaborators build from incompatible interpretations in the same shared world without forcing resolution, averaging the disagreement, or turning negotiation itself into compulsory curriculum?",
+  xFactor: "whoooo knooooowwwssssssssssss — what if two learners should build two futures from the same collapsed bridge and Turtle's job is to keep both futures alive long enough to surprise them?"
 };
 
 function escapeHtml(value: string) {
