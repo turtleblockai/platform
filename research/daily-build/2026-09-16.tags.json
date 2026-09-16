@@ -1,0 +1,284 @@
+{
+  "schema": "turtleblockai.daily-build-tags.v0.1",
+  "date": "2026-09-16",
+  "ontology_version": "sanders-ontology-v0.1",
+  "autobuild_run_id": "autobuild-2026-09-16",
+  "run": {
+    "status": "completed",
+    "actor": "turtle_daily_build",
+    "model": "GPT-5.6 Sol",
+    "version_before": "0.1.0",
+    "version_after": "0.1.0",
+    "selected_contribution": "Plural Foreground Envelope v0.1 eleven-case hostile regression suite plus deterministic validator",
+    "d1_persistence": "staged_only_no_authorized_live_write_action",
+    "capture_batch_closed": true,
+    "privacy_class": "public",
+    "evidence_class": "system_record"
+  },
+  "principles": {
+    "immutable_dissertation_source_layer": true,
+    "multi_tag": true,
+    "preserve_unmapped_residue": true,
+    "shared_world_implies_shared_attention": false,
+    "machine_consensus_authority": false,
+    "machine_priority_averaging": false,
+    "selective_disclosure_supported": true,
+    "human_group_consent_required_for_active_shared_rule": true,
+    "synthetic_production_authority": false,
+    "surveillance_expansion_authorized": false,
+    "reversible": true,
+    "no_generalized_persistent_personal_memory": true,
+    "no_autonomous_production_self_modification": true,
+    "ctc_domain_promotion_requires_human_scholarly_decision": true
+  },
+  "research_objects": [
+    {
+      "id": "autobuild_run:autobuild-2026-09-16",
+      "object_type": "autobuild_run",
+      "title": "September 16 bounded TurtleBlock AI build-in-public cycle",
+      "actor": "turtle",
+      "privacy_class": "public",
+      "evidence_class": "system_record"
+    },
+    {
+      "id": "human_direction:2026-09-16-daily-build",
+      "object_type": "human_direction",
+      "title": "Run one bounded daily build with D1 reconciliation, exhaustive tagging, Terraria boundaries, Next Edge, and conservative versioning",
+      "actor": "human",
+      "privacy_class": "internal",
+      "evidence_class": "human_authored"
+    },
+    {
+      "id": "question:2026-09-16-inherited-next-edge",
+      "object_type": "autobuild_question",
+      "title": "Can plural foregrounds survive disagreement?",
+      "actor": "system",
+      "privacy_class": "public",
+      "evidence_class": "system_record",
+      "canonical_pointer": "public/data/next-edge.json"
+    },
+    {
+      "id": "source_signal:2026-09-16-openai-live",
+      "object_type": "external_source_signal",
+      "title": "OpenAI GPT-Live-1 keeps speaking, listening, pausing, and interruption as explicit interaction behaviors",
+      "source_uri": "https://openai.com/index/introducing-gpt-live-1-in-the-api/",
+      "external_date": "2026-09-10",
+      "privacy_class": "public",
+      "evidence_class": "external_source"
+    },
+    {
+      "id": "source_signal:2026-09-16-nvidia-pair",
+      "object_type": "external_source_signal",
+      "title": "NVIDIA PAIR distributes independent multi-agent inference tasks without collapsing agent harnesses",
+      "source_uri": "https://developer.nvidia.com/blog/nvidia-pair-virtual-inference-router-expands-available-compute-on-your-local-network/",
+      "external_date": "2026-09-03",
+      "privacy_class": "public",
+      "evidence_class": "external_source"
+    },
+    {
+      "id": "source_signal:2026-09-16-nvidia-memory",
+      "object_type": "external_source_signal",
+      "title": "NVIDIA NemoClaw separates evidence, derived judgment, correction, and audit state",
+      "source_uri": "https://developer.nvidia.com/blog/building-a-memory-driven-agent-with-nvidia-nemoclaw/",
+      "external_date": "2026-09-04",
+      "privacy_class": "public",
+      "evidence_class": "external_source"
+    },
+    {
+      "id": "source_signal:2026-09-16-minecraft-velocity",
+      "object_type": "external_source_signal",
+      "title": "Minecraft Education Velocity Prize preserves multiple learner strategies around a bounded measurable task",
+      "source_uri": "https://education.minecraft.net/en-us/discover/velocity-prize",
+      "external_date": "accessed-2026-09-16",
+      "privacy_class": "public",
+      "evidence_class": "external_source"
+    },
+    {
+      "id": "source_signal:2026-09-16-minecraft-cloud-community",
+      "object_type": "external_source_signal",
+      "title": "Minecraft Education Cloud Community uses scenario-based problem solving in a shared immersive world",
+      "source_uri": "https://education.minecraft.net/en-us/lessons/cloud-community",
+      "external_date": "2026-09-10",
+      "privacy_class": "public",
+      "evidence_class": "external_source"
+    },
+    {
+      "id": "source_signal:2026-09-16-mit-jambot",
+      "object_type": "external_source_signal",
+      "title": "MIT Media Lab jam_bot frames human-AI collaboration as live improvisational possibility",
+      "source_uri": "https://www.media.mit.edu/posts/media-alert/",
+      "external_date": "2026-09-04",
+      "privacy_class": "public",
+      "evidence_class": "external_source"
+    },
+    {
+      "id": "candidate:2026-09-16-live-multiuser-ui",
+      "object_type": "autobuild_candidate",
+      "title": "Build live multi-user foreground controls",
+      "decision": "rejected_for_today",
+      "rejection_reason": "The inherited horizon called for deterministic proof before learner-facing collaborative behavior."
+    },
+    {
+      "id": "candidate:2026-09-16-merge-attention-contracts",
+      "object_type": "autobuild_candidate",
+      "title": "Merge plural foreground into Selective Attention Envelope",
+      "decision": "rejected",
+      "rejection_reason": "Single-participant attention governance and collaborative foreground governance have distinct failure boundaries."
+    },
+    {
+      "id": "candidate:2026-09-16-recursive-disagreement",
+      "object_type": "autobuild_candidate",
+      "title": "Use Recursive Turtle to generate disagreement policy",
+      "decision": "rejected_for_today",
+      "rejection_reason": "Synthetic self-play is unnecessary for the basic consent invariants and would remain synthetic_self_play with no production authority."
+    },
+    {
+      "id": "candidate:2026-09-16-generalized-memory",
+      "object_type": "autobuild_candidate",
+      "title": "Add generalized collaborative memory",
+      "decision": "rejected",
+      "rejection_reason": "Persistent personal identity and preference memory belongs to later v0.3 governance and is not required for today's contract."
+    },
+    {
+      "id": "selection:2026-09-16-plural-foreground-regression",
+      "object_type": "autobuild_selection",
+      "title": "Select Plural Foreground hostile regression suite and validator",
+      "decision": "selected"
+    },
+    {
+      "id": "repo_change:2026-09-16-plural-cases",
+      "object_type": "repo_change",
+      "repo_path": "worldspec/tests/plural-foreground-envelope-cases.json",
+      "change_type": "create",
+      "commit_sha": "d79bca42b70cba036bf2bbebc0f0f01032a64cb7"
+    },
+    {
+      "id": "repo_change:2026-09-16-plural-validator",
+      "object_type": "repo_change",
+      "repo_path": "scripts/validate-plural-foreground-envelope.mjs",
+      "change_type": "create",
+      "commit_sha": "88cc14d7e8a73bc9ec0221fd80bfa4c7d875dfe8"
+    },
+    {
+      "id": "repo_change:2026-09-16-package",
+      "object_type": "repo_change",
+      "repo_path": "package.json",
+      "change_type": "update",
+      "commit_sha": "1e4b9b608ee79b6a7dc7b1376c2d4aa27268ef17"
+    },
+    {
+      "id": "repo_change:2026-09-16-ci",
+      "object_type": "repo_change",
+      "repo_path": ".github/workflows/deploy.yml",
+      "change_type": "update",
+      "commit_sha": "12e2fe6bb7041f9b761cc333324281f41be6cd16"
+    },
+    {
+      "id": "build_log_entry:2026-09-16-plural-foreground-regression",
+      "object_type": "build_log_entry",
+      "repo_path": "src/buildLog.ts",
+      "commit_sha": "88bacfab31e5f35bb113f7cd355ef22c18375ec4",
+      "privacy_class": "public",
+      "evidence_class": "system_record"
+    },
+    {
+      "id": "next_edge:2026-09-16-productive-disagreement",
+      "object_type": "next_edge",
+      "repo_path": "public/data/next-edge.json",
+      "commit_sha": "c4731ad0287131479bf6aa107c1504c848633ce0",
+      "privacy_class": "public",
+      "evidence_class": "system_record"
+    }
+  ],
+  "relationships": [
+    {
+      "from": "selection:2026-09-16-plural-foreground-regression",
+      "predicate": "answers",
+      "to": "question:2026-09-16-inherited-next-edge",
+      "rationale": "The hostile suite directly tests consent, selective disclosure, contradictory priorities, synthetic execution, and no-shared-attention states."
+    },
+    {
+      "from": "next_edge:2026-09-16-productive-disagreement",
+      "predicate": "follows",
+      "to": "build_log_entry:2026-09-16-plural-foreground-regression",
+      "rationale": "The completed suite proves representational plurality; the next question asks whether durable disagreement can become constructive activity."
+    },
+    {
+      "from": "repo_change:2026-09-16-plural-cases",
+      "predicate": "validated_by",
+      "to": "repo_change:2026-09-16-plural-validator",
+      "rationale": "The deterministic validator evaluates all eleven explicit cases."
+    }
+  ],
+  "ctc_tags": [
+    {"domain":"Personal Inquiry","object_id":"selection:2026-09-16-plural-foreground-regression","fit":"primary","rationale":"The suite protects participant-specific purpose and attention inside a shared world."},
+    {"domain":"Compelling Problem or Question","object_id":"selection:2026-09-16-plural-foreground-regression","fit":"supports","rationale":"A shared event may matter differently to different participants without forcing one collective problem."},
+    {"domain":"Technology as Tool to Think With","object_id":"selection:2026-09-16-plural-foreground-regression","fit":"primary","rationale":"Consent, disclosure, foreground, and shared-rule state become inspectable and breakable computational material."},
+    {"domain":"Formative Demonstration of Learning","object_id":"selection:2026-09-16-plural-foreground-regression","fit":"supports","rationale":"System traces may later contextualize learning but are not themselves learner-attainment evidence."},
+    {"domain":"Reflection as Learning","object_id":"selection:2026-09-16-plural-foreground-regression","fit":"supports","rationale":"Participants may reflect on different events and schedules without system-forced synchronization."},
+    {"domain":"Social and Cultural Critique","object_id":"selection:2026-09-16-plural-foreground-regression","fit":"primary","rationale":"The suite tests power over who can collectivize attention, refuse participation, retain privacy, and receive interruptions."},
+    {"domain":"Sharing and Collaborating","object_id":"selection:2026-09-16-plural-foreground-regression","fit":"primary","rationale":"The contribution tests collaboration with disagreement, selective disclosure, consent, partial participation, and no-consensus states."}
+  ],
+  "ontology_tags": [
+    {"concept_key":"co_active_emergence","object_id":"selection:2026-09-16-plural-foreground-regression","fit":"primary","rationale":"Interaction can change shared trajectories without forcing several human foregrounds into one machine-generated state."},
+    {"concept_key":"possible_possibles","object_id":"selection:2026-09-16-plural-foreground-regression","fit":"primary","rationale":"Several legitimate participant directions remain live simultaneously."},
+    {"concept_key":"purposeful_play","object_id":"selection:2026-09-16-plural-foreground-regression","fit":"supports","rationale":"A group may deliberately retain no shared foreground while participants continue exploratory activity."},
+    {"concept_key":"steamhamlet","object_id":"selection:2026-09-16-plural-foreground-regression","fit":"supports","rationale":"A shared room of possibilities can contain several purposes and foregrounds at once."},
+    {"concept_key":"machine_responses_as_material_for_evaluation","object_id":"selection:2026-09-16-plural-foreground-regression","fit":"tests","rationale":"Turtle proposals and system decisions are treated as inspectable objects rather than invisible authority."},
+    {"concept_key":"cohabitation_without_provenance_collapse","object_id":"selection:2026-09-16-plural-foreground-regression","fit":"primary","rationale":"Participant purpose, disclosure, consent, Turtle proposals, synthetic fixtures, and system decisions retain distinguishable provenance."}
+  ],
+  "emergent_tags": [
+    {"tag":"plural_foregrounds","rationale":"Several legitimate attention states coexist inside one shared world."},
+    {"tag":"durable_disagreement","rationale":"The suite preserves contradictory priorities without treating disagreement as a validation failure."},
+    {"tag":"selective_disclosure","rationale":"A participant may reveal a rule or concern without revealing full rationale."},
+    {"tag":"partial_group_coordination","rationale":"A shared rule may apply to a consenting subset rather than every co-present participant."},
+    {"tag":"anti_consensus_authority","rationale":"Machine averaging and machine-authored active shared rules are explicitly rejected."}
+  ],
+  "reconciliation_findings": [
+    {
+      "candidate": "worldspec/tests/plural-foreground-envelope-cases.json",
+      "resolution": "represented_in_git_staged_for_d1",
+      "canonical_pointer": "worldspec/tests/plural-foreground-envelope-cases.json"
+    },
+    {
+      "candidate": "scripts/validate-plural-foreground-envelope.mjs",
+      "resolution": "represented_in_git_staged_for_d1",
+      "canonical_pointer": "scripts/validate-plural-foreground-envelope.mjs"
+    },
+    {
+      "candidate": "live D1 write",
+      "resolution": "intentionally_not_claimed",
+      "reason": "No appropriately authorized live D1 write action is available in the active execution context."
+    },
+    {
+      "candidate": "public WWW /try and /terraria search visibility",
+      "resolution": "not_used_as_runtime_proof",
+      "reason": "External search did not return reliable indexed pages during the sweep; repository-backed public assets remain the canonical inspectable source for this cycle."
+    }
+  ],
+  "uncaptured_observations": [
+    {
+      "observation": "Collaboration may remain productive without consensus, but durable disagreement is not explicitly named as a positive state in the seven established CTC domains.",
+      "reason_unmapped": "Likely cross-cuts Sharing and Collaborating, Social and Cultural Critique, Personal Inquiry, and Purposeful Play.",
+      "candidate_domain": null,
+      "status": "open"
+    },
+    {
+      "observation": "Existence-only disclosure can still reveal that a participant considers something important, so selective disclosure is not equivalent to zero information leakage.",
+      "reason_unmapped": "This is primarily a privacy / interaction-governance issue rather than clearly a new pedagogical domain.",
+      "candidate_domain": null,
+      "status": "open"
+    },
+    {
+      "observation": "Partial group rules distinguish coordination from universal participation and may require future shared-artifact version semantics.",
+      "reason_unmapped": "The issue is partly technical state/versioning and partly collaborative pedagogy.",
+      "candidate_domain": null,
+      "status": "open"
+    }
+  ],
+  "version_judgment": {
+    "product_version": "0.1.0",
+    "decision": "no_bump",
+    "rationale": "The contribution strengthens the repeatable evaluation layer but does not yet satisfy the complete v0.2 milestone as an integrated product capability."
+  }
+}
