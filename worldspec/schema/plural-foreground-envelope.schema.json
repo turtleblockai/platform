@@ -1,0 +1,87 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://turtleblockai.com/worldspec/schema/plural-foreground-envelope/v0.1.json",
+  "title": "TurtleBlock AI Plural Foreground Envelope",
+  "description": "Experimental research contract for a shared world in which collaborators may keep different attention foregrounds, selectively disclose them, and negotiate a temporary shared watchpoint without allowing Turtle or the system to manufacture consensus.",
+  "type": "object",
+  "required": ["version", "id", "shared_world_ref", "shared_event_ref", "participant_foregrounds", "shared_rule", "decision", "provenance"],
+  "properties": {
+    "version": { "const": "0.1" },
+    "id": { "type": "string", "minLength": 1 },
+    "shared_world_ref": { "type": "string", "minLength": 1 },
+    "shared_event_ref": { "type": "string", "minLength": 1 },
+    "participant_foregrounds": {
+      "type": "array",
+      "minItems": 2,
+      "items": {
+        "type": "object",
+        "required": ["participant_ref", "actor_type", "evidence_class", "privacy_class", "attention_state", "purpose_ref", "attention_rule_ref", "disclosure"],
+        "properties": {
+          "participant_ref": { "type": "string", "minLength": 1 },
+          "actor_type": { "type": "string", "enum": ["learner", "collaborator"] },
+          "evidence_class": { "const": "human_interaction" },
+          "privacy_class": { "type": "string", "enum": ["private", "internal", "unlisted", "public"] },
+          "attention_state": { "type": "string", "enum": ["surface_now", "defer", "remain_silent", "unconcerned", "unspecified"] },
+          "purpose_ref": { "type": "string", "minLength": 1 },
+          "attention_rule_ref": { "type": ["string", "null"] },
+          "disclosure": {
+            "type": "object",
+            "required": ["level", "rationale_shared"],
+            "properties": {
+              "level": { "type": "string", "enum": ["private", "existence_only", "rule_without_rationale", "full"] },
+              "rationale_shared": { "type": "boolean" }
+            },
+            "additionalProperties": false
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "shared_rule": {
+      "type": "object",
+      "required": ["status", "authored_by", "affected_participants", "consented_participants", "purpose_ref", "trigger_description", "rationale_visibility", "new_collection_authorized"],
+      "properties": {
+        "status": { "type": "string", "enum": ["none", "proposed", "active", "rejected", "withdrawn"] },
+        "authored_by": { "type": "string", "enum": ["human_group", "turtle", "synthetic_turtle", "system", "none"] },
+        "affected_participants": { "type": "array", "items": { "type": "string", "minLength": 1 }, "uniqueItems": true },
+        "consented_participants": { "type": "array", "items": { "type": "string", "minLength": 1 }, "uniqueItems": true },
+        "purpose_ref": { "type": ["string", "null"] },
+        "trigger_description": { "type": ["string", "null"] },
+        "rationale_visibility": { "type": "string", "enum": ["none", "existence_only", "shared"] },
+        "new_collection_authorized": { "const": false }
+      },
+      "additionalProperties": false
+    },
+    "decision": {
+      "type": "object",
+      "required": ["actor_type", "evidence_class", "action", "delivery_participants", "interruptive", "status", "rationale"],
+      "properties": {
+        "actor_type": { "type": "string", "enum": ["human_group", "turtle", "synthetic_turtle", "system"] },
+        "evidence_class": { "type": "string", "enum": ["human_interaction", "system_record", "synthetic_self_play"] },
+        "action": { "type": "string", "enum": ["remain_plural", "surface_to_consenting", "defer_shared", "no_shared_foreground"] },
+        "delivery_participants": { "type": "array", "items": { "type": "string", "minLength": 1 }, "uniqueItems": true },
+        "interruptive": { "type": "boolean" },
+        "status": { "type": "string", "enum": ["proposed", "executed", "rejected"] },
+        "rationale": { "type": "string", "minLength": 1 }
+      },
+      "additionalProperties": false
+    },
+    "provenance": {
+      "type": "object",
+      "required": ["private_foregrounds_preserved", "shared_world_implies_shared_attention", "machine_consensus_authority", "machine_may_average_priorities", "participant_can_withdraw", "selective_disclosure_supported", "synthetic_production_authority", "surveillance_expansion_authorized", "reversible"],
+      "properties": {
+        "private_foregrounds_preserved": { "const": true },
+        "shared_world_implies_shared_attention": { "const": false },
+        "machine_consensus_authority": { "const": false },
+        "machine_may_average_priorities": { "const": false },
+        "participant_can_withdraw": { "const": true },
+        "selective_disclosure_supported": { "const": true },
+        "synthetic_production_authority": { "const": false },
+        "surveillance_expansion_authorized": { "const": false },
+        "reversible": { "const": true }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}
