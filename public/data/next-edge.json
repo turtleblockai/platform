@@ -1,130 +1,140 @@
 {
-  "version": "0.6",
-  "updated_at": "2026-09-15",
+  "version": "0.7",
+  "updated_at": "2026-09-16",
   "status": "open_question",
-  "title": "Can plural foregrounds survive disagreement?",
-  "question": "Can TurtleBlock AI deterministically preserve several collaborators' distinct foregrounds through consent, selective disclosure, withdrawal, and contradictory priorities without inventing consensus or leaking private rationale?",
-  "why_now": "The September 15 Plural Foreground Envelope answers the previous horizon at the representation layer: one shared world may contain several participant foregrounds; disclosure may be partial; a shared rule can carry explicit affected and consenting participant lists; a decision may remain plural rather than forcing one foreground; and provenance forbids machine consensus authority, priority averaging, surveillance expansion, and synthetic production authority. The remaining weakness is executable adversarial proof. Unlike the Learner Verification, World Evidence, and Selective Attention envelopes, the new plural contract does not yet have its own deterministic hostile suite. The next horizon is therefore whether consent, disagreement, withdrawal, selective disclosure, and no-shared-foreground states can survive concrete regression cases before any live collaborative behavior is attempted.",
-  "follows_commit": "440ac06119f40bf1c676907dd836c7bd53ea49bb",
-  "follows_commit_role": "completed_plural_foreground_schema_build_for_2026_09_15_cycle",
+  "title": "Can disagreement stay productive without becoming consensus work?",
+  "question": "Can TurtleBlock AI help collaborators build from incompatible interpretations in the same shared world without forcing resolution, averaging the disagreement, or turning negotiation itself into compulsory curriculum?",
+  "why_now": "The September 16 hostile suite closes the prior edge at the contract level: plural foregrounds can remain distinct; temporary shared watchpoints require human-group authorship and complete consent among affected participants; Turtle proposals remain proposals; selective disclosure can hide rationale; and machine averaging, synthetic execution, non-consensual delivery, shared-world-equals-shared-attention assumptions, and collection expansion are rejected. The remaining question is no longer whether disagreement can be represented. It is whether disagreement can become generative construction without Turtle treating consensus as the desired endpoint. OpenAI's current interaction work reinforces explicit control over when systems speak or listen; NVIDIA's multi-agent and memory work separates cooperating roles and inspectable provenance; Minecraft Education continues to emphasize team construction, multiple strategies, process, and responsible design; and MIT Media Lab's jam_bot frames human-AI collaboration as improvisational possibility rather than convergence. The horizon therefore moves from plural attention to plural construction.",
+  "follows_commit": "88bacfab31e5f35bb113f7cd355ef22c18375ec4",
+  "follows_commit_role": "completed_public_build_log_commit_for_2026_09_16_plural_foreground_regression_cycle",
   "inputs": [
-    "current repository and completed September 15 commit",
-    "worldspec/schema/plural-foreground-envelope.schema.json",
-    "September 12 Selective Attention Envelope and hostile regression pattern",
-    "public/data/next-edge.json prior shared-foreground horizon",
-    "Turtle Charter boundaries on human judgment, disagreement, privacy, and reversibility",
+    "current repository and September 16 Plural Foreground Envelope hostile suite",
+    "September 15 Plural Foreground Envelope schema and recovery record",
+    "September 12 Selective Attention Envelope and hostile suite",
+    "Turtle Terraria and TurtleAsk provenance boundaries",
+    "D1 reconciliation doctrine and current staging state",
+    "Sanders immutable dissertation Dedoose source layer and later ontology layers",
     "seven established Critical Techno Constructivism operational domains",
-    "Sanders research ontology and cohabitation-without-provenance-collapse principle",
-    "human observation that the September 15 Build Log closure was missing"
+    "STEAMHAMLET, Purposeful Play, Possible Possibles, and Co-active Emergence lineage",
+    "September 16 primary-source freshness hunt across OpenAI, NVIDIA, Minecraft Education, and MIT Media Lab",
+    "X factor"
   ],
   "source_classes_consulted": [
     "repository_state",
-    "repository_schema",
+    "repository_schema_and_regression_tests",
     "prior_daily_build_research",
     "Sanders_research_ontology",
-    "Turtle_Charter_and_WorldSpec",
-    "human_intervention_and_process_failure"
+    "Turtle_Charter_and_Terraria_architecture",
+    "D1_reconciliation_staging",
+    "external_primary_sources",
+    "test_and_failure_history"
   ],
   "possible_possibles": [
-    "A hostile case keeps two contradictory participant foregrounds valid and requires the decision to remain plural rather than average them.",
-    "A temporary shared watchpoint becomes active only for explicitly consenting participants while a non-consenting participant remains outside the shared delivery set.",
-    "A participant withdraws after a shared rule was proposed or activated, and the contract deterministically prevents that person's foreground from remaining bound to the rule.",
-    "A participant shares only that a concern exists while keeping the watchpoint rationale private, and the system proves that private rationale cannot leak into public output.",
-    "The group intentionally chooses no shared foreground, preserving purposeful wandering even though multiple individual watchpoints exist.",
-    "Synthetic self-play generates conflict fixtures for testing but cannot execute or promote a production attention policy."
+    "Two collaborators build competing revisions of the same WorldSpec from the same event and keep both branches inspectable rather than forcing a merge.",
+    "Turtle asks each collaborator what evidence would change their interpretation without assuming either interpretation must eventually win.",
+    "A shared world carries parallel annotations or constructions that expose how different purposes make the same event meaningful in different ways.",
+    "Collaborators intentionally postpone negotiation and continue purposeful play separately before deciding whether anything should become shared.",
+    "A disagreement becomes a new object-to-think-with: the contradiction itself is represented, inhabited, tested, revised, or built around.",
+    "Recursive Turtle generates synthetic disagreement fixtures only as regression material and cannot declare consensus or promote a production merge."
   ],
-  "x_factor": "whoooo knooooowwwssssssssssss — what if the group needs a shared rule precisely when one person does not consent to having a shared rule?",
+  "x_factor": "whoooo knooooowwwssssssssssss — what if two learners should build two futures from the same collapsed bridge and Turtle's job is to keep both futures alive long enough to surprise them?",
   "constraints": [
-    "The next contribution should test the completed plural-foreground contract rather than merely add more schema fields.",
-    "A shared world must not imply a shared attention agenda by default.",
-    "Machine logic must not average contradictory human priorities into synthetic consensus.",
-    "Private rationale must remain private when a participant chooses existence-only or rule-without-rationale disclosure.",
-    "Withdrawal must remain possible and attributable.",
+    "The Next Edge points beyond the completed plural-foreground hostile suite and does not merely add more consent fields.",
+    "Turtle must not treat consensus, compromise, or merge as the default success state.",
+    "Contradictory human interpretations retain authorship, provenance, privacy, and the right to persist in parallel.",
+    "A shared artifact may branch without automatically becoming a social or curricular failure.",
+    "Negotiation should be optional and human-governed rather than an obligatory system intervention.",
     "Synthetic self-play remains synthetic_self_play and has no production authority.",
     "No generalized persistent personal memory is introduced by this horizon.",
     "No autonomous production self-modification or self-retraining is authorized.",
+    "Environment configuration contributes metadata only; secret values are never inspected or recorded.",
     "No new CTC domain is promoted without explicit human scholarly judgment."
   ],
   "ontology_mappings": [
     {
       "concept_key": "co_active_emergence",
       "role": "primary",
-      "rationale": "Co-active collaboration must be able to preserve meaningful human difference rather than treating emergence as convergence on one machine-produced group state."
+      "rationale": "Co-active emergence should permit interaction to generate new trajectories without requiring convergence into one machine-normalized interpretation."
     },
     {
       "concept_key": "possible_possibles",
       "role": "primary",
-      "rationale": "Plural foregrounds keep several possible directions alive, and hostile testing should prove that contradiction does not automatically collapse those possibilities."
+      "rationale": "Parallel interpretations preserve several futures as genuine possibilities rather than converting disagreement into a queue for resolution."
     },
     {
       "concept_key": "purposeful_play",
-      "role": "supports",
-      "rationale": "A group may intentionally retain no shared foreground so that wandering, making, and noticing remain participant-directed."
+      "role": "primary",
+      "rationale": "Collaborators may need room to continue making and wandering separately before deciding whether negotiation is useful at all."
     },
     {
       "concept_key": "steamhamlet",
       "role": "supports",
-      "rationale": "A shared room of possibilities should allow inhabitants to hold different purposes without requiring the room itself to define the collective agenda."
+      "rationale": "A room of possibilities becomes richer when incompatible readings can become visible and inhabitable rather than being prematurely reconciled."
+    },
+    {
+      "concept_key": "invisible_ideas_become_visible_and_manipulable",
+      "role": "primary",
+      "rationale": "Disagreement itself can become an inspectable and manipulable artifact instead of remaining hidden inside conversation or being flattened into consensus."
     },
     {
       "concept_key": "cohabitation_without_provenance_collapse",
       "role": "primary",
-      "rationale": "Consent, private foregrounds, selective disclosure, machine proposals, shared-rule state, and later human decisions must remain distinguishable under disagreement."
+      "rationale": "Parallel human interpretations, Turtle questions, shared-world events, synthetic fixtures, and later revisions must remain distinguishable throughout any branching or negotiation."
     }
   ],
   "ctc_mappings": [
     {
       "domain": "Personal Inquiry",
       "role": "primary",
-      "rationale": "Adversarial cases should prove that individual inquiry remains intact even when collaborators share a world and disagree about foreground."
+      "rationale": "Each collaborator should be able to continue an inquiry trajectory even when another participant interprets the same world differently."
     },
     {
       "domain": "Compelling Problem or Question",
-      "role": "supports",
-      "rationale": "A shared event may become collectively important without requiring every participant to adopt the same question or urgency."
+      "role": "primary",
+      "rationale": "The disagreement itself may become a compelling problem or question without presuming that its purpose is eventual consensus."
     },
     {
       "domain": "Technology as Tool to Think With",
       "role": "primary",
-      "rationale": "A deterministic suite can make attention governance inspectable and breakable rather than leaving collaboration policy inside opaque model behavior."
+      "rationale": "Branching WorldSpecs, competing constructions, and visible contradictions can make disagreement into computational material for thinking."
     },
     {
       "domain": "Formative Demonstration of Learning",
       "role": "supports",
-      "rationale": "Consent and attention traces may eventually document evolving inquiry, but the regression suite must not label those traces as evidence that learning occurred."
+      "rationale": "Revisions across parallel branches may later expose changing reasoning, but system branch history alone is not proof that learning occurred."
     },
     {
       "domain": "Reflection as Learning",
-      "role": "supports",
-      "rationale": "Participants may later compare distinct foregrounds and revise shared rules, but the machine must not synchronize reflection by force."
+      "role": "primary",
+      "rationale": "Participants may reflect on their own and others' constructions without being forced into a synchronized reflection or common conclusion."
     },
     {
       "domain": "Social and Cultural Critique",
       "role": "primary",
-      "rationale": "The hostile cases directly test power: who can make a concern collective, who can refuse, what remains private, and whether the system privileges measurable or majority priorities."
+      "rationale": "Who is pressured to reconcile, whose interpretation becomes canonical, and whose branch is treated as deviation are power-bearing design choices."
     },
     {
       "domain": "Sharing and Collaborating",
       "role": "primary",
-      "rationale": "The horizon directly tests whether collaboration can include disagreement, selective disclosure, withdrawal, and no-consensus states without breaking the shared environment."
+      "rationale": "The horizon asks whether collaboration can include durable disagreement, parallel construction, selective comparison, and optional negotiation."
     }
   ],
   "uncaptured_residue": [
     {
-      "observation": "A shared rule may be useful to some participants and unwanted by others, raising a distinction between collective coordination and universal participation.",
-      "reason_unmapped": "The established CTC domains support collaboration and critique but do not by themselves specify consent semantics for partial group rules.",
+      "observation": "Collaboration may sometimes be strongest when participants do not converge, creating a distinction between collaboration and consensus that the seven CTC domains do not explicitly formalize.",
+      "reason_unmapped": "This may be a design principle inside Sharing and Collaborating and Social and Cultural Critique rather than a distinct learner-development domain.",
       "candidate_domain": null,
       "status": "open"
     },
     {
-      "observation": "Existence-only disclosure protects rationale but can still reveal that a participant considers something important, which may itself be sensitive information.",
-      "reason_unmapped": "This is a privacy and interaction-governance boundary rather than clearly a new learner-development domain.",
+      "observation": "A branched shared artifact can preserve social relationship while allowing incompatible representational states, raising versioning questions that are partly technical and partly pedagogical.",
+      "reason_unmapped": "Existing domains describe collaboration and reflection but not the lifecycle semantics of divergent shared computational artifacts.",
       "candidate_domain": null,
       "status": "open"
     },
     {
-      "observation": "The missing September 15 closure record demonstrates that provenance can fail at the research-process layer even when the code artifact and CI result are intact.",
-      "reason_unmapped": "This is a research-infrastructure/process finding rather than a pedagogical CTC domain.",
+      "observation": "Choosing not to negotiate yet may be an affirmative collaborative act rather than avoidance, especially during purposeful play or early inquiry.",
+      "reason_unmapped": "The current framework supports agency and collaboration but does not explicitly name deferred negotiation as a positive relational state.",
       "candidate_domain": null,
       "status": "open"
     }
@@ -132,11 +142,10 @@
   "provenance": {
     "evidence_class": "system_record",
     "privacy_class": "public",
-    "selection_method": "recovery_synthesis_from_completed_commit_existing_project_horizon_and_human_process_observation_with_human_override_preserved",
-    "actor": "human_machine_recovery",
+    "selection_method": "machine_synthesis_from_current_repository_reconciliation_state_primary_source_hunt_and_sanders_ontology_with_human_override_preserved",
+    "actor": "turtle_daily_build",
     "model": "GPT-5.6 Sol",
-    "source_hunt_reconstruction": "not_attempted",
-    "source_hunt_note": "The original September 15 external source hunt was not persisted, so this recovered horizon relies only on repository state, existing authorized project research, and the human-observed closure failure."
+    "generated_at": "2026-09-16"
   },
   "selected_by": "machine_synthesis_human_revisable",
   "scope": "system_research_horizon_not_student_learning_evidence"
