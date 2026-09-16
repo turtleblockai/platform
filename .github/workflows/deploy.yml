@@ -42,6 +42,9 @@ jobs:
       - name: Validate Selective Attention Envelope
         run: npm run validate:selective-attention
 
+      - name: Validate Plural Foreground Envelope
+        run: npm run validate:plural-foreground
+
       - name: Validate Terraria TRY IT contract
         run: npm run validate:terraria-try
 
