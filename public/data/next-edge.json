@@ -1,161 +1,130 @@
 {
-  "version": "0.5",
-  "updated_at": "2026-09-12",
+  "version": "0.6",
+  "updated_at": "2026-09-15",
   "status": "open_question",
-  "title": "Can one shared world hold different foregrounds?",
-  "question": "Can TurtleBlock AI support a shared world in which different collaborators keep distinct attention agendas—and sometimes choose to share or negotiate them—without collapsing everyone into one machine-selected foreground?",
-  "why_now": "The September 12 Selective Attention Envelope makes single-context attention governance inspectable: an observable event is not automatically retained, salient, surfaced, interrupt-worthy, or important; learner-authored watchpoints can authorize interruption; Turtle salience remains a proposal; deliberate silence is valid; and attention cannot expand collection. That immediately exposes the collaborative problem. The same bridge collapse, crowd movement, timing result, or improvised event can matter differently to different people. Minecraft Education continues to emphasize multiple learner strategies and collaborative agent design; NVIDIA's newest workflow shows that participants can possess consequential context unavailable to a model; OpenAI's full-duplex work makes listening, pausing, and interrupting explicit interaction decisions; and MIT's jam_bot work shows reciprocal creative collaboration where timing and foreground are part of the interaction itself. The next horizon is therefore not a smarter shared alert system. It is whether a shared computational world can preserve several legitimate foregrounds at once without Turtle averaging, broadcasting, surveilling, or silently deciding what the group ought to care about.",
-  "follows_commit": "84cdbee2598d94a2b88b1109d5626ec0778dd042",
-  "follows_commit_role": "latest_completed_build_log_commit_for_2026_09_12_cycle",
+  "title": "Can plural foregrounds survive disagreement?",
+  "question": "Can TurtleBlock AI deterministically preserve several collaborators' distinct foregrounds through consent, selective disclosure, withdrawal, and contradictory priorities without inventing consensus or leaking private rationale?",
+  "why_now": "The September 15 Plural Foreground Envelope answers the previous horizon at the representation layer: one shared world may contain several participant foregrounds; disclosure may be partial; a shared rule can carry explicit affected and consenting participant lists; a decision may remain plural rather than forcing one foreground; and provenance forbids machine consensus authority, priority averaging, surveillance expansion, and synthetic production authority. The remaining weakness is executable adversarial proof. Unlike the Learner Verification, World Evidence, and Selective Attention envelopes, the new plural contract does not yet have its own deterministic hostile suite. The next horizon is therefore whether consent, disagreement, withdrawal, selective disclosure, and no-shared-foreground states can survive concrete regression cases before any live collaborative behavior is attempted.",
+  "follows_commit": "440ac06119f40bf1c676907dd836c7bd53ea49bb",
+  "follows_commit_role": "completed_plural_foreground_schema_build_for_2026_09_15_cycle",
   "inputs": [
-    "current repository and commit state",
-    "September 12 Selective Attention Envelope schema and eight-case hostile regression suite",
-    "September 12 successful GitHub Actions validation run",
-    "September 11 World Evidence Envelope and selective-noticing residue",
-    "September 10 Learner Verification Card and regression suite",
-    "BUILD_IN_PUBLIC.md standing process",
-    "research/NEXT_EDGE.md horizon doctrine",
-    "Turtle Terraria provenance, evidence-class, privacy, and capture-batch boundaries",
-    "Sanders immutable dissertation Dedoose source layer and later ontology layers",
+    "current repository and completed September 15 commit",
+    "worldspec/schema/plural-foreground-envelope.schema.json",
+    "September 12 Selective Attention Envelope and hostile regression pattern",
+    "public/data/next-edge.json prior shared-foreground horizon",
+    "Turtle Charter boundaries on human judgment, disagreement, privacy, and reversibility",
     "seven established Critical Techno Constructivism operational domains",
-    "STEAMHAMLET, Purposeful Play, constructionism, Possible Possibles, and Co-active Emergence lineage",
-    "Turtle Charter rules on agency, disagreement, plurality, reflection, reversibility, and human judgment",
-    "September 12 primary-source hunt across OpenAI, NVIDIA, Minecraft Education, and MIT Media Lab",
-    "September 12 uncaptured residue concerning salience, restraint, bounded project attention, and multiple foregrounds",
-    "X factor"
+    "Sanders research ontology and cohabitation-without-provenance-collapse principle",
+    "human observation that the September 15 Build Log closure was missing"
   ],
   "source_classes_consulted": [
     "repository_state",
-    "repository_research_documents",
-    "repository_schema_and_regression_tests",
-    "Sanders_research_ontology",
+    "repository_schema",
     "prior_daily_build_research",
-    "external_primary_sources",
+    "Sanders_research_ontology",
     "Turtle_Charter_and_WorldSpec",
-    "uncaptured_observations",
-    "test_and_failure_history"
+    "human_intervention_and_process_failure"
   ],
   "possible_possibles": [
-    "Each collaborator keeps a private attention layer over the same shared world and chooses which watchpoints, if any, become visible to others.",
-    "A shared event can surface immediately to one learner, remain silent for another, and be deferred for a third without treating those different foregrounds as inconsistency.",
-    "Collaborators explicitly negotiate a temporary shared watchpoint such as 'tell all of us if the bridge collapses' while unrelated personal attention rules remain private.",
-    "Turtle exposes an attention conflict instead of averaging it: one participant wants speed foregrounded while another wants access, aesthetics, ecological impact, or nothing at all foregrounded.",
-    "A participant can share the reason for a watchpoint without revealing the underlying private project history that made it important.",
-    "A world event becomes a collaborative question only after participants choose to bring their different interpretations or attention priorities into the same conversation.",
-    "A Recursive Turtle Terrarium generates synthetic multi-participant attention conflicts as regression material, clearly labeled synthetic_self_play and unable to promote its own policy.",
-    "The group intentionally keeps no shared foreground at all for a period of purposeful play, allowing each participant to wander before deciding what deserves collective attention."
+    "A hostile case keeps two contradictory participant foregrounds valid and requires the decision to remain plural rather than average them.",
+    "A temporary shared watchpoint becomes active only for explicitly consenting participants while a non-consenting participant remains outside the shared delivery set.",
+    "A participant withdraws after a shared rule was proposed or activated, and the contract deterministically prevents that person's foreground from remaining bound to the rule.",
+    "A participant shares only that a concern exists while keeping the watchpoint rationale private, and the system proves that private rationale cannot leak into public output.",
+    "The group intentionally chooses no shared foreground, preserving purposeful wandering even though multiple individual watchpoints exist.",
+    "Synthetic self-play generates conflict fixtures for testing but cannot execute or promote a production attention policy."
   ],
-  "x_factor": "whoooo knooooowwwssssssssssss — what if the same collapsing bridge is urgent to one learner, delightful to another, and none of Turtle's business to a third?",
+  "x_factor": "whoooo knooooowwwssssssssssss — what if the group needs a shared rule precisely when one person does not consent to having a shared rule?",
   "constraints": [
-    "The Next Edge points beyond the completed Selective Attention Envelope and does not merely add more single-user attention fields.",
+    "The next contribution should test the completed plural-foreground contract rather than merely add more schema fields.",
     "A shared world must not imply a shared attention agenda by default.",
-    "One participant's watchpoint, purpose, interpretation, or urgency must not silently become another participant's curriculum.",
-    "Private attention rules and project history are not automatically visible to collaborators merely because the world is shared.",
-    "Participants should be able to share, revise, withdraw, mute, or negotiate collaborative attention rules when practical.",
-    "Turtle may help expose attention disagreement but must not average meaningful disagreement into synthetic consensus.",
-    "The easiest event to measure must not become the group's most important event by default.",
-    "World events, participant attention rules, Turtle proposals, surfacing decisions, interpretations, and later group decisions retain distinct provenance.",
+    "Machine logic must not average contradictory human priorities into synthetic consensus.",
+    "Private rationale must remain private when a participant chooses existence-only or rule-without-rationale disclosure.",
+    "Withdrawal must remain possible and attributable.",
     "Synthetic self-play remains synthetic_self_play and has no production authority.",
     "No generalized persistent personal memory is introduced by this horizon.",
     "No autonomous production self-modification or self-retraining is authorized.",
-    "Environment configuration may contribute metadata only; private configuration values are never inspected, inferred, recorded, or published.",
-    "New CTC domains remain provisional observations until an explicit human scholarly decision promotes one."
+    "No new CTC domain is promoted without explicit human scholarly judgment."
   ],
   "ontology_mappings": [
     {
       "concept_key": "co_active_emergence",
       "role": "primary",
-      "rationale": "Several human participants, Turtle, and the shared world may reciprocally alter what becomes meaningful; preserving distinct foregrounds prevents co-active emergence from being reduced to one machine-normalized group state."
-    },
-    {
-      "concept_key": "purposeful_play",
-      "role": "primary",
-      "rationale": "Different participants may notice different consequences during shared play, and a group should be able to remain exploratory without Turtle forcing one collective reflection agenda."
+      "rationale": "Co-active collaboration must be able to preserve meaningful human difference rather than treating emergence as convergence on one machine-produced group state."
     },
     {
       "concept_key": "possible_possibles",
-      "role": "supports",
-      "rationale": "Distinct participant foregrounds can preserve several possible directions at once instead of converting shared space into a single ranked task list."
+      "role": "primary",
+      "rationale": "Plural foregrounds keep several possible directions alive, and hostile testing should prove that contradiction does not automatically collapse those possibilities."
     },
     {
-      "concept_key": "machine_responses_as_material_for_evaluation",
-      "role": "tests",
-      "rationale": "Turtle's choices about whose watchpoint to surface, defer, or mediate should themselves remain inspectable rather than becoming invisible group authority."
-    },
-    {
-      "concept_key": "invisible_ideas_become_visible_and_manipulable",
+      "concept_key": "purposeful_play",
       "role": "supports",
-      "rationale": "Participant-specific attention priorities and conflicts can become explicit enough to inspect and negotiate without forcing their private rationale into a public shared state."
+      "rationale": "A group may intentionally retain no shared foreground so that wandering, making, and noticing remain participant-directed."
     },
     {
       "concept_key": "steamhamlet",
-      "role": "primary",
-      "rationale": "A room of possibilities is richer when several inhabitants can move through the same environment with different questions and foregrounds rather than receiving one system-authored narration."
+      "role": "supports",
+      "rationale": "A shared room of possibilities should allow inhabitants to hold different purposes without requiring the room itself to define the collective agenda."
     },
     {
       "concept_key": "cohabitation_without_provenance_collapse",
       "role": "primary",
-      "rationale": "A shared world can hold many participant attention rules only if authorship, privacy, evidence class, surfacing decisions, and later negotiation remain distinguishable."
-    },
-    {
-      "concept_key": "recursive_learning_loop",
-      "role": "supports",
-      "rationale": "Different participants may enter reflection and revision from different events or at different times; the recursive loop need not synchronize everyone into one machine-selected moment."
+      "rationale": "Consent, private foregrounds, selective disclosure, machine proposals, shared-rule state, and later human decisions must remain distinguishable under disagreement."
     }
   ],
   "ctc_mappings": [
     {
       "domain": "Personal Inquiry",
       "role": "primary",
-      "rationale": "A shared environment should preserve each participant's ability to pursue and revise their own inquiry rather than letting shared infrastructure overwrite individual purpose."
+      "rationale": "Adversarial cases should prove that individual inquiry remains intact even when collaborators share a world and disagree about foreground."
     },
     {
       "domain": "Compelling Problem or Question",
       "role": "supports",
-      "rationale": "An event can become a collective problem when participants choose to bring it into shared inquiry, while remaining irrelevant or differently meaningful to others."
+      "rationale": "A shared event may become collectively important without requiring every participant to adopt the same question or urgency."
     },
     {
       "domain": "Technology as Tool to Think With",
       "role": "primary",
-      "rationale": "Inspectable participant-specific and shared attention layers could make the computational foreground itself a manipulable object-to-think-with rather than an opaque group recommendation engine."
+      "rationale": "A deterministic suite can make attention governance inspectable and breakable rather than leaving collaboration policy inside opaque model behavior."
     },
     {
       "domain": "Formative Demonstration of Learning",
       "role": "supports",
-      "rationale": "Changes in what collaborators choose to watch, share, dispute, or ignore may eventually expose evolving inquiry, but those system records are not automatically evidence that learning occurred."
+      "rationale": "Consent and attention traces may eventually document evolving inquiry, but the regression suite must not label those traces as evidence that learning occurred."
     },
     {
       "domain": "Reflection as Learning",
-      "role": "primary",
-      "rationale": "Collaborators should be able to reflect on different observations and on the disagreement among their foregrounds without Turtle imposing a single reflective timetable or conclusion."
+      "role": "supports",
+      "rationale": "Participants may later compare distinct foregrounds and revise shared rules, but the machine must not synchronize reflection by force."
     },
     {
       "domain": "Social and Cultural Critique",
       "role": "primary",
-      "rationale": "Shared attention governance makes power visible: whose concerns are broadcast, whose remain private, which metrics dominate, and who gets interrupted are socially consequential design choices."
+      "rationale": "The hostile cases directly test power: who can make a concern collective, who can refuse, what remains private, and whether the system privileges measurable or majority priorities."
     },
     {
       "domain": "Sharing and Collaborating",
       "role": "primary",
-      "rationale": "The horizon directly asks how collaborators can intentionally share or negotiate attention while preserving difference, privacy, disagreement, and authorship."
+      "rationale": "The horizon directly tests whether collaboration can include disagreement, selective disclosure, withdrawal, and no-consensus states without breaking the shared environment."
     }
   ],
   "uncaptured_residue": [
     {
-      "observation": "Collaborative attention has both individual and collective states: the same event may be privately salient, jointly salient, or deliberately unshared, and those states may change without the world event itself changing.",
-      "reason_unmapped": "The seven CTC domains describe inquiry, reflection, critique, and collaboration but do not directly specify a privacy-aware foreground layer that can be individual and collective at the same time.",
+      "observation": "A shared rule may be useful to some participants and unwanted by others, raising a distinction between collective coordination and universal participation.",
+      "reason_unmapped": "The established CTC domains support collaboration and critique but do not by themselves specify consent semantics for partial group rules.",
       "candidate_domain": null,
       "status": "open"
     },
     {
-      "observation": "Negotiating a shared foreground may itself become a learning artifact, but forcing every attention disagreement into explicit negotiation could burden collaboration and destroy the value of tacit wandering.",
-      "reason_unmapped": "This tension sits between Sharing and Collaborating, Personal Inquiry, and purposeful play; it may be a design principle rather than a new learner-development domain.",
+      "observation": "Existence-only disclosure protects rationale but can still reveal that a participant considers something important, which may itself be sensitive information.",
+      "reason_unmapped": "This is a privacy and interaction-governance boundary rather than clearly a new learner-development domain.",
       "candidate_domain": null,
       "status": "open"
     },
     {
-      "observation": "A participant may wish to reveal that an event matters without revealing why it matters, creating a provenance requirement for selective disclosure rather than simple public/private classification.",
-      "reason_unmapped": "Current privacy classes describe an object's visibility but do not yet model partial disclosure of attention rationale inside a shared inquiry.",
+      "observation": "The missing September 15 closure record demonstrates that provenance can fail at the research-process layer even when the code artifact and CI result are intact.",
+      "reason_unmapped": "This is a research-infrastructure/process finding rather than a pedagogical CTC domain.",
       "candidate_domain": null,
       "status": "open"
     }
@@ -163,54 +132,11 @@
   "provenance": {
     "evidence_class": "system_record",
     "privacy_class": "public",
-    "selection_method": "machine_synthesis_from_authorized_project_ecology_with_human_override_preserved",
-    "actor": "turtle_daily_build",
+    "selection_method": "recovery_synthesis_from_completed_commit_existing_project_horizon_and_human_process_observation_with_human_override_preserved",
+    "actor": "human_machine_recovery",
     "model": "GPT-5.6 Sol",
-    "generated_at": "2026-09-12T02:30:00Z",
-    "primary_sources": [
-      {
-        "publisher": "OpenAI",
-        "date": "2026-09-10",
-        "title": "Build more natural voice experiences with GPT-Live-1 in the API",
-        "url": "https://openai.com/index/introducing-gpt-live-1-in-the-api/"
-      },
-      {
-        "publisher": "OpenAI",
-        "date": "2026-09-08",
-        "title": "An OpenAI model proposes a solution to the Navier-Stokes problem",
-        "url": "https://openai.com/index/navier-stokes-solution/"
-      },
-      {
-        "publisher": "NVIDIA",
-        "date": "2026-09-10",
-        "title": "From Wafer-Out to First Token: Codifying Supply Chain Expertise with Nemotron and Palantir Foundry",
-        "url": "https://developer.nvidia.com/blog/from-wafer-out-to-first-token-codifying-supply-chain-expertise-with-nemotron-and-palantir-foundry/"
-      },
-      {
-        "publisher": "Minecraft Education",
-        "date": "2026-04-01",
-        "title": "Mini Agent Mission",
-        "url": "https://education.minecraft.net/en-us/challenges/mini-agent-mission"
-      },
-      {
-        "publisher": "Minecraft Education",
-        "date": "accessed 2026-09-12; challenge opens 2026-10",
-        "title": "The Velocity Prize",
-        "url": "https://education.minecraft.net/en-us/discover/velocity-prize"
-      },
-      {
-        "publisher": "MIT Media Lab",
-        "date": "2026-09-04",
-        "title": "Jordan Rudess + jam_bot: A Human-AI Musical Dialogue",
-        "url": "https://www.media.mit.edu/posts/media-alert/"
-      },
-      {
-        "publisher": "MIT Media Lab",
-        "date": "2026-08-10",
-        "title": "A tiny AI listens for Patagonia's giant bumblebee",
-        "url": "https://www.media.mit.edu/posts/a-tiny-ai-listens-for-patagonia-s-giant-bumblebee/"
-      }
-    ]
+    "source_hunt_reconstruction": "not_attempted",
+    "source_hunt_note": "The original September 15 external source hunt was not persisted, so this recovered horizon relies only on repository state, existing authorized project research, and the human-observed closure failure."
   },
   "selected_by": "machine_synthesis_human_revisable",
   "scope": "system_research_horizon_not_student_learning_evidence"

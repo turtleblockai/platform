@@ -11,6 +11,13 @@ export interface BuildLogEntry {
 // through the Worker. Open inquiry belongs in Next Edge, not in completed entries.
 export const BUILD_LOG_ENTRIES: BuildLogEntry[] = [
   {
+    id: "2026-09-15-plural-foreground-envelope",
+    date: "Sep 15, 2026",
+    title: "A shared world can keep more than one foreground",
+    body: "A provisional Plural Foreground Envelope v0.1 now represents multiple collaborators' distinct attention states, privacy classes, selective disclosure, and temporary shared attention rules without allowing Turtle or the system to manufacture consensus. The schema preserves private foregrounds, records affected and consenting participants, supports withdrawal, and explicitly disallows machine priority-averaging, surveillance expansion, synthetic production authority, and the assumption that a shared world implies shared attention. This remains research infrastructure rather than live learner-facing behavior. Product remains v0.1.0.",
+    done: true
+  },
+  {
     id: "2026-09-12-d1-reconciliation-terraria-try",
     date: "Sep 12, 2026",
     title: "TRY IT enters Turtle Terraria and the daily build gets a memory-hole sweep",
@@ -83,10 +90,10 @@ export const BUILD_LOG_ENTRIES: BuildLogEntry[] = [
 ];
 
 export const NEXT_EDGE_FALLBACK = {
-  date: "Sep 12, 2026",
-  title: "Can one shared world hold different foregrounds?",
-  question: "Can TurtleBlock AI support a shared world in which different collaborators keep distinct attention agendas—and sometimes choose to share or negotiate them—without collapsing everyone into one machine-selected foreground?",
-  xFactor: "whoooo knooooowwwssssssssssss — what if the same collapsing bridge is urgent to one learner, delightful to another, and none of Turtle's business to a third?"
+  date: "Sep 15, 2026",
+  title: "Can plural foregrounds survive disagreement?",
+  question: "Can TurtleBlock AI deterministically preserve several collaborators' distinct foregrounds through consent, selective disclosure, withdrawal, and contradictory priorities without inventing consensus or leaking private rationale?",
+  xFactor: "whoooo knooooowwwssssssssssss — what if the group needs a shared rule precisely when one person does not consent to having a shared rule?"
 };
 
 function escapeHtml(value: string) {

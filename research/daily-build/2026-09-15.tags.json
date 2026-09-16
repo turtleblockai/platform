@@ -1,0 +1,202 @@
+{
+  "version": "0.1",
+  "date": "2026-09-15",
+  "capture_batch": {
+    "id": "daily-build-2026-09-15-recovery",
+    "status": "closed",
+    "evidence_class": "system_record",
+    "privacy_class": "public",
+    "actor": "human_machine_recovery",
+    "note": "Recovery manifest created after human inspection found that the completed September 15 contribution had not been registered in the daily research trail or public Build Log."
+  },
+  "research_objects": [
+    {
+      "id": "autobuild-2026-09-15-plural-foreground-envelope",
+      "object_type": "autobuild_contribution",
+      "title": "Plural Foreground Envelope v0.1",
+      "canonical_pointer": "worldspec/schema/plural-foreground-envelope.schema.json",
+      "completed_commit": "440ac06119f40bf1c676907dd836c7bd53ea49bb",
+      "evidence_class": "system_record",
+      "privacy_class": "public",
+      "status": "completed"
+    },
+    {
+      "id": "observation-2026-09-15-closure-gap",
+      "object_type": "process_observation",
+      "title": "Daily build closure artifacts were skipped",
+      "canonical_pointer": "research/daily-build/2026-09-15.md",
+      "evidence_class": "human_interaction",
+      "privacy_class": "public",
+      "status": "represented"
+    },
+    {
+      "id": "next-edge-2026-09-15-plural-disagreement",
+      "object_type": "next_edge",
+      "title": "Can plural foregrounds survive disagreement?",
+      "canonical_pointer": "public/data/next-edge.json",
+      "evidence_class": "system_record",
+      "privacy_class": "public",
+      "status": "open_question"
+    }
+  ],
+  "relationships": [
+    {
+      "from": "autobuild-2026-09-15-plural-foreground-envelope",
+      "type": "answers_prior_horizon",
+      "to": "next-edge-2026-09-12-shared-foregrounds",
+      "rationale": "The schema directly represents multiple participant foregrounds, selective disclosure, shared-rule status, and anti-consensus boundaries."
+    },
+    {
+      "from": "next-edge-2026-09-15-plural-disagreement",
+      "type": "follows",
+      "to": "autobuild-2026-09-15-plural-foreground-envelope",
+      "rationale": "The next unresolved problem is deterministic adversarial testing of consent, withdrawal, contradictory priorities, and selective disclosure."
+    },
+    {
+      "from": "observation-2026-09-15-closure-gap",
+      "type": "corrected_by_human_inspection",
+      "to": "autobuild-2026-09-15-plural-foreground-envelope",
+      "rationale": "Human inspection of the WWW revealed that the completed contribution existed in Git but was absent from the public Build Log."
+    }
+  ],
+  "ctc_tags": [
+    {
+      "domain": "Personal Inquiry",
+      "object_id": "autobuild-2026-09-15-plural-foreground-envelope",
+      "fit": "primary",
+      "rationale": "Participants retain distinct purpose references and attention states rather than inheriting a group or machine foreground."
+    },
+    {
+      "domain": "Compelling Problem or Question",
+      "object_id": "autobuild-2026-09-15-plural-foreground-envelope",
+      "fit": "supports",
+      "rationale": "A shared event may become a collective question without requiring identical interpretation or urgency."
+    },
+    {
+      "domain": "Technology as Tool to Think With",
+      "object_id": "autobuild-2026-09-15-plural-foreground-envelope",
+      "fit": "primary",
+      "rationale": "Foreground, disclosure, consent, and shared-rule state become inspectable computational material."
+    },
+    {
+      "domain": "Formative Demonstration of Learning",
+      "object_id": "autobuild-2026-09-15-plural-foreground-envelope",
+      "fit": "supports",
+      "rationale": "Attention changes may later document inquiry development, but the schema is not itself evidence of learning."
+    },
+    {
+      "domain": "Reflection as Learning",
+      "object_id": "autobuild-2026-09-15-plural-foreground-envelope",
+      "fit": "primary",
+      "rationale": "Participants may defer, surface, and later compare different observations without machine-synchronized reflection."
+    },
+    {
+      "domain": "Social and Cultural Critique",
+      "object_id": "autobuild-2026-09-15-plural-foreground-envelope",
+      "fit": "primary",
+      "rationale": "Whose attention becomes shared, interruptive, or private is a power-bearing design choice."
+    },
+    {
+      "domain": "Sharing and Collaborating",
+      "object_id": "autobuild-2026-09-15-plural-foreground-envelope",
+      "fit": "primary",
+      "rationale": "The contribution directly models collaboration while preserving disagreement, privacy, withdrawal, and separate authorship."
+    }
+  ],
+  "ontology_tags": [
+    {
+      "concept_key": "co_active_emergence",
+      "object_id": "autobuild-2026-09-15-plural-foreground-envelope",
+      "fit": "primary",
+      "rationale": "Several people and Turtle may influence what emerges without being normalized into one group state."
+    },
+    {
+      "concept_key": "possible_possibles",
+      "object_id": "autobuild-2026-09-15-plural-foreground-envelope",
+      "fit": "primary",
+      "rationale": "Several legitimate foregrounds and directions may remain alive simultaneously."
+    },
+    {
+      "concept_key": "purposeful_play",
+      "object_id": "autobuild-2026-09-15-plural-foreground-envelope",
+      "fit": "supports",
+      "rationale": "Shared play need not impose one synchronized agenda on all participants."
+    },
+    {
+      "concept_key": "steamhamlet",
+      "object_id": "autobuild-2026-09-15-plural-foreground-envelope",
+      "fit": "supports",
+      "rationale": "A shared room of possibilities can preserve several human purposes and attention paths."
+    },
+    {
+      "concept_key": "cohabitation_without_provenance_collapse",
+      "object_id": "autobuild-2026-09-15-plural-foreground-envelope",
+      "fit": "primary",
+      "rationale": "Private foregrounds, shared rules, system decisions, and human consent remain distinct provenance classes."
+    }
+  ],
+  "emergent_tags": [
+    {
+      "tag": "plural_foregrounds",
+      "rationale": "A shared computational environment can contain multiple legitimate attention states at once."
+    },
+    {
+      "tag": "selective_disclosure",
+      "rationale": "A participant may expose a rule or its existence without exposing the full private rationale."
+    },
+    {
+      "tag": "anti_consensus_authority",
+      "rationale": "The machine is explicitly barred from manufacturing or averaging a collective priority."
+    },
+    {
+      "tag": "closure_pipeline_failure",
+      "rationale": "The contribution committed successfully while research registration, Build Log publication, and Next Edge advancement failed to close."
+    }
+  ],
+  "reconciliation_findings": [
+    {
+      "candidate": "worldspec/schema/plural-foreground-envelope.schema.json",
+      "resolution": "represented",
+      "canonical_pointer": "worldspec/schema/plural-foreground-envelope.schema.json",
+      "reason": "Registered by this recovery manifest and public Build Log repair."
+    },
+    {
+      "candidate": "September 15 daily build record",
+      "resolution": "backfilled_in_git",
+      "canonical_pointer": "research/daily-build/2026-09-15.md",
+      "reason": "Original automation omitted the daily record; recovery preserves the gap rather than pretending normal closure occurred."
+    },
+    {
+      "candidate": "live D1 persistence",
+      "resolution": "not_claimed",
+      "canonical_pointer": "research/daily-build/2026-09-15.tags.json",
+      "reason": "No confirmed live D1 write occurred during the original cycle or this repair."
+    }
+  ],
+  "uncaptured_observations": [
+    {
+      "observation": "The schema records affected and consenting participants but does not yet have a deterministic hostile suite proving how active shared rules should behave when consent is incomplete, withdrawn, or contradictory.",
+      "status": "open",
+      "candidate_domain": null
+    },
+    {
+      "observation": "Selective disclosure can protect privacy while making collaboration possible, but existence-only disclosure may itself reveal sensitive context in some situations.",
+      "status": "open",
+      "candidate_domain": null
+    },
+    {
+      "observation": "A successful code commit without research closure is a provenance failure even when the product artifact itself is correct.",
+      "status": "open",
+      "candidate_domain": null
+    }
+  ],
+  "source_hunt_recovery": {
+    "status": "not_reconstructed",
+    "reason": "The original September 15 automation did not persist its source hunt or deliberation. No external source claims are retroactively invented in this recovery record."
+  },
+  "version_judgment": {
+    "product_version": "0.1.0",
+    "decision": "no_bump",
+    "rationale": "The plural-foreground contract is versioned research infrastructure but lacks its own deterministic hostile suite and remains outside live learner-facing collaborative behavior."
+  }
+}
