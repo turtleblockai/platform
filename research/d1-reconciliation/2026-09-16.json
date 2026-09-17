@@ -1,5 +1,5 @@
 {
-  "schema": "turtleblockai.d1-reconciliation.v0.2",
+  "schema": "turtleblockai.d1-reconciliation.v0.3",
   "date": "2026-09-16",
   "status": "staged_no_live_d1_write_claimed",
   "live_d1_verified": false,
@@ -22,7 +22,7 @@
       "judgment": "represented_in_git_staged_for_d1",
       "canonical_pointer": "src/buildLog.ts",
       "supporting_pointer": "scripts/validate-build-log-connections.mjs",
-      "reason": "The new public relationship companion is implemented, rendered, tested, and staged by this reconciliation record and the daily tags manifest."
+      "reason": "The new public relationship companion is implemented, rendered, tested, documented in the standing build process, and staged by this reconciliation record and the daily tags manifest."
     },
     {
       "entry_id": "2026-09-16-plural-foreground-regression",
@@ -121,7 +121,8 @@
       "related_sources": [
         "public/assets/site-runtime.js",
         "public/assets/site-chrome.css",
-        "scripts/validate-build-log-connections.mjs"
+        "scripts/validate-build-log-connections.mjs",
+        "BUILD_IN_PUBLIC.md"
       ],
       "intended_object_type": "public_research_relationship_surface",
       "summary": "The Build Log now supports an optional evidence-backed Wait a minute… companion so a genuinely useful cross-connection can be surfaced publicly without retroactive filler or a machine verdict."
@@ -139,12 +140,28 @@
       "summary": "TurtleAsk seeks human otherness when machine-only inquiry loses useful difference; plural foreground governance preserves human difference after it arrives by refusing machine-made consensus."
     },
     {
+      "id": "recon-20260916-next-edge-human-otherness",
+      "type": "public_research_horizon",
+      "status": "represented_in_git_staged_for_d1",
+      "canonical_source": "public/data/next-edge.json",
+      "intended_object_type": "next_edge",
+      "summary": "The Next Edge now asks whether a human perturbation can survive Turtle's translation into a shared or branched WorldSpec without being assimilated or forcibly merged."
+    },
+    {
+      "id": "recon-20260916-daily-records",
+      "type": "capture_batch_closure",
+      "status": "represented_in_git_staged_for_d1",
+      "canonical_source": "research/daily-build/2026-09-16.md",
+      "related_sources": ["research/daily-build/2026-09-16.tags.json"],
+      "summary": "The same-date evening capture batch preserves the source hunt, contribution, tests, Build Log coverage, Wait a minute connections, privacy boundary, uncaptured residue, and version judgment without overwriting the earlier September 16 cycle."
+    },
+    {
       "id": "recon-20260916-www-fallback-drift",
       "type": "www_repository_drift",
       "status": "safely_backfilled",
       "canonical_source": "public/assets/site-runtime.js",
-      "related_sources": ["src/buildLog.ts"],
-      "summary": "The direct-asset Build Log fallback lagged behind the canonical feed. The primary API path already preferred src/buildLog.ts; this cycle updated the fallback and renderer so Wait a minute… also survives API failure."
+      "related_sources": ["src/buildLog.ts", "public/data/next-edge.json"],
+      "summary": "The direct-asset Build Log fallback lagged behind the canonical feed. The primary API path already preferred src/buildLog.ts; this cycle refreshed the fallback, added Wait a minute rendering, and aligned the emergency Next Edge fallback with the canonical public manifest."
     },
     {
       "id": "recon-20260916-consent-safe-input-boundary",
@@ -157,9 +174,30 @@
       "type": "runtime_persistence_boundary",
       "status": "intentionally_not_captured",
       "summary": "No appropriately authorized live D1 write action is available in the active execution context, so no live backfill or migration-state claim is made.",
-      "d1_action": "When an authorized live D1 path is available, register the new Wait a minute… public relationship surface, connection objects, daily cycle, current Build Log coverage judgments, and supported CTC/ontology relationships using canonical pointers rather than duplicating payloads."
+      "d1_action": "When an authorized live D1 path is available, register the Wait a minute public relationship surface, connection objects, both September 16 capture batches, current Build Log coverage judgments, new Next Edge, and supported CTC/ontology relationships using canonical pointers rather than duplicating payloads."
     }
   ],
+  "closing_sweep": {
+    "material_unresolved_gap": "live D1 contents and migration application state remain unverified because no authorized runtime read/write path is available",
+    "repository_and_public_asset_state": "aligned by canonical Build Log feed plus refreshed direct-asset fallback, optional Wait a minute renderer, current Next Edge manifest, and matched emergency Next Edge fallback",
+    "consent_safe_visitor_input": "none available through an authorized research read path; none used",
+    "pre_close_ci": {
+      "workflow_run_id": "35173488218",
+      "tested_commit": "f76b9459d37819fe80220792998660e52c77ff94",
+      "conclusion": "success",
+      "included": [
+        "typecheck",
+        "Next Edge",
+        "Learner Verification",
+        "World Evidence",
+        "Selective Attention",
+        "Plural Foreground",
+        "Build Log cross-connections",
+        "Terraria TRY IT",
+        "repository-to-D1 audit"
+      ]
+    }
+  },
   "privacy_boundary": "No private dialogue, secret configuration, token, credential, private environment payload, or non-consented visitor content was inspected or copied during reconciliation.",
   "capture_batch_closed": true
 }
