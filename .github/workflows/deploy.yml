@@ -45,6 +45,9 @@ jobs:
       - name: Validate Plural Foreground Envelope
         run: npm run validate:plural-foreground
 
+      - name: Validate Build Log cross-connections
+        run: npm run validate:build-log-connections
+
       - name: Validate Terraria TRY IT contract
         run: npm run validate:terraria-try
 
