@@ -1,5 +1,5 @@
 {
-  "schema": "turtleblockai.daily-build-tags.v0.1",
+  "schema": "turtleblockai.daily-build-tags.v0.2",
   "date": "2026-09-16",
   "ontology_version": "sanders-ontology-v0.1",
   "autobuild_run_id": "autobuild-2026-09-16",
@@ -15,6 +15,23 @@
     "privacy_class": "public",
     "evidence_class": "system_record"
   },
+  "additional_cycles": [
+    {
+      "id": "autobuild-2026-09-16-wait-a-minute",
+      "status": "completed",
+      "actor": "turtle_daily_build",
+      "model": "GPT-5.6 Sol",
+      "version_before": "0.1.0",
+      "version_after": "0.1.0",
+      "selected_contribution": "Optional evidence-backed Wait a minute Build Log companion plus deterministic cross-connection validator",
+      "d1_persistence": "staged_only_no_authorized_live_write_action",
+      "capture_batch_closed": true,
+      "privacy_class": "public",
+      "evidence_class": "system_record",
+      "detailed_note_path": "research/daily-build/2026-09-16.md",
+      "public_log_entry_id": "2026-09-16-wait-a-minute-build-log"
+    }
+  ],
   "principles": {
     "immutable_dissertation_source_layer": true,
     "multi_tag": true,
@@ -27,6 +44,10 @@
     "synthetic_production_authority": false,
     "surveillance_expansion_authorized": false,
     "reversible": true,
+    "wait_a_minute_optional": true,
+    "wait_a_minute_requires_evidence_when_present": true,
+    "no_manufactured_cross_connections": true,
+    "no_private_dialogue_for_cross_connection_without_authorized_consent_safe_access": true,
     "no_generalized_persistent_personal_memory": true,
     "no_autonomous_production_self_modification": true,
     "ctc_domain_promotion_requires_human_scholarly_decision": true
@@ -188,6 +209,196 @@
       "commit_sha": "c4731ad0287131479bf6aa107c1504c848633ce0",
       "privacy_class": "public",
       "evidence_class": "system_record"
+    },
+    {
+      "id": "autobuild_run:autobuild-2026-09-16-wait-a-minute",
+      "object_type": "autobuild_run",
+      "title": "September 16 Wait a minute bounded cycle",
+      "actor": "turtle",
+      "privacy_class": "public",
+      "evidence_class": "system_record",
+      "canonical_pointer": "research/daily-build/2026-09-16.md"
+    },
+    {
+      "id": "human_direction:2026-09-16-wait-a-minute-standing-rule",
+      "object_type": "human_direction",
+      "title": "Add a standing Wait a minute cross-connection pass and optional public Build Log companion",
+      "actor": "human",
+      "privacy_class": "internal",
+      "evidence_class": "human_authored",
+      "raw_text_published": false
+    },
+    {
+      "id": "source_signal:2026-09-16-openai-older-adults",
+      "object_type": "external_source_signal",
+      "title": "OpenAI and OATS use hands-on supported practice to move older adults from curiosity toward safe practical AI use",
+      "source_uri": "https://openai.com/index/helping-older-adults-use-ai-in-everyday-life/",
+      "external_date": "2026-09-16",
+      "privacy_class": "public",
+      "evidence_class": "external_source"
+    },
+    {
+      "id": "source_signal:2026-09-16-nvidia-flare",
+      "object_type": "external_source_signal",
+      "title": "NVIDIA FLARE coordinates shared federation while preserving site-local execution, data, secrets, and policy boundaries",
+      "source_uri": "https://developer.nvidia.com/blog/scaling-federated-learning-across-docker-kubernetes-and-slurm-with-nvidia-flare/",
+      "external_date": "2026-09-15",
+      "privacy_class": "public",
+      "evidence_class": "external_source"
+    },
+    {
+      "id": "source_signal:2026-09-16-minecraft-village-square",
+      "object_type": "external_source_signal",
+      "title": "Minecraft Education Village Square places different perspectives inside a civic activity about fairness, representation, decisions, charter-making, and compromise",
+      "source_uri": "https://education.minecraft.net/en-us/blog/village-square-minecraft-civics",
+      "external_date": "2026-09-14",
+      "privacy_class": "public",
+      "evidence_class": "external_source"
+    },
+    {
+      "id": "source_signal:2026-09-16-mit-agents-in-concert",
+      "object_type": "external_source_signal",
+      "title": "MIT Media Lab Agents in Concert studies iterative codesign, emerging goals, rehearsals, and human-AI co-improvisation in practice",
+      "source_uri": "https://www.media.mit.edu/publications/agents-in-concert/",
+      "external_date": "2026",
+      "privacy_class": "public",
+      "evidence_class": "external_source"
+    },
+    {
+      "id": "candidate:2026-09-16-wait-parallel-worldspec",
+      "object_type": "autobuild_candidate",
+      "title": "Implement parallel WorldSpec branches immediately",
+      "decision": "rejected_for_this_cycle",
+      "rejection_reason": "The human added a standing cross-connection/public-history requirement; the smallest useful contribution is to make that research-process layer inspectable before building the substantive branch behavior."
+    },
+    {
+      "id": "candidate:2026-09-16-wait-graph-browser",
+      "object_type": "autobuild_candidate",
+      "title": "Expose a generalized public D1 relationship graph browser",
+      "decision": "rejected",
+      "rejection_reason": "A graph browser is much larger than the requested companion and risks turning public editorial history into a database dump."
+    },
+    {
+      "id": "candidate:2026-09-16-wait-autofill-history",
+      "object_type": "autobuild_candidate",
+      "title": "Auto-fill Wait a minute for every historical Build Log entry",
+      "decision": "rejected",
+      "rejection_reason": "Blank is a valid result; retrospective filler would manufacture patterns and violate the standing rule."
+    },
+    {
+      "id": "candidate:2026-09-16-wait-private-try",
+      "object_type": "autobuild_candidate",
+      "title": "Read private TRY IT turns to improve cross-connections",
+      "decision": "rejected_by_boundary",
+      "rejection_reason": "No authorized consent-safe research read path is available; raw private dialogue is absent from this pass rather than a retrieval problem to route around."
+    },
+    {
+      "id": "selection:2026-09-16-wait-a-minute",
+      "object_type": "autobuild_selection",
+      "title": "Select optional evidence-backed Wait a minute Build Log companion plus deterministic contract",
+      "decision": "selected",
+      "privacy_class": "public",
+      "evidence_class": "system_record"
+    },
+    {
+      "id": "repo_change:2026-09-16-wait-build-log",
+      "object_type": "repo_change",
+      "repo_path": "src/buildLog.ts",
+      "change_type": "update",
+      "commit_sha": "5b843a303e854f1a8dec15568af33ecb0007d51c"
+    },
+    {
+      "id": "repo_change:2026-09-16-wait-runtime",
+      "object_type": "repo_change",
+      "repo_path": "public/assets/site-runtime.js",
+      "change_type": "update",
+      "commit_sha": "5cdb9aa612efd692e630bfce8021cace425474db"
+    },
+    {
+      "id": "repo_change:2026-09-16-wait-css",
+      "object_type": "repo_change",
+      "repo_path": "public/assets/site-chrome.css",
+      "change_type": "update",
+      "commit_sha": "07dc48bd9b59fc255b607d13e2499fb037b9788a"
+    },
+    {
+      "id": "repo_change:2026-09-16-wait-validator",
+      "object_type": "repo_change",
+      "repo_path": "scripts/validate-build-log-connections.mjs",
+      "change_type": "create",
+      "commit_sha": "5f5e02a9ffb15e92751120e1947342915542e7e8"
+    },
+    {
+      "id": "repo_change:2026-09-16-wait-package",
+      "object_type": "repo_change",
+      "repo_path": "package.json",
+      "change_type": "update",
+      "commit_sha": "5d7d0026e027e44882c5e019c4933ba1f316ca0a"
+    },
+    {
+      "id": "repo_change:2026-09-16-wait-ci",
+      "object_type": "repo_change",
+      "repo_path": ".github/workflows/deploy.yml",
+      "change_type": "update",
+      "commit_sha": "f76b9459d37819fe80220792998660e52c77ff94"
+    },
+    {
+      "id": "test:2026-09-16-wait-ci",
+      "object_type": "test",
+      "title": "Validate Build Log Wait a minute contract in full TurtleBlock CI",
+      "status": "passed",
+      "workflow_run_id": "35173488218",
+      "tested_commit": "f76b9459d37819fe80220792998660e52c77ff94",
+      "privacy_class": "public",
+      "evidence_class": "system_record"
+    },
+    {
+      "id": "wait_a_minute:2026-09-16-turtleask-plural",
+      "object_type": "wait_a_minute_connection",
+      "title": "Human otherness is sought by TurtleAsk and protected by plural foregrounds",
+      "disposition": "relationship_and_next_edge_candidate",
+      "privacy_class": "public",
+      "evidence_class": "system_record",
+      "evidence_pointers": [
+        "research/TURTLE_ASK.md",
+        "worldspec/tests/plural-foreground-envelope-cases.json"
+      ],
+      "uncertainty": "May be an operational recurrence of existing agency/provenance principles rather than a distinct new theoretical construct."
+    },
+    {
+      "id": "wait_a_minute:2026-09-16-d1-public-relationship",
+      "object_type": "wait_a_minute_connection",
+      "title": "The public companion is a selective human-readable surface over D1-style research relationships",
+      "disposition": "relationship_and_link_only",
+      "privacy_class": "public",
+      "evidence_class": "system_record",
+      "evidence_pointers": [
+        "migrations/0007_turtle_terraria_and_exhaustive_tagging.sql",
+        "src/buildLog.ts"
+      ],
+      "uncertainty": "Most D1 relationships should remain absent from the public Build Log; public surfacing remains an editorial act."
+    },
+    {
+      "id": "wait_a_minute:2026-09-16-village-square-disagreement",
+      "object_type": "wait_a_minute_connection",
+      "title": "Village Square compromise is a useful tension against TurtleBlock's durable-disagreement horizon",
+      "disposition": "test_candidate",
+      "privacy_class": "public",
+      "evidence_class": "mixed",
+      "evidence_pointers": [
+        "https://education.minecraft.net/en-us/blog/village-square-minecraft-civics",
+        "worldspec/tests/plural-foreground-envelope-cases.json"
+      ],
+      "uncertainty": "Village Square is a specific civic-learning scenario, not a universal claim that all collaboration should converge."
+    },
+    {
+      "id": "next_edge:2026-09-16-human-otherness-translation",
+      "object_type": "next_edge",
+      "title": "Can human otherness survive translation?",
+      "repo_path": "public/data/next-edge.json",
+      "commit_sha": "61680d60bf164804d9ccad7b313ce41fbacdf673",
+      "privacy_class": "public",
+      "evidence_class": "system_record"
     }
   ],
   "relationships": [
@@ -208,6 +419,36 @@
       "predicate": "validated_by",
       "to": "repo_change:2026-09-16-plural-validator",
       "rationale": "The deterministic validator evaluates all eleven explicit cases."
+    },
+    {
+      "from": "selection:2026-09-16-wait-a-minute",
+      "predicate": "implements_human_direction",
+      "to": "human_direction:2026-09-16-wait-a-minute-standing-rule",
+      "rationale": "The selected contribution creates the smallest reversible public surface for the new standing cross-connection requirement."
+    },
+    {
+      "from": "wait_a_minute:2026-09-16-turtleask-plural",
+      "predicate": "connects",
+      "to": "selection:2026-09-16-plural-foreground-regression",
+      "rationale": "Plural foreground governance preserves difference that TurtleAsk is designed to seek from a genuine human participant."
+    },
+    {
+      "from": "wait_a_minute:2026-09-16-turtleask-plural",
+      "predicate": "suggests",
+      "to": "next_edge:2026-09-16-human-otherness-translation",
+      "rationale": "The connection exposes translation as the unresolved layer between seeking human otherness and preserving plural interpretations."
+    },
+    {
+      "from": "wait_a_minute:2026-09-16-d1-public-relationship",
+      "predicate": "publicly_surfaces_subset_of",
+      "to": "repo_change:2026-09-16-wait-build-log",
+      "rationale": "The Build Log companion makes selected relationship evidence visible while D1-style research relationships remain the richer substrate."
+    },
+    {
+      "from": "repo_change:2026-09-16-wait-build-log",
+      "predicate": "validated_by",
+      "to": "test:2026-09-16-wait-ci",
+      "rationale": "CI passed the dedicated Build Log cross-connection contract together with all existing TurtleBlock validators."
     }
   ],
   "ctc_tags": [
@@ -217,7 +458,13 @@
     {"domain":"Formative Demonstration of Learning","object_id":"selection:2026-09-16-plural-foreground-regression","fit":"supports","rationale":"System traces may later contextualize learning but are not themselves learner-attainment evidence."},
     {"domain":"Reflection as Learning","object_id":"selection:2026-09-16-plural-foreground-regression","fit":"supports","rationale":"Participants may reflect on different events and schedules without system-forced synchronization."},
     {"domain":"Social and Cultural Critique","object_id":"selection:2026-09-16-plural-foreground-regression","fit":"primary","rationale":"The suite tests power over who can collectivize attention, refuse participation, retain privacy, and receive interruptions."},
-    {"domain":"Sharing and Collaborating","object_id":"selection:2026-09-16-plural-foreground-regression","fit":"primary","rationale":"The contribution tests collaboration with disagreement, selective disclosure, consent, partial participation, and no-consensus states."}
+    {"domain":"Sharing and Collaborating","object_id":"selection:2026-09-16-plural-foreground-regression","fit":"primary","rationale":"The contribution tests collaboration with disagreement, selective disclosure, consent, partial participation, and no-consensus states."},
+    {"domain":"Technology as Tool to Think With","object_id":"selection:2026-09-16-wait-a-minute","fit":"primary","rationale":"The relationship layer becomes inspectable public material instead of remaining hidden inside machine synthesis or database structure."},
+    {"domain":"Reflection as Learning","object_id":"selection:2026-09-16-wait-a-minute","fit":"primary","rationale":"The companion invites bounded reflection on why two completed pieces of project history illuminate or complicate each other."},
+    {"domain":"Social and Cultural Critique","object_id":"wait_a_minute:2026-09-16-turtleask-plural","fit":"primary","rationale":"The connection highlights the power to preserve or erase difference when machine interpretation translates a human contribution."},
+    {"domain":"Sharing and Collaborating","object_id":"wait_a_minute:2026-09-16-turtleask-plural","fit":"primary","rationale":"The relationship concerns how genuine human difference enters and remains distinguishable inside collaborative computational work."},
+    {"domain":"Personal Inquiry","object_id":"wait_a_minute:2026-09-16-turtleask-plural","fit":"supports","rationale":"A human perturbation can redirect inquiry without being normalized into the machine's prior purpose."},
+    {"domain":"Compelling Problem or Question","object_id":"wait_a_minute:2026-09-16-village-square-disagreement","fit":"supports","rationale":"Different perspectives may produce either an authored compromise task or an intentionally unresolved shared question."}
   ],
   "ontology_tags": [
     {"concept_key":"co_active_emergence","object_id":"selection:2026-09-16-plural-foreground-regression","fit":"primary","rationale":"Interaction can change shared trajectories without forcing several human foregrounds into one machine-generated state."},
@@ -225,14 +472,52 @@
     {"concept_key":"purposeful_play","object_id":"selection:2026-09-16-plural-foreground-regression","fit":"supports","rationale":"A group may deliberately retain no shared foreground while participants continue exploratory activity."},
     {"concept_key":"steamhamlet","object_id":"selection:2026-09-16-plural-foreground-regression","fit":"supports","rationale":"A shared room of possibilities can contain several purposes and foregrounds at once."},
     {"concept_key":"machine_responses_as_material_for_evaluation","object_id":"selection:2026-09-16-plural-foreground-regression","fit":"tests","rationale":"Turtle proposals and system decisions are treated as inspectable objects rather than invisible authority."},
-    {"concept_key":"cohabitation_without_provenance_collapse","object_id":"selection:2026-09-16-plural-foreground-regression","fit":"primary","rationale":"Participant purpose, disclosure, consent, Turtle proposals, synthetic fixtures, and system decisions retain distinguishable provenance."}
+    {"concept_key":"cohabitation_without_provenance_collapse","object_id":"selection:2026-09-16-plural-foreground-regression","fit":"primary","rationale":"Participant purpose, disclosure, consent, Turtle proposals, synthetic fixtures, and system decisions retain distinguishable provenance."},
+    {"concept_key":"machine_responses_as_material_for_evaluation","object_id":"selection:2026-09-16-wait-a-minute","fit":"primary","rationale":"Machine-proposed cross-connections become public material that can be inspected, ignored, revised, or later contradicted rather than invisible interpretation."},
+    {"concept_key":"invisible_ideas_become_visible_and_manipulable","object_id":"selection:2026-09-16-wait-a-minute","fit":"primary","rationale":"A previously implicit relationship becomes a bounded visible artifact with evidence pointers."},
+    {"concept_key":"co_active_emergence","object_id":"wait_a_minute:2026-09-16-turtleask-plural","fit":"primary","rationale":"The connection concerns movement of useful difference between human and machine participants without symmetry of authority."},
+    {"concept_key":"possible_possibles","object_id":"wait_a_minute:2026-09-16-turtleask-plural","fit":"primary","rationale":"Human otherness matters because it can introduce a possibility not already implied by the current machine trajectory."},
+    {"concept_key":"cohabitation_without_provenance_collapse","object_id":"wait_a_minute:2026-09-16-turtleask-plural","fit":"primary","rationale":"Human perturbation and Turtle interpretation must remain distinguishable if the difference is to survive translation."},
+    {"concept_key":"turtle_ask","object_id":"wait_a_minute:2026-09-16-turtleask-plural","fit":"primary","rationale":"TurtleAsk is one side of the connection: machine inquiry deliberately seeks a genuinely human perturbation."},
+    {"concept_key":"human_perturbation","object_id":"wait_a_minute:2026-09-16-turtleask-plural","fit":"primary","rationale":"The invited human contribution is the difference the next horizon asks the representation layer to preserve."}
   ],
   "emergent_tags": [
     {"tag":"plural_foregrounds","rationale":"Several legitimate attention states coexist inside one shared world."},
     {"tag":"durable_disagreement","rationale":"The suite preserves contradictory priorities without treating disagreement as a validation failure."},
     {"tag":"selective_disclosure","rationale":"A participant may reveal a rule or concern without revealing full rationale."},
     {"tag":"partial_group_coordination","rationale":"A shared rule may apply to a consenting subset rather than every co-present participant."},
-    {"tag":"anti_consensus_authority","rationale":"Machine averaging and machine-authored active shared rules are explicitly rejected."}
+    {"tag":"anti_consensus_authority","rationale":"Machine averaging and machine-authored active shared rules are explicitly rejected."},
+    {"tag":"wait_a_minute","rationale":"A public research-history companion surfaces a non-obvious connection only when evidence makes it useful."},
+    {"tag":"human_otherness","rationale":"A human contribution may introduce difference unavailable from continued machine-only inquiry."},
+    {"tag":"translation_assimilation_risk","rationale":"Correct provenance does not guarantee that machine interpretation preserves the conceptual difference of a human contribution."},
+    {"tag":"editorial_relationship_power","rationale":"Selecting which research relationship becomes public can shape the apparent intellectual history of the project."},
+    {"tag":"compromise_vs_durable_disagreement","rationale":"Different activities may legitimately author compromise or unresolved plurality as different collaborative aims."}
+  ],
+  "wait_a_minute": [
+    {
+      "id": "wait_a_minute:2026-09-16-turtleask-plural",
+      "connected_objects": ["research/TURTLE_ASK.md","worldspec/tests/plural-foreground-envelope-cases.json"],
+      "overlap": "TurtleAsk seeks human otherness when machine-only inquiry loses useful difference; plural foregrounds preserve human difference after it arrives by refusing machine-made consensus.",
+      "why_it_may_matter": "Difference appears to function as an epistemic resource on both sides of the human-machine boundary.",
+      "uncertainty": "May be an operational recurrence of existing agency and provenance principles rather than a new theoretical construct.",
+      "disposition": "next_edge_candidate_selected"
+    },
+    {
+      "id": "wait_a_minute:2026-09-16-d1-public-relationship",
+      "connected_objects": ["migrations/0007_turtle_terraria_and_exhaustive_tagging.sql","src/buildLog.ts"],
+      "overlap": "D1 already treats object relationships as first-class research data; the Build Log companion selectively exposes a small human-readable subset.",
+      "why_it_may_matter": "Public build history can show intellectual movement without becoming a database dump.",
+      "uncertainty": "Most database relationships should remain unrendered; public surfacing is editorial and optional.",
+      "disposition": "link_only"
+    },
+    {
+      "id": "wait_a_minute:2026-09-16-village-square-disagreement",
+      "connected_objects": ["Minecraft Education Village Square","worldspec/tests/plural-foreground-envelope-cases.json"],
+      "overlap": "Village Square makes compromise an authored civic-learning aim while TurtleBlock's plural contract protects the possibility of unresolved disagreement.",
+      "why_it_may_matter": "The platform should represent the human-authored collaborative endpoint rather than silently treating consensus as success everywhere.",
+      "uncertainty": "Village Square is a specific scenario, so the difference is a design tension rather than a contradiction between theories.",
+      "disposition": "test_candidate"
+    }
   ],
   "reconciliation_findings": [
     {
@@ -246,14 +531,26 @@
       "canonical_pointer": "scripts/validate-plural-foreground-envelope.mjs"
     },
     {
+      "candidate": "entire current Build Log",
+      "resolution": "coverage_judgments_staged",
+      "canonical_pointer": "research/d1-reconciliation/2026-09-16.json",
+      "reason": "Every materially meaningful current Build Log entry has a migration-backed, pointer-backed, staged, backfilled, or intentional boundary judgment."
+    },
+    {
+      "candidate": "public/assets/site-runtime.js emergency Build Log fallback",
+      "resolution": "safely_backfilled",
+      "canonical_pointer": "public/assets/site-runtime.js",
+      "reason": "The fallback lagged behind the canonical API-backed Build Log and was refreshed while adding Wait a minute rendering."
+    },
+    {
+      "candidate": "consent-safe visitor/user inputs for Wait a minute",
+      "resolution": "intentionally_not_captured",
+      "reason": "No authorized consent-safe live research read path was available. No private raw dialogue or inferred learner state was used."
+    },
+    {
       "candidate": "live D1 write",
       "resolution": "intentionally_not_claimed",
       "reason": "No appropriately authorized live D1 write action is available in the active execution context."
-    },
-    {
-      "candidate": "public WWW /try and /terraria search visibility",
-      "resolution": "not_used_as_runtime_proof",
-      "reason": "External search did not return reliable indexed pages during the sweep; repository-backed public assets remain the canonical inspectable source for this cycle."
     }
   ],
   "uncaptured_observations": [
@@ -274,11 +571,29 @@
       "reason_unmapped": "The issue is partly technical state/versioning and partly collaborative pedagogy.",
       "candidate_domain": null,
       "status": "open"
+    },
+    {
+      "observation": "Provenance can remain formally correct while Turtle's interpretation assimilates a genuinely different human contribution into the machine's existing conceptual frame.",
+      "reason_unmapped": "This cross-cuts authorship, representation, reflection, and critique; it does not yet justify a new established CTC domain.",
+      "candidate_domain": null,
+      "status": "open"
+    },
+    {
+      "observation": "Choosing which relationships deserve public Wait a minute treatment is an editorial act that can shape the apparent intellectual history of TurtleBlock AI.",
+      "reason_unmapped": "This is primarily research-process governance and publication provenance rather than a learner-development domain.",
+      "candidate_domain": null,
+      "status": "open"
+    },
+    {
+      "observation": "Compromise and durable disagreement can both be legitimate human-authored collaboration states; Turtle should not infer which endpoint is pedagogically desirable.",
+      "reason_unmapped": "The issue spans Shared Democracy, Predetermined Outcomes, Social and Cultural Critique, and Sharing and Collaborating.",
+      "candidate_domain": null,
+      "status": "open"
     }
   ],
   "version_judgment": {
     "product_version": "0.1.0",
     "decision": "no_bump",
-    "rationale": "The contribution strengthens the repeatable evaluation layer but does not yet satisfy the complete v0.2 milestone as an integrated product capability."
+    "rationale": "Both September 16 cycles strengthen repeatable evaluation, provenance, and public research-to-change history but do not yet satisfy the integrated product-level v0.2 milestone."
   }
 }
