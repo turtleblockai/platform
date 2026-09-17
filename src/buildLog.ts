@@ -119,9 +119,9 @@ export const BUILD_LOG_ENTRIES: BuildLogEntry[] = [
 
 export const NEXT_EDGE_FALLBACK = {
   date: "Sep 16, 2026",
-  title: "Can disagreement stay productive without becoming consensus work?",
-  question: "Can TurtleBlock AI help collaborators build from incompatible interpretations in the same shared world without forcing resolution, averaging the disagreement, or turning negotiation itself into compulsory curriculum?",
-  xFactor: "whoooo knooooowwwssssssssssss — what if two learners should build two futures from the same collapsed bridge and Turtle's job is to keep both futures alive long enough to surprise them?"
+  title: "Can human otherness survive translation?",
+  question: "Can TurtleBlock AI carry a human perturbation from TurtleAsk into a shared or branched WorldSpec as a traceably different contribution—one that may redirect, contradict, or coexist with existing interpretations—without assimilating it into Turtle's prior frame or forcing a canonical merge?",
+  xFactor: "whoooo knooooowwwssssssssssss — what if the most important human contribution is the one that makes the world less coherent instead of more coherent?"
 };
 
 function escapeHtml(value: string) {
