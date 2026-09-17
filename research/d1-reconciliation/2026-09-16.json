@@ -1,64 +1,165 @@
 {
-  "schema": "turtleblockai.d1-reconciliation.v0.1",
+  "schema": "turtleblockai.d1-reconciliation.v0.2",
   "date": "2026-09-16",
   "status": "staged_no_live_d1_write_claimed",
+  "live_d1_verified": false,
   "sweep_scope": [
+    "entire current Build Log",
+    "newest daily-build records",
     "research",
     "worldspec",
-    "public",
+    "public WWW assets",
     "src",
     "scripts",
     "migrations",
-    ".github/workflows"
+    ".github/workflows",
+    "Turtle Terraria and TurtleAsk research structures",
+    "consent-safe public interaction observations when legitimately available"
+  ],
+  "build_log_coverage": [
+    {
+      "entry_id": "2026-09-16-wait-a-minute-build-log",
+      "judgment": "represented_in_git_staged_for_d1",
+      "canonical_pointer": "src/buildLog.ts",
+      "supporting_pointer": "scripts/validate-build-log-connections.mjs",
+      "reason": "The new public relationship companion is implemented, rendered, tested, and staged by this reconciliation record and the daily tags manifest."
+    },
+    {
+      "entry_id": "2026-09-16-plural-foreground-regression",
+      "judgment": "represented_by_canonical_pointer_and_staging",
+      "canonical_pointer": "research/daily-build/2026-09-16.tags.json",
+      "supporting_pointer": "worldspec/tests/plural-foreground-envelope-cases.json",
+      "reason": "The prior September 16 cycle already staged the selection, cases, validator, Build Log record, CTC/ontology mappings, and unresolved residue."
+    },
+    {
+      "entry_id": "2026-09-15-plural-foreground-envelope",
+      "judgment": "represented_by_canonical_pointer_and_staging",
+      "canonical_pointer": "research/daily-build/2026-09-15.tags.json",
+      "supporting_pointer": "worldspec/schema/plural-foreground-envelope.schema.json",
+      "reason": "The September 15 recovery manifest explicitly restored the missing research trail and preserved the closure failure as provenance."
+    },
+    {
+      "entry_id": "2026-09-12-d1-reconciliation-terraria-try",
+      "judgment": "represented_by_reconciliation_staging",
+      "canonical_pointer": "research/d1-reconciliation/2026-09-12.json",
+      "supporting_pointer": "research/TERRARIA_ENGINE.md",
+      "reason": "The TRY IT Terrarium bridge and reconciliation doctrine were staged with canonical pointers and an explicit no-live-D1-persistence boundary."
+    },
+    {
+      "entry_id": "2026-09-11-human-tamagotchi-turtle-ask",
+      "judgment": "represented_by_migration",
+      "canonical_pointer": "migrations/0009_human_tamagotchi_terrarium_and_turtle_ask.sql",
+      "supporting_pointer": "research/TURTLE_ASK.md",
+      "reason": "Migration 0009 registers the research artifact, third habitat, TurtleAsk boundary object, operational concepts, and supported CTC/ontology mappings."
+    },
+    {
+      "entry_id": "2026-09-12-selective-attention-envelope",
+      "judgment": "represented_by_daily_tags_staging",
+      "canonical_pointer": "research/daily-build/2026-09-12.tags.json",
+      "supporting_pointer": "worldspec/schema/selective-attention-envelope.schema.json",
+      "reason": "The September 12 manifest stages the contract, hostile cases, implementation decisions, tests, mappings, and uncaptured residue; live D1 persistence was not claimed."
+    },
+    {
+      "entry_id": "2026-09-11-world-evidence-envelope",
+      "judgment": "represented_by_daily_tags_staging",
+      "canonical_pointer": "research/daily-build/2026-09-11.tags.json",
+      "reason": "The daily research manifest is the lossless staging record for the World Evidence contribution and its research mappings."
+    },
+    {
+      "entry_id": "2026-09-10-learner-verification-card",
+      "judgment": "represented_by_daily_tags_staging",
+      "canonical_pointer": "research/daily-build/2026-09-10.tags.json",
+      "reason": "The daily research manifest preserves the Learner Verification contribution, tests, mappings, and provenance."
+    },
+    {
+      "entry_id": "2026-09-09-next-edge-validator",
+      "judgment": "represented_by_daily_tags_staging",
+      "canonical_pointer": "research/daily-build/2026-09-09.tags.json",
+      "reason": "The September 9 manifest preserves the validator contribution and research-to-change provenance."
+    },
+    {
+      "entry_id": "2026-09-08-next-edge-horizon",
+      "judgment": "represented_by_daily_tags_staging",
+      "canonical_pointer": "research/daily-build/2026-09-08-next-edge.tags.json",
+      "reason": "The dedicated Next Edge manifest preserves the horizon architecture as research data."
+    },
+    {
+      "entry_id": "2026-09-08-www-direct-asset-repair",
+      "judgment": "represented_by_daily_tags_staging",
+      "canonical_pointer": "research/daily-build/2026-09-08-www-repair.tags.json",
+      "reason": "The WWW reversal and direct-asset repair are preserved as a research/process record rather than erased as deployment noise."
+    },
+    {
+      "entry_id": "2026-09-08-turtle-terraria-tagging",
+      "judgment": "represented_by_migration",
+      "canonical_pointer": "migrations/0008_seed_terraria_and_autobuild_tags.sql",
+      "supporting_pointer": "research/TURTLE_TERRARIA.md",
+      "reason": "Migration 0008 explicitly registers the Terraria design artifact, migration 0007, public Build Log object, and initial CTC/ontology mappings."
+    },
+    {
+      "entry_id": "2026-09-08-daily-coactive-loop",
+      "judgment": "represented_by_migration_and_autobuild_seed",
+      "canonical_pointer": "migrations/0007_turtle_terraria_and_exhaustive_tagging.sql",
+      "supporting_pointer": "migrations/0008_seed_terraria_and_autobuild_tags.sql",
+      "reason": "Auto-build runs/events/changes/tests have first-class research structures and the initial cycle is seeded as queryable system research."
+    }
   ],
   "findings": [
     {
       "id": "recon-20260916-plural-cases",
-      "type": "new_research_artifact",
+      "type": "research_artifact",
       "status": "represented_in_git_staged_for_d1",
       "canonical_source": "worldspec/tests/plural-foreground-envelope-cases.json",
       "intended_object_type": "evaluation_fixture_set",
       "summary": "Eleven plural-foreground regression cases test consent, selective disclosure, contradictory foregrounds, synthetic authority, shared-rule delivery, and surveillance boundaries."
     },
     {
-      "id": "recon-20260916-plural-validator",
+      "id": "recon-20260916-wait-a-minute-contract",
       "type": "new_research_artifact",
       "status": "represented_in_git_staged_for_d1",
-      "canonical_source": "scripts/validate-plural-foreground-envelope.mjs",
-      "intended_object_type": "deterministic_evaluation",
-      "summary": "Validator enforces the invariant that a shared world does not imply shared attention and that active shared rules remain human-consented and reversible."
+      "canonical_source": "src/buildLog.ts",
+      "related_sources": [
+        "public/assets/site-runtime.js",
+        "public/assets/site-chrome.css",
+        "scripts/validate-build-log-connections.mjs"
+      ],
+      "intended_object_type": "public_research_relationship_surface",
+      "summary": "The Build Log now supports an optional evidence-backed Wait a minute… companion so a genuinely useful cross-connection can be surfaced publicly without retroactive filler or a machine verdict."
     },
     {
-      "id": "recon-20260916-build-log",
-      "type": "public_research_representation",
+      "id": "recon-20260916-wait-turtleask-plurality",
+      "type": "cross_connection",
       "status": "represented_in_git_staged_for_d1",
       "canonical_source": "src/buildLog.ts",
-      "intended_object_type": "build_log_entry",
-      "summary": "Newest-first public record closes the September 16 contribution rather than leaving the regression suite as an unregistered code artifact."
+      "related_sources": [
+        "research/TURTLE_ASK.md",
+        "worldspec/tests/plural-foreground-envelope-cases.json"
+      ],
+      "intended_object_type": "research_object_relationship",
+      "summary": "TurtleAsk seeks human otherness when machine-only inquiry loses useful difference; plural foreground governance preserves human difference after it arrives by refusing machine-made consensus."
     },
     {
-      "id": "recon-20260916-next-edge",
-      "type": "public_research_horizon",
-      "status": "represented_in_git_staged_for_d1",
-      "canonical_source": "public/data/next-edge.json",
-      "intended_object_type": "next_edge",
-      "summary": "Horizon advances beyond plural-foreground validation toward productive disagreement and parallel construction."
+      "id": "recon-20260916-www-fallback-drift",
+      "type": "www_repository_drift",
+      "status": "safely_backfilled",
+      "canonical_source": "public/assets/site-runtime.js",
+      "related_sources": ["src/buildLog.ts"],
+      "summary": "The direct-asset Build Log fallback lagged behind the canonical feed. The primary API path already preferred src/buildLog.ts; this cycle updated the fallback and renderer so Wait a minute… also survives API failure."
     },
     {
-      "id": "recon-20260916-www-search",
-      "type": "www_verification_boundary",
-      "status": "intentionally_not_used_as_runtime_proof",
-      "canonical_source": "public/",
-      "summary": "External search did not expose reliable indexed TRY IT or Terraria pages during this sweep; repository-backed public assets remain the inspectable canonical source for the cycle."
+      "id": "recon-20260916-consent-safe-input-boundary",
+      "type": "privacy_boundary",
+      "status": "intentionally_not_captured",
+      "summary": "No authorized live D1/TRY IT research read path is available in this execution context, so no visitor-originated phrase, raw dialogue, or inferred learner observation was used in the Wait a minute… pass. Absence of authorized consent-safe input is treated as absence, not a gap to route around."
     },
     {
       "id": "recon-20260916-live-d1",
       "type": "runtime_persistence_boundary",
       "status": "intentionally_not_captured",
       "summary": "No appropriately authorized live D1 write action is available in the active execution context, so no live backfill or migration-state claim is made.",
-      "d1_action": "When an authorized live D1 path is available, register the new fixtures, validator, build entry, daily record, next edge, and supported relationships/tags using canonical repo pointers rather than duplicating payloads."
+      "d1_action": "When an authorized live D1 path is available, register the new Wait a minute… public relationship surface, connection objects, daily cycle, current Build Log coverage judgments, and supported CTC/ontology relationships using canonical pointers rather than duplicating payloads."
     }
   ],
-  "privacy_boundary": "No private dialogue, secret configuration, token, credential, or private environment payload was inspected or copied during reconciliation.",
+  "privacy_boundary": "No private dialogue, secret configuration, token, credential, private environment payload, or non-consented visitor content was inspected or copied during reconciliation.",
   "capture_batch_closed": true
 }
