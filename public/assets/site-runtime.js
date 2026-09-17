@@ -1,5 +1,5 @@
 (()=>{
-  const VERSION='2026-09-12.2';
+  const VERSION='2026-09-16.1';
   const summaries={
     home:'We built a place to build places: learner ideas become persistent, revisable worlds through dialogue, construction, experience, and reflection.',
     try:'Talk with Turtle inside the Human + Turtle Terrarium: wander, build, or throw in something weird while provenance stays visible.',
@@ -16,6 +16,9 @@
     terms:'These terms define experimental use, learner responsibility, acceptable conduct, data boundaries, third-party services, and the limits of TurtleBlock AI.'
   };
   let dailyEntries=[
+    {date:'Sep 16, 2026',title:'The Build Log can now say: Wait a minute…',body:'Completed Build Log entries can carry an optional evidence-backed Wait a minute… companion when a useful cross-connection appears. Blank remains correct when no connection is warranted.',done:true,waitAMinute:{summary:'This public companion is the human-readable face of the relationship graph already anticipated by D1: useful object-to-object connections can become visible without turning the Build Log into a database dump.',evidence:['migrations/0007_turtle_terraria_and_exhaustive_tagging.sql','src/buildLog.ts']}},
+    {date:'Sep 16, 2026',title:'Plural foregrounds get hostile tests instead of a group-think UI',body:'The Plural Foreground Envelope now has an eleven-case deterministic hostile suite that preserves disagreement, selective disclosure, complete human consent for shared rules, and the boundary against machine-made consensus.',done:true,waitAMinute:{summary:'TurtleAsk and plural foregrounds are the same deeper problem from opposite directions: TurtleAsk seeks human otherness when machine-only inquiry loses useful difference; plural foregrounds protect that difference after it arrives by refusing to average incompatible human priorities into consensus.',evidence:['research/TURTLE_ASK.md','worldspec/tests/plural-foreground-envelope-cases.json']}},
+    {date:'Sep 15, 2026',title:'A shared world can keep more than one foreground',body:'A provisional Plural Foreground Envelope represents distinct participant attention states, privacy, selective disclosure, and temporary human-negotiated shared rules without machine consensus authority.',done:true},
     {date:'Sep 12, 2026',title:'TRY IT enters Turtle Terraria and the daily build gets a memory-hole sweep',body:'TRY IT now offers Wander with Turtle, Make a world, and Throw in something weird as Human + Turtle Terrarium entry modes. Consented play keeps canonical private session/turn/WorldSpec records while adding a provenance-only Terrarium trace when D1 is active. A standing repository + WWW to D1 reconciliation sweep and CI audit now look for research-bearing artifacts that might otherwise fall outside the research substrate.',done:true},
     {date:'Sep 11, 2026',title:'A third Terrarium waits for Turtle to ask a human',body:'Human Tamagotchi Terrarium and the TurtleAsk boundary event make room for a Turtle to seek genuine human perturbation after inquiry saturation without simulating a human, acquiring interruption authority, or turning synthetic self-play into human evidence.',done:true},
     {date:'Sep 12, 2026',title:'Turtle learns that noticing is not the same as interrupting',body:'A provisional Selective Attention Envelope separates observability, retention, salience, surfacing, interruption, and importance while preserving deliberate silence and learner authority.',done:true},
@@ -28,16 +31,21 @@
     {date:'Sep 8, 2026',title:'Daily co-active build loop activated',body:'TurtleBlock AI now runs a daily primary-source hunt, ontology comparison, one bounded contribution, testing, exhaustive research capture, Build Log update, and Next Edge synthesis.',done:true}
   ];
   const nextEdgeFallback={
-    updated_at:'2026-09-12',
-    title:'Can one shared world hold different foregrounds?',
-    question:'Can TurtleBlock AI support a shared world in which different collaborators keep distinct attention agendas—and sometimes choose to share or negotiate them—without collapsing everyone into one machine-selected foreground?',
-    why_now:'Selective attention creates a new question: one shared world may contain several legitimate foregrounds at once.',
-    possible_possibles:['Collaborators keep private watchpoints and selectively reveal them.','A shared event may matter differently to different people.','Someone may reveal that something matters without revealing why.'],
-    x_factor:'whoooo knooooowwwssssssssssss — what if the same collapsing bridge is urgent to one learner, delightful to another, and none of Turtle’s business to a third?'
+    updated_at:'2026-09-16',
+    title:'Can disagreement stay productive without becoming consensus work?',
+    question:'Can TurtleBlock AI help collaborators build from incompatible interpretations in the same shared world without forcing resolution, averaging the disagreement, or turning negotiation itself into compulsory curriculum?',
+    why_now:'The plural-foreground contract preserves disagreement. The next question is whether incompatible interpretations can remain useful construction material.',
+    possible_possibles:['Keep parallel WorldSpec branches inspectable.','Turn contradiction into an object to think with.','Let collaborators defer negotiation and keep making.'],
+    x_factor:'whoooo knooooowwwssssssssssss — what if two learners should build two futures from the same collapsed bridge and Turtle’s job is to keep both futures alive long enough to surprise them?'
   };
   let nextEdge={...nextEdgeFallback};
   const esc=s=>String(s).replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[m]));
-  const entryHtml=e=>`<div class="stage"><span class="date">${esc(e.date)}</span><strong${e.done?' class="done"':''}>${e.done?'✓ ':'→ '}${esc(e.title)}</strong><p>${esc(e.body)}</p></div>`;
+  const waitHtml=e=>{
+    const wait=e&&e.waitAMinute;
+    if(!wait||typeof wait.summary!=='string'||!wait.summary.trim()||!Array.isArray(wait.evidence)||!wait.evidence.length)return '';
+    return `<aside class="waitaminute"><strong>Wait a minute…</strong><p>${esc(wait.summary)}</p><small>Evidence · ${wait.evidence.map(item=>`<code>${esc(item)}</code>`).join(' · ')}</small></aside>`;
+  };
+  const entryHtml=e=>`<div class="stage"><span class="date">${esc(e.date)}</span><strong${e.done?' class="done"':''}>${e.done?'✓ ':'→ '}${esc(e.title)}</strong><p>${esc(e.body)}</p>${waitHtml(e)}</div>`;
   const edgeHtml=()=>{
     const possibles=Array.isArray(nextEdge.possible_possibles)?nextEdge.possible_possibles.slice(0,3):[];
     const possibleHtml=possibles.length?`<div class="edgepossibles"><span>possible possibles</span>${possibles.map(p=>`<em>${esc(p)}</em>`).join('')}</div>`:'';
