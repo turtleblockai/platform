@@ -12,6 +12,7 @@
     "validate:world-evidence": "node scripts/validate-world-evidence-envelope.mjs",
     "validate:selective-attention": "node scripts/validate-selective-attention-envelope.mjs",
     "validate:plural-foreground": "node scripts/validate-plural-foreground-envelope.mjs",
+    "validate:build-log-connections": "node scripts/validate-build-log-connections.mjs",
     "validate:terraria-try": "node scripts/validate-terraria-try.mjs",
     "audit:d1-coverage": "node scripts/audit-d1-coverage.mjs",
     "discord:register": "node scripts/register-discord-command.mjs"
