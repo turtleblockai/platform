@@ -1,5 +1,5 @@
 (()=>{
-  const VERSION='2026-09-16.1';
+  const VERSION='2026-09-16.2';
   const summaries={
     home:'We built a place to build places: learner ideas become persistent, revisable worlds through dialogue, construction, experience, and reflection.',
     try:'Talk with Turtle inside the Human + Turtle Terrarium: wander, build, or throw in something weird while provenance stays visible.',
@@ -32,11 +32,11 @@
   ];
   const nextEdgeFallback={
     updated_at:'2026-09-16',
-    title:'Can disagreement stay productive without becoming consensus work?',
-    question:'Can TurtleBlock AI help collaborators build from incompatible interpretations in the same shared world without forcing resolution, averaging the disagreement, or turning negotiation itself into compulsory curriculum?',
-    why_now:'The plural-foreground contract preserves disagreement. The next question is whether incompatible interpretations can remain useful construction material.',
-    possible_possibles:['Keep parallel WorldSpec branches inspectable.','Turn contradiction into an object to think with.','Let collaborators defer negotiation and keep making.'],
-    x_factor:'whoooo knooooowwwssssssssssss — what if two learners should build two futures from the same collapsed bridge and Turtle’s job is to keep both futures alive long enough to surprise them?'
+    title:'Can human otherness survive translation?',
+    question:'Can TurtleBlock AI carry a human perturbation from TurtleAsk into a shared or branched WorldSpec as a traceably different contribution—one that may redirect, contradict, or coexist with existing interpretations—without assimilating it into Turtle’s prior frame or forcing a canonical merge?',
+    why_now:'TurtleAsk seeks human difference; plural foregrounds preserve difference. The unresolved layer is whether translation into WorldSpec can preserve that difference rather than assimilating it.',
+    possible_possibles:['Open a parallel WorldSpec branch from the human perturbation.','Keep the human contribution separately addressable from Turtle’s interpretation.','Allow contradiction to remain inhabitable rather than forcing a canonical merge.'],
+    x_factor:'whoooo knooooowwwssssssssssss — what if the most important human contribution is the one that makes the world less coherent instead of more coherent?'
   };
   let nextEdge={...nextEdgeFallback};
   const esc=s=>String(s).replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[m]));
