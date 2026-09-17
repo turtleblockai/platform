@@ -1,9 +1,15 @@
+export interface WaitAMinuteConnection {
+  summary: string;
+  evidence: string[];
+}
+
 export interface BuildLogEntry {
   id: string;
   date: string;
   title: string;
   body: string;
   done?: boolean;
+  waitAMinute?: WaitAMinuteConnection;
 }
 
 // Newest completed work first. The public asset runtime is the primary WWW path;
@@ -11,11 +17,26 @@ export interface BuildLogEntry {
 // through the Worker. Open inquiry belongs in Next Edge, not in completed entries.
 export const BUILD_LOG_ENTRIES: BuildLogEntry[] = [
   {
+    id: "2026-09-16-wait-a-minute-build-log",
+    date: "Sep 16, 2026",
+    title: "The Build Log can now say: Wait a minute…",
+    body: "Completed Build Log entries can now carry an optional evidence-backed Wait a minute… companion when the daily cross-connection pass finds a genuinely useful overlap, contradiction, recurrence, or missing link. The field preserves a concise public summary plus canonical evidence pointers; older entries need no filler, and blank remains the correct state when no meaningful connection is found. A deterministic contract check keeps the field optional, evidence-backed, and synchronized across the canonical Build Log and direct-asset WWW renderer. Product remains v0.1.0.",
+    done: true,
+    waitAMinute: {
+      summary: "This public companion is the human-readable face of the relationship graph already anticipated by D1: useful object-to-object connections can now become visible without turning the Build Log into a database dump.",
+      evidence: ["migrations/0007_turtle_terraria_and_exhaustive_tagging.sql", "src/buildLog.ts"]
+    }
+  },
+  {
     id: "2026-09-16-plural-foreground-regression",
     date: "Sep 16, 2026",
     title: "Plural foregrounds get hostile tests instead of a group-think UI",
     body: "The Plural Foreground Envelope now has an eleven-case deterministic hostile suite and validator. Passing cases preserve different foregrounds, selective disclosure, human-negotiated temporary shared watchpoints, and Turtle proposals that remain proposals. Failing cases reject machine-averaged consensus, Turtle-activated group rules, incomplete consent, delivery to non-consenting participants, synthetic production execution, shared-world-equals-shared-attention assumptions, and collection expansion. CI now runs the contract beside the existing Next Edge, learner verification, world evidence, selective attention, Terraria TRY IT, and D1 reconciliation checks. Product remains v0.1.0.",
-    done: true
+    done: true,
+    waitAMinute: {
+      summary: "TurtleAsk and plural foregrounds are the same deeper problem from opposite directions: TurtleAsk seeks human otherness when machine-only inquiry loses useful difference; plural foregrounds protect that difference after it arrives by refusing to average incompatible human priorities into consensus.",
+      evidence: ["research/TURTLE_ASK.md", "worldspec/tests/plural-foreground-envelope-cases.json"]
+    }
   },
   {
     id: "2026-09-15-plural-foreground-envelope",
@@ -112,10 +133,16 @@ function escapeHtml(value: string) {
     .replace(/'/g, "&#039;");
 }
 
+function waitAMinuteHtml(entry: BuildLogEntry) {
+  if (!entry.waitAMinute) return "";
+  const evidence = entry.waitAMinute.evidence.map((item) => `<code>${escapeHtml(item)}</code>`).join(" · ");
+  return `<aside class="waitaminute"><strong>Wait a minute…</strong><p>${escapeHtml(entry.waitAMinute.summary)}</p><small>Evidence · ${evidence}</small></aside>`;
+}
+
 function entryHtml(entry: BuildLogEntry) {
   const doneClass = entry.done ? ' class="done"' : "";
   const marker = entry.done ? "✓ " : "→ ";
-  return `<div class="stage" data-build-entry-id="${escapeHtml(entry.id)}"><span class="date">${escapeHtml(entry.date)}</span><strong${doneClass}>${marker}${escapeHtml(entry.title)}</strong><p>${escapeHtml(entry.body)}</p></div>`;
+  return `<div class="stage" data-build-entry-id="${escapeHtml(entry.id)}"><span class="date">${escapeHtml(entry.date)}</span><strong${doneClass}>${marker}${escapeHtml(entry.title)}</strong><p>${escapeHtml(entry.body)}</p>${waitAMinuteHtml(entry)}</div>`;
 }
 
 function nextEdgeHtml() {
