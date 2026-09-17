@@ -29,7 +29,7 @@ A meaningful milestone includes:
 
 ## Newest first
 
-The public WWW Build Log is reverse chronological: **newest entries appear at the top** while older work remains visible below. Daily entries are maintained in `src/buildLog.ts`; the Worker injects those entries into the public Build Log and reverses the older historical stages already embedded in the original SPA.
+The public WWW Build Log is reverse chronological: **newest entries appear at the top** while older work remains visible below. Daily entries are maintained in `src/buildLog.ts`; the Worker exposes those entries through the canonical Build Log feed and the direct-asset runtime renders them into the public page.
 
 Detailed daily deliberations live in `research/daily-build/YYYY-MM-DD.md`.
 
@@ -43,14 +43,16 @@ Every daily run should:
 
 1. scan recent primary-source work from OpenAI, NVIDIA, Minecraft / Minecraft Education, and the MIT Media Lab;
 2. compare meaningful signals against the Sanders research ontology and current TurtleBlock architecture;
-3. sweep the repository and public WWW for meaningful research-bearing artifacts that are missing, stale, or intentionally excluded from D1 representation;
+3. sweep the full current Build Log, newest daily records, repository, and public WWW for meaningful research-bearing artifacts that are missing, stale, or intentionally excluded from D1 representation;
 4. choose one bounded contribution;
 5. implement it in the most appropriate repository location;
 6. add or run a tiny test or observable success criterion when practical;
-7. write the detailed daily note under `research/daily-build/`;
-8. prepend a concise public entry to `src/buildLog.ts`;
-9. produce structured research metadata for the run: source signals, questions, candidates, rejections, implementation, tests, reconciliation findings, version judgment, and ontology/CTC tags;
-10. make a conservative version judgment.
+7. run the `Wait a minute…` cross-connection pass after reconciliation and before advancing the research horizon;
+8. write the detailed daily note under `research/daily-build/`;
+9. prepend a concise public entry to `src/buildLog.ts`;
+10. produce structured research metadata for the run: source signals, questions, candidates, rejections, implementation, tests, reconciliation findings, `Wait a minute…` connections when material, version judgment, and ontology/CTC tags;
+11. advance exactly one future-facing Next Edge after completed work is recorded;
+12. make a conservative version judgment.
 
 Version numbers are earned by implemented and tested capability, not by calendar cadence.
 
@@ -58,7 +60,9 @@ Version numbers are earned by implemented and tested capability, not by calendar
 
 The living project should not know something today that the research substrate cannot find tomorrow.
 
-Every daily build therefore includes a bounded **repository + WWW → D1 reconciliation sweep**. The sweep checks whether meaningful research-bearing artifacts, concepts, behaviors, tests, reversals, public pages, Build Log entries, Next Edge records, Terraria/TurtleAsk structures, and consent-safe operational traces are adequately represented, linked, or intentionally excluded in the D1 research substrate.
+Every daily build therefore includes a bounded **Build Log + repository + WWW → D1 reconciliation sweep**. The sweep checks whether meaningful research-bearing artifacts, concepts, behaviors, tests, reversals, public pages, Build Log entries, Next Edge records, Terraria/TurtleAsk structures, and consent-safe operational traces are adequately represented, linked, or intentionally excluded in the D1 research substrate.
+
+The sweep explicitly passes over the **entire current Build Log** and asks whether each materially meaningful entry has an adequate research identity, canonical pointer, relationship, ontology/CTC mapping, Terraria research object where applicable, uncaptured observation, reconciliation record, or an explicit reason not to capture it.
 
 The goal is not to copy every file or paragraph into D1. Preserve **research identity, provenance, relationships, and discoverability** while leaving the canonical payload where it belongs.
 
@@ -69,19 +73,60 @@ public/repository artifact → research_object → repo_path / source URI
 private operational record → research_object → source_table / source_id
 ```
 
-A meaningful reconciliation candidate should resolve to one of three states:
+A meaningful reconciliation candidate should resolve to one of these states:
 
-1. **represented** — D1 already has an adequate object/pointer and supported relationships/tags;
-2. **backfilled** — a safe missing representation was created or strengthened;
-3. **intentionally not captured** — privacy, duplication, unsupported provenance, an unapplied migration, or another explicit boundary prevents capture.
+1. **represented** — D1 or an established migration-backed research structure already has an adequate object/pointer and supported relationships/tags;
+2. **represented by canonical pointer / staging** — Git or a lossless daily/reconciliation manifest preserves what a later authorized D1 backfill needs;
+3. **backfilled** — a safe missing representation was created or strengthened;
+4. **intentionally not captured** — privacy, duplication, unsupported provenance, an unapplied migration, or another explicit boundary prevents capture;
+5. **unresolved gap** — a real mismatch remains and is explicitly recorded.
 
-Silence is not a fourth state.
+Silence is not another state.
 
 When a live, appropriately authorized D1 write path is available, safely backfill supported records and metadata. When it is not available, never claim that persistence occurred: preserve material gaps in `research/d1-reconciliation/` and/or the daily `.tags.json` staging manifest with enough information to reconcile later.
 
 Do not duplicate raw private dialogue into generalized research text merely to satisfy the sweep. Do not inspect, infer, copy, or publish secret values or private configuration payloads. Meaningful WWW concepts count as research representations; cosmetic copy changes do not require a database row per paragraph.
 
 The standing doctrine is documented in `research/D1_RECONCILIATION.md`; `scripts/audit-d1-coverage.mjs` provides a conservative static repository audit. A missing static declaration is a reconciliation candidate, not proof that live D1 lacks the object.
+
+## `Wait a minute…` cross-connection pass
+
+A chronological research trail can still hide its most interesting movement if every item is treated as an isolated accomplishment. Each daily cycle therefore includes a deliberate **`Wait a minute…`** pass after reconciliation and before the Next Edge is selected.
+
+The pass looks for supported overlaps, echoes, contradictions, recurrences, and missing links across:
+
+1. Build Log entries, daily-build records, and prior Next Edge history;
+2. the Sanders ontology, CTC mappings, research objects, relationships, auto-build records, reconciliation findings, and uncaptured observations available through the current research substrate;
+3. Turtle Terraria notes/events/observations, TurtleAsk traces, and explicitly synthetic self-play artifacts when present;
+4. consent-safe visitor/user-originated observations only when they are legitimately available under the applicable research and privacy boundary.
+
+Raw private dialogue does not enter the pass merely because it exists. When an authorized consent-safe visitor research view is unavailable, that evidence stream is absent rather than something to retrieve around the boundary.
+
+A surfaced connection should preserve:
+
+- the connected object IDs, repository paths, source URIs, or canonical pointers;
+- what appears to overlap, conflict, or recur;
+- why the connection may matter;
+- uncertainty and plausible alternative interpretation;
+- supported Sanders ontology and CTC mappings;
+- a recommended disposition such as `link_only`, `tag`, `relationship`, `test_candidate`, `next_edge_candidate`, `human_review`, or `no_action`.
+
+Do not force pattern matching. Coincidence is not a finding. Machines may propose a connection, but human scholarly judgment remains authoritative.
+
+## Build Log `Wait a minute…` companion
+
+Completed Build Log entries may carry an optional evidence-backed `Wait a minute…` companion. The companion is a concise public rendering of a useful research relationship, not a second Build Log, a certainty score, or a machine verdict.
+
+Rules:
+
+- blank is valid and preferred to manufactured cleverness;
+- older entries do not require retroactive filler;
+- a later daily cycle may backfill an older entry when new evidence makes the relationship materially useful;
+- a populated companion must include a human-readable summary and canonical evidence pointers;
+- public surfacing is editorial: most D1 relationships should remain unrendered;
+- private or non-consented material cannot be exposed by a public relationship summary.
+
+The richer queryable relationship graph remains in the research substrate; the public companion exposes only a deliberately selected, provenance-preserving subset.
 
 ## Consented TRY IT play
 
@@ -99,11 +144,13 @@ Human play is not automatically public, not automatically approved training/eval
 
 The initial TRY IT Terrarium entry modes are intentionally open-ended: **Wander with Turtle**, **Make a world**, and **Throw in something weird**. These are starting conditions, not curricular tracks or learner classifications.
 
+Consent-safe user-originated observations may participate in `Wait a minute…` only under the applicable research/consent state. Absence of consent means absence from that pass.
+
 ## Exhaustive tagging rule
 
 The Sanders research ontology is infrastructure for the whole project, not a separate bibliography page.
 
-Whenever TurtleBlock AI creates, changes, questions, tests, rejects, observes, reflects upon, or publishes something that may matter later, preserve enough metadata to register it as a research object and tag it as exhaustively as the evidence supports.
+Whenever TurtleBlock AI creates, changes, questions, tests, rejects, observes, reflects upon, connects, or publishes something that may matter later, preserve enough metadata to register it as a research object and tag it as exhaustively as the evidence supports.
 
 Tagging may include:
 
@@ -112,6 +159,7 @@ Tagging may include:
 - emergent/free tags that are useful but not yet ontology concepts;
 - explicit relationships to other research objects;
 - provenance, actor, evidence class, privacy class, model/configuration, source, and version information;
+- `Wait a minute…` connections and their uncertainty/disposition when material;
 - an uncaptured observation when the current ontology does **not** adequately describe what happened.
 
 Do not force every observation into the existing categories. The seven authored CTC domains remain established, while `ctc_uncaptured_observations` and `ctc_candidate_domains` deliberately leave room for evidence that may eventually justify an eighth, ninth, tenth, or other domain. Machines may propose candidate structure; promotion into the established CTC framework requires an explicit human scholarly decision.
@@ -127,10 +175,11 @@ something happens
 → add emergent tags
 → preserve unmapped residue
 → relate to other objects
+→ run the cross-connection pass
 → keep it queryable
 ```
 
-Tag the **movement** as well as the artifact. A question, machine interpretation, human disagreement, correction, revision, rejected build candidate, failed test, synthetic critique, reconciliation gap, and final output are distinct research events even when they belong to the same recursive cycle.
+Tag the **movement** as well as the artifact. A question, machine interpretation, human disagreement, correction, revision, rejected build candidate, failed test, synthetic critique, reconciliation gap, cross-connection, and final output are distinct research events even when they belong to the same recursive cycle.
 
 ## Turtle Terraria
 
@@ -160,7 +209,7 @@ Synthetic Turtle self-play, if introduced, must remain explicitly labeled as syn
 
 The Human Tamagotchi Terrarium does not authorize surveillance, inferred availability, simulated human answers, generalized personal memory, or proactive production messaging. A future TurtleAsk implementation must preserve the source inquiry, reason for the ask, surfacing decision, response status, response provenance, and return trajectory when practical.
 
-The D1 reconciliation sweep does not weaken these boundaries. Missing private material is not a defect merely because it is absent from a generalized research table; an intentional privacy boundary is a valid reconciliation outcome.
+The D1 reconciliation sweep and `Wait a minute…` pass do not weaken these boundaries. Missing private material is not a defect merely because it is absent from a generalized research table or public connection surface; an intentional privacy boundary is a valid outcome.
 
 ## Operational expectation
 
@@ -171,6 +220,20 @@ The D1 reconciliation sweep is one defense against that drift. Another is avoidi
 ---
 
 ## Build log
+
+### 2026-09-16 — `Wait a minute…` becomes a public research relationship surface
+
+Completed Build Log entries may now carry an optional evidence-backed `Wait a minute…` companion. The companion appears only when the daily cross-connection pass finds something materially useful; blank remains the correct state otherwise. The direct-asset WWW renderer, canonical Build Log, styling, deterministic validator, and CI all support the field.
+
+The first backfilled connection links TurtleAsk to the Plural Foreground work: TurtleAsk seeks human otherness when machine-only inquiry loses useful difference, while plural foreground governance protects human difference from being averaged back into machine-made consensus. The connection is explicitly provisional and evidence-backed, not a new CTC domain claim.
+
+### 2026-09-16 — Plural foregrounds get hostile tests
+
+The Plural Foreground Envelope now has an eleven-case deterministic hostile suite. The contract accepts different foregrounds, selective disclosure, and fully consented temporary shared watchpoints while rejecting machine-made consensus, incomplete consent, synthetic execution, and the assumption that shared space requires shared attention.
+
+### 2026-09-15 — A shared world can keep more than one foreground
+
+A provisional Plural Foreground Envelope represents participant-specific purpose, attention, privacy, disclosure, and human-negotiated shared rules while explicitly denying machine consensus authority and priority averaging.
 
 ### 2026-09-12 — TRY IT enters Turtle Terraria + daily D1 reconciliation
 
@@ -200,7 +263,7 @@ The WWW now uses Turtle Terraria language while temporarily retaining the `/lab/
 
 ### 2026-09-08 — WWW Build Log reversed + daily build made operational
 
-The public Build Log now renders newest-first through a small Worker-side build-log layer rather than requiring risky manual edits to the large single-page `public/index.html`. `src/buildLog.ts` holds new daily entries; `src/entry.ts` injects the build-log runtime; and Wrangler now routes through that wrapper before delegating to the existing application.
+The public Build Log now renders newest-first through a small Worker-side build-log layer rather than requiring risky manual edits to the large single-page `public/index.html`. `src/buildLog.ts` holds new daily entries; `src/entry.ts` exposes the canonical feed; and the direct-asset runtime uses that feed while retaining a conservative fallback.
 
 The daily research loop is also upgraded from **propose-only** to **build something useful somewhere in the repository**. User-facing feature churn is still forbidden: when no product change is justified, the daily contribution can be a test, evaluation, documentation improvement, provenance improvement, research artifact, or refactor.
 
