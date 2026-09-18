@@ -1,0 +1,227 @@
+{
+  "schema": "turtleblockai.d1-reconciliation.v0.4",
+  "date": "2026-09-17",
+  "capture_batch": "2026-09-17-daily-human-perturbation-translation",
+  "status": "mixed_live_and_staged",
+  "live_d1_verified_scope": [
+    "library_sources count=11 as separately recorded in research/d1-reconciliation/2026-09-17-library.json"
+  ],
+  "live_d1_unverified_scope": [
+    "migrations/0007_turtle_terraria_and_exhaustive_tagging.sql",
+    "migrations/0008_seed_terraria_and_autobuild_tags.sql",
+    "migrations/0009_human_tamagotchi_terrarium_and_turtle_ask.sql",
+    "universal research_objects and relationship/tag tables",
+    "Terraria and TurtleAsk operational tables",
+    "today's daily-build research objects"
+  ],
+  "sweep_scope": [
+    "entire current Build Log",
+    "newest daily-build records",
+    "research and reconciliation records",
+    "worldspec contracts and tests",
+    "public WWW Build Log/Next Edge fallback assets",
+    "migrations 0007 through 0010",
+    "Turtle Terraria and TurtleAsk research structures",
+    "consent-safe public interaction observations when legitimately available"
+  ],
+  "build_log_coverage": [
+    {
+      "entry_id": "2026-09-17-human-perturbation-translation",
+      "judgment": "represented_by_canonical_pointer_and_staging",
+      "canonical_pointer": "research/daily-build/2026-09-17.tags.json",
+      "supporting_pointer": "worldspec/schema/human-perturbation-translation-envelope.schema.json",
+      "reason": "The contract, fixtures, validator, source signals, mappings, Wait-a-minute relationship, public entry, and next horizon are staged losslessly; no live universal research-object persistence is claimed."
+    },
+    {
+      "entry_id": "2026-09-17-physical-library-d1",
+      "judgment": "safely_backfilled_public_history_live_d1_source_verified",
+      "canonical_pointer": "research/d1-reconciliation/2026-09-17-library.json",
+      "supporting_pointer": "migrations/0010_library_sources.sql",
+      "reason": "The private-by-default library table is verified live at eleven rows. Its absence from the public Build Log was repaired. Universal research-object registration remains unresolved rather than assumed."
+    },
+    {
+      "entry_id": "2026-09-16-wait-a-minute-build-log",
+      "judgment": "represented_by_canonical_pointer_and_staging",
+      "canonical_pointer": "research/d1-reconciliation/2026-09-16.json",
+      "supporting_pointer": "scripts/validate-build-log-connections.mjs",
+      "reason": "September 16 reconciliation explicitly stages the relationship surface and deterministic contract."
+    },
+    {
+      "entry_id": "2026-09-16-plural-foreground-regression",
+      "judgment": "represented_by_canonical_pointer_and_staging",
+      "canonical_pointer": "research/daily-build/2026-09-16.tags.json",
+      "supporting_pointer": "worldspec/tests/plural-foreground-envelope-cases.json",
+      "reason": "The September 16 manifest preserves the regression suite, mappings, public record, and unresolved residue."
+    },
+    {
+      "entry_id": "2026-09-15-plural-foreground-envelope",
+      "judgment": "represented_by_canonical_pointer_and_staging",
+      "canonical_pointer": "research/daily-build/2026-09-15.tags.json",
+      "supporting_pointer": "worldspec/schema/plural-foreground-envelope.schema.json",
+      "reason": "The recovered September 15 capture batch explicitly restores the contribution and preserves its original closure failure."
+    },
+    {
+      "entry_id": "2026-09-12-d1-reconciliation-terraria-try",
+      "judgment": "represented_by_reconciliation_staging",
+      "canonical_pointer": "research/d1-reconciliation/2026-09-12.json",
+      "supporting_pointer": "research/TERRARIA_ENGINE.md",
+      "reason": "TRY IT Terraria provenance and the reconciliation doctrine have explicit canonical staging."
+    },
+    {
+      "entry_id": "2026-09-11-human-tamagotchi-turtle-ask",
+      "judgment": "represented_in_migration_source_live_state_unverified",
+      "canonical_pointer": "migrations/0009_human_tamagotchi_terrarium_and_turtle_ask.sql",
+      "supporting_pointer": "research/TURTLE_ASK.md",
+      "reason": "The migration defines and seeds the architecture in Git; today's active path does not independently verify that migration 0009 is applied live."
+    },
+    {
+      "entry_id": "2026-09-12-selective-attention-envelope",
+      "judgment": "represented_by_daily_tags_staging",
+      "canonical_pointer": "research/daily-build/2026-09-12.tags.json",
+      "supporting_pointer": "worldspec/schema/selective-attention-envelope.schema.json",
+      "reason": "The daily manifest stages contract, hostile cases, decisions, mappings, and residue."
+    },
+    {
+      "entry_id": "2026-09-11-world-evidence-envelope",
+      "judgment": "represented_by_daily_tags_staging",
+      "canonical_pointer": "research/daily-build/2026-09-11.tags.json",
+      "supporting_pointer": "worldspec/schema/world-evidence-envelope.schema.json",
+      "reason": "The daily manifest is the lossless research staging record."
+    },
+    {
+      "entry_id": "2026-09-10-learner-verification-card",
+      "judgment": "represented_by_daily_tags_staging",
+      "canonical_pointer": "research/daily-build/2026-09-10.tags.json",
+      "reason": "The daily manifest preserves the contribution, tests, provenance, and mappings."
+    },
+    {
+      "entry_id": "2026-09-09-next-edge-validator",
+      "judgment": "represented_by_daily_tags_staging",
+      "canonical_pointer": "research/daily-build/2026-09-09.tags.json",
+      "reason": "The daily manifest preserves the validator and research-to-change provenance."
+    },
+    {
+      "entry_id": "2026-09-08-next-edge-horizon",
+      "judgment": "represented_by_daily_tags_staging",
+      "canonical_pointer": "research/daily-build/2026-09-08-next-edge.tags.json",
+      "reason": "Dedicated Next Edge staging preserves the public horizon architecture."
+    },
+    {
+      "entry_id": "2026-09-08-www-direct-asset-repair",
+      "judgment": "represented_by_daily_tags_staging",
+      "canonical_pointer": "research/daily-build/2026-09-08-www-repair.tags.json",
+      "reason": "The WWW failure/reversal is preserved as meaningful process history."
+    },
+    {
+      "entry_id": "2026-09-08-turtle-terraria-tagging",
+      "judgment": "represented_in_migration_source_live_state_unverified",
+      "canonical_pointer": "migrations/0008_seed_terraria_and_autobuild_tags.sql",
+      "supporting_pointer": "research/TURTLE_TERRARIA.md",
+      "reason": "Migration 0008 explicitly seeds the research representation in Git; live application is not independently asserted here."
+    },
+    {
+      "entry_id": "2026-09-08-daily-coactive-loop",
+      "judgment": "represented_in_migration_source_live_state_unverified",
+      "canonical_pointer": "migrations/0007_turtle_terraria_and_exhaustive_tagging.sql",
+      "supporting_pointer": "migrations/0008_seed_terraria_and_autobuild_tags.sql",
+      "reason": "Auto-build research structures and the initial seeded run exist canonically in Git; live application is not independently asserted here."
+    }
+  ],
+  "findings": [
+    {
+      "id": "recon-20260917-library-build-log-gap",
+      "type": "public_history_gap",
+      "status": "safely_backfilled",
+      "canonical_source": "research/d1-reconciliation/2026-09-17-library.json",
+      "public_pointer": "src/buildLog.ts#2026-09-17-physical-library-d1",
+      "summary": "A live, verified D1 library catalog was meaningful project history but absent from the public Build Log. The gap is now repaired without claiming broader research-object registration."
+    },
+    {
+      "id": "recon-20260917-library-universal-graph",
+      "type": "schema_relationship_gap",
+      "status": "unresolved_gap",
+      "canonical_source": "migrations/0010_library_sources.sql",
+      "summary": "library_sources is live, but its rows are not safely claimed as universal research_objects because migration 0010 is self-contained and live application state for migrations 0007-0009 is not verified through the active path.",
+      "recommended_action": "Verify migration-0007 research_objects/Terraria schema state before adding a safe library-to-research-object bridge."
+    },
+    {
+      "id": "recon-20260917-human-perturbation-contract",
+      "type": "new_research_artifact",
+      "status": "represented_in_git_staged_for_d1",
+      "canonical_source": "worldspec/schema/human-perturbation-translation-envelope.schema.json",
+      "related_sources": [
+        "worldspec/tests/human-perturbation-translation-envelope-cases.json",
+        "scripts/validate-human-perturbation-translation-envelope.mjs",
+        "research/daily-build/2026-09-17.tags.json"
+      ],
+      "intended_object_type": "research_contract_and_evaluation"
+    },
+    {
+      "id": "recon-20260917-wait-dialogue-translation",
+      "type": "cross_connection",
+      "status": "represented_in_git_staged_for_d1",
+      "canonical_source": "src/buildLog.ts#2026-09-17-human-perturbation-translation",
+      "related_sources": [
+        "worldspec/DIALOGUE_ARCHITECTURE.md",
+        "research/TURTLE_ASK.md",
+        "worldspec/schema/human-perturbation-translation-envelope.schema.json"
+      ],
+      "intended_object_type": "research_object_relationship",
+      "summary": "Lossless-before-normalized dialogue architecture recurs as the governing cross-habitat translation invariant."
+    },
+    {
+      "id": "recon-20260917-next-edge-built-difference",
+      "type": "public_research_horizon",
+      "status": "represented_in_git_staged_for_d1",
+      "canonical_source": "public/data/next-edge.json",
+      "intended_object_type": "next_edge",
+      "summary": "The horizon advances from preserving difference through translation to preserving it through construction, inhabitation, world evidence, and comparison."
+    },
+    {
+      "id": "recon-20260917-consent-safe-visitor-input",
+      "type": "privacy_boundary",
+      "status": "intentionally_not_captured",
+      "summary": "No authorized consent-safe TRY IT research read path was available. No raw private dialogue, visitor phrase, inferred learner state, or non-consented input was used in the cross-connection pass."
+    }
+  ],
+  "wait_a_minute": [
+    {
+      "id": "wait-20260917-dialogue-turtleask-translation",
+      "connected_objects": [
+        "worldspec/DIALOGUE_ARCHITECTURE.md",
+        "research/TURTLE_ASK.md",
+        "worldspec/schema/human-perturbation-translation-envelope.schema.json"
+      ],
+      "overlap": "The long-standing lossless-before-normalized rule now applies across the TurtleAsk boundary: canonical human language and Turtle interpretation remain distinct, unresolved difference remains preservable, and computational translation cannot claim equivalence.",
+      "why_it_may_matter": "This suggests the current edge extends a foundational dialogue principle rather than inventing an isolated branch feature.",
+      "uncertainty": "The recurrence may already be adequately explained by learner agency and provenance; no new theory is asserted.",
+      "disposition": "relationship"
+    },
+    {
+      "id": "wait-20260917-library-ontology-translation",
+      "connected_objects": [
+        "migrations/0010_library_sources.sql",
+        "worldspec/Dr_Bryan_P_Sanders_TurtleBlockAI_Taxonomy.md",
+        "worldspec/schema/human-perturbation-translation-envelope.schema.json"
+      ],
+      "overlap": "Photographed facts versus later verification, immutable dissertation codes versus later mappings, and human response versus Turtle interpretation all preserve a source layer before later interpretation.",
+      "why_it_may_matter": "Source-before-interpretation may be a recurring project-level research-method commitment.",
+      "uncertainty": "This could simply be good provenance engineering expressed repeatedly; human scholarly review is required before formal naming or promotion.",
+      "disposition": "human_review"
+    }
+  ],
+  "www_alignment": {
+    "canonical_build_log": "src/buildLog.ts",
+    "direct_asset_fallback": "public/assets/site-runtime.js",
+    "status": "aligned_after_cycle",
+    "next_edge_canonical": "public/data/next-edge.json",
+    "fallback_next_edge": "aligned_after_cycle"
+  },
+  "privacy_boundary": "No raw private dialogue, secret configuration, token, credential, private environment payload, or non-consented visitor content was inspected, copied, or published during the daily sweep.",
+  "closing_judgment": {
+    "material_unresolved_gap": "Live migration-0007 through migration-0009 state and universal research-object bridge for library_sources remain unverified through the active execution path.",
+    "library_live_state": "verified separately at eleven private-by-default source rows",
+    "daily_capture_live_state": "staged in Git; no live universal research-object persistence claimed",
+    "capture_batch_closed": true
+  }
+}
