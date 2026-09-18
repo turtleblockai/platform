@@ -17,6 +17,24 @@ export interface BuildLogEntry {
 // through the Worker. Open inquiry belongs in Next Edge, not in completed entries.
 export const BUILD_LOG_ENTRIES: BuildLogEntry[] = [
   {
+    id: "2026-09-17-human-perturbation-translation",
+    date: "Sep 17, 2026",
+    title: "Human otherness gets a lossless translation contract",
+    body: "A provisional Human Perturbation Translation Envelope now tests whether a real human contribution can survive TurtleAsk → Turtle interpretation → WorldSpec change without being laundered into Turtle's voice. Twelve deterministic cases preserve the canonical human source, distinct Turtle interpretation, unresolved language, refusal/silence, parallel branches, and human merge authority while rejecting synthetic-human substitution, equivalence claims, fabricated movement after no response, rewritten source meaning, mismatched provenance, erased ambiguity, and machine-forced canonical merge. This remains research infrastructure rather than live TurtleAsk behavior. Product remains v0.1.0.",
+    done: true,
+    waitAMinute: {
+      summary: "This edge turns out to be an old TurtleBlock rule crossing a new boundary: Dialogue Architecture already says lossless before normalized. TurtleAsk now makes that same requirement apply when a human perturbation crosses habitats into Turtle interpretation and WorldSpec.",
+      evidence: ["worldspec/DIALOGUE_ARCHITECTURE.md", "research/TURTLE_ASK.md", "worldspec/schema/human-perturbation-translation-envelope.schema.json"]
+    }
+  },
+  {
+    id: "2026-09-17-physical-library-d1",
+    date: "Sep 17, 2026",
+    title: "The physical and intellectual library gets a D1 shelf",
+    body: "A new private-by-default library_sources catalog now preserves photographed physical sources with original-work year, edition year, chronology basis, physical ownership, digital-copy status, and source-verification provenance kept distinct. Eleven photographed sources were seeded without outside bibliographic lookup, and the live D1 migration was verified at eleven rows. This catalog is live, but its bridge into the universal research-object graph remains intentionally unresolved until the live state of the earlier Terraria/research migrations is verified. Product remains v0.1.0.",
+    done: true
+  },
+  {
     id: "2026-09-16-wait-a-minute-build-log",
     date: "Sep 16, 2026",
     title: "The Build Log can now say: Wait a minute…",
@@ -118,10 +136,10 @@ export const BUILD_LOG_ENTRIES: BuildLogEntry[] = [
 ];
 
 export const NEXT_EDGE_FALLBACK = {
-  date: "Sep 16, 2026",
-  title: "Can human otherness survive translation?",
-  question: "Can TurtleBlock AI carry a human perturbation from TurtleAsk into a shared or branched WorldSpec as a traceably different contribution—one that may redirect, contradict, or coexist with existing interpretations—without assimilating it into Turtle's prior frame or forcing a canonical merge?",
-  xFactor: "whoooo knooooowwwssssssssssss — what if the most important human contribution is the one that makes the world less coherent instead of more coherent?"
+  date: "Sep 17, 2026",
+  title: "Can difference survive being built?",
+  question: "Can TurtleBlock AI stage a human-originated perturbation as a parallel WorldSpec branch and let people inhabit and compare its consequences without turning world evidence, Turtle interpretation, or later reflection into a verdict that one branch is the canonical truth?",
+  xFactor: "whoooo knooooowwwssssssssssss — what if the branch that looks worse by every easy metric is the one that teaches the group something the neater branch cannot?"
 };
 
 function escapeHtml(value: string) {
