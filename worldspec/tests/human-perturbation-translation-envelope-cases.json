@@ -1,0 +1,158 @@
+{
+  "version": "0.1",
+  "name": "Human Perturbation Translation Envelope regression cases",
+  "purpose": "Test whether a genuinely human perturbation can remain source-distinct through Turtle interpretation and WorldSpec change without synthetic substitution, silent rewriting, compulsory branching, or machine-forced canonical merge.",
+  "cases": [
+    {
+      "id": "answered-contradiction-parallel-branch-pass",
+      "expected_valid": true,
+      "envelope": {
+        "version": "0.1", "id": "hpt-001", "turtle_ask_ref": "ask-fairness-001", "source_run_ref": "terraria-run-001",
+        "human_input": { "state": "answered", "response_object_ref": "human-response-001", "evidence_class": "human_interaction", "canonical_source_preserved": true, "raw_text_duplicated": false },
+        "turtle_translation": { "status": "proposed", "interpretation_object_ref": "turtle-interpretation-001", "actor_type": "turtle", "evidence_class": "system_record", "source_response_ref": "human-response-001", "claims_equivalence": false, "unresolved_phrases_retained": true },
+        "worldspec_effect": { "action": "parallel_branch", "source_revision_ref": "worldspec-r7", "resulting_revision_ref": "worldspec-r8b", "branch_ref": "branch-human-fairness", "merge_status": "unproposed", "canonical_merge_required": false, "source_response_recoverable": true, "human_authority_required_for_merge": true },
+        "difference_trace": { "difference_classes": ["contradiction", "value"], "unresolved_difference_preserved": true, "turtle_interpretation_distinct": true, "provenance_distinct": true, "assimilation_risk_note": "The human reframes fairness as decision power rather than geometry; the branch keeps that contradiction open." },
+        "provenance": { "source_response_privacy_class": "private", "human_response_not_rewritten": true, "synthetic_human_substitution": false, "machine_final_authority": false, "learner_learning_claim": false, "production_self_modification": false, "reversible": true, "raw_dialogue_duplicated": false }
+      }
+    },
+    {
+      "id": "sideways-response-proposed-delta-pass",
+      "expected_valid": true,
+      "envelope": {
+        "version": "0.1", "id": "hpt-002", "turtle_ask_ref": "ask-village-002", "source_run_ref": "terraria-run-002",
+        "human_input": { "state": "sideways", "response_object_ref": "human-response-002", "evidence_class": "human_interaction", "canonical_source_preserved": true, "raw_text_duplicated": false },
+        "turtle_translation": { "status": "contested", "interpretation_object_ref": "turtle-interpretation-002", "actor_type": "turtle", "evidence_class": "system_record", "source_response_ref": "human-response-002", "claims_equivalence": false, "unresolved_phrases_retained": true },
+        "worldspec_effect": { "action": "proposed_delta", "source_revision_ref": "worldspec-r3", "resulting_revision_ref": null, "branch_ref": null, "merge_status": "not_applicable", "canonical_merge_required": false, "source_response_recoverable": true, "human_authority_required_for_merge": true },
+        "difference_trace": { "difference_classes": ["playful_perturbation", "ambiguity"], "unresolved_difference_preserved": true, "turtle_interpretation_distinct": true, "provenance_distinct": true, "assimilation_risk_note": "The sideways answer remains available even though Turtle cannot yet translate it into an accepted world change." },
+        "provenance": { "source_response_privacy_class": "private", "human_response_not_rewritten": true, "synthetic_human_substitution": false, "machine_final_authority": false, "learner_learning_claim": false, "production_self_modification": false, "reversible": true, "raw_dialogue_duplicated": false }
+      }
+    },
+    {
+      "id": "human-rejects-turtle-reading-pass",
+      "expected_valid": true,
+      "envelope": {
+        "version": "0.1", "id": "hpt-003", "turtle_ask_ref": "ask-light-003", "source_run_ref": "terraria-run-003",
+        "human_input": { "state": "answered", "response_object_ref": "human-response-003", "evidence_class": "human_interaction", "canonical_source_preserved": true, "raw_text_duplicated": false },
+        "turtle_translation": { "status": "rejected", "interpretation_object_ref": "turtle-interpretation-003", "actor_type": "turtle", "evidence_class": "system_record", "source_response_ref": "human-response-003", "claims_equivalence": false, "unresolved_phrases_retained": true },
+        "worldspec_effect": { "action": "no_change", "source_revision_ref": "worldspec-r4", "resulting_revision_ref": null, "branch_ref": null, "merge_status": "not_applicable", "canonical_merge_required": false, "source_response_recoverable": true, "human_authority_required_for_merge": true },
+        "difference_trace": { "difference_classes": ["unresolved_meaning"], "unresolved_difference_preserved": true, "turtle_interpretation_distinct": true, "provenance_distinct": true, "assimilation_risk_note": "Turtle's reading was rejected; the human source remains available without being overwritten by the failed interpretation." },
+        "provenance": { "source_response_privacy_class": "private", "human_response_not_rewritten": true, "synthetic_human_substitution": false, "machine_final_authority": false, "learner_learning_claim": false, "production_self_modification": false, "reversible": true, "raw_dialogue_duplicated": false }
+      }
+    },
+    {
+      "id": "no-response-no-compulsory-branch-pass",
+      "expected_valid": true,
+      "envelope": {
+        "version": "0.1", "id": "hpt-004", "turtle_ask_ref": "ask-004", "source_run_ref": "terraria-run-004",
+        "human_input": { "state": "no_response", "response_object_ref": null, "evidence_class": "none", "canonical_source_preserved": true, "raw_text_duplicated": false },
+        "turtle_translation": { "status": "not_attempted", "interpretation_object_ref": null, "actor_type": "turtle", "evidence_class": "system_record", "source_response_ref": null, "claims_equivalence": false, "unresolved_phrases_retained": true },
+        "worldspec_effect": { "action": "no_change", "source_revision_ref": "worldspec-r9", "resulting_revision_ref": null, "branch_ref": null, "merge_status": "not_applicable", "canonical_merge_required": false, "source_response_recoverable": true, "human_authority_required_for_merge": true },
+        "difference_trace": { "difference_classes": ["other"], "unresolved_difference_preserved": true, "turtle_interpretation_distinct": true, "provenance_distinct": true, "assimilation_risk_note": "Silence remains silence; Turtle does not fabricate a perturbation to keep the trajectory moving." },
+        "provenance": { "source_response_privacy_class": "none", "human_response_not_rewritten": true, "synthetic_human_substitution": false, "machine_final_authority": false, "learner_learning_claim": false, "production_self_modification": false, "reversible": true, "raw_dialogue_duplicated": false }
+      }
+    },
+    {
+      "id": "human-approved-merge-pass",
+      "expected_valid": true,
+      "envelope": {
+        "version": "0.1", "id": "hpt-005", "turtle_ask_ref": "ask-005", "source_run_ref": "terraria-run-005",
+        "human_input": { "state": "answered", "response_object_ref": "human-response-005", "evidence_class": "human_interaction", "canonical_source_preserved": true, "raw_text_duplicated": false },
+        "turtle_translation": { "status": "accepted", "interpretation_object_ref": "turtle-interpretation-005", "actor_type": "turtle", "evidence_class": "system_record", "source_response_ref": "human-response-005", "claims_equivalence": false, "unresolved_phrases_retained": true },
+        "worldspec_effect": { "action": "merge_proposal", "source_revision_ref": "worldspec-r10", "resulting_revision_ref": "worldspec-r11", "branch_ref": "branch-human-005", "merge_status": "human_approved", "canonical_merge_required": false, "source_response_recoverable": true, "human_authority_required_for_merge": true },
+        "difference_trace": { "difference_classes": ["situated_knowledge"], "unresolved_difference_preserved": true, "turtle_interpretation_distinct": true, "provenance_distinct": true, "assimilation_risk_note": "A later human-approved merge does not erase the separately addressable source response or Turtle interpretation." },
+        "provenance": { "source_response_privacy_class": "private", "human_response_not_rewritten": true, "synthetic_human_substitution": false, "machine_final_authority": false, "learner_learning_claim": false, "production_self_modification": false, "reversible": true, "raw_dialogue_duplicated": false }
+      }
+    },
+    {
+      "id": "equivalence-laundering-fail",
+      "expected_valid": false,
+      "expected_error": "Turtle interpretation may not claim equivalence with the human source",
+      "envelope": {
+        "version": "0.1", "id": "hpt-006", "turtle_ask_ref": "ask-006", "source_run_ref": "terraria-run-006",
+        "human_input": { "state": "answered", "response_object_ref": "human-response-006", "evidence_class": "human_interaction", "canonical_source_preserved": true, "raw_text_duplicated": false },
+        "turtle_translation": { "status": "accepted", "interpretation_object_ref": "turtle-interpretation-006", "actor_type": "turtle", "evidence_class": "system_record", "source_response_ref": "human-response-006", "claims_equivalence": true, "unresolved_phrases_retained": true },
+        "worldspec_effect": { "action": "proposed_delta", "source_revision_ref": "worldspec-r1", "resulting_revision_ref": null, "branch_ref": null, "merge_status": "not_applicable", "canonical_merge_required": false, "source_response_recoverable": true, "human_authority_required_for_merge": true },
+        "difference_trace": { "difference_classes": ["value"], "unresolved_difference_preserved": true, "turtle_interpretation_distinct": true, "provenance_distinct": true, "assimilation_risk_note": "Hostile equivalence claim." },
+        "provenance": { "source_response_privacy_class": "private", "human_response_not_rewritten": true, "synthetic_human_substitution": false, "machine_final_authority": false, "learner_learning_claim": false, "production_self_modification": false, "reversible": true, "raw_dialogue_duplicated": false }
+      }
+    },
+    {
+      "id": "synthetic-human-substitution-fail",
+      "expected_valid": false,
+      "expected_error": "synthetic human substitution is forbidden",
+      "envelope": {
+        "version": "0.1", "id": "hpt-007", "turtle_ask_ref": "ask-007", "source_run_ref": "recursive-run-007",
+        "human_input": { "state": "answered", "response_object_ref": "synthetic-response-007", "evidence_class": "human_interaction", "canonical_source_preserved": true, "raw_text_duplicated": false },
+        "turtle_translation": { "status": "proposed", "interpretation_object_ref": "turtle-interpretation-007", "actor_type": "turtle", "evidence_class": "system_record", "source_response_ref": "synthetic-response-007", "claims_equivalence": false, "unresolved_phrases_retained": true },
+        "worldspec_effect": { "action": "parallel_branch", "source_revision_ref": "worldspec-r2", "resulting_revision_ref": "worldspec-r2b", "branch_ref": "branch-007", "merge_status": "unproposed", "canonical_merge_required": false, "source_response_recoverable": true, "human_authority_required_for_merge": true },
+        "difference_trace": { "difference_classes": ["playful_perturbation"], "unresolved_difference_preserved": true, "turtle_interpretation_distinct": true, "provenance_distinct": true, "assimilation_risk_note": "Synthetic content is pretending to be a human perturbation." },
+        "provenance": { "source_response_privacy_class": "internal", "human_response_not_rewritten": true, "synthetic_human_substitution": true, "machine_final_authority": false, "learner_learning_claim": false, "production_self_modification": false, "reversible": true, "raw_dialogue_duplicated": false }
+      }
+    },
+    {
+      "id": "silence-opens-branch-fail",
+      "expected_valid": false,
+      "expected_error": "non-answer states may not produce Turtle translation or WorldSpec change",
+      "envelope": {
+        "version": "0.1", "id": "hpt-008", "turtle_ask_ref": "ask-008", "source_run_ref": "terraria-run-008",
+        "human_input": { "state": "no_response", "response_object_ref": null, "evidence_class": "none", "canonical_source_preserved": true, "raw_text_duplicated": false },
+        "turtle_translation": { "status": "proposed", "interpretation_object_ref": "fabricated-interpretation-008", "actor_type": "turtle", "evidence_class": "system_record", "source_response_ref": null, "claims_equivalence": false, "unresolved_phrases_retained": true },
+        "worldspec_effect": { "action": "parallel_branch", "source_revision_ref": "worldspec-r5", "resulting_revision_ref": "worldspec-r5b", "branch_ref": "branch-008", "merge_status": "unproposed", "canonical_merge_required": false, "source_response_recoverable": true, "human_authority_required_for_merge": true },
+        "difference_trace": { "difference_classes": ["other"], "unresolved_difference_preserved": true, "turtle_interpretation_distinct": true, "provenance_distinct": true, "assimilation_risk_note": "Turtle fabricated movement after silence." },
+        "provenance": { "source_response_privacy_class": "none", "human_response_not_rewritten": true, "synthetic_human_substitution": false, "machine_final_authority": false, "learner_learning_claim": false, "production_self_modification": false, "reversible": true, "raw_dialogue_duplicated": false }
+      }
+    },
+    {
+      "id": "rewritten-source-fail",
+      "expected_valid": false,
+      "expected_error": "human response must remain canonical and unrevised",
+      "envelope": {
+        "version": "0.1", "id": "hpt-009", "turtle_ask_ref": "ask-009", "source_run_ref": "terraria-run-009",
+        "human_input": { "state": "answered", "response_object_ref": "human-response-009", "evidence_class": "human_interaction", "canonical_source_preserved": false, "raw_text_duplicated": false },
+        "turtle_translation": { "status": "accepted", "interpretation_object_ref": "turtle-interpretation-009", "actor_type": "turtle", "evidence_class": "system_record", "source_response_ref": "human-response-009", "claims_equivalence": false, "unresolved_phrases_retained": true },
+        "worldspec_effect": { "action": "proposed_delta", "source_revision_ref": "worldspec-r6", "resulting_revision_ref": null, "branch_ref": null, "merge_status": "not_applicable", "canonical_merge_required": false, "source_response_recoverable": true, "human_authority_required_for_merge": true },
+        "difference_trace": { "difference_classes": ["unresolved_meaning"], "unresolved_difference_preserved": true, "turtle_interpretation_distinct": true, "provenance_distinct": true, "assimilation_risk_note": "The human source was overwritten by normalization." },
+        "provenance": { "source_response_privacy_class": "private", "human_response_not_rewritten": false, "synthetic_human_substitution": false, "machine_final_authority": false, "learner_learning_claim": false, "production_self_modification": false, "reversible": true, "raw_dialogue_duplicated": false }
+      }
+    },
+    {
+      "id": "machine-forced-canonical-merge-fail",
+      "expected_valid": false,
+      "expected_error": "canonical merge may not be required by the machine",
+      "envelope": {
+        "version": "0.1", "id": "hpt-010", "turtle_ask_ref": "ask-010", "source_run_ref": "terraria-run-010",
+        "human_input": { "state": "answered", "response_object_ref": "human-response-010", "evidence_class": "human_interaction", "canonical_source_preserved": true, "raw_text_duplicated": false },
+        "turtle_translation": { "status": "accepted", "interpretation_object_ref": "turtle-interpretation-010", "actor_type": "turtle", "evidence_class": "system_record", "source_response_ref": "human-response-010", "claims_equivalence": false, "unresolved_phrases_retained": true },
+        "worldspec_effect": { "action": "merge_proposal", "source_revision_ref": "worldspec-r10", "resulting_revision_ref": "worldspec-r11", "branch_ref": "branch-010", "merge_status": "proposed", "canonical_merge_required": true, "source_response_recoverable": true, "human_authority_required_for_merge": true },
+        "difference_trace": { "difference_classes": ["contradiction"], "unresolved_difference_preserved": true, "turtle_interpretation_distinct": true, "provenance_distinct": true, "assimilation_risk_note": "Machine requires the alternative branch to collapse into the canonical world." },
+        "provenance": { "source_response_privacy_class": "private", "human_response_not_rewritten": true, "synthetic_human_substitution": false, "machine_final_authority": false, "learner_learning_claim": false, "production_self_modification": false, "reversible": true, "raw_dialogue_duplicated": false }
+      }
+    },
+    {
+      "id": "translation-source-mismatch-fail",
+      "expected_valid": false,
+      "expected_error": "Turtle translation must point to the same human response object",
+      "envelope": {
+        "version": "0.1", "id": "hpt-011", "turtle_ask_ref": "ask-011", "source_run_ref": "terraria-run-011",
+        "human_input": { "state": "answered", "response_object_ref": "human-response-011", "evidence_class": "human_interaction", "canonical_source_preserved": true, "raw_text_duplicated": false },
+        "turtle_translation": { "status": "proposed", "interpretation_object_ref": "turtle-interpretation-011", "actor_type": "turtle", "evidence_class": "system_record", "source_response_ref": "different-response-999", "claims_equivalence": false, "unresolved_phrases_retained": true },
+        "worldspec_effect": { "action": "parallel_branch", "source_revision_ref": "worldspec-r12", "resulting_revision_ref": "worldspec-r12b", "branch_ref": "branch-011", "merge_status": "unproposed", "canonical_merge_required": false, "source_response_recoverable": true, "human_authority_required_for_merge": true },
+        "difference_trace": { "difference_classes": ["situated_knowledge"], "unresolved_difference_preserved": true, "turtle_interpretation_distinct": true, "provenance_distinct": true, "assimilation_risk_note": "The interpretation provenance points to the wrong source response." },
+        "provenance": { "source_response_privacy_class": "private", "human_response_not_rewritten": true, "synthetic_human_substitution": false, "machine_final_authority": false, "learner_learning_claim": false, "production_self_modification": false, "reversible": true, "raw_dialogue_duplicated": false }
+      }
+    },
+    {
+      "id": "unresolved-difference-erased-fail",
+      "expected_valid": false,
+      "expected_error": "unresolved human difference must remain preservable",
+      "envelope": {
+        "version": "0.1", "id": "hpt-012", "turtle_ask_ref": "ask-012", "source_run_ref": "terraria-run-012",
+        "human_input": { "state": "answered", "response_object_ref": "human-response-012", "evidence_class": "human_interaction", "canonical_source_preserved": true, "raw_text_duplicated": false },
+        "turtle_translation": { "status": "proposed", "interpretation_object_ref": "turtle-interpretation-012", "actor_type": "turtle", "evidence_class": "system_record", "source_response_ref": "human-response-012", "claims_equivalence": false, "unresolved_phrases_retained": false },
+        "worldspec_effect": { "action": "proposed_delta", "source_revision_ref": "worldspec-r13", "resulting_revision_ref": null, "branch_ref": null, "merge_status": "not_applicable", "canonical_merge_required": false, "source_response_recoverable": true, "human_authority_required_for_merge": true },
+        "difference_trace": { "difference_classes": ["ambiguity", "unresolved_meaning"], "unresolved_difference_preserved": false, "turtle_interpretation_distinct": true, "provenance_distinct": true, "assimilation_risk_note": "Normalization dropped the unresolved phrase." },
+        "provenance": { "source_response_privacy_class": "private", "human_response_not_rewritten": true, "synthetic_human_substitution": false, "machine_final_authority": false, "learner_learning_claim": false, "production_self_modification": false, "reversible": true, "raw_dialogue_duplicated": false }
+      }
+    }
+  ]
+}
