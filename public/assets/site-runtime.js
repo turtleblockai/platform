@@ -1,5 +1,5 @@
 (()=>{
-  const VERSION='2026-09-16.2';
+  const VERSION='2026-09-17.1';
   const summaries={
     home:'We built a place to build places: learner ideas become persistent, revisable worlds through dialogue, construction, experience, and reflection.',
     try:'Talk with Turtle inside the Human + Turtle Terrarium: wander, build, or throw in something weird while provenance stays visible.',
@@ -16,6 +16,8 @@
     terms:'These terms define experimental use, learner responsibility, acceptable conduct, data boundaries, third-party services, and the limits of TurtleBlock AI.'
   };
   let dailyEntries=[
+    {date:'Sep 17, 2026',title:'Human otherness gets a lossless translation contract',body:'A provisional Human Perturbation Translation Envelope now tests whether a real human contribution can survive TurtleAsk → Turtle interpretation → WorldSpec change without being laundered into Turtle’s voice. Twelve deterministic cases preserve the canonical human source, unresolved difference, silence/refusal, parallel branches, and human merge authority while rejecting assimilation and machine-forced merge.',done:true,waitAMinute:{summary:'This edge turns out to be an old TurtleBlock rule crossing a new boundary: Dialogue Architecture already says lossless before normalized. TurtleAsk now makes that same requirement apply when a human perturbation crosses habitats into Turtle interpretation and WorldSpec.',evidence:['worldspec/DIALOGUE_ARCHITECTURE.md','research/TURTLE_ASK.md','worldspec/schema/human-perturbation-translation-envelope.schema.json']}},
+    {date:'Sep 17, 2026',title:'The physical and intellectual library gets a D1 shelf',body:'A private-by-default library_sources catalog now preserves photographed physical sources with original-work year, edition year, chronology basis, physical ownership, digital-copy status, and source-verification provenance kept distinct. Eleven photographed sources were seeded without outside bibliographic lookup and verified live in D1.',done:true},
     {date:'Sep 16, 2026',title:'The Build Log can now say: Wait a minute…',body:'Completed Build Log entries can carry an optional evidence-backed Wait a minute… companion when a useful cross-connection appears. Blank remains correct when no connection is warranted.',done:true,waitAMinute:{summary:'This public companion is the human-readable face of the relationship graph already anticipated by D1: useful object-to-object connections can become visible without turning the Build Log into a database dump.',evidence:['migrations/0007_turtle_terraria_and_exhaustive_tagging.sql','src/buildLog.ts']}},
     {date:'Sep 16, 2026',title:'Plural foregrounds get hostile tests instead of a group-think UI',body:'The Plural Foreground Envelope now has an eleven-case deterministic hostile suite that preserves disagreement, selective disclosure, complete human consent for shared rules, and the boundary against machine-made consensus.',done:true,waitAMinute:{summary:'TurtleAsk and plural foregrounds are the same deeper problem from opposite directions: TurtleAsk seeks human otherness when machine-only inquiry loses useful difference; plural foregrounds protect that difference after it arrives by refusing to average incompatible human priorities into consensus.',evidence:['research/TURTLE_ASK.md','worldspec/tests/plural-foreground-envelope-cases.json']}},
     {date:'Sep 15, 2026',title:'A shared world can keep more than one foreground',body:'A provisional Plural Foreground Envelope represents distinct participant attention states, privacy, selective disclosure, and temporary human-negotiated shared rules without machine consensus authority.',done:true},
@@ -31,12 +33,12 @@
     {date:'Sep 8, 2026',title:'Daily co-active build loop activated',body:'TurtleBlock AI now runs a daily primary-source hunt, ontology comparison, one bounded contribution, testing, exhaustive research capture, Build Log update, and Next Edge synthesis.',done:true}
   ];
   const nextEdgeFallback={
-    updated_at:'2026-09-16',
-    title:'Can human otherness survive translation?',
-    question:'Can TurtleBlock AI carry a human perturbation from TurtleAsk into a shared or branched WorldSpec as a traceably different contribution—one that may redirect, contradict, or coexist with existing interpretations—without assimilating it into Turtle’s prior frame or forcing a canonical merge?',
-    why_now:'TurtleAsk seeks human difference; plural foregrounds preserve difference. The unresolved layer is whether translation into WorldSpec can preserve that difference rather than assimilating it.',
-    possible_possibles:['Open a parallel WorldSpec branch from the human perturbation.','Keep the human contribution separately addressable from Turtle’s interpretation.','Allow contradiction to remain inhabitable rather than forcing a canonical merge.'],
-    x_factor:'whoooo knooooowwwssssssssssss — what if the most important human contribution is the one that makes the world less coherent instead of more coherent?'
+    updated_at:'2026-09-17',
+    title:'Can difference survive being built?',
+    question:'Can TurtleBlock AI stage a human-originated perturbation as a parallel WorldSpec branch and let people inhabit and compare its consequences without turning world evidence, Turtle interpretation, or later reflection into a verdict that one branch is the canonical truth?',
+    why_now:'The translation contract can preserve a human perturbation as source-distinct from Turtle interpretation and WorldSpec effect. The next collapse risk arrives after construction: measurable world consequences can become a hidden winner-selection mechanism even when representation stayed plural.',
+    possible_possibles:['Inhabit two branches serially or side by side without requiring a winner.','Keep factual World Evidence separate from human interpretation of which consequence matters.','Let participants preserve, reject, revisit, or recombine branches without compulsory merge.'],
+    x_factor:'whoooo knooooowwwssssssssssss — what if the branch that looks worse by every easy metric is the one that teaches the group something the neater branch cannot?'
   };
   let nextEdge={...nextEdgeFallback};
   const esc=s=>String(s).replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[m]));
