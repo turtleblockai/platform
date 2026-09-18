@@ -54,5 +54,21 @@ jobs:
       - name: Audit repository-to-D1 reconciliation candidates
         run: npm run audit:d1-coverage
 
+      - name: Apply library bootstrap to live D1
+        run: |
+          set -e
+          for attempt in $(seq 1 30); do
+            echo "Attempt $attempt: waiting for Cloudflare deployment and D1 bootstrap route..."
+            body="$(curl -fsS https://turtleblockai.com/api/internal/bootstrap-library-0010 2>/dev/null || true)"
+            if echo "$body" | grep -q '"ok":true'; then
+              echo "$body"
+              echo "$body" | grep -q '"count":11'
+              exit 0
+            fi
+            sleep 10
+          done
+          echo "Live D1 bootstrap route did not return the expected 11-row success payload."
+          exit 1
+
       - name: Deployment note
         run: echo "Production deployment is handled by the connected Cloudflare Workers Builds GitHub integration."
