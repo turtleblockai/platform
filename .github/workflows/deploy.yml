@@ -15,6 +15,9 @@ permissions:
 jobs:
   validate:
     runs-on: ubuntu-latest
+    env:
+      CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      CLOUDFLARE_ACCOUNT_ID: "1237f978938188ed96dc859fdd2d40d0"
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
@@ -54,12 +57,18 @@ jobs:
       - name: Audit repository-to-D1 reconciliation candidates
         run: npm run audit:d1-coverage
 
-      - name: Diagnose live library bootstrap
+      - name: Confirm Cloudflare deployment token
+        shell: bash
+        run: test -n "$CLOUDFLARE_API_TOKEN"
+
+      - name: Apply library schema and seed to live D1
+        run: npx wrangler d1 execute turtleblockai --remote --file=./migrations/0010_library_sources.sql
+
+      - name: Verify live D1 library rows
         run: |
-          set -x
-          curl -sS -i https://turtleblockai.com/api/build-log || true
-          echo
-          curl -sS -i https://turtleblockai.com/api/internal/bootstrap-library-0010 || true
+          result="$(npx wrangler d1 execute turtleblockai --remote --command="SELECT COUNT(*) AS count FROM library_sources;" --json)"
+          echo "$result"
+          echo "$result" | grep -Eq '"count"[[:space:]]*:[[:space:]]*11'
 
       - name: Deployment note
         run: echo "Production deployment is handled by the connected Cloudflare Workers Builds GitHub integration."
