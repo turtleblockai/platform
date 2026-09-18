@@ -115,7 +115,7 @@ export default {
         return Response.json({ ok: true, migration: "0010_library_sources", ...result }, { headers: { "cache-control": "no-store" } });
       } catch (error) {
         console.error("Library bootstrap failed", error);
-        return Response.json({ ok: false, migration: "0010_library_sources", error: "bootstrap_failed" }, { status: 500 });
+        return Response.json({ ok: false, migration: "0010_library_sources", error: String(error) }, { status: 500 });
       }
     }
 
