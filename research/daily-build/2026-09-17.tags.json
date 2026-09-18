@@ -1,0 +1,383 @@
+{
+  "schema": "turtleblockai.daily-build-tags.v0.2",
+  "date": "2026-09-17",
+  "ontology_version": "sanders-ontology-v0.1",
+  "autobuild_run_id": "autobuild-2026-09-17",
+  "capture_batch": {
+    "status": "closed",
+    "actor": "turtle",
+    "model": "GPT-5.6 Sol",
+    "privacy_class": "public",
+    "evidence_class": "system_record",
+    "version_before": "0.1.0",
+    "version_after": "0.1.0",
+    "selected_contribution": "Human Perturbation Translation Envelope v0.1 plus twelve-case deterministic hostile regression suite",
+    "d1_persistence": "staged_only_for_daily_cycle",
+    "live_d1_note": "library_sources is separately verified live at eleven rows; live state of migration-0007 research_objects/Terraria substrate remains unverified in the active execution path"
+  },
+  "principles": {
+    "immutable_dissertation_source_layer": true,
+    "lossless_before_normalized": true,
+    "human_source_distinct_from_turtle_interpretation": true,
+    "synthetic_is_not_human_evidence": true,
+    "silence_is_valid": true,
+    "no_compulsory_branch": true,
+    "no_compulsory_merge": true,
+    "machine_final_authority": false,
+    "no_generalized_persistent_personal_memory": true,
+    "no_autonomous_production_self_modification": true,
+    "ctc_domain_promotion_requires_human_scholarly_decision": true,
+    "capture_batch_closed": true
+  },
+  "research_objects": [
+    {
+      "id": "autobuild_run:autobuild-2026-09-17",
+      "object_type": "autobuild_run",
+      "title": "September 17 bounded TurtleBlock AI build-in-public cycle",
+      "actor": "turtle",
+      "evidence_class": "system_record",
+      "privacy_class": "public",
+      "canonical_pointer": "research/daily-build/2026-09-17.md"
+    },
+    {
+      "id": "source_signal:2026-09-17-openai-provenance",
+      "object_type": "external_source_signal",
+      "title": "OpenAI layered content provenance distinguishes origin verification from downstream interpretation",
+      "source_uri": "https://openai.com/index/advancing-content-provenance/",
+      "external_date": "2026-05-19_updated_2026-07-31",
+      "actor": "external_source",
+      "evidence_class": "external_source",
+      "privacy_class": "public",
+      "relevance": "provenance_is_necessary_not_semantic_equivalence"
+    },
+    {
+      "id": "source_signal:2026-09-17-openai-work",
+      "object_type": "external_source_signal",
+      "title": "OpenAI reports that human-AI task division can broaden recurring work trajectories",
+      "source_uri": "https://openai.com/index/unlocking-new-ways-of-working/",
+      "external_date": "2026-09-16",
+      "actor": "external_source",
+      "evidence_class": "external_source",
+      "privacy_class": "public",
+      "relevance": "supporting_not_primary"
+    },
+    {
+      "id": "source_signal:2026-09-17-nvidia-nemoclaw",
+      "object_type": "external_source_signal",
+      "title": "NVIDIA separates evidence, derived knowledge, correction, audit, and governed action",
+      "source_uri": "https://developer.nvidia.com/blog/building-a-memory-driven-agent-with-nvidia-nemoclaw/",
+      "external_date": "2026-09-04",
+      "actor": "external_source",
+      "evidence_class": "external_source",
+      "privacy_class": "public",
+      "relevance": "strong_engineering_analogue_source_vs_interpretation"
+    },
+    {
+      "id": "source_signal:2026-09-17-minecraft-village-square",
+      "object_type": "external_source_signal",
+      "title": "Minecraft Education Village Square makes divergent perspectives consequential while compromise remains an authored civic-learning aim",
+      "source_uri": "https://education.minecraft.net/en-us/blog/village-square-minecraft-civics",
+      "external_date": "2026-09-14",
+      "actor": "external_source",
+      "evidence_class": "external_source",
+      "privacy_class": "public",
+      "relevance": "convergence_goal_must_be_authored_not_platform_default"
+    },
+    {
+      "id": "source_signal:2026-09-17-mit-virtue-ethics",
+      "object_type": "external_source_signal",
+      "title": "MIT Media Lab AHA seminar frames AI literacy around situated human values, technology capability, setting, reflection, and adjustment",
+      "source_uri": "https://www.media.mit.edu/events/aha-seminar-daniella-dipaola/",
+      "external_date": "2026-09-17",
+      "actor": "external_source",
+      "evidence_class": "external_source",
+      "privacy_class": "public",
+      "relevance": "situated_values_should_not_be_silently_flattened"
+    },
+    {
+      "id": "question:2026-09-17-inherited-human-otherness",
+      "object_type": "autobuild_question",
+      "title": "Can human otherness survive translation into Turtle interpretation and WorldSpec?",
+      "actor": "turtle",
+      "evidence_class": "system_record",
+      "privacy_class": "public",
+      "canonical_pointer": "public/data/next-edge.json@pre_cycle"
+    },
+    {
+      "id": "candidate:2026-09-17-live-turtleask",
+      "object_type": "autobuild_candidate",
+      "title": "Implement live TurtleAsk surfacing",
+      "decision": "rejected_for_today",
+      "rejection_reason": "Ask formation remains separate from surfacing authority; the inherited problem concerns translation fidelity, not proactive messaging.",
+      "actor": "turtle",
+      "evidence_class": "system_record",
+      "privacy_class": "public"
+    },
+    {
+      "id": "candidate:2026-09-17-persistent-memory",
+      "object_type": "autobuild_candidate",
+      "title": "Add generalized persistent human memory",
+      "decision": "rejected",
+      "rejection_reason": "Canonical response pointers and bounded provenance are sufficient for this experiment; generalized memory adds unrelated identity, deletion, consent, and v0.3 questions.",
+      "actor": "turtle",
+      "evidence_class": "system_record",
+      "privacy_class": "public"
+    },
+    {
+      "id": "candidate:2026-09-17-core-worldspec-branching",
+      "object_type": "autobuild_candidate",
+      "title": "Modify core WorldSpec with first-class branch machinery",
+      "decision": "rejected_for_today",
+      "rejection_reason": "Core WorldSpec already permits forked history events; branch semantics should survive a reversible research contract before core-schema promotion.",
+      "actor": "turtle",
+      "evidence_class": "system_record",
+      "privacy_class": "public"
+    },
+    {
+      "id": "candidate:2026-09-17-synthetic-human",
+      "object_type": "autobuild_candidate",
+      "title": "Use Recursive Turtle to generate a synthetic human perturbation",
+      "decision": "rejected_by_provenance_boundary",
+      "rejection_reason": "Synthetic self-play cannot stand in for the genuine human otherness TurtleAsk is designed to seek.",
+      "actor": "turtle",
+      "evidence_class": "system_record",
+      "privacy_class": "public"
+    },
+    {
+      "id": "candidate:2026-09-17-auto-merge",
+      "object_type": "autobuild_candidate",
+      "title": "Automatically merge accepted human perturbations into canonical WorldSpec",
+      "decision": "rejected",
+      "rejection_reason": "Acceptance of a Turtle interpretation is not authorization to collapse an alternative into canonical world state.",
+      "actor": "turtle",
+      "evidence_class": "system_record",
+      "privacy_class": "public"
+    },
+    {
+      "id": "selection:2026-09-17-human-perturbation-contract",
+      "object_type": "autobuild_selection",
+      "title": "Select Human Perturbation Translation Envelope v0.1 and hostile suite",
+      "actor": "turtle",
+      "evidence_class": "system_record",
+      "privacy_class": "public"
+    },
+    {
+      "id": "repo_file:worldspec/schema/human-perturbation-translation-envelope.schema.json",
+      "object_type": "repository_artifact",
+      "title": "Human Perturbation Translation Envelope v0.1",
+      "repo_path": "worldspec/schema/human-perturbation-translation-envelope.schema.json",
+      "evidence_class": "system_record",
+      "privacy_class": "public",
+      "summary": "Separates canonical human response, Turtle interpretation, WorldSpec effect, unresolved difference, and merge authority."
+    },
+    {
+      "id": "repo_file:worldspec/tests/human-perturbation-translation-envelope-cases.json",
+      "object_type": "evaluation_fixture_set",
+      "title": "Human Perturbation Translation twelve-case hostile suite",
+      "repo_path": "worldspec/tests/human-perturbation-translation-envelope-cases.json",
+      "evidence_class": "system_record",
+      "privacy_class": "public"
+    },
+    {
+      "id": "repo_file:scripts/validate-human-perturbation-translation-envelope.mjs",
+      "object_type": "deterministic_evaluation",
+      "title": "Human Perturbation Translation validator",
+      "repo_path": "scripts/validate-human-perturbation-translation-envelope.mjs",
+      "evidence_class": "system_record",
+      "privacy_class": "public"
+    },
+    {
+      "id": "reconciliation:2026-09-17-library-build-log-gap",
+      "object_type": "reconciliation_finding",
+      "title": "Verified live library catalog was absent from public Build Log",
+      "decision": "safely_backfilled",
+      "canonical_pointer": "research/d1-reconciliation/2026-09-17-library.json",
+      "evidence_class": "system_record",
+      "privacy_class": "public"
+    },
+    {
+      "id": "build_log_entry:2026-09-17-human-perturbation-translation",
+      "object_type": "build_log_entry",
+      "title": "Human otherness gets a lossless translation contract",
+      "repo_path": "src/buildLog.ts",
+      "evidence_class": "system_record",
+      "privacy_class": "public"
+    },
+    {
+      "id": "build_log_entry:2026-09-17-physical-library-d1",
+      "object_type": "build_log_entry",
+      "title": "The physical and intellectual library gets a D1 shelf",
+      "repo_path": "src/buildLog.ts",
+      "evidence_class": "system_record",
+      "privacy_class": "public"
+    },
+    {
+      "id": "wait_a_minute:2026-09-17-dialogue-turtleask-translation",
+      "object_type": "wait_a_minute_connection",
+      "title": "Lossless before normalized crosses from dialogue into TurtleAsk translation",
+      "evidence_class": "system_record",
+      "privacy_class": "public",
+      "disposition": "relationship",
+      "canonical_pointer": "src/buildLog.ts#2026-09-17-human-perturbation-translation"
+    },
+    {
+      "id": "wait_a_minute:2026-09-17-nvidia-source-interpretation",
+      "object_type": "wait_a_minute_connection",
+      "title": "NVIDIA evidence/derived-knowledge separation echoes TurtleBlock source/interpretation separation",
+      "evidence_class": "mixed",
+      "privacy_class": "public",
+      "disposition": "link_only"
+    },
+    {
+      "id": "wait_a_minute:2026-09-17-library-ontology-source-layer",
+      "object_type": "wait_a_minute_connection",
+      "title": "Library provenance, ontology lineage, and human perturbation all preserve source before interpretation",
+      "evidence_class": "system_record",
+      "privacy_class": "public",
+      "disposition": "human_review"
+    },
+    {
+      "id": "next_edge:2026-09-17-difference-built",
+      "object_type": "next_edge",
+      "title": "Can difference survive being built?",
+      "repo_path": "public/data/next-edge.json",
+      "evidence_class": "system_record",
+      "privacy_class": "public",
+      "status": "open_question"
+    },
+    {
+      "id": "version_judgment:2026-09-17",
+      "object_type": "version_judgment",
+      "title": "Remain at v0.1.0",
+      "decision": "no_bump",
+      "rationale": "Evaluation/provenance improved, but coherent versioned model/config behavior required for v0.2 is not yet a product-level milestone.",
+      "evidence_class": "system_record",
+      "privacy_class": "public"
+    }
+  ],
+  "relationships": [
+    {
+      "from": "question:2026-09-17-inherited-human-otherness",
+      "predicate": "answered_by",
+      "to": "selection:2026-09-17-human-perturbation-contract",
+      "rationale": "The contract makes the inherited source-versus-translation boundary executable without activating live TurtleAsk."
+    },
+    {
+      "from": "repo_file:worldspec/schema/human-perturbation-translation-envelope.schema.json",
+      "predicate": "operationalizes",
+      "to": "concept:human_perturbation",
+      "rationale": "Migration 0009 defines Human Perturbation conceptually; the new envelope tests its transition into machine interpretation and WorldSpec effect."
+    },
+    {
+      "from": "wait_a_minute:2026-09-17-dialogue-turtleask-translation",
+      "predicate": "connects",
+      "to": "repo_file:worldspec/schema/human-perturbation-translation-envelope.schema.json",
+      "rationale": "The old lossless-before-normalized dialogue rule now governs a cross-habitat TurtleAsk translation boundary."
+    },
+    {
+      "from": "next_edge:2026-09-17-difference-built",
+      "predicate": "follows",
+      "to": "repo_file:worldspec/schema/human-perturbation-translation-envelope.schema.json",
+      "rationale": "After preserving difference through representation, the next question is whether construction, world evidence, and comparison preserve it."
+    },
+    {
+      "from": "build_log_entry:2026-09-17-physical-library-d1",
+      "predicate": "represents",
+      "to": "reconciliation:2026-09-17-library-build-log-gap",
+      "rationale": "The public-history gap was repaired without claiming universal research-object registration for the library rows."
+    }
+  ],
+  "ctc_tags": [
+    {"object_id":"repo_file:worldspec/schema/human-perturbation-translation-envelope.schema.json","domain":"Personal Inquiry","fit":"primary","rationale":"A human perturbation may redirect inquiry without being assimilated to Turtle's prior purpose."},
+    {"object_id":"repo_file:worldspec/schema/human-perturbation-translation-envelope.schema.json","domain":"Compelling Problem or Question","fit":"primary","rationale":"Contradiction and sideways response may create a new problem rather than answer the old one."},
+    {"object_id":"repo_file:worldspec/schema/human-perturbation-translation-envelope.schema.json","domain":"Technology as Tool to Think With","fit":"primary","rationale":"Human source, Turtle interpretation, and WorldSpec effect become separately inspectable computational material."},
+    {"object_id":"repo_file:worldspec/schema/human-perturbation-translation-envelope.schema.json","domain":"Formative Demonstration of Learning","fit":"supports","rationale":"Trajectory change may later contribute to interpretation but is explicitly not treated as proof of learning."},
+    {"object_id":"repo_file:worldspec/schema/human-perturbation-translation-envelope.schema.json","domain":"Reflection as Learning","fit":"primary","rationale":"Humans can inspect, contest, and reject Turtle interpretation while retaining the original contribution."},
+    {"object_id":"repo_file:worldspec/schema/human-perturbation-translation-envelope.schema.json","domain":"Social and Cultural Critique","fit":"primary","rationale":"Translation can preserve or erase situated meaning, value, positionality, language, and ambiguity."},
+    {"object_id":"repo_file:worldspec/schema/human-perturbation-translation-envelope.schema.json","domain":"Sharing and Collaborating","fit":"primary","rationale":"A human contribution can enter shared inquiry without compulsory agreement, assimilation, or merge."},
+    {"object_id":"wait_a_minute:2026-09-17-library-ontology-source-layer","domain":"Technology as Tool to Think With","fit":"supports","rationale":"Source-before-interpretation boundaries become inspectable across several technical research representations."},
+    {"object_id":"wait_a_minute:2026-09-17-library-ontology-source-layer","domain":"Reflection as Learning","fit":"supports","rationale":"Later interpretation remains revisable because the source layer remains recoverable."}
+  ],
+  "ontology_tags": [
+    {"object_id":"repo_file:worldspec/schema/human-perturbation-translation-envelope.schema.json","concept_key":"human_perturbation","fit":"primary","rationale":"The envelope operationalizes the next boundary after a human-authored perturbation is received."},
+    {"object_id":"repo_file:worldspec/schema/human-perturbation-translation-envelope.schema.json","concept_key":"turtle_ask","fit":"primary","rationale":"Every envelope starts from a bounded TurtleAsk reference without granting surfacing authority."},
+    {"object_id":"repo_file:worldspec/schema/human-perturbation-translation-envelope.schema.json","concept_key":"co_active_emergence","fit":"primary","rationale":"Human difference may redirect machine inquiry while provenance and authority remain distinct."},
+    {"object_id":"repo_file:worldspec/schema/human-perturbation-translation-envelope.schema.json","concept_key":"possible_possibles","fit":"primary","rationale":"Parallel and unresolved paths remain possible rather than collapsing to a single canonical interpretation."},
+    {"object_id":"repo_file:worldspec/schema/human-perturbation-translation-envelope.schema.json","concept_key":"invisible_ideas_become_visible_and_manipulable","fit":"primary","rationale":"Human source and machine interpretation become separately addressable artifacts."},
+    {"object_id":"repo_file:worldspec/schema/human-perturbation-translation-envelope.schema.json","concept_key":"machine_responses_as_material_for_evaluation","fit":"primary","rationale":"Turtle interpretation is material a human can accept, contest, or reject rather than authority."},
+    {"object_id":"repo_file:worldspec/schema/human-perturbation-translation-envelope.schema.json","concept_key":"cohabitation_without_provenance_collapse","fit":"primary","rationale":"Human response, Turtle interpretation, branch state, and later evidence remain separable."},
+    {"object_id":"next_edge:2026-09-17-difference-built","concept_key":"make_walk_around_in_and_change_the_story","fit":"primary","rationale":"The next horizon asks whether a preserved alternative can remain different when built and inhabited."},
+    {"object_id":"next_edge:2026-09-17-difference-built","concept_key":"purposeful_play","fit":"primary","rationale":"A strange or metrically worse branch may remain generative rather than being automatically optimized away."}
+  ],
+  "emergent_tags": [
+    {"tag":"lossless_before_normalized","rationale":"Existing Dialogue Architecture phrase recurs as the governing translation invariant."},
+    {"tag":"semantic_fidelity_not_provenance_alone","rationale":"Correct source attribution does not guarantee preservation of human difference."},
+    {"tag":"source_before_interpretation","rationale":"Observed across dialogue, ontology lineage, physical-library provenance, and TurtleAsk translation; retained as provisional language pending human scholarly review."},
+    {"tag":"no_compulsory_merge","rationale":"Branch coexistence is valid and human merge authority remains explicit."},
+    {"tag":"human_otherness","rationale":"The contribution preserves the difference TurtleAsk deliberately sought rather than treating it as noise."}
+  ],
+  "reconciliation_findings": [
+    {
+      "id": "recon-20260917-library-public-history-gap",
+      "status": "safely_backfilled",
+      "candidate": "migrations/0010_library_sources.sql + verified live D1 application",
+      "canonical_pointer": "research/d1-reconciliation/2026-09-17-library.json",
+      "resolution": "Added Build Log entry and aligned direct-asset fallback."
+    },
+    {
+      "id": "recon-20260917-library-research-object-bridge",
+      "status": "unresolved_gap",
+      "candidate": "library_sources → universal research_objects relationship",
+      "canonical_pointer": "migrations/0010_library_sources.sql",
+      "reason": "Migration 0010 was intentionally self-contained; live application state for migrations 0007-0009 remains unverified through the active path."
+    },
+    {
+      "id": "recon-20260917-daily-objects",
+      "status": "represented_in_git_staged_for_d1",
+      "candidate": "Human Perturbation Translation contract, tests, validator, daily record, Build Log, Wait-a-minute relationships, Next Edge",
+      "canonical_pointer": "research/daily-build/2026-09-17.tags.json",
+      "reason": "No safe direct live D1 research-object write path was used for the daily capture batch."
+    },
+    {
+      "id": "recon-20260917-consent-safe-input",
+      "status": "intentionally_not_captured",
+      "candidate": "TRY IT visitor input",
+      "reason": "No authorized consent-safe runtime research read path was available; no raw/private dialogue or inferred learner state was used."
+    }
+  ],
+  "uncaptured_observations": [
+    {
+      "observation": "Source provenance and semantic fidelity are distinct guarantees; correct attribution can coexist with semantic assimilation.",
+      "reason_unmapped": "Cross-cutting provenance/representation principle spanning several CTC domains rather than clear evidence for a new domain.",
+      "candidate_domain": null,
+      "status": "open"
+    },
+    {
+      "observation": "Lossless before normalized now recurs across dialogue, ontology lineage, the physical library catalog, and TurtleAsk translation.",
+      "reason_unmapped": "May be a project-wide research-method principle, but machine synthesis cannot promote it into formal theory without human scholarly judgment.",
+      "candidate_domain": null,
+      "status": "open"
+    },
+    {
+      "observation": "A branch may preserve human difference structurally while construction, measurable outcomes, or comparison later reintroduce canonical ranking.",
+      "reason_unmapped": "This motivates the new Next Edge and spans Purposeful Play, World Evidence, Reflection, and Social/Cultural Critique.",
+      "candidate_domain": null,
+      "status": "open"
+    },
+    {
+      "observation": "Live D1 state is partially known: library_sources is verified, while universal research-object/Terraria migration state is not verified through the active path.",
+      "reason_unmapped": "Infrastructure provenance gap, not a pedagogical domain.",
+      "candidate_domain": null,
+      "status": "open"
+    }
+  ],
+  "visitor_input": {
+    "used": false,
+    "reason": "no_authorized_consent_safe_runtime_research_read_path"
+  },
+  "version_judgment": {
+    "product_version": "0.1.0",
+    "decision": "no_bump",
+    "rationale": "The evaluation/provenance layer advanced, but coherent versioned model/config behavior required for the v0.2 product milestone is not yet complete."
+  }
+}
