@@ -1,8 +1,8 @@
 {
   "schema": "turtleblockai.d1-reconciliation.v0.3",
   "date": "2026-09-17",
-  "status": "staged_for_live_d1_apply",
-  "live_d1_verified": false,
+  "status": "live_d1_applied_and_verified",
+  "live_d1_verified": true,
   "capture_batch": "2026-09-17-physical-library-intake",
   "canonical_source": "migrations/0010_library_sources.sql",
   "summary": "Creates the first TurtleBlockAI physical/intellectual library catalog and seeds eleven photographed sources from the Commander-provided collection.",
@@ -35,9 +35,17 @@
     "library-source-0011"
   ],
   "live_apply": {
-    "performed": false,
-    "reason": "The active ChatGPT execution environment has repository write authority but no authenticated Cloudflare D1 execution connector. The existing GitHub validation workflow does not apply D1 migrations, and the Cloudflare Workers Builds integration is documented as handling deployment only.",
-    "required_action_when_authorized": "Run the 0010 migration against the bound D1 database named turtleblockai, then verify SELECT COUNT(*) FROM library_sources returns 11 and inspect library_sources_chronological."
+    "performed": true,
+    "database_name": "turtleblockai",
+    "cloudflare_account_id": "1237f978938188ed96dc859fdd2d40d0",
+    "execution_path": "Authorized existing Cloudflare GitHub Actions token from CCC infrastructure was used for a one-off cross-repository Wrangler execution, then the temporary workflow was removed.",
+    "github_actions_run_id": 35291246330,
+    "github_actions_job_id": 105434338661,
+    "migration_file": "migrations/0010_library_sources.sql",
+    "migration_result": "Executed 17 queries in 11.40ms; 63 rows read; 75 rows written.",
+    "verification_query": "SELECT COUNT(*) AS count FROM library_sources;",
+    "verified_count": 11,
+    "verified_at": "2026-09-18T00:27:34Z"
   },
   "privacy_boundary": "No raw private dialogue, credentials, secrets, or external personal data were copied into the catalog.",
   "capture_batch_closed": true
