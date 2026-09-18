@@ -1,165 +1,161 @@
 {
-  "version": "0.8",
-  "updated_at": "2026-09-16",
+  "version": "0.9",
+  "updated_at": "2026-09-17",
   "status": "open_question",
-  "title": "Can human otherness survive translation?",
-  "question": "Can TurtleBlock AI carry a human perturbation from TurtleAsk into a shared or branched WorldSpec as a traceably different contribution—one that may redirect, contradict, or coexist with existing interpretations—without assimilating it into Turtle's prior frame or forcing a canonical merge?",
-  "why_now": "The September 16 Wait a minute… pass connected two previously separate research lines. TurtleAsk seeks human otherness when machine-only inquiry loses useful difference; the Plural Foreground contract protects human difference once several interpretations coexist by rejecting machine-made consensus. Together they expose a deeper unresolved boundary: provenance can remember that a human contributed something different while representation still erases that difference by immediately translating it into Turtle's existing frame. The new Build Log companion makes this connection publicly inspectable, but the research problem itself remains open.",
-  "follows_commit": "f76b9459d37819fe80220792998660e52c77ff94",
-  "follows_commit_role": "completed_wait_a_minute_public_relationship_surface_and_deterministic_validation",
+  "title": "Can difference survive being built?",
+  "question": "Can TurtleBlock AI stage a human-originated perturbation as a parallel WorldSpec branch and let people inhabit and compare its consequences without turning world evidence, Turtle interpretation, or later reflection into a verdict that one branch is the canonical truth?",
+  "why_now": "The September 17 Human Perturbation Translation Envelope answers the prior horizon at the representation boundary: a human response stays canonical and separately addressable; Turtle interpretation is a distinct system object; refusal or silence cannot manufacture a branch; unresolved phrases remain preservable; parallel branches need not merge; and merge authority remains human. The next collapse risk occurs after representation succeeds. TurtleBlock already has a World Evidence contract saying the world can report facts without becoming the judge. Put together, those two completed lines raise a new question: can divergent human meaning survive construction, inhabitation, observation, and comparison without measurable consequences quietly becoming a winner-selection mechanism?",
+  "follows_commit": "32b34bab46c05ecd6112d4c8cfcca45bb0d7c144",
+  "follows_commit_role": "completed_human_perturbation_translation_contract_hostile_suite_and_ci_wiring",
   "inputs": [
-    "current repository and successful CI after the Wait a minute Build Log implementation",
-    "research/TURTLE_ASK.md",
-    "worldspec/tests/plural-foreground-envelope-cases.json",
-    "migrations/0007_turtle_terraria_and_exhaustive_tagging.sql relationship graph",
-    "research/d1-reconciliation/2026-09-16.json Build Log coverage sweep",
-    "Sanders research ontology and immutable Dedoose source layer",
-    "seven established Critical Techno Constructivism operational domains",
-    "Minecraft Education Village Square different-perspectives and compromise signal",
-    "MIT Media Lab Agents in Concert codesign and improvisation signal",
-    "absence of an authorized consent-safe TRY IT research read path during this cycle"
+    "current repository after the Human Perturbation Translation contract and validator",
+    "worldspec/DIALOGUE_ARCHITECTURE.md lossless-before-normalized principle",
+    "research/TURTLE_ASK.md human-perturbation provenance boundary",
+    "worldspec/schema/worldspec.schema.json existing forked history event",
+    "worldspec/schema/world-evidence-envelope.schema.json and its non-judgment boundary",
+    "worldspec/tests/human-perturbation-translation-envelope-cases.json",
+    "current Build Log and September 17 D1 reconciliation findings",
+    "Sanders research ontology and seven established Critical Techno Constructivism operational domains",
+    "fresh OpenAI, NVIDIA, Minecraft Education, and MIT Media Lab primary-source signals",
+    "absence of an authorized consent-safe TRY IT research read path for visitor-derived observations"
   ],
   "source_classes_consulted": [
-    "repository_state",
-    "D1_schema_and_reconciliation_staging",
+    "repository_state_and_tests",
+    "WorldSpec_and_dialogue_architecture",
     "Turtle_Terraria_and_TurtleAsk_research",
+    "D1_schema_reconciliation_and_verified_library_substrate",
     "Sanders_research_ontology",
     "public_primary_sources",
     "consent_boundary_and_absence_of_authorized_visitor_input"
   ],
   "possible_possibles": [
-    "A human perturbation opens a parallel WorldSpec branch rather than silently editing Turtle's current interpretation.",
-    "The human-authored contribution remains separately addressable while Turtle's interpretation of it becomes a different machine-authored object.",
-    "A collaborator can preserve the human perturbation while rejecting Turtle's interpretation, allowing the contribution to redirect inquiry later.",
-    "A human perturbation may deliberately make the shared world less coherent, and the system preserves that contradiction instead of optimizing it away.",
-    "No response, refusal, delay, or sideways response produces no compulsory branch and remains a valid TurtleAsk outcome.",
-    "Recursive Turtle may generate synthetic fixtures for translation-failure testing, but synthetic_self_play can never stand in for genuine human perturbation."
+    "Stage two WorldSpec branches serially or side by side and allow both to remain valid artifacts after comparison.",
+    "Attach factual World Evidence separately to each branch while leaving the meaning of those observations to human interpretation.",
+    "Let a participant reject Turtle's comparison while preserving both branch histories and the observations that prompted disagreement.",
+    "Allow a branch to remain deliberately stranger, less efficient, less stable, or less coherent without treating those properties as failure unless a human-authored purpose makes them relevant.",
+    "Permit branches to be revisited, recombined, abandoned, or kept permanently separate without a default merge objective.",
+    "Use synthetic self-play only to generate hostile branch-comparison fixtures; synthetic judgments remain synthetic_self_play and never decide which human branch is better."
   ],
-  "x_factor": "whoooo knooooowwwssssssssssss — what if the most important human contribution is the one that makes the world less coherent instead of more coherent?",
+  "x_factor": "whoooo knooooowwwssssssssssss — what if the branch that looks worse by every easy metric is the one that teaches the group something the neater branch cannot?",
   "constraints": [
-    "The original human perturbation and Turtle's interpretation of it must retain distinct provenance.",
-    "No human contribution may be silently rewritten as though Turtle inferred it first.",
-    "A shared or branched WorldSpec must not require canonical merge, consensus, or conflict resolution merely because several interpretations coexist.",
-    "TurtleAsk formation remains separate from surfacing authority and a human remains free not to answer.",
-    "No synthetic response may be counted as a human perturbation.",
+    "World observations may describe what happened but may not declare which branch has the correct meaning or educational value.",
+    "The original human perturbation, Turtle interpretation, resulting branch, world observations, and later human reflection must retain distinct provenance.",
+    "Comparison must not imply a required winner, canonical branch, or merge.",
+    "A metric matters only in relation to an explicit human-authored purpose or criterion; easy measurement is not authority.",
+    "A human may preserve contradiction, ambiguity, inefficiency, aesthetic preference, or an apparently unsuccessful branch for later reflection.",
+    "No synthetic branch comparison may become human-learning evidence or production authority.",
     "No generalized persistent personal memory is introduced by this horizon.",
-    "No learner-learning claim follows merely from a trajectory change after a perturbation.",
     "No autonomous production self-modification or self-retraining is authorized.",
     "No new CTC domain is promoted without explicit human scholarly judgment."
   ],
   "ontology_mappings": [
     {
-      "concept_key": "turtle_ask",
+      "concept_key": "make_walk_around_in_and_change_the_story",
       "role": "primary",
-      "rationale": "The horizon begins at the boundary event where Turtle deliberately seeks a genuinely human contribution rather than another machine-only turn."
-    },
-    {
-      "concept_key": "human_perturbation",
-      "role": "primary",
-      "rationale": "The central question is whether a human-authored perturbation remains materially different after Turtle translates it into computational representation."
+      "rationale": "The next question moves a preserved alternative from representation into inhabitable experience so its consequences can be encountered rather than merely summarized."
     },
     {
       "concept_key": "co_active_emergence",
       "role": "primary",
-      "rationale": "Co-active emergence requires that either participant can introduce difference that changes the trajectory without authorship or authority collapsing into the machine."
+      "rationale": "Human perturbation, Turtle construction, world behavior, and later reflection may recursively change the inquiry while remaining distinguishable participants."
     },
     {
       "concept_key": "possible_possibles",
       "role": "primary",
-      "rationale": "A perturbation may open another possible direction, including a contradictory or parallel branch rather than a single improved answer."
+      "rationale": "Parallel branches keep more than one possible world materially available instead of prematurely selecting a single best interpretation."
     },
     {
-      "concept_key": "cohabitation_without_provenance_collapse",
+      "concept_key": "machine_responses_as_material_for_evaluation",
       "role": "primary",
-      "rationale": "Human contribution, Turtle interpretation, branch state, later collaborator response, and any synthetic test fixture must remain distinguishable."
+      "rationale": "Turtle's branch construction and comparison are inspectable proposals and materials for human evaluation, not final judgments."
     },
     {
       "concept_key": "invisible_ideas_become_visible_and_manipulable",
       "role": "supports",
-      "rationale": "Separate representation makes the human perturbation and Turtle's translation inspectable rather than hiding the translation inside model state."
+      "rationale": "Building divergent interpretations makes conceptual differences visible enough to inhabit, compare, contest, and revise."
     },
     {
       "concept_key": "purposeful_play",
-      "role": "supports",
-      "rationale": "A surprising or sideways human contribution may be valuable because it reopens play rather than because it resolves the current problem."
+      "role": "primary",
+      "rationale": "An apparently inefficient, strange, or incoherent branch may remain valuable because exploration itself can generate questions and meaning not captured by optimization metrics."
     },
     {
-      "concept_key": "make_walk_around_in_and_change_the_story",
-      "role": "supports",
-      "rationale": "A perturbation can become a branch or inhabitable alternative whose consequences are explored before anyone decides whether to merge or reject it."
+      "concept_key": "cohabitation_without_provenance_collapse",
+      "role": "primary",
+      "rationale": "Human source, Turtle translation, branch state, world evidence, and human interpretation must remain distinct through construction and comparison."
     }
   ],
   "ctc_mappings": [
     {
       "domain": "Personal Inquiry",
       "role": "primary",
-      "rationale": "A human perturbation must be allowed to redirect or complicate inquiry without being normalized into Turtle's prior purpose."
+      "rationale": "A learner's reason for preserving or exploring a branch must govern which consequences matter rather than a system-generated branch score."
     },
     {
       "domain": "Compelling Problem or Question",
       "role": "primary",
-      "rationale": "The perturbation may create a new question, contradiction, or problem that did not exist inside the prior machine trajectory."
+      "rationale": "Divergent built consequences may generate new questions precisely because the branches do not resolve into one answer."
     },
     {
       "domain": "Technology as Tool to Think With",
       "role": "primary",
-      "rationale": "Human contribution and machine interpretation become separate manipulable representations rather than one opaque conversational state."
+      "rationale": "Parallel worlds become manipulable computational objects for thinking through competing interpretations rather than answer-producing endpoints."
     },
     {
       "domain": "Formative Demonstration of Learning",
       "role": "supports",
-      "rationale": "Pre/post trajectories may later make change visible, but trajectory change is not by itself evidence that a person learned."
+      "rationale": "Branch revisions and human-authored comparisons may later contribute to formative evidence, but world performance or branch choice alone is not proof of learning."
     },
     {
       "domain": "Reflection as Learning",
       "role": "primary",
-      "rationale": "The difference between the human perturbation and Turtle's translation creates material that participants can inspect, dispute, and revise."
+      "rationale": "Inhabiting consequences creates material for reflection while preserving the learner's authority to decide what those consequences mean."
     },
     {
       "domain": "Social and Cultural Critique",
       "role": "primary",
-      "rationale": "Translation is a power-bearing act: the system can preserve or erase situated meaning, value, culture, contradiction, and positionality even while retaining nominal provenance."
+      "rationale": "Declaring one branch superior can encode hidden values, power, efficiency norms, cultural assumptions, and metric privilege; keeping evaluation attributable makes those choices contestable."
     },
     {
       "domain": "Sharing and Collaborating",
       "role": "primary",
-      "rationale": "The horizon asks whether a genuinely different contribution can enter shared work without compulsory agreement, merge, or machine-authored synthesis."
+      "rationale": "Collaborators may compare, preserve, or contest multiple branches without collaboration being defined as convergence on a single canonical world."
     }
   ],
   "uncaptured_residue": [
     {
-      "observation": "Provenance can remain formally correct while translation still assimilates a human contribution into the machine's existing conceptual frame.",
-      "reason_unmapped": "This is a representational and epistemic boundary that cross-cuts authorship, critique, reflection, and collaboration rather than clearly defining a new CTC domain.",
+      "observation": "A branch can be empirically worse on an explicit measurable criterion and still be intellectually or aesthetically more generative for a participant.",
+      "reason_unmapped": "Purposeful Play, Reflection, and Personal Inquiry cover parts of this tension, but the status of generative failure versus criterion failure remains cross-cutting rather than a distinct established domain.",
       "candidate_domain": null,
       "status": "open"
     },
     {
-      "observation": "A human perturbation may be valuable precisely because it increases contradiction, ambiguity, or incoherence rather than improving a shared representation by conventional quality measures.",
-      "reason_unmapped": "Purposeful play and Possible Possibles cover part of the idea, but the value of deliberately preserved incoherence remains under-specified.",
+      "observation": "Once two interpretations are physically instantiated, the material affordances of the platform can privilege one branch even if the research representation itself remains plural.",
+      "reason_unmapped": "This is a platform-power and representation issue spanning Technology as Tool to Think With and Social and Cultural Critique.",
       "candidate_domain": null,
       "status": "open"
     },
     {
-      "observation": "A platform can support compromise as an authored civic-learning goal in one activity while supporting durable disagreement as an authored goal in another; the system must not infer which collaborative endpoint is pedagogically desirable.",
-      "reason_unmapped": "This is a governance-of-purpose issue spanning Shared Democracy, Predetermined Outcomes, and Sharing and Collaborating.",
+      "observation": "The same project now preserves source-versus-interpretation boundaries in dialogue, TurtleAsk translation, Sanders ontology lineage, and the photographed library catalog, suggesting a recurring methodological commitment to lossless source layers before later interpretation.",
+      "reason_unmapped": "This recurrence may be a cross-project research-method principle rather than a new pedagogical CTC domain and requires human scholarly review before stronger theoretical claims.",
       "candidate_domain": null,
       "status": "open"
     }
   ],
   "wait_a_minute_connection": {
-    "summary": "TurtleAsk seeks difference; plural foregrounds preserve difference. The next edge asks whether the translation layer in between can avoid erasing the very human otherness Turtle asked for.",
+    "summary": "The translation problem was already latent in TurtleBlock's earliest dialogue rule: lossless before normalized. Today's contract carries that rule across TurtleAsk; the next edge carries it one step farther, asking whether difference can survive construction and world evidence too.",
     "evidence": [
-      "research/TURTLE_ASK.md",
-      "worldspec/tests/plural-foreground-envelope-cases.json",
-      "src/buildLog.ts"
+      "worldspec/DIALOGUE_ARCHITECTURE.md",
+      "worldspec/schema/human-perturbation-translation-envelope.schema.json",
+      "worldspec/schema/world-evidence-envelope.schema.json"
     ],
-    "uncertainty": "This may be an operational recurrence of existing provenance and agency principles rather than a distinct new theoretical construct.",
+    "uncertainty": "This appears to be a recurring implementation and research-method principle, but it may already be adequately explained by provenance, learner agency, and open-world semantic capture rather than requiring a new named construct.",
     "disposition": "next_edge_candidate_selected"
   },
   "provenance": {
     "evidence_class": "system_record",
     "privacy_class": "public",
-    "selection_method": "cross_connection_synthesis_after_completed_build_log_relationship_surface_D1_reconciliation_and_consent_boundary_review",
+    "selection_method": "cross_connection_synthesis_after_human_perturbation_contract_Build_Log_D1_reconciliation_and_Wait_a_minute_pass",
     "actor": "machine_synthesis_human_revisable",
     "model": "GPT-5.6 Sol",
     "visitor_input_used": "none_no_authorized_consent_safe_runtime_read_path"
