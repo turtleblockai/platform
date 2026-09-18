@@ -45,6 +45,9 @@ jobs:
       - name: Validate Plural Foreground Envelope
         run: npm run validate:plural-foreground
 
+      - name: Validate Human Perturbation Translation Envelope
+        run: npm run validate:human-perturbation
+
       - name: Validate Build Log cross-connections
         run: npm run validate:build-log-connections
 
