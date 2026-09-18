@@ -1,0 +1,88 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://turtleblockai.com/worldspec/schema/human-perturbation-translation-envelope/v0.1.json",
+  "title": "TurtleBlock AI Human Perturbation Translation Envelope",
+  "description": "Experimental research contract for preserving a human-authored perturbation as a distinct source while Turtle interprets it and proposes a WorldSpec effect. Provenance alone is insufficient: the source contribution remains recoverable, unresolved difference may remain unresolved, no response produces no compulsory branch, and no machine interpretation may claim equivalence with the human contribution.",
+  "type": "object",
+  "required": ["version", "id", "turtle_ask_ref", "source_run_ref", "human_input", "turtle_translation", "worldspec_effect", "difference_trace", "provenance"],
+  "properties": {
+    "version": { "const": "0.1" },
+    "id": { "type": "string", "minLength": 1 },
+    "turtle_ask_ref": { "type": "string", "minLength": 1 },
+    "source_run_ref": { "type": "string", "minLength": 1 },
+    "human_input": {
+      "type": "object",
+      "required": ["state", "response_object_ref", "evidence_class", "canonical_source_preserved", "raw_text_duplicated"],
+      "properties": {
+        "state": { "type": "string", "enum": ["answered", "sideways", "refused", "deferred", "no_response"] },
+        "response_object_ref": { "type": ["string", "null"] },
+        "evidence_class": { "type": "string", "enum": ["human_interaction", "none"] },
+        "canonical_source_preserved": { "const": true },
+        "raw_text_duplicated": { "const": false }
+      },
+      "additionalProperties": false
+    },
+    "turtle_translation": {
+      "type": "object",
+      "required": ["status", "interpretation_object_ref", "actor_type", "evidence_class", "source_response_ref", "claims_equivalence", "unresolved_phrases_retained"],
+      "properties": {
+        "status": { "type": "string", "enum": ["not_attempted", "proposed", "contested", "accepted", "rejected"] },
+        "interpretation_object_ref": { "type": ["string", "null"] },
+        "actor_type": { "const": "turtle" },
+        "evidence_class": { "const": "system_record" },
+        "source_response_ref": { "type": ["string", "null"] },
+        "claims_equivalence": { "const": false },
+        "unresolved_phrases_retained": { "const": true }
+      },
+      "additionalProperties": false
+    },
+    "worldspec_effect": {
+      "type": "object",
+      "required": ["action", "source_revision_ref", "resulting_revision_ref", "branch_ref", "merge_status", "canonical_merge_required", "source_response_recoverable", "human_authority_required_for_merge"],
+      "properties": {
+        "action": { "type": "string", "enum": ["no_change", "proposed_delta", "parallel_branch", "merge_proposal"] },
+        "source_revision_ref": { "type": "string", "minLength": 1 },
+        "resulting_revision_ref": { "type": ["string", "null"] },
+        "branch_ref": { "type": ["string", "null"] },
+        "merge_status": { "type": "string", "enum": ["not_applicable", "unproposed", "proposed", "human_approved", "human_rejected"] },
+        "canonical_merge_required": { "const": false },
+        "source_response_recoverable": { "const": true },
+        "human_authority_required_for_merge": { "const": true }
+      },
+      "additionalProperties": false
+    },
+    "difference_trace": {
+      "type": "object",
+      "required": ["difference_classes", "unresolved_difference_preserved", "turtle_interpretation_distinct", "provenance_distinct", "assimilation_risk_note"],
+      "properties": {
+        "difference_classes": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": { "type": "string", "enum": ["contradiction", "value", "ambiguity", "situated_knowledge", "playful_perturbation", "unresolved_meaning", "other"] }
+        },
+        "unresolved_difference_preserved": { "const": true },
+        "turtle_interpretation_distinct": { "const": true },
+        "provenance_distinct": { "const": true },
+        "assimilation_risk_note": { "type": "string", "minLength": 1 }
+      },
+      "additionalProperties": false
+    },
+    "provenance": {
+      "type": "object",
+      "required": ["source_response_privacy_class", "human_response_not_rewritten", "synthetic_human_substitution", "machine_final_authority", "learner_learning_claim", "production_self_modification", "reversible", "raw_dialogue_duplicated"],
+      "properties": {
+        "source_response_privacy_class": { "type": "string", "enum": ["private", "internal", "unlisted", "public", "none"] },
+        "human_response_not_rewritten": { "const": true },
+        "synthetic_human_substitution": { "const": false },
+        "machine_final_authority": { "const": false },
+        "learner_learning_claim": { "const": false },
+        "production_self_modification": { "const": false },
+        "reversible": { "const": true },
+        "raw_dialogue_duplicated": { "const": false }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}
