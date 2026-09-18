@@ -1,6 +1,7 @@
 import app, { type Env } from "./index";
 import { BUILD_LOG_ENTRIES, injectBuildLogRuntime } from "./buildLog";
 import { applySiteChrome } from "./siteChrome";
+import { bootstrapLibrarySources } from "./libraryBootstrap";
 
 const TERRARIA_TRY_SCRIPT = '<script src="/assets/terraria-try.js?v=20260912.1"></script>';
 
@@ -105,6 +106,17 @@ export default {
 
     if (originalUrl.pathname === "/api/build-log" && request.method === "GET") {
       return Response.json({ entries: BUILD_LOG_ENTRIES, source: "src/buildLog.ts" }, { headers: { "cache-control": "no-store" } });
+    }
+
+    if (originalUrl.pathname === "/api/internal/bootstrap-library-0010" && request.method === "GET") {
+      if (!env.DB) return Response.json({ ok: false, error: "D1 binding not configured" }, { status: 503 });
+      try {
+        const result = await bootstrapLibrarySources(env.DB);
+        return Response.json({ ok: true, migration: "0010_library_sources", ...result }, { headers: { "cache-control": "no-store" } });
+      } catch (error) {
+        console.error("Library bootstrap failed", error);
+        return Response.json({ ok: false, migration: "0010_library_sources", error: "bootstrap_failed" }, { status: 500 });
+      }
     }
 
     if (originalUrl.pathname === "/api/terraria/play" && request.method === "POST") {
