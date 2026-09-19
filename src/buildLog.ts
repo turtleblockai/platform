@@ -17,6 +17,17 @@ export interface BuildLogEntry {
 // through the Worker. Open inquiry belongs in Next Edge, not in completed entries.
 export const BUILD_LOG_ENTRIES: BuildLogEntry[] = [
   {
+    id: "2026-09-18-branch-experience-comparison",
+    date: "Sep 18, 2026",
+    title: "Two built worlds can disagree without becoming a leaderboard",
+    body: "A provisional Branch Experience Comparison Envelope now lets two or more WorldSpec branches carry separate histories, world-evidence pointers, human-authored criteria, and human reflections without forcing a winner, canonical branch, or merge. Twelve deterministic cases accept intentionally plural comparison, explicit human criteria, generative failure, Turtle proposals that remain proposals, and rejection of comparison while rejecting canonical branches, undeclared criteria, mismatched evidence, synthetic judgment, lost human-perturbation source, easy-metric authority, and automatic learning claims. Product remains v0.1.0.",
+    done: true,
+    waitAMinute: {
+      summary: "TurtleAsk seeks human otherness when machine-only inquiry needs difference. A built alternate branch is not human otherness, but its consequences can become a second kind of perturbation source. That suggests a future cross-branch move: carry a question, constraint, or observation across without merging the branches that produced it.",
+      evidence: ["research/TURTLE_ASK.md", "worldspec/schema/world-evidence-envelope.schema.json", "worldspec/schema/branch-experience-comparison-envelope.schema.json"]
+    }
+  },
+  {
     id: "2026-09-17-human-perturbation-translation",
     date: "Sep 17, 2026",
     title: "Human otherness gets a lossless translation contract",
@@ -136,10 +147,10 @@ export const BUILD_LOG_ENTRIES: BuildLogEntry[] = [
 ];
 
 export const NEXT_EDGE_FALLBACK = {
-  date: "Sep 17, 2026",
-  title: "Can difference survive being built?",
-  question: "Can TurtleBlock AI stage a human-originated perturbation as a parallel WorldSpec branch and let people inhabit and compare its consequences without turning world evidence, Turtle interpretation, or later reflection into a verdict that one branch is the canonical truth?",
-  xFactor: "whoooo knooooowwwssssssssssss — what if the branch that looks worse by every easy metric is the one that teaches the group something the neater branch cannot?"
+  date: "Sep 18, 2026",
+  title: "Can branches cross-pollinate without merging?",
+  question: "Can TurtleBlock AI let an observation, question, or constraint discovered in one inhabited branch cross into another as a traceable perturbation without merging branch histories, erasing its source, or treating transfer as proof that either branch corrected the other?",
+  xFactor: "whoooo knooooowwwssssssssssss — what if the only thing worth carrying from the branch that failed is the question it created?"
 };
 
 function escapeHtml(value: string) {
