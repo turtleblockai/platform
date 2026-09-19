@@ -1,161 +1,88 @@
 {
-  "version": "0.9",
-  "updated_at": "2026-09-17",
+  "version": "1.0",
+  "updated_at": "2026-09-18",
   "status": "open_question",
-  "title": "Can difference survive being built?",
-  "question": "Can TurtleBlock AI stage a human-originated perturbation as a parallel WorldSpec branch and let people inhabit and compare its consequences without turning world evidence, Turtle interpretation, or later reflection into a verdict that one branch is the canonical truth?",
-  "why_now": "The September 17 Human Perturbation Translation Envelope answers the prior horizon at the representation boundary: a human response stays canonical and separately addressable; Turtle interpretation is a distinct system object; refusal or silence cannot manufacture a branch; unresolved phrases remain preservable; parallel branches need not merge; and merge authority remains human. The next collapse risk occurs after representation succeeds. TurtleBlock already has a World Evidence contract saying the world can report facts without becoming the judge. Put together, those two completed lines raise a new question: can divergent human meaning survive construction, inhabitation, observation, and comparison without measurable consequences quietly becoming a winner-selection mechanism?",
-  "follows_commit": "32b34bab46c05ecd6112d4c8cfcca45bb0d7c144",
-  "follows_commit_role": "completed_human_perturbation_translation_contract_hostile_suite_and_ci_wiring",
+  "title": "Can branches cross-pollinate without merging?",
+  "question": "Can TurtleBlock AI let an observation, question, or constraint discovered in one inhabited branch cross into another as a traceable perturbation without merging branch histories, erasing its source, or treating transfer as proof that either branch corrected the other?",
+  "why_now": "The September 18 Branch Experience Comparison Envelope answers the prior horizon at the comparison boundary: multiple built branches can remain noncanonical; world evidence remains observational; metrics matter only through explicit human-authored criteria; a learner may reject comparison; an apparently worse branch may remain generative; and Turtle or synthetic comparisons cannot become final judgment. The Wait-a-minute pass exposed the next movement: TurtleAsk treats genuine human otherness as a source of productive difference, while an alternate built branch can produce a different kind of perturbation through its consequences. The next collapse risk is transfer—whether a useful question, observation, or constraint can move across branches without silently turning cross-pollination into merge, correction, or source erasure.",
+  "follows_commit": "760577915339dac1f895e185efb64f612550e7c7",
+  "follows_commit_role": "completed_branch_experience_comparison_contract_hostile_suite_and_ci_wiring",
   "inputs": [
-    "current repository after the Human Perturbation Translation contract and validator",
-    "worldspec/DIALOGUE_ARCHITECTURE.md lossless-before-normalized principle",
-    "research/TURTLE_ASK.md human-perturbation provenance boundary",
-    "worldspec/schema/worldspec.schema.json existing forked history event",
-    "worldspec/schema/world-evidence-envelope.schema.json and its non-judgment boundary",
-    "worldspec/tests/human-perturbation-translation-envelope-cases.json",
-    "current Build Log and September 17 D1 reconciliation findings",
+    "current repository after the Branch Experience Comparison contract and hostile suite",
+    "worldspec/schema/branch-experience-comparison-envelope.schema.json",
+    "worldspec/schema/human-perturbation-translation-envelope.schema.json",
+    "worldspec/schema/world-evidence-envelope.schema.json",
+    "research/TURTLE_ASK.md",
+    "worldspec/schema/worldspec.schema.json forked-history representation",
+    "current Build Log and September 17 reconciliation history",
     "Sanders research ontology and seven established Critical Techno Constructivism operational domains",
     "fresh OpenAI, NVIDIA, Minecraft Education, and MIT Media Lab primary-source signals",
-    "absence of an authorized consent-safe TRY IT research read path for visitor-derived observations"
+    "absence of an authorized consent-safe TRY IT visitor research read path"
   ],
   "source_classes_consulted": [
     "repository_state_and_tests",
     "WorldSpec_and_dialogue_architecture",
     "Turtle_Terraria_and_TurtleAsk_research",
-    "D1_schema_reconciliation_and_verified_library_substrate",
+    "D1_reconciliation_and_staging",
     "Sanders_research_ontology",
     "public_primary_sources",
     "consent_boundary_and_absence_of_authorized_visitor_input"
   ],
   "possible_possibles": [
-    "Stage two WorldSpec branches serially or side by side and allow both to remain valid artifacts after comparison.",
-    "Attach factual World Evidence separately to each branch while leaving the meaning of those observations to human interpretation.",
-    "Let a participant reject Turtle's comparison while preserving both branch histories and the observations that prompted disagreement.",
-    "Allow a branch to remain deliberately stranger, less efficient, less stable, or less coherent without treating those properties as failure unless a human-authored purpose makes them relevant.",
-    "Permit branches to be revisited, recombined, abandoned, or kept permanently separate without a default merge objective.",
-    "Use synthetic self-play only to generate hostile branch-comparison fixtures; synthetic judgments remain synthetic_self_play and never decide which human branch is better."
+    "Carry a human-authored constraint discovered in one branch into another as a proposed delta while leaving both branch histories unchanged and separately addressable.",
+    "Transfer only a question or observation from one branch rather than any structure, score, or conclusion.",
+    "Preserve both the source branch and the earlier human perturbation that produced it so the transferred idea has a traceable lineage.",
+    "Let a learner reject, rewrite, or reinterpret the transferred perturbation before it affects the target branch.",
+    "Allow repeated cross-pollination between branches without introducing an eventual merge objective.",
+    "Use synthetic self-play only to generate hostile transfer fixtures; synthetic proposals never execute a cross-branch change."
   ],
-  "x_factor": "whoooo knooooowwwssssssssssss — what if the branch that looks worse by every easy metric is the one that teaches the group something the neater branch cannot?",
+  "x_factor": "whoooo knooooowwwssssssssssss — what if the only thing worth carrying from the branch that failed is the question it created?",
   "constraints": [
-    "World observations may describe what happened but may not declare which branch has the correct meaning or educational value.",
-    "The original human perturbation, Turtle interpretation, resulting branch, world observations, and later human reflection must retain distinct provenance.",
-    "Comparison must not imply a required winner, canonical branch, or merge.",
-    "A metric matters only in relation to an explicit human-authored purpose or criterion; easy measurement is not authority.",
-    "A human may preserve contradiction, ambiguity, inefficiency, aesthetic preference, or an apparently unsuccessful branch for later reflection.",
-    "No synthetic branch comparison may become human-learning evidence or production authority.",
+    "Cross-branch transfer is not merge and must not rewrite either branch history.",
+    "The source branch, source observation or question, and originating human contribution remain recoverable when applicable.",
+    "Applying a transferred perturbation to a human-owned branch requires human authority; Turtle may propose but not silently execute.",
+    "Transfer must not be narrated as proof that the source branch corrected the target branch.",
+    "World evidence or an easy metric may motivate a question but cannot authorize transfer by itself.",
+    "Synthetic self-play remains synthetic_self_play and has no production authority or human-learning evidence status.",
     "No generalized persistent personal memory is introduced by this horizon.",
     "No autonomous production self-modification or self-retraining is authorized.",
     "No new CTC domain is promoted without explicit human scholarly judgment."
   ],
   "ontology_mappings": [
-    {
-      "concept_key": "make_walk_around_in_and_change_the_story",
-      "role": "primary",
-      "rationale": "The next question moves a preserved alternative from representation into inhabitable experience so its consequences can be encountered rather than merely summarized."
-    },
-    {
-      "concept_key": "co_active_emergence",
-      "role": "primary",
-      "rationale": "Human perturbation, Turtle construction, world behavior, and later reflection may recursively change the inquiry while remaining distinguishable participants."
-    },
-    {
-      "concept_key": "possible_possibles",
-      "role": "primary",
-      "rationale": "Parallel branches keep more than one possible world materially available instead of prematurely selecting a single best interpretation."
-    },
-    {
-      "concept_key": "machine_responses_as_material_for_evaluation",
-      "role": "primary",
-      "rationale": "Turtle's branch construction and comparison are inspectable proposals and materials for human evaluation, not final judgments."
-    },
-    {
-      "concept_key": "invisible_ideas_become_visible_and_manipulable",
-      "role": "supports",
-      "rationale": "Building divergent interpretations makes conceptual differences visible enough to inhabit, compare, contest, and revise."
-    },
-    {
-      "concept_key": "purposeful_play",
-      "role": "primary",
-      "rationale": "An apparently inefficient, strange, or incoherent branch may remain valuable because exploration itself can generate questions and meaning not captured by optimization metrics."
-    },
-    {
-      "concept_key": "cohabitation_without_provenance_collapse",
-      "role": "primary",
-      "rationale": "Human source, Turtle translation, branch state, world evidence, and human interpretation must remain distinct through construction and comparison."
+    {"concept_key":"co_active_emergence","role":"primary","rationale":"A traceable perturbation may move between constructed trajectories and recursively alter inquiry without collapsing who or what introduced the difference."},
+    {"concept_key":"possible_possibles","role":"primary","rationale":"Cross-pollination should increase available directions without forcing branches toward one synthesized answer."},
+    {"concept_key":"make_walk_around_in_and_change_the_story","role":"primary","rationale":"An insight discovered by inhabiting one world may become material for changing another while both stories remain inspectable."},
+    {"concept_key":"recursive_learning_loop","role":"supports","rationale":"Experience in one branch can feed a later cycle elsewhere while preserving the source of that recursion."},
+    {"concept_key":"cohabitation_without_provenance_collapse","role":"primary","rationale":"Source branch, world observation, human interpretation, Turtle transfer proposal, and target-branch change must remain distinguishable."},
+    {"concept_key":"purposeful_play","role":"supports","rationale":"A failed, strange, or abandoned branch may still generate a useful question without needing rehabilitation into a successful branch."},
+    {"concept_key":"machine_responses_as_material_for_evaluation","role":"supports","rationale":"Turtle's proposed cross-branch translation remains material for human evaluation rather than an authoritative correction."
     }
   ],
   "ctc_mappings": [
-    {
-      "domain": "Personal Inquiry",
-      "role": "primary",
-      "rationale": "A learner's reason for preserving or exploring a branch must govern which consequences matter rather than a system-generated branch score."
-    },
-    {
-      "domain": "Compelling Problem or Question",
-      "role": "primary",
-      "rationale": "Divergent built consequences may generate new questions precisely because the branches do not resolve into one answer."
-    },
-    {
-      "domain": "Technology as Tool to Think With",
-      "role": "primary",
-      "rationale": "Parallel worlds become manipulable computational objects for thinking through competing interpretations rather than answer-producing endpoints."
-    },
-    {
-      "domain": "Formative Demonstration of Learning",
-      "role": "supports",
-      "rationale": "Branch revisions and human-authored comparisons may later contribute to formative evidence, but world performance or branch choice alone is not proof of learning."
-    },
-    {
-      "domain": "Reflection as Learning",
-      "role": "primary",
-      "rationale": "Inhabiting consequences creates material for reflection while preserving the learner's authority to decide what those consequences mean."
-    },
-    {
-      "domain": "Social and Cultural Critique",
-      "role": "primary",
-      "rationale": "Declaring one branch superior can encode hidden values, power, efficiency norms, cultural assumptions, and metric privilege; keeping evaluation attributable makes those choices contestable."
-    },
-    {
-      "domain": "Sharing and Collaborating",
-      "role": "primary",
-      "rationale": "Collaborators may compare, preserve, or contest multiple branches without collaboration being defined as convergence on a single canonical world."
+    {"domain":"Personal Inquiry","role":"primary","rationale":"The learner decides whether a perturbation discovered elsewhere belongs in the target inquiry and what it means there."},
+    {"domain":"Compelling Problem or Question","role":"primary","rationale":"The most valuable transferable artifact may be a new question generated by consequences in another branch."},
+    {"domain":"Technology as Tool to Think With","role":"primary","rationale":"Branches and cross-branch proposals become manipulable computational objects for thinking rather than automatic convergence machinery."},
+    {"domain":"Formative Demonstration of Learning","role":"supports","rationale":"A traceable change in criteria or branch direction may later support formative interpretation, but transfer itself is not proof of learning."},
+    {"domain":"Reflection as Learning","role":"primary","rationale":"Cross-pollination depends on noticing what an alternate branch revealed and deciding whether that should perturb another line of inquiry."},
+    {"domain":"Social and Cultural Critique","role":"primary","rationale":"Which observations are allowed to travel, which remain local, and which are treated as corrections are power-bearing design choices."},
+    {"domain":"Sharing and Collaborating","role":"primary","rationale":"The horizon treats sharing as exchange of traceable difference rather than compulsory consensus or merge."
     }
   ],
   "uncaptured_residue": [
-    {
-      "observation": "A branch can be empirically worse on an explicit measurable criterion and still be intellectually or aesthetically more generative for a participant.",
-      "reason_unmapped": "Purposeful Play, Reflection, and Personal Inquiry cover parts of this tension, but the status of generative failure versus criterion failure remains cross-cutting rather than a distinct established domain.",
-      "candidate_domain": null,
-      "status": "open"
-    },
-    {
-      "observation": "Once two interpretations are physically instantiated, the material affordances of the platform can privilege one branch even if the research representation itself remains plural.",
-      "reason_unmapped": "This is a platform-power and representation issue spanning Technology as Tool to Think With and Social and Cultural Critique.",
-      "candidate_domain": null,
-      "status": "open"
-    },
-    {
-      "observation": "The same project now preserves source-versus-interpretation boundaries in dialogue, TurtleAsk translation, Sanders ontology lineage, and the photographed library catalog, suggesting a recurring methodological commitment to lossless source layers before later interpretation.",
-      "reason_unmapped": "This recurrence may be a cross-project research-method principle rather than a new pedagogical CTC domain and requires human scholarly review before stronger theoretical claims.",
-      "candidate_domain": null,
-      "status": "open"
-    }
+    {"observation":"Difference may become transportable without becoming truth: an observation or question can matter in another branch without proving either branch superior.","reason_unmapped":"This spans inquiry, reflection, collaboration, and provenance rather than clearly constituting a new established pedagogical domain.","candidate_domain":null,"status":"open"},
+    {"observation":"An alternate built branch can become a perturbation source, but that is not the same epistemic category as the genuine human otherness TurtleAsk seeks.","reason_unmapped":"The distinction may be adequately represented by provenance and actor/evidence classes; stronger theoretical naming requires human scholarly review.","candidate_domain":null,"status":"open"},
+    {"observation":"Repeated local cross-pollination could gradually collapse branches into de facto convergence even when no individual transfer is labeled a merge.","reason_unmapped":"This is a longitudinal governance risk across collaboration and representation rather than a single current CTC domain gap.","candidate_domain":null,"status":"open"}
   ],
   "wait_a_minute_connection": {
-    "summary": "The translation problem was already latent in TurtleBlock's earliest dialogue rule: lossless before normalized. Today's contract carries that rule across TurtleAsk; the next edge carries it one step farther, asking whether difference can survive construction and world evidence too.",
-    "evidence": [
-      "worldspec/DIALOGUE_ARCHITECTURE.md",
-      "worldspec/schema/human-perturbation-translation-envelope.schema.json",
-      "worldspec/schema/world-evidence-envelope.schema.json"
-    ],
-    "uncertainty": "This appears to be a recurring implementation and research-method principle, but it may already be adequately explained by provenance, learner agency, and open-world semantic capture rather than requiring a new named construct.",
+    "summary": "TurtleAsk seeks human otherness when machine-only inquiry needs difference. A built alternate branch is not human otherness, but its consequences can become another perturbation source. The next question is whether Turtle can carry that difference across branches without turning exchange into merge or correction.",
+    "evidence": ["research/TURTLE_ASK.md","worldspec/schema/world-evidence-envelope.schema.json","worldspec/schema/branch-experience-comparison-envelope.schema.json"],
+    "uncertainty": "This may be an ordinary recursive-learning and provenance pattern rather than a distinct new theoretical construct; branch-derived perturbation should not be conflated with human otherness.",
     "disposition": "next_edge_candidate_selected"
   },
   "provenance": {
     "evidence_class": "system_record",
     "privacy_class": "public",
-    "selection_method": "cross_connection_synthesis_after_human_perturbation_contract_Build_Log_D1_reconciliation_and_Wait_a_minute_pass",
+    "selection_method": "cross_connection_synthesis_after_branch_experience_contract_Build_Log_D1_reconciliation_and_Wait_a_minute_pass",
     "actor": "machine_synthesis_human_revisable",
     "model": "GPT-5.6 Sol",
     "visitor_input_used": "none_no_authorized_consent_safe_runtime_read_path"
