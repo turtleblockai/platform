@@ -1,0 +1,77 @@
+{
+  "schema": "turtleblockai.d1-reconciliation.v0.4",
+  "date": "2026-09-18",
+  "capture_batch": "2026-09-18-branch-experience-comparison",
+  "status": "staged_no_new_live_d1_write_claimed",
+  "sweep_scope": [
+    "entire current Build Log",
+    "newest daily-build records",
+    "research and reconciliation records",
+    "WorldSpec contracts and tests",
+    "public Build Log and Next Edge representations",
+    "migrations 0007 through 0010",
+    "Turtle Terraria and TurtleAsk structures",
+    "consent-safe visitor observations when legitimately available"
+  ],
+  "build_log_coverage": [
+    {"entry_id":"2026-09-18-branch-experience-comparison","judgment":"represented_by_canonical_pointer_and_staging","canonical_pointer":"research/daily-build/2026-09-18.tags.json","supporting_pointer":"worldspec/schema/branch-experience-comparison-envelope.schema.json"},
+    {"entry_id":"2026-09-17-human-perturbation-translation","judgment":"represented_by_canonical_pointer_and_staging","canonical_pointer":"research/daily-build/2026-09-17.tags.json","supporting_pointer":"worldspec/schema/human-perturbation-translation-envelope.schema.json"},
+    {"entry_id":"2026-09-17-physical-library-d1","judgment":"safely_backfilled_public_history_live_d1_source_verified","canonical_pointer":"research/d1-reconciliation/2026-09-17-library.json","supporting_pointer":"migrations/0010_library_sources.sql"},
+    {"entry_id":"2026-09-16-wait-a-minute-build-log","judgment":"represented_by_canonical_pointer_and_staging","canonical_pointer":"research/d1-reconciliation/2026-09-16.json","supporting_pointer":"scripts/validate-build-log-connections.mjs"},
+    {"entry_id":"2026-09-16-plural-foreground-regression","judgment":"represented_by_canonical_pointer_and_staging","canonical_pointer":"research/daily-build/2026-09-16.tags.json","supporting_pointer":"worldspec/tests/plural-foreground-envelope-cases.json"},
+    {"entry_id":"2026-09-15-plural-foreground-envelope","judgment":"represented_by_canonical_pointer_and_staging","canonical_pointer":"research/daily-build/2026-09-15.tags.json","supporting_pointer":"worldspec/schema/plural-foreground-envelope.schema.json"},
+    {"entry_id":"2026-09-12-d1-reconciliation-terraria-try","judgment":"represented_by_reconciliation_staging","canonical_pointer":"research/d1-reconciliation/2026-09-12.json","supporting_pointer":"research/TERRARIA_ENGINE.md"},
+    {"entry_id":"2026-09-11-human-tamagotchi-turtle-ask","judgment":"represented_in_migration_source_live_state_unverified","canonical_pointer":"migrations/0009_human_tamagotchi_terrarium_and_turtle_ask.sql","supporting_pointer":"research/TURTLE_ASK.md"},
+    {"entry_id":"2026-09-12-selective-attention-envelope","judgment":"represented_by_daily_tags_staging","canonical_pointer":"research/daily-build/2026-09-12.tags.json","supporting_pointer":"worldspec/schema/selective-attention-envelope.schema.json"},
+    {"entry_id":"2026-09-11-world-evidence-envelope","judgment":"represented_by_daily_tags_staging","canonical_pointer":"research/daily-build/2026-09-11.tags.json","supporting_pointer":"worldspec/schema/world-evidence-envelope.schema.json"},
+    {"entry_id":"2026-09-10-learner-verification-card","judgment":"represented_by_daily_tags_staging","canonical_pointer":"research/daily-build/2026-09-10.tags.json"},
+    {"entry_id":"2026-09-09-next-edge-validator","judgment":"represented_by_daily_tags_staging","canonical_pointer":"research/daily-build/2026-09-09.tags.json"},
+    {"entry_id":"2026-09-08-next-edge-horizon","judgment":"represented_by_daily_tags_staging","canonical_pointer":"research/daily-build/2026-09-08-next-edge.tags.json"},
+    {"entry_id":"2026-09-08-www-direct-asset-repair","judgment":"represented_by_daily_tags_staging","canonical_pointer":"research/daily-build/2026-09-08-www-repair.tags.json"},
+    {"entry_id":"2026-09-08-turtle-terraria-tagging","judgment":"represented_in_migration_source_live_state_unverified","canonical_pointer":"migrations/0008_seed_terraria_and_autobuild_tags.sql","supporting_pointer":"research/TURTLE_TERRARIA.md"},
+    {"entry_id":"2026-09-08-daily-coactive-loop","judgment":"represented_in_migration_source_live_state_unverified","canonical_pointer":"migrations/0007_turtle_terraria_and_exhaustive_tagging.sql","supporting_pointer":"migrations/0008_seed_terraria_and_autobuild_tags.sql"}
+  ],
+  "findings": [
+    {
+      "id":"recon-20260918-branch-experience-artifacts",
+      "type":"new_research_artifacts",
+      "status":"represented_in_git_staged_for_d1",
+      "canonical_sources":["worldspec/schema/branch-experience-comparison-envelope.schema.json","worldspec/tests/branch-experience-comparison-envelope-cases.json","scripts/validate-branch-experience-comparison-envelope.mjs"],
+      "summary":"The new comparison contract and evaluation preserve branch plurality, human-authored metric relevance, world-evidence nonauthority, and reversibility."
+    },
+    {
+      "id":"recon-20260918-build-log-next-edge",
+      "type":"public_research_representation",
+      "status":"represented_in_git_staged_for_d1",
+      "canonical_sources":["src/buildLog.ts","public/data/next-edge.json","research/daily-build/2026-09-18.md","research/daily-build/2026-09-18.tags.json"]
+    },
+    {
+      "id":"recon-20260918-site-runtime-fallback",
+      "type":"www_representation_drift",
+      "status":"unresolved_gap_low_severity",
+      "canonical_source":"public/assets/site-runtime.js",
+      "summary":"The embedded emergency Build Log/Next Edge fallback remains one release behind. Normal runtime requests canonical /api/build-log and /data/next-edge.json with no-store, so this is fallback drift rather than the primary public source of truth.",
+      "recommended_action":"Reconcile or generate the fallback from canonical sources in a later bounded maintenance cycle."
+    },
+    {
+      "id":"recon-20260918-live-d1",
+      "type":"runtime_persistence_boundary",
+      "status":"intentionally_not_claimed",
+      "summary":"No authorized live D1 research-graph read/write path is available in this run. No new research-object, relationship, ontology-tag, CTC-tag, Terraria, or autobuild persistence is claimed.",
+      "d1_action":"When an authorized path exists, ingest the September 18 staging manifest using canonical repo pointers instead of duplicating artifact payloads."
+    },
+    {
+      "id":"recon-20260918-try-it-input",
+      "type":"privacy_consent_boundary",
+      "status":"intentionally_not_captured",
+      "summary":"No authorized consent-safe visitor research view was available; private raw TRY IT dialogue and non-consented inputs were not retrieved for reconciliation or Wait-a-minute analysis."
+    }
+  ],
+  "wait_a_minute": {
+    "connected_pointers":["research/TURTLE_ASK.md","worldspec/schema/world-evidence-envelope.schema.json","worldspec/schema/branch-experience-comparison-envelope.schema.json"],
+    "finding":"Alternate branch consequences may provide a traceable nonhuman perturbation source, suggesting future cross-branch exchange without merge. This must remain distinct from TurtleAsk's genuine human otherness.",
+    "disposition":"next_edge_candidate_selected"
+  },
+  "privacy_boundary":"No private dialogue, secret configuration, token, credential, or non-consented visitor payload was inspected or copied during reconciliation.",
+  "capture_batch_closed": true
+}
