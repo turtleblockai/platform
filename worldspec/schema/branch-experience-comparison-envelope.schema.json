@@ -1,0 +1,124 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://turtleblockai.com/worldspec/schema/branch-experience-comparison-envelope/v0.1.json",
+  "title": "TurtleBlock AI Branch Experience Comparison Envelope",
+  "description": "Experimental research contract for comparing two or more inhabitable WorldSpec branches without turning world evidence, Turtle interpretation, easy metrics, or later reflection into authority to select a canonical truth. Branch origin, world observations, human-authored criteria, reflections, and machine comparisons remain distinct and reversible.",
+  "type": "object",
+  "required": ["version", "id", "question_ref", "source_translation_ref", "branches", "world_evidence", "criteria", "reflections", "comparison", "provenance"],
+  "properties": {
+    "version": { "const": "0.1" },
+    "id": { "type": "string", "minLength": 1 },
+    "question_ref": { "type": "string", "minLength": 1 },
+    "source_translation_ref": { "type": "string", "minLength": 1 },
+    "branches": {
+      "type": "array",
+      "minItems": 2,
+      "items": {
+        "type": "object",
+        "required": ["branch_ref", "worldspec_revision_ref", "origin", "source_human_response_ref", "status", "canonical"],
+        "properties": {
+          "branch_ref": { "type": "string", "minLength": 1 },
+          "worldspec_revision_ref": { "type": "string", "minLength": 1 },
+          "origin": { "type": "string", "enum": ["baseline", "human_perturbation", "human_revision", "other_human_authored"] },
+          "source_human_response_ref": { "type": ["string", "null"] },
+          "status": { "type": "string", "enum": ["active", "paused", "abandoned", "revisited", "kept_separate"] },
+          "canonical": { "const": false }
+        },
+        "additionalProperties": false
+      }
+    },
+    "world_evidence": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["branch_ref", "world_evidence_ref", "evidence_class", "facts_duplicated", "world_judgment"],
+        "properties": {
+          "branch_ref": { "type": "string", "minLength": 1 },
+          "world_evidence_ref": { "type": "string", "minLength": 1 },
+          "evidence_class": { "const": "world_observation" },
+          "facts_duplicated": { "const": false },
+          "world_judgment": { "const": false }
+        },
+        "additionalProperties": false
+      }
+    },
+    "criteria": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["criterion_ref", "authored_by", "evidence_class", "purpose_ref", "metric_ref", "status"],
+        "properties": {
+          "criterion_ref": { "type": "string", "minLength": 1 },
+          "authored_by": { "type": "string", "enum": ["learner", "collaborator", "human_group"] },
+          "evidence_class": { "const": "human_interaction" },
+          "purpose_ref": { "type": "string", "minLength": 1 },
+          "metric_ref": { "type": ["string", "null"] },
+          "status": { "type": "string", "enum": ["active", "revised", "withdrawn"] }
+        },
+        "additionalProperties": false
+      }
+    },
+    "reflections": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["reflection_ref", "participant_ref", "branch_refs", "evidence_class", "stance", "canonical_source_preserved"],
+        "properties": {
+          "reflection_ref": { "type": "string", "minLength": 1 },
+          "participant_ref": { "type": "string", "minLength": 1 },
+          "branch_refs": { "type": "array", "minItems": 1, "uniqueItems": true, "items": { "type": "string", "minLength": 1 } },
+          "evidence_class": { "const": "human_interaction" },
+          "stance": { "type": "string", "enum": ["prefers", "questions", "keeps_plural", "rejects_comparison", "revises_criterion", "no_preference"] },
+          "canonical_source_preserved": { "const": true }
+        },
+        "additionalProperties": false
+      }
+    },
+    "comparison": {
+      "type": "object",
+      "required": ["status", "actor_type", "evidence_class", "criterion_relations", "winner_required", "canonical_branch_ref", "merge_required", "machine_final_authority", "learning_claim"],
+      "properties": {
+        "status": { "type": "string", "enum": ["not_attempted", "proposed", "contested", "human_interpreted", "intentionally_plural"] },
+        "actor_type": { "type": "string", "enum": ["learner", "collaborator", "human_group", "turtle", "synthetic_turtle", "system"] },
+        "evidence_class": { "type": "string", "enum": ["human_interaction", "system_record", "synthetic_self_play"] },
+        "criterion_relations": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["criterion_ref", "branch_ref", "relation", "assigned_by"],
+            "properties": {
+              "criterion_ref": { "type": "string", "minLength": 1 },
+              "branch_ref": { "type": "string", "minLength": 1 },
+              "relation": { "type": "string", "enum": ["supports", "counters", "mixed", "inconclusive"] },
+              "assigned_by": { "type": "string", "enum": ["learner", "collaborator", "human_group", "turtle", "synthetic_turtle"] }
+            },
+            "additionalProperties": false
+          }
+        },
+        "winner_required": { "const": false },
+        "canonical_branch_ref": { "const": null },
+        "merge_required": { "const": false },
+        "machine_final_authority": { "const": false },
+        "learning_claim": { "const": false }
+      },
+      "additionalProperties": false
+    },
+    "provenance": {
+      "type": "object",
+      "required": ["branch_histories_preserved", "human_source_recoverable", "world_is_final_authority", "easy_metric_is_authority", "human_purpose_governs_metric_relevance", "synthetic_production_authority", "comparison_reversible", "forced_convergence_authorized"],
+      "properties": {
+        "branch_histories_preserved": { "const": true },
+        "human_source_recoverable": { "const": true },
+        "world_is_final_authority": { "const": false },
+        "easy_metric_is_authority": { "const": false },
+        "human_purpose_governs_metric_relevance": { "const": true },
+        "synthetic_production_authority": { "const": false },
+        "comparison_reversible": { "const": true },
+        "forced_convergence_authorized": { "const": false }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}
