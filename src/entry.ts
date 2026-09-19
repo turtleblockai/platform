@@ -4,6 +4,77 @@ import { applySiteChrome } from "./siteChrome";
 
 const TERRARIA_TRY_SCRIPT = '<script src="/assets/terraria-try.js?v=20260912.1"></script>';
 
+const SOCIAL_CARD_PATH = "/assets/turtleblock-social-card.jpg";
+const SOCIAL_CARD_PARTS = [
+  "/assets/social-card/turtleblock-social-card-01.b64",
+  "/assets/social-card/turtleblock-social-card-02.b64",
+  "/assets/social-card/turtleblock-social-card-03.b64",
+  "/assets/social-card/turtleblock-social-card-04.b64",
+  "/assets/social-card/turtleblock-social-card-05.b64",
+  "/assets/social-card/turtleblock-social-card-06.b64"
+];
+const SOCIAL_TITLE = "TurtleBlock AI";
+const SOCIAL_DESCRIPTION = "We built a place to build places. TurtleBlock AI helps learners turn ideas into worlds they can build, explore, question, and change.";
+const SOCIAL_CARD_ABSOLUTE_URL = "https://turtleblockai.com/assets/turtleblock-social-card.jpg";
+const SOCIAL_CARD_ALT = "TurtleBlock AI — a block-shelled turtle exploring worlds rooted in Papert, Dewey, Bruner, Logo, Critical Techno Constructivism, ChatGPT, Minecraft, and whoooo knooowwwssssss.";
+
+function applySocialMetadata(html: string, requestUrl: URL) {
+  if (html.includes('data-turtleblock-social="v1"')) return html;
+  const canonicalPath = requestUrl.pathname || "/";
+  const canonicalUrl = `https://turtleblockai.com${canonicalPath}`;
+  const tags = `<link rel="canonical" href="${canonicalUrl}" data-turtleblock-social="v1">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="${SOCIAL_TITLE}">
+  <meta property="og:title" content="${SOCIAL_TITLE}">
+  <meta property="og:description" content="${SOCIAL_DESCRIPTION}">
+  <meta property="og:url" content="${canonicalUrl}">
+  <meta property="og:image" content="${SOCIAL_CARD_ABSOLUTE_URL}">
+  <meta property="og:image:secure_url" content="${SOCIAL_CARD_ABSOLUTE_URL}">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="${SOCIAL_CARD_ALT}">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="${SOCIAL_TITLE}">
+  <meta name="twitter:description" content="${SOCIAL_DESCRIPTION}">
+  <meta name="twitter:image" content="${SOCIAL_CARD_ABSOLUTE_URL}">
+  <meta name="twitter:image:alt" content="${SOCIAL_CARD_ALT}">`;
+  return html.replace("</head>", `${tags}\n</head>`);
+}
+
+function decodeBase64(base64: string) {
+  const clean = base64.replace(/\s+/g, "");
+  const binary = atob(clean);
+  const bytes = new Uint8Array(binary.length);
+  for (let i = 0; i < binary.length; i += 1) bytes[i] = binary.charCodeAt(i);
+  return bytes;
+}
+
+async function handleSocialCard(request: Request, env: Env) {
+  try {
+    const requestUrl = new URL(request.url);
+    const parts = await Promise.all(
+      SOCIAL_CARD_PARTS.map(async (path) => {
+        const assetUrl = new URL(path, requestUrl.origin);
+        const response = await env.ASSETS.fetch(new Request(assetUrl.toString(), { method: "GET" }));
+        if (!response.ok) throw new Error(`missing social card asset part: ${path}`);
+        return response.text();
+      })
+    );
+    const bytes = decodeBase64(parts.join(""));
+    const headers = new Headers({
+      "content-type": "image/jpeg",
+      "cache-control": "public, max-age=604800, stale-while-revalidate=86400",
+      "content-length": String(bytes.byteLength),
+      "x-content-type-options": "nosniff"
+    });
+    return new Response(request.method === "HEAD" ? null : bytes.buffer, { status: 200, headers });
+  } catch (error) {
+    console.error("Social card assembly failed", error);
+    return new Response("Social card unavailable.", { status: 503, headers: { "cache-control": "no-store" } });
+  }
+}
+
 function applyTerrariaLanguage(html: string) {
   let next = html.replace(/Turtle Lab/g, "Turtle Terraria");
   next = next.replace(/Public artifacts\./g, "Multiple habitats.");
@@ -103,6 +174,10 @@ export default {
   async fetch(request: Request, env: Env, ctx: ExecutionContext): Promise<Response> {
     const originalUrl = new URL(request.url);
 
+    if (originalUrl.pathname === SOCIAL_CARD_PATH && (request.method === "GET" || request.method === "HEAD")) {
+      return handleSocialCard(request, env);
+    }
+
     if (originalUrl.pathname === "/api/build-log" && request.method === "GET") {
       return Response.json({ entries: BUILD_LOG_ENTRIES, source: "src/buildLog.ts" }, { headers: { "cache-control": "no-store" } });
     }
@@ -133,6 +208,7 @@ export default {
     html = injectBuildLogRuntime(html);
     html = applySiteChrome(html, originalUrl.pathname);
     html = injectTerrariaTryScript(html);
+    html = applySocialMetadata(html, originalUrl);
 
     const headers = new Headers(response.headers);
     headers.delete("content-length");
