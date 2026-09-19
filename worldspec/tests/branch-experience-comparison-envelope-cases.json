@@ -1,0 +1,212 @@
+{
+  "version": "0.1",
+  "name": "Branch Experience Comparison Envelope regression cases",
+  "purpose": "Test whether multiple built WorldSpec branches can be inhabited and compared while factual world evidence, human-authored criteria, human reflection, Turtle interpretation, and branch history remain distinct—and while the system refuses to manufacture a winner, canonical truth, compulsory merge, or learning claim.",
+  "cases": [
+    {
+      "id": "parallel-branches-no-winner-pass",
+      "expected_valid": true,
+      "envelope": {
+        "version": "0.1",
+        "id": "branch-compare-001",
+        "question_ref": "question-fairness",
+        "source_translation_ref": "translation-human-001",
+        "branches": [
+          {"branch_ref":"branch-a","worldspec_revision_ref":"ws-r10-a","origin":"baseline","source_human_response_ref":null,"status":"kept_separate","canonical":false},
+          {"branch_ref":"branch-b","worldspec_revision_ref":"ws-r10-b","origin":"human_perturbation","source_human_response_ref":"human-response-001","status":"kept_separate","canonical":false}
+        ],
+        "world_evidence": [
+          {"branch_ref":"branch-a","world_evidence_ref":"world-evidence-a","evidence_class":"world_observation","facts_duplicated":false,"world_judgment":false},
+          {"branch_ref":"branch-b","world_evidence_ref":"world-evidence-b","evidence_class":"world_observation","facts_duplicated":false,"world_judgment":false}
+        ],
+        "criteria": [],
+        "reflections": [
+          {"reflection_ref":"reflection-001","participant_ref":"learner-1","branch_refs":["branch-a","branch-b"],"evidence_class":"human_interaction","stance":"keeps_plural","canonical_source_preserved":true}
+        ],
+        "comparison": {"status":"intentionally_plural","actor_type":"learner","evidence_class":"human_interaction","criterion_relations":[],"winner_required":false,"canonical_branch_ref":null,"merge_required":false,"machine_final_authority":false,"learning_claim":false},
+        "provenance": {"branch_histories_preserved":true,"human_source_recoverable":true,"world_is_final_authority":false,"easy_metric_is_authority":false,"human_purpose_governs_metric_relevance":true,"synthetic_production_authority":false,"comparison_reversible":true,"forced_convergence_authorized":false}
+      }
+    },
+    {
+      "id": "human-criterion-metric-pass",
+      "expected_valid": true,
+      "envelope": {
+        "version":"0.1","id":"branch-compare-002","question_ref":"question-bridge","source_translation_ref":"translation-human-002",
+        "branches":[
+          {"branch_ref":"branch-fast","worldspec_revision_ref":"ws-fast","origin":"baseline","source_human_response_ref":null,"status":"active","canonical":false},
+          {"branch_ref":"branch-weird","worldspec_revision_ref":"ws-weird","origin":"human_perturbation","source_human_response_ref":"human-response-002","status":"active","canonical":false}
+        ],
+        "world_evidence":[
+          {"branch_ref":"branch-fast","world_evidence_ref":"we-fast","evidence_class":"world_observation","facts_duplicated":false,"world_judgment":false},
+          {"branch_ref":"branch-weird","world_evidence_ref":"we-weird","evidence_class":"world_observation","facts_duplicated":false,"world_judgment":false}
+        ],
+        "criteria":[
+          {"criterion_ref":"criterion-crossing-time","authored_by":"learner","evidence_class":"human_interaction","purpose_ref":"purpose-test-travel-time","metric_ref":"metric-seconds","status":"active"}
+        ],
+        "reflections":[],
+        "comparison":{"status":"human_interpreted","actor_type":"learner","evidence_class":"human_interaction","criterion_relations":[
+          {"criterion_ref":"criterion-crossing-time","branch_ref":"branch-fast","relation":"supports","assigned_by":"learner"},
+          {"criterion_ref":"criterion-crossing-time","branch_ref":"branch-weird","relation":"counters","assigned_by":"learner"}
+        ],"winner_required":false,"canonical_branch_ref":null,"merge_required":false,"machine_final_authority":false,"learning_claim":false},
+        "provenance":{"branch_histories_preserved":true,"human_source_recoverable":true,"world_is_final_authority":false,"easy_metric_is_authority":false,"human_purpose_governs_metric_relevance":true,"synthetic_production_authority":false,"comparison_reversible":true,"forced_convergence_authorized":false}
+      }
+    },
+    {
+      "id": "generative-failure-pass",
+      "expected_valid": true,
+      "envelope": {
+        "version":"0.1","id":"branch-compare-003","question_ref":"question-city","source_translation_ref":"translation-human-003",
+        "branches":[
+          {"branch_ref":"branch-efficient","worldspec_revision_ref":"ws-efficient","origin":"baseline","source_human_response_ref":null,"status":"active","canonical":false},
+          {"branch_ref":"branch-chaotic","worldspec_revision_ref":"ws-chaotic","origin":"human_perturbation","source_human_response_ref":"human-response-003","status":"revisited","canonical":false}
+        ],
+        "world_evidence":[
+          {"branch_ref":"branch-efficient","world_evidence_ref":"we-efficient","evidence_class":"world_observation","facts_duplicated":false,"world_judgment":false},
+          {"branch_ref":"branch-chaotic","world_evidence_ref":"we-chaotic","evidence_class":"world_observation","facts_duplicated":false,"world_judgment":false}
+        ],
+        "criteria":[
+          {"criterion_ref":"criterion-shortest-route","authored_by":"learner","evidence_class":"human_interaction","purpose_ref":"purpose-test-route","metric_ref":"metric-route-length","status":"active"}
+        ],
+        "reflections":[
+          {"reflection_ref":"reflection-chaotic","participant_ref":"learner-1","branch_refs":["branch-chaotic"],"evidence_class":"human_interaction","stance":"prefers","canonical_source_preserved":true}
+        ],
+        "comparison":{"status":"human_interpreted","actor_type":"learner","evidence_class":"human_interaction","criterion_relations":[
+          {"criterion_ref":"criterion-shortest-route","branch_ref":"branch-efficient","relation":"supports","assigned_by":"learner"},
+          {"criterion_ref":"criterion-shortest-route","branch_ref":"branch-chaotic","relation":"counters","assigned_by":"learner"}
+        ],"winner_required":false,"canonical_branch_ref":null,"merge_required":false,"machine_final_authority":false,"learning_claim":false},
+        "provenance":{"branch_histories_preserved":true,"human_source_recoverable":true,"world_is_final_authority":false,"easy_metric_is_authority":false,"human_purpose_governs_metric_relevance":true,"synthetic_production_authority":false,"comparison_reversible":true,"forced_convergence_authorized":false}
+      }
+    },
+    {
+      "id": "turtle-comparison-proposal-pass",
+      "expected_valid": true,
+      "envelope": {
+        "version":"0.1","id":"branch-compare-004","question_ref":"question-market","source_translation_ref":"translation-human-004",
+        "branches":[
+          {"branch_ref":"branch-a","worldspec_revision_ref":"ws-a","origin":"baseline","source_human_response_ref":null,"status":"active","canonical":false},
+          {"branch_ref":"branch-b","worldspec_revision_ref":"ws-b","origin":"human_perturbation","source_human_response_ref":"human-response-004","status":"active","canonical":false}
+        ],
+        "world_evidence":[
+          {"branch_ref":"branch-a","world_evidence_ref":"we-a","evidence_class":"world_observation","facts_duplicated":false,"world_judgment":false},
+          {"branch_ref":"branch-b","world_evidence_ref":"we-b","evidence_class":"world_observation","facts_duplicated":false,"world_judgment":false}
+        ],
+        "criteria":[
+          {"criterion_ref":"criterion-access","authored_by":"human_group","evidence_class":"human_interaction","purpose_ref":"purpose-shared-access","metric_ref":null,"status":"active"}
+        ],
+        "reflections":[],
+        "comparison":{"status":"proposed","actor_type":"turtle","evidence_class":"system_record","criterion_relations":[
+          {"criterion_ref":"criterion-access","branch_ref":"branch-a","relation":"mixed","assigned_by":"turtle"},
+          {"criterion_ref":"criterion-access","branch_ref":"branch-b","relation":"mixed","assigned_by":"turtle"}
+        ],"winner_required":false,"canonical_branch_ref":null,"merge_required":false,"machine_final_authority":false,"learning_claim":false},
+        "provenance":{"branch_histories_preserved":true,"human_source_recoverable":true,"world_is_final_authority":false,"easy_metric_is_authority":false,"human_purpose_governs_metric_relevance":true,"synthetic_production_authority":false,"comparison_reversible":true,"forced_convergence_authorized":false}
+      }
+    },
+    {
+      "id": "reject-comparison-pass",
+      "expected_valid": true,
+      "envelope": {
+        "version":"0.1","id":"branch-compare-005","question_ref":"question-garden","source_translation_ref":"translation-human-005",
+        "branches":[
+          {"branch_ref":"branch-a","worldspec_revision_ref":"ws-a","origin":"baseline","source_human_response_ref":null,"status":"kept_separate","canonical":false},
+          {"branch_ref":"branch-b","worldspec_revision_ref":"ws-b","origin":"human_perturbation","source_human_response_ref":"human-response-005","status":"kept_separate","canonical":false}
+        ],
+        "world_evidence":[{"branch_ref":"branch-a","world_evidence_ref":"we-a","evidence_class":"world_observation","facts_duplicated":false,"world_judgment":false}],
+        "criteria":[],
+        "reflections":[{"reflection_ref":"reflection-reject","participant_ref":"learner-1","branch_refs":["branch-a","branch-b"],"evidence_class":"human_interaction","stance":"rejects_comparison","canonical_source_preserved":true}],
+        "comparison":{"status":"contested","actor_type":"learner","evidence_class":"human_interaction","criterion_relations":[],"winner_required":false,"canonical_branch_ref":null,"merge_required":false,"machine_final_authority":false,"learning_claim":false},
+        "provenance":{"branch_histories_preserved":true,"human_source_recoverable":true,"world_is_final_authority":false,"easy_metric_is_authority":false,"human_purpose_governs_metric_relevance":true,"synthetic_production_authority":false,"comparison_reversible":true,"forced_convergence_authorized":false}
+      }
+    },
+    {
+      "id":"canonical-branch-fail","expected_valid":false,"expected_error":"branch may not be canonical",
+      "envelope": {
+        "version":"0.1","id":"branch-compare-f01","question_ref":"q","source_translation_ref":"t",
+        "branches":[
+          {"branch_ref":"a","worldspec_revision_ref":"wa","origin":"baseline","source_human_response_ref":null,"status":"active","canonical":true},
+          {"branch_ref":"b","worldspec_revision_ref":"wb","origin":"human_perturbation","source_human_response_ref":"hr","status":"active","canonical":false}
+        ],
+        "world_evidence":[{"branch_ref":"a","world_evidence_ref":"we","evidence_class":"world_observation","facts_duplicated":false,"world_judgment":false}],"criteria":[],"reflections":[],
+        "comparison":{"status":"intentionally_plural","actor_type":"system","evidence_class":"system_record","criterion_relations":[],"winner_required":false,"canonical_branch_ref":null,"merge_required":false,"machine_final_authority":false,"learning_claim":false},
+        "provenance":{"branch_histories_preserved":true,"human_source_recoverable":true,"world_is_final_authority":false,"easy_metric_is_authority":false,"human_purpose_governs_metric_relevance":true,"synthetic_production_authority":false,"comparison_reversible":true,"forced_convergence_authorized":false}
+      }
+    },
+    {
+      "id":"unknown-criterion-fail","expected_valid":false,"expected_error":"criterion relation must reference a declared active human criterion",
+      "envelope": {
+        "version":"0.1","id":"branch-compare-f02","question_ref":"q","source_translation_ref":"t",
+        "branches":[
+          {"branch_ref":"a","worldspec_revision_ref":"wa","origin":"baseline","source_human_response_ref":null,"status":"active","canonical":false},
+          {"branch_ref":"b","worldspec_revision_ref":"wb","origin":"human_perturbation","source_human_response_ref":"hr","status":"active","canonical":false}
+        ],
+        "world_evidence":[{"branch_ref":"a","world_evidence_ref":"we","evidence_class":"world_observation","facts_duplicated":false,"world_judgment":false}],"criteria":[],"reflections":[],
+        "comparison":{"status":"proposed","actor_type":"turtle","evidence_class":"system_record","criterion_relations":[{"criterion_ref":"machine-metric","branch_ref":"a","relation":"supports","assigned_by":"turtle"}],"winner_required":false,"canonical_branch_ref":null,"merge_required":false,"machine_final_authority":false,"learning_claim":false},
+        "provenance":{"branch_histories_preserved":true,"human_source_recoverable":true,"world_is_final_authority":false,"easy_metric_is_authority":false,"human_purpose_governs_metric_relevance":true,"synthetic_production_authority":false,"comparison_reversible":true,"forced_convergence_authorized":false}
+      }
+    },
+    {
+      "id":"unknown-branch-evidence-fail","expected_valid":false,"expected_error":"world evidence must reference a declared branch",
+      "envelope": {
+        "version":"0.1","id":"branch-compare-f03","question_ref":"q","source_translation_ref":"t",
+        "branches":[
+          {"branch_ref":"a","worldspec_revision_ref":"wa","origin":"baseline","source_human_response_ref":null,"status":"active","canonical":false},
+          {"branch_ref":"b","worldspec_revision_ref":"wb","origin":"human_perturbation","source_human_response_ref":"hr","status":"active","canonical":false}
+        ],
+        "world_evidence":[{"branch_ref":"c","world_evidence_ref":"we","evidence_class":"world_observation","facts_duplicated":false,"world_judgment":false}],"criteria":[],"reflections":[],
+        "comparison":{"status":"not_attempted","actor_type":"system","evidence_class":"system_record","criterion_relations":[],"winner_required":false,"canonical_branch_ref":null,"merge_required":false,"machine_final_authority":false,"learning_claim":false},
+        "provenance":{"branch_histories_preserved":true,"human_source_recoverable":true,"world_is_final_authority":false,"easy_metric_is_authority":false,"human_purpose_governs_metric_relevance":true,"synthetic_production_authority":false,"comparison_reversible":true,"forced_convergence_authorized":false}
+      }
+    },
+    {
+      "id":"synthetic-judgment-fail","expected_valid":false,"expected_error":"synthetic_turtle comparison must remain a proposal",
+      "envelope": {
+        "version":"0.1","id":"branch-compare-f04","question_ref":"q","source_translation_ref":"t",
+        "branches":[
+          {"branch_ref":"a","worldspec_revision_ref":"wa","origin":"baseline","source_human_response_ref":null,"status":"active","canonical":false},
+          {"branch_ref":"b","worldspec_revision_ref":"wb","origin":"human_perturbation","source_human_response_ref":"hr","status":"active","canonical":false}
+        ],
+        "world_evidence":[{"branch_ref":"a","world_evidence_ref":"we","evidence_class":"world_observation","facts_duplicated":false,"world_judgment":false}],"criteria":[],"reflections":[],
+        "comparison":{"status":"intentionally_plural","actor_type":"synthetic_turtle","evidence_class":"synthetic_self_play","criterion_relations":[],"winner_required":false,"canonical_branch_ref":null,"merge_required":false,"machine_final_authority":false,"learning_claim":false},
+        "provenance":{"branch_histories_preserved":true,"human_source_recoverable":true,"world_is_final_authority":false,"easy_metric_is_authority":false,"human_purpose_governs_metric_relevance":true,"synthetic_production_authority":false,"comparison_reversible":true,"forced_convergence_authorized":false}
+      }
+    },
+    {
+      "id":"human-perturbation-source-missing-fail","expected_valid":false,"expected_error":"human_perturbation branch must preserve its source human response",
+      "envelope": {
+        "version":"0.1","id":"branch-compare-f05","question_ref":"q","source_translation_ref":"t",
+        "branches":[
+          {"branch_ref":"a","worldspec_revision_ref":"wa","origin":"baseline","source_human_response_ref":null,"status":"active","canonical":false},
+          {"branch_ref":"b","worldspec_revision_ref":"wb","origin":"human_perturbation","source_human_response_ref":null,"status":"active","canonical":false}
+        ],
+        "world_evidence":[{"branch_ref":"b","world_evidence_ref":"we","evidence_class":"world_observation","facts_duplicated":false,"world_judgment":false}],"criteria":[],"reflections":[],
+        "comparison":{"status":"intentionally_plural","actor_type":"system","evidence_class":"system_record","criterion_relations":[],"winner_required":false,"canonical_branch_ref":null,"merge_required":false,"machine_final_authority":false,"learning_claim":false},
+        "provenance":{"branch_histories_preserved":true,"human_source_recoverable":true,"world_is_final_authority":false,"easy_metric_is_authority":false,"human_purpose_governs_metric_relevance":true,"synthetic_production_authority":false,"comparison_reversible":true,"forced_convergence_authorized":false}
+      }
+    },
+    {
+      "id":"metric-as-authority-fail","expected_valid":false,"expected_error":"easy metric may not become authority",
+      "envelope": {
+        "version":"0.1","id":"branch-compare-f06","question_ref":"q","source_translation_ref":"t",
+        "branches":[
+          {"branch_ref":"a","worldspec_revision_ref":"wa","origin":"baseline","source_human_response_ref":null,"status":"active","canonical":false},
+          {"branch_ref":"b","worldspec_revision_ref":"wb","origin":"human_perturbation","source_human_response_ref":"hr","status":"active","canonical":false}
+        ],
+        "world_evidence":[{"branch_ref":"a","world_evidence_ref":"we","evidence_class":"world_observation","facts_duplicated":false,"world_judgment":false}],"criteria":[],"reflections":[],
+        "comparison":{"status":"proposed","actor_type":"system","evidence_class":"system_record","criterion_relations":[],"winner_required":false,"canonical_branch_ref":null,"merge_required":false,"machine_final_authority":false,"learning_claim":false},
+        "provenance":{"branch_histories_preserved":true,"human_source_recoverable":true,"world_is_final_authority":false,"easy_metric_is_authority":true,"human_purpose_governs_metric_relevance":true,"synthetic_production_authority":false,"comparison_reversible":true,"forced_convergence_authorized":false}
+      }
+    },
+    {
+      "id":"learning-claim-fail","expected_valid":false,"expected_error":"comparison may not claim learner learning",
+      "envelope": {
+        "version":"0.1","id":"branch-compare-f07","question_ref":"q","source_translation_ref":"t",
+        "branches":[
+          {"branch_ref":"a","worldspec_revision_ref":"wa","origin":"baseline","source_human_response_ref":null,"status":"active","canonical":false},
+          {"branch_ref":"b","worldspec_revision_ref":"wb","origin":"human_perturbation","source_human_response_ref":"hr","status":"active","canonical":false}
+        ],
+        "world_evidence":[{"branch_ref":"a","world_evidence_ref":"we","evidence_class":"world_observation","facts_duplicated":false,"world_judgment":false}],"criteria":[],"reflections":[],
+        "comparison":{"status":"human_interpreted","actor_type":"learner","evidence_class":"human_interaction","criterion_relations":[],"winner_required":false,"canonical_branch_ref":null,"merge_required":false,"machine_final_authority":false,"learning_claim":true},
+        "provenance":{"branch_histories_preserved":true,"human_source_recoverable":true,"world_is_final_authority":false,"easy_metric_is_authority":false,"human_purpose_governs_metric_relevance":true,"synthetic_production_authority":false,"comparison_reversible":true,"forced_convergence_authorized":false}
+      }
+    }
+  ]
+}
