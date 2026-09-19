@@ -48,6 +48,9 @@ jobs:
       - name: Validate Human Perturbation Translation Envelope
         run: npm run validate:human-perturbation
 
+      - name: Validate Branch Experience Comparison Envelope
+        run: npm run validate:branch-experience
+
       - name: Validate Build Log cross-connections
         run: npm run validate:build-log-connections
 
