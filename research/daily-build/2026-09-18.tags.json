@@ -1,0 +1,100 @@
+{
+  "schema": "turtleblockai.daily-build-tags.v0.1",
+  "date": "2026-09-18",
+  "ontology_version": "sanders-ontology-v0.1",
+  "autobuild_run_id": "autobuild-2026-09-18",
+  "capture_batch_closed": true,
+  "d1_persistence": "staged_only_no_authorized_live_write_action",
+  "principles": {
+    "immutable_dissertation_source_layer": true,
+    "multi_tag": true,
+    "preserve_unmapped_residue": true,
+    "world_evidence_is_not_judgment": true,
+    "human_purpose_governs_metric_relevance": true,
+    "branch_comparison_does_not_require_winner": true,
+    "synthetic_is_not_human_evidence": true,
+    "machine_final_authority": false,
+    "reversible": true,
+    "no_generalized_persistent_personal_memory": true,
+    "no_autonomous_production_self_modification": true
+  },
+  "research_objects": [
+    {"id":"autobuild_run:autobuild-2026-09-18","object_type":"autobuild_run","title":"September 18 bounded TurtleBlock AI build-in-public cycle","actor":"turtle","evidence_class":"system_record","privacy_class":"public","model":"GPT-5.6 Sol","version":"0.1.0"},
+    {"id":"human_direction:2026-09-18-standing-daily-build","object_type":"human_direction","title":"Run one bounded cycle with reconciliation, Wait-a-minute cross-connection, exhaustive tagging, and conservative versioning","actor":"human","evidence_class":"human_authored","privacy_class":"internal","raw_text_published":false},
+    {"id":"source_signal:2026-09-18-openai-work-design","object_type":"external_source_signal","title":"OpenAI finds recurring cross-occupation AI workflows and emphasizes work design alongside tool access","source_uri":"https://openai.com/index/unlocking-new-ways-of-working/","external_date":"2026-09-16","actor":"external_source","evidence_class":"external_source","privacy_class":"public"},
+    {"id":"source_signal:2026-09-18-nvidia-flare","object_type":"external_source_signal","title":"NVIDIA FLARE coordinates heterogeneous participants while preserving site-owned data and execution policy","source_uri":"https://developer.nvidia.com/blog/scaling-federated-learning-across-docker-kubernetes-and-slurm-with-nvidia-flare/","external_date":"2026-09-15","actor":"external_source","evidence_class":"external_source","privacy_class":"public"},
+    {"id":"source_signal:2026-09-18-minecraft-village-square","object_type":"external_source_signal","title":"Minecraft Education Village Square makes competing perspectives and consequences inhabitable inside an authored civic purpose","source_uri":"https://education.minecraft.net/en-us/discover/village-square-civics","external_date":"2026-09-14","actor":"external_source","evidence_class":"external_source","privacy_class":"public"},
+    {"id":"source_signal:2026-09-18-mit-values","object_type":"external_source_signal","title":"MIT Media Lab seminar highlights mismatch between measurable engagement and self-stated values","source_uri":"https://www.media.mit.edu/events/bonus-seminar-paying-attention-to-values-in-the-age-of-algorithmic-amplifiers/","external_date":"2026-09-18","actor":"external_source","evidence_class":"external_source","privacy_class":"public"},
+    {"id":"question:2026-09-18-inherited-edge","object_type":"autobuild_question","title":"Can difference survive being built and compared without producing canonical truth?","actor":"turtle","evidence_class":"system_record","privacy_class":"public"},
+    {"id":"candidate:2026-09-18-live-branch-ui","object_type":"autobuild_candidate","title":"Build live side-by-side branch UI","decision":"rejected_for_today","rejection_reason":"Comparison semantics should survive hostile evaluation before learner-facing UI implies stability.","actor":"turtle","evidence_class":"system_record","privacy_class":"public"},
+    {"id":"candidate:2026-09-18-core-worldspec-branch-expansion","object_type":"autobuild_candidate","title":"Expand core WorldSpec branch machinery","decision":"rejected_for_today","rejection_reason":"WorldSpec already records forked history; richer semantics have not earned core-schema status.","actor":"turtle","evidence_class":"system_record","privacy_class":"public"},
+    {"id":"candidate:2026-09-18-branch-ranking","object_type":"autobuild_candidate","title":"Automatically score and rank branches","decision":"rejected","rejection_reason":"Easy metrics would become hidden authority and undermine human-authored criteria and purposeful play.","actor":"turtle","evidence_class":"system_record","privacy_class":"public"},
+    {"id":"candidate:2026-09-18-live-telemetry","object_type":"autobuild_candidate","title":"Add live Minecraft branch telemetry","decision":"rejected_for_today","rejection_reason":"Collection machinery should not precede settled evidence and comparison governance.","actor":"turtle","evidence_class":"system_record","privacy_class":"public"},
+    {"id":"candidate:2026-09-18-synthetic-branch-judge","object_type":"autobuild_candidate","title":"Use Recursive Turtle as branch judge","decision":"rejected","rejection_reason":"Synthetic critique may generate fixtures but cannot decide human branch value or become human evidence.","actor":"turtle","evidence_class":"system_record","privacy_class":"public"},
+    {"id":"candidate:2026-09-18-persistent-memory","object_type":"autobuild_candidate","title":"Learn branch preferences through generalized personal memory","decision":"rejected","rejection_reason":"Unnecessary to the bounded comparison problem and outside current privacy/version scope.","actor":"turtle","evidence_class":"system_record","privacy_class":"public"},
+    {"id":"selection:2026-09-18-branch-experience","object_type":"autobuild_selection","title":"Select Branch Experience Comparison Envelope v0.1 plus twelve-case hostile suite","actor":"turtle","evidence_class":"system_record","privacy_class":"public"},
+    {"id":"repo_file:worldspec/schema/branch-experience-comparison-envelope.schema.json","object_type":"repository_artifact","title":"Branch Experience Comparison Envelope v0.1","repo_path":"worldspec/schema/branch-experience-comparison-envelope.schema.json","evidence_class":"system_record","privacy_class":"public"},
+    {"id":"repo_file:worldspec/tests/branch-experience-comparison-envelope-cases.json","object_type":"evaluation_fixture_set","title":"Branch Experience Comparison hostile cases","repo_path":"worldspec/tests/branch-experience-comparison-envelope-cases.json","evidence_class":"system_record","privacy_class":"public"},
+    {"id":"repo_file:scripts/validate-branch-experience-comparison-envelope.mjs","object_type":"deterministic_evaluation","title":"Branch Experience Comparison validator","repo_path":"scripts/validate-branch-experience-comparison-envelope.mjs","evidence_class":"system_record","privacy_class":"public"},
+    {"id":"test:2026-09-18-branch-experience-ci","object_type":"test_result","title":"GitHub Actions validates Branch Experience Comparison and prior contracts","run_ref":"35413393670","result":"passed","evidence_class":"system_record","privacy_class":"public"},
+    {"id":"wait_a_minute:2026-09-18-branch-perturbation","object_type":"wait_a_minute_connection","title":"Alternate branch consequences may become a perturbation source without becoming human otherness","evidence_class":"system_record","privacy_class":"public","disposition":"next_edge_candidate_selected"},
+    {"id":"next_edge:2026-09-18-cross-pollination","object_type":"next_edge","title":"Can branches cross-pollinate without merging?","repo_path":"public/data/next-edge.json","evidence_class":"system_record","privacy_class":"public"},
+    {"id":"reconciliation:2026-09-18-site-runtime-fallback","object_type":"reconciliation_finding","title":"Direct-asset embedded Build Log/Next Edge fallback is one release behind canonical feeds","status":"unresolved_low_severity","evidence_class":"system_record","privacy_class":"public"},
+    {"id":"version_judgment:2026-09-18","object_type":"version_judgment","title":"Remain at v0.1.0","decision":"no_bump","evidence_class":"system_record","privacy_class":"public"}
+  ],
+  "relationships": [
+    {"from":"selection:2026-09-18-branch-experience","predicate":"answers","to":"question:2026-09-18-inherited-edge","rationale":"The selected contract makes branch comparison and noncanonical world evidence executable."},
+    {"from":"repo_file:worldspec/tests/branch-experience-comparison-envelope-cases.json","predicate":"tests","to":"repo_file:worldspec/schema/branch-experience-comparison-envelope.schema.json","rationale":"Twelve hostile cases exercise the comparison boundary."},
+    {"from":"repo_file:scripts/validate-branch-experience-comparison-envelope.mjs","predicate":"validates","to":"repo_file:worldspec/tests/branch-experience-comparison-envelope-cases.json","rationale":"The deterministic validator checks branch, criterion, evidence, actor, and authority invariants."},
+    {"from":"wait_a_minute:2026-09-18-branch-perturbation","predicate":"connects","to":"repo_file:worldspec/schema/branch-experience-comparison-envelope.schema.json","rationale":"Built branch consequences can introduce difference without becoming branch truth."},
+    {"from":"wait_a_minute:2026-09-18-branch-perturbation","predicate":"connects_conceptually","to":"repo_file:research/TURTLE_ASK.md","rationale":"TurtleAsk provides the contrasting case of genuine human otherness; branch-derived perturbation must remain a different provenance class."},
+    {"from":"next_edge:2026-09-18-cross-pollination","predicate":"follows","to":"selection:2026-09-18-branch-experience","rationale":"After comparison without ranking, the next risk is moving insight across branches without silent merge."}
+  ],
+  "ctc_tags": [
+    {"object_id":"selection:2026-09-18-branch-experience","domain":"Personal Inquiry","role":"primary","rationale":"Human purpose governs which branch consequences and criteria matter."},
+    {"object_id":"selection:2026-09-18-branch-experience","domain":"Compelling Problem or Question","role":"primary","rationale":"Divergent consequences may create new questions instead of one answer."},
+    {"object_id":"selection:2026-09-18-branch-experience","domain":"Technology as Tool to Think With","role":"primary","rationale":"Branches and evidence are manipulable computational material rather than a leaderboard."},
+    {"object_id":"selection:2026-09-18-branch-experience","domain":"Formative Demonstration of Learning","role":"supports","rationale":"Branch revisions may later contribute evidence, but branch performance is not proof of learning."},
+    {"object_id":"selection:2026-09-18-branch-experience","domain":"Reflection as Learning","role":"primary","rationale":"Participants may compare, reject comparison, or revise criteria."},
+    {"object_id":"selection:2026-09-18-branch-experience","domain":"Social and Cultural Critique","role":"primary","rationale":"Ranking criteria may encode hidden efficiency, value, aesthetic, and power assumptions."},
+    {"object_id":"selection:2026-09-18-branch-experience","domain":"Sharing and Collaborating","role":"primary","rationale":"Collaboration can preserve parallel worlds without compulsory convergence."}
+  ],
+  "ontology_tags": [
+    {"object_id":"selection:2026-09-18-branch-experience","concept_key":"possible_possibles","role":"primary","rationale":"Multiple built possibilities remain materially available after comparison."},
+    {"object_id":"selection:2026-09-18-branch-experience","concept_key":"make_walk_around_in_and_change_the_story","role":"primary","rationale":"Different interpretations are inhabited before their consequences are compared."},
+    {"object_id":"selection:2026-09-18-branch-experience","concept_key":"co_active_emergence","role":"primary","rationale":"Human purpose, Turtle proposals, world behavior, and reflection recursively change inquiry."},
+    {"object_id":"selection:2026-09-18-branch-experience","concept_key":"machine_responses_as_material_for_evaluation","role":"primary","rationale":"Turtle comparison is inspectable material, not final judgment."},
+    {"object_id":"selection:2026-09-18-branch-experience","concept_key":"purposeful_play","role":"primary","rationale":"A strange or inefficient branch can remain generative even when it counters an easy metric."},
+    {"object_id":"selection:2026-09-18-branch-experience","concept_key":"steamhamlet","role":"supports","rationale":"A room of possibilities need not collapse alternate futures into ranking."},
+    {"object_id":"selection:2026-09-18-branch-experience","concept_key":"cohabitation_without_provenance_collapse","role":"primary","rationale":"Branch history, world evidence, criteria, reflection, and machine comparison stay distinguishable."}
+  ],
+  "emergent_tags": [
+    {"tag":"branch_comparison_without_ranking","rationale":"Built alternatives can be compared without requiring a winner."},
+    {"tag":"generative_failure","rationale":"A branch may counter an explicit metric and still be worth revisiting for a human-authored reason."},
+    {"tag":"metric_non_authority","rationale":"Measurement gains relevance only through explicit human purpose and does not become value by itself."},
+    {"tag":"cross_branch_perturbation","rationale":"An alternate branch may generate a question or observation worth carrying elsewhere without becoming a merge."}
+  ],
+  "wait_a_minute": [
+    {
+      "id":"wait_a_minute:2026-09-18-branch-perturbation",
+      "connected_pointers":["research/TURTLE_ASK.md","worldspec/schema/world-evidence-envelope.schema.json","worldspec/schema/branch-experience-comparison-envelope.schema.json"],
+      "overlap":"TurtleAsk seeks genuine human difference; an alternate built branch can generate a different, nonhuman source of perturbation through its consequences.",
+      "why_it_may_matter":"A future move may carry a question, observation, or constraint across branches without merging them.",
+      "uncertainty":"Branch-derived perturbation is not human otherness and may already be adequately described by recursive learning plus provenance.",
+      "disposition":"next_edge_candidate_selected"
+    }
+  ],
+  "reconciliation_findings": [
+    {"candidate":"worldspec/schema/branch-experience-comparison-envelope.schema.json","resolution":"represented_by_canonical_pointer_and_staging","canonical_pointer":"research/daily-build/2026-09-18.tags.json"},
+    {"candidate":"live universal D1 research graph","resolution":"intentionally_not_claimed","reason":"No authorized live D1 read/write path is available in this run."},
+    {"candidate":"public/assets/site-runtime.js embedded fallback","resolution":"unresolved_gap","reason":"Embedded fallback remains one release behind while normal runtime fetches canonical no-store Build Log and Next Edge feeds."},
+    {"candidate":"consent-safe TRY IT visitor observations","resolution":"intentionally_not_captured","reason":"No authorized consent-safe visitor research read path was available."}
+  ],
+  "uncaptured_observations": [
+    {"observation":"Multiple human-authored criteria can conflict even when each is explicit; the current contract preserves relations but does not resolve value conflict.","status":"open","candidate_domain":null},
+    {"observation":"An alternate built branch can become a perturbation source without becoming a human participant.","status":"open","candidate_domain":null},
+    {"observation":"Repeated traceable cross-branch transfers could still produce de facto convergence over time.","status":"open","candidate_domain":null},
+    {"observation":"A metric-worse branch can remain intellectually or aesthetically generative under human judgment.","status":"open","candidate_domain":null}
+  ],
+  "version_judgment": {"product_version":"0.1.0","decision":"no_bump","rationale":"Evaluation/provenance strengthened, but coherent versioned model/config behavior required for v0.2 remains incomplete."}
+}
