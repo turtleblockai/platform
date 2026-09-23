@@ -91,4 +91,6 @@ This keeps the open question separate from the historical Build Log. Daily build
 
 ## Current theoretical question
 
-Can TurtleBlock AI make its own **edge of curiosity** observable without turning curiosity into a conventional backlog, collapsing provenance, or allowing the machine to mistake a provocative suggestion for a decision?
+Can a **Persistent Computing Environment** stay with a learner long enough to notice, connect, question, challenge, and remember without becoming **persistently perturbant**—and can the learner reliably push back by reducing, redirecting, or revoking machine initiative?
+
+The public source of truth for the current horizon remains `public/data/next-edge.json`. The phrase *persistently perturbant* is provisional research language, not a settled construct.
