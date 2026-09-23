@@ -1,0 +1,121 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://turtleblockai.com/worldspec/schema/cross-branch-perturbation-envelope/v0.1.json",
+  "title": "TurtleBlock AI Cross-Branch Perturbation Envelope",
+  "description": "Experimental research contract for carrying a traceable question, observation, or constraint from one WorldSpec branch into another as a proposal without merging histories, erasing source provenance, or treating transfer as proof of correction. Human authority remains required before a human-owned target branch changes.",
+  "type": "object",
+  "required": ["version", "id", "source_branch", "target_branch", "perturbation", "proposal", "target_decision", "application", "lineage", "provenance"],
+  "properties": {
+    "version": { "const": "0.1" },
+    "id": { "type": "string", "minLength": 1 },
+    "source_branch": {
+      "type": "object",
+      "required": ["branch_ref", "worldspec_revision_ref", "origin", "source_human_response_ref", "history_preserved"],
+      "properties": {
+        "branch_ref": { "type": "string", "minLength": 1 },
+        "worldspec_revision_ref": { "type": "string", "minLength": 1 },
+        "origin": { "type": "string", "enum": ["baseline", "human_perturbation", "human_revision", "other_human_authored"] },
+        "source_human_response_ref": { "type": ["string", "null"] },
+        "history_preserved": { "const": true }
+      },
+      "additionalProperties": false
+    },
+    "target_branch": {
+      "type": "object",
+      "required": ["branch_ref", "worldspec_revision_ref", "owner_type", "history_preserved"],
+      "properties": {
+        "branch_ref": { "type": "string", "minLength": 1 },
+        "worldspec_revision_ref": { "type": "string", "minLength": 1 },
+        "owner_type": { "type": "string", "enum": ["learner", "collaborator", "human_group"] },
+        "history_preserved": { "const": true }
+      },
+      "additionalProperties": false
+    },
+    "perturbation": {
+      "type": "object",
+      "required": ["kind", "content_ref", "source_branch_ref", "source_actor_type", "evidence_class", "source_recoverable", "raw_source_duplicated", "claims_correction", "claims_truth"],
+      "properties": {
+        "kind": { "type": "string", "enum": ["question", "observation", "constraint"] },
+        "content_ref": { "type": "string", "minLength": 1 },
+        "source_branch_ref": { "type": "string", "minLength": 1 },
+        "source_actor_type": { "type": "string", "enum": ["learner", "collaborator", "human_group", "turtle", "synthetic_turtle", "world"] },
+        "evidence_class": { "type": "string", "enum": ["human_interaction", "system_record", "synthetic_self_play", "world_observation"] },
+        "source_recoverable": { "const": true },
+        "raw_source_duplicated": { "const": false },
+        "claims_correction": { "const": false },
+        "claims_truth": { "const": false }
+      },
+      "additionalProperties": false
+    },
+    "proposal": {
+      "type": "object",
+      "required": ["action", "actor_type", "evidence_class", "target_branch_ref", "execution_authority", "world_authority", "metric_authority"],
+      "properties": {
+        "action": { "const": "propose_transfer" },
+        "actor_type": { "type": "string", "enum": ["turtle", "synthetic_turtle"] },
+        "evidence_class": { "type": "string", "enum": ["system_record", "synthetic_self_play"] },
+        "target_branch_ref": { "type": "string", "minLength": 1 },
+        "execution_authority": { "const": false },
+        "world_authority": { "const": false },
+        "metric_authority": { "const": false }
+      },
+      "additionalProperties": false
+    },
+    "target_decision": {
+      "type": "object",
+      "required": ["status", "decided_by", "decision_ref", "evidence_class", "canonical_source_preserved"],
+      "properties": {
+        "status": { "type": "string", "enum": ["pending", "accepted", "rewritten", "rejected"] },
+        "decided_by": { "type": ["string", "null"], "enum": ["learner", "collaborator", "human_group", null] },
+        "decision_ref": { "type": ["string", "null"] },
+        "evidence_class": { "type": "string", "enum": ["none", "human_interaction"] },
+        "canonical_source_preserved": { "const": true }
+      },
+      "additionalProperties": false
+    },
+    "application": {
+      "type": "object",
+      "required": ["status", "target_revision_ref", "applied_content_ref", "merge_performed", "source_branch_mutated", "target_history_rewritten", "correction_claim", "canonical_branch_created"],
+      "properties": {
+        "status": { "type": "string", "enum": ["not_applied", "applied_as_is", "applied_rewritten"] },
+        "target_revision_ref": { "type": ["string", "null"] },
+        "applied_content_ref": { "type": ["string", "null"] },
+        "merge_performed": { "const": false },
+        "source_branch_mutated": { "const": false },
+        "target_history_rewritten": { "const": false },
+        "correction_claim": { "const": false },
+        "canonical_branch_created": { "const": false }
+      },
+      "additionalProperties": false
+    },
+    "lineage": {
+      "type": "object",
+      "required": ["prior_transfer_refs", "upstream_human_source_ref", "source_branch_lineage_preserved", "target_branch_lineage_preserved"],
+      "properties": {
+        "prior_transfer_refs": { "type": "array", "uniqueItems": true, "items": { "type": "string", "minLength": 1 } },
+        "upstream_human_source_ref": { "type": ["string", "null"] },
+        "source_branch_lineage_preserved": { "const": true },
+        "target_branch_lineage_preserved": { "const": true }
+      },
+      "additionalProperties": false
+    },
+    "provenance": {
+      "type": "object",
+      "required": ["branch_histories_preserved", "transfer_is_merge", "transfer_is_proof_of_correction", "human_authority_required", "synthetic_production_authority", "world_evidence_authorizes_transfer", "easy_metric_authorizes_transfer", "generalized_personal_memory", "production_self_modification", "reversible"],
+      "properties": {
+        "branch_histories_preserved": { "const": true },
+        "transfer_is_merge": { "const": false },
+        "transfer_is_proof_of_correction": { "const": false },
+        "human_authority_required": { "const": true },
+        "synthetic_production_authority": { "const": false },
+        "world_evidence_authorizes_transfer": { "const": false },
+        "easy_metric_authorizes_transfer": { "const": false },
+        "generalized_personal_memory": { "const": false },
+        "production_self_modification": { "const": false },
+        "reversible": { "const": true }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

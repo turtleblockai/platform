@@ -17,6 +17,17 @@ export interface BuildLogEntry {
 // through the Worker. Open inquiry belongs in Next Edge, not in completed entries.
 export const BUILD_LOG_ENTRIES: BuildLogEntry[] = [
   {
+    id: "2026-09-22-cross-branch-perturbation",
+    date: "Sep 22, 2026",
+    title: "A branch can lend another branch a question without swallowing it",
+    body: "A provisional Cross-Branch Perturbation Envelope now lets a traceable question, observation, or constraint discovered in one WorldSpec branch be proposed to another without merging histories, erasing source lineage, or treating transfer as proof that either branch corrected the other. Fifteen deterministic cases preserve human target-branch authority, optional rejection or rewriting, source and target history, upstream human provenance when applicable, and the boundary against world/metric authority, synthetic execution, generalized personal memory, and production self-modification. Product remains v0.1.0.",
+    done: true,
+    waitAMinute: {
+      summary: "Selective Attention already separated noticing from interruption. Cross-branch perturbation exposes the same agency boundary in construction: discovering a useful difference is not authority to apply it. The pattern now recurs across attention, TurtleAsk, and WorldSpec revision.",
+      evidence: ["worldspec/schema/selective-attention-envelope.schema.json", "research/TURTLE_ASK.md", "worldspec/schema/cross-branch-perturbation-envelope.schema.json"]
+    }
+  },
+  {
     id: "2026-09-18-branch-experience-comparison",
     date: "Sep 18, 2026",
     title: "Two built worlds can disagree without becoming a leaderboard",
@@ -147,10 +158,10 @@ export const BUILD_LOG_ENTRIES: BuildLogEntry[] = [
 ];
 
 export const NEXT_EDGE_FALLBACK = {
-  date: "Sep 18, 2026",
-  title: "Can branches cross-pollinate without merging?",
-  question: "Can TurtleBlock AI let an observation, question, or constraint discovered in one inhabited branch cross into another as a traceable perturbation without merging branch histories, erasing its source, or treating transfer as proof that either branch corrected the other?",
-  xFactor: "whoooo knooooowwwssssssssssss — what if the only thing worth carrying from the branch that failed is the question it created?"
+  date: "Sep 22, 2026",
+  title: "When does cross-pollination quietly become convergence?",
+  question: "Can TurtleBlock AI notice when repeated traceable perturbations are gradually collapsing genuinely different branches into de facto convergence without scoring similarity, blocking exchange, or inventing a machine-defined amount of acceptable difference?",
+  xFactor: "whoooo knooooowwwssssssssssss — what if two branches become more interesting precisely because they borrow from each other and still refuse to agree?"
 };
 
 function escapeHtml(value: string) {

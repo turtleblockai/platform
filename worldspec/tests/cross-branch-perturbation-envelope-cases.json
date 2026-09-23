@@ -1,0 +1,34 @@
+{
+  "version": "0.1",
+  "name": "Cross-Branch Perturbation Envelope regression cases",
+  "purpose": "Test whether a question, observation, or constraint can cross from one WorldSpec branch into another as a traceable proposal without merge, source erasure, machine execution authority, fabricated human approval, metric/world authority, or correction claims.",
+  "base_envelope": {
+    "version": "0.1",
+    "id": "cross-branch-001",
+    "source_branch": {"branch_ref":"branch-b","worldspec_revision_ref":"ws-b-4","origin":"human_perturbation","source_human_response_ref":"human-response-17","history_preserved":true},
+    "target_branch": {"branch_ref":"branch-a","worldspec_revision_ref":"ws-a-9","owner_type":"learner","history_preserved":true},
+    "perturbation": {"kind":"question","content_ref":"research-object:question-from-branch-b","source_branch_ref":"branch-b","source_actor_type":"turtle","evidence_class":"system_record","source_recoverable":true,"raw_source_duplicated":false,"claims_correction":false,"claims_truth":false},
+    "proposal": {"action":"propose_transfer","actor_type":"turtle","evidence_class":"system_record","target_branch_ref":"branch-a","execution_authority":false,"world_authority":false,"metric_authority":false},
+    "target_decision": {"status":"pending","decided_by":null,"decision_ref":null,"evidence_class":"none","canonical_source_preserved":true},
+    "application": {"status":"not_applied","target_revision_ref":null,"applied_content_ref":null,"merge_performed":false,"source_branch_mutated":false,"target_history_rewritten":false,"correction_claim":false,"canonical_branch_created":false},
+    "lineage": {"prior_transfer_refs":[],"upstream_human_source_ref":"human-response-17","source_branch_lineage_preserved":true,"target_branch_lineage_preserved":true},
+    "provenance": {"branch_histories_preserved":true,"transfer_is_merge":false,"transfer_is_proof_of_correction":false,"human_authority_required":true,"synthetic_production_authority":false,"world_evidence_authorizes_transfer":false,"easy_metric_authorizes_transfer":false,"generalized_personal_memory":false,"production_self_modification":false,"reversible":true}
+  },
+  "cases": [
+    {"id":"pending-question-pass","expected_valid":true,"patch":{}},
+    {"id":"human-accepts-question-pass","expected_valid":true,"patch":{"target_decision":{"status":"accepted","decided_by":"learner","decision_ref":"human-decision-1","evidence_class":"human_interaction"},"application":{"status":"applied_as_is","target_revision_ref":"ws-a-10","applied_content_ref":"research-object:question-from-branch-b"}}},
+    {"id":"human-rewrites-constraint-pass","expected_valid":true,"patch":{"perturbation":{"kind":"constraint","content_ref":"constraint-from-b"},"target_decision":{"status":"rewritten","decided_by":"learner","decision_ref":"human-rewrite-1","evidence_class":"human_interaction"},"application":{"status":"applied_rewritten","target_revision_ref":"ws-a-10","applied_content_ref":"human-rewrite-1"}}},
+    {"id":"human-rejects-transfer-pass","expected_valid":true,"patch":{"target_decision":{"status":"rejected","decided_by":"learner","decision_ref":"human-decision-reject-1","evidence_class":"human_interaction"}}},
+    {"id":"world-observation-proposed-pass","expected_valid":true,"patch":{"perturbation":{"kind":"observation","content_ref":"world-evidence:b:27","source_actor_type":"world","evidence_class":"world_observation"}}},
+    {"id":"synthetic-question-proposal-pass","expected_valid":true,"patch":{"perturbation":{"content_ref":"synthetic-question-9","source_actor_type":"synthetic_turtle","evidence_class":"synthetic_self_play"},"proposal":{"actor_type":"synthetic_turtle","evidence_class":"synthetic_self_play"}}},
+    {"id":"source-target-collapse-fail","expected_valid":false,"expected_error":"source and target branches must remain distinct","patch":{"target_branch":{"branch_ref":"branch-b"},"proposal":{"target_branch_ref":"branch-b"}}},
+    {"id":"lost-source-fail","expected_valid":false,"expected_error":"perturbation source must remain recoverable","patch":{"perturbation":{"source_recoverable":false}}},
+    {"id":"synthetic-approval-fail","expected_valid":false,"expected_error":"completed target decision must preserve explicit human authority","patch":{"target_decision":{"status":"accepted","decided_by":null,"decision_ref":"synthetic-approval","evidence_class":"none"},"application":{"status":"applied_as_is","target_revision_ref":"ws-a-10","applied_content_ref":"synthetic-question-9"}}},
+    {"id":"auto-apply-pending-fail","expected_valid":false,"expected_error":"unapproved or rejected transfer may not alter the target branch","patch":{"application":{"status":"applied_as_is","target_revision_ref":"ws-a-10","applied_content_ref":"research-object:question-from-branch-b"}}},
+    {"id":"merge-fail","expected_valid":false,"expected_error":"cross-branch perturbation may not perform a merge","patch":{"application":{"merge_performed":true}}},
+    {"id":"correction-claim-fail","expected_valid":false,"expected_error":"application may not claim that one branch corrected another","patch":{"application":{"correction_claim":true}}},
+    {"id":"world-authority-fail","expected_valid":false,"expected_error":"world evidence may not authorize transfer","patch":{"proposal":{"world_authority":true}}},
+    {"id":"target-overwrite-fail","expected_valid":false,"expected_error":"append a target revision rather than overwrite","patch":{"target_decision":{"status":"accepted","decided_by":"learner","decision_ref":"human-decision-2","evidence_class":"human_interaction"},"application":{"status":"applied_as_is","target_revision_ref":"ws-a-9","applied_content_ref":"research-object:question-from-branch-b"}}},
+    {"id":"upstream-human-lineage-loss-fail","expected_valid":false,"expected_error":"preserve the upstream human source in lineage","patch":{"lineage":{"upstream_human_source_ref":null}}}
+  ]
+}

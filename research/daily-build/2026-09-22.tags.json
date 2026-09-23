@@ -1,0 +1,98 @@
+{
+  "schema": "turtleblockai.daily-build-tags.v0.1",
+  "date": "2026-09-22",
+  "ontology_version": "sanders-ontology-v0.1",
+  "autobuild_run_id": "autobuild-2026-09-22",
+  "capture_batch_closed": true,
+  "d1_persistence": "staged_only_no_authorized_live_write_action",
+  "principles": {
+    "immutable_dissertation_source_layer": true,
+    "multi_tag": true,
+    "preserve_unmapped_residue": true,
+    "proposal_is_not_authority": true,
+    "cross_branch_transfer_is_not_merge": true,
+    "synthetic_is_not_human_evidence": true,
+    "reversible": true,
+    "no_generalized_persistent_personal_memory": true,
+    "no_autonomous_production_self_modification": true
+  },
+  "research_objects": [
+    {"id":"autobuild_run:autobuild-2026-09-22","object_type":"autobuild_run","title":"September 22 bounded TurtleBlock AI build-in-public cycle","actor":"turtle","evidence_class":"system_record","privacy_class":"public","model":"GPT-5.6 Sol","version":"0.1.0"},
+    {"id":"human_direction:2026-09-22-standing-daily-build","object_type":"human_direction","title":"Run one bounded cycle with reconciliation, Wait-a-minute cross-connection, exhaustive tagging, and conservative versioning","actor":"human","evidence_class":"human_authored","privacy_class":"internal","raw_text_published":false},
+    {"id":"source_signal:2026-09-22-openai-work-design","object_type":"external_source_signal","title":"OpenAI reports recurring AI workflows shaped by task division and human context","source_uri":"https://openai.com/index/unlocking-new-ways-of-working/","external_date":"2026-09-16","actor":"external_source","evidence_class":"external_source","privacy_class":"public"},
+    {"id":"source_signal:2026-09-22-nvidia-agent-eval","object_type":"external_source_signal","title":"NVIDIA distinguishes process traces from executable environment-state verification for agents","source_uri":"https://developer.nvidia.com/blog/how-to-evaluate-ai-agents-from-tool-calls-to-task-completion/","external_date":"2026-09-21","actor":"external_source","evidence_class":"external_source","privacy_class":"public"},
+    {"id":"source_signal:2026-09-22-minecraft-village-square","object_type":"external_source_signal","title":"Minecraft Education Village Square makes multiple perspectives consequential inside an inhabitable world","source_uri":"https://education.minecraft.net/en-us/blog/village-square-minecraft-civics","external_date":"2026-09-13","actor":"external_source","evidence_class":"external_source","privacy_class":"public"},
+    {"id":"source_signal:2026-09-22-mit-inquirybits","object_type":"external_source_signal","title":"MIT Media Lab InquiryBits argues for bounded collaboration traces rather than raw private chat","source_uri":"https://www.media.mit.edu/articles/workplace-ai-has-a-visibility-problem-here-s-how-to-fix-it/","external_date":"2026-09-03","actor":"external_source","evidence_class":"external_source","privacy_class":"public"},
+    {"id":"question:2026-09-22-inherited-edge","object_type":"autobuild_question","title":"Can branches cross-pollinate without merging?","actor":"turtle","evidence_class":"system_record","privacy_class":"public"},
+    {"id":"candidate:2026-09-22-auto-sync","object_type":"autobuild_candidate","title":"Automatically synchronize useful changes across branches","decision":"rejected","rejection_reason":"Collapses proposal into execution and exchange into hidden merge.","actor":"turtle","evidence_class":"system_record","privacy_class":"public"},
+    {"id":"candidate:2026-09-22-similarity-score","object_type":"autobuild_candidate","title":"Score branch similarity or convergence","decision":"rejected_for_today","rejection_reason":"Would invent machine-defined acceptable difference before the research warrants it.","actor":"turtle","evidence_class":"system_record","privacy_class":"public"},
+    {"id":"candidate:2026-09-22-live-ui","object_type":"autobuild_candidate","title":"Build learner-facing cross-pollination UI","decision":"rejected_for_today","rejection_reason":"Transfer semantics should survive hostile evaluation before UI implies stability.","actor":"turtle","evidence_class":"system_record","privacy_class":"public"},
+    {"id":"candidate:2026-09-22-persistent-memory","object_type":"autobuild_candidate","title":"Learn cross-branch preferences through generalized personal memory","decision":"rejected","rejection_reason":"Unnecessary to the bounded transfer problem and outside current privacy/version scope.","actor":"turtle","evidence_class":"system_record","privacy_class":"public"},
+    {"id":"candidate:2026-09-22-synthetic-apply","object_type":"autobuild_candidate","title":"Let Recursive Turtle apply cross-branch transfers","decision":"rejected","rejection_reason":"Synthetic self-play may generate proposals or fixtures but has no production authority.","actor":"turtle","evidence_class":"system_record","privacy_class":"public"},
+    {"id":"selection:2026-09-22-cross-branch","object_type":"autobuild_selection","title":"Select Cross-Branch Perturbation Envelope v0.1 plus fifteen-case hostile suite","actor":"turtle","evidence_class":"system_record","privacy_class":"public"},
+    {"id":"repo_file:worldspec/schema/cross-branch-perturbation-envelope.schema.json","object_type":"repository_artifact","title":"Cross-Branch Perturbation Envelope v0.1","repo_path":"worldspec/schema/cross-branch-perturbation-envelope.schema.json","evidence_class":"system_record","privacy_class":"public"},
+    {"id":"repo_file:worldspec/tests/cross-branch-perturbation-envelope-cases.json","object_type":"evaluation_fixture_set","title":"Cross-Branch Perturbation hostile cases","repo_path":"worldspec/tests/cross-branch-perturbation-envelope-cases.json","evidence_class":"system_record","privacy_class":"public"},
+    {"id":"repo_file:scripts/validate-cross-branch-perturbation-envelope.mjs","object_type":"deterministic_evaluation","title":"Cross-Branch Perturbation validator","repo_path":"scripts/validate-cross-branch-perturbation-envelope.mjs","evidence_class":"system_record","privacy_class":"public"},
+    {"id":"wait_a_minute:2026-09-22-initiative-authority","object_type":"wait_a_minute_connection","title":"Machine initiative recurs without automatic authority across attention, TurtleAsk, and branch revision","evidence_class":"system_record","privacy_class":"public","disposition":"relationship_and_next_edge_candidate"},
+    {"id":"next_edge:2026-09-22-longitudinal-convergence","object_type":"next_edge","title":"When does cross-pollination quietly become convergence?","repo_path":"public/data/next-edge.json","evidence_class":"system_record","privacy_class":"public"},
+    {"id":"reconciliation:2026-09-22-site-runtime-fallback","object_type":"reconciliation_finding","title":"Direct-asset embedded Build Log/Next Edge fallback remains behind canonical feeds","status":"unresolved_low_severity","evidence_class":"system_record","privacy_class":"public"},
+    {"id":"version_judgment:2026-09-22","object_type":"version_judgment","title":"Remain at v0.1.0","decision":"no_bump","evidence_class":"system_record","privacy_class":"public"}
+  ],
+  "relationships": [
+    {"from":"selection:2026-09-22-cross-branch","predicate":"answers","to":"question:2026-09-22-inherited-edge","rationale":"The selected contract makes a single provenance-preserving cross-branch proposal executable without merge."},
+    {"from":"repo_file:worldspec/tests/cross-branch-perturbation-envelope-cases.json","predicate":"tests","to":"repo_file:worldspec/schema/cross-branch-perturbation-envelope.schema.json","rationale":"Fifteen cases exercise source, target, authority, lineage, and reversibility invariants."},
+    {"from":"repo_file:scripts/validate-cross-branch-perturbation-envelope.mjs","predicate":"validates","to":"repo_file:worldspec/tests/cross-branch-perturbation-envelope-cases.json","rationale":"The deterministic validator rejects merge, auto-apply, authority collapse, overwrite, and source erasure."},
+    {"from":"wait_a_minute:2026-09-22-initiative-authority","predicate":"connects","to":"repo_file:worldspec/schema/cross-branch-perturbation-envelope.schema.json","rationale":"A useful discovery remains a proposal until a human target decision authorizes application."},
+    {"from":"wait_a_minute:2026-09-22-initiative-authority","predicate":"connects_conceptually","to":"repo_file:research/TURTLE_ASK.md","rationale":"TurtleAsk likewise separates machine-side initiative from surfacing/interruption authority."},
+    {"from":"next_edge:2026-09-22-longitudinal-convergence","predicate":"follows","to":"selection:2026-09-22-cross-branch","rationale":"After governing one transfer, the next risk is cumulative de facto convergence across many individually valid transfers."}
+  ],
+  "ctc_tags": [
+    {"object_id":"selection:2026-09-22-cross-branch","domain":"Personal Inquiry","role":"primary","rationale":"A human target owner decides whether transferred material belongs in the inquiry."},
+    {"object_id":"selection:2026-09-22-cross-branch","domain":"Compelling Problem or Question","role":"primary","rationale":"The transferable artifact may be a question that opens inquiry rather than an answer."},
+    {"object_id":"selection:2026-09-22-cross-branch","domain":"Technology as Tool to Think With","role":"primary","rationale":"Branches and proposals become computational material without automatic synchronization."},
+    {"object_id":"selection:2026-09-22-cross-branch","domain":"Formative Demonstration of Learning","role":"supports","rationale":"Revision history may later support formative interpretation, but transfer is not a learning claim."},
+    {"object_id":"selection:2026-09-22-cross-branch","domain":"Reflection as Learning","role":"primary","rationale":"Humans may accept, rewrite, reject, or reinterpret the proposed perturbation."},
+    {"object_id":"selection:2026-09-22-cross-branch","domain":"Social and Cultural Critique","role":"primary","rationale":"Which ideas travel and whether they are framed as correction are power-bearing choices."},
+    {"object_id":"selection:2026-09-22-cross-branch","domain":"Sharing and Collaborating","role":"primary","rationale":"Sharing can move traceable difference without compulsory merge or consensus."}
+  ],
+  "ontology_tags": [
+    {"object_id":"selection:2026-09-22-cross-branch","concept_key":"possible_possibles","role":"primary","rationale":"A question from one branch can open another direction without erasing either trajectory."},
+    {"object_id":"selection:2026-09-22-cross-branch","concept_key":"make_walk_around_in_and_change_the_story","role":"primary","rationale":"Consequences discovered by inhabiting one world may become material for changing another."},
+    {"object_id":"selection:2026-09-22-cross-branch","concept_key":"co_active_emergence","role":"primary","rationale":"Human decisions, Turtle proposals, world observations, and branch revisions recursively perturb inquiry."},
+    {"object_id":"selection:2026-09-22-cross-branch","concept_key":"recursive_learning_loop","role":"primary","rationale":"A source branch can feed a later inquiry cycle while retaining its lineage."},
+    {"object_id":"selection:2026-09-22-cross-branch","concept_key":"machine_responses_as_material_for_evaluation","role":"supports","rationale":"Turtle transfer proposals remain inspectable material, not authority."},
+    {"object_id":"selection:2026-09-22-cross-branch","concept_key":"purposeful_play","role":"supports","rationale":"A failed or strange branch may still donate a generative question or constraint."},
+    {"object_id":"selection:2026-09-22-cross-branch","concept_key":"steamhamlet","role":"supports","rationale":"A room of possibilities can exchange material without collapsing into one canonical future."},
+    {"object_id":"selection:2026-09-22-cross-branch","concept_key":"cohabitation_without_provenance_collapse","role":"primary","rationale":"Source branch, actor, upstream human source, proposal, target decision, and target revision remain distinguishable."}
+  ],
+  "emergent_tags": [
+    {"tag":"cross_branch_perturbation","rationale":"Difference may travel as a proposal without becoming merge or correction."},
+    {"tag":"proposal_without_authority","rationale":"Machine initiative may formulate an actionable candidate while human authority remains separate."},
+    {"tag":"bounded_trace_sharing","rationale":"Canonical pointers and lineage can support collaboration without duplicating raw private source material."},
+    {"tag":"longitudinal_convergence_risk","rationale":"Repeated individually valid transfers may still collapse plurality over time."}
+  ],
+  "wait_a_minute": [
+    {
+      "id":"wait_a_minute:2026-09-22-initiative-authority",
+      "connected_pointers":["worldspec/schema/selective-attention-envelope.schema.json","research/TURTLE_ASK.md","worldspec/schema/cross-branch-perturbation-envelope.schema.json"],
+      "overlap":"Noticing does not authorize interruption; forming an ask does not authorize surfacing; discovering useful branch difference does not authorize application.",
+      "why_it_may_matter":"Machine initiative without automatic authority now recurs across three subsystems and may be a general TurtleBlock design principle.",
+      "uncertainty":"The recurrence may remain an engineering principle rather than a distinct ontology concept; human scholarly judgment is required before promotion.",
+      "disposition":"relationship_and_next_edge_candidate"
+    }
+  ],
+  "reconciliation_findings": [
+    {"candidate":"worldspec/schema/cross-branch-perturbation-envelope.schema.json","resolution":"represented_by_canonical_pointer_and_staging","canonical_pointer":"research/daily-build/2026-09-22.tags.json"},
+    {"candidate":"entire Build Log through 2026-09-22","resolution":"coverage_states_recorded","canonical_pointer":"research/d1-reconciliation/2026-09-22.json"},
+    {"candidate":"live universal D1 research graph","resolution":"intentionally_not_claimed","reason":"No authorized live D1 research-graph write path is available in this run."},
+    {"candidate":"public/assets/site-runtime.js embedded fallback","resolution":"unresolved_gap","reason":"Emergency fallback remains behind while normal runtime fetches canonical no-store Build Log and Next Edge feeds."},
+    {"candidate":"consent-safe TRY IT visitor observations","resolution":"intentionally_not_captured","reason":"No authorized consent-safe visitor research read path was available."},
+    {"candidate":"September 19 social-card assets","resolution":"intentionally_not_captured_as_individual_research_objects","reason":"Brand/share assets do not introduce a new research-bearing concept; avoid one-row-per-cosmetic-artifact churn."}
+  ],
+  "uncaptured_observations": [
+    {"observation":"Repeated individually legitimate transfers may create de facto convergence without any explicit merge event.","status":"open","candidate_domain":null},
+    {"observation":"Reciprocal branch influence can be generative rather than erosive; preserving difference should not become an anti-collaboration purity rule.","status":"open","candidate_domain":null},
+    {"observation":"Human rewriting of a transferred item creates a lineage relationship that may deserve later study as transformation rather than simple acceptance.","status":"open","candidate_domain":null}
+  ],
+  "version_judgment": {"product_version":"0.1.0","decision":"no_bump","rationale":"Evaluation/provenance strengthened, but coherent versioned model/config behavior required for v0.2 remains incomplete."}
+}

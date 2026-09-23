@@ -1,20 +1,19 @@
 {
   "version": "1.0",
-  "updated_at": "2026-09-18",
+  "updated_at": "2026-09-22",
   "status": "open_question",
-  "title": "Can branches cross-pollinate without merging?",
-  "question": "Can TurtleBlock AI let an observation, question, or constraint discovered in one inhabited branch cross into another as a traceable perturbation without merging branch histories, erasing its source, or treating transfer as proof that either branch corrected the other?",
-  "why_now": "The September 18 Branch Experience Comparison Envelope answers the prior horizon at the comparison boundary: multiple built branches can remain noncanonical; world evidence remains observational; metrics matter only through explicit human-authored criteria; a learner may reject comparison; an apparently worse branch may remain generative; and Turtle or synthetic comparisons cannot become final judgment. The Wait-a-minute pass exposed the next movement: TurtleAsk treats genuine human otherness as a source of productive difference, while an alternate built branch can produce a different kind of perturbation through its consequences. The next collapse risk is transfer—whether a useful question, observation, or constraint can move across branches without silently turning cross-pollination into merge, correction, or source erasure.",
-  "follows_commit": "760577915339dac1f895e185efb64f612550e7c7",
-  "follows_commit_role": "completed_branch_experience_comparison_contract_hostile_suite_and_ci_wiring",
+  "title": "When does cross-pollination quietly become convergence?",
+  "question": "Can TurtleBlock AI notice when repeated traceable perturbations are gradually collapsing genuinely different branches into de facto convergence without scoring similarity, blocking exchange, or inventing a machine-defined amount of acceptable difference?",
+  "why_now": "The September 22 Cross-Branch Perturbation Envelope answers the prior horizon at the single-transfer boundary: a question, observation, or constraint may cross as a proposal while source and target histories remain separate, upstream human provenance stays recoverable, human authority governs any target change, and neither world evidence nor metrics authorize transfer. The remaining risk is longitudinal rather than transactional. A sequence of individually valid transfers could still make branches converge in practice. The Wait-a-minute pass also exposed a recurring agency pattern: Selective Attention separates noticing from interruption, TurtleAsk separates ask formation from surfacing, and cross-branch perturbation separates discovery from application. The next edge is whether the system can make cumulative influence inspectable without becoming a machine judge of how different branches ought to remain.",
+  "follows_commit": "PENDING_CURRENT_CYCLE_COMMIT",
+  "follows_commit_role": "completed_cross_branch_perturbation_contract_hostile_suite_and_ci_wiring",
   "inputs": [
-    "current repository after the Branch Experience Comparison contract and hostile suite",
+    "current repository after Cross-Branch Perturbation contract implementation",
+    "worldspec/schema/cross-branch-perturbation-envelope.schema.json",
     "worldspec/schema/branch-experience-comparison-envelope.schema.json",
-    "worldspec/schema/human-perturbation-translation-envelope.schema.json",
-    "worldspec/schema/world-evidence-envelope.schema.json",
+    "worldspec/schema/selective-attention-envelope.schema.json",
     "research/TURTLE_ASK.md",
-    "worldspec/schema/worldspec.schema.json forked-history representation",
-    "current Build Log and September 17 reconciliation history",
+    "current Build Log and September 18 reconciliation history",
     "Sanders research ontology and seven established Critical Techno Constructivism operational domains",
     "fresh OpenAI, NVIDIA, Minecraft Education, and MIT Media Lab primary-source signals",
     "absence of an authorized consent-safe TRY IT visitor research read path"
@@ -29,60 +28,54 @@
     "consent_boundary_and_absence_of_authorized_visitor_input"
   ],
   "possible_possibles": [
-    "Carry a human-authored constraint discovered in one branch into another as a proposed delta while leaving both branch histories unchanged and separately addressable.",
-    "Transfer only a question or observation from one branch rather than any structure, score, or conclusion.",
-    "Preserve both the source branch and the earlier human perturbation that produced it so the transferred idea has a traceable lineage.",
-    "Let a learner reject, rewrite, or reinterpret the transferred perturbation before it affects the target branch.",
-    "Allow repeated cross-pollination between branches without introducing an eventual merge objective.",
-    "Use synthetic self-play only to generate hostile transfer fixtures; synthetic proposals never execute a cross-branch change."
+    "Represent a cumulative transfer lineage without assigning a similarity score or a convergence threshold.",
+    "Let humans mark that two branches are intentionally becoming more alike, intentionally remaining different, or simply evolving without a declared relation.",
+    "Surface provenance-only warnings when one branch has received many proposals from another while leaving interpretation to people.",
+    "Treat reciprocal borrowing as a potentially generative relationship rather than assuming influence is contamination.",
+    "Use synthetic self-play only to generate hostile longitudinal transfer fixtures; synthetic activity never decides acceptable branch difference."
   ],
-  "x_factor": "whoooo knooooowwwssssssssssss — what if the only thing worth carrying from the branch that failed is the question it created?",
+  "x_factor": "whoooo knooooowwwssssssssssss — what if two branches become more interesting precisely because they borrow from each other and still refuse to agree?",
   "constraints": [
-    "Cross-branch transfer is not merge and must not rewrite either branch history.",
-    "The source branch, source observation or question, and originating human contribution remain recoverable when applicable.",
-    "Applying a transferred perturbation to a human-owned branch requires human authority; Turtle may propose but not silently execute.",
-    "Transfer must not be narrated as proof that the source branch corrected the target branch.",
-    "World evidence or an easy metric may motivate a question but cannot authorize transfer by itself.",
+    "No machine-defined similarity threshold may become a pedagogical or design verdict.",
+    "Repeated transfer must not silently establish a canonical branch, winner, merge objective, or correction narrative.",
+    "Human participants retain authority to accept, rewrite, reject, ignore, or reinterpret cross-branch proposals.",
+    "Source and target lineage, including upstream human provenance when applicable, remain recoverable.",
     "Synthetic self-play remains synthetic_self_play and has no production authority or human-learning evidence status.",
     "No generalized persistent personal memory is introduced by this horizon.",
     "No autonomous production self-modification or self-retraining is authorized.",
     "No new CTC domain is promoted without explicit human scholarly judgment."
   ],
   "ontology_mappings": [
-    {"concept_key":"co_active_emergence","role":"primary","rationale":"A traceable perturbation may move between constructed trajectories and recursively alter inquiry without collapsing who or what introduced the difference."},
-    {"concept_key":"possible_possibles","role":"primary","rationale":"Cross-pollination should increase available directions without forcing branches toward one synthesized answer."},
-    {"concept_key":"make_walk_around_in_and_change_the_story","role":"primary","rationale":"An insight discovered by inhabiting one world may become material for changing another while both stories remain inspectable."},
-    {"concept_key":"recursive_learning_loop","role":"supports","rationale":"Experience in one branch can feed a later cycle elsewhere while preserving the source of that recursion."},
-    {"concept_key":"cohabitation_without_provenance_collapse","role":"primary","rationale":"Source branch, world observation, human interpretation, Turtle transfer proposal, and target-branch change must remain distinguishable."},
-    {"concept_key":"purposeful_play","role":"supports","rationale":"A failed, strange, or abandoned branch may still generate a useful question without needing rehabilitation into a successful branch."},
-    {"concept_key":"machine_responses_as_material_for_evaluation","role":"supports","rationale":"Turtle's proposed cross-branch translation remains material for human evaluation rather than an authoritative correction."
-    }
+    {"concept_key":"co_active_emergence","role":"primary","rationale":"Repeated exchanges can recursively alter constructed trajectories while preserving who or what introduced each difference."},
+    {"concept_key":"possible_possibles","role":"primary","rationale":"Plural branches should remain sources of future possibility rather than being optimized toward one synthesized state."},
+    {"concept_key":"recursive_learning_loop","role":"primary","rationale":"The horizon concerns effects that only become visible across multiple cycles of transfer and revision."},
+    {"concept_key":"cohabitation_without_provenance_collapse","role":"primary","rationale":"Longitudinal influence remains interpretable only if each proposal, decision, and revision keeps its source identity."},
+    {"concept_key":"purposeful_play","role":"supports","rationale":"Borrowing, divergence, failure, and recombination may all be generative without requiring convergence."},
+    {"concept_key":"machine_responses_as_material_for_evaluation","role":"supports","rationale":"Any system observation about cumulative influence must remain material for human interpretation rather than a verdict."}
   ],
   "ctc_mappings": [
-    {"domain":"Personal Inquiry","role":"primary","rationale":"The learner decides whether a perturbation discovered elsewhere belongs in the target inquiry and what it means there."},
-    {"domain":"Compelling Problem or Question","role":"primary","rationale":"The most valuable transferable artifact may be a new question generated by consequences in another branch."},
-    {"domain":"Technology as Tool to Think With","role":"primary","rationale":"Branches and cross-branch proposals become manipulable computational objects for thinking rather than automatic convergence machinery."},
-    {"domain":"Formative Demonstration of Learning","role":"supports","rationale":"A traceable change in criteria or branch direction may later support formative interpretation, but transfer itself is not proof of learning."},
-    {"domain":"Reflection as Learning","role":"primary","rationale":"Cross-pollination depends on noticing what an alternate branch revealed and deciding whether that should perturb another line of inquiry."},
-    {"domain":"Social and Cultural Critique","role":"primary","rationale":"Which observations are allowed to travel, which remain local, and which are treated as corrections are power-bearing design choices."},
-    {"domain":"Sharing and Collaborating","role":"primary","rationale":"The horizon treats sharing as exchange of traceable difference rather than compulsory consensus or merge."
-    }
+    {"domain":"Personal Inquiry","role":"primary","rationale":"People decide whether accumulating influence supports or distorts the inquiry they are pursuing."},
+    {"domain":"Compelling Problem or Question","role":"supports","rationale":"Repeated cross-pollination may open or close questions over time without automatically resolving them."},
+    {"domain":"Technology as Tool to Think With","role":"primary","rationale":"Transfer lineage becomes a manipulable representation for thinking about influence rather than an optimization score."},
+    {"domain":"Formative Demonstration of Learning","role":"supports","rationale":"A changing branch trajectory may later support reflection, but convergence or divergence is not itself evidence of learning."},
+    {"domain":"Reflection as Learning","role":"primary","rationale":"Longitudinal traces can support reflection on why branches changed and which borrowed elements mattered."},
+    {"domain":"Social and Cultural Critique","role":"primary","rationale":"Judgments about acceptable similarity, originality, borrowing, and influence are power-bearing and culturally situated."},
+    {"domain":"Sharing and Collaborating","role":"primary","rationale":"The question concerns exchange among trajectories without turning collaboration into compulsory sameness."}
   ],
   "uncaptured_residue": [
-    {"observation":"Difference may become transportable without becoming truth: an observation or question can matter in another branch without proving either branch superior.","reason_unmapped":"This spans inquiry, reflection, collaboration, and provenance rather than clearly constituting a new established pedagogical domain.","candidate_domain":null,"status":"open"},
-    {"observation":"An alternate built branch can become a perturbation source, but that is not the same epistemic category as the genuine human otherness TurtleAsk seeks.","reason_unmapped":"The distinction may be adequately represented by provenance and actor/evidence classes; stronger theoretical naming requires human scholarly review.","candidate_domain":null,"status":"open"},
-    {"observation":"Repeated local cross-pollination could gradually collapse branches into de facto convergence even when no individual transfer is labeled a merge.","reason_unmapped":"This is a longitudinal governance risk across collaboration and representation rather than a single current CTC domain gap.","candidate_domain":null,"status":"open"}
+    {"observation":"Repeated individually legitimate transfers may create de facto convergence without any explicit merge event.","reason_unmapped":"This is a longitudinal governance phenomenon spanning collaboration, provenance, inquiry, and representation rather than a clear new pedagogical domain.","candidate_domain":null,"status":"open"},
+    {"observation":"Reciprocal influence can be generative rather than erosive; preserving difference should not become an anti-collaboration purity rule.","reason_unmapped":"The tension between productive borrowing and provenance-preserving plurality may be adequately representable through relationships and human reflection, but stronger theoretical naming is premature.","candidate_domain":null,"status":"open"}
   ],
   "wait_a_minute_connection": {
-    "summary": "TurtleAsk seeks human otherness when machine-only inquiry needs difference. A built alternate branch is not human otherness, but its consequences can become another perturbation source. The next question is whether Turtle can carry that difference across branches without turning exchange into merge or correction.",
-    "evidence": ["research/TURTLE_ASK.md","worldspec/schema/world-evidence-envelope.schema.json","worldspec/schema/branch-experience-comparison-envelope.schema.json"],
-    "uncertainty": "This may be an ordinary recursive-learning and provenance pattern rather than a distinct new theoretical construct; branch-derived perturbation should not be conflated with human otherness.",
+    "summary": "Selective Attention says noticing is not permission to interrupt; TurtleAsk says forming an ask is not permission to surface it; cross-branch perturbation now says discovering useful difference is not permission to apply it. The recurring structure is initiative without automatic authority.",
+    "evidence": ["worldspec/schema/selective-attention-envelope.schema.json","research/TURTLE_ASK.md","worldspec/schema/cross-branch-perturbation-envelope.schema.json"],
+    "uncertainty": "This may be a recurring implementation principle rather than a distinct Sanders concept; human scholarly judgment should decide whether it deserves stronger theoretical status.",
     "disposition": "next_edge_candidate_selected"
   },
   "provenance": {
     "evidence_class": "system_record",
     "privacy_class": "public",
-    "selection_method": "cross_connection_synthesis_after_branch_experience_contract_Build_Log_D1_reconciliation_and_Wait_a_minute_pass",
+    "selection_method": "cross_connection_synthesis_after_cross_branch_contract_Build_Log_D1_reconciliation_and_Wait_a_minute_pass",
     "actor": "machine_synthesis_human_revisable",
     "model": "GPT-5.6 Sol",
     "visitor_input_used": "none_no_authorized_consent_safe_runtime_read_path"
