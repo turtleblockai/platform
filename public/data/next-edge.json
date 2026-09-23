@@ -1,85 +1,141 @@
 {
   "version": "1.0",
-  "updated_at": "2026-09-22",
+  "updated_at": "2026-09-23",
   "status": "open_question",
-  "title": "When does cross-pollination quietly become convergence?",
-  "question": "Can TurtleBlock AI notice when repeated traceable perturbations are gradually collapsing genuinely different branches into de facto convergence without scoring similarity, blocking exchange, or inventing a machine-defined amount of acceptable difference?",
-  "why_now": "The September 22 Cross-Branch Perturbation Envelope answers the prior horizon at the single-transfer boundary: a question, observation, or constraint may cross as a proposal while source and target histories remain separate, upstream human provenance stays recoverable, human authority governs any target change, and neither world evidence nor metrics authorize transfer. The remaining risk is longitudinal rather than transactional. A sequence of individually valid transfers could still make branches converge in practice. The Wait-a-minute pass also exposed a recurring agency pattern: Selective Attention separates noticing from interruption, TurtleAsk separates ask formation from surfacing, and cross-branch perturbation separates discovery from application. The next edge is whether the system can make cumulative influence inspectable without becoming a machine judge of how different branches ought to remain.",
-  "follows_commit": "cbbaf068163d0251188e313f0233f9525eef40af",
-  "follows_commit_role": "completed_cross_branch_perturbation_contract_hostile_suite_and_ci_wiring",
+  "title": "When does persistence become persistent perturbation?",
+  "question": "Can a Persistent Computing Environment stay with a learner long enough to notice, connect, question, challenge, and remember without becoming persistently perturbant—and can the learner reliably “smack it back” by reducing, redirecting, or revoking machine initiative?",
+  "why_now": "The Sunshine Machine / PCE work has sharpened a longitudinal agency problem. Persistence makes continuity possible, but remembered purposes, resurfaced traces, and individually reasonable nudges can accumulate into steering even when no single intervention is coercive. TurtleBlock AI already separates noticing from interruption, asking from surfacing, and cross-branch discovery from application. The new pressure is reciprocal: if the machine can perturb the learner over time, the learner needs equally consequential authority to perturb the machine’s initiative back.",
+  "follows_commit": "4b75bbe1824159f43b4236ed8c037356edcdb177",
+  "follows_commit_role": "repository_state_before_persistent_perturbation_site_and_charter_pass",
   "inputs": [
-    "current repository after Cross-Branch Perturbation contract implementation",
-    "worldspec/schema/cross-branch-perturbation-envelope.schema.json",
-    "worldspec/schema/branch-experience-comparison-envelope.schema.json",
+    "current TurtleBlock AI public Research and Turtle Charter surfaces",
+    "worldspec/TURTLE_CHARTER.md",
     "worldspec/schema/selective-attention-envelope.schema.json",
     "research/TURTLE_ASK.md",
-    "current Build Log and September 18 reconciliation history",
-    "Sanders research ontology and seven established Critical Techno Constructivism operational domains",
-    "fresh OpenAI, NVIDIA, Minecraft Education, and MIT Media Lab primary-source signals",
-    "absence of an authorized consent-safe TRY IT visitor research read path"
+    "public/data/next-edge.json longitudinal cross-branch perturbation horizon",
+    "Sunshine Machine / Persistent Computing Environment research notes",
+    "Sanders research ontology and seven established Critical Techno Constructivism operational domains"
   ],
   "source_classes_consulted": [
-    "repository_state_and_tests",
-    "WorldSpec_and_dialogue_architecture",
-    "Turtle_Terraria_and_TurtleAsk_research",
-    "D1_reconciliation_and_staging",
-    "Sanders_research_ontology",
-    "public_primary_sources",
-    "consent_boundary_and_absence_of_authorized_visitor_input"
+    "repository_state_and_charter",
+    "TurtleAsk_and_selective_attention_architecture",
+    "cross_branch_perturbation_research",
+    "Sunshine_Machine_PCE_research_synthesis",
+    "Sanders_research_ontology"
   ],
   "possible_possibles": [
-    "Represent a cumulative transfer lineage without assigning a similarity score or a convergence threshold.",
-    "Let humans mark that two branches are intentionally becoming more alike, intentionally remaining different, or simply evolving without a declared relation.",
-    "Surface provenance-only warnings when one branch has received many proposals from another while leaving interpretation to people.",
-    "Treat reciprocal borrowing as a potentially generative relationship rather than assuming influence is contamination.",
-    "Use synthetic self-play only to generate hostile longitudinal transfer fixtures; synthetic activity never decides acceptable branch difference."
+    "Treat nudge depth as transparent, reversible, situational, and increasingly learner-governed rather than as a fixed machine-selected scale.",
+    "Make quieting, refusal, purpose retirement, and revoked delegation change machine permissions instead of becoming ordinary personalization signals.",
+    "Preserve provenance for every consequential nudge or resurfacing event: why this, why now, from what evidence, toward what consequence, whose values, and what right of refusal?",
+    "Allow no intervention to count as an intelligent outcome when purpose is stale, ambiguous, contested, or already productively alive without machine help.",
+    "Test whether a mature PCE sometimes becomes quieter as learner agency deepens rather than progressively more directive."
   ],
-  "x_factor": "whoooo knooooowwwssssssssssss — what if two branches become more interesting precisely because they borrow from each other and still refuse to agree?",
+  "x_factor": "what if the learner’s most important command to an intelligent environment is sometimes just: nope—back up, turtle 🐢",
   "constraints": [
-    "No machine-defined similarity threshold may become a pedagogical or design verdict.",
-    "Repeated transfer must not silently establish a canonical branch, winner, merge objective, or correction narrative.",
-    "Human participants retain authority to accept, rewrite, reject, ignore, or reinterpret cross-branch proposals.",
-    "Source and target lineage, including upstream human provenance when applicable, remain recoverable.",
-    "Synthetic self-play remains synthetic_self_play and has no production authority or human-learning evidence status.",
-    "No generalized persistent personal memory is introduced by this horizon.",
-    "No autonomous production self-modification or self-retraining is authorized.",
-    "No new CTC domain is promoted without explicit human scholarly judgment."
+    "Do not canonize a fixed numeric nudge-depth scale without evidence.",
+    "Remembered purpose does not automatically carry standing authority for nudging or action.",
+    "A learner’s refusal, quieting instruction, or revocation of delegation must not be silently overridden by relevance inference.",
+    "Machine initiative must remain reversible and learner-contestable.",
+    "No generalized persistent personal learner-memory system is implemented by this horizon alone.",
+    "No new CTC domain is promoted without explicit human scholarly judgment.",
+    "Synthetic self-play remains synthetic evidence and cannot establish human learner effects."
   ],
   "ontology_mappings": [
-    {"concept_key":"co_active_emergence","role":"primary","rationale":"Repeated exchanges can recursively alter constructed trajectories while preserving who or what introduced each difference."},
-    {"concept_key":"possible_possibles","role":"primary","rationale":"Plural branches should remain sources of future possibility rather than being optimized toward one synthesized state."},
-    {"concept_key":"recursive_learning_loop","role":"primary","rationale":"The horizon concerns effects that only become visible across multiple cycles of transfer and revision."},
-    {"concept_key":"cohabitation_without_provenance_collapse","role":"primary","rationale":"Longitudinal influence remains interpretable only if each proposal, decision, and revision keeps its source identity."},
-    {"concept_key":"purposeful_play","role":"supports","rationale":"Borrowing, divergence, failure, and recombination may all be generative without requiring convergence."},
-    {"concept_key":"machine_responses_as_material_for_evaluation","role":"supports","rationale":"Any system observation about cumulative influence must remain material for human interpretation rather than a verdict."}
+    {
+      "concept_key": "co_active_emergence",
+      "role": "primary",
+      "rationale": "The machine may perturb the learner, but the learner must also be able to change the conditions of machine participation; the relationship is recursively negotiated rather than one-directional."
+    },
+    {
+      "concept_key": "recursive_learning_loop",
+      "role": "primary",
+      "rationale": "Nudges, refusals, revisions, silence, and renewed initiative can alter later cycles without forcing closure."
+    },
+    {
+      "concept_key": "cohabitation_without_provenance_collapse",
+      "role": "primary",
+      "rationale": "Remembered purpose, machine interpretation, learner refusal, and later reauthorization must remain distinct evidence and authority types."
+    },
+    {
+      "concept_key": "possible_possibles",
+      "role": "supports",
+      "rationale": "Machine initiative should enlarge possible nexts without converting possibility into destination authority."
+    },
+    {
+      "concept_key": "machine_responses_as_material_for_evaluation",
+      "role": "supports",
+      "rationale": "A nudge or recommendation should remain material the learner may inspect, reject, revise, or ignore rather than a curriculum command."
+    }
   ],
   "ctc_mappings": [
-    {"domain":"Personal Inquiry","role":"primary","rationale":"People decide whether accumulating influence supports or distorts the inquiry they are pursuing."},
-    {"domain":"Compelling Problem or Question","role":"supports","rationale":"Repeated cross-pollination may open or close questions over time without automatically resolving them."},
-    {"domain":"Technology as Tool to Think With","role":"primary","rationale":"Transfer lineage becomes a manipulable representation for thinking about influence rather than an optimization score."},
-    {"domain":"Formative Demonstration of Learning","role":"supports","rationale":"A changing branch trajectory may later support reflection, but convergence or divergence is not itself evidence of learning."},
-    {"domain":"Reflection as Learning","role":"primary","rationale":"Longitudinal traces can support reflection on why branches changed and which borrowed elements mattered."},
-    {"domain":"Social and Cultural Critique","role":"primary","rationale":"Judgments about acceptable similarity, originality, borrowing, and influence are power-bearing and culturally situated."},
-    {"domain":"Sharing and Collaborating","role":"primary","rationale":"The question concerns exchange among trajectories without turning collaboration into compulsory sameness."}
+    {
+      "domain": "Personal Inquiry",
+      "role": "primary",
+      "rationale": "The learner retains authority over whether an inquiry remains foregrounded, bracketed, redirected, or left alone."
+    },
+    {
+      "domain": "Compelling Problem or Question",
+      "role": "supports",
+      "rationale": "The system may help questions remain alive without assuming that every remembered question should be resurfaced."
+    },
+    {
+      "domain": "Technology as Tool to Think With",
+      "role": "primary",
+      "rationale": "Adjustable initiative makes the agent an inspectable and revisable participant rather than an invisible director."
+    },
+    {
+      "domain": "Formative Demonstration of Learning",
+      "role": "supports",
+      "rationale": "Responses to nudges may become material for reflection but are not automatically evidence that the nudge was educationally correct."
+    },
+    {
+      "domain": "Reflection as Learning",
+      "role": "primary",
+      "rationale": "Learners can inspect why a perturbation appeared and decide what, if anything, it should change."
+    },
+    {
+      "domain": "Social and Cultural Critique",
+      "role": "primary",
+      "rationale": "Every intervention carries assumptions about relevance, value, desirable outcomes, and whose purposes should remain active."
+    },
+    {
+      "domain": "Sharing and Collaborating",
+      "role": "supports",
+      "rationale": "Human-machine collaboration requires negotiated initiative rather than permanent machine access to the learner’s foreground."
+    }
   ],
   "uncaptured_residue": [
-    {"observation":"Repeated individually legitimate transfers may create de facto convergence without any explicit merge event.","reason_unmapped":"This is a longitudinal governance phenomenon spanning collaboration, provenance, inquiry, and representation rather than a clear new pedagogical domain.","candidate_domain":null,"status":"open"},
-    {"observation":"Reciprocal influence can be generative rather than erosive; preserving difference should not become an anti-collaboration purity rule.","reason_unmapped":"The tension between productive borrowing and provenance-preserving plurality may be adequately representable through relationships and human reflection, but stronger theoretical naming is premature.","candidate_domain":null,"status":"open"}
+    {
+      "observation": "A system can become persistently perturbant through the accumulation of individually reasonable interventions even when each intervention is transparent and reversible in isolation.",
+      "reason_unmapped": "The phenomenon is longitudinal and authority-bearing across memory, interface, collaboration, and curriculum rather than a clean fit to one established domain.",
+      "candidate_domain": null,
+      "status": "open"
+    },
+    {
+      "observation": "The learner’s capacity to perturb the machine back may be more than preference control: it may be a constitutive property of co-active agency.",
+      "reason_unmapped": "It is not yet clear whether this is a new theoretical principle, an implementation rule, or a restatement of learner agency with architectural consequences.",
+      "candidate_domain": null,
+      "status": "open"
+    }
   ],
   "wait_a_minute_connection": {
-    "summary": "Selective Attention says noticing is not permission to interrupt; TurtleAsk says forming an ask is not permission to surface it; cross-branch perturbation now says discovering useful difference is not permission to apply it. The recurring structure is initiative without automatic authority.",
-    "evidence": ["worldspec/schema/selective-attention-envelope.schema.json","research/TURTLE_ASK.md","worldspec/schema/cross-branch-perturbation-envelope.schema.json"],
-    "uncertainty": "This may be a recurring implementation principle rather than a distinct Sanders concept; human scholarly judgment should decide whether it deserves stronger theoretical status.",
+    "summary": "Selective Attention says noticing is not permission to interrupt. TurtleAsk says forming an ask is not permission to surface it. Purpose provenance says remembering is not permission to reactivate. Persistent perturbation asks the reciprocal question: when the learner says back off, does that refusal actually change the machine’s authority?",
+    "evidence": [
+      "worldspec/schema/selective-attention-envelope.schema.json",
+      "research/TURTLE_ASK.md",
+      "worldspec/TURTLE_CHARTER.md"
+    ],
+    "uncertainty": "‘Persistently perturbant’ and the learner’s reciprocal perturbation right are provisional research language. They should be pressured against the corpus before becoming settled theory.",
     "disposition": "next_edge_candidate_selected"
   },
   "provenance": {
-    "evidence_class": "system_record",
+    "evidence_class": "system_record_plus_human_machine_research_synthesis",
     "privacy_class": "public",
-    "selection_method": "cross_connection_synthesis_after_cross_branch_contract_Build_Log_D1_reconciliation_and_Wait_a_minute_pass",
-    "actor": "machine_synthesis_human_revisable",
+    "selection_method": "current_repo_read_plus_Commander_research_direction_and_PCE_synthesis",
+    "actor": "human_direction_machine_synthesis_human_revisable",
     "model": "GPT-5.6 Sol",
-    "visitor_input_used": "none_no_authorized_consent_safe_runtime_read_path"
+    "visitor_input_used": "none"
   },
-  "selected_by": "machine_synthesis_human_revisable",
+  "selected_by": "human_direction_machine_synthesis_human_revisable",
   "scope": "system_research_horizon_not_student_learning_evidence"
 }
