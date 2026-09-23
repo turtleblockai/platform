@@ -5,7 +5,7 @@
   "title": "When does cross-pollination quietly become convergence?",
   "question": "Can TurtleBlock AI notice when repeated traceable perturbations are gradually collapsing genuinely different branches into de facto convergence without scoring similarity, blocking exchange, or inventing a machine-defined amount of acceptable difference?",
   "why_now": "The September 22 Cross-Branch Perturbation Envelope answers the prior horizon at the single-transfer boundary: a question, observation, or constraint may cross as a proposal while source and target histories remain separate, upstream human provenance stays recoverable, human authority governs any target change, and neither world evidence nor metrics authorize transfer. The remaining risk is longitudinal rather than transactional. A sequence of individually valid transfers could still make branches converge in practice. The Wait-a-minute pass also exposed a recurring agency pattern: Selective Attention separates noticing from interruption, TurtleAsk separates ask formation from surfacing, and cross-branch perturbation separates discovery from application. The next edge is whether the system can make cumulative influence inspectable without becoming a machine judge of how different branches ought to remain.",
-  "follows_commit": "PENDING_CURRENT_CYCLE_COMMIT",
+  "follows_commit": "cbbaf068163d0251188e313f0233f9525eef40af",
   "follows_commit_role": "completed_cross_branch_perturbation_contract_hostile_suite_and_ci_wiring",
   "inputs": [
     "current repository after Cross-Branch Perturbation contract implementation",
