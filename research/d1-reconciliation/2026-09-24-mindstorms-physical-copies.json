@@ -1,0 +1,45 @@
+{
+  "status": "live_d1_applied_and_verified",
+  "capture_date": "2026-09-24",
+  "source_basis": "user_photographed_physical_copies",
+  "external_lookup": false,
+  "migration_file": "migrations/0013_library_physical_copies_mindstorms.sql",
+  "source_id": "library-source-0013",
+  "work": "Mindstorms: Children, Computers, and Powerful Ideas",
+  "physical_copies": [
+    {
+      "copy_number": 1,
+      "format": "paperback",
+      "isbn": "0-465-04629-0",
+      "provenance": "University Bookstore Iowa State University sticker"
+    },
+    {
+      "copy_number": 2,
+      "format": "hardcover",
+      "isbn": null,
+      "provenance": "Former Mount de Sales Library copy; Mount de Sales Academy barcode 2054; call number 372.7 P; Bibb County Board of Education ECIA Chapter 2 stamp; Baker & Taylor checkout pocket"
+    }
+  ],
+  "live_apply": {
+    "database_name": "turtleblockai",
+    "github_actions_run_id": 36064045386,
+    "github_actions_job_id": 107849489902,
+    "execution_result": "Executed 6 queries in 6.74ms; 8 rows read; 14 rows written.",
+    "verification_query": "SELECT source_id,copy_number,format,current_status FROM library_physical_copies WHERE source_id='library-source-0013' ORDER BY copy_number;",
+    "verified_rows": [
+      {
+        "source_id": "library-source-0013",
+        "copy_number": 1,
+        "format": "paperback",
+        "current_status": "currently_owned"
+      },
+      {
+        "source_id": "library-source-0013",
+        "copy_number": 2,
+        "format": "hardcover",
+        "current_status": "currently_owned"
+      }
+    ],
+    "verified_at": "2026-09-24T21:51:40Z"
+  }
+}
