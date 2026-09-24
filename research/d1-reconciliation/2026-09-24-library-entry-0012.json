@@ -1,0 +1,39 @@
+{
+  "status": "live_d1_applied_and_verified",
+  "capture_date": "2026-09-24",
+  "source_basis": "user_photographed_physical_copy",
+  "external_lookup": false,
+  "migration_file": "migrations/0011_library_source_0012.sql",
+  "entry": {
+    "entry_number": 12,
+    "id": "library-source-0012",
+    "title": "The F Word",
+    "canonical_work_title": "The F-Word",
+    "author_display": "Jesse Sheidlower, editor",
+    "chronology_year": 1995,
+    "chronology_basis": "original_publication_year",
+    "edition_label": "First Edition",
+    "publisher": "Random House, Inc.",
+    "publication_place": "New York; Toronto; London; Sydney; Auckland",
+    "isbn": "0-679-44573-0",
+    "lccn": "95-35505",
+    "lc_classification": "PE1599.F83F2 1995",
+    "dewey_classification": "422--dc20",
+    "digital_copy_status": "unknown"
+  },
+  "live_apply": {
+    "database_name": "turtleblockai",
+    "github_actions_run_id": 36063367503,
+    "github_actions_job_id": 107847326023,
+    "execution_result": "Executed 2 queries in 5.06ms; 5 rows read; 6 rows written.",
+    "verification_query": "SELECT entry_number,title,author_display,chronology_year,digital_copy_status FROM library_sources WHERE entry_number=12;",
+    "verified_row": {
+      "entry_number": 12,
+      "title": "The F Word",
+      "author_display": "Jesse Sheidlower, editor",
+      "chronology_year": 1995,
+      "digital_copy_status": "unknown"
+    },
+    "verified_at": "2026-09-24T21:44:58Z"
+  }
+}
