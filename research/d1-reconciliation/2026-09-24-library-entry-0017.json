@@ -1,0 +1,43 @@
+{
+  "status": "live_d1_applied_and_verified",
+  "capture_date": "2026-09-24",
+  "source_basis": "user_photographed_physical_copy",
+  "external_lookup": false,
+  "migration_file": "migrations/0019_library_source_0017.sql",
+  "entry": {
+    "entry_number": 17,
+    "id": "library-source-0017",
+    "title": "LogoWorks",
+    "subtitle": "Challenging Programs in Logo",
+    "author_display": "Cynthia Solomon, Margaret Minsky, and Brian Harvey",
+    "chronology_year": 1986,
+    "chronology_basis": "original_publication_year",
+    "publisher": "McGraw-Hill, Inc.",
+    "isbn": "0-07-042425-X",
+    "lccn": "85-14976",
+    "lc_classification": "QA76.73.L63L635 1986",
+    "dewey_classification": "005.36'2",
+    "digital_copy_status": "unknown"
+  },
+  "physical_copy": {
+    "copy_number": 1,
+    "format": "paperback",
+    "isbn": "0-07-042425-X",
+    "current_status": "currently_owned"
+  },
+  "live_apply": {
+    "database_name": "turtleblockai",
+    "github_actions_run_id": 36066029689,
+    "github_actions_job_id": 107855878299,
+    "execution_result": "Executed 3 queries in 5.00ms; 7 rows read; 10 rows written.",
+    "verification_query": "SELECT entry_number,title,author_display,chronology_year,digital_copy_status FROM library_sources WHERE entry_number=17;",
+    "verified_row": {
+      "entry_number": 17,
+      "title": "LogoWorks",
+      "author_display": "Cynthia Solomon, Margaret Minsky, and Brian Harvey",
+      "chronology_year": 1986,
+      "digital_copy_status": "unknown"
+    },
+    "verified_at": "2026-09-24T22:12:09Z"
+  }
+}
