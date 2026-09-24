@@ -1,0 +1,39 @@
+{
+  "status": "live_d1_applied_and_verified",
+  "capture_date": "2026-09-24",
+  "source_basis": "user_photographed_physical_copy",
+  "external_lookup": false,
+  "migration_file": "migrations/0012_library_source_0013.sql",
+  "entry": {
+    "entry_number": 13,
+    "id": "library-source-0013",
+    "title": "Mindstorms",
+    "subtitle": "Children, Computers, and Powerful Ideas",
+    "author_display": "Seymour Papert",
+    "chronology_year": 1980,
+    "chronology_basis": "original_publication_year",
+    "publisher": "Basic Books, Inc.",
+    "publication_place": "New York",
+    "isbn_physical_copy": "0-465-04629-0",
+    "isbn_cloth_also_listed": "0-465-04627-4",
+    "lccn": "79-5200",
+    "lc_classification": "QA20.C65P36 1980",
+    "dewey_classification": "372.7",
+    "digital_copy_status": "unknown"
+  },
+  "live_apply": {
+    "database_name": "turtleblockai",
+    "github_actions_run_id": 36063707964,
+    "github_actions_job_id": 107848407267,
+    "execution_result": "Executed 2 queries in 4.89ms; 5 rows read; 6 rows written.",
+    "verification_query": "SELECT entry_number,title,author_display,chronology_year,digital_copy_status FROM library_sources WHERE entry_number=13;",
+    "verified_row": {
+      "entry_number": 13,
+      "title": "Mindstorms",
+      "author_display": "Seymour Papert",
+      "chronology_year": 1980,
+      "digital_copy_status": "unknown"
+    },
+    "verified_at": "2026-09-24T21:48:16Z"
+  }
+}
