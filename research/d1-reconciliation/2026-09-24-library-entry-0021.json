@@ -1,0 +1,46 @@
+{
+  "status": "live_d1_applied_and_verified",
+  "capture_date": "2026-09-24",
+  "source_basis": "user_photographed_physical_copy",
+  "external_lookup": false,
+  "migration_file": "migrations/0023_library_source_0021.sql",
+  "entry": {
+    "entry_number": 21,
+    "id": "library-source-0021",
+    "title": "Beginning Theory",
+    "subtitle": "An Introduction to Literary and Cultural Theory",
+    "author_display": "Peter Barry",
+    "original_publication_year": 1995,
+    "edition_year": 2002,
+    "edition_label": "Second edition",
+    "chronology_year": 1995,
+    "chronology_basis": "original_publication_year",
+    "publisher": "Manchester University Press",
+    "imprint": "Beginnings series",
+    "isbn": "9780719062681",
+    "digital_copy_status": "unknown"
+  },
+  "physical_copy": {
+    "copy_number": 1,
+    "format": "paperback",
+    "current_status": "currently_owned",
+    "verification_status": "physical_copy_photographed"
+  },
+  "live_apply": {
+    "database_name": "turtleblockai",
+    "github_actions_run_id": 36069332710,
+    "github_actions_job_id": 107866344961,
+    "execution_result": "Executed 3 queries in 8.49ms; 7 rows read; 10 rows written.",
+    "verified_row": {
+      "entry_number": 21,
+      "title": "Beginning Theory",
+      "subtitle": "An Introduction to Literary and Cultural Theory",
+      "author_display": "Peter Barry",
+      "chronology_year": 1995,
+      "edition_year": 2002,
+      "isbn": "9780719062681",
+      "digital_copy_status": "unknown"
+    },
+    "verified_at": "2026-09-24T22:47:22Z"
+  }
+}
