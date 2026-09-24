@@ -1,0 +1,50 @@
+{
+  "status": "live_d1_applied_and_verified",
+  "capture_date": "2026-09-24",
+  "source_basis": "user_photographed_physical_copy",
+  "external_lookup": false,
+  "migration_file": "migrations/0021_library_source_0019.sql",
+  "entry": {
+    "entry_number": 19,
+    "id": "library-source-0019",
+    "title": "The Connected Family",
+    "subtitle": "Bridging the Digital Generation Gap",
+    "author_display": "Seymour Papert",
+    "contributors": [
+      {
+        "name": "Nicholas Negroponte",
+        "role": "foreword"
+      }
+    ],
+    "chronology_year": 1996,
+    "chronology_basis": "original_publication_year",
+    "publisher": "Longstreet Press, Inc.",
+    "publication_place": "Marietta, Georgia",
+    "isbn": "1-56352-335-3",
+    "lccn": "96-76500",
+    "digital_copy_status": "unknown"
+  },
+  "physical_copy": {
+    "copy_number": 1,
+    "format": "hardcover",
+    "current_status": "currently_owned",
+    "companion_media": {
+      "type": "CD-ROM",
+      "status": "present"
+    }
+  },
+  "live_apply": {
+    "database_name": "turtleblockai",
+    "github_actions_run_id": 36066722102,
+    "github_actions_job_id": 107858088466,
+    "execution_result": "Executed 3 queries in 7.77ms; 7 rows read; 10 rows written.",
+    "verified_row": {
+      "entry_number": 19,
+      "title": "The Connected Family",
+      "author_display": "Seymour Papert",
+      "chronology_year": 1996,
+      "digital_copy_status": "unknown"
+    },
+    "verified_at": "2026-09-24T22:19:22Z"
+  }
+}
