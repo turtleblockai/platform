@@ -1,0 +1,47 @@
+{
+  "status": "live_d1_applied_and_verified",
+  "capture_date": "2026-09-24",
+  "source_basis": "user_photographed_physical_copy",
+  "external_lookup": false,
+  "migration_file": "migrations/0025_library_source_0023.sql",
+  "entry": {
+    "entry_number": 23,
+    "id": "library-source-0023",
+    "title": "Invent to Learn",
+    "subtitle": "Making, Tinkering, and Engineering in the Classroom",
+    "author_display": "Sylvia Libow Martinez; Gary S. Stager",
+    "original_publication_year": 2013,
+    "edition_year": 2019,
+    "edition_label": "New & Expanded Second Edition",
+    "chronology_year": 2013,
+    "chronology_basis": "original_publication_year",
+    "publisher": "Constructing Modern Knowledge Press",
+    "publication_place": "Torrance, California, USA",
+    "isbn": "9780997554373",
+    "digital_copy_status": "unknown"
+  },
+  "physical_copy": {
+    "copy_number": 1,
+    "format": "paperback",
+    "current_status": "currently_owned",
+    "verification_status": "physical_copy_photographed"
+  },
+  "live_apply": {
+    "database_name": "turtleblockai",
+    "github_actions_run_id": 36073308987,
+    "github_actions_job_id": 107878912530,
+    "execution_result": "Executed 3 queries in 9.36ms; 7 rows read; 10 rows written.",
+    "verified_row": {
+      "entry_number": 23,
+      "title": "Invent to Learn",
+      "subtitle": "Making, Tinkering, and Engineering in the Classroom",
+      "author_display": "Sylvia Libow Martinez; Gary S. Stager",
+      "original_publication_year": 2013,
+      "chronology_year": 2013,
+      "edition_year": 2019,
+      "isbn": "9780997554373",
+      "digital_copy_status": "unknown"
+    },
+    "verified_at": "2026-09-24T23:33:48Z"
+  }
+}
