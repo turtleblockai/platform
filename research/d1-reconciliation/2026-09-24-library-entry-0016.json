@@ -1,0 +1,25 @@
+{
+  "status": "live_d1_applied_and_verified",
+  "capture_date": "2026-09-24",
+  "source_basis": "user_photographed_physical_copy",
+  "external_lookup": false,
+  "migration_file": "migrations/0016_library_source_0016.sql",
+  "entry": {
+    "entry_number": 16,
+    "id": "library-source-0016",
+    "title": "The Playful Brain",
+    "subtitle": "Venturing to the Limits of Neuroscience",
+    "author_display": "Sergio Pellis and Vivien Pellis",
+    "chronology_year": null,
+    "chronology_basis": "unknown",
+    "digital_copy_status": "unknown",
+    "intake_completeness": "cover_only"
+  },
+  "live_apply": {
+    "database_name": "turtleblockai",
+    "github_actions_run_id": 36064963941,
+    "github_actions_job_id": 107852472836,
+    "execution_result": "Executed 3 queries in 7.20ms; 7 rows read; 10 rows written.",
+    "verified_at": "2026-09-24T22:01:45Z"
+  }
+}
