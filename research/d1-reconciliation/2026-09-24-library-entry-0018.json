@@ -1,0 +1,51 @@
+{
+  "status": "live_d1_applied_and_verified",
+  "capture_date": "2026-09-24",
+  "source_basis": "user_photographed_physical_copy",
+  "external_lookup": false,
+  "migration_file": "migrations/0020_library_source_0018.sql",
+  "entry": {
+    "entry_number": 18,
+    "id": "library-source-0018",
+    "title": "Trees of Santa Monica",
+    "author_display": "George T. Hastings",
+    "contributors": [
+      {
+        "name": "Grace L. Heintz",
+        "role": "revised and rewritten by"
+      },
+      {
+        "name": "Morgan Sinclaire",
+        "role": "photography"
+      },
+      {
+        "name": "Victoria Franklin",
+        "role": "botanical illustrations and cover"
+      }
+    ],
+    "chronology_year": 1976,
+    "chronology_basis": "edition_year",
+    "publisher": "Friends of Santa Monica Library, Committee for Trees of Santa Monica",
+    "publication_place": "Santa Monica, California",
+    "digital_copy_status": "unknown"
+  },
+  "physical_copy": {
+    "copy_number": 1,
+    "format": "paperback",
+    "current_status": "currently_owned"
+  },
+  "live_apply": {
+    "database_name": "turtleblockai",
+    "github_actions_run_id": 36066438375,
+    "github_actions_job_id": 107857178828,
+    "execution_result": "Executed 3 queries in 5.17ms; 7 rows read; 10 rows written.",
+    "verified_row": {
+      "entry_number": 18,
+      "title": "Trees of Santa Monica",
+      "author_display": "George T. Hastings",
+      "chronology_year": 1976,
+      "digital_copy_status": "unknown"
+    },
+    "verified_at": "2026-09-24T22:16:22Z"
+  }
+}
