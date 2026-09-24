@@ -1,0 +1,44 @@
+{
+  "status": "live_d1_applied_and_verified",
+  "capture_date": "2026-09-24",
+  "source_basis": "user_photographed_physical_copy",
+  "external_lookup": false,
+  "migration_file": "migrations/0026_library_source_0024.sql",
+  "entry": {
+    "entry_number": 24,
+    "id": "library-source-0024",
+    "title": "The Invent to Learn Guide to the micro:bit",
+    "author_display": "Pauline Maas; Peter Heldens",
+    "original_publication_year": 2023,
+    "edition_year": 2023,
+    "chronology_year": 2023,
+    "chronology_basis": "original_publication_year",
+    "publisher": "Constructing Modern Knowledge Press",
+    "publication_place": "Torrance, California, USA",
+    "isbn": "9781955604062",
+    "digital_copy_status": "unknown"
+  },
+  "physical_copy": {
+    "copy_number": 1,
+    "format": "paperback",
+    "current_status": "currently_owned",
+    "verification_status": "physical_copy_photographed"
+  },
+  "live_apply": {
+    "database_name": "turtleblockai",
+    "github_actions_run_id": 36073786225,
+    "github_actions_job_id": 107880387422,
+    "execution_result": "Executed 3 queries in 7.58ms; 7 rows read; 10 rows written.",
+    "verified_row": {
+      "entry_number": 24,
+      "title": "The Invent to Learn Guide to the micro:bit",
+      "author_display": "Pauline Maas; Peter Heldens",
+      "original_publication_year": 2023,
+      "chronology_year": 2023,
+      "edition_year": 2023,
+      "isbn": "9781955604062",
+      "digital_copy_status": "unknown"
+    },
+    "verified_at": "2026-09-24T23:39:26Z"
+  }
+}
