@@ -64,5 +64,27 @@
       "verified": true,
       "verified_at": "2026-09-24T22:04:41Z"
     }
+  },
+  "ephemera_correction": {
+    "basis": "user clarification",
+    "corrected_fact": "The January 2001 game sheet records a Dots-and-Boxes game between Elwyn Berlekamp and Steve, the original owner to whom the book is inscribed.",
+    "participants": [
+      {
+        "name": "Elwyn Berlekamp",
+        "role": "author and player"
+      },
+      {
+        "name": "Steve",
+        "role": "original owner and player"
+      }
+    ],
+    "event_location": "unknown",
+    "live_apply": {
+      "github_actions_run_id": 36065689105,
+      "github_actions_job_id": 107854780839,
+      "execution_result": "Executed 3 queries in 4.88ms; 2 rows read; 2 rows written.",
+      "verified": true,
+      "verified_at": "2026-09-24T22:08:32Z"
+    }
   }
 }
