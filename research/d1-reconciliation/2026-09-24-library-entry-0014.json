@@ -1,0 +1,38 @@
+{
+  "status": "live_d1_applied_and_verified",
+  "capture_date": "2026-09-24",
+  "source_basis": "user_photographed_physical_copy",
+  "external_lookup": false,
+  "migration_file": "migrations/0014_library_source_0014.sql",
+  "entry": {
+    "entry_number": 14,
+    "id": "library-source-0014",
+    "title": "The Klingon Hamlet",
+    "subtitle": "The Restored Klingon Version",
+    "author_display": "William Shakespeare",
+    "chronology_year": 1996,
+    "chronology_basis": "original_publication_year",
+    "edition_year": 2000,
+    "edition_label": "Pocket Books paperback edition",
+    "printing_label": "First Pocket Books paperback printing February 2000",
+    "publisher": "Pocket Books, a division of Simon & Schuster Inc.",
+    "publication_place": "New York",
+    "isbn": "0-671-03578-9",
+    "digital_copy_status": "unknown"
+  },
+  "live_apply": {
+    "database_name": "turtleblockai",
+    "github_actions_run_id": 36064471626,
+    "github_actions_job_id": 107850875530,
+    "execution_result": "Executed 2 queries in 3.93ms; 5 rows read; 6 rows written.",
+    "verification_query": "SELECT entry_number,title,author_display,chronology_year,digital_copy_status FROM library_sources WHERE entry_number=14;",
+    "verified_row": {
+      "entry_number": 14,
+      "title": "The Klingon Hamlet",
+      "author_display": "William Shakespeare",
+      "chronology_year": 1996,
+      "digital_copy_status": "unknown"
+    },
+    "verified_at": "2026-09-24T21:56:03Z"
+  }
+}
