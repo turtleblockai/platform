@@ -1,0 +1,36 @@
+{
+  "status": "live_d1_applied_and_verified",
+  "capture_date": "2026-09-24",
+  "source_basis": "user_photographed_physical_copy",
+  "external_lookup": false,
+  "migration_file": "migrations/0015_library_source_0015.sql",
+  "entry": {
+    "entry_number": 15,
+    "id": "library-source-0015",
+    "title": "The Dots-and-Boxes Game",
+    "subtitle": "Sophisticated Child's Play",
+    "author_display": "Elwyn Berlekamp",
+    "chronology_year": 2000,
+    "chronology_basis": "original_publication_year",
+    "publisher": "A K Peters, Ltd.",
+    "publication_place": "Natick, Massachusetts",
+    "isbn": "1-56881-129-2",
+    "lccn": "00-033185",
+    "lc_classification": "QA269.B39 2000",
+    "dewey_classification": "519.3--dc21",
+    "digital_copy_status": "unknown"
+  },
+  "physical_copy": {
+    "copy_number": 1,
+    "format": "paperback",
+    "provenance": "Loose handwritten Dots-and-Boxes game sheet dated January 2001; labeled Simultaneous Exhibition; 36 dots; includes the name Steve and player/color annotations. Authorship and event location not inferred."
+  },
+  "live_apply": {
+    "database_name": "turtleblockai",
+    "github_actions_run_id": 36064731116,
+    "github_actions_job_id": 107851718713,
+    "execution_result": "Executed 3 queries in 6.89ms; 7 rows read; 10 rows written.",
+    "verified_count_for_entry": 1,
+    "verified_at": "2026-09-24T21:58:48Z"
+  }
+}
