@@ -32,5 +32,37 @@
     "execution_result": "Executed 3 queries in 6.89ms; 7 rows read; 10 rows written.",
     "verified_count_for_entry": 1,
     "verified_at": "2026-09-24T21:58:48Z"
+  },
+  "artifact_enrichment": {
+    "migration_file": "migrations/0017_library_source_0015_artifact_enrichment.sql",
+    "inscription": {
+      "visible_text": "To Steve",
+      "signature_visible": true,
+      "signature_attribution": "Elwyn Berlekamp",
+      "attribution_basis": "signature appears immediately above the printed author name on the title page",
+      "authentication_status": "not_independently_authenticated",
+      "date": "2001-01-13"
+    },
+    "ephemera": {
+      "type": "handwritten_game_sheet",
+      "date_text": "January 2001",
+      "title_or_label": "Simultaneous Exhibition",
+      "details": [
+        "36 dots",
+        "name Steve",
+        "1st player Black or Blue",
+        "2nd player Red",
+        "partially completed Dots-and-Boxes game"
+      ],
+      "authorship": "unknown",
+      "event_location": "unknown"
+    },
+    "live_apply": {
+      "github_actions_run_id": 36065306514,
+      "github_actions_job_id": 107853565001,
+      "execution_result": "Executed 5 queries in 34.52ms; 398 rows read; 4 rows written.",
+      "verified": true,
+      "verified_at": "2026-09-24T22:04:41Z"
+    }
   }
 }
