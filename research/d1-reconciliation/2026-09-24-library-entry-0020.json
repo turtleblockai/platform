@@ -1,0 +1,42 @@
+{
+  "status": "live_d1_applied_and_verified",
+  "capture_date": "2026-09-24",
+  "source_basis": "user_photographed_physical_copy",
+  "external_lookup": false,
+  "migration_file": "migrations/0022_library_source_0020.sql",
+  "entry": {
+    "entry_number": 20,
+    "id": "library-source-0020",
+    "title": "American Favorite Ballads",
+    "subtitle": "Tunes and Songs as Sung by Pete Seeger",
+    "author_display": "Pete Seeger",
+    "chronology_year": 1961,
+    "chronology_basis": "original_publication_year",
+    "publisher": "Oak Publications",
+    "imprint": "A Division of Embassy Music Sales Corp.",
+    "publication_place": "New York, New York",
+    "lccn": "M 61-1008",
+    "printing_label": "19th printing, February 1968",
+    "digital_copy_status": "unknown"
+  },
+  "physical_copy": {
+    "copy_number": 1,
+    "format": "paperback songbook",
+    "current_status": "currently_owned",
+    "condition_note": "substantial edge and spine wear; kept in clear protective sleeve"
+  },
+  "live_apply": {
+    "database_name": "turtleblockai",
+    "github_actions_run_id": 36067109882,
+    "github_actions_job_id": 107859328417,
+    "execution_result": "Executed 3 queries in 14.07ms; 7 rows read; 10 rows written.",
+    "verified_row": {
+      "entry_number": 20,
+      "title": "American Favorite Ballads",
+      "author_display": "Pete Seeger",
+      "chronology_year": 1961,
+      "digital_copy_status": "unknown"
+    },
+    "verified_at": "2026-09-24T22:23:23Z"
+  }
+}
