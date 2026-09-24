@@ -1,0 +1,46 @@
+{
+  "status": "live_d1_applied_and_verified",
+  "capture_date": "2026-09-24",
+  "source_basis": "user_photographed_physical_copy",
+  "external_lookup": false,
+  "migration_file": "migrations/0024_library_source_0022.sql",
+  "entry": {
+    "entry_number": 22,
+    "id": "library-source-0022",
+    "title": "The Young Child as Scientist",
+    "subtitle": "A Constructivist Approach to Early Childhood Science Education",
+    "author_display": "Christine Chaillé; Lory Britain",
+    "original_publication_year": null,
+    "edition_year": 2003,
+    "edition_label": "Third edition",
+    "chronology_year": 2003,
+    "chronology_basis": "edition_year",
+    "publisher": "Pearson Education, Inc.",
+    "imprint": "Allyn & Bacon",
+    "isbn": "0205367763",
+    "digital_copy_status": "unknown"
+  },
+  "physical_copy": {
+    "copy_number": 1,
+    "format": "paperback",
+    "current_status": "currently_owned",
+    "verification_status": "physical_copy_photographed"
+  },
+  "live_apply": {
+    "database_name": "turtleblockai",
+    "github_actions_run_id": 36072635641,
+    "github_actions_job_id": 107877082533,
+    "execution_result": "Executed 3 queries in 5.57ms; 7 rows read; 10 rows written.",
+    "verified_row": {
+      "entry_number": 22,
+      "title": "The Young Child as Scientist",
+      "subtitle": "A Constructivist Approach to Early Childhood Science Education",
+      "author_display": "Christine Chaillé; Lory Britain",
+      "chronology_year": 2003,
+      "edition_year": 2003,
+      "isbn": "0205367763",
+      "digital_copy_status": "unknown"
+    },
+    "verified_at": "2026-09-24T23:26:45Z"
+  }
+}
