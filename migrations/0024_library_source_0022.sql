@@ -17,7 +17,7 @@ INSERT OR IGNORE INTO library_sources (
   'The Young Child as Scientist: A Constructivist Approach to Early Childhood Science Education',
   'Christine Chaillé; Lory Britain',
   '[{"name":"Christine Chaillé","role":"author"},{"name":"Lory Britain","role":"author"},{"name":"Traci Mueller","role":"series editor"},{"name":"Erica Tromblay","role":"series editorial assistant"},{"name":"Elizabeth Fogarty","role":"marketing manager"},{"name":"Beth Houston","role":"editorial-production administrator"},{"name":"Walsh & Associates, Inc.","role":"editorial-production service"},{"name":"Linda Cox","role":"composition and prepress buyer"},{"name":"JoAnne Sweeney","role":"manufacturing buyer"},{"name":"Kristina Mose-Libon","role":"cover administrator"},{"name":"Publishers'' Design and Production Services, Inc.","role":"electronic composition"}]',
-  NULL, 2003, 2003, 'third_edition_year',
+  NULL, 2003, 2003, 'edition_year',
   'Third edition',
   'Photographed number line: 10 9 8 7 6 5 4 / 06 05 04',
   'Pearson Education, Inc.',
