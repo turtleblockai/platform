@@ -88,9 +88,6 @@ INSERT OR REPLACE INTO library_special_notes VALUES
 
 -- 0006 Gordon, The New Well-Tempered Sentence
 INSERT OR REPLACE INTO library_special_notes VALUES
-('lsn-0006-01','historical_context','historical_context','placeholder','placeholder','interpretive','placeholder',0,CURRENT_TIMESTAMP,CURRENT_TIMESTAMP);
-DELETE FROM library_special_notes WHERE id='lsn-0006-01';
-INSERT OR REPLACE INTO library_special_notes VALUES
 ('lsn-0006-01','library-source-0006','historical_context','Original and revised forms',
  'The photographed cataloging page identifies this 1993 expanded and revised book as a revision of The Well-Tempered Sentence, first published in 1983.',
  'photographed_or_session_grounded','user_photographs_and_cataloging_session',10,CURRENT_TIMESTAMP,CURRENT_TIMESTAMP),
@@ -327,7 +324,7 @@ GROUP BY s.entry_number, s.id, s.author_display, s.title
 ORDER BY s.entry_number;
 
 -- Verification targets after remote apply:
--- SELECT COUNT(*) FROM library_special_notes;              -- expected: 59
+-- SELECT COUNT(*) FROM library_special_notes;              -- expected: 65
 -- SELECT COUNT(DISTINCT source_id) FROM library_special_notes; -- expected: 25
 -- SELECT entry_number, title, special_note_count
 --   FROM library_sources_special_notes_summary ORDER BY entry_number;
