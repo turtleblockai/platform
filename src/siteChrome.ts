@@ -16,7 +16,9 @@ const RAIL_SUMMARIES: Record<string, string> = {
 
 function routeKey(pathname: string) {
   const key = pathname.replace(/^\/+|\/+$/g, "") || "home";
-  return key === "lab" ? "terraria" : key;
+  if (key === "lab") return "terraria";
+  if (key === "research/library" || key.startsWith("research/library/")) return "library";
+  return key;
 }
 
 function summaryFor(pathname: string) {
@@ -51,7 +53,7 @@ export function applySiteChrome(html: string, pathname: string) {
 
   if (!next.includes('id="turtle-route-blurb-runtime"')) {
     const summaries = JSON.stringify(RAIL_SUMMARIES);
-    const script = `<script id="turtle-route-blurb-runtime">(()=>{const summaries=${summaries};const key=()=>{const k=location.pathname.replace(/^\\/+|\\/+$/g,'')||'home';return k==='lab'?'terraria':k};const summary=()=>summaries[key()]||summaries.home;const update=()=>{document.querySelectorAll('a[href="/lab/"]').forEach(a=>a.setAttribute('href','/terraria/'));document.querySelectorAll('.navcard').forEach(el=>{const route=el.getAttribute('data-route')||(el.getAttribute('href')||'').replace(/^\\/+|\\/+$/g,'')||'home';el.classList.toggle('active',(route==='lab'?'terraria':route)===navkey())});let el=document.querySelector('.railstatus,.status');if(!el){const panel=document.querySelector('.panel');if(panel){el=document.createElement('div');el.className='status railstatus';panel.appendChild(el)}}if(el)el.textContent='🐢 '+summary()};const later=()=>setTimeout(update,0);if(!window.__turtleChromeHistoryPatched){window.__turtleChromeHistoryPatched=true;const p=history.pushState.bind(history);history.pushState=(...a)=>{p(...a);later()};const r=history.replaceState.bind(history);history.replaceState=(...a)=>{r(...a);later()}}addEventListener('popstate',update);document.addEventListener('click',later,true);document.addEventListener('DOMContentLoaded',update);const observer=new MutationObserver(()=>later());observer.observe(document.documentElement,{subtree:true,childList:true});update()})();</script>`;
+    const script = `<script id="turtle-route-blurb-runtime">(()=>{const summaries=${summaries};const key=()=>{const k=location.pathname.replace(/^\\/+|\\/+$/g,'')||'home';if(k==='lab')return'terraria';if(k==='research/library'||k.startsWith('research/library/'))return'library';return k};const navkey=()=>key()==='library'?'research':key();const summary=()=>summaries[key()]||summaries.home;const update=()=>{document.querySelectorAll('a[href="/lab/"]').forEach(a=>a.setAttribute('href','/terraria/'));document.querySelectorAll('.navcard').forEach(el=>{const route=el.getAttribute('data-route')||(el.getAttribute('href')||'').replace(/^\\/+|\\/+$/g,'')||'home';el.classList.toggle('active',(route==='lab'?'terraria':route)===navkey())});let el=document.querySelector('.railstatus,.status');if(!el){const panel=document.querySelector('.panel');if(panel){el=document.createElement('div');el.className='status railstatus';panel.appendChild(el)}}if(el)el.textContent='🐢 '+summary()};const later=()=>setTimeout(update,0);if(!window.__turtleChromeHistoryPatched){window.__turtleChromeHistoryPatched=true;const p=history.pushState.bind(history);history.pushState=(...a)=>{p(...a);later()};const r=history.replaceState.bind(history);history.replaceState=(...a)=>{r(...a);later()}}addEventListener('popstate',update);document.addEventListener('click',later,true);document.addEventListener('DOMContentLoaded',update);const observer=new MutationObserver(()=>later());observer.observe(document.documentElement,{subtree:true,childList:true});update()})();</script>`;
     next = next.replace("</body>", `${script}\n</body>`);
   }
 
