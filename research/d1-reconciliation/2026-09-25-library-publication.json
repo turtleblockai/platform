@@ -1,0 +1,28 @@
+{
+  "schema": "turtleblockai.d1-reconciliation.v0.3",
+  "date": "2026-09-25",
+  "status": "live_d1_applied_and_verified",
+  "capture_batch": "research-library-publication",
+  "migration_file": "migrations/0029_publish_library_catalog.sql",
+  "migration_commit": "5e7acdf7296c2e624718e50322deb00bd7f37ece",
+  "summary": "Published the complete 25-source TurtleBlockAI physical/intellectual library catalog for bounded public website retrieval while keeping raw source photographs and private conversation data outside the public API.",
+  "live_apply": {
+    "performed": true,
+    "database_name": "turtleblockai",
+    "verification": {
+      "public_source_count": 25,
+      "special_note_count": 65,
+      "noted_source_count": 25
+    },
+    "github_actions_run_id": 36110263197,
+    "github_actions_job_id": 107991900962
+  },
+  "public_surface": {
+    "page": "/research/library/",
+    "api": "/api/research/library",
+    "ordering_default": "chronological",
+    "full_accounting": true,
+    "provenance_labels_preserved": true
+  },
+  "privacy_boundary": "Only public bibliographic/source records and cataloging notes are exposed. Raw private dialogue and source photographs are not exposed by the library endpoint."
+}
