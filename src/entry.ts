@@ -165,6 +165,59 @@ async function handleTerrariaPlay(request: Request, env: Env, ctx: ExecutionCont
   return Response.json({ ...data, terraria: { habitat: "human_turtle", entry_mode: entryMode }, terraria_persistence: terrariaPersistence }, { status: response.status });
 }
 
+function parseLibraryJson(value: unknown, fallback: any) {
+  if (typeof value !== "string" || !value.trim()) return fallback;
+  try { return JSON.parse(value); } catch { return fallback; }
+}
+
+async function handlePublicLibrary(env: Env) {
+  if (!env.DB) return Response.json({ error: "Library database is not configured." }, { status: 503 });
+  try {
+    const [sourceResult, noteResult] = await env.DB.batch([
+      env.DB.prepare("SELECT id,entry_number,source_type,title,subtitle,canonical_work_title,author_display,contributors_json,original_publication_year,edition_year,chronology_year,chronology_basis,coverage_start_year,coverage_end_year,edition_label,printing_label,publisher,imprint,publication_place,isbn,lccn,lc_classification,dewey_classification,subjects_json,tags_json,contents_json,notes,physical_copy_status,digital_copy_status,digital_copy_url,digital_copy_type,digital_copy_verified_at,verification_status,metadata_provenance_json FROM library_sources WHERE collection_visibility='public' ORDER BY CASE WHEN chronology_year IS NULL THEN 1 ELSE 0 END, chronology_year, author_display, title"),
+      env.DB.prepare("SELECT n.id,n.source_id,n.note_type,n.label,n.note_text,n.verification_status,n.evidence_basis,n.sort_order FROM library_special_notes n JOIN library_sources s ON s.id=n.source_id WHERE s.collection_visibility='public' ORDER BY s.entry_number,n.sort_order,n.id")
+    ]);
+    const notesBySource = new Map<string, any[]>();
+    for (const row of (noteResult.results || []) as any[]) {
+      const notes = notesBySource.get(row.source_id) || [];
+      notes.push({ id: row.id, type: row.note_type, label: row.label, text: row.note_text, verification_status: row.verification_status, evidence_basis: row.evidence_basis });
+      notesBySource.set(row.source_id, notes);
+    }
+    const sources = ((sourceResult.results || []) as any[]).map((row) => ({
+      id: row.id, entry_number: Number(row.entry_number), source_type: row.source_type,
+      title: row.title, subtitle: row.subtitle, canonical_work_title: row.canonical_work_title,
+      author: row.author_display, contributors: parseLibraryJson(row.contributors_json, []),
+      original_publication_year: row.original_publication_year == null ? null : Number(row.original_publication_year),
+      edition_year: row.edition_year == null ? null : Number(row.edition_year),
+      chronology_year: row.chronology_year == null ? null : Number(row.chronology_year),
+      chronology_basis: row.chronology_basis,
+      coverage_start_year: row.coverage_start_year == null ? null : Number(row.coverage_start_year),
+      coverage_end_year: row.coverage_end_year == null ? null : Number(row.coverage_end_year),
+      edition_label: row.edition_label, printing_label: row.printing_label, publisher: row.publisher,
+      imprint: row.imprint, publication_place: row.publication_place, isbn: row.isbn, lccn: row.lccn,
+      lc_classification: row.lc_classification, dewey_classification: row.dewey_classification,
+      subjects: parseLibraryJson(row.subjects_json, []), tags: parseLibraryJson(row.tags_json, []),
+      contents: parseLibraryJson(row.contents_json, []), catalog_notes: row.notes,
+      physical_copy_status: row.physical_copy_status,
+      digital_copy: { status: row.digital_copy_status, url: row.digital_copy_url, type: row.digital_copy_type, verified_at: row.digital_copy_verified_at },
+      verification_status: row.verification_status,
+      provenance: parseLibraryJson(row.metadata_provenance_json, {}),
+      special_notes: notesBySource.get(row.id) || []
+    }));
+    return Response.json({
+      generated_at: new Date().toISOString(),
+      source_count: sources.length,
+      special_note_count: (noteResult.results || []).length,
+      ordering: "chronological",
+      provenance_statement: "Catalog records are grounded in photographed physical copies and the cataloging session; interpretive notes are labeled separately.",
+      sources
+    }, { headers: { "cache-control": "public, max-age=60, stale-while-revalidate=300" } });
+  } catch (error) {
+    console.error("Public library query failed", error);
+    return Response.json({ error: "The library catalog is temporarily unavailable." }, { status: 503, headers: { "cache-control": "no-store" } });
+  }
+}
+
 function injectTerrariaTryScript(html: string) {
   if (html.includes("terraria-try.js")) return html;
   return html.replace("</body>", `${TERRARIA_TRY_SCRIPT}\n</body>`);
@@ -180,6 +233,10 @@ export default {
 
     if (originalUrl.pathname === "/api/build-log" && request.method === "GET") {
       return Response.json({ entries: BUILD_LOG_ENTRIES, source: "src/buildLog.ts" }, { headers: { "cache-control": "no-store" } });
+    }
+
+    if (originalUrl.pathname === "/api/research/library" && request.method === "GET") {
+      return handlePublicLibrary(env);
     }
 
     if (originalUrl.pathname === "/api/terraria/play" && request.method === "POST") {
