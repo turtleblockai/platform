@@ -1,0 +1,57 @@
+{
+  "status": "live_d1_applied_and_verified",
+  "capture_date": "2026-09-24",
+  "source_basis": "user_photographed_physical_copy",
+  "external_lookup": false,
+  "migration_file": "migrations/0027_library_source_0025.sql",
+  "entry": {
+    "entry_number": 25,
+    "id": "library-source-0025",
+    "title": "Computer Environments for Children",
+    "subtitle": "A Reflection on Theories of Learning and Education",
+    "author_display": "Cynthia Solomon",
+    "original_publication_year": 1986,
+    "edition_year": 1986,
+    "chronology_year": 1986,
+    "chronology_basis": "original_publication_year",
+    "publisher": "The MIT Press",
+    "isbn": "9780262691253",
+    "lccn": "86-3018",
+    "lc_classification": "QA20.C65S64 1986",
+    "dewey_classification": "372.13'9445",
+    "digital_copy_status": "unknown"
+  },
+  "physical_copy": {
+    "copy_number": 1,
+    "format": "paperback",
+    "current_status": "currently_owned",
+    "verification_status": "physical_copy_photographed"
+  },
+  "source_notes": [
+    "Copyright © 1986 by The Massachusetts Institute of Technology.",
+    "Originally presented as the author's doctoral thesis, Harvard University, 1985.",
+    "Discussion on pages 148-160 is based on material that originally appeared in BYTE magazine, August 1982.",
+    "Contents include contrasting learning approaches associated with Suppes, Davis, Dwyer, and Papert."
+  ],
+  "live_apply": {
+    "database_name": "turtleblockai",
+    "github_actions_run_id": 36101455604,
+    "github_actions_job_id": 107964617276,
+    "execution_result": "Executed 3 queries in 3.47ms; 7 rows read; 10 rows written.",
+    "verified_row": {
+      "entry_number": 25,
+      "title": "Computer Environments for Children",
+      "subtitle": "A Reflection on Theories of Learning and Education",
+      "author_display": "Cynthia Solomon",
+      "original_publication_year": 1986,
+      "chronology_year": 1986,
+      "edition_year": 1986,
+      "isbn": "9780262691253",
+      "lccn": "86-3018",
+      "lc_classification": "QA20.C65S64 1986",
+      "dewey_classification": "372.13'9445",
+      "digital_copy_status": "unknown"
+    },
+    "verified_at": "2026-09-25T06:07:41Z"
+  }
+}
