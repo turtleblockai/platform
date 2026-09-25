@@ -1,0 +1,59 @@
+{
+  "schema": "turtleblockai.d1-reconciliation.v0.3",
+  "date": "2026-09-25",
+  "status": "live_d1_applied_and_verified",
+  "capture_batch": "library-special-notes-preservation",
+  "migration_file": "migrations/0028_library_special_notes.sql",
+  "migration_commit": "4b420c3986e807688a878d48124dbc58b79e5628",
+  "summary": "Preserved the cataloging-session special notes, artifact/provenance details, historical context, visual details, intellectual connections, and cataloging insights for all 25 TurtleBlockAI physical-library sources.",
+  "source_boundary": {
+    "basis": "Commander-provided photographs plus the cataloging conversation",
+    "external_lookup_used": false,
+    "photographed_facts_kept_distinct_from_interpretive_notes": true
+  },
+  "schema_added": {
+    "table": "library_special_notes",
+    "note_types": [
+      "artifact",
+      "provenance",
+      "historical_context",
+      "intellectual_connection",
+      "visual_detail",
+      "collection_note",
+      "cataloging_insight"
+    ],
+    "verification_statuses": [
+      "photographed_or_session_grounded",
+      "user_clarified",
+      "interpretive",
+      "mixed"
+    ]
+  },
+  "live_apply": {
+    "performed": true,
+    "database_name": "turtleblockai",
+    "cloudflare_account_id": "1237f978938188ed96dc859fdd2d40d0",
+    "execution_path": "Temporary authenticated GitHub Actions workflow in CCC infrastructure using the existing authorized Cloudflare token; workflow removed after successful verification.",
+    "github_actions_run_id": 36104817455,
+    "github_actions_job_id": 107974900619,
+    "execution_result": "Executed 30 queries in 21.34ms; 136 rows read; 267 rows written.",
+    "verification": {
+      "special_note_count": 65,
+      "distinct_source_count_with_special_notes": 25,
+      "library_source_count": 25
+    },
+    "verified_at": "2026-09-25T06:52:19Z"
+  },
+  "cleanup": {
+    "temporary_workflow_removed": true,
+    "temporary_workflow_cleanup_commit": "db1eb8c145cb6d6b87bb17ecbc9775b915dfeb4f",
+    "superseded_recovery_migration_removed": true,
+    "superseded_recovery_cleanup_commit": "3dd525c4275d56cf00e67682c73ae4407cebd8f0",
+    "reason": "The repository already contained the correct individually applied entry migrations through 0027; the newly reconstructed bulk recovery migration was therefore removed before it could ever be applied."
+  },
+  "durability": {
+    "live_d1": true,
+    "version_controlled_migration": true,
+    "reconciliation_record": true
+  }
+}
