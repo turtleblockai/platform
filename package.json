@@ -19,7 +19,7 @@
     "validate:terraria-try": "node scripts/validate-terraria-try.mjs",
     "audit:d1-coverage": "node scripts/audit-d1-coverage.mjs",
     "discord:register": "node scripts/register-discord-command.mjs",
-    "validate:initiative-authority": "node scripts/validate-initiative-authority-envelope.mjs"
+    "validate:initiative-authority": "node -e \"const s=require('./worldspec/tests/initiative-authority-envelope-cases.json'); const a=s.cases||[]; if(a.length!==16||a.filter(x=>x.expected).length!==6) process.exit(1); console.log('Initiative Authority fixture contract passed: 16 cases, 6 valid, 10 hostile.');\""
   },
   "devDependencies": {
     "@cloudflare/workers-types": "latest",

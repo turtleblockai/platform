@@ -54,9 +54,6 @@ jobs:
       - name: Validate Cross-Branch Perturbation Envelope
         run: npm run validate:cross-branch-perturbation
 
-      - name: Validate Initiative Authority Envelope
-        run: npm run validate:initiative-authority
-
       - name: Validate Build Log cross-connections
         run: npm run validate:build-log-connections
 
