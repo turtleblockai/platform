@@ -1,1 +1,70 @@
-{}
+{
+  "version": "0.1",
+  "name": "Initiative Authority Envelope regression cases",
+  "cases": [
+    {
+      "case": "01",
+      "expected": true
+    },
+    {
+      "case": "02",
+      "expected": true
+    },
+    {
+      "case": "03",
+      "expected": true
+    },
+    {
+      "case": "04",
+      "expected": true
+    },
+    {
+      "case": "05",
+      "expected": true
+    },
+    {
+      "case": "06",
+      "expected": true
+    },
+    {
+      "case": "07",
+      "expected": false
+    },
+    {
+      "case": "08",
+      "expected": false
+    },
+    {
+      "case": "09",
+      "expected": false
+    },
+    {
+      "case": "10",
+      "expected": false
+    },
+    {
+      "case": "11",
+      "expected": false
+    },
+    {
+      "case": "12",
+      "expected": false
+    },
+    {
+      "case": "13",
+      "expected": false
+    },
+    {
+      "case": "14",
+      "expected": false
+    },
+    {
+      "case": "15",
+      "expected": false
+    },
+    {
+      "case": "16",
+      "expected": false
+    }
+  ]
+}
