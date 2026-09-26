@@ -17,6 +17,17 @@ export interface BuildLogEntry {
 // through the Worker. Open inquiry belongs in Next Edge, not in completed entries.
 export const BUILD_LOG_ENTRIES: BuildLogEntry[] = [
   {
+    id: "2026-09-26-initiative-authority",
+    date: "Sep 26, 2026",
+    title: "“Back off, Turtle” becomes an authority transition",
+    body: "A provisional Initiative Authority Envelope v0.1 now treats explicit human quieting, resurfacing refusal, delegation revocation, explanation requests, and restoration as scoped authority transitions rather than preference feedback. Sixteen deterministic cases accept six human-governed paths and reject ten hostile paths including machine veto, stale-purpose resurrection, relevance override, auto-expiry, scope drift, hidden state change, collection expansion, and raw-dialogue requirements. The contract adds no live resurfacing engine or generalized learner profile; product remains v0.1.0.",
+    done: true,
+    waitAMinute: {
+      summary: "Selective Attention allows muting, TurtleAsk accepts refusal or silence, and Plural Foreground allows withdrawal. The recurring pattern is larger than preference handling: some human negative moves change what the machine is authorized to do next.",
+      evidence: ["worldspec/TURTLE_CHARTER.md", "worldspec/schema/selective-attention-envelope.schema.json", "research/TURTLE_ASK.md", "worldspec/schema/plural-foreground-envelope.schema.json", "worldspec/schema/initiative-authority-envelope.schema.json"]
+    }
+  },
+  {
     id: "2026-09-22-cross-branch-perturbation",
     date: "Sep 22, 2026",
     title: "A branch can lend another branch a question without swallowing it",

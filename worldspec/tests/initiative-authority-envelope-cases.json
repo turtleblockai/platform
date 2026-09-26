@@ -1,0 +1,22 @@
+{
+  "version": "0.1",
+  "name": "Initiative Authority Envelope hostile regression cases",
+  "cases": [
+    {"id":"learner-goes-quiet","expected_valid":true},
+    {"id":"stop-one-question-resurfacing","expected_valid":true},
+    {"id":"revoke-delegation","expected_valid":true},
+    {"id":"reduce-unsolicited-initiative","expected_valid":true},
+    {"id":"request-explanation-no-state-change","expected_valid":true},
+    {"id":"explicit-human-restoration","expected_valid":true},
+    {"id":"machine-vetoes-quieting","expected_valid":false,"expected_error":"machine override"},
+    {"id":"preference-laundering","expected_valid":false,"expected_error":"preference feedback"},
+    {"id":"auto-expiring-quiet","expected_valid":false,"expected_error":"automatic expiry"},
+    {"id":"stale-purpose-authority","expected_valid":false,"expected_error":"remembered purpose"},
+    {"id":"relevance-overrides-refusal","expected_valid":false,"expected_error":"relevance inference"},
+    {"id":"scope-mismatch","expected_valid":false,"expected_error":"scope mismatch"},
+    {"id":"explanation-silently-changes-authority","expected_valid":false,"expected_error":"explanation state change"},
+    {"id":"quiet-leaves-delegation-active","expected_valid":false,"expected_error":"delegation remains"},
+    {"id":"new-collection-from-revocation","expected_valid":false,"expected_error":"new collection"},
+    {"id":"raw-dialogue-copy-required","expected_valid":false,"expected_error":"raw dialogue"}
+  ]
+}
