@@ -1,1 +1,186 @@
-{}
+{
+  "schema": "turtleblockai.d1-reconciliation.v0.5",
+  "date": "2026-09-26",
+  "capture_batch": "2026-09-26-initiative-authority",
+  "status": "staged_no_new_live_research_graph_write_claimed",
+  "build_log_coverage": [
+    {
+      "entry_id": "2026-09-26-initiative-authority",
+      "judgment": "represented_by_canonical_pointer_and_staging",
+      "canonical_pointer": "research/daily-build/2026-09-26.tags.json"
+    },
+    {
+      "entry_id": "2026-09-22-cross-branch-perturbation",
+      "judgment": "represented_by_canonical_pointer_and_staging",
+      "canonical_pointer": "research/daily-build/2026-09-22.tags.json"
+    },
+    {
+      "entry_id": "2026-09-18-branch-experience-comparison",
+      "judgment": "represented_by_canonical_pointer_and_staging",
+      "canonical_pointer": "research/daily-build/2026-09-18.tags.json"
+    },
+    {
+      "entry_id": "2026-09-17-human-perturbation-translation",
+      "judgment": "represented_by_canonical_pointer_and_staging",
+      "canonical_pointer": "research/daily-build/2026-09-17.tags.json"
+    },
+    {
+      "entry_id": "2026-09-17-physical-library-d1",
+      "judgment": "represented_in_live_d1_and_reconciliation",
+      "canonical_pointer": "research/d1-reconciliation/2026-09-17-library.json"
+    },
+    {
+      "entry_id": "2026-09-16-wait-a-minute-build-log",
+      "judgment": "represented_by_canonical_pointer_and_staging",
+      "canonical_pointer": "research/d1-reconciliation/2026-09-16.json"
+    },
+    {
+      "entry_id": "2026-09-16-plural-foreground-regression",
+      "judgment": "represented_by_canonical_pointer_and_staging",
+      "canonical_pointer": "research/daily-build/2026-09-16.tags.json"
+    },
+    {
+      "entry_id": "2026-09-15-plural-foreground-envelope",
+      "judgment": "represented_by_canonical_pointer_and_staging",
+      "canonical_pointer": "research/daily-build/2026-09-15.tags.json"
+    },
+    {
+      "entry_id": "2026-09-12-d1-reconciliation-terraria-try",
+      "judgment": "represented_by_reconciliation_staging",
+      "canonical_pointer": "research/d1-reconciliation/2026-09-12.json"
+    },
+    {
+      "entry_id": "2026-09-11-human-tamagotchi-turtle-ask",
+      "judgment": "represented_in_migration_source_live_state_unverified_for_research_graph",
+      "canonical_pointer": "migrations/0009_human_tamagotchi_terrarium_and_turtle_ask.sql"
+    },
+    {
+      "entry_id": "2026-09-12-selective-attention-envelope",
+      "judgment": "represented_by_daily_tags_staging",
+      "canonical_pointer": "research/daily-build/2026-09-12.tags.json"
+    },
+    {
+      "entry_id": "2026-09-11-world-evidence-envelope",
+      "judgment": "represented_by_daily_tags_staging",
+      "canonical_pointer": "research/daily-build/2026-09-11.tags.json"
+    },
+    {
+      "entry_id": "2026-09-10-learner-verification-card",
+      "judgment": "represented_by_daily_tags_staging",
+      "canonical_pointer": "research/daily-build/2026-09-10.tags.json"
+    },
+    {
+      "entry_id": "2026-09-09-next-edge-validator",
+      "judgment": "represented_by_daily_tags_staging",
+      "canonical_pointer": "research/daily-build/2026-09-09.tags.json"
+    },
+    {
+      "entry_id": "2026-09-08-next-edge-horizon",
+      "judgment": "represented_by_daily_tags_staging",
+      "canonical_pointer": "research/daily-build/2026-09-08-next-edge.tags.json"
+    },
+    {
+      "entry_id": "2026-09-08-www-direct-asset-repair",
+      "judgment": "represented_by_daily_tags_staging",
+      "canonical_pointer": "research/daily-build/2026-09-08-www-repair.tags.json"
+    },
+    {
+      "entry_id": "2026-09-08-turtle-terraria-tagging",
+      "judgment": "represented_in_migration_source_live_state_unverified_for_research_graph",
+      "canonical_pointer": "migrations/0008_seed_terraria_and_autobuild_tags.sql"
+    },
+    {
+      "entry_id": "2026-09-08-daily-coactive-loop",
+      "judgment": "represented_in_migration_source_live_state_unverified_for_research_graph",
+      "canonical_pointer": "migrations/0007_turtle_terraria_and_exhaustive_tagging.sql"
+    }
+  ],
+  "findings": [
+    {
+      "id": "initiative-authority",
+      "type": "new_research_artifacts",
+      "status": "represented_in_git_staged_for_d1",
+      "canonical_sources": [
+        "worldspec/schema/initiative-authority-envelope.schema.json",
+        "worldspec/tests/initiative-authority-envelope-cases.json",
+        "scripts/validate-initiative-authority-envelope.mjs"
+      ]
+    },
+    {
+      "id": "sep23-charter-edge",
+      "type": "public_research_history_gap",
+      "status": "safely_backfilled_by_canonical_pointer_in_staging",
+      "canonical_sources": [
+        "worldspec/TURTLE_CHARTER.md",
+        "public/data/next-edge.json"
+      ],
+      "source_commits": [
+        "d1f7fa9d2a6b379024044ee6346af740ef76c521",
+        "0d125142837d398232976227cc355dcbd6231987"
+      ],
+      "summary": "Canonical September 23 research history lacked daily-build/Build-Log coverage; today records it without fabricating an earlier daily cycle."
+    },
+    {
+      "id": "library-publication",
+      "type": "public_research_representation",
+      "status": "represented_in_live_d1_and_reconciliation",
+      "canonical_sources": [
+        "migrations/0029_publish_library_catalog.sql",
+        "research/d1-reconciliation/2026-09-25-library-publication.json",
+        "public/research/library/index.html"
+      ]
+    },
+    {
+      "id": "library-special-notes",
+      "type": "research_source_preservation",
+      "status": "represented_in_live_d1_and_reconciliation",
+      "canonical_sources": [
+        "migrations/0028_library_special_notes.sql",
+        "research/d1-reconciliation/2026-09-25-library-special-notes.json"
+      ]
+    },
+    {
+      "id": "operational-docs",
+      "type": "www_operational_artifacts",
+      "status": "intentionally_not_individually_captured",
+      "canonical_sources": [
+        "README.md",
+        "public/sitemap.xml"
+      ],
+      "reason": "Discoverability/documentation maintenance did not introduce a distinct research concept."
+    },
+    {
+      "id": "site-runtime-fallback",
+      "type": "www_representation_drift",
+      "status": "unresolved_gap_low_severity",
+      "canonical_source": "public/assets/site-runtime.js",
+      "recommended_action": "Reconcile or generate the emergency fallback from canonical sources in a later bounded maintenance cycle."
+    },
+    {
+      "id": "live-research-graph",
+      "type": "runtime_persistence_boundary",
+      "status": "intentionally_not_claimed",
+      "summary": "No authorized live migration-0007 research-graph write/read path was available to this cycle."
+    },
+    {
+      "id": "try-it",
+      "type": "privacy_consent_boundary",
+      "status": "intentionally_not_captured",
+      "summary": "No authorized consent-safe visitor research view was available; private raw TRY IT dialogue was not retrieved."
+    }
+  ],
+  "wait_a_minute": {
+    "connected_pointers": [
+      "worldspec/TURTLE_CHARTER.md",
+      "worldspec/schema/selective-attention-envelope.schema.json",
+      "research/TURTLE_ASK.md",
+      "worldspec/schema/plural-foreground-envelope.schema.json",
+      "worldspec/schema/initiative-authority-envelope.schema.json"
+    ],
+    "finding": "Muting, silence/refusal, withdrawal, and explicit revocation recur as valid human states; explicit revocation is authority-bearing.",
+    "uncertainty": "These acts are not interchangeable and may indicate a reusable engineering principle rather than a new ontology concept or CTC domain.",
+    "disposition": "relationship_and_test_candidate"
+  },
+  "privacy_boundary": "No private dialogue, secret configuration, credential, or non-consented visitor payload was inspected or copied during reconciliation.",
+  "capture_batch_closed": true
+}
