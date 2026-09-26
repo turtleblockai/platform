@@ -1,1 +1,299 @@
-{}
+{
+  "schema": "turtleblockai.daily-build-tags.v0.1",
+  "date": "2026-09-26",
+  "ontology_version": "sanders-ontology-v0.1",
+  "capture_batch_closed": true,
+  "research_objects": [
+    {
+      "id": "cycle",
+      "type": "autobuild_run",
+      "summary": "One bounded cycle; human direction remains authoritative."
+    },
+    {
+      "id": "source-openai",
+      "type": "external_source",
+      "date": "2026-09-23",
+      "source_uri": "https://openai.com/index/introducing-mentalhealthbench/",
+      "summary": "Agency can be evaluated as a distinct behavior."
+    },
+    {
+      "id": "source-nvidia",
+      "type": "external_source",
+      "date": "2026-09-23",
+      "source_uri": "https://developer.nvidia.com/blog/how-swe-serve-exposes-the-gap-between-local-tests-and-live-serving/",
+      "summary": "Local verification does not prove live serving behavior."
+    },
+    {
+      "id": "source-minecraft",
+      "type": "external_source",
+      "date": "2026-09-13",
+      "source_uri": "https://education.minecraft.net/en-us/blog/village-square-minecraft-civics",
+      "summary": "Participants shape rules in an inhabitable computational world."
+    },
+    {
+      "id": "source-mit",
+      "type": "external_source",
+      "date": "2026-09-03",
+      "source_uri": "https://www.media.mit.edu/articles/workplace-ai-has-a-visibility-problem-here-s-how-to-fix-it/",
+      "summary": "Bounded traces can support review without sharing raw chat."
+    },
+    {
+      "id": "inherited-edge",
+      "type": "question",
+      "summary": "When does persistence become persistent perturbation?"
+    },
+    {
+      "id": "candidate-live-runtime",
+      "type": "candidate",
+      "decision": "rejected_today",
+      "reason": "Authority semantics should be executable before live resurfacing behavior."
+    },
+    {
+      "id": "candidate-numeric-scale",
+      "type": "candidate",
+      "decision": "rejected",
+      "reason": "No evidence supports a machine-defined numeric intervention scale."
+    },
+    {
+      "id": "candidate-inferred-revocation",
+      "type": "candidate",
+      "decision": "rejected",
+      "reason": "Authority should not be inferred from mood or preference."
+    },
+    {
+      "id": "candidate-profile-memory",
+      "type": "candidate",
+      "decision": "rejected",
+      "reason": "The bounded edge does not require a generalized learner profile."
+    },
+    {
+      "id": "selection",
+      "type": "selection",
+      "summary": "Initiative Authority Envelope v0.1 plus sixteen hostile cases."
+    },
+    {
+      "id": "schema",
+      "type": "repository_artifact",
+      "repo_path": "worldspec/schema/initiative-authority-envelope.schema.json"
+    },
+    {
+      "id": "cases",
+      "type": "evaluation_fixture_set",
+      "repo_path": "worldspec/tests/initiative-authority-envelope-cases.json"
+    },
+    {
+      "id": "validator",
+      "type": "evaluation_validator",
+      "repo_path": "scripts/validate-initiative-authority-envelope.mjs"
+    },
+    {
+      "id": "test",
+      "type": "evaluation_result",
+      "summary": "16/16 expected outcomes; 6 valid, 10 intentionally invalid.",
+      "scope": "local standalone validator only"
+    },
+    {
+      "id": "wait",
+      "type": "wait_a_minute",
+      "summary": "Explicit human revocation changes what Turtle is authorized to do next."
+    },
+    {
+      "id": "version",
+      "type": "version_judgment",
+      "decision": "remain_0.1.0",
+      "reason": "Model/config behavior is not yet a coherent reproducible versioned contract."
+    },
+    {
+      "id": "next-edge",
+      "type": "question",
+      "summary": "Can a learner's revocation stay revoked across persistence?"
+    }
+  ],
+  "relationships": [
+    {
+      "from": "inherited-edge",
+      "predicate": "answered_in_part_by",
+      "to": "selection"
+    },
+    {
+      "from": "schema",
+      "predicate": "operationalizes",
+      "to": "worldspec/TURTLE_CHARTER.md#principle-14"
+    },
+    {
+      "from": "schema",
+      "predicate": "tested_by",
+      "to": "cases"
+    },
+    {
+      "from": "cases",
+      "predicate": "executed_as",
+      "to": "test"
+    },
+    {
+      "from": "source-nvidia",
+      "predicate": "limits_inference_from",
+      "to": "test"
+    },
+    {
+      "from": "source-mit",
+      "predicate": "supports_provenance_boundary",
+      "to": "schema"
+    },
+    {
+      "from": "wait",
+      "predicate": "connects",
+      "to": "schema"
+    },
+    {
+      "from": "selection",
+      "predicate": "surfaces",
+      "to": "next-edge"
+    }
+  ],
+  "ctc_tags": [
+    {
+      "domain": "Personal Inquiry",
+      "role": "primary",
+      "rationale": "Learner controls whether a purpose, question, or trace remains foregrounded."
+    },
+    {
+      "domain": "Compelling Problem or Question",
+      "role": "supports",
+      "rationale": "Remembered questions need not retain resurfacing authority."
+    },
+    {
+      "domain": "Technology as Tool to Think With",
+      "role": "primary",
+      "rationale": "Initiative permissions become inspectable computational state."
+    },
+    {
+      "domain": "Formative Demonstration of Learning",
+      "role": "supports",
+      "rationale": "Revocation is not itself evidence of learning."
+    },
+    {
+      "domain": "Reflection as Learning",
+      "role": "primary",
+      "rationale": "Explanation and restoration make the arrangement inspectable."
+    },
+    {
+      "domain": "Social and Cultural Critique",
+      "role": "primary",
+      "rationale": "Relevance and interruption encode power over attention."
+    },
+    {
+      "domain": "Sharing and Collaborating",
+      "role": "primary",
+      "rationale": "Collaboration includes narrowing machine initiative."
+    }
+  ],
+  "ontology_tags": [
+    {
+      "concept": "freedom_and_individuality",
+      "role": "operationalizes",
+      "rationale": "Human may constrain machine initiative."
+    },
+    {
+      "concept": "predetermined_outcomes",
+      "role": "counters",
+      "rationale": "Old relevance cannot become a hidden fixed trajectory."
+    },
+    {
+      "concept": "shared_democracy",
+      "role": "extends",
+      "rationale": "Participation rules stay human-governed."
+    },
+    {
+      "concept": "persistent_computing_environment",
+      "role": "operationalizes",
+      "rationale": "Persistence remains bounded by human authority."
+    },
+    {
+      "concept": "recursive_learning_loop",
+      "role": "supports",
+      "rationale": "Authority can be revised across cycles."
+    },
+    {
+      "concept": "co_active_emergence",
+      "role": "extends",
+      "rationale": "Human can perturb conditions of machine participation."
+    },
+    {
+      "concept": "machine_responses_as_material_for_evaluation",
+      "role": "tests",
+      "rationale": "Turtle response to revocation is evaluable behavior."
+    },
+    {
+      "concept": "purposeful_play",
+      "role": "supports",
+      "rationale": "Quieting Turtle can preserve productive exploratory space."
+    },
+    {
+      "concept": "steamhamlet",
+      "role": "supports",
+      "rationale": "The environment remains a revisable room of possibilities."
+    },
+    {
+      "concept": "cohabitation_without_provenance_collapse",
+      "role": "operationalizes",
+      "rationale": "Human directive and Turtle response remain distinct."
+    }
+  ],
+  "emergent_tags": [
+    {
+      "tag": "initiative_authority",
+      "rationale": "Scoped human-governed machine initiative."
+    },
+    {
+      "tag": "permission_contraction",
+      "rationale": "Some human negative moves reduce future machine permission."
+    },
+    {
+      "tag": "revocation_resurrection_risk",
+      "rationale": "Persistence may silently recreate removed authority."
+    },
+    {
+      "tag": "bounded_explanation_trace",
+      "rationale": "Explain why/why-now by pointer rather than copied raw dialogue."
+    }
+  ],
+  "reconciliation_findings": [
+    {
+      "id": "sep23-gap",
+      "status": "backfilled_by_pointer_in_staging"
+    },
+    {
+      "id": "library",
+      "status": "already_live_d1_verified"
+    },
+    {
+      "id": "site-runtime",
+      "status": "unresolved_low_severity"
+    },
+    {
+      "id": "try-it",
+      "status": "not_used_no_authorized_consent_safe_view"
+    }
+  ],
+  "wait_a_minute": {
+    "pointers": [
+      "worldspec/TURTLE_CHARTER.md",
+      "worldspec/schema/selective-attention-envelope.schema.json",
+      "research/TURTLE_ASK.md",
+      "worldspec/schema/plural-foreground-envelope.schema.json",
+      "worldspec/schema/initiative-authority-envelope.schema.json"
+    ],
+    "overlap": "Muting, refusal, withdrawal, and explicit revocation recur as valid human states; explicit revocation changes future machine authority.",
+    "uncertainty": "These acts are not semantically interchangeable; the recurrence may be an engineering principle rather than a new ontology concept.",
+    "disposition": [
+      "relationship",
+      "test_candidate"
+    ]
+  },
+  "uncaptured_observations": [
+    "A durable do-not-resurface rule may need scoped persistence in order to constrain older memory.",
+    "Human negative moves may share permission architecture while remaining distinct acts.",
+    "Local contract correctness does not prove live cross-session enforcement."
+  ]
+}
