@@ -165,11 +165,11 @@
   "reconciliation_findings": [
     {
       "id": "sep26-validator-gap",
-      "status": "repaired"
+      "status": "repaired_and_history_corrected"
     },
     {
       "id": "sep26-build-log-gap",
-      "status": "backfill_required"
+      "status": "backfilled"
     },
     {
       "id": "live-research-graph",
@@ -182,6 +182,11 @@
     {
       "id": "site-runtime-fallback",
       "status": "unresolved_low_severity"
+    },
+    {
+      "id": "coverage-matrix",
+      "status": "staged",
+      "canonical_pointer": "research/daily-build/2026-09-27.coverage.json"
     }
   ],
   "wait_a_minute": {
