@@ -60,6 +60,9 @@ jobs:
       - name: Validate Discord Turtle conversation contract
         run: npm run validate:discord-conversation
 
+      - name: Validate Turtle runtime secret contract
+        run: npm run validate:runtime-secrets
+
       - name: Validate Build Log cross-connections
         run: npm run validate:build-log-connections
 
