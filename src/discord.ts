@@ -69,11 +69,22 @@ async function replaceOriginalInteraction(env: DiscordEnv, interaction: DiscordI
 }
 
 function fallbackConversation(idea: string, interpretation: TurtleInterpretation, continuing: boolean) {
-  const question = interpretation.clarification_question || "What feels most worth changing or testing next?";
+  const question = interpretation.clarification_question || "What part of that should become concrete first?";
   const excerpt = `${idea.slice(0, 180)}${idea.length > 180 ? "…" : ""}`;
+  const invitation = /\b(talk to me|let'?s invent|let'?s imagine|brainstorm|think with me|make something together)\b/i.test(idea);
+  const correction = /^\s*(no\b|actually\b|wait\b|not quite\b|instead\b)/i.test(idea);
+
+  if (invitation) {
+    return `Yes — let’s invent it together. I saved **${excerpt}**. The richer Turtle chat model is unavailable on this turn, so I’m using the lightweight fallback rather than pretending I generated a deeper interpretation. Give me one image, rule, place, creature, or weird detail to keep building from.`;
+  }
+
+  if (correction) {
+    return `Okay — I’ll follow the correction instead of defending the earlier version. I saved **${excerpt}** as the newest direction. The richer Turtle chat model is unavailable on this turn, so this is the lightweight fallback. ${question}`;
+  }
+
   return continuing
-    ? `Got it — **${excerpt}**\n\n${question}`
-    : `I can work with that. **${excerpt}**\n\n${question}`;
+    ? `I saved **${excerpt}** and kept it in the same evolving WorldSpec. The richer Turtle chat model is unavailable on this turn, so I’m using the lightweight fallback. ${question}`
+    : `I saved **${excerpt}** as the start of the WorldSpec. The richer Turtle chat model is unavailable on this turn, so I’m using the lightweight fallback. ${question}`;
 }
 
 function mergeWorldSpec(current: any, proposed: any, learnerText: string) {
@@ -171,6 +182,8 @@ async function processTurtleCommand(env: DiscordEnv, interaction: DiscordInterac
   const recentTurns = [...(existing?.recent_turns || []), { actor: "learner", text: idea }].slice(-10);
   let conversation = fallbackConversation(idea, interpretation, Boolean(existing));
   let llmLabel = "deterministic fallback";
+  let engineMode: "model" | "fallback" = "fallback";
+  let llmFailureReason: string | null = null;
   try {
     const generated = await generateTurtleReply(env, {
       learner_text: idea,
@@ -181,15 +194,28 @@ async function processTurtleCommand(env: DiscordEnv, interaction: DiscordInterac
       surface: "discord",
       continuing: Boolean(existing)
     });
-    if (generated.ok) { conversation = generated.text; llmLabel = generated.model; }
-  } catch (error) { console.error("Turtle LLM processing error", error); }
+    if (generated.ok) {
+      conversation = generated.text;
+      llmLabel = generated.model;
+      engineMode = "model";
+    } else {
+      llmFailureReason = generated.reason;
+      console.warn("Discord Turtle model unavailable; using fallback", generated.reason);
+    }
+  } catch (error) {
+    llmFailureReason = "unexpected model processing error";
+    console.error("Turtle LLM processing error", error);
+  }
   await persistTurtleTurn(env, state.sessionId, conversation, llmLabel);
   const content = [
     "🐢 **Turtle**",
     conversation,
     "",
-    `_↺ WorldSpec r${String(state.revision).padStart(4,"0")} · ${state.stored ? "saved" : "not persisted"} · no Minecraft build yet · use /turtle again to continue_`
+    `_↺ WorldSpec r${String(state.revision).padStart(4,"0")} · ${state.stored ? "saved" : "not persisted"} · Turtle chat: ${engineMode} · no Minecraft build yet · use /turtle again to continue_`
   ].join("\n");
+  if (engineMode === "fallback" && llmFailureReason) {
+    console.warn("Discord Turtle fallback reason", llmFailureReason);
+  }
   await replaceOriginalInteraction(env, interaction, content);
 }
 
