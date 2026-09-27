@@ -19,5 +19,10 @@
     "directory": "./public",
     "binding": "ASSETS",
     "not_found_handling": "single-page-application"
+  },
+  "secrets": {
+    "required": [
+      "OPENAI_API_KEY"
+    ]
   }
 }
