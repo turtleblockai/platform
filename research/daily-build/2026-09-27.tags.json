@@ -104,6 +104,24 @@
         "src/turtleLLM.ts",
         "src/discord.ts"
       ]
+    },
+    {
+      "id": "discord-openai-secret-root-cause",
+      "type": "reconciliation_finding",
+      "summary": "Live Discord fallback reason classified as configuration, which in current code means OPENAI_API_KEY is absent from the deployed Worker environment.",
+      "source_class": "human_runtime_observation_plus_repository_semantics",
+      "privacy": "no_secret_value_inspected_or_recorded"
+    },
+    {
+      "id": "runtime-secret-contract",
+      "type": "implementation_change",
+      "summary": "Wrangler declares OPENAI_API_KEY as required and CI rejects plaintext or missing secret declarations.",
+      "repo_paths": [
+        "wrangler.jsonc",
+        "scripts/validate-runtime-secrets.mjs",
+        "package.json",
+        ".github/workflows/deploy.yml"
+      ]
     }
   ],
   "relationships": [
@@ -146,6 +164,16 @@
     {
       "from": "discord-fallback-reason-classifier",
       "predicate": "extends",
+      "to": "discord-conversation-repair"
+    },
+    {
+      "from": "discord-openai-secret-root-cause",
+      "predicate": "motivated",
+      "to": "runtime-secret-contract"
+    },
+    {
+      "from": "runtime-secret-contract",
+      "predicate": "guards",
       "to": "discord-conversation-repair"
     }
   ],
@@ -231,7 +259,9 @@
     "honest_fallback",
     "discord_conversation_quality",
     "model_failure_observability",
-    "persistence_generation_separation"
+    "persistence_generation_separation",
+    "required_runtime_secret",
+    "configuration_root_cause"
   ],
   "reconciliation_findings": [
     {
@@ -258,6 +288,11 @@
       "id": "coverage-matrix",
       "status": "staged",
       "canonical_pointer": "research/daily-build/2026-09-27.coverage.json"
+    },
+    {
+      "id": "discord-model-secret",
+      "status": "root_cause_confirmed_manual_deployment_action_required",
+      "canonical_pointer": "wrangler.jsonc"
     }
   ],
   "wait_a_minute": {
@@ -297,6 +332,7 @@
     "Semantic tests do not prove deployed cross-session behavior.",
     "Production Discord model availability remains unverified until a live turn reports Turtle chat: model.",
     "Human-visible conversation quality depends on distinguishing model absence from poor model behavior.",
-    "Discord project persistence can remain healthy while model generation independently fails."
+    "Discord project persistence can remain healthy while model generation independently fails.",
+    "Repository hardening can prevent silent future deployments, but adding the production secret remains an explicit operator action."
   ]
 }
