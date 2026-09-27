@@ -87,6 +87,23 @@
       "type": "evaluation_validator",
       "repo_path": "scripts/validate-discord-conversation.mjs",
       "summary": "Guards visible engine provenance and rejects retired canned Discord fallback/status behavior."
+    },
+    {
+      "id": "discord-live-r0003-fallback",
+      "type": "human_runtime_observation",
+      "summary": "Live Discord follow-up showed WorldSpec r0003 saved while Turtle chat remained fallback, separating working project persistence from failing model generation.",
+      "source_class": "human_provided_runtime_observation",
+      "privacy": "derived_observation_only_no_raw_dialogue_committed",
+      "actor": "human"
+    },
+    {
+      "id": "discord-fallback-reason-classifier",
+      "type": "implementation_change",
+      "summary": "Model failures are reduced to safe coarse categories for Discord diagnosis without exposing secrets or raw upstream errors.",
+      "repo_paths": [
+        "src/turtleLLM.ts",
+        "src/discord.ts"
+      ]
     }
   ],
   "relationships": [
@@ -120,6 +137,16 @@
       "predicate": "echoes",
       "to": "wait",
       "rationale": "Conversation-engine provenance separation repeats the broader rule that cohabiting evidence classes must not collapse."
+    },
+    {
+      "from": "discord-live-r0003-fallback",
+      "predicate": "narrows_failure_to",
+      "to": "discord-fallback-reason-classifier"
+    },
+    {
+      "from": "discord-fallback-reason-classifier",
+      "predicate": "extends",
+      "to": "discord-conversation-repair"
     }
   ],
   "ctc_tags": [
@@ -202,7 +229,9 @@
     "semantic_hostile_regression",
     "conversation_engine_provenance",
     "honest_fallback",
-    "discord_conversation_quality"
+    "discord_conversation_quality",
+    "model_failure_observability",
+    "persistence_generation_separation"
   ],
   "reconciliation_findings": [
     {
@@ -267,6 +296,7 @@
     "Restoration must remain explicit.",
     "Semantic tests do not prove deployed cross-session behavior.",
     "Production Discord model availability remains unverified until a live turn reports Turtle chat: model.",
-    "Human-visible conversation quality depends on distinguishing model absence from poor model behavior."
+    "Human-visible conversation quality depends on distinguishing model absence from poor model behavior.",
+    "Discord project persistence can remain healthy while model generation independently fails."
   ]
 }
