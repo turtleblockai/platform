@@ -8,7 +8,9 @@ const requiredDiscord = [
   'continuing: Boolean(existing)',
   'Turtle chat: ${engineMode}',
   'The richer Turtle chat model is unavailable on this turn',
-  'engineMode: "model" | "fallback"'
+  'engineMode: "model" | "fallback"',
+  'fallbackReasonLabel(llmFailureCode)',
+  'generated.reason_code'
 ];
 
 const forbiddenDiscord = [
@@ -19,6 +21,9 @@ const forbiddenDiscord = [
 ];
 
 const requiredLlm = [
+  'reason_code: "configuration"',
+  'reason_code: reasonCode',
+  'reason_code: "network"',
   'Do not routinely recap the WorldSpec',
   'A reply does not need to end with a question.',
   'Discord conversation: answer/react first; no routine state recap; one useful thread at a time; zero or one question'
@@ -43,4 +48,4 @@ if (failures.length) {
 }
 
 console.log("Discord Turtle conversation regression passed.");
-console.log("Invariant: model/fallback state is visible, fallback is honest, and Discord replies avoid routine state narration.");
+console.log("Invariant: model/fallback state and safe failure category are visible, fallback is honest, and Discord replies avoid routine state narration.");
