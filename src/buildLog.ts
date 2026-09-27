@@ -17,6 +17,17 @@ export interface BuildLogEntry {
 // through the Worker. Open inquiry belongs in Next Edge, not in completed entries.
 export const BUILD_LOG_ENTRIES: BuildLogEntry[] = [
   {
+    id: "2026-09-27-discord-conversation-provenance",
+    date: "Sep 27, 2026",
+    title: "Discord Turtle stops hiding when it falls back",
+    body: "A human runtime check exposed that Discord was sometimes showing deterministic fallback text as though it were ordinary Turtle conversation. The Discord surface now keeps continuity and provenance underneath while making the visible exchange smaller and more natural: model replies answer the latest turn first, avoid routine WorldSpec narration, and ask at most one worthwhile question; the old UUID-heavy footer is gone; and every response now says whether Turtle chat came from the model or the fallback. Fallback speech explicitly identifies itself instead of impersonating a richer interpretation. A deterministic regression guard is wired into CI. Product remains v0.1.0.",
+    done: true,
+    waitAMinute: {
+      summary: "The awkward chat was also a provenance-collapse bug: model-generated Turtle speech and deterministic fallback speech looked identical. Turtle Terraria already treats provenance separation as architectural, so conversation-engine provenance now becomes visible at the interaction boundary too.",
+      evidence: ["src/discord.ts", "src/turtleLLM.ts", "research/TURTLE_TERRARIA.md", "scripts/validate-discord-conversation.mjs"]
+    }
+  },
+  {
     id: "2026-09-27-initiative-authority-regression",
     date: "Sep 27, 2026",
     title: "Revocation gets hostile tests instead of good intentions",
