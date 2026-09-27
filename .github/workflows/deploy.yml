@@ -57,6 +57,9 @@ jobs:
       - name: Validate Initiative Authority Envelope
         run: npm run validate:initiative-authority
 
+      - name: Validate Discord Turtle conversation contract
+        run: npm run validate:discord-conversation
+
       - name: Validate Build Log cross-connections
         run: npm run validate:build-log-connections
 
