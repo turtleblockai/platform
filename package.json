@@ -20,7 +20,8 @@
     "audit:d1-coverage": "node scripts/audit-d1-coverage.mjs",
     "discord:register": "node scripts/register-discord-command.mjs",
     "validate:initiative-authority": "node scripts/validate-initiative-authority-envelope.mjs",
-    "validate:discord-conversation": "node scripts/validate-discord-conversation.mjs"
+    "validate:discord-conversation": "node scripts/validate-discord-conversation.mjs",
+    "validate:runtime-secrets": "node scripts/validate-runtime-secrets.mjs"
   },
   "devDependencies": {
     "@cloudflare/workers-types": "latest",
