@@ -1,0 +1,11 @@
+{
+  "schema": "turtleblockai.research-record-correction.v0.1",
+  "corrected_on": "2026-09-27",
+  "corrects": [
+    "research/daily-build/2026-09-26.tags.json",
+    "research/d1-reconciliation/2026-09-26.json"
+  ],
+  "correction": "At the Sep 26 close, Initiative Authority had a provisional schema, a 16-case placeholder fixture, and a fixture-shape check. The semantic validator was not committed until Sep 27.",
+  "semantic_validator_commit": "1c14ab084287ebe1a669c36e1d0557aee98d25b7",
+  "authority": "later canonical correction; does not rewrite the underlying Sep 26 source event"
+}
