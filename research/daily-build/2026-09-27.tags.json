@@ -6,9 +6,44 @@
   "capture_batch_closed": true,
   "research_objects": [
     {
+      "id": "cycle",
+      "type": "autobuild_run",
+      "summary": "One bounded cycle."
+    },
+    {
+      "id": "source-openai",
+      "type": "external_source",
+      "date": "2026-09-16",
+      "source_uri": "https://openai.com/index/unlocking-new-ways-of-working/"
+    },
+    {
+      "id": "source-nvidia",
+      "type": "external_source",
+      "date": "2026-09-21",
+      "source_uri": "https://developer.nvidia.com/blog/how-to-evaluate-ai-agents-from-tool-calls-to-task-completion/"
+    },
+    {
+      "id": "source-minecraft",
+      "type": "external_source",
+      "date": "2026-09-13",
+      "source_uri": "https://education.minecraft.net/en-us/blog/village-square-minecraft-civics"
+    },
+    {
+      "id": "source-mit",
+      "type": "external_source",
+      "date": "2026-09-03",
+      "source_uri": "https://www.media.mit.edu/articles/workplace-ai-has-a-visibility-problem-here-s-how-to-fix-it/"
+    },
+    {
       "id": "selection",
       "type": "selection",
       "summary": "Initiative Authority semantic regression suite v0.1"
+    },
+    {
+      "id": "cases",
+      "type": "evaluation_fixture_set",
+      "repo_path": "worldspec/tests/initiative-authority-envelope-cases.json",
+      "summary": "17 cases: 7 valid, 10 hostile."
     },
     {
       "id": "validator",
@@ -16,9 +51,159 @@
       "repo_path": "scripts/validate-initiative-authority-envelope.mjs"
     },
     {
+      "id": "wait",
+      "type": "wait_a_minute",
+      "summary": "Initiative repeatedly separates from authority."
+    },
+    {
+      "id": "version",
+      "type": "version_judgment",
+      "decision": "remain_0.1.0"
+    },
+    {
       "id": "next-edge",
       "type": "question",
       "summary": "Can revocation persist without becoming a profile?"
     }
+  ],
+  "relationships": [
+    {
+      "from": "validator",
+      "predicate": "executes",
+      "to": "cases"
+    },
+    {
+      "from": "wait",
+      "predicate": "connects",
+      "to": "selection"
+    },
+    {
+      "from": "selection",
+      "predicate": "surfaces",
+      "to": "next-edge"
+    }
+  ],
+  "ctc_tags": [
+    {
+      "domain": "Personal Inquiry",
+      "rationale": "Learner controls foreground."
+    },
+    {
+      "domain": "Compelling Problem or Question",
+      "rationale": "Questions gain no permanent resurfacing right."
+    },
+    {
+      "domain": "Technology as Tool to Think With",
+      "rationale": "Initiative becomes inspectable state."
+    },
+    {
+      "domain": "Formative Demonstration of Learning",
+      "rationale": "Authority action is not learning proof."
+    },
+    {
+      "domain": "Reflection as Learning",
+      "rationale": "Explanation and restoration support reflection."
+    },
+    {
+      "domain": "Social and Cultural Critique",
+      "rationale": "Attention encodes power."
+    },
+    {
+      "domain": "Sharing and Collaborating",
+      "rationale": "Collaboration includes narrowing machine participation."
+    }
+  ],
+  "ontology_tags": [
+    {
+      "concept": "freedom_and_individuality",
+      "rationale": "Human direction contracts machine initiative."
+    },
+    {
+      "concept": "predetermined_outcomes",
+      "rationale": "Old relevance cannot silently become trajectory."
+    },
+    {
+      "concept": "shared_democracy",
+      "rationale": "Participation rules remain human-governed."
+    },
+    {
+      "concept": "persistent_computing_environment",
+      "rationale": "Persistence remains scoped."
+    },
+    {
+      "concept": "recursive_learning_loop",
+      "rationale": "Authority can contract and be restored."
+    },
+    {
+      "concept": "co_active_emergence",
+      "rationale": "Human changes machine participation."
+    },
+    {
+      "concept": "machine_responses_as_material_for_evaluation",
+      "rationale": "Post-revocation behavior is test material."
+    },
+    {
+      "concept": "purposeful_play",
+      "rationale": "Exploration can include quiet machine participation."
+    },
+    {
+      "concept": "steamhamlet",
+      "rationale": "The environment remains revisable."
+    },
+    {
+      "concept": "cohabitation_without_provenance_collapse",
+      "rationale": "Human direction and machine state remain distinct."
+    }
+  ],
+  "emergent_tags": [
+    "initiative_authority",
+    "authority_resurrection",
+    "negative_authority_state",
+    "project_scoped_persistence",
+    "semantic_hostile_regression"
+  ],
+  "reconciliation_findings": [
+    {
+      "id": "sep26-validator-gap",
+      "status": "repaired"
+    },
+    {
+      "id": "sep26-build-log-gap",
+      "status": "backfill_required"
+    },
+    {
+      "id": "live-research-graph",
+      "status": "not_claimed"
+    },
+    {
+      "id": "try-it",
+      "status": "not_used"
+    },
+    {
+      "id": "site-runtime-fallback",
+      "status": "unresolved_low_severity"
+    }
+  ],
+  "wait_a_minute": {
+    "pointers": [
+      "worldspec/TURTLE_CHARTER.md",
+      "worldspec/schema/selective-attention-envelope.schema.json",
+      "research/TURTLE_ASK.md",
+      "worldspec/schema/cross-branch-perturbation-envelope.schema.json",
+      "worldspec/tests/initiative-authority-envelope-cases.json"
+    ],
+    "overlap": "Possibility generation does not grant interruption, surfacing, application, or resurrection authority.",
+    "uncertainty": "May be an engineering rule rather than a new ontology concept.",
+    "disposition": [
+      "relationship",
+      "test_candidate",
+      "next_edge_candidate"
+    ]
+  },
+  "uncaptured_observations": [
+    "Scoped revocation may need durable state to constrain older purpose.",
+    "Scoped authority could leak into generalized person state.",
+    "Restoration must remain explicit.",
+    "Semantic tests do not prove deployed cross-session behavior."
   ]
 }
