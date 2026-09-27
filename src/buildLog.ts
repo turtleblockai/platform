@@ -17,6 +17,28 @@ export interface BuildLogEntry {
 // through the Worker. Open inquiry belongs in Next Edge, not in completed entries.
 export const BUILD_LOG_ENTRIES: BuildLogEntry[] = [
   {
+    id: "2026-09-27-initiative-authority-regression",
+    date: "Sep 27, 2026",
+    title: "Revocation gets hostile tests instead of good intentions",
+    body: "The Initiative Authority contract now has semantic hostile coverage instead of a fixture-count placeholder. Seventeen deterministic cases cover all seven declared learner actions and reject remembered-purpose authority resurrection, relevance override, machine-authored authority, silent restoration, scope expansion, overbroad explanation, incomplete revocation, stale-purpose retention, and collection expansion. The validator is wired into CI; this tests the contract and does not claim deployed cross-session compliance. Product remains v0.1.0.",
+    done: true,
+    waitAMinute: {
+      summary: "The same boundary keeps recurring: noticing, asking, transferring, and remembering can create possibilities without acquiring authority to interrupt, apply, or resurface. Initiative Authority adds the negative-direction mirror: explicit human revocation must change future permission rather than become another preference signal.",
+      evidence: ["worldspec/schema/selective-attention-envelope.schema.json", "research/TURTLE_ASK.md", "worldspec/schema/cross-branch-perturbation-envelope.schema.json", "worldspec/tests/initiative-authority-envelope-cases.json"]
+    }
+  },
+  {
+    id: "2026-09-26-initiative-authority",
+    date: "Sep 26, 2026",
+    title: "Learner revocation becomes an explicit initiative contract",
+    body: "A provisional Initiative Authority Envelope names seven learner-controlled moves: go quiet, reduce initiative, stop resurfacing, retire a purpose, revoke delegated authority, request an explanation, and explicitly restore initiative later. Remembered purpose and inferred relevance cannot silently override those directions. The Sep 26 commit included only a fixture-shape check; semantic hostile enforcement was completed on Sep 27. Product remains v0.1.0.",
+    done: true,
+    waitAMinute: {
+      summary: "Selective Attention, TurtleAsk, plural foregrounds, and initiative revocation all distinguish machine initiative from authority over human attention. The recurrence looks architectural, while silence, refusal, withdrawal, and explicit revocation remain different human acts.",
+      evidence: ["worldspec/TURTLE_CHARTER.md", "worldspec/schema/selective-attention-envelope.schema.json", "research/TURTLE_ASK.md", "worldspec/schema/initiative-authority-envelope.schema.json"]
+    }
+  },
+  {
     id: "2026-09-22-cross-branch-perturbation",
     date: "Sep 22, 2026",
     title: "A branch can lend another branch a question without swallowing it",
@@ -158,10 +180,10 @@ export const BUILD_LOG_ENTRIES: BuildLogEntry[] = [
 ];
 
 export const NEXT_EDGE_FALLBACK = {
-  date: "Sep 22, 2026",
-  title: "When does cross-pollination quietly become convergence?",
-  question: "Can TurtleBlock AI notice when repeated traceable perturbations are gradually collapsing genuinely different branches into de facto convergence without scoring similarity, blocking exchange, or inventing a machine-defined amount of acceptable difference?",
-  xFactor: "whoooo knooooowwwssssssssssss — what if two branches become more interesting precisely because they borrow from each other and still refuse to agree?"
+  date: "Sep 27, 2026",
+  title: "Can revocation persist without becoming a profile?",
+  question: "Can TurtleBlock AI carry a project-scoped learner revocation across session boundaries so an old purpose stays quiet, while refusing to turn that authority state into a generalized personal preference or identity model?",
+  xFactor: "whoooo knooooowwwssssssssssss — what if the most intelligent thing persistence can remember is a boundary that tells it what not to bring back?"
 };
 
 function escapeHtml(value: string) {
