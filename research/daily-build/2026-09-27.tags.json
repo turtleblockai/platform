@@ -64,6 +64,29 @@
       "id": "next-edge",
       "type": "question",
       "summary": "Can revocation persist without becoming a profile?"
+    },
+    {
+      "id": "discord-runtime-observation",
+      "type": "human_runtime_observation",
+      "summary": "Human-supplied screenshots showed Discord replies matching the deterministic fallback while presenting no visible distinction from model-generated Turtle speech.",
+      "source_class": "human_provided_runtime_observation",
+      "privacy": "derived_observation_only_no_raw_dialogue_committed",
+      "actor": "human"
+    },
+    {
+      "id": "discord-conversation-repair",
+      "type": "implementation_change",
+      "summary": "Discord now exposes model versus fallback engine state, uses an honest bounded fallback, and removes the UUID-heavy conversation footer.",
+      "repo_paths": [
+        "src/discord.ts",
+        "src/turtleLLM.ts"
+      ]
+    },
+    {
+      "id": "discord-conversation-regression",
+      "type": "evaluation_validator",
+      "repo_path": "scripts/validate-discord-conversation.mjs",
+      "summary": "Guards visible engine provenance and rejects retired canned Discord fallback/status behavior."
     }
   ],
   "relationships": [
@@ -81,6 +104,22 @@
       "from": "selection",
       "predicate": "surfaces",
       "to": "next-edge"
+    },
+    {
+      "from": "discord-runtime-observation",
+      "predicate": "motivated",
+      "to": "discord-conversation-repair"
+    },
+    {
+      "from": "discord-conversation-regression",
+      "predicate": "guards",
+      "to": "discord-conversation-repair"
+    },
+    {
+      "from": "discord-conversation-repair",
+      "predicate": "echoes",
+      "to": "wait",
+      "rationale": "Conversation-engine provenance separation repeats the broader rule that cohabiting evidence classes must not collapse."
     }
   ],
   "ctc_tags": [
@@ -160,7 +199,10 @@
     "authority_resurrection",
     "negative_authority_state",
     "project_scoped_persistence",
-    "semantic_hostile_regression"
+    "semantic_hostile_regression",
+    "conversation_engine_provenance",
+    "honest_fallback",
+    "discord_conversation_quality"
   ],
   "reconciliation_findings": [
     {
@@ -203,12 +245,28 @@
       "relationship",
       "test_candidate",
       "next_edge_candidate"
-    ]
+    ],
+    "discord_addendum": {
+      "pointers": [
+        "src/discord.ts",
+        "src/turtleLLM.ts",
+        "research/TURTLE_TERRARIA.md",
+        "scripts/validate-discord-conversation.mjs"
+      ],
+      "overlap": "Discord model speech and deterministic fallback speech had collapsed provenance at the interaction boundary; Terraria already treats provenance separation as architectural.",
+      "uncertainty": "This may be an interface observability rule rather than a distinct ontology concept.",
+      "disposition": [
+        "relationship",
+        "test_candidate"
+      ]
+    }
   },
   "uncaptured_observations": [
     "Scoped revocation may need durable state to constrain older purpose.",
     "Scoped authority could leak into generalized person state.",
     "Restoration must remain explicit.",
-    "Semantic tests do not prove deployed cross-session behavior."
+    "Semantic tests do not prove deployed cross-session behavior.",
+    "Production Discord model availability remains unverified until a live turn reports Turtle chat: model.",
+    "Human-visible conversation quality depends on distinguishing model absence from poor model behavior."
   ]
 }
