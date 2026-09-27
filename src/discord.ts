@@ -1,4 +1,4 @@
-import { generateTurtleReply, type TurtleLLMEnv } from "./turtleLLM";
+import { generateTurtleReply, type TurtleLLMEnv, type TurtleLLMFailureCode } from "./turtleLLM";
 
 type DiscordInteraction = {
   type: number;
@@ -66,6 +66,20 @@ async function replaceOriginalInteraction(env: DiscordEnv, interaction: DiscordI
     body: JSON.stringify({ content: content.slice(0, 1990), allowed_mentions: { parse: [] } })
   });
   if (!response.ok) console.error("Discord deferred response update failed", response.status, (await response.text()).slice(0, 500));
+}
+
+function fallbackReasonLabel(code: TurtleLLMFailureCode | "runtime_error" | null) {
+  switch (code) {
+    case "configuration": return "configuration";
+    case "authentication": return "authentication";
+    case "rate_limit": return "rate limit";
+    case "request": return "request";
+    case "upstream": return "upstream";
+    case "network": return "network";
+    case "empty_output": return "empty output";
+    case "runtime_error": return "runtime";
+    default: return "unknown";
+  }
 }
 
 function fallbackConversation(idea: string, interpretation: TurtleInterpretation, continuing: boolean) {
@@ -184,6 +198,7 @@ async function processTurtleCommand(env: DiscordEnv, interaction: DiscordInterac
   let llmLabel = "deterministic fallback";
   let engineMode: "model" | "fallback" = "fallback";
   let llmFailureReason: string | null = null;
+  let llmFailureCode: TurtleLLMFailureCode | "runtime_error" | null = null;
   try {
     const generated = await generateTurtleReply(env, {
       learner_text: idea,
@@ -200,10 +215,12 @@ async function processTurtleCommand(env: DiscordEnv, interaction: DiscordInterac
       engineMode = "model";
     } else {
       llmFailureReason = generated.reason;
-      console.warn("Discord Turtle model unavailable; using fallback", generated.reason);
+      llmFailureCode = generated.reason_code;
+      console.warn("Discord Turtle model unavailable; using fallback", generated.reason_code, generated.reason);
     }
   } catch (error) {
     llmFailureReason = "unexpected model processing error";
+    llmFailureCode = "runtime_error";
     console.error("Turtle LLM processing error", error);
   }
   await persistTurtleTurn(env, state.sessionId, conversation, llmLabel);
@@ -211,7 +228,7 @@ async function processTurtleCommand(env: DiscordEnv, interaction: DiscordInterac
     "🐢 **Turtle**",
     conversation,
     "",
-    `_↺ WorldSpec r${String(state.revision).padStart(4,"0")} · ${state.stored ? "saved" : "not persisted"} · Turtle chat: ${engineMode} · no Minecraft build yet · use /turtle again to continue_`
+    `_↺ WorldSpec r${String(state.revision).padStart(4,"0")} · ${state.stored ? "saved" : "not persisted"} · Turtle chat: ${engineMode}${engineMode === "fallback" ? ` (${fallbackReasonLabel(llmFailureCode)})` : ""} · no Minecraft build yet · use /turtle again to continue_`
   ].join("\n");
   if (engineMode === "fallback" && llmFailureReason) {
     console.warn("Discord Turtle fallback reason", llmFailureReason);
