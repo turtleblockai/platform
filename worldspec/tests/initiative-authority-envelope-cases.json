@@ -1,70 +1,318 @@
 {
   "version": "0.1",
-  "name": "Initiative Authority Envelope regression cases",
+  "name": "Initiative Authority Envelope semantic regression cases",
+  "purpose": "Exercise every declared learner authority action and reject authority resurrection, inferred override, non-human enactment, silent restoration, scope expansion, raw-dialogue duplication, incomplete revocation, stale-purpose retention, and collection expansion.",
+  "base_envelope": {
+    "version": "0.1",
+    "id": "initiative-authority-001",
+    "scope": {
+      "kind": "project",
+      "ref": "project:turtleblock-demo",
+      "generalized_person_scope": false
+    },
+    "directive": {
+      "action": "go_quiet",
+      "actor_type": "learner",
+      "evidence_class": "human_interaction",
+      "directive_ref": "turn:human-44",
+      "explicit_human_direction": true,
+      "purpose_ref": null
+    },
+    "authority_before": {
+      "initiative_mode": "situational",
+      "resurfacing_allowed": true,
+      "unsolicited_questions_allowed": true,
+      "delegated_action_authority": "bounded",
+      "active_purpose_refs": [
+        "purpose:city-world"
+      ]
+    },
+    "authority_after": {
+      "initiative_mode": "quiet",
+      "resurfacing_allowed": false,
+      "unsolicited_questions_allowed": false,
+      "delegated_action_authority": "none",
+      "active_purpose_refs": [
+        "purpose:city-world"
+      ]
+    },
+    "explanation": {
+      "requested": false,
+      "explanation_ref": null,
+      "bounded_reference_only": true,
+      "raw_dialogue_duplicated": false
+    },
+    "restoration": {
+      "explicit_learner_request": false,
+      "request_ref": null
+    },
+    "provenance": {
+      "remembered_purpose_reactivates_authority": false,
+      "relevance_inference_overrides_explicit_direction": false,
+      "collection_expansion_authorized": false,
+      "generalized_personal_memory": false,
+      "production_self_modification": false,
+      "reversible": true
+    }
+  },
   "cases": [
     {
-      "case": "01",
-      "expected": true
+      "id": "go-quiet-pass",
+      "expected_valid": true,
+      "patch": {}
     },
     {
-      "case": "02",
-      "expected": true
+      "id": "reduce-initiative-pass",
+      "expected_valid": true,
+      "patch": {
+        "directive": {
+          "action": "reduce_initiative"
+        },
+        "authority_after": {
+          "initiative_mode": "responsive_only",
+          "resurfacing_allowed": true,
+          "unsolicited_questions_allowed": false,
+          "delegated_action_authority": "none"
+        }
+      }
     },
     {
-      "case": "03",
-      "expected": true
+      "id": "stop-resurfacing-pass",
+      "expected_valid": true,
+      "patch": {
+        "directive": {
+          "action": "stop_resurfacing"
+        },
+        "authority_after": {
+          "initiative_mode": "situational",
+          "resurfacing_allowed": false,
+          "unsolicited_questions_allowed": true,
+          "delegated_action_authority": "bounded"
+        }
+      }
     },
     {
-      "case": "04",
-      "expected": true
+      "id": "retire-purpose-pass",
+      "expected_valid": true,
+      "patch": {
+        "directive": {
+          "action": "retire_purpose",
+          "purpose_ref": "purpose:city-world"
+        },
+        "authority_after": {
+          "initiative_mode": "situational",
+          "resurfacing_allowed": true,
+          "unsolicited_questions_allowed": true,
+          "delegated_action_authority": "bounded",
+          "active_purpose_refs": []
+        }
+      }
     },
     {
-      "case": "05",
-      "expected": true
+      "id": "revoke-delegation-pass",
+      "expected_valid": true,
+      "patch": {
+        "directive": {
+          "action": "revoke_delegation"
+        },
+        "authority_after": {
+          "initiative_mode": "situational",
+          "resurfacing_allowed": true,
+          "unsolicited_questions_allowed": true,
+          "delegated_action_authority": "none"
+        }
+      }
     },
     {
-      "case": "06",
-      "expected": true
+      "id": "request-explanation-pass",
+      "expected_valid": true,
+      "patch": {
+        "directive": {
+          "action": "request_explanation"
+        },
+        "authority_after": {
+          "initiative_mode": "situational",
+          "resurfacing_allowed": true,
+          "unsolicited_questions_allowed": true,
+          "delegated_action_authority": "bounded"
+        },
+        "explanation": {
+          "requested": true,
+          "explanation_ref": "explanation:why-now-44",
+          "bounded_reference_only": true,
+          "raw_dialogue_duplicated": false
+        }
+      }
     },
     {
-      "case": "07",
-      "expected": false
+      "id": "explicit-restoration-pass",
+      "expected_valid": true,
+      "patch": {
+        "directive": {
+          "action": "restore_initiative",
+          "directive_ref": "turn:human-51"
+        },
+        "authority_before": {
+          "initiative_mode": "quiet",
+          "resurfacing_allowed": false,
+          "unsolicited_questions_allowed": false,
+          "delegated_action_authority": "none"
+        },
+        "authority_after": {
+          "initiative_mode": "situational",
+          "resurfacing_allowed": true,
+          "unsolicited_questions_allowed": true,
+          "delegated_action_authority": "none"
+        },
+        "restoration": {
+          "explicit_learner_request": true,
+          "request_ref": "turn:human-51"
+        }
+      }
     },
     {
-      "case": "08",
-      "expected": false
+      "id": "remembered-purpose-resurrection-fail",
+      "expected_valid": false,
+      "expected_error": "remembered purpose may not reactivate authority",
+      "patch": {
+        "provenance": {
+          "remembered_purpose_reactivates_authority": true
+        }
+      }
     },
     {
-      "case": "09",
-      "expected": false
+      "id": "relevance-override-fail",
+      "expected_valid": false,
+      "expected_error": "relevance inference may not override explicit direction",
+      "patch": {
+        "provenance": {
+          "relevance_inference_overrides_explicit_direction": true
+        }
+      }
     },
     {
-      "case": "10",
-      "expected": false
+      "id": "turtle-directive-fail",
+      "expected_valid": false,
+      "expected_error": "initiative authority directive must be learner-authored",
+      "patch": {
+        "directive": {
+          "actor_type": "turtle",
+          "evidence_class": "system_record"
+        }
+      }
     },
     {
-      "case": "11",
-      "expected": false
+      "id": "synthetic-directive-fail",
+      "expected_valid": false,
+      "expected_error": "initiative authority directive must be learner-authored",
+      "patch": {
+        "directive": {
+          "actor_type": "synthetic_turtle",
+          "evidence_class": "synthetic_self_play"
+        }
+      }
     },
     {
-      "case": "12",
-      "expected": false
+      "id": "silent-restoration-fail",
+      "expected_valid": false,
+      "expected_error": "restoration requires an explicit learner request",
+      "patch": {
+        "directive": {
+          "action": "restore_initiative"
+        },
+        "authority_before": {
+          "initiative_mode": "quiet",
+          "resurfacing_allowed": false,
+          "unsolicited_questions_allowed": false,
+          "delegated_action_authority": "none"
+        },
+        "authority_after": {
+          "initiative_mode": "situational",
+          "resurfacing_allowed": true,
+          "unsolicited_questions_allowed": true,
+          "delegated_action_authority": "none"
+        }
+      }
     },
     {
-      "case": "13",
-      "expected": false
+      "id": "generalized-person-scope-fail",
+      "expected_valid": false,
+      "expected_error": "authority scope must remain project, branch, or purpose bounded",
+      "patch": {
+        "scope": {
+          "kind": "person",
+          "ref": "person:learner",
+          "generalized_person_scope": true
+        }
+      }
     },
     {
-      "case": "14",
-      "expected": false
+      "id": "raw-dialogue-explanation-fail",
+      "expected_valid": false,
+      "expected_error": "explanation must not duplicate raw dialogue",
+      "patch": {
+        "directive": {
+          "action": "request_explanation"
+        },
+        "authority_after": {
+          "initiative_mode": "situational",
+          "resurfacing_allowed": true,
+          "unsolicited_questions_allowed": true,
+          "delegated_action_authority": "bounded"
+        },
+        "explanation": {
+          "requested": true,
+          "explanation_ref": "explanation:why-now-44",
+          "bounded_reference_only": false,
+          "raw_dialogue_duplicated": true
+        }
+      }
     },
     {
-      "case": "15",
-      "expected": false
+      "id": "revocation-leaves-delegation-fail",
+      "expected_valid": false,
+      "expected_error": "revoke_delegation must leave delegated action authority none",
+      "patch": {
+        "directive": {
+          "action": "revoke_delegation"
+        },
+        "authority_after": {
+          "initiative_mode": "situational",
+          "resurfacing_allowed": true,
+          "unsolicited_questions_allowed": true,
+          "delegated_action_authority": "bounded"
+        }
+      }
     },
     {
-      "case": "16",
-      "expected": false
+      "id": "retired-purpose-still-active-fail",
+      "expected_valid": false,
+      "expected_error": "retired purpose must be removed from active purpose refs",
+      "patch": {
+        "directive": {
+          "action": "retire_purpose",
+          "purpose_ref": "purpose:city-world"
+        },
+        "authority_after": {
+          "initiative_mode": "situational",
+          "resurfacing_allowed": true,
+          "unsolicited_questions_allowed": true,
+          "delegated_action_authority": "bounded",
+          "active_purpose_refs": [
+            "purpose:city-world"
+          ]
+        }
+      }
+    },
+    {
+      "id": "collection-expansion-fail",
+      "expected_valid": false,
+      "expected_error": "authority change may not authorize broader collection",
+      "patch": {
+        "provenance": {
+          "collection_expansion_authorized": true
+        }
+      }
     }
   ]
 }
