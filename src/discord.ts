@@ -69,10 +69,11 @@ async function replaceOriginalInteraction(env: DiscordEnv, interaction: DiscordI
 }
 
 function fallbackConversation(idea: string, interpretation: TurtleInterpretation, continuing: boolean) {
-  const question = interpretation.clarification_question || "What feels most important to change, preserve, or test next?";
+  const question = interpretation.clarification_question || "What feels most worth changing or testing next?";
+  const excerpt = `${idea.slice(0, 180)}${idea.length > 180 ? "…" : ""}`;
   return continuing
-    ? `I’m treating that as the next move in the same project, not a fresh prompt. I’m keeping your earlier WorldSpec intact while adding **${idea.slice(0, 220)}${idea.length > 220 ? "…" : ""}** as new learner-authored state.\n\n${question}`
-    : `I’m holding onto your whole idea, not just the keywords I can normalize. **${idea.slice(0, 220)}${idea.length > 220 ? "…" : ""}** is the beginning of a conversation, not a one-shot build request.\n\n${question}`;
+    ? `Got it — **${excerpt}**\n\n${question}`
+    : `I can work with that. **${excerpt}**\n\n${question}`;
 }
 
 function mergeWorldSpec(current: any, proposed: any, learnerText: string) {
@@ -176,7 +177,9 @@ async function processTurtleCommand(env: DiscordEnv, interaction: DiscordInterac
       interpretation,
       session: { id: state.sessionId, worldspec_id: state.worldspecId, revision: state.revision },
       current_worldspec: state.worldspec,
-      recent_turns: recentTurns
+      recent_turns: recentTurns,
+      surface: "discord",
+      continuing: Boolean(existing)
     });
     if (generated.ok) { conversation = generated.text; llmLabel = generated.model; }
   } catch (error) { console.error("Turtle LLM processing error", error); }
@@ -185,9 +188,7 @@ async function processTurtleCommand(env: DiscordEnv, interaction: DiscordInterac
     "🐢 **Turtle**",
     conversation,
     "",
-    `**Turtle Lab:** \`${state.sessionId}\` · **WorldSpec:** \`${state.worldspecId}\` · revision ${String(state.revision).padStart(4,"0")}`,
-    `_This is ${existing ? "a continuation of" : "the opening of"} the same evolving project. ${state.stored ? "Persistent state saved." : "D1 persistence is not active."} No Minecraft build has been executed._`,
-    `_For now, keep using /turtle to continue. Ordinary thread messages become possible when the Discord Gateway listener is connected._`
+    `_↺ WorldSpec r${String(state.revision).padStart(4,"0")} · ${state.stored ? "saved" : "not persisted"} · no Minecraft build yet · use /turtle again to continue_`
   ].join("\n");
   await replaceOriginalInteraction(env, interaction, content);
 }
