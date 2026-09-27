@@ -91,6 +91,6 @@ This keeps the open question separate from the historical Build Log. Daily build
 
 ## Current theoretical question
 
-Can a **Persistent Computing Environment** stay with a learner long enough to notice, connect, question, challenge, and remember without becoming **persistently perturbant**—and can the learner reliably push back by reducing, redirecting, or revoking machine initiative?
+Can TurtleBlock AI carry a **project-scoped learner revocation across session boundaries** so an old purpose stays quiet, while refusing to turn that authority state into a generalized personal preference or identity model?
 
-The public source of truth for the current horizon remains `public/data/next-edge.json`. The phrase *persistently perturbant* is provisional research language, not a settled construct.
+The public source of truth remains `public/data/next-edge.json`. The earlier phrase *persistently perturbant* remains provisional research language; the current edge narrows the longitudinal question to scoped authority persistence.
