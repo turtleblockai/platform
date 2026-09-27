@@ -1,0 +1,24 @@
+{
+  "schema": "turtleblockai.daily-build-tags.v0.1",
+  "date": "2026-09-27",
+  "ontology_version": "sanders-ontology-v0.1",
+  "d1_persistence": "staged_only",
+  "capture_batch_closed": true,
+  "research_objects": [
+    {
+      "id": "selection",
+      "type": "selection",
+      "summary": "Initiative Authority semantic regression suite v0.1"
+    },
+    {
+      "id": "validator",
+      "type": "evaluation_validator",
+      "repo_path": "scripts/validate-initiative-authority-envelope.mjs"
+    },
+    {
+      "id": "next-edge",
+      "type": "question",
+      "summary": "Can revocation persist without becoming a profile?"
+    }
+  ]
+}
