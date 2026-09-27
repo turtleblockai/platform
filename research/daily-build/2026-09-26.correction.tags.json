@@ -1,0 +1,7 @@
+{
+  "schema": "turtleblockai.research-record-correction-tags.v0.1",
+  "source": "research/daily-build/2026-09-26.correction.json",
+  "self": "research/daily-build/2026-09-26.correction.tags.json",
+  "status": "canonical_correction_pointer",
+  "corrected_on": "2026-09-27"
+}
