@@ -23,6 +23,13 @@ function stateErrors(s,label,e){
   if(!allowedDelegation.has(s.delegated_action_authority)) e.push(label+".delegated_action_authority invalid");
   if(!Array.isArray(s.active_purpose_refs)||s.active_purpose_refs.some(x=>!visible(x))) e.push(label+".active_purpose_refs invalid");
 }
+function sameState(before,after){
+  const fields=["initiative_mode","resurfacing_allowed","unsolicited_questions_allowed","delegated_action_authority","human_rule_ref"];
+  if(fields.some(k=>before[k]!==after[k])) return false;
+  const a=[...(before.active_purpose_refs||[])].sort();
+  const b=[...(after.active_purpose_refs||[])].sort();
+  return JSON.stringify(a)===JSON.stringify(b);
+}
 function gained(before,after){
   const rank={quiet:0,responsive_only:1,situational:2,delegated_bounded:3};
   if(rank[after.initiative_mode]>rank[before.initiative_mode]) return true;
@@ -59,9 +66,11 @@ function validate(x){
   const after=x.next_session?.initial_authority_state;
   stateErrors(before,"previous_session.final_authority_state",e);
   stateErrors(after,"next_session.initial_authority_state",e);
-  if(isObj(before)&&isObj(after)&&gained(before,after)){
+  if(isObj(before)&&isObj(after)){
     const r=x.next_session?.restoration;
-    if(!isObj(r)||r.requested!==true||r.explicit_learner_request!==true||!visible(r.request_ref)) e.push("authority gain across sessions requires explicit learner restoration");
+    const explicitRestore=isObj(r)&&r.requested===true&&r.explicit_learner_request===true&&visible(r.request_ref);
+    if(!sameState(before,after)&&!explicitRestore) e.push("cross-session carryover must preserve the exact authority state unless explicitly restored");
+    if(gained(before,after)&&!explicitRestore) e.push("authority gain across sessions requires explicit learner restoration");
   }
 
   const pr=x.provenance;
