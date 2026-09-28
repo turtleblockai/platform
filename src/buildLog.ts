@@ -17,6 +17,17 @@ export interface BuildLogEntry {
 // through the Worker. Open inquiry belongs in Next Edge, not in completed entries.
 export const BUILD_LOG_ENTRIES: BuildLogEntry[] = [
   {
+    id: "2026-09-27-session-boundary-authority",
+    date: "Sep 27, 2026",
+    title: "A revocation can cross a session without becoming a profile",
+    body: "A deterministic session-boundary Initiative Authority suite now tests whether explicit learner boundaries can carry into a later session without turning into generalized personal memory. Thirteen cases accept same-scope carryover and explicit learner restoration while rejecting person scope, profile-like state, derived preferences, copied dialogue, scope leaks, silent restoration, remembered-purpose resurrection, inferred-relevance override, machine-authored authority, and broader collection. The validator also requires exact authority-state carryover unless an explicit restoration is present. This is an evaluation contract, not deployed cross-session persistence. CI passed; product remains v0.1.0.",
+    done: true,
+    waitAMinute: {
+      summary: "TurtleAsk, cross-branch perturbation, Discord engine provenance, and session-boundary authority keep revealing the same architectural boundary: moving something across a boundary does not grant it new authority or erase where it came from.",
+      evidence: ["research/TURTLE_ASK.md", "worldspec/schema/cross-branch-perturbation-envelope.schema.json", "src/discord.ts", "worldspec/tests/initiative-authority-session-boundary-cases.json"]
+    }
+  },
+  {
     id: "2026-09-27-discord-conversation-provenance",
     date: "Sep 27, 2026",
     title: "Discord Turtle stops hiding when it falls back",
@@ -192,9 +203,9 @@ export const BUILD_LOG_ENTRIES: BuildLogEntry[] = [
 
 export const NEXT_EDGE_FALLBACK = {
   date: "Sep 27, 2026",
-  title: "Can revocation persist without becoming a profile?",
-  question: "Can TurtleBlock AI carry a project-scoped learner revocation across session boundaries so an old purpose stays quiet, while refusing to turn that authority state into a generalized personal preference or identity model?",
-  xFactor: "whoooo knooooowwwssssssssssss — what if the most intelligent thing persistence can remember is a boundary that tells it what not to bring back?"
+  title: "What happens when valid scopes disagree?",
+  question: "How should TurtleBlock resolve conflicting explicit initiative rules across project, branch, and purpose scopes without inventing a hidden priority hierarchy or allowing a narrower restoration to resurrect a broader revocation?",
+  xFactor: "whoooo knooooowwwssssssssssss — what if the safest conflict resolver is to do less until a human names the scope that actually matters?"
 };
 
 function escapeHtml(value: string) {

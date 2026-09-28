@@ -1,1 +1,126 @@
-{"version":"1.0","updated_at":"2026-09-27","status":"open_question","title":"Can revocation persist without becoming a profile?","question":"Can TurtleBlock AI carry a project-scoped learner revocation across session boundaries so an old purpose stays quiet, while refusing to turn that authority state into a generalized personal preference or identity model?","why_now":"Initiative Authority is now semantically testable for one transition. Too little persistence can resurrect old purpose; too much can turn a project rule into generalized state.","follows_commit":"1c14ab084287ebe1a669c36e1d0557aee98d25b7","follows_commit_role":"completed_semantic_regression","inputs":["worldspec/schema/initiative-authority-envelope.schema.json","worldspec/tests/initiative-authority-envelope-cases.json","scripts/validate-initiative-authority-envelope.mjs","research/daily-build/2026-09-27.tags.json"],"source_classes_consulted":["repository_state","evaluation_contract","reconciliation_staging","primary_sources"],"possible_possibles":["Persist explicit project directives, not broad preferences.","Preserve revocation and explicit restoration as separate events.","Test session-boundary resurrection before runtime persistence."],"x_factor":"whoooo knooooowwwssssssssssss — what if the most intelligent thing persistence can remember is a boundary that tells it what not to bring back?","constraints":["Keep authority project-scoped.","Do not infer revocation or restoration.","Remembered purpose cannot silently reactivate removed authority."],"ontology_mappings":[{"concept_key":"persistent_computing_environment","rationale":"Durable state must stay scoped."},{"concept_key":"freedom_and_individuality","rationale":"Human boundaries remain consequential."},{"concept_key":"recursive_learning_loop","rationale":"Revocation and restoration alter later cycles."},{"concept_key":"co_active_emergence","rationale":"Human direction changes machine participation."},{"concept_key":"cohabitation_without_provenance_collapse","rationale":"Directive, state, purpose, and restoration remain distinct."}],"ctc_mappings":[{"domain":"Personal Inquiry","rationale":"Learner controls project foreground."},{"domain":"Compelling Problem or Question","rationale":"Questions gain no permanent resurfacing right."},{"domain":"Technology as Tool to Think With","rationale":"Authority remains inspectable state."},{"domain":"Formative Demonstration of Learning","rationale":"Authority behavior is not learning proof."},{"domain":"Reflection as Learning","rationale":"Learners can inspect why purpose stayed quiet or returned."},{"domain":"Social and Cultural Critique","rationale":"Persistence carries power over whose purposes travel forward."},{"domain":"Sharing and Collaborating","rationale":"Collaboration needs scoped participation rules."}],"uncaptured_residue":[{"observation":"Remembering a boundary may differ from remembering a preference.","status":"open"}],"wait_a_minute_connection":{"summary":"Noticing is not interruption; ask formation is not surfacing; branch difference is not application; remembered purpose is not resurrection authority.","evidence":["worldspec/schema/selective-attention-envelope.schema.json","research/TURTLE_ASK.md","worldspec/tests/initiative-authority-envelope-cases.json"],"uncertainty":"May be engineering rather than ontology.","disposition":"next_edge_candidate_selected"},"provenance":{"evidence_class":"system_record_plus_primary_source_synthesis","privacy_class":"public","selection_method":"repo_plus_reconciliation_plus_source_hunt","actor":"machine_synthesis_under_human_direction","model":"GPT-5.6 Sol"},"selected_by":"machine_synthesis_under_human_direction","scope":"system_research_horizon"}
+{
+  "version": "1.0",
+  "updated_at": "2026-09-27",
+  "status": "open_question",
+  "title": "What happens when valid scopes disagree?",
+  "question": "How should TurtleBlock resolve conflicting explicit initiative rules across project, branch, and purpose scopes without inventing a hidden priority hierarchy or allowing a narrower restoration to resurrect a broader revocation?",
+  "why_now": "The new session-boundary authority contract requires exact same-scope carryover unless the learner explicitly restores initiative. That makes the next unresolved case visible: two valid learner-authored rules may overlap without an authored precedence relationship.",
+  "follows_commit": "20c6d70e81769830a055df09ece886af984110dc",
+  "follows_commit_role": "completed_session_boundary_authority_regression",
+  "inputs": [
+    "worldspec/tests/initiative-authority-session-boundary-cases.json",
+    "scripts/validate-initiative-authority-session-boundary.mjs",
+    "worldspec/schema/initiative-authority-envelope.schema.json",
+    "research/TURTLE_ASK.md",
+    "research/daily-build/2026-09-27.tags.json"
+  ],
+  "source_classes_consulted": [
+    "repository_state",
+    "evaluation_contract",
+    "reconciliation_staging",
+    "primary_sources",
+    "build_log_history"
+  ],
+  "possible_possibles": [
+    "Require an explicit human-authored precedence rule only when scopes actually conflict.",
+    "When two valid scopes disagree, choose less initiative until a human resolves the scope.",
+    "Make restoration strictly scope-local so restoring a branch never restores a project or retired purpose."
+  ],
+  "x_factor": "whoooo knooooowwwssssssssssss — what if the safest conflict resolver is to do less until a human names the scope that actually matters?",
+  "constraints": [
+    "Do not infer a hidden scope hierarchy.",
+    "Do not let narrower restoration silently revive broader authority.",
+    "Preserve each directive and scope as separate provenance.",
+    "Conflict handling must remain reversible and human-governed."
+  ],
+  "ontology_mappings": [
+    {
+      "concept_key": "freedom_and_individuality",
+      "rationale": "Conflicting rules are still learner-authored boundaries and must remain consequential."
+    },
+    {
+      "concept_key": "shared_democracy",
+      "rationale": "Precedence over participation rules should remain explicitly governed rather than silently machine-selected."
+    },
+    {
+      "concept_key": "predetermined_outcomes",
+      "rationale": "A remembered broader purpose must not pre-decide the conflict."
+    },
+    {
+      "concept_key": "persistent_computing_environment",
+      "rationale": "Persistent scoped state needs explicit conflict semantics."
+    },
+    {
+      "concept_key": "recursive_learning_loop",
+      "rationale": "A later human resolution should alter subsequent sessions without rewriting the original directives."
+    },
+    {
+      "concept_key": "co_active_emergence",
+      "rationale": "The human may reshape machine initiative when overlapping rules become visible."
+    },
+    {
+      "concept_key": "cohabitation_without_provenance_collapse",
+      "rationale": "Project, branch, purpose, restoration, and conflict resolution must remain distinguishable."
+    }
+  ],
+  "ctc_mappings": [
+    {
+      "domain": "Personal Inquiry",
+      "rationale": "Learner-defined scope controls which purpose is foregrounded."
+    },
+    {
+      "domain": "Compelling Problem or Question",
+      "rationale": "The unresolved conflict remains an open question rather than a machine-made default."
+    },
+    {
+      "domain": "Technology as Tool to Think With",
+      "rationale": "Scope conflicts should be inspectable state."
+    },
+    {
+      "domain": "Formative Demonstration of Learning",
+      "rationale": "Authority resolution is system governance, not automatic evidence of learning."
+    },
+    {
+      "domain": "Reflection as Learning",
+      "rationale": "A learner can inspect and revise why a rule won or remained unresolved."
+    },
+    {
+      "domain": "Social and Cultural Critique",
+      "rationale": "Priority rules encode power and should not be hidden."
+    },
+    {
+      "domain": "Sharing and Collaborating",
+      "rationale": "Collaborative environments need explicit rules for overlapping participation boundaries."
+    }
+  ],
+  "uncaptured_residue": [
+    {
+      "observation": "A formal scope hierarchy may itself become an invisible machine-authored curriculum of authority.",
+      "status": "open"
+    },
+    {
+      "observation": "The safest temporary resolution may be deliberate non-action rather than precedence.",
+      "status": "open"
+    }
+  ],
+  "wait_a_minute_connection": {
+    "summary": "TurtleAsk, cross-branch transfer, engine provenance, and session carryover all separate crossing a boundary from gaining new authority; overlapping scopes now test whether that rule survives collision.",
+    "evidence": [
+      "research/TURTLE_ASK.md",
+      "worldspec/schema/cross-branch-perturbation-envelope.schema.json",
+      "src/discord.ts",
+      "worldspec/tests/initiative-authority-session-boundary-cases.json"
+    ],
+    "uncertainty": "This may be a general engineering invariant or a family of local rules rather than a new ontology concept.",
+    "disposition": "next_edge_candidate_selected"
+  },
+  "provenance": {
+    "evidence_class": "system_record_plus_primary_source_synthesis",
+    "privacy_class": "public",
+    "selection_method": "repo_plus_reconciliation_plus_source_hunt",
+    "actor": "machine_synthesis_under_human_direction",
+    "model": "GPT-5.6 Sol"
+  },
+  "selected_by": "machine_synthesis_under_human_direction",
+  "scope": "system_research_horizon"
+}
