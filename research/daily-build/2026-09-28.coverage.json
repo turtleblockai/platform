@@ -1,0 +1,135 @@
+{
+  "schema": "turtleblockai.build-log-coverage.v0.2",
+  "date": "2026-09-28",
+  "purpose": "Lossless staging of reconciliation judgments for every material public Build Log entry plus meaningful repository history not yet represented in the Build Log.",
+  "d1_persistence": "staged_only",
+  "live_d1_write_attempted": false,
+  "live_d1_write_claimed": false,
+  "coverage": [
+    [
+      "2026-09-27-discord-conversation-provenance",
+      "staged",
+      "research/daily-build/2026-09-27.tags.json"
+    ],
+    [
+      "2026-09-27-initiative-authority-regression",
+      "staged",
+      "research/daily-build/2026-09-27.tags.json"
+    ],
+    [
+      "2026-09-26-initiative-authority",
+      "backfill_staged",
+      "research/daily-build/2026-09-26.tags.json"
+    ],
+    [
+      "2026-09-22-cross-branch-perturbation",
+      "staged",
+      "research/daily-build/2026-09-22.tags.json"
+    ],
+    [
+      "2026-09-18-branch-experience-comparison",
+      "staged",
+      "research/daily-build/2026-09-18.tags.json"
+    ],
+    [
+      "2026-09-17-human-perturbation-translation",
+      "staged",
+      "research/daily-build/2026-09-17.tags.json"
+    ],
+    [
+      "2026-09-17-physical-library-d1",
+      "represented",
+      "research/d1-reconciliation/2026-09-17-library.json"
+    ],
+    [
+      "2026-09-16-wait-a-minute-build-log",
+      "staged",
+      "research/d1-reconciliation/2026-09-16.json"
+    ],
+    [
+      "2026-09-16-plural-foreground-regression",
+      "staged",
+      "research/daily-build/2026-09-16.tags.json"
+    ],
+    [
+      "2026-09-15-plural-foreground-envelope",
+      "staged",
+      "research/daily-build/2026-09-15.tags.json"
+    ],
+    [
+      "2026-09-12-d1-reconciliation-terraria-try",
+      "staged",
+      "research/d1-reconciliation/2026-09-12.json"
+    ],
+    [
+      "2026-09-11-human-tamagotchi-turtle-ask",
+      "migration",
+      "migrations/0009_human_tamagotchi_terrarium_and_turtle_ask.sql"
+    ],
+    [
+      "2026-09-12-selective-attention-envelope",
+      "staged",
+      "research/daily-build/2026-09-12.tags.json"
+    ],
+    [
+      "2026-09-11-world-evidence-envelope",
+      "staged",
+      "research/daily-build/2026-09-11.tags.json"
+    ],
+    [
+      "2026-09-10-learner-verification-card",
+      "staged",
+      "research/daily-build/2026-09-10.tags.json"
+    ],
+    [
+      "2026-09-09-next-edge-validator",
+      "staged",
+      "research/daily-build/2026-09-09.tags.json"
+    ],
+    [
+      "2026-09-08-next-edge-horizon",
+      "staged",
+      "research/daily-build/2026-09-08-next-edge.tags.json"
+    ],
+    [
+      "2026-09-08-www-direct-asset-repair",
+      "staged",
+      "research/daily-build/2026-09-08-www-repair.tags.json"
+    ],
+    [
+      "2026-09-08-turtle-terraria-tagging",
+      "migration",
+      "migrations/0008_seed_terraria_and_autobuild_tags.sql"
+    ],
+    [
+      "2026-09-08-daily-coactive-loop",
+      "migration",
+      "migrations/0007_turtle_terraria_and_exhaustive_tagging.sql"
+    ]
+  ],
+  "repository_history_not_yet_in_build_log": [
+    {
+      "id": "initiative-authority-session-boundary-regression",
+      "status": "backfill_staged",
+      "canonical_pointers": [
+        "worldspec/tests/initiative-authority-session-boundary-cases.json",
+        "scripts/validate-initiative-authority-session-boundary.mjs"
+      ],
+      "commits": [
+        "42f02aa9ce36b17f18c770dc8cf9d780ea5e118b",
+        "20c6d70e81769830a055df09ece886af984110dc"
+      ],
+      "reason": "Meaningful completed evaluation work exists on main but was not yet represented as public Build Log history at the opening sweep."
+    }
+  ],
+  "opening_sweep": {
+    "build_log_entry_count": 20,
+    "prior_coverage_row_count": 19,
+    "missing_public_entry_ids": [
+      "2026-09-27-discord-conversation-provenance"
+    ],
+    "repo_only_material_gap_count": 1
+  },
+  "privacy_boundary": "No private raw dialogue, secret values, credentials, or generalized person state were inspected or copied.",
+  "capture_batch_closed": true
+}
