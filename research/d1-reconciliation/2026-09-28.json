@@ -1,0 +1,14 @@
+{
+  "date": "2026-09-28",
+  "d1_persistence": "staged_only",
+  "public_build_log_coverage": {"entries":20,"covered":20,"uncovered":[]},
+  "publication_gaps": [
+    {"target":"src/buildLog.ts","status":"unresolved","reason":"Daily entry prepend could not be written through the connected large-file path."},
+    {"target":"research/NEXT_EDGE.md","status":"unresolved","reason":"Public data has the new edge; narrative horizon doc still carries the prior question."}
+  ],
+  "repo_history_backfill": [
+    {"id":"initiative-authority-session-boundary-regression","status":"staged","pointers":["worldspec/tests/initiative-authority-session-boundary-cases.json","scripts/validate-initiative-authority-session-boundary.mjs"]}
+  ],
+  "privacy": "No private raw dialogue copied.",
+  "capture_batch_closed": true
+}
