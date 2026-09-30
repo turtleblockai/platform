@@ -17,6 +17,17 @@ export interface BuildLogEntry {
 // through the Worker. Open inquiry belongs in Next Edge, not in completed entries.
 export const BUILD_LOG_ENTRIES: BuildLogEntry[] = [
   {
+    id: "2026-09-29-initiative-authority-scope-conflict",
+    date: "Sep 29, 2026",
+    title: "Conflicting learner rules no longer get a secret machine tiebreaker",
+    body: "A new Initiative Authority scope-conflict fixture makes project-, branch-, and purpose-scoped learner rules collide on purpose. Fourteen cases preserve an unresolved fail-closed posture or explicit learner-selected precedence while rejecting specificity, recency, relevance, hidden defaults, machine resolution, cross-scope mutation, generalized person scope, broader collection, and production self-modification as silent tiebreakers. The fixture is committed and passed a bounded structural contract check; an executable repository validator remains uncommitted because the connected executable-write path was blocked during this cycle. Product remains v0.1.0.",
+    done: true,
+    waitAMinute: {
+      summary: "Failing closed protects authority, but invisible restraint can still become opaque machine governance. Discord already showed why provenance needs to be visible, while TurtleAsk separates forming an intention from permission to surface it. The next question is whether doing less itself needs inspectable provenance and human override.",
+      evidence: ["worldspec/tests/initiative-authority-scope-conflict-cases.json", "src/discord.ts", "research/TURTLE_ASK.md", "worldspec/schema/initiative-authority-envelope.schema.json"]
+    }
+  },
+  {
     id: "2026-09-27-discord-conversation-provenance",
     date: "Sep 27, 2026",
     title: "Discord Turtle stops hiding when it falls back",
@@ -191,10 +202,10 @@ export const BUILD_LOG_ENTRIES: BuildLogEntry[] = [
 ];
 
 export const NEXT_EDGE_FALLBACK = {
-  date: "Sep 27, 2026",
-  title: "Can revocation persist without becoming a profile?",
-  question: "Can TurtleBlock AI carry a project-scoped learner revocation across session boundaries so an old purpose stays quiet, while refusing to turn that authority state into a generalized personal preference or identity model?",
-  xFactor: "whoooo knooooowwwssssssssssss — what if the most intelligent thing persistence can remember is a boundary that tells it what not to bring back?"
+  date: "Sep 29, 2026",
+  title: "Is ‘do less’ secretly a precedence rule?",
+  question: "When Turtle conservatively does less while valid learner scopes conflict, how can that temporary restraint stay inspectable and human-revisable instead of becoming an invisible machine-authored hierarchy?",
+  xFactor: "whoooo knooooowwwssssssssssss — what if no-resolution is itself a resolution that needs provenance?"
 };
 
 function escapeHtml(value: string) {
