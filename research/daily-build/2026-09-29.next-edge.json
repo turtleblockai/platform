@@ -1,0 +1,14 @@
+{
+  "date": "2026-09-29",
+  "status": "staged_due_canonical_write_gap",
+  "title": "Is do less secretly a precedence rule?",
+  "question": "When valid scoped learner rules conflict, how can temporary restraint remain inspectable and revisable instead of hardening into an invisible default hierarchy?",
+  "follows_commit": "7a1757af51c580135b0eab38cceebec0f49cb1af",
+  "possible_possibles": [
+    "Use a provenance-bearing temporary hold.",
+    "Explain the hold only during active interaction or when requested.",
+    "Allow bounded project-specific conflict handling."
+  ],
+  "x_factor": "whoooo knooooowwwssssssssssss — what if no-resolution is itself a resolution that needs provenance?",
+  "canonical_target": "public/data/next-edge.json"
+}
