@@ -2,15 +2,14 @@ import fs from "node:fs";
 
 const raw = fs.readFileSync(new URL("../wrangler.jsonc", import.meta.url), "utf8");
 const config = JSON.parse(raw);
-const required = config?.secrets?.required ?? [];
 const vars = config?.vars ?? {};
-
 const failures = [];
-if (!Array.isArray(required) || !required.includes("OPENAI_API_KEY")) {
-  failures.push("wrangler.jsonc must declare OPENAI_API_KEY in secrets.required");
-}
+
 if (Object.prototype.hasOwnProperty.call(vars, "OPENAI_API_KEY")) {
-  failures.push("OPENAI_API_KEY must not be stored in plaintext vars");
+  failures.push("OPENAI_API_KEY must not be stored in plaintext wrangler vars");
+}
+if (Object.prototype.hasOwnProperty.call(config, "secrets")) {
+  failures.push("wrangler.jsonc must not invent a top-level secrets contract; production secrets are provisioned out-of-band in Cloudflare");
 }
 
 if (failures.length) {
@@ -20,4 +19,4 @@ if (failures.length) {
 }
 
 console.log("Runtime secret contract passed.");
-console.log("Invariant: production Turtle chat requires OPENAI_API_KEY as an encrypted Worker secret, never a plaintext repo var.");
+console.log("Invariant: OPENAI_API_KEY, when enabled in production, is provisioned as an encrypted Cloudflare Worker secret and is never committed as a plaintext repo variable.");

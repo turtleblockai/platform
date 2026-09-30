@@ -17,6 +17,35 @@ export interface BuildLogEntry {
 // through the Worker. Open inquiry belongs in Next Edge, not in completed entries.
 export const BUILD_LOG_ENTRIES: BuildLogEntry[] = [
   {
+    id: "2026-09-30-library-catalog-28",
+    date: "Sep 30, 2026",
+    title: "The research library grows from its first shelf to 28 cataloged sources",
+    body: "The photographed-source D1 catalog has continued well beyond its initial eleven records. Repository migrations now carry the library through entry 28, including physical-copy distinctions, artifact and ephemera corrections, special notes, public-catalog visibility, and the latest batch for entries 26–28. The public research API reads the catalog from D1 while keeping catalog facts, interpretive notes, provenance, and verification status distinct. This Build Log entry records the accumulated library work as one research milestone rather than pretending each book is a separate product feature. Product remains v0.1.0.",
+    done: true,
+    waitAMinute: {
+      summary: "The library is becoming more than a bibliography: it is a provenance-bearing source layer that can eventually connect physical artifacts to research objects without collapsing a photographed source, a catalog record, and an interpretation into the same thing.",
+      evidence: ["migrations/0010_library_sources.sql", "migrations/0028_library_special_notes.sql", "migrations/0029_publish_library_catalog.sql", "migrations/0030_library_sources_0026_0028.sql", "src/entry.ts"]
+    }
+  },
+  {
+    id: "2026-09-28-initiative-authority-session-boundary",
+    date: "Sep 28, 2026",
+    title: "Scoped learner authority survives a session boundary without becoming personal memory",
+    body: "A session-boundary Initiative Authority regression now permits explicit learner-authored authority to carry into a later session only inside the same declared scope and rejects person-wide memory, inferred preferences, scope leakage, silent restoration, remembered-purpose resurrection, relevance override, machine-authored authority, and broader collection. Thirteen cases require carried authority to remain exactly unchanged unless the learner explicitly restores something later. Product remains v0.1.0.",
+    done: true,
+    waitAMinute: {
+      summary: "Crossing a boundary should not inflate authority: the same rule now appears across TurtleAsk surfacing, cross-branch perturbation, Discord engine provenance, and session carryover.",
+      evidence: ["worldspec/tests/initiative-authority-session-boundary-cases.json", "scripts/validate-initiative-authority-session-boundary.mjs", "research/TURTLE_ASK.md"]
+    }
+  },
+  {
+    id: "2026-09-28-build-log-d1-coverage-repair",
+    date: "Sep 28, 2026",
+    title: "The Build Log and D1 reconciliation sweep stop disagreeing about project history",
+    body: "The repository-to-D1 coverage matrix was repaired after a meaningful public Build Log item fell outside the reconciliation accounting. The sweep now treats public project history as research identity that needs a D1 representation, canonical pointer, intentional exclusion reason, or explicit unresolved-gap record rather than assuming a successful commit automatically entered the research substrate. Product remains v0.1.0.",
+    done: true
+  },
+  {
     id: "2026-09-29-initiative-authority-scope-conflict",
     date: "Sep 29, 2026",
     title: "Conflicting learner rules no longer get a secret machine tiebreaker",
