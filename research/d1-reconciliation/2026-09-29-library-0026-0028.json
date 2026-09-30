@@ -1,0 +1,35 @@
+{
+  "schema": "turtleblockai.d1-reconciliation.v0.3",
+  "date": "2026-09-29",
+  "status": "live_d1_applied_and_verified",
+  "capture_batch": "library-entries-0026-0028",
+  "migration_file": "migrations/0030_library_sources_0026_0028.sql",
+  "migration_commit": "2981c072507c5926e2f0a3bec5d77d3d6b65392d",
+  "source_boundary": {
+    "basis": "Commander-provided photographs only",
+    "external_lookup_used": false,
+    "unknown_fields_left_unknown": true
+  },
+  "entries": [
+    {"entry_number":26,"title":"Hamlet","author":"William Shakespeare"},
+    {"entry_number":27,"title":"Lifelong Kindergarten","author":"Mitchel Resnick"},
+    {"entry_number":28,"title":"Hamlet on the Holodeck","author":"Janet H. Murray"}
+  ],
+  "live_apply": {
+    "performed": true,
+    "database_name": "turtleblockai",
+    "github_actions_run_id": 36661960738,
+    "github_actions_job_id": 109718464753,
+    "execution_result": "7 queries executed; 33 rows read; 54 rows written",
+    "verification": {
+      "library_source_count": 28,
+      "special_note_count": 74,
+      "public_source_count": 28
+    }
+  },
+  "public_surface": {
+    "automatic": true,
+    "page": "/research/library/",
+    "reason": "new records are public and the library page is D1-driven"
+  }
+}
