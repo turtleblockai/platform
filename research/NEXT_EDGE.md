@@ -91,6 +91,8 @@ This keeps the open question separate from the historical Build Log. Daily build
 
 ## Current theoretical question
 
-Can TurtleBlock AI carry a **project-scoped learner revocation across session boundaries** so an old purpose stays quiet, while refusing to turn that authority state into a generalized personal preference or identity model?
+**Is “do less” secretly a precedence rule?**
 
-The public source of truth remains `public/data/next-edge.json`. The earlier phrase *persistently perturbant* remains provisional research language; the current edge narrows the longitudinal question to scoped authority persistence.
+When Turtle conservatively does less while valid project-, branch-, and purpose-scoped learner rules conflict, how can that temporary restraint remain inspectable, contestable, and human-revisable instead of hardening into an invisible machine-authored hierarchy?
+
+The public source of truth remains `public/data/next-edge.json`. This edge follows the scope-conflict evaluation fixture and deliberately turns its safest provisional behavior back into a research question: fail-closed restraint protects authority, but the legitimacy and legibility of that default still require examination.
