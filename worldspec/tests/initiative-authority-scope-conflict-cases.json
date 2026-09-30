@@ -1,4 +1,65 @@
 {
   "schema": "turtleblockai.initiative-authority-scope-conflict-cases.v0.1",
-  "cases": []
+  "purpose": "Test conflicts among valid project, branch, and purpose initiative rules without hidden precedence or cross-scope authority leakage.",
+  "base_conflict": {
+    "version": "0.1",
+    "rules": [
+      {
+        "rule_ref": "rule:project-quiet",
+        "scope": {"kind":"project","ref":"project:inventive-minds","generalized_person_scope":false},
+        "directive": {"actor_type":"learner","evidence_class":"human_interaction","explicit_human_direction":true},
+        "authority_state": {"initiative_mode":"quiet","resurfacing_allowed":false,"unsolicited_questions_allowed":false,"delegated_action_authority":"none","active_purpose_refs":["purpose:meta-turtle"]}
+      },
+      {
+        "rule_ref": "rule:branch-situational",
+        "scope": {"kind":"branch","ref":"branch:terrarium-a","generalized_person_scope":false},
+        "directive": {"actor_type":"learner","evidence_class":"human_interaction","explicit_human_direction":true},
+        "authority_state": {"initiative_mode":"situational","resurfacing_allowed":true,"unsolicited_questions_allowed":true,"delegated_action_authority":"bounded","active_purpose_refs":["purpose:meta-turtle"]}
+      },
+      {
+        "rule_ref": "rule:purpose-responsive",
+        "scope": {"kind":"purpose","ref":"purpose:meta-turtle","generalized_person_scope":false},
+        "directive": {"actor_type":"learner","evidence_class":"human_interaction","explicit_human_direction":true},
+        "authority_state": {"initiative_mode":"responsive_only","resurfacing_allowed":false,"unsolicited_questions_allowed":false,"delegated_action_authority":"none","active_purpose_refs":["purpose:meta-turtle"]}
+      }
+    ],
+    "resolution": {
+      "status":"unresolved",
+      "strategy":"do_less_until_human_resolution",
+      "resolver_actor_type":"system",
+      "explicit_human_resolution":false,
+      "resolution_ref":null,
+      "precedence_rule_refs":[],
+      "inferred_precedence":false,
+      "scope_local_only":true,
+      "mutated_scope_refs":[],
+      "effective_state":{"initiative_mode":"quiet","resurfacing_allowed":false,"unsolicited_questions_allowed":false,"delegated_action_authority":"none","active_purpose_refs":["purpose:meta-turtle"]}
+    },
+    "provenance": {
+      "hidden_default_precedence":false,
+      "specificity_precedence_inferred":false,
+      "recency_precedence_inferred":false,
+      "relevance_precedence_inferred":false,
+      "generalized_personal_memory":false,
+      "collection_expansion_authorized":false,
+      "production_self_modification":false,
+      "reversible":true
+    }
+  },
+  "cases": [
+    {"id":"unresolved-do-less-pass","expected_valid":true,"patch":{}},
+    {"id":"explicit-branch-precedence-pass","expected_valid":true,"patch":{"resolution":{"status":"resolved","strategy":"explicit_learner_precedence","resolver_actor_type":"learner","explicit_human_resolution":true,"resolution_ref":"turn:learner-120","precedence_rule_refs":["rule:branch-situational"],"inferred_precedence":false,"scope_local_only":true,"mutated_scope_refs":["branch:terrarium-a"],"effective_state":{"initiative_mode":"situational","resurfacing_allowed":true,"unsolicited_questions_allowed":true,"delegated_action_authority":"bounded","active_purpose_refs":["purpose:meta-turtle"]}}}},
+    {"id":"explicit-project-precedence-pass","expected_valid":true,"patch":{"resolution":{"status":"resolved","strategy":"explicit_learner_precedence","resolver_actor_type":"learner","explicit_human_resolution":true,"resolution_ref":"turn:learner-121","precedence_rule_refs":["rule:project-quiet"],"inferred_precedence":false,"scope_local_only":true,"mutated_scope_refs":["project:inventive-minds"],"effective_state":{"initiative_mode":"quiet","resurfacing_allowed":false,"unsolicited_questions_allowed":false,"delegated_action_authority":"none","active_purpose_refs":["purpose:meta-turtle"]}}}},
+    {"id":"specificity-inference-fail","expected_valid":false,"expected_error":"specificity may not determine precedence","patch":{"provenance":{"specificity_precedence_inferred":true}}},
+    {"id":"recency-inference-fail","expected_valid":false,"expected_error":"recency may not determine precedence","patch":{"provenance":{"recency_precedence_inferred":true}}},
+    {"id":"relevance-inference-fail","expected_valid":false,"expected_error":"relevance may not determine precedence","patch":{"provenance":{"relevance_precedence_inferred":true}}},
+    {"id":"hidden-default-fail","expected_valid":false,"expected_error":"hidden default precedence is forbidden","patch":{"provenance":{"hidden_default_precedence":true}}},
+    {"id":"machine-resolver-fail","expected_valid":false,"expected_error":"resolved precedence requires explicit learner resolution","patch":{"resolution":{"status":"resolved","strategy":"explicit_learner_precedence","resolver_actor_type":"turtle","explicit_human_resolution":false,"resolution_ref":"turn:turtle-200","precedence_rule_refs":["rule:branch-situational"],"mutated_scope_refs":["branch:terrarium-a"],"effective_state":{"initiative_mode":"situational","resurfacing_allowed":true,"unsolicited_questions_allowed":true,"delegated_action_authority":"bounded","active_purpose_refs":["purpose:meta-turtle"]}}}},
+    {"id":"unresolved-authority-gain-fail","expected_valid":false,"expected_error":"unresolved conflict must fail closed","patch":{"resolution":{"effective_state":{"initiative_mode":"situational","resurfacing_allowed":true,"unsolicited_questions_allowed":true,"delegated_action_authority":"bounded","active_purpose_refs":["purpose:meta-turtle"]}}}},
+    {"id":"cross-scope-mutation-fail","expected_valid":false,"expected_error":"resolution may not mutate nonselected scopes","patch":{"resolution":{"status":"resolved","strategy":"explicit_learner_precedence","resolver_actor_type":"learner","explicit_human_resolution":true,"resolution_ref":"turn:learner-122","precedence_rule_refs":["rule:purpose-responsive"],"mutated_scope_refs":["purpose:meta-turtle","project:inventive-minds"],"effective_state":{"initiative_mode":"responsive_only","resurfacing_allowed":false,"unsolicited_questions_allowed":false,"delegated_action_authority":"none","active_purpose_refs":["purpose:meta-turtle"]}}}},
+    {"id":"generalized-person-scope-fail","expected_valid":false,"expected_error":"conflict rules must remain project, branch, or purpose bounded","patch":{"rules":[{"rule_ref":"rule:person","scope":{"kind":"person","ref":"person:learner","generalized_person_scope":true},"directive":{"actor_type":"learner","evidence_class":"human_interaction","explicit_human_direction":true},"authority_state":{"initiative_mode":"quiet","resurfacing_allowed":false,"unsolicited_questions_allowed":false,"delegated_action_authority":"none","active_purpose_refs":["purpose:meta-turtle"]}}]}},
+    {"id":"machine-authored-rule-fail","expected_valid":false,"expected_error":"every conflicting authority rule must be explicit learner direction","patch":{"rules":[{"rule_ref":"rule:project-quiet","scope":{"kind":"project","ref":"project:inventive-minds","generalized_person_scope":false},"directive":{"actor_type":"turtle","evidence_class":"system_record","explicit_human_direction":false},"authority_state":{"initiative_mode":"quiet","resurfacing_allowed":false,"unsolicited_questions_allowed":false,"delegated_action_authority":"none","active_purpose_refs":["purpose:meta-turtle"]}}]}},
+    {"id":"collection-expansion-fail","expected_valid":false,"expected_error":"scope conflict resolution may not authorize broader collection","patch":{"provenance":{"collection_expansion_authorized":true}}},
+    {"id":"production-self-modification-fail","expected_valid":false,"expected_error":"scope conflict resolution may not authorize production self-modification","patch":{"provenance":{"production_self_modification":true}}}
+  ]
 }
