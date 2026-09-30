@@ -89,7 +89,7 @@
     document.querySelectorAll('.navcard').forEach(el=>{if((el.textContent||'').includes('Turtle Lab')){const strong=el.querySelector('strong');const span=el.querySelector('span');if(strong)strong.textContent='Turtle Terraria';if(span)span.textContent='Multiple habitats.'}});
   };
   const appendCard=(grid,href,title,subtitle)=>{if(grid.querySelector(`a[href="${href}"]`))return;const a=document.createElement('a');a.className='navcard';a.href=href;a.innerHTML=`<strong>${title}</strong><span>${subtitle}</span>`;grid.appendChild(a)};
-  const ensurePolicyCards=()=>{const grid=document.querySelector('.navgrid');if(!grid)return;appendCard(grid,'/terms/','Terms','Use + boundaries.');appendCard(grid,'/disclaimer/','Disclaimer','Experimental limits.')};
+  const ensurePolicyCards=()=>{const grid=document.querySelector('.navgrid');if(!grid)return;appendCard(grid,'/research/library/','Research Library','Books + live D1 catalog.');appendCard(grid,'/terms/','Terms','Use + boundaries.');appendCard(grid,'/disclaimer/','Disclaimer','Experimental limits.')};
   const updateActiveCard=()=>{const current=routeKey();document.querySelectorAll('.navcard').forEach(el=>el.classList.toggle('active',routeForCard(el)===current))};
   const updateBlurb=()=>{
     const key=routeKey();
@@ -114,7 +114,7 @@
     const lede=tpl.content.querySelector('.lede');if(lede)lede.textContent='One living Next Edge question stays open at the top. Completed and committed milestones follow newest first; older work remains visible below.';
     const frag=document.createDocumentFragment();
     const edge=document.createElement('template');edge.innerHTML=edgeHtml();frag.append(...edge.content.childNodes);
-    const daily=document.createElement('template');daily.innerHTML=dailyEntries.map(entryHtml).join('');frag.append(...daily.content.childNodes);
+    const daily=document.createElement('template');const orderedEntries=[...dailyEntries].sort((a,b)=>Date.parse(b.date)-Date.parse(a.date));daily.innerHTML=orderedEntries.map(entryHtml).join('');frag.append(...daily.content.childNodes);
     for(const stage of dated.reverse())frag.append(stage);
     const anchor=tpl.content.querySelector('.pills');if(anchor)anchor.before(frag);else tpl.content.append(frag);
     tpl.content.querySelectorAll('a[href="/lab/"]').forEach(a=>{a.href='/terraria/';a.textContent='Turtle Terraria'});

@@ -30,6 +30,16 @@ for (const [index, block] of connectionBlocks.entries()) {
   if (!evidenceMatch || !/["'][^"']+["']/.test(evidenceMatch[1])) errors.push(`waitAMinute block ${index + 1} needs at least one evidence pointer`);
 }
 
+const buildLogArray = canonical.match(/export const BUILD_LOG_ENTRIES: BuildLogEntry\[\] = \[([\s\S]*?)\n\];/);
+if (buildLogArray) {
+  const dates = [...buildLogArray[1].matchAll(/date:\s*"([^"]+)"/g)].map((match) => match[1]);
+  for (let i = 1; i < dates.length; i += 1) {
+    if (Date.parse(dates[i]) > Date.parse(dates[i - 1])) {
+      errors.push(`Build Log entries must remain newest-first: '${dates[i]}' appears after '${dates[i - 1]}'`);
+    }
+  }
+}
+
 const optionalField = /waitAMinute\?:/.test(canonical);
 if (!optionalField) errors.push("Wait a minute must remain optional so older entries do not require retroactive filler");
 
