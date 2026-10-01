@@ -1,1 +1,65 @@
-{"version":"1.0","updated_at":"2026-09-28","status":"open_question","title":"What happens when valid scopes disagree?","question":"When valid project, branch, and purpose rules disagree, how should TurtleBlock represent the conflict without inventing precedence?","why_now":"Session-boundary carryover is now testable; conflicting scoped rules are the next unresolved boundary.","follows_commit":"ef304add7dfbeb34624f3105c554f8688bde021f","follows_commit_role":"completed_reconciliation_coverage_repair","inputs":["worldspec/tests/initiative-authority-session-boundary-cases.json","scripts/validate-initiative-authority-session-boundary.mjs","research/daily-build/2026-09-28.coverage.json","research/D1_RECONCILIATION.md"],"source_classes_consulted":["repository_state","reconciliation_staging","primary_sources"],"possible_possibles":["Do less until the learner names precedence.","Allow explicit learner-authored precedence.","Keep restoration scope-local."],"x_factor":"whoooo knooooowwwssssssssssss — what if the safest resolver is to do less until a human names the scope that matters?","constraints":["Do not infer precedence.","Do not leak scope.","Preserve provenance and reversibility."],"ontology_mappings":[{"concept_key":"shared_democracy","rationale":"Competing valid rules remain contestable."}],"ctc_mappings":[{"domain":"Reflection as Learning","rationale":"Conflicting rules can be inspected and revised."}],"uncaptured_residue":[{"observation":"Valid-scope conflict may need first-class representation.","status":"open"}],"provenance":{"evidence_class":"system_record_plus_primary_source_synthesis","privacy_class":"public","selection_method":"repo_plus_reconciliation_plus_source_hunt"},"selected_by":"machine_synthesis_under_human_direction","scope":"system_research_horizon"}
+{
+  "version": "1.0",
+  "updated_at": "2026-09-30",
+  "status": "open_question",
+  "title": "Can restraint stay temporary?",
+  "question": "When valid learner rules conflict and Turtle temporarily does less, how should that hold remain visible, contestable, and replaceable?",
+  "why_now": "The scope-conflict fixture now has an executable validator; the remaining edge is how to represent the temporary hold itself.",
+  "follows_commit": "2df53578f1b02df79ed3a2093a568fd1a84348a9",
+  "follows_commit_role": "completed_scope_conflict_validator",
+  "inputs": [
+    "worldspec/tests/initiative-authority-scope-conflict-cases.json",
+    "scripts/validate-initiative-authority-scope-conflict.mjs",
+    "research/TURTLE_ASK.md",
+    "research/daily-build/2026-09-30.md"
+  ],
+  "source_classes_consulted": [
+    "repository_state",
+    "reconciliation_staging",
+    "primary_sources"
+  ],
+  "possible_possibles": [
+    "Use an ephemeral record linked to the conflicting rules.",
+    "Keep the hold transient but explain it on request.",
+    "Require an explicit learner choice before initiative increases."
+  ],
+  "x_factor": "whoooo knooooowwwssssssssssss — what if preserving the refusal to invent a winner matters more than preserving a winner?",
+  "constraints": [
+    "Do not infer rule priority.",
+    "Keep scope boundaries intact.",
+    "Keep the state reversible and human-revisable."
+  ],
+  "ontology_mappings": [
+    {
+      "concept_key": "shared_democracy",
+      "rationale": "Competing learner rules remain open to learner resolution."
+    },
+    {
+      "concept_key": "freedom_and_individuality",
+      "rationale": "Learner direction remains revisable within its declared scope."
+    }
+  ],
+  "ctc_mappings": [
+    {
+      "domain": "Reflection as Learning",
+      "rationale": "Temporary restraint should be inspectable and revisable."
+    },
+    {
+      "domain": "Technology as Tool to Think With",
+      "rationale": "The hold can be represented rather than hidden."
+    }
+  ],
+  "uncaptured_residue": [
+    {
+      "observation": "It is unclear whether a temporary hold deserves first-class research identity.",
+      "status": "open"
+    }
+  ],
+  "provenance": {
+    "evidence_class": "system_record_plus_primary_source_synthesis",
+    "privacy_class": "public",
+    "selection_method": "repo_plus_reconciliation_plus_source_hunt"
+  },
+  "selected_by": "machine_synthesis_under_human_direction",
+  "scope": "system_research_horizon"
+}

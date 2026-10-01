@@ -1,0 +1,222 @@
+{
+  "schema": "turtleblockai.daily-build-tags.v0.1",
+  "date": "2026-09-30",
+  "ontology_version": "sanders-ontology-v0.1",
+  "d1_persistence": "staged_only",
+  "capture_batch_closed": true,
+  "research_objects": [
+    {
+      "id": "cycle",
+      "type": "autobuild_run",
+      "summary": "Bounded Sep 30 build cycle."
+    },
+    {
+      "id": "src-openai",
+      "type": "external_source",
+      "date": "2026-09-29",
+      "uri": "https://deploymentsafety.openai.com/gpt-6-1-sol/respecting-auto-review",
+      "summary": "Observable boundary evaluation."
+    },
+    {
+      "id": "src-nvidia",
+      "type": "external_source",
+      "date": "2026-09-28",
+      "uri": "https://developer.nvidia.com/blog/nvidia-open-agent-safety-platform-a-reference-for-continuous-in-silicon-agent-monitoring/",
+      "summary": "Inspectable agent policy and activity."
+    },
+    {
+      "id": "src-minecraft",
+      "type": "external_source",
+      "date": "2026-09-13",
+      "uri": "https://education.minecraft.net/en-us/blog/village-square-minecraft-civics",
+      "summary": "Constructed civic inquiry with competing perspectives."
+    },
+    {
+      "id": "src-mit",
+      "type": "external_source",
+      "date": "2026-09-17",
+      "uri": "https://www.media.mit.edu/events/aha-seminar-daniella-dipaola/",
+      "summary": "Situated values, reflection, and adjustment."
+    },
+    {
+      "id": "selection",
+      "type": "selection",
+      "summary": "Make the existing scope-conflict fixture executable."
+    },
+    {
+      "id": "implementation",
+      "type": "repo_change",
+      "repo_path": "scripts/validate-initiative-authority-scope-conflict.mjs",
+      "commit": "2df53578f1b02df79ed3a2093a568fd1a84348a9"
+    },
+    {
+      "id": "test",
+      "type": "evaluation_observation",
+      "summary": "14 cases; 3 expected-valid; 11 hostile; 0 expectation mismatches."
+    },
+    {
+      "id": "wait",
+      "type": "wait_a_minute",
+      "summary": "Proposal or continued reasoning does not itself choose among competing learner rules."
+    },
+    {
+      "id": "next-edge",
+      "type": "question",
+      "summary": "Can restraint stay temporary?"
+    },
+    {
+      "id": "version",
+      "type": "version_judgment",
+      "decision": "remain_0.1.0"
+    }
+  ],
+  "relationships": [
+    {
+      "from": "selection",
+      "predicate": "implemented_as",
+      "to": "implementation"
+    },
+    {
+      "from": "test",
+      "predicate": "evaluates",
+      "to": "implementation"
+    },
+    {
+      "from": "src-openai",
+      "predicate": "reinforces",
+      "to": "wait"
+    },
+    {
+      "from": "src-nvidia",
+      "predicate": "reinforces",
+      "to": "wait"
+    },
+    {
+      "from": "src-minecraft",
+      "predicate": "contextualizes",
+      "to": "wait"
+    },
+    {
+      "from": "src-mit",
+      "predicate": "contextualizes",
+      "to": "wait"
+    },
+    {
+      "from": "wait",
+      "predicate": "surfaces",
+      "to": "next-edge"
+    }
+  ],
+  "ctc_tags": [
+    {
+      "domain": "Personal Inquiry",
+      "rationale": "Learner direction governs initiative around inquiry."
+    },
+    {
+      "domain": "Compelling Problem or Question",
+      "rationale": "A compelling question does not erase a learner boundary."
+    },
+    {
+      "domain": "Technology as Tool to Think With",
+      "rationale": "The conflict is represented and inspectable."
+    },
+    {
+      "domain": "Formative Demonstration of Learning",
+      "rationale": "The test demonstrates system behavior, not learner learning."
+    },
+    {
+      "domain": "Reflection as Learning",
+      "rationale": "Unresolved conflict remains open to revision."
+    },
+    {
+      "domain": "Social and Cultural Critique",
+      "rationale": "Rule selection concerns participation and authority."
+    },
+    {
+      "domain": "Sharing and Collaborating",
+      "rationale": "Collaboration needs explicit resolution when scopes disagree."
+    }
+  ],
+  "ontology_tags": [
+    {
+      "concept": "freedom_and_individuality",
+      "rationale": "Learner direction remains controlling within its scope."
+    },
+    {
+      "concept": "predetermined_outcomes",
+      "rationale": "Hidden priority would silently select a trajectory."
+    },
+    {
+      "concept": "problem_posing_education",
+      "rationale": "Conflict remains an inspectable problem."
+    },
+    {
+      "concept": "shared_democracy",
+      "rationale": "Competing rules remain contestable."
+    },
+    {
+      "concept": "machine_responses_as_material_for_evaluation",
+      "rationale": "Boundary behavior becomes test material."
+    },
+    {
+      "concept": "co_active_emergence",
+      "rationale": "Human direction can change machine participation."
+    },
+    {
+      "concept": "possible_possibles",
+      "rationale": "More than one continuation can remain open."
+    },
+    {
+      "concept": "purposeful_play",
+      "rationale": "Constructed environments can hold competing perspectives."
+    },
+    {
+      "concept": "steamhamlet",
+      "rationale": "Shared representations remain revisable."
+    }
+  ],
+  "emergent_tags": [
+    "initiative_authority",
+    "scope_conflict",
+    "temporary_restraint",
+    "boundary_without_priority"
+  ],
+  "reconciliation_findings": [
+    {
+      "id": "opening-build-log",
+      "status": "represented_by_canonical_pointer",
+      "pointer": "research/daily-build/2026-09-30.coverage.json"
+    },
+    {
+      "id": "library-live-d1",
+      "status": "represented_in_d1",
+      "pointer": "research/d1-reconciliation/2026-09-29-library-0026-0028.json"
+    },
+    {
+      "id": "today-cycle",
+      "status": "represented_by_canonical_pointer",
+      "pointer": "research/daily-build/2026-09-30.md"
+    },
+    {
+      "id": "live-d1-today",
+      "status": "not_written"
+    }
+  ],
+  "wait_a_minute": {
+    "pointers": [
+      "worldspec/tests/initiative-authority-scope-conflict-cases.json",
+      "scripts/validate-initiative-authority-scope-conflict.mjs",
+      "research/TURTLE_ASK.md"
+    ],
+    "uncertainty": "May be a systems relation rather than a new CTC domain.",
+    "disposition": [
+      "relationship",
+      "test_candidate",
+      "next_edge_candidate"
+    ]
+  },
+  "uncaptured_observations": [
+    "A temporary conservative hold may or may not deserve first-class research identity.",
+    "Standing CI wiring for the new validator remains unresolved."
+  ]
+}

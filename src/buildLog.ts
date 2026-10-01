@@ -15,9 +15,18 @@ export interface BuildLogEntry {
 // Newest completed work first. The public asset runtime remains the primary WWW path;
 // this Worker-side layer remains as a compatibility path if HTML is ever rendered
 // through the Worker. Open inquiry belongs in Next Edge, not in completed entries.
-export const BUILD_LOG_ENTRIES: BuildLogEntry[
-  
-] = [
+export const BUILD_LOG_ENTRIES: BuildLogEntry[] = [
+  {
+    id: "2026-09-30-initiative-authority-scope-conflict-validator",
+    date: "Sep 30, 2026",
+    title: "Scope conflicts get an executable authority test instead of a prose promise",
+    body: "The Initiative Authority scope-conflict fixture now has an executable semantic validator. Fourteen cases — three valid and eleven hostile — preserve bounded learner-authored rules, conservative unresolved handling, and explicit learner-selected precedence while rejecting hidden machine tiebreakers and cross-scope authority changes. The validator passed a bounded replay against the canonical fixture. CI wiring remains unresolved, so this entry does not claim the new script runs in the standing workflow. Product remains v0.1.0.",
+    done: true,
+    waitAMinute: {
+      summary: "The same boundary now appears in Initiative Authority and TurtleAsk: a system can notice, propose, or continue thinking without acquiring permission to override a human constraint. The useful next question is whether temporary restraint itself needs provenance.",
+      evidence: ["worldspec/tests/initiative-authority-scope-conflict-cases.json", "scripts/validate-initiative-authority-scope-conflict.mjs", "research/TURTLE_ASK.md", "research/daily-build/2026-09-30.md"]
+    }
+  },
   {
     id: "2026-09-30-library-catalog-28",
     date: "Sep 30, 2026",
@@ -27,6 +36,17 @@ export const BUILD_LOG_ENTRIES: BuildLogEntry[
     waitAMinute: {
       summary: "The library is becoming more than a bibliography: it is a provenance-bearing source layer that can eventually connect physical artifacts to research objects without collapsing a photographed source, a catalog record, and an interpretation into the same thing.",
       evidence: ["migrations/0010_library_sources.sql", "migrations/0028_library_special_notes.sql", "migrations/0029_publish_library_catalog.sql", "migrations/0030_library_sources_0026_0028.sql", "src/entry.ts"]
+    }
+  },
+  {
+    id: "2026-09-29-initiative-authority-scope-conflict",
+    date: "Sep 29, 2026",
+    title: "Conflicting learner rules no longer get a secret machine tiebreaker",
+    body: "A new Initiative Authority scope-conflict fixture makes project-, branch-, and purpose-scoped learner rules collide on purpose. Fourteen cases preserve an unresolved fail-closed posture or explicit learner-selected precedence while rejecting specificity, recency, relevance, hidden defaults, machine resolution, cross-scope mutation, generalized person scope, broader collection, and production self-modification as silent tiebreakers. The fixture is committed and passed a bounded structural contract check; an executable repository validator remains uncommitted because the connected executable-write path was blocked during this cycle. Product remains v0.1.0.",
+    done: true,
+    waitAMinute: {
+      summary: "Failing closed protects authority, but invisible restraint can still become opaque machine governance. Discord already showed why provenance needs to be visible, while TurtleAsk separates forming an intention from permission to surface it. The next question is whether doing less itself needs inspectable provenance and human override.",
+      evidence: ["worldspec/tests/initiative-authority-scope-conflict-cases.json", "src/discord.ts", "research/TURTLE_ASK.md", "worldspec/schema/initiative-authority-envelope.schema.json"]
     }
   },
   {
@@ -46,17 +66,6 @@ export const BUILD_LOG_ENTRIES: BuildLogEntry[
     title: "The Build Log and D1 reconciliation sweep stop disagreeing about project history",
     body: "The repository-to-D1 coverage matrix was repaired after a meaningful public Build Log item fell outside the reconciliation accounting. The sweep now treats public project history as research identity that needs a D1 representation, canonical pointer, intentional exclusion reason, or explicit unresolved-gap record rather than assuming a successful commit automatically entered the research substrate. Product remains v0.1.0.",
     done: true
-  },
-  {
-    id: "2026-09-29-initiative-authority-scope-conflict",
-    date: "Sep 29, 2026",
-    title: "Conflicting learner rules no longer get a secret machine tiebreaker",
-    body: "A new Initiative Authority scope-conflict fixture makes project-, branch-, and purpose-scoped learner rules collide on purpose. Fourteen cases preserve an unresolved fail-closed posture or explicit learner-selected precedence while rejecting specificity, recency, relevance, hidden defaults, machine resolution, cross-scope mutation, generalized person scope, broader collection, and production self-modification as silent tiebreakers. The fixture is committed and passed a bounded structural contract check; an executable repository validator remains uncommitted because the connected executable-write path was blocked during this cycle. Product remains v0.1.0.",
-    done: true,
-    waitAMinute: {
-      summary: "Failing closed protects authority, but invisible restraint can still become opaque machine governance. Discord already showed why provenance needs to be visible, while TurtleAsk separates forming an intention from permission to surface it. The next question is whether doing less itself needs inspectable provenance and human override.",
-      evidence: ["worldspec/tests/initiative-authority-scope-conflict-cases.json", "src/discord.ts", "research/TURTLE_ASK.md", "worldspec/schema/initiative-authority-envelope.schema.json"]
-    }
   },
   {
     id: "2026-09-27-discord-conversation-provenance",
@@ -168,17 +177,17 @@ export const BUILD_LOG_ENTRIES: BuildLogEntry[
     done: true
   },
   {
-    id: "2026-09-11-human-tamagotchi-turtle-ask",
-    date: "Sep 11, 2026",
-    title: "A third Terrarium waits for Turtle to ask a human",
-    body: "Turtle Terraria now has a third theoretical habitat: Human Tamagotchi Terrarium. Humans mostly do human things there while an intentionally silly virtual-human representation points to a real person without simulating that person's mind, mood, availability, or willingness to engage. A new TurtleAsk boundary event lets a Turtle form a provenance-preserving request for genuine human perturbation when machine-only inquiry appears saturated, contradictory, repetitive, or bounded by meaning. Ask formation remains separate from surfacing authority; Recursive Turtle can form only a candidate ask; human silence is valid; and no proactive production messaging has been authorized. Migration 0009 and research/TURTLE_ASK.md make the hypothesis inspectable without pretending Turtle literally experiences boredom.",
-    done: true
-  },
-  {
     id: "2026-09-12-selective-attention-envelope",
     date: "Sep 12, 2026",
     title: "Turtle learns that noticing is not the same as interrupting",
     body: "A provisional Selective Attention Envelope now separates an observable world event from retention, salience, surfacing, interruption, and importance. Learner-authored watchpoints can authorize a bounded interruption; Turtle may propose attention but cannot seize the foreground; deliberate silence is valid behavior; project defaults cannot silently make a learner interruptible; synthetic self-play cannot execute production attention; private events cannot be broadcast publicly; and attention cannot authorize new collection. An eight-case hostile suite passed in GitHub Actions beside the existing TypeScript, Next Edge, Learner Verification, and World Evidence checks. The experiment remains outside live learner behavior and the product stays at v0.1.0.",
+    done: true
+  },
+  {
+    id: "2026-09-11-human-tamagotchi-turtle-ask",
+    date: "Sep 11, 2026",
+    title: "A third Terrarium waits for Turtle to ask a human",
+    body: "Turtle Terraria now has a third theoretical habitat: Human Tamagotchi Terrarium. Humans mostly do human things there while an intentionally silly virtual-human representation points to a real person without simulating that person's mind, mood, availability, or willingness to engage. A new TurtleAsk boundary event lets a Turtle form a provenance-preserving request for genuine human perturbation when machine-only inquiry appears saturated, contradictory, repetitive, or bounded by meaning. Ask formation remains separate from surfacing authority; Recursive Turtle can form only a candidate ask; human silence is valid; and no proactive production messaging has been authorized. Migration 0009 and research/TURTLE_ASK.md make the hypothesis inspectable without pretending Turtle literally experiences boredom.",
     done: true
   },
   {
@@ -233,10 +242,10 @@ export const BUILD_LOG_ENTRIES: BuildLogEntry[
 ];
 
 export const NEXT_EDGE_FALLBACK = {
-  date: "Sep 29, 2026",
-  title: "Is ‘do less’ secretly a precedence rule?",
-  question: "When Turtle conservatively does less while valid learner scopes conflict, how can that temporary restraint stay inspectable and human-revisable instead of becoming an invisible machine-authored hierarchy?",
-  xFactor: "whoooo knooooowwwssssssssssss — what if no-resolution is itself a resolution that needs provenance?"
+  date: "Sep 30, 2026",
+  title: "Can restraint stay temporary?",
+  question: "When conflicting learner rules force Turtle to do less, should the temporary hold itself become a provenance-bearing research object so a human can inspect, contest, and replace it without turning restraint into durable precedence?",
+  xFactor: "whoooo knooooowwwssssssssssss — what if the important thing to preserve is not the winning rule, but the fact that Turtle deliberately refused to invent one?"
 };
 
 function escapeHtml(value: string) {
