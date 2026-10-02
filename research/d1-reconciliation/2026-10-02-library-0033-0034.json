@@ -1,0 +1,38 @@
+{
+  "schema": "turtleblockai.d1-reconciliation.v0.3",
+  "date": "2026-10-02",
+  "status": "live_d1_applied_and_verified",
+  "capture_batch": "library-entries-0033-0034",
+  "migration_file": "migrations/0032_library_sources_0033_0034.sql",
+  "migration_commit": "2a90cd6081ed1af0444e9fbcaa5af6472a999d48",
+  "source_boundary": {
+    "basis": "Commander-provided photographs only",
+    "external_lookup_used": false,
+    "unknown_fields_left_unknown": true
+  },
+  "entries": [
+    {"entry_number":33,"title":"Grenadine","author":"Neil Wechsler"},
+    {"entry_number":34,"title":"Course in General Linguistics","author":"Ferdinand de Saussure"}
+  ],
+  "live_apply": {
+    "performed": true,
+    "database_name": "turtleblockai",
+    "github_actions_run_id": 37044946899,
+    "github_actions_job_id": 110963948281,
+    "execution_result": "5 queries executed; 26 rows read; 44 rows written",
+    "verification": {
+      "library_source_count": 34,
+      "special_note_count": 92,
+      "public_source_count": 34
+    }
+  },
+  "cleanup": {
+    "temporary_workflow_removed": true,
+    "temporary_workflow_cleanup_commit": "03c65457c2f207ce99905b5e58f43d000f8287d6"
+  },
+  "public_surface": {
+    "automatic": true,
+    "page": "/research/library/",
+    "reason": "new records are public and the library page is D1-driven"
+  }
+}
