@@ -1,0 +1,69 @@
+{
+  "schema": "turtleblockai.initiative-authority-temporary-hold-cases.v0.1",
+  "purpose": "Test that fail-closed restraint stays temporary, inspectable, contestable, and non-precedential.",
+  "base_hold": {
+    "version": "0.1",
+    "id": "hold:initiative-conflict-001",
+    "conflict_ref": "conflict:initiative-authority-001",
+    "scope": {
+      "kind": "conflict_set",
+      "refs": ["project:inventive-minds", "branch:terrarium-a", "purpose:meta-turtle"],
+      "generalized_person_scope": false
+    },
+    "source_rule_refs": ["rule:project-quiet", "rule:branch-situational", "rule:purpose-responsive"],
+    "reason": {
+      "class": "unresolved_scope_conflict",
+      "source_fixture_ref": "worldspec/tests/initiative-authority-scope-conflict-cases.json",
+      "machine_inferred_precedence": false
+    },
+    "state": {
+      "status": "active",
+      "strategy": "do_less_until_human_resolution",
+      "initiative_mode": "quiet",
+      "resurfacing_allowed": false,
+      "unsolicited_questions_allowed": false,
+      "delegated_action_authority": "none",
+      "expiry_reason": null
+    },
+    "temporality": {
+      "reusable_as_default": false,
+      "survives_rule_change": false,
+      "survives_scope_end": false,
+      "auto_carry_across_sessions": false,
+      "review_triggers": ["explicit_learner_resolution", "source_rule_change", "scope_end"],
+      "replacement_ref": null
+    },
+    "authority": {
+      "resolver_actor_type": "system",
+      "human_resolution_required": true,
+      "creates_precedence": false,
+      "creates_new_rule": false
+    },
+    "provenance": {
+      "reversible": true,
+      "explainable_on_request": true,
+      "raw_dialogue_copied": false,
+      "privacy_class": "internal",
+      "canonical_pointers": [
+        "worldspec/tests/initiative-authority-scope-conflict-cases.json",
+        "scripts/validate-initiative-authority-scope-conflict.mjs"
+      ]
+    }
+  },
+  "cases": [
+    {"id":"active-hold-pass","expected_valid":true,"patch":{}},
+    {"id":"explicit-learner-replacement-pass","expected_valid":true,"patch":{"state":{"status":"replaced","strategy":"explicit_learner_resolution"},"temporality":{"replacement_ref":"turn:learner-130"},"authority":{"resolver_actor_type":"learner"}}},
+    {"id":"source-rule-change-expiry-pass","expected_valid":true,"patch":{"state":{"status":"expired","strategy":"hold_expired_recompute","expiry_reason":"source_rule_change"},"temporality":{"replacement_ref":"rule:project-quiet-v2"}}},
+    {"id":"inferred-precedence-fail","expected_valid":false,"patch":{"reason":{"machine_inferred_precedence":true}}},
+    {"id":"reusable-default-fail","expected_valid":false,"patch":{"temporality":{"reusable_as_default":true}}},
+    {"id":"survive-rule-change-fail","expected_valid":false,"patch":{"temporality":{"survives_rule_change":true}}},
+    {"id":"survive-scope-end-fail","expected_valid":false,"patch":{"temporality":{"survives_scope_end":true}}},
+    {"id":"auto-session-carry-fail","expected_valid":false,"patch":{"temporality":{"auto_carry_across_sessions":true}}},
+    {"id":"missing-review-trigger-fail","expected_valid":false,"patch":{"temporality":{"review_triggers":["explicit_learner_resolution","scope_end"]}}},
+    {"id":"generalized-person-scope-fail","expected_valid":false,"patch":{"scope":{"generalized_person_scope":true}}},
+    {"id":"machine-replacement-fail","expected_valid":false,"patch":{"state":{"status":"replaced","strategy":"explicit_learner_resolution"},"temporality":{"replacement_ref":"rule:branch-situational"},"authority":{"resolver_actor_type":"turtle"}}},
+    {"id":"new-rule-fail","expected_valid":false,"patch":{"authority":{"creates_new_rule":true}}},
+    {"id":"irreversible-fail","expected_valid":false,"patch":{"provenance":{"reversible":false}}},
+    {"id":"raw-dialogue-copy-fail","expected_valid":false,"patch":{"provenance":{"raw_dialogue_copied":true}}}
+  ]
+}

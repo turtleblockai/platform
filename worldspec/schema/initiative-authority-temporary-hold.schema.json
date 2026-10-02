@@ -1,0 +1,15 @@
+{
+  "version": "0.1",
+  "title": "Initiative Authority Temporary Hold Envelope",
+  "purpose": "Represent a conservative hold created by unresolved learner-authored authority conflicts without turning the hold into a hidden precedence rule.",
+  "status_values": ["active", "replaced", "expired", "withdrawn"],
+  "rules": [
+    "A temporary hold must point to the conflict and learner-authored rules that caused it.",
+    "An active hold may reduce initiative but may not create precedence or a new learner rule.",
+    "A hold is conflict-local: it is not a person-wide preference and cannot become a reusable default.",
+    "A hold ends or is recomputed when a source rule changes, the scope ends, or the learner explicitly resolves the conflict.",
+    "A hold does not silently carry across sessions.",
+    "The hold remains reversible and explainable through canonical pointers without copying raw private dialogue.",
+    "Replacing a hold with a winning rule requires explicit learner resolution; system expiry may only remove the hold and trigger recomputation."
+  ]
+}

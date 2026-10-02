@@ -60,6 +60,12 @@ jobs:
       - name: Validate Initiative Authority session boundary
         run: npm run validate:initiative-authority-session-boundary
 
+      - name: Validate Initiative Authority scope conflicts
+        run: npm run validate:initiative-authority-scope-conflict
+
+      - name: Validate Initiative Authority temporary hold
+        run: npm run validate:initiative-authority-temporary-hold
+
       - name: Validate Discord Turtle conversation contract
         run: npm run validate:discord-conversation
 

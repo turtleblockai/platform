@@ -22,7 +22,9 @@
     "validate:initiative-authority": "node scripts/validate-initiative-authority-envelope.mjs",
     "validate:initiative-authority-session-boundary": "node scripts/validate-initiative-authority-session-boundary.mjs",
     "validate:discord-conversation": "node scripts/validate-discord-conversation.mjs",
-    "validate:runtime-secrets": "node scripts/validate-runtime-secrets.mjs"
+    "validate:runtime-secrets": "node scripts/validate-runtime-secrets.mjs",
+    "validate:initiative-authority-scope-conflict": "node scripts/validate-initiative-authority-scope-conflict.mjs",
+    "validate:initiative-authority-temporary-hold": "node scripts/validate-initiative-authority-temporary-hold.mjs"
   },
   "devDependencies": {
     "@cloudflare/workers-types": "latest",
