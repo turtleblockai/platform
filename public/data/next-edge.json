@@ -1,17 +1,17 @@
 {
   "version": "1.0",
-  "updated_at": "2026-09-30",
+  "updated_at": "2026-10-01",
   "status": "open_question",
-  "title": "Can restraint stay temporary?",
-  "question": "When valid learner rules conflict and Turtle temporarily does less, how should that hold remain visible, contestable, and replaceable?",
-  "why_now": "The scope-conflict fixture now has an executable validator; the remaining edge is how to represent the temporary hold itself.",
-  "follows_commit": "2df53578f1b02df79ed3a2093a568fd1a84348a9",
-  "follows_commit_role": "completed_scope_conflict_validator",
+  "title": "Can an explanation stay neutral?",
+  "question": "When Turtle shows why initiative is on hold, how can it expose the conflict without steering the learner toward one resolution?",
+  "why_now": "The temporary hold is now explicit, reversible, and non-precedential. Explanation is the next research surface because framing can still shape a learner's choice.",
+  "follows_commit": "b0f7b1d0103edfe43626904f3e93609b9167ea85",
+  "follows_commit_role": "completed_temporary_hold_envelope_and_evaluation",
   "inputs": [
-    "worldspec/tests/initiative-authority-scope-conflict-cases.json",
-    "scripts/validate-initiative-authority-scope-conflict.mjs",
+    "worldspec/schema/initiative-authority-temporary-hold.schema.json",
+    "worldspec/tests/initiative-authority-temporary-hold-cases.json",
     "research/TURTLE_ASK.md",
-    "research/daily-build/2026-09-30.md"
+    "research/daily-build/2026-10-01.md"
   ],
   "source_classes_consulted": [
     "repository_state",
@@ -19,47 +19,36 @@
     "primary_sources"
   ],
   "possible_possibles": [
-    "Use an ephemeral record linked to the conflicting rules.",
-    "Keep the hold transient but explain it on request.",
-    "Require an explicit learner choice before initiative increases."
+    "Show the unresolved structure without ranking it.",
+    "Let the learner choose which scope to inspect.",
+    "List available choices without recommending one."
   ],
-  "x_factor": "whoooo knooooowwwssssssssssss — what if preserving the refusal to invent a winner matters more than preserving a winner?",
+  "x_factor": "whoooo knooooowwwssssssssssss — what if a diagram is sometimes more neutral than more Turtle prose?",
   "constraints": [
-    "Do not infer rule priority.",
-    "Keep scope boundaries intact.",
-    "Keep the state reversible and human-revisable."
+    "Do not infer precedence.",
+    "Keep source material at canonical pointers.",
+    "Keep a local conflict local.",
+    "Explanation must not alter the represented authority state."
   ],
   "ontology_mappings": [
-    {
-      "concept_key": "shared_democracy",
-      "rationale": "Competing learner rules remain open to learner resolution."
-    },
-    {
-      "concept_key": "freedom_and_individuality",
-      "rationale": "Learner direction remains revisable within its declared scope."
-    }
+    {"concept_key":"shared_democracy","rationale":"Competing rules remain open to learner resolution."},
+    {"concept_key":"freedom_and_individuality","rationale":"Human direction remains revisable."},
+    {"concept_key":"problem_posing_education","rationale":"The unresolved conflict remains visible as a problem rather than being hidden."}
   ],
   "ctc_mappings": [
-    {
-      "domain": "Reflection as Learning",
-      "rationale": "Temporary restraint should be inspectable and revisable."
-    },
-    {
-      "domain": "Technology as Tool to Think With",
-      "rationale": "The hold can be represented rather than hidden."
-    }
+    {"domain":"Reflection as Learning","rationale":"Explanation supports inspection without deciding for the learner."},
+    {"domain":"Technology as Tool to Think With","rationale":"The conflict can become a representation for thought."},
+    {"domain":"Sharing and Collaborating","rationale":"Resolution remains a human collaborative act."},
+    {"domain":"Social and Cultural Critique","rationale":"Framing and precedence concern voice and power."}
   ],
   "uncaptured_residue": [
-    {
-      "observation": "It is unclear whether a temporary hold deserves first-class research identity.",
-      "status": "open"
-    }
+    {"observation":"An explanation can nudge even when the represented hold is neutral.","status":"open"}
   ],
   "provenance": {
-    "evidence_class": "system_record_plus_primary_source_synthesis",
+    "evidence_class": "repository_and_primary_source_synthesis",
     "privacy_class": "public",
-    "selection_method": "repo_plus_reconciliation_plus_source_hunt"
+    "selection_method": "repo_plus_reconciliation_plus_source_hunt_plus_wait_a_minute"
   },
-  "selected_by": "machine_synthesis_under_human_direction",
+  "selected_by": "daily_build_synthesis_under_human_direction",
   "scope": "system_research_horizon"
 }

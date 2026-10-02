@@ -17,6 +17,17 @@ export interface BuildLogEntry {
 // through the Worker. Open inquiry belongs in Next Edge, not in completed entries.
 export const BUILD_LOG_ENTRIES: BuildLogEntry[] = [
   {
+    id: "2026-10-01-initiative-authority-temporary-hold",
+    date: "Oct 1, 2026",
+    title: "A conservative hold can no longer quietly become a rule",
+    body: "The Initiative Authority scope-conflict posture now has an explicit Temporary Hold Envelope, a fourteen-case deterministic suite, and standing CI. An active hold must point to the conflict and source rules that caused it, remain conflict-local, expire or recompute when source rules or scope change, never auto-carry across sessions, and never create precedence or a new learner rule. Replacing the hold with a winning rule requires explicit learner resolution. The same CI change also closes yesterday's unresolved gap by wiring the scope-conflict validator into the standing workflow. Product remains v0.1.0.",
+    done: true,
+    waitAMinute: {
+      summary: "The same separation now appears in two places: TurtleAsk distinguishes forming an ask from permission to surface it, while the Temporary Hold distinguishes conservative restraint from authority to choose a winner. That recurrence suggests authority boundaries should remain explicit, inspectable, and revisable.",
+      evidence: ["worldspec/schema/initiative-authority-temporary-hold.schema.json", "worldspec/tests/initiative-authority-temporary-hold-cases.json", "research/TURTLE_ASK.md", "scripts/validate-initiative-authority-temporary-hold.mjs"]
+    }
+  },
+  {
     id: "2026-09-30-initiative-authority-scope-conflict-validator",
     date: "Sep 30, 2026",
     title: "Scope conflicts get an executable authority test instead of a prose promise",

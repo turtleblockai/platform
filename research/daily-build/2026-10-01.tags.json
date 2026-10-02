@@ -1,0 +1,63 @@
+{
+  "schema": "turtleblockai.daily-build-tags.v0.1",
+  "date": "2026-10-01",
+  "ontology_version": "sanders-ontology-v0.1",
+  "d1_persistence": "staged_only",
+  "capture_batch_closed": true,
+  "research_objects": [
+    {"id":"cycle","type":"daily_build","summary":"2026-10-01 bounded build cycle"},
+    {"id":"source-hunt","type":"source_signal","summary":"OpenAI, NVIDIA, Minecraft Education, and MIT Media Lab primary-source comparison"},
+    {"id":"selected","type":"selection","summary":"Make the temporary Initiative Authority hold explicit"},
+    {"id":"change","type":"repo_change","repo_path":"worldspec/schema/initiative-authority-temporary-hold.schema.json","commit":"b0f7b1d0103edfe43626904f3e93609b9167ea85"},
+    {"id":"evaluation","type":"test","summary":"14 cases; 3 valid; 11 hostile; 0 mismatches"},
+    {"id":"connection","type":"wait_a_minute","summary":"TurtleAsk and the hold both distinguish initiative from authority"},
+    {"id":"horizon","type":"next_edge","summary":"Can an explanation stay neutral?"},
+    {"id":"version","type":"version_judgment","summary":"Remain v0.1.0"}
+  ],
+  "relationships": [
+    {"from":"source-hunt","predicate":"contextualizes","to":"selected"},
+    {"from":"selected","predicate":"implemented_as","to":"change"},
+    {"from":"evaluation","predicate":"evaluates","to":"change"},
+    {"from":"connection","predicate":"surfaces","to":"horizon"}
+  ],
+  "ctc_tags": [
+    {"domain":"Personal Inquiry","rationale":"Learner purpose remains distinguishable."},
+    {"domain":"Compelling Problem or Question","rationale":"Conflict remains open rather than silently resolved."},
+    {"domain":"Technology as Tool to Think With","rationale":"The hold is inspectable."},
+    {"domain":"Formative Demonstration of Learning","rationale":"Tests show system behavior without claiming learner attainment."},
+    {"domain":"Reflection as Learning","rationale":"The hold remains revisable."},
+    {"domain":"Social and Cultural Critique","rationale":"Rule precedence concerns voice and power."},
+    {"domain":"Sharing and Collaborating","rationale":"Resolution stays explicitly human."}
+  ],
+  "ontology_tags": [
+    {"concept":"freedom_and_individuality","rationale":"Learner direction remains controlling."},
+    {"concept":"shared_democracy","rationale":"Competing rules remain contestable."},
+    {"concept":"predetermined_outcomes","rationale":"No reusable winner is created."},
+    {"concept":"problem_posing_education","rationale":"Conflict stays visible."},
+    {"concept":"machine_responses_as_material_for_evaluation","rationale":"Boundary behavior becomes test material."},
+    {"concept":"co_active_emergence","rationale":"Human direction can change the trajectory."},
+    {"concept":"possible_possibles","rationale":"Several continuations may remain open."}
+  ],
+  "emergent_tags": ["initiative_authority","temporary_hold","non_precedential_restraint","review_trigger"],
+  "reconciliation_findings": [
+    {"id":"opening","status":"represented_by_canonical_pointer","pointer":"research/daily-build/2026-09-30.coverage.json"},
+    {"id":"ci-gap","status":"safely_backfilled","pointer":".github/workflows/deploy.yml"},
+    {"id":"today","status":"represented_by_canonical_pointer","pointer":"research/daily-build/2026-10-01.tags.json"},
+    {"id":"live-d1","status":"not_written","reason":"No authorized live D1 write path was available"}
+  ],
+  "wait_a_minute": {
+    "pointers":["research/TURTLE_ASK.md","worldspec/schema/initiative-authority-temporary-hold.schema.json"],
+    "overlap":"Initiative and authority recur as separate concerns.",
+    "uncertainty":"The connection may be architectural rather than a new CTC distinction.",
+    "disposition":["relationship","test_candidate","next_edge_candidate"]
+  },
+  "uncaptured_observations": [
+    "An explanation may imply precedence even when the hold does not.",
+    "A dedicated D1 object type for temporary holds remains premature."
+  ],
+  "provenance": {
+    "actor":"machine_synthesis_under_human_direction",
+    "privacy_class":"public",
+    "consent_safe_try_it_used":false
+  }
+}
