@@ -17,6 +17,17 @@ export interface BuildLogEntry {
 // through the Worker. Open inquiry belongs in Next Edge, not in completed entries.
 export const BUILD_LOG_ENTRIES: BuildLogEntry[] = [
   {
+    id: "2026-10-01-pce-persistence-salience",
+    date: "Oct 1, 2026",
+    title: "PCE research separates persistence from foregrounding",
+    body: "A bounded Sunshine Machine / Persistent Computing Environment corpus pass cross-read Class Never Ends with Connectivism to separate what a system preserves from what it chooses to make salient again. The working result is quiet continuity: a PCE may keep a trace returnable without insisting that it re-enter the foreground. This is conceptual research synthesis, not learner-outcome evidence, and the canonical essay remains human-owned. Product remains v0.1.0.",
+    done: true,
+    waitAMinute: {
+      summary: "The same distinction already appears in TurtleBlock architecture: Selective Attention separates retention, salience, surfacing, and interruption, while Initiative Authority can preserve context without granting ongoing initiative. Turtle's slow simmer may therefore depend as much on preserving return paths as on deciding when to speak.",
+      evidence: ["research/daily-build/2026-10-01-sunshine-pce.md", "worldspec/schema/selective-attention-envelope.schema.json", "worldspec/schema/initiative-authority-envelope.schema.json"]
+    }
+  },
+  {
     id: "2026-10-01-initiative-authority-temporary-hold",
     date: "Oct 1, 2026",
     title: "A conservative hold can no longer quietly become a rule",
