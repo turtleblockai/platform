@@ -1,0 +1,53 @@
+{
+  "schema": "turtleblockai.daily-build-tags.v0.1",
+  "date": "2026-10-01",
+  "ontology_version": "sanders-ontology-v0.1",
+  "d1_persistence": "staged_only",
+  "capture_batch_closed": true,
+  "research_objects": [
+    {"id":"cycle","type":"scholarly_corpus_pass","summary":"Bounded Sunshine Machine / PCE pass on persistence versus foregrounding."},
+    {"id":"source-16","type":"project_corpus_source","summary":"Bryan P. Sanders, Class Never Ends (2018)."},
+    {"id":"source-6","type":"project_corpus_source","summary":"George Siemens, Connectivism: A Learning Theory for the Digital Age (2005)."},
+    {"id":"synthesis","type":"research_synthesis","summary":"Persistence and foregrounding are distinct governance acts; quiet continuity keeps traces returnable without compulsory salience."},
+    {"id":"implementation-relation","type":"repo_comparison","summary":"Selective Attention and Initiative Authority provide current design analogues without constituting learner-effect evidence."},
+    {"id":"next-question","type":"question","summary":"What may a PCE legitimately keep in the background, for how long, and under whose authority?"},
+    {"id":"version","type":"version_judgment","decision":"remain_0.1.0"}
+  ],
+  "relationships": [
+    {"from":"source-16","predicate":"contributes_to","to":"synthesis"},
+    {"from":"source-6","predicate":"pressures","to":"synthesis"},
+    {"from":"implementation-relation","predicate":"operationally_echoes","to":"synthesis"},
+    {"from":"synthesis","predicate":"surfaces","to":"next-question"}
+  ],
+  "ctc_tags": [
+    {"domain":"Personal Inquiry","rationale":"Learner authority over what returns to the foreground remains central."},
+    {"domain":"Technology as Tool to Think With","rationale":"Persistent traces can remain material for later inquiry without dictating the next move."},
+    {"domain":"Reflection as Learning","rationale":"Return to preserved traces can support later reinterpretation."},
+    {"domain":"Sharing and Collaborating","rationale":"Networked traces and weak ties can expand possible connections while preserving source distinction."}
+  ],
+  "ontology_tags": [
+    {"concept":"freedom_and_individuality","rationale":"Foregrounding authority affects learner attention and initiative."},
+    {"concept":"predetermined_outcomes","rationale":"Repeated machine-selected salience can quietly narrow future trajectories."},
+    {"concept":"connectivism","rationale":"Maintained connections, external knowledge, and weak ties pressure the PCE account."},
+    {"concept":"co_active_emergence","rationale":"Human and machine participation can recursively alter what becomes available for later inquiry."},
+    {"concept":"possible_possibles","rationale":"Background persistence can preserve possibilities without forcing immediate selection."}
+  ],
+  "emergent_tags": [
+    "persistence_vs_foregrounding",
+    "salience_governance",
+    "quiet_continuity",
+    "returnability",
+    "slow_simmer",
+    "selection_authority"
+  ],
+  "reconciliation_findings": [
+    {"id":"today-cycle","status":"represented_by_canonical_pointer","pointer":"research/daily-build/2026-10-01-sunshine-pce.md"},
+    {"id":"public-build-log","status":"represented_by_canonical_pointer","pointer":"src/buildLog.ts"},
+    {"id":"live-d1-today","status":"not_written"}
+  ],
+  "uncaptured_observations": [
+    "Retention authority may need to remain distinct from resurfacing authority.",
+    "Quiet continuity needs a privacy and forgetting boundary before it can become a stronger design principle.",
+    "Weak-tie protection may matter if relevance compounding repeatedly favors already-salient traces."
+  ]
+}
