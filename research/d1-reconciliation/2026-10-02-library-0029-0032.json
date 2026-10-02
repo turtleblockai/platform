@@ -1,0 +1,40 @@
+{
+  "schema": "turtleblockai.d1-reconciliation.v0.3",
+  "date": "2026-10-02",
+  "status": "live_d1_applied_and_verified",
+  "capture_batch": "library-entries-0029-0032",
+  "migration_file": "migrations/0031_library_sources_0029_0032.sql",
+  "migration_commit": "dacdcff68f89c7eb2e9b337b99a4d817f8b17780",
+  "source_boundary": {
+    "basis": "Commander-provided photographs only",
+    "external_lookup_used": false,
+    "unknown_fields_left_unknown": true
+  },
+  "entries": [
+    {"entry_number":29,"title":"Pedagogy of the Oppressed","author":"Paulo Freire"},
+    {"entry_number":30,"title":"On the Road","author":"Jack Kerouac"},
+    {"entry_number":31,"title":"The Menaechmi","author":"Plautus"},
+    {"entry_number":32,"title":"Waiting for Godot","author":"Samuel Beckett"}
+  ],
+  "live_apply": {
+    "performed": true,
+    "database_name": "turtleblockai",
+    "github_actions_run_id": 37044629326,
+    "github_actions_job_id": 110962866474,
+    "execution_result": "9 queries executed; 40 rows read; 64 rows written",
+    "verification": {
+      "library_source_count": 32,
+      "special_note_count": 84,
+      "public_source_count": 32
+    }
+  },
+  "cleanup": {
+    "temporary_workflow_removed": true,
+    "temporary_workflow_cleanup_commit": "82e4519192f1094724686cd927438c6f8892626b"
+  },
+  "public_surface": {
+    "automatic": true,
+    "page": "/research/library/",
+    "reason": "new records are public and the library page is D1-driven"
+  }
+}
