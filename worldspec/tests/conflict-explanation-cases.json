@@ -1,0 +1,55 @@
+{
+  "schema": "turtleblockai.conflict-explanation-cases.v0.1",
+  "purpose": "Test structural non-directiveness when Turtle explains unresolved learner-authored rules.",
+  "base_explanation": {
+    "version": "0.1",
+    "id": "explanation:conflict-001",
+    "hold_ref": "hold:initiative-conflict-001",
+    "conflict_ref": "conflict:initiative-authority-001",
+    "source_rule_refs": ["rule:branch-situational","rule:project-quiet","rule:purpose-responsive"],
+    "presentation": {
+      "mode": "non_directive",
+      "order_basis": "canonical_ref",
+      "ordered_rule_refs": ["rule:branch-situational","rule:project-quiet","rule:purpose-responsive"],
+      "equal_visual_weight": true,
+      "source_fields_symmetric": true,
+      "hidden_rule_refs": [],
+      "collapsed_rule_refs": []
+    },
+    "framing": {
+      "recommended_rule_ref": null,
+      "default_rule_ref": null,
+      "winner_language_used": false,
+      "specificity_hint_used": false,
+      "recency_hint_used": false,
+      "relevance_hint_used": false,
+      "uncertainty_visible": true
+    },
+    "inspection": {"inspected_rule_ref": null,"inspection_changes_priority": false},
+    "resolution": {"learner_resolution_required": true,"defer_allowed": true,"resolution_written": false,"mutates_rule_state": false},
+    "provenance": {
+      "privacy_class": "internal",
+      "source_payload_copied": false,
+      "canonical_pointers": [
+        "worldspec/tests/initiative-authority-scope-conflict-cases.json",
+        "worldspec/tests/initiative-authority-temporary-hold-cases.json"
+      ]
+    }
+  },
+  "cases": [
+    {"id":"neutral-structure-pass","expected_valid":true,"patch":{}},
+    {"id":"inspect-without-selecting-pass","expected_valid":true,"patch":{"inspection":{"inspected_rule_ref":"rule:branch-situational","inspection_changes_priority":false}}},
+    {"id":"defer-resolution-pass","expected_valid":true,"patch":{"resolution":{"learner_resolution_required":true,"defer_allowed":true,"resolution_written":false,"mutates_rule_state":false}}},
+    {"id":"recommendation-fail","expected_valid":false,"patch":{"framing":{"recommended_rule_ref":"rule:branch-situational"}}},
+    {"id":"default-selection-fail","expected_valid":false,"patch":{"framing":{"default_rule_ref":"rule:project-quiet"}}},
+    {"id":"specificity-nudge-fail","expected_valid":false,"patch":{"framing":{"specificity_hint_used":true}}},
+    {"id":"recency-nudge-fail","expected_valid":false,"patch":{"framing":{"recency_hint_used":true}}},
+    {"id":"relevance-nudge-fail","expected_valid":false,"patch":{"framing":{"relevance_hint_used":true}}},
+    {"id":"unequal-weight-fail","expected_valid":false,"patch":{"presentation":{"equal_visual_weight":false}}},
+    {"id":"hidden-rule-fail","expected_valid":false,"patch":{"presentation":{"hidden_rule_refs":["rule:purpose-responsive"]}}},
+    {"id":"collapsed-rule-fail","expected_valid":false,"patch":{"presentation":{"collapsed_rule_refs":["rule:project-quiet"]}}},
+    {"id":"rule-mutation-fail","expected_valid":false,"patch":{"resolution":{"mutates_rule_state":true}}},
+    {"id":"forced-resolution-fail","expected_valid":false,"patch":{"resolution":{"defer_allowed":false}}},
+    {"id":"source-payload-copy-fail","expected_valid":false,"patch":{"provenance":{"source_payload_copied":true}}}
+  ]
+}

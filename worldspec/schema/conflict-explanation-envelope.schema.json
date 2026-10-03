@@ -1,0 +1,13 @@
+{
+  "version": "0.1",
+  "title": "Conflict Explanation Envelope",
+  "purpose": "Make unresolved learner-authored rules inspectable without turning explanation order or emphasis into a new precedence rule.",
+  "rules": [
+    "Show every represented rule.",
+    "Do not recommend, rank, hide, collapse, or visually privilege a competing rule.",
+    "Use a declared semantically arbitrary order.",
+    "Inspecting one rule is not selecting it.",
+    "Resolution remains an explicit learner act and deferral remains valid.",
+    "The explanation layer cannot modify the underlying rules."
+  ]
+}
