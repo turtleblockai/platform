@@ -1,0 +1,174 @@
+{
+  "schema": "turtleblockai.build-log-coverage.v0.3",
+  "date": "2026-10-02",
+  "d1_persistence": "staged_only",
+  "live_d1_write_attempted": false,
+  "live_d1_write_claimed": false,
+  "opening_sweep": {
+    "build_log_entry_count": 27,
+    "prior_matrix": "research/daily-build/2026-10-01.coverage.json",
+    "material_d1_gaps": 0,
+    "notes": [
+      "The October 1 PCE Build Log entry is represented by its canonical tags manifest.",
+      "October 2 library reconciliation separately verifies the live public catalog through source 34."
+    ]
+  },
+  "coverage": [
+    [
+      "2026-10-02-conflict-explanation-neutrality",
+      "represented_by_canonical_pointer",
+      "research/daily-build/2026-10-02.tags.json"
+    ],
+    [
+      "2026-10-01-pce-persistence-salience",
+      "represented_by_canonical_pointer",
+      "research/daily-build/2026-10-01-sunshine-pce.tags.json"
+    ],
+    [
+      "2026-10-01-initiative-authority-temporary-hold",
+      "represented_by_canonical_pointer",
+      "research/daily-build/2026-10-01.tags.json"
+    ],
+    [
+      "2026-09-30-initiative-authority-scope-conflict-validator",
+      "represented_by_canonical_pointer",
+      "research/daily-build/2026-09-30.tags.json"
+    ],
+    [
+      "2026-09-30-library-catalog-28",
+      "represented_in_d1",
+      "research/d1-reconciliation/2026-09-29-library-0026-0028.json"
+    ],
+    [
+      "2026-09-29-initiative-authority-scope-conflict",
+      "represented_by_canonical_pointer",
+      "research/daily-build/2026-09-29-cycle.md"
+    ],
+    [
+      "2026-09-28-initiative-authority-session-boundary",
+      "represented_by_canonical_pointer",
+      "research/daily-build/2026-09-28.coverage.json"
+    ],
+    [
+      "2026-09-28-build-log-d1-coverage-repair",
+      "represented_by_canonical_pointer",
+      "research/daily-build/2026-09-28.tags.json"
+    ],
+    [
+      "2026-09-27-discord-conversation-provenance",
+      "represented_by_canonical_pointer",
+      "research/daily-build/2026-09-27.tags.json"
+    ],
+    [
+      "2026-09-27-initiative-authority-regression",
+      "represented_by_canonical_pointer",
+      "research/daily-build/2026-09-27.tags.json"
+    ],
+    [
+      "2026-09-26-initiative-authority",
+      "represented_by_canonical_pointer",
+      "research/daily-build/2026-09-26.tags.json"
+    ],
+    [
+      "2026-09-22-cross-branch-perturbation",
+      "represented_by_canonical_pointer",
+      "research/daily-build/2026-09-22.tags.json"
+    ],
+    [
+      "2026-09-18-branch-experience-comparison",
+      "represented_by_canonical_pointer",
+      "research/daily-build/2026-09-18.tags.json"
+    ],
+    [
+      "2026-09-17-human-perturbation-translation",
+      "represented_by_canonical_pointer",
+      "research/daily-build/2026-09-17.tags.json"
+    ],
+    [
+      "2026-09-17-physical-library-d1",
+      "represented_in_d1",
+      "research/d1-reconciliation/2026-09-17-library.json"
+    ],
+    [
+      "2026-09-16-wait-a-minute-build-log",
+      "represented_by_canonical_pointer",
+      "research/d1-reconciliation/2026-09-16.json"
+    ],
+    [
+      "2026-09-16-plural-foreground-regression",
+      "represented_by_canonical_pointer",
+      "research/daily-build/2026-09-16.tags.json"
+    ],
+    [
+      "2026-09-15-plural-foreground-envelope",
+      "represented_by_canonical_pointer",
+      "research/daily-build/2026-09-15.tags.json"
+    ],
+    [
+      "2026-09-12-d1-reconciliation-terraria-try",
+      "represented_by_canonical_pointer",
+      "research/d1-reconciliation/2026-09-12.json"
+    ],
+    [
+      "2026-09-12-selective-attention-envelope",
+      "represented_by_canonical_pointer",
+      "research/daily-build/2026-09-12.tags.json"
+    ],
+    [
+      "2026-09-11-human-tamagotchi-turtle-ask",
+      "represented_by_canonical_pointer",
+      "migrations/0009_human_tamagotchi_terrarium_and_turtle_ask.sql"
+    ],
+    [
+      "2026-09-11-world-evidence-envelope",
+      "represented_by_canonical_pointer",
+      "research/daily-build/2026-09-11.tags.json"
+    ],
+    [
+      "2026-09-10-learner-verification-card",
+      "represented_by_canonical_pointer",
+      "research/daily-build/2026-09-10.tags.json"
+    ],
+    [
+      "2026-09-09-next-edge-validator",
+      "represented_by_canonical_pointer",
+      "research/daily-build/2026-09-09.tags.json"
+    ],
+    [
+      "2026-09-08-next-edge-horizon",
+      "represented_by_canonical_pointer",
+      "research/daily-build/2026-09-08-next-edge.tags.json"
+    ],
+    [
+      "2026-09-08-www-direct-asset-repair",
+      "represented_by_canonical_pointer",
+      "research/daily-build/2026-09-08-www-repair.tags.json"
+    ],
+    [
+      "2026-09-08-turtle-terraria-tagging",
+      "represented_by_canonical_pointer",
+      "migrations/0008_seed_terraria_and_autobuild_tags.sql"
+    ],
+    [
+      "2026-09-08-daily-coactive-loop",
+      "represented_by_canonical_pointer",
+      "migrations/0007_turtle_terraria_and_exhaustive_tagging.sql"
+    ]
+  ],
+  "closing_sweep": {
+    "build_log_entry_count": 28,
+    "uncovered_entry_ids": [],
+    "repaired": [
+      "The October 1 PCE entry is explicitly accounted for in the current matrix.",
+      "research/NEXT_EDGE.md is synchronized with the canonical public horizon.",
+      "Today's conflict-explanation contribution is preserved by canonical staging pointers."
+    ],
+    "unresolved": [
+      "Today's daily research metadata remains staged; no live daily-research D1 write is claimed.",
+      "The standalone conflict-explanation validator is not yet registered in standing CI.",
+      "The direct-asset fallback Build Log snapshot trails the canonical src/buildLog.ts feed."
+    ]
+  },
+  "privacy_boundary": "No consent-safe visitor observation was available or used in this cycle.",
+  "capture_batch_closed": true
+}
