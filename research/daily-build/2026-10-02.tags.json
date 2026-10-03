@@ -1,0 +1,178 @@
+{
+  "schema": "turtleblockai.daily-build-tags.v0.1",
+  "date": "2026-10-02",
+  "ontology_version": "sanders-ontology-v0.1",
+  "d1_persistence": "staged_only",
+  "capture_batch_closed": true,
+  "research_objects": [
+    {
+      "id": "cycle",
+      "type": "daily_build",
+      "summary": "October 2 bounded cycle"
+    },
+    {
+      "id": "selection",
+      "type": "selection",
+      "summary": "Structural conflict-explanation evaluation"
+    },
+    {
+      "id": "change",
+      "type": "repo_change",
+      "repo_path": "worldspec/schema/conflict-explanation-envelope.schema.json",
+      "commit": "501d77d65ef7d3aaef93dd875b39c7e66beeb036"
+    },
+    {
+      "id": "evaluation",
+      "type": "test",
+      "summary": "14 cases; 3 valid; 11 hostile; 0 mismatches"
+    },
+    {
+      "id": "connection",
+      "type": "wait_a_minute",
+      "summary": "Authority state and presentation salience are distinct."
+    },
+    {
+      "id": "horizon",
+      "type": "next_edge",
+      "summary": "Can a remembered conflict stay quiet?"
+    },
+    {
+      "id": "version",
+      "type": "version_judgment",
+      "summary": "Remain v0.1.0"
+    }
+  ],
+  "relationships": [
+    {
+      "from": "selection",
+      "predicate": "implemented_as",
+      "to": "change"
+    },
+    {
+      "from": "evaluation",
+      "predicate": "evaluates",
+      "to": "change"
+    },
+    {
+      "from": "connection",
+      "predicate": "surfaces",
+      "to": "horizon"
+    }
+  ],
+  "ctc_tags": [
+    {
+      "domain": "Personal Inquiry",
+      "rationale": "Learner purpose remains distinct from framing."
+    },
+    {
+      "domain": "Compelling Problem or Question",
+      "rationale": "The conflict remains visibly unresolved."
+    },
+    {
+      "domain": "Technology as Tool to Think With",
+      "rationale": "The explanation remains an inspectable representation."
+    },
+    {
+      "domain": "Formative Demonstration of Learning",
+      "rationale": "The fixture demonstrates system behavior only."
+    },
+    {
+      "domain": "Reflection as Learning",
+      "rationale": "Inspection and deferral remain possible."
+    },
+    {
+      "domain": "Social and Cultural Critique",
+      "rationale": "Ordering and emphasis affect voice and power."
+    },
+    {
+      "domain": "Sharing and Collaborating",
+      "rationale": "Resolution remains a human collaborative act."
+    }
+  ],
+  "ontology_tags": [
+    {
+      "concept": "freedom_and_individuality",
+      "rationale": "No system preference becomes a hidden winner."
+    },
+    {
+      "concept": "shared_democracy",
+      "rationale": "Competing rules remain visible and contestable."
+    },
+    {
+      "concept": "predetermined_outcomes",
+      "rationale": "Defaults and ranking are rejected."
+    },
+    {
+      "concept": "problem_posing_education",
+      "rationale": "Conflict stays represented rather than silently solved."
+    },
+    {
+      "concept": "co_active_emergence",
+      "rationale": "Human direction can revise the represented state."
+    },
+    {
+      "concept": "possible_possibles",
+      "rationale": "Several legitimate continuations remain open."
+    }
+  ],
+  "emergent_tags": [
+    "explanation_neutrality",
+    "salience_neutrality",
+    "authority_vs_presentation",
+    "quiet_continuity"
+  ],
+  "reconciliation_findings": [
+    {
+      "id": "prior",
+      "status": "represented_by_canonical_pointer",
+      "pointer": "research/daily-build/2026-10-01.coverage.json"
+    },
+    {
+      "id": "pce",
+      "status": "represented_by_canonical_pointer",
+      "pointer": "research/daily-build/2026-10-01-sunshine-pce.tags.json"
+    },
+    {
+      "id": "today",
+      "status": "represented_by_canonical_pointer",
+      "pointer": "research/daily-build/2026-10-02.tags.json"
+    },
+    {
+      "id": "daily-d1",
+      "status": "not_written",
+      "reason": "No standing authorized daily-research write route was available."
+    },
+    {
+      "id": "validator-ci",
+      "status": "unresolved_gap",
+      "pointer": "scripts/validate-conflict-explanation.mjs"
+    },
+    {
+      "id": "fallback-log",
+      "status": "unresolved_gap",
+      "pointer": "public/assets/site-runtime.js"
+    }
+  ],
+  "wait_a_minute": {
+    "pointers": [
+      "research/daily-build/2026-10-01-sunshine-pce.md",
+      "worldspec/schema/conflict-explanation-envelope.schema.json"
+    ],
+    "overlap": "Persistence versus foregrounding recurs as authority state versus presentation salience.",
+    "uncertainty": "Structural symmetry cannot prove perceived neutrality.",
+    "disposition": [
+      "relationship",
+      "test_candidate",
+      "next_edge_candidate"
+    ]
+  },
+  "uncaptured_observations": [
+    "Salience neutrality remains provisional.",
+    "Retention and forgetting authority remain open."
+  ],
+  "provenance": {
+    "actor": "daily_build_synthesis_under_human_direction",
+    "privacy_class": "public",
+    "consent_safe_try_it_used": false
+  }
+}

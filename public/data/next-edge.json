@@ -1,53 +1,76 @@
 {
   "version": "1.0",
-  "updated_at": "2026-10-01",
+  "updated_at": "2026-10-02",
   "status": "open_question",
-  "title": "Can an explanation stay neutral?",
-  "question": "When Turtle shows why initiative is on hold, how can it expose the conflict without steering the learner toward one resolution?",
-  "why_now": "The temporary hold is now explicit, reversible, and non-precedential. Explanation is the next research surface because framing can still shape a learner's choice.",
-  "follows_commit": "b0f7b1d0103edfe43626904f3e93609b9167ea85",
-  "follows_commit_role": "completed_temporary_hold_envelope_and_evaluation",
+  "title": "Can a remembered conflict stay quiet?",
+  "question": "When Turtle preserves an unresolved authority conflict for later inspection, how can it remain returnable without repeatedly foregrounding it or biasing future initiative?",
+  "why_now": "The conflict-explanation contract now separates represented authority from presentation salience, while the PCE pass separately distinguishes persistence from foregrounding.",
+  "follows_commit": "501d77d65ef7d3aaef93dd875b39c7e66beeb036",
+  "follows_commit_role": "completed_conflict_explanation_evaluation",
   "inputs": [
-    "worldspec/schema/initiative-authority-temporary-hold.schema.json",
-    "worldspec/tests/initiative-authority-temporary-hold-cases.json",
-    "research/TURTLE_ASK.md",
-    "research/daily-build/2026-10-01.md"
+    "worldspec/schema/conflict-explanation-envelope.schema.json",
+    "worldspec/tests/conflict-explanation-cases.json",
+    "research/daily-build/2026-10-01-sunshine-pce.md",
+    "research/daily-build/2026-10-02.md"
   ],
   "source_classes_consulted": [
     "repository_state",
-    "reconciliation_staging",
+    "research_staging",
     "primary_sources"
   ],
   "possible_possibles": [
-    "Show the unresolved structure without ranking it.",
-    "Let the learner choose which scope to inspect.",
-    "List available choices without recommending one."
+    "Keep the old conflict available without foregrounding it.",
+    "Let the learner decide when an old conflict returns.",
+    "Give unresolved conflict context an explicit review boundary."
   ],
-  "x_factor": "whoooo knooooowwwssssssssssss — what if a diagram is sometimes more neutral than more Turtle prose?",
+  "x_factor": "whoooo knooooowwwssssssssssss — what if useful continuity sometimes means leaving something alone?",
   "constraints": [
-    "Do not infer precedence.",
-    "Keep source material at canonical pointers.",
-    "Keep a local conflict local.",
-    "Explanation must not alter the represented authority state."
+    "Keep the conflict scoped to the context that produced it.",
+    "Do not turn retention into precedence.",
+    "Do not automatically resurface old conflict context."
   ],
   "ontology_mappings": [
-    {"concept_key":"shared_democracy","rationale":"Competing rules remain open to learner resolution."},
-    {"concept_key":"freedom_and_individuality","rationale":"Human direction remains revisable."},
-    {"concept_key":"problem_posing_education","rationale":"The unresolved conflict remains visible as a problem rather than being hidden."}
+    {
+      "concept_key": "shared_democracy",
+      "rationale": "Later resolution remains a human act."
+    },
+    {
+      "concept_key": "freedom_and_individuality",
+      "rationale": "The learner retains control over return and resolution."
+    },
+    {
+      "concept_key": "predetermined_outcomes",
+      "rationale": "Retention should not narrow later choices through repeated salience."
+    }
   ],
   "ctc_mappings": [
-    {"domain":"Reflection as Learning","rationale":"Explanation supports inspection without deciding for the learner."},
-    {"domain":"Technology as Tool to Think With","rationale":"The conflict can become a representation for thought."},
-    {"domain":"Sharing and Collaborating","rationale":"Resolution remains a human collaborative act."},
-    {"domain":"Social and Cultural Critique","rationale":"Framing and precedence concern voice and power."}
+    {
+      "domain": "Personal Inquiry",
+      "rationale": "The learner controls whether old context becomes relevant again."
+    },
+    {
+      "domain": "Technology as Tool to Think With",
+      "rationale": "Stored context can remain available without becoming compulsory."
+    },
+    {
+      "domain": "Reflection as Learning",
+      "rationale": "Later return can support reinterpretation."
+    },
+    {
+      "domain": "Social and Cultural Critique",
+      "rationale": "Resurfacing affects which prior rules retain power."
+    }
   ],
   "uncaptured_residue": [
-    {"observation":"An explanation can nudge even when the represented hold is neutral.","status":"open"}
+    {
+      "observation": "Salience neutrality and forgetting authority remain provisional research language.",
+      "status": "open"
+    }
   ],
   "provenance": {
-    "evidence_class": "repository_and_primary_source_synthesis",
+    "evidence_class": "repository_and_source_synthesis",
     "privacy_class": "public",
-    "selection_method": "repo_plus_reconciliation_plus_source_hunt_plus_wait_a_minute"
+    "selection_method": "daily_build_cross_connection"
   },
   "selected_by": "daily_build_synthesis_under_human_direction",
   "scope": "system_research_horizon"

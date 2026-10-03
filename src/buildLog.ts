@@ -17,6 +17,17 @@ export interface BuildLogEntry {
 // through the Worker. Open inquiry belongs in Next Edge, not in completed entries.
 export const BUILD_LOG_ENTRIES: BuildLogEntry[] = [
   {
+    id: "2026-10-02-conflict-explanation-neutrality",
+    date: "Oct 2, 2026",
+    title: "Explaining a conflict no longer gets to choose a winner",
+    body: "A new Conflict Explanation Envelope and fourteen-case deterministic suite turn the current Next Edge into a structural test. An unresolved explanation must show every represented learner-authored rule with symmetric fields and equal presentation weight, use a declared canonical-reference order, permit inspection and deferral, and reject recommendations, defaults, specificity/recency/relevance nudges, hidden or collapsed rules, rule mutation, forced resolution, and source-copy expansion. The standalone replay passed 14/14; standing CI registration remains unresolved. Product remains v0.1.0.",
+    done: true,
+    waitAMinute: {
+      summary: "The PCE finding that persistence is not foregrounding appears here as state is not presentation: preserving every valid rule is still not neutral if the explanation gives one rule more salience. Presentation salience is therefore a separate, testable layer from authority state.",
+      evidence: ["research/daily-build/2026-10-01-sunshine-pce.md", "worldspec/schema/conflict-explanation-envelope.schema.json", "worldspec/schema/initiative-authority-temporary-hold.schema.json", "worldspec/schema/selective-attention-envelope.schema.json"]
+    }
+  },
+  {
     id: "2026-10-01-pce-persistence-salience",
     date: "Oct 1, 2026",
     title: "PCE research separates persistence from foregrounding",
@@ -264,10 +275,10 @@ export const BUILD_LOG_ENTRIES: BuildLogEntry[] = [
 ];
 
 export const NEXT_EDGE_FALLBACK = {
-  date: "Sep 30, 2026",
-  title: "Can restraint stay temporary?",
-  question: "When conflicting learner rules force Turtle to do less, should the temporary hold itself become a provenance-bearing research object so a human can inspect, contest, and replace it without turning restraint into durable precedence?",
-  xFactor: "whoooo knooooowwwssssssssssss — what if the important thing to preserve is not the winning rule, but the fact that Turtle deliberately refused to invent one?"
+  date: "Oct 2, 2026",
+  title: "Can a remembered conflict stay quiet?",
+  question: "When Turtle preserves an unresolved authority conflict for later inspection, how can it remain returnable without repeated foregrounding, person-level generalization, or biasing future initiative?",
+  xFactor: "whoooo knooooowwwssssssssssss — what if the most respectful memory is a pointer that can disappear until the learner asks for it?"
 };
 
 function escapeHtml(value: string) {

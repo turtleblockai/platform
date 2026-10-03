@@ -91,8 +91,8 @@ This keeps the open question separate from the historical Build Log. Daily build
 
 ## Current theoretical question
 
-**Is “do less” secretly a precedence rule?**
+**Can a remembered conflict stay quiet?**
 
-When Turtle conservatively does less while valid project-, branch-, and purpose-scoped learner rules conflict, how can that temporary restraint remain inspectable, contestable, and human-revisable instead of hardening into an invisible machine-authored hierarchy?
+When Turtle preserves an unresolved authority conflict for later inspection, how can it remain returnable without repeatedly foregrounding it or biasing future initiative?
 
-The public source of truth remains `public/data/next-edge.json`. This edge follows the scope-conflict evaluation fixture and deliberately turns its safest provisional behavior back into a research question: fail-closed restraint protects authority, but the legitimacy and legibility of that default still require examination.
+The public source of truth remains `public/data/next-edge.json`. This edge follows the Conflict Explanation Envelope and the October 1 PCE persistence-versus-foregrounding pass. The new pressure is continuity without compulsory salience: keeping an unresolved conflict available for later human inspection without turning retention into precedence or repeated resurfacing.
