@@ -1,0 +1,52 @@
+{
+  "schema":"turtleblockai.build-log-coverage.v0.3",
+  "date":"2026-10-03",
+  "d1_persistence":"staged_only",
+  "live_d1_write_attempted":false,
+  "live_d1_write_claimed":false,
+  "opening":{"main_entries":27,"oct2_staged_entries":28,"oct2_pointer":"daily-build-2026-10-02-ready:research/daily-build/2026-10-02.coverage.json"},
+  "coverage":[
+    ["2026-10-02-conflict-explanation-neutrality","staging","research/daily-build/2026-10-02.tags.json"],
+    ["2026-10-01-pce-persistence-salience","staging","research/daily-build/2026-10-01-sunshine-pce.tags.json"],
+    ["2026-10-01-initiative-authority-temporary-hold","staging","research/daily-build/2026-10-01.tags.json"],
+    ["2026-09-30-initiative-authority-scope-conflict-validator","staging","research/daily-build/2026-09-30.tags.json"],
+    ["2026-09-30-library-catalog-28","d1","research/d1-reconciliation/2026-09-29-library-0026-0028.json"],
+    ["2026-09-29-initiative-authority-scope-conflict","staging","research/daily-build/2026-09-29-cycle.md"],
+    ["2026-09-28-initiative-authority-session-boundary","staging","research/daily-build/2026-09-28.coverage.json"],
+    ["2026-09-28-build-log-d1-coverage-repair","staging","research/daily-build/2026-09-28.tags.json"],
+    ["2026-09-27-discord-conversation-provenance","staging","research/daily-build/2026-09-27.tags.json"],
+    ["2026-09-27-initiative-authority-regression","staging","research/daily-build/2026-09-27.tags.json"],
+    ["2026-09-26-initiative-authority","staging","research/daily-build/2026-09-26.tags.json"],
+    ["2026-09-22-cross-branch-perturbation","staging","research/daily-build/2026-09-22.tags.json"],
+    ["2026-09-18-branch-experience-comparison","staging","research/daily-build/2026-09-18.tags.json"],
+    ["2026-09-17-human-perturbation-translation","staging","research/daily-build/2026-09-17.tags.json"],
+    ["2026-09-17-physical-library-d1","d1","research/d1-reconciliation/2026-09-17-library.json"],
+    ["2026-09-16-wait-a-minute-build-log","staging","research/d1-reconciliation/2026-09-16.json"],
+    ["2026-09-16-plural-foreground-regression","staging","research/daily-build/2026-09-16.tags.json"],
+    ["2026-09-15-plural-foreground-envelope","staging","research/daily-build/2026-09-15.tags.json"],
+    ["2026-09-12-d1-reconciliation-terraria-try","staging","research/d1-reconciliation/2026-09-12.json"],
+    ["2026-09-12-selective-attention-envelope","staging","research/daily-build/2026-09-12.tags.json"],
+    ["2026-09-11-human-tamagotchi-turtle-ask","staging","migrations/0009_human_tamagotchi_terrarium_and_turtle_ask.sql"],
+    ["2026-09-11-world-evidence-envelope","staging","research/daily-build/2026-09-11.tags.json"],
+    ["2026-09-10-learner-verification-card","staging","research/daily-build/2026-09-10.tags.json"],
+    ["2026-09-09-next-edge-validator","staging","research/daily-build/2026-09-09.tags.json"],
+    ["2026-09-08-next-edge-horizon","staging","research/daily-build/2026-09-08-next-edge.tags.json"],
+    ["2026-09-08-www-direct-asset-repair","staging","research/daily-build/2026-09-08-www-repair.tags.json"],
+    ["2026-09-08-turtle-terraria-tagging","staging","migrations/0008_seed_terraria_and_autobuild_tags.sql"],
+    ["2026-09-08-daily-coactive-loop","staging","migrations/0007_turtle_terraria_and_exhaustive_tagging.sql"]
+  ],
+  "closing":{
+    "build_log_entries_on_branch":28,
+    "uncovered_build_log_entries":[],
+    "new_daily_material_gap":{
+      "id":"2026-10-03-quiet-conflict-retention",
+      "status":"represented_by_canonical_pointer_but_not_in_build_log",
+      "pointer":"research/daily-build/2026-10-03.tags.json",
+      "build_log_staging":"research/daily-build/2026-10-03.buildlog-entry.json"
+    },
+    "gaps":["Oct 2 package not on main","Oct 3 Build Log insertion pending","research/NEXT_EDGE.md narrative trails JSON","direct-asset Build Log trails canonical feed","Oct 2 validator not in CI","Oct 3 validator not in CI","daily research D1 write unavailable"]
+  },
+  "visitor_input_used":false,
+  "library_note":"Library source 34 reconciliation is separate from daily-build persistence.",
+  "capture_batch_closed":true
+}

@@ -1,77 +1,56 @@
 {
-  "version": "1.0",
-  "updated_at": "2026-10-02",
-  "status": "open_question",
-  "title": "Can a remembered conflict stay quiet?",
-  "question": "When Turtle preserves an unresolved authority conflict for later inspection, how can it remain returnable without repeatedly foregrounding it or biasing future initiative?",
-  "why_now": "The conflict-explanation contract now separates represented authority from presentation salience, while the PCE pass separately distinguishes persistence from foregrounding.",
-  "follows_commit": "501d77d65ef7d3aaef93dd875b39c7e66beeb036",
-  "follows_commit_role": "completed_conflict_explanation_evaluation",
-  "inputs": [
-    "worldspec/schema/conflict-explanation-envelope.schema.json",
-    "worldspec/tests/conflict-explanation-cases.json",
-    "research/daily-build/2026-10-01-sunshine-pce.md",
-    "research/daily-build/2026-10-02.md"
+  "version":"1.0",
+  "updated_at":"2026-10-03",
+  "status":"open_question",
+  "title":"Is relevance enough to knock?",
+  "question":"When a quiet retained conflict becomes relevant to a new turn, how can Turtle notice that relevance without treating relevance itself as permission to resurface the old conflict?",
+  "why_now":"The Quiet Conflict Retention Envelope now keeps unresolved conflict returnable without automatic foregrounding. The remaining edge is the boundary between detecting relevance and gaining authority to bring dormant context back.",
+  "follows_commit":"5da2a8d6a47bfd7b738a9c027a66df1344017a4a",
+  "follows_commit_role":"completed_quiet_conflict_retention_evaluation",
+  "inputs":[
+    "worldspec/schema/quiet-conflict-retention-envelope.schema.json",
+    "worldspec/schema/selective-attention-envelope.schema.json",
+    "worldspec/schema/initiative-authority-temporary-hold.schema.json",
+    "research/TURTLE_ASK.md",
+    "research/daily-build/2026-10-03.md"
   ],
-  "source_classes_consulted": [
-    "repository_state",
-    "research_staging",
-    "primary_sources"
+  "source_classes_consulted":["repository_state","research_staging","primary_sources","reconciliation_sweep"],
+  "possible_possibles":[
+    "Expose a learner-controlled dormant marker that can be pulled into view.",
+    "Let a learner author a narrow resurfacing watchpoint.",
+    "Allow Turtle to form an internal relevance proposal that remains quiet until authorized."
   ],
-  "possible_possibles": [
-    "Keep the old conflict available without foregrounding it.",
-    "Let the learner decide when an old conflict returns.",
-    "Give unresolved conflict context an explicit review boundary."
+  "x_factor":"whoooo knooooowwwssssssssssss — maybe the best continuity cue is a tiny dormant marker the learner can pull, not Turtle pushing context back.",
+  "constraints":[
+    "Relevance is not surfacing authority.",
+    "Keep retained conflict scoped to the context that produced it.",
+    "Do not turn recency or session carryover into permission.",
+    "Do not expand collection to decide whether an old conflict is relevant.",
+    "Silence remains a valid outcome."
   ],
-  "x_factor": "whoooo knooooowwwssssssssssss — what if useful continuity sometimes means leaving something alone?",
-  "constraints": [
-    "Keep the conflict scoped to the context that produced it.",
-    "Do not turn retention into precedence.",
-    "Do not automatically resurface old conflict context."
+  "ontology_mappings":[
+    {"concept_key":"freedom_and_individuality","rationale":"The learner retains control over whether dormant context returns."},
+    {"concept_key":"shared_democracy","rationale":"Old competing rules do not regain power merely because Turtle detects relevance."},
+    {"concept_key":"predetermined_outcomes","rationale":"Relevance detection cannot silently narrow the next move."},
+    {"concept_key":"co_active_emergence","rationale":"Machine noticing may remain a proposal under human direction."},
+    {"concept_key":"possible_possibles","rationale":"Dormant marker, watchpoint, silence, and later return remain alternate futures."}
   ],
-  "ontology_mappings": [
-    {
-      "concept_key": "shared_democracy",
-      "rationale": "Later resolution remains a human act."
-    },
-    {
-      "concept_key": "freedom_and_individuality",
-      "rationale": "The learner retains control over return and resolution."
-    },
-    {
-      "concept_key": "predetermined_outcomes",
-      "rationale": "Retention should not narrow later choices through repeated salience."
-    }
+  "ctc_mappings":[
+    {"domain":"Personal Inquiry","rationale":"The learner governs return to prior context."},
+    {"domain":"Technology as Tool to Think With","rationale":"Relevance can be represented without becoming a command."},
+    {"domain":"Reflection as Learning","rationale":"A later return can support reconsideration when deliberately invoked."},
+    {"domain":"Social and Cultural Critique","rationale":"Resurfacing changes which earlier rule or voice receives renewed salience."},
+    {"domain":"Sharing and Collaborating","rationale":"Return and resolution remain human-governed acts."}
   ],
-  "ctc_mappings": [
-    {
-      "domain": "Personal Inquiry",
-      "rationale": "The learner controls whether old context becomes relevant again."
-    },
-    {
-      "domain": "Technology as Tool to Think With",
-      "rationale": "Stored context can remain available without becoming compulsory."
-    },
-    {
-      "domain": "Reflection as Learning",
-      "rationale": "Later return can support reinterpretation."
-    },
-    {
-      "domain": "Social and Cultural Critique",
-      "rationale": "Resurfacing affects which prior rules retain power."
-    }
+  "uncaptured_residue":[
+    {"observation":"Relevance without resurfacing authority remains provisional research language.","status":"open"},
+    {"observation":"A learner-controlled dormant marker may be distinct from both silence and notification.","status":"open"}
   ],
-  "uncaptured_residue": [
-    {
-      "observation": "Salience neutrality and forgetting authority remain provisional research language.",
-      "status": "open"
-    }
-  ],
-  "provenance": {
-    "evidence_class": "repository_and_source_synthesis",
-    "privacy_class": "public",
-    "selection_method": "daily_build_cross_connection"
+  "provenance":{
+    "evidence_class":"repository_and_primary_source_synthesis",
+    "privacy_class":"public",
+    "selection_method":"reconciliation_plus_wait_a_minute_plus_source_hunt"
   },
-  "selected_by": "daily_build_synthesis_under_human_direction",
-  "scope": "system_research_horizon"
+  "selected_by":"daily_build_synthesis_under_human_direction",
+  "scope":"system_research_horizon"
 }

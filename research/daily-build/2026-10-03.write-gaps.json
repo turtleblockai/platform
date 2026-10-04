@@ -1,0 +1,10 @@
+{
+  "date":"2026-10-03",
+  "status":"partial_publication",
+  "gaps":[
+    {"target":"src/buildLog.ts","result":"not_updated","staging_pointer":"research/daily-build/2026-10-03.buildlog-entry.json"},
+    {"target":"research/NEXT_EDGE.md","result":"not_updated","canonical_public_pointer":"public/data/next-edge.json"},
+    {"target":"live_daily_research_d1","result":"not_written","reason":"No authorized write route was available."}
+  ],
+  "note":"The contribution and its test are committed on the October 3 branch. These publication gaps are preserved explicitly and are not reported as completed."
+}

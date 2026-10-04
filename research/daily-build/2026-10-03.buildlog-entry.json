@@ -1,0 +1,15 @@
+{
+  "schema":"turtleblockai.build-log-entry-staging.v0.1",
+  "target":"src/buildLog.ts",
+  "entry":{
+    "id":"2026-10-03-quiet-conflict-retention",
+    "date":"Oct 3, 2026",
+    "title":"Remembered conflict no longer gets to knock by itself",
+    "body":"A Quiet Conflict Retention Envelope and fourteen-case deterministic suite separate returnable unresolved state from foreground authority. Retention keeps a canonical conflict pointer but no winner, precedence, or resolution. Session start, recency, and inferred relevance do not automatically resurface it. The replay passed 14/14. Product remains v0.1.0.",
+    "done":true,
+    "waitAMinute":{
+      "summary":"Selective Attention, TurtleAsk, Temporary Hold, and retained conflict repeat the same boundary: retrievable state does not automatically take the foreground.",
+      "evidence":["worldspec/schema/quiet-conflict-retention-envelope.schema.json","worldspec/schema/selective-attention-envelope.schema.json","worldspec/schema/initiative-authority-temporary-hold.schema.json","research/TURTLE_ASK.md"]
+    }
+  }
+}
