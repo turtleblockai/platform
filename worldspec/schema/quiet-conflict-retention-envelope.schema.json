@@ -1,0 +1,15 @@
+{
+  "version": "0.1",
+  "title": "Quiet Conflict Retention Envelope",
+  "purpose": "Keep an unresolved learner-authored authority conflict returnable without converting retention, relevance, recency, or session carryover into permission to foreground it again.",
+  "rules": [
+    "Retention keeps a canonical pointer to an unresolved conflict; it does not keep a winner, precedence, or resolution.",
+    "Quiet retained conflicts remain out of the foreground by default and create no pending notification.",
+    "Session start, recency, and inferred relevance cannot independently authorize resurfacing.",
+    "Machine-detected relevance may form a proposal but cannot itself authorize surfacing.",
+    "Foreground return requires an explicit learner request or an active learner-authored attention rule.",
+    "The learner may inspect, mute, or retire the retained conflict without expanding collection or scope.",
+    "Canonical pointers preserve provenance; source text is not duplicated into the retention envelope.",
+    "A source-rule or scope change triggers revalidation rather than silent reuse of the retained conflict."
+  ]
+}

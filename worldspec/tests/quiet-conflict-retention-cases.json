@@ -1,0 +1,67 @@
+{
+  "schema": "turtleblockai.quiet-conflict-retention-cases.v0.1",
+  "purpose": "Test that an unresolved authority conflict can remain returnable without repeated foregrounding, hidden precedence, or machine-authored resurfacing authority.",
+  "base_retention": {
+    "version": "0.1",
+    "id": "retained-conflict:initiative-001",
+    "conflict_ref": "conflict:initiative-authority-001",
+    "scope_ref": "project:inventive-minds/branch:terrarium-a",
+    "retention": {
+      "status": "quiet",
+      "unresolved_at_capture": true,
+      "canonical_pointer": "worldspec/tests/initiative-authority-scope-conflict-cases.json",
+      "source_text_copied": false,
+      "carries_precedence": false,
+      "carries_resolution": false,
+      "cross_scope_generalization": false
+    },
+    "salience": {
+      "foregrounded": false,
+      "notification_pending": false,
+      "auto_resurface_on_session_start": false,
+      "auto_resurface_on_relevance": false,
+      "auto_resurface_on_recency": false,
+      "machine_relevance_is_proposal": true
+    },
+    "return_authority": {
+      "basis": "none",
+      "request_ref": null,
+      "authorized_to_surface": false
+    },
+    "lifecycle": {
+      "learner_can_inspect": true,
+      "learner_can_mute": true,
+      "learner_can_retire": true,
+      "auto_carry_salience_across_sessions": false,
+      "revalidate_on_source_rule_change": true,
+      "revalidate_on_scope_change": true
+    },
+    "provenance": {
+      "privacy_class": "internal",
+      "source_text_copied": false,
+      "new_collection_authorized": false,
+      "reversible": true,
+      "canonical_pointers": [
+        "worldspec/tests/initiative-authority-scope-conflict-cases.json",
+        "worldspec/schema/selective-attention-envelope.schema.json",
+        "worldspec/schema/initiative-authority-temporary-hold.schema.json"
+      ]
+    }
+  },
+  "cases": [
+    {"id":"quiet-retention-pass","expected_valid":true,"patch":{}},
+    {"id":"explicit-learner-return-pass","expected_valid":true,"patch":{"retention":{"status":"surfaced"},"salience":{"foregrounded":true},"return_authority":{"basis":"explicit_learner_request","request_ref":"turn:learner-214","authorized_to_surface":true}}},
+    {"id":"machine-relevance-proposal-stays-quiet-pass","expected_valid":true,"patch":{"return_authority":{"basis":"machine_proposal","request_ref":"proposal:relevance-009","authorized_to_surface":false}}},
+    {"id":"auto-session-resurface-fail","expected_valid":false,"patch":{"salience":{"auto_resurface_on_session_start":true}}},
+    {"id":"auto-relevance-resurface-fail","expected_valid":false,"patch":{"salience":{"auto_resurface_on_relevance":true}}},
+    {"id":"auto-recency-resurface-fail","expected_valid":false,"patch":{"salience":{"auto_resurface_on_recency":true}}},
+    {"id":"machine-proposal-surfaces-fail","expected_valid":false,"patch":{"retention":{"status":"surfaced"},"salience":{"foregrounded":true},"return_authority":{"basis":"machine_proposal","request_ref":"proposal:relevance-010","authorized_to_surface":true}}},
+    {"id":"quiet-notification-pending-fail","expected_valid":false,"patch":{"salience":{"notification_pending":true}}},
+    {"id":"retention-carries-precedence-fail","expected_valid":false,"patch":{"retention":{"carries_precedence":true}}},
+    {"id":"retention-carries-resolution-fail","expected_valid":false,"patch":{"retention":{"carries_resolution":true}}},
+    {"id":"cross-scope-generalization-fail","expected_valid":false,"patch":{"retention":{"cross_scope_generalization":true}}},
+    {"id":"source-text-copy-fail","expected_valid":false,"patch":{"provenance":{"source_text_copied":true}}},
+    {"id":"learner-cannot-retire-fail","expected_valid":false,"patch":{"lifecycle":{"learner_can_retire":false}}},
+    {"id":"surfaced-without-request-ref-fail","expected_valid":false,"patch":{"retention":{"status":"surfaced"},"salience":{"foregrounded":true},"return_authority":{"basis":"explicit_learner_request","request_ref":null,"authorized_to_surface":true}}}
+  ]
+}
