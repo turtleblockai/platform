@@ -1,0 +1,199 @@
+{
+  "schema": "turtleblockai.daily-build-tags.v0.1",
+  "date": "2026-10-05",
+  "ontology_version": "sanders-ontology-v0.1",
+  "d1_persistence": "staged_only",
+  "capture_batch_closed": true,
+  "research_objects": [
+    {
+      "id": "sources",
+      "type": "source_hunt",
+      "summary": "OpenAI/NVIDIA/Minecraft/MIT primary-source pass"
+    },
+    {
+      "id": "selected",
+      "type": "selection",
+      "summary": "Conflict Explanation validator into standing CI"
+    },
+    {
+      "id": "change",
+      "type": "repo_change",
+      "repo_path": ".github/workflows/deploy.yml",
+      "commit": "301cb9ae1498c026727fbfc85f4ed91466d8ecec"
+    },
+    {
+      "id": "test",
+      "type": "evaluation",
+      "summary": "14 cases; 3 valid; 11 hostile; CI passed"
+    },
+    {
+      "id": "backfill",
+      "type": "reconciliation",
+      "summary": "Oct 2 Conflict Explanation history repaired"
+    },
+    {
+      "id": "wait",
+      "type": "wait_a_minute",
+      "summary": "Neutral framing differs from resurfacing authority"
+    },
+    {
+      "id": "horizon",
+      "type": "next_edge",
+      "summary": "Is relevance enough to knock?"
+    },
+    {
+      "id": "version",
+      "type": "version_judgment",
+      "summary": "remain v0.1.0"
+    }
+  ],
+  "relationships": [
+    {
+      "from": "sources",
+      "predicate": "contextualizes",
+      "to": "selected"
+    },
+    {
+      "from": "selected",
+      "predicate": "implemented_as",
+      "to": "change"
+    },
+    {
+      "from": "test",
+      "predicate": "evaluates",
+      "to": "change"
+    },
+    {
+      "from": "wait",
+      "predicate": "surfaces",
+      "to": "horizon"
+    }
+  ],
+  "ctc_tags": [
+    {
+      "domain": "Personal Inquiry",
+      "rationale": "Learner purpose governs return."
+    },
+    {
+      "domain": "Compelling Problem or Question",
+      "rationale": "Conflict stays open."
+    },
+    {
+      "domain": "Technology as Tool to Think With",
+      "rationale": "Explanation is inspectable."
+    },
+    {
+      "domain": "Formative Demonstration of Learning",
+      "rationale": "System evidence only."
+    },
+    {
+      "domain": "Reflection as Learning",
+      "rationale": "Rules remain revisable."
+    },
+    {
+      "domain": "Social and Cultural Critique",
+      "rationale": "Framing concerns power."
+    },
+    {
+      "domain": "Sharing and Collaborating",
+      "rationale": "Resolution remains human-directed."
+    }
+  ],
+  "ontology_tags": [
+    {
+      "concept": "machine_responses_as_material_for_evaluation",
+      "rationale": "Behavior becomes a regression target."
+    },
+    {
+      "concept": "freedom_and_individuality",
+      "rationale": "Learner authority remains revisable."
+    },
+    {
+      "concept": "shared_democracy",
+      "rationale": "Rules remain contestable."
+    },
+    {
+      "concept": "predetermined_outcomes",
+      "rationale": "No hidden winner."
+    },
+    {
+      "concept": "problem_posing_education",
+      "rationale": "Conflict stays visible."
+    },
+    {
+      "concept": "co_active_emergence",
+      "rationale": "Human direction can alter trajectory."
+    },
+    {
+      "concept": "possible_possibles",
+      "rationale": "Multiple continuations remain open."
+    },
+    {
+      "concept": "provenance_aware_retrieval",
+      "rationale": "Resurfacing preserves source/authorship."
+    }
+  ],
+  "emergent_tags": [
+    "conflict_explanation",
+    "standing_regression",
+    "resurfacing_authority",
+    "relevance_not_permission"
+  ],
+  "reconciliation_findings": [
+    {
+      "id": "opening",
+      "status": "represented",
+      "count": 27
+    },
+    {
+      "id": "oct2",
+      "status": "safely_backfilled",
+      "pointer": "src/buildLog.ts"
+    },
+    {
+      "id": "ci",
+      "status": "safely_backfilled",
+      "pointer": ".github/workflows/deploy.yml"
+    },
+    {
+      "id": "library",
+      "status": "represented_in_d1",
+      "pointer": "research/d1-reconciliation/2026-10-02-library-0033-0034.json"
+    },
+    {
+      "id": "today",
+      "status": "represented_by_canonical_pointer",
+      "pointer": "research/daily-build/2026-10-05.tags.json"
+    },
+    {
+      "id": "live-d1",
+      "status": "not_written"
+    }
+  ],
+  "wait_a_minute": {
+    "pointers": [
+      "worldspec/schema/conflict-explanation-envelope.schema.json",
+      "research/daily-build/2026-10-01-sunshine-pce.md",
+      "worldspec/schema/selective-attention-envelope.schema.json",
+      "research/TURTLE_ASK.md"
+    ],
+    "overlap": "Framing neutrality does not answer resurfacing authority.",
+    "uncertainty": "May be recurring architecture, not a new construct.",
+    "disposition": [
+      "relationship",
+      "test_candidate",
+      "next_edge_candidate"
+    ]
+  },
+  "uncaptured_observations": [
+    "Structural symmetry cannot prove perceived neutrality.",
+    "Relevance may justify noticing without resurfacing permission.",
+    "No new CTC domain is promoted.",
+    "R2 and consent-safe visitor evidence unavailable."
+  ],
+  "provenance": {
+    "actor": "machine_synthesis_under_human_direction",
+    "privacy_class": "public",
+    "consent_safe_try_it_used": false
+  }
+}
