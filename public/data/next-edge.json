@@ -1,53 +1,107 @@
 {
   "version": "1.0",
-  "updated_at": "2026-10-01",
+  "updated_at": "2026-10-05",
   "status": "open_question",
-  "title": "Can an explanation stay neutral?",
-  "question": "When Turtle shows why initiative is on hold, how can it expose the conflict without steering the learner toward one resolution?",
-  "why_now": "The temporary hold is now explicit, reversible, and non-precedential. Explanation is the next research surface because framing can still shape a learner's choice.",
-  "follows_commit": "b0f7b1d0103edfe43626904f3e93609b9167ea85",
-  "follows_commit_role": "completed_temporary_hold_envelope_and_evaluation",
+  "title": "Is relevance enough to knock?",
+  "question": "When a retained conflict becomes relevant to a new turn, how can Turtle notice that relevance without treating relevance itself as permission to resurface the conflict?",
+  "why_now": "Conflict Explanation now has a standing regression for how competing rules are framed. Neutral framing is still incomplete if machine-detected relevance can decide when old material re-enters the learner's foreground.",
+  "follows_commit": "301cb9ae1498c026727fbfc85f4ed91466d8ecec",
+  "follows_commit_role": "standing_conflict_explanation_regression_ci",
   "inputs": [
-    "worldspec/schema/initiative-authority-temporary-hold.schema.json",
-    "worldspec/tests/initiative-authority-temporary-hold-cases.json",
+    ".github/workflows/deploy.yml",
+    "worldspec/schema/conflict-explanation-envelope.schema.json",
+    "worldspec/schema/selective-attention-envelope.schema.json",
+    "research/daily-build/2026-10-01-sunshine-pce.md",
     "research/TURTLE_ASK.md",
-    "research/daily-build/2026-10-01.md"
+    "research/daily-build/2026-10-05.tags.json"
   ],
   "source_classes_consulted": [
     "repository_state",
+    "d1_reconciliation_records",
     "reconciliation_staging",
-    "primary_sources"
+    "primary_sources",
+    "terraria_architecture",
+    "public_build_log"
   ],
   "possible_possibles": [
-    "Show the unresolved structure without ranking it.",
-    "Let the learner choose which scope to inspect.",
-    "List available choices without recommending one."
+    "A learner-authored resurfacing watchpoint that names when a retained conflict may return.",
+    "A quiet dormant marker the learner can pull into view without Turtle pushing it forward.",
+    "A machine relevance proposal that stays internal until an explicit learner-controlled surfacing gate authorizes display."
   ],
-  "x_factor": "whoooo knooooowwwssssssssssss — what if a diagram is sometimes more neutral than more Turtle prose?",
+  "x_factor": "whoooo knooooowwwssssssssssss — maybe the best continuity cue is a tiny pull-tab the learner can choose, not Turtle deciding that relevance deserves a knock.",
   "constraints": [
-    "Do not infer precedence.",
-    "Keep source material at canonical pointers.",
-    "Keep a local conflict local.",
-    "Explanation must not alter the represented authority state."
+    "Relevance is evidence for noticing, not authority to resurface.",
+    "Preserve rule authorship, scope, and provenance.",
+    "Do not introduce generalized persistent personal memory.",
+    "Do not infer human availability or desire to revisit old material.",
+    "Machine proposals remain reversible and have no production authority."
   ],
   "ontology_mappings": [
-    {"concept_key":"shared_democracy","rationale":"Competing rules remain open to learner resolution."},
-    {"concept_key":"freedom_and_individuality","rationale":"Human direction remains revisable."},
-    {"concept_key":"problem_posing_education","rationale":"The unresolved conflict remains visible as a problem rather than being hidden."}
+    {
+      "concept_key": "freedom_and_individuality",
+      "rationale": "The learner retains authority over foreground return."
+    },
+    {
+      "concept_key": "predetermined_outcomes",
+      "rationale": "Machine salience must not narrow the next move."
+    },
+    {
+      "concept_key": "shared_democracy",
+      "rationale": "Competing rules remain contestable."
+    },
+    {
+      "concept_key": "co_active_emergence",
+      "rationale": "A return may alter the joint trajectory while the human gate remains authoritative."
+    },
+    {
+      "concept_key": "possible_possibles",
+      "rationale": "Quiet retention preserves future paths without forcing one now."
+    },
+    {
+      "concept_key": "provenance_aware_retrieval",
+      "rationale": "Any return must preserve why the conflict exists and who authored it."
+    }
   ],
   "ctc_mappings": [
-    {"domain":"Reflection as Learning","rationale":"Explanation supports inspection without deciding for the learner."},
-    {"domain":"Technology as Tool to Think With","rationale":"The conflict can become a representation for thought."},
-    {"domain":"Sharing and Collaborating","rationale":"Resolution remains a human collaborative act."},
-    {"domain":"Social and Cultural Critique","rationale":"Framing and precedence concern voice and power."}
+    {
+      "domain": "Personal Inquiry",
+      "rationale": "Learner purpose governs whether old conflict returns."
+    },
+    {
+      "domain": "Compelling Problem or Question",
+      "rationale": "A prior unresolved problem may stay available without becoming compulsory."
+    },
+    {
+      "domain": "Technology as Tool to Think With",
+      "rationale": "Relevance is material for inspection rather than an action command."
+    },
+    {
+      "domain": "Reflection as Learning",
+      "rationale": "Learners may deliberately revisit prior conflict."
+    },
+    {
+      "domain": "Social and Cultural Critique",
+      "rationale": "Salience affects voice and power."
+    },
+    {
+      "domain": "Sharing and Collaborating",
+      "rationale": "Human gating preserves negotiated participation."
+    }
   ],
   "uncaptured_residue": [
-    {"observation":"An explanation can nudge even when the represented hold is neutral.","status":"open"}
+    {
+      "observation": "The framework does not yet distinguish useful relevance detection from salience pressure as a first-class analytic object.",
+      "status": "open"
+    },
+    {
+      "observation": "Structural tests cannot establish whether a learner experiences resurfacing as respectful or intrusive.",
+      "status": "open"
+    }
   ],
   "provenance": {
-    "evidence_class": "repository_and_primary_source_synthesis",
+    "evidence_class": "repository_reconciliation_primary_source_and_cross_connection_synthesis",
     "privacy_class": "public",
-    "selection_method": "repo_plus_reconciliation_plus_source_hunt_plus_wait_a_minute"
+    "selection_method": "live_main_plus_full_build_log_sweep_plus_d1_reconciliation_plus_primary_source_hunt_plus_wait_a_minute"
   },
   "selected_by": "daily_build_synthesis_under_human_direction",
   "scope": "system_research_horizon"

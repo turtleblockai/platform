@@ -17,6 +17,24 @@ export interface BuildLogEntry {
 // through the Worker. Open inquiry belongs in Next Edge, not in completed entries.
 export const BUILD_LOG_ENTRIES: BuildLogEntry[] = [
   {
+    id: "2026-10-05-conflict-explanation-standing-regression",
+    date: "Oct 5, 2026",
+    title: "Conflict explanation neutrality becomes a standing regression",
+    body: "The existing fourteen-case Conflict Explanation regression now runs in standing GitHub validation. Three expected-valid and eleven hostile cases make neutral presentation a repeatable project constraint rather than a one-off check. Product remains v0.1.0.",
+    done: true,
+    waitAMinute: {
+      summary: "Neutral framing is separate from resurfacing authority: relevance may justify noticing without authorizing an old conflict to return to the foreground.",
+      evidence: ["worldspec/schema/conflict-explanation-envelope.schema.json", "research/daily-build/2026-10-01-sunshine-pce.md", "worldspec/schema/selective-attention-envelope.schema.json", "research/TURTLE_ASK.md"]
+    }
+  },
+  {
+    id: "2026-10-02-conflict-explanation-regression",
+    date: "Oct 2, 2026",
+    title: "Conflict explanations get hostile neutrality tests",
+    body: "A fourteen-case Conflict Explanation regression tests symmetric presentation, deferral, inspection without selection, and rejection of ranking or machine resolution. This entry backfills already-committed work into public history. Product remains v0.1.0.",
+    done: true
+  },
+  {
     id: "2026-10-01-pce-persistence-salience",
     date: "Oct 1, 2026",
     title: "PCE research separates persistence from foregrounding",
