@@ -66,6 +66,9 @@ jobs:
       - name: Validate Initiative Authority temporary hold
         run: npm run validate:initiative-authority-temporary-hold
 
+      - name: Validate conflict explanation neutrality
+        run: npm run validate:conflict-explanation
+
       - name: Validate Discord Turtle conversation contract
         run: npm run validate:discord-conversation
 
