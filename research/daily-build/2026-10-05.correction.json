@@ -1,0 +1,36 @@
+{
+  "schema": "turtleblockai.daily-build-correction.v0.1",
+  "date": "2026-10-05",
+  "supersedes_assertions_in": [
+    "research/daily-build/2026-10-05.tags.json",
+    "research/daily-build/2026-10-05.coverage.json"
+  ],
+  "current_truth": {
+    "build_log_entry_count_on_main": 27,
+    "oct_2_conflict_explanation_build_log_backfill": "staged_not_published",
+    "oct_5_build_log_prepend": "staged_not_published",
+    "public_next_edge_json": "staged_not_published",
+    "research_next_edge_md": "stale_on_main",
+    "daily_research_d1": "staged_only_not_live"
+  },
+  "staging": {
+    "branch": "daily-build-2026-10-05",
+    "commit": "8c14a2a243d26615c021acf3164a2ec9764e03c9",
+    "contains": [
+      "intended src/buildLog.ts prepend/backfill",
+      "public/data/next-edge.json for Is relevance enough to knock?",
+      "October 5 daily record, tags, and coverage package"
+    ]
+  },
+  "live_main_success": {
+    "contribution_commit": "301cb9ae1498c026727fbfc85f4ed91466d8ecec",
+    "contribution": "Conflict Explanation regression runs in standing CI",
+    "github_validation": "success",
+    "cloudflare_build": "success",
+    "daily_record": "research/daily-build/2026-10-05.md",
+    "tags_manifest": "research/daily-build/2026-10-05.tags.json",
+    "coverage_manifest": "research/daily-build/2026-10-05.coverage.json"
+  },
+  "reason": "The connected GitHub safety layer permitted the bounded CI contribution and new-file research records but blocked full-file mutations/promotion for the Build Log and both existing Next Edge surfaces. This correction prevents staged publication from being mistaken for main-branch publication.",
+  "capture_batch_closed": true
+}
