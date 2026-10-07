@@ -42,6 +42,9 @@ jobs:
       - name: Validate Selective Attention Envelope
         run: npm run validate:selective-attention
 
+      - name: Validate retained-context resurfacing authority
+        run: npm run validate:resurfacing-authority
+
       - name: Validate Plural Foreground Envelope
         run: npm run validate:plural-foreground
 
