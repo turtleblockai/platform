@@ -1,0 +1,94 @@
+{
+  "version": "0.1",
+  "name": "Retained-context resurfacing authority regression cases",
+  "purpose": "Exercise the existing Selective Attention Envelope against retained unresolved context so machine-detected relevance does not become permission to resurface or interrupt.",
+  "cases": [
+    {
+      "id": "retained-conflict-relevance-defer-pass",
+      "expected_valid": true,
+      "envelope": {
+        "version": "0.1",
+        "id": "attention-retained-conflict-defer-001",
+        "question_ref": "question-unresolved-authority-conflict",
+        "world_event_ref": "retained-conflict-ref-project-inventive-minds",
+        "attention_context": {"mode": "unspecified", "source": "project_default"},
+        "attention_rule": {"id": "proposal-retained-conflict-relevance","purpose_ref": "learner-purpose-current-project","authored_by": "turtle","evidence_class": "system_record","basis": "turtle_proposal","status": "proposed","trigger_description": "A retained unresolved conflict appears relevant to the current turn.","new_collection_authorized": false},
+        "decision": {"actor_type": "turtle","evidence_class": "system_record","action": "defer","rationale": "Relevance may be noticed, but no learner-authored watchpoint authorizes interruption.","interruptive": false,"delivery_audience": "none","retention": "ephemeral_private","status": "proposed"},
+        "provenance": {"source_event_privacy_class": "internal","event_content_duplicated": false,"learner_can_mute": true,"learner_can_revise": true,"machine_salience_is_proposal": true,"machine_final_authority": false,"surveillance_expansion_authorized": false,"reversible": true,"non_interruption_is_valid": true}
+      }
+    },
+    {
+      "id": "retained-conflict-learner-watchpoint-pass",
+      "expected_valid": true,
+      "envelope": {
+        "version": "0.1",
+        "id": "attention-retained-conflict-watchpoint-001",
+        "question_ref": "question-unresolved-authority-conflict",
+        "world_event_ref": "retained-conflict-ref-project-inventive-minds",
+        "attention_context": {"mode": "watchpoint_only", "source": "learner_stated"},
+        "attention_rule": {"id": "watchpoint-retained-conflict","purpose_ref": "learner-purpose-current-project","authored_by": "learner","evidence_class": "human_interaction","basis": "learner_watchpoint","status": "active","trigger_description": "If this unresolved conflict becomes relevant to this project again, remind me.","new_collection_authorized": false},
+        "decision": {"actor_type": "turtle","evidence_class": "system_record","action": "surface_now","rationale": "The retained conflict matches an active learner-authored watchpoint.","interruptive": true,"delivery_audience": "learner","retention": "ephemeral_private","status": "executed"},
+        "provenance": {"source_event_privacy_class": "internal","event_content_duplicated": false,"learner_can_mute": true,"learner_can_revise": true,"machine_salience_is_proposal": true,"machine_final_authority": false,"surveillance_expansion_authorized": false,"reversible": true,"non_interruption_is_valid": true}
+      }
+    },
+    {
+      "id": "retained-conflict-explicit-request-pass",
+      "expected_valid": true,
+      "envelope": {
+        "version": "0.1",
+        "id": "attention-retained-conflict-request-001",
+        "question_ref": "question-unresolved-authority-conflict",
+        "world_event_ref": "retained-conflict-ref-project-inventive-minds",
+        "attention_context": {"mode": "interruptible", "source": "learner_stated"},
+        "attention_rule": {"id": "request-retained-conflict","purpose_ref": "learner-purpose-current-project","authored_by": "learner","evidence_class": "human_interaction","basis": "explicit_learner_request","status": "active","trigger_description": "Bring that unresolved conflict back when it matters to this project.","new_collection_authorized": false},
+        "decision": {"actor_type": "turtle","evidence_class": "system_record","action": "surface_now","rationale": "The current turn matches an explicit learner request.","interruptive": true,"delivery_audience": "learner","retention": "ephemeral_private","status": "executed"},
+        "provenance": {"source_event_privacy_class": "internal","event_content_duplicated": false,"learner_can_mute": true,"learner_can_revise": true,"machine_salience_is_proposal": true,"machine_final_authority": false,"surveillance_expansion_authorized": false,"reversible": true,"non_interruption_is_valid": true}
+      }
+    },
+    {
+      "id": "retained-conflict-relevance-knock-fail",
+      "expected_valid": false,
+      "expected_error": "interruptive surfacing requires active learner authorization",
+      "envelope": {
+        "version": "0.1",
+        "id": "attention-retained-conflict-knock-001",
+        "question_ref": "question-unresolved-authority-conflict",
+        "world_event_ref": "retained-conflict-ref-project-inventive-minds",
+        "attention_context": {"mode": "unspecified", "source": "project_default"},
+        "attention_rule": {"id": "proposal-retained-conflict-knock","purpose_ref": "learner-purpose-current-project","authored_by": "turtle","evidence_class": "system_record","basis": "turtle_proposal","status": "proposed","trigger_description": "Turtle judges the retained conflict highly relevant to the current turn.","new_collection_authorized": false},
+        "decision": {"actor_type": "turtle","evidence_class": "system_record","action": "surface_now","rationale": "Turtle treated relevance as permission to knock.","interruptive": true,"delivery_audience": "learner","retention": "ephemeral_private","status": "executed"},
+        "provenance": {"source_event_privacy_class": "internal","event_content_duplicated": false,"learner_can_mute": true,"learner_can_revise": true,"machine_salience_is_proposal": true,"machine_final_authority": false,"surveillance_expansion_authorized": false,"reversible": true,"non_interruption_is_valid": true}
+      }
+    },
+    {
+      "id": "retained-conflict-current-quiet-fail",
+      "expected_valid": false,
+      "expected_error": "do_not_interrupt context forbids immediate surfacing",
+      "envelope": {
+        "version": "0.1",
+        "id": "attention-retained-conflict-quiet-001",
+        "question_ref": "question-unresolved-authority-conflict",
+        "world_event_ref": "retained-conflict-ref-project-inventive-minds",
+        "attention_context": {"mode": "do_not_interrupt", "source": "learner_stated"},
+        "attention_rule": {"id": "watchpoint-retained-conflict-old","purpose_ref": "learner-purpose-current-project","authored_by": "learner","evidence_class": "human_interaction","basis": "learner_watchpoint","status": "active","trigger_description": "An earlier learner-authored watchpoint exists for this retained conflict.","new_collection_authorized": false},
+        "decision": {"actor_type": "turtle","evidence_class": "system_record","action": "surface_now","rationale": "Turtle attempted to reuse an older watchpoint despite the current do-not-interrupt context.","interruptive": true,"delivery_audience": "learner","retention": "ephemeral_private","status": "executed"},
+        "provenance": {"source_event_privacy_class": "internal","event_content_duplicated": false,"learner_can_mute": true,"learner_can_revise": true,"machine_salience_is_proposal": true,"machine_final_authority": false,"surveillance_expansion_authorized": false,"reversible": true,"non_interruption_is_valid": true}
+      }
+    },
+    {
+      "id": "retained-conflict-collection-expansion-fail",
+      "expected_valid": false,
+      "expected_error": "attention envelope may not authorize new collection",
+      "envelope": {
+        "version": "0.1",
+        "id": "attention-retained-conflict-collect-001",
+        "question_ref": "question-unresolved-authority-conflict",
+        "world_event_ref": "retained-conflict-ref-project-inventive-minds",
+        "attention_context": {"mode": "watchpoint_only", "source": "learner_stated"},
+        "attention_rule": {"id": "watchpoint-retained-conflict-collect","purpose_ref": "learner-purpose-current-project","authored_by": "learner","evidence_class": "human_interaction","basis": "learner_watchpoint","status": "active","trigger_description": "Return to the retained conflict if the existing project trace warrants it.","new_collection_authorized": true},
+        "decision": {"actor_type": "turtle","evidence_class": "system_record","action": "defer","rationale": "The resurfacing rule attempted to broaden collection beyond the canonical retained trace.","interruptive": false,"delivery_audience": "none","retention": "ephemeral_private","status": "proposed"},
+        "provenance": {"source_event_privacy_class": "internal","event_content_duplicated": false,"learner_can_mute": true,"learner_can_revise": true,"machine_salience_is_proposal": true,"machine_final_authority": false,"surveillance_expansion_authorized": false,"reversible": true,"non_interruption_is_valid": true}
+      }
+    }
+  ]
+}
