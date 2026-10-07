@@ -1,0 +1,71 @@
+{
+  "schema": "turtleblockai.resurfacing-authority-cases.v0.1",
+  "purpose": "Test that relevance detection remains separate from learner-governed authority to resurface retained context.",
+  "base_decision": {
+    "version": "0.1",
+    "id": "resurface:conflict-001",
+    "retained_context_ref": "conflict:initiative-authority-001",
+    "scope": {
+      "kind": "project",
+      "ref": "project:inventive-minds",
+      "generalized_person_scope": false
+    },
+    "relevance": {
+      "status": "noticed",
+      "assessed_by": "turtle",
+      "evidence_class": "system_record",
+      "rationale": "The current turn touches the same unresolved project constraint.",
+      "grants_resurfacing_authority": false,
+      "score_controls_action": false
+    },
+    "authority": {
+      "basis": "none",
+      "authored_by": null,
+      "authority_ref": null,
+      "scope_ref": "project:inventive-minds",
+      "active": false,
+      "auto_carry_across_sessions": false,
+      "machine_can_upgrade": false
+    },
+    "decision": {
+      "action": "remain_quiet",
+      "interruptive": false,
+      "delivery_audience": "none",
+      "reason": "Relevant but not authorized to resurface.",
+      "status": "executed"
+    },
+    "human_boundary": {
+      "availability_inferred": false,
+      "receptivity_inferred": false,
+      "silence_is_permission": false,
+      "learner_can_mute": true,
+      "learner_can_revoke": true
+    },
+    "provenance": {
+      "raw_dialogue_copied": false,
+      "new_collection_authorized": false,
+      "reversible": true,
+      "privacy_class": "internal",
+      "canonical_pointers": [
+        "worldspec/schema/selective-attention-envelope.schema.json",
+        "worldspec/schema/initiative-authority-envelope.schema.json"
+      ]
+    }
+  },
+  "cases": [
+    {"id":"relevant-remains-quiet-pass","expected_valid":true,"patch":{}},
+    {"id":"learner-watchpoint-surface-pass","expected_valid":true,"patch":{"authority":{"basis":"learner_watchpoint","authored_by":"learner","authority_ref":"turn:learner-watchpoint-42","active":true},"decision":{"action":"surface_now","delivery_audience":"learner","reason":"An active learner-authored watchpoint permits this scoped return."}}},
+    {"id":"explicit-request-surface-pass","expected_valid":true,"patch":{"authority":{"basis":"explicit_learner_request","authored_by":"learner","authority_ref":"turn:learner-request-43","active":true},"decision":{"action":"surface_now","delivery_audience":"learner","reason":"The learner explicitly asked to revisit the retained conflict."}}},
+    {"id":"relevance-grants-authority-fail","expected_valid":false,"patch":{"relevance":{"grants_resurfacing_authority":true}}},
+    {"id":"score-controls-action-fail","expected_valid":false,"patch":{"relevance":{"score_controls_action":true}}},
+    {"id":"surface-without-authority-fail","expected_valid":false,"patch":{"decision":{"action":"surface_now","delivery_audience":"learner"}}},
+    {"id":"machine-authored-watchpoint-fail","expected_valid":false,"patch":{"authority":{"basis":"learner_watchpoint","authored_by":"turtle","authority_ref":"proposal:turtle-7","active":true},"decision":{"action":"surface_now","delivery_audience":"learner"}}},
+    {"id":"scope-mismatch-fail","expected_valid":false,"patch":{"authority":{"basis":"learner_watchpoint","authored_by":"learner","authority_ref":"turn:learner-watchpoint-42","scope_ref":"branch:other","active":true},"decision":{"action":"surface_now","delivery_audience":"learner"}}},
+    {"id":"generalized-person-scope-fail","expected_valid":false,"patch":{"scope":{"generalized_person_scope":true}}},
+    {"id":"auto-session-carry-fail","expected_valid":false,"patch":{"authority":{"auto_carry_across_sessions":true}}},
+    {"id":"machine-upgrade-fail","expected_valid":false,"patch":{"authority":{"machine_can_upgrade":true}}},
+    {"id":"inferred-availability-fail","expected_valid":false,"patch":{"human_boundary":{"availability_inferred":true}}},
+    {"id":"interruptive-surface-fail","expected_valid":false,"patch":{"authority":{"basis":"explicit_learner_request","authored_by":"learner","authority_ref":"turn:learner-request-43","active":true},"decision":{"action":"surface_now","interruptive":true,"delivery_audience":"learner"}}},
+    {"id":"raw-dialogue-copy-fail","expected_valid":false,"patch":{"provenance":{"raw_dialogue_copied":true}}}
+  ]
+}
