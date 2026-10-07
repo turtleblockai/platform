@@ -1,0 +1,278 @@
+{
+  "schema": "turtleblockai.daily-build-tags.v0.1",
+  "date": "2026-10-06",
+  "ontology_version": "sanders-ontology-v0.1",
+  "d1_persistence": "staged_only",
+  "capture_batch_closed": true,
+  "research_objects": [
+    {
+      "id": "src-openai-laser",
+      "type": "primary_source_signal",
+      "source_uri": "https://alignment.openai.com/laser/",
+      "date": "2026-10-06",
+      "summary": "Boundary-case evaluation with synthetic/de-identified data."
+    },
+    {
+      "id": "src-nvidia-oasp",
+      "type": "primary_source_signal",
+      "source_uri": "https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Launches-Open-Agent-Safety-Platform-to-Secure-Agents-From-Testing-to-Deployment/default.aspx",
+      "date": "2026-09-28",
+      "summary": "Externally governed agent permissions and observable control."
+    },
+    {
+      "id": "src-minecraft-velocity",
+      "type": "primary_source_signal",
+      "source_uri": "https://education.minecraft.net/en-us/discover/velocity-prize",
+      "date": "2026-10",
+      "summary": "Construction through coding, testing, and alternate strategies."
+    },
+    {
+      "id": "src-mit-jambot",
+      "type": "primary_source_signal",
+      "source_uri": "https://www.media.mit.edu/events/jordan-jam_bot-oct3/",
+      "date": "2026-10-03",
+      "summary": "Human-AI responsive improvisation."
+    },
+    {
+      "id": "opening-reconciliation",
+      "type": "reconciliation",
+      "summary": "27/27 published Build Log entries covered; Oct 2/Oct 5 publication gaps and stale Next Edge identified."
+    },
+    {
+      "id": "candidate",
+      "type": "candidate",
+      "summary": "Resurfacing Authority Envelope."
+    },
+    {
+      "id": "rejected-ui",
+      "type": "rejection",
+      "summary": "Dormant-conflict UI deferred until authority semantics are tested."
+    },
+    {
+      "id": "selected",
+      "type": "selection",
+      "summary": "Resurfacing Authority Envelope selected as the sole bounded contribution."
+    },
+    {
+      "id": "schema",
+      "type": "repo_change",
+      "repo_path": "worldspec/schema/resurfacing-authority-envelope.schema.json"
+    },
+    {
+      "id": "cases",
+      "type": "evaluation_fixture",
+      "repo_path": "worldspec/tests/resurfacing-authority-cases.json"
+    },
+    {
+      "id": "validator",
+      "type": "evaluation",
+      "repo_path": "scripts/validate-resurfacing-authority-envelope.mjs",
+      "commit": "b6c578a16dced7f758bc56d358c2d34ae7d96bcb"
+    },
+    {
+      "id": "test",
+      "type": "test_result",
+      "summary": "14 cases; 3 valid; 11 hostile; 0 mismatches."
+    },
+    {
+      "id": "wait",
+      "type": "wait_a_minute",
+      "summary": "Proposal/authority split recurs across attention, initiative, TurtleAsk, persistence, and resurfacing."
+    },
+    {
+      "id": "horizon",
+      "type": "next_edge",
+      "summary": "Can permission expire without forgetting?"
+    },
+    {
+      "id": "version",
+      "type": "version_judgment",
+      "summary": "remain v0.1.0"
+    }
+  ],
+  "relationships": [
+    {
+      "from": "src-openai-laser",
+      "predicate": "contextualizes",
+      "to": "test"
+    },
+    {
+      "from": "src-nvidia-oasp",
+      "predicate": "contextualizes",
+      "to": "selected"
+    },
+    {
+      "from": "src-minecraft-velocity",
+      "predicate": "contextualizes",
+      "to": "candidate"
+    },
+    {
+      "from": "src-mit-jambot",
+      "predicate": "contextualizes",
+      "to": "selected"
+    },
+    {
+      "from": "selected",
+      "predicate": "implemented_as",
+      "to": "schema"
+    },
+    {
+      "from": "selected",
+      "predicate": "implemented_as",
+      "to": "cases"
+    },
+    {
+      "from": "selected",
+      "predicate": "implemented_as",
+      "to": "validator"
+    },
+    {
+      "from": "test",
+      "predicate": "evaluates",
+      "to": "validator"
+    },
+    {
+      "from": "wait",
+      "predicate": "surfaces",
+      "to": "horizon"
+    }
+  ],
+  "ctc_tags": [
+    {
+      "domain": "Personal Inquiry",
+      "rationale": "The learner controls whether prior material returns to current inquiry."
+    },
+    {
+      "domain": "Compelling Problem or Question",
+      "rationale": "An unresolved conflict may remain available without becoming compulsory."
+    },
+    {
+      "domain": "Technology as Tool to Think With",
+      "rationale": "Relevance is inspectable material rather than action authority."
+    },
+    {
+      "domain": "Formative Demonstration of Learning",
+      "rationale": "This cycle produces system-behavior evidence only."
+    },
+    {
+      "domain": "Reflection as Learning",
+      "rationale": "An authorized return can support deliberate reconsideration."
+    },
+    {
+      "domain": "Social and Cultural Critique",
+      "rationale": "Foreground control concerns voice, power, and salience."
+    },
+    {
+      "domain": "Sharing and Collaborating",
+      "rationale": "Learner requests remain distinct from Turtle proposals."
+    }
+  ],
+  "ontology_tags": [
+    {
+      "concept": "freedom_and_individuality",
+      "rationale": "Learner authority over foreground return remains revisable."
+    },
+    {
+      "concept": "shared_democracy",
+      "rationale": "Authority remains explicit and contestable."
+    },
+    {
+      "concept": "predetermined_outcomes",
+      "rationale": "Relevance cannot manufacture a default return path."
+    },
+    {
+      "concept": "problem_posing_education",
+      "rationale": "Unresolved context can remain a question rather than a forced path."
+    },
+    {
+      "concept": "machine_responses_as_material_for_evaluation",
+      "rationale": "Relevance judgments become inspectable evaluation material."
+    },
+    {
+      "concept": "co_active_emergence",
+      "rationale": "Human direction can reopen or leave quiet a possible trajectory."
+    },
+    {
+      "concept": "possible_possibles",
+      "rationale": "Retained context remains one continuation among many."
+    },
+    {
+      "concept": "provenance_aware_retrieval",
+      "rationale": "Canonical pointers preserve source/context distinctions."
+    }
+  ],
+  "emergent_tags": [
+    "relevance_not_permission",
+    "resurfacing_authority",
+    "quiet_continuity",
+    "proposal_authority_split",
+    "foreground_governance"
+  ],
+  "reconciliation_findings": [
+    {
+      "id": "main-build-log",
+      "status": "represented",
+      "count": 27,
+      "pointer": "src/buildLog.ts"
+    },
+    {
+      "id": "oct2",
+      "status": "unresolved_gap",
+      "pointer": "research/daily-build/2026-10-02.md"
+    },
+    {
+      "id": "oct5",
+      "status": "unresolved_gap",
+      "pointer": "research/daily-build/2026-10-05.md"
+    },
+    {
+      "id": "next-edge-public",
+      "status": "unresolved_gap",
+      "pointer": "public/data/next-edge.json"
+    },
+    {
+      "id": "next-edge-narrative",
+      "status": "unresolved_gap",
+      "pointer": "research/NEXT_EDGE.md"
+    },
+    {
+      "id": "today",
+      "status": "represented_by_canonical_pointer",
+      "pointer": "research/daily-build/2026-10-06.tags.json"
+    },
+    {
+      "id": "live-d1",
+      "status": "not_written"
+    }
+  ],
+  "wait_a_minute": {
+    "pointers": [
+      "worldspec/schema/resurfacing-authority-envelope.schema.json",
+      "worldspec/schema/selective-attention-envelope.schema.json",
+      "worldspec/schema/initiative-authority-envelope.schema.json",
+      "research/TURTLE_ASK.md",
+      "research/daily-build/2026-10-01-sunshine-pce.md"
+    ],
+    "overlap": "Noticing, persistence, relevance, ask formation, and memory can create possibilities without acquiring authority to interrupt or resurface.",
+    "why_it_matters": "A reusable proposal/authority split may protect learner foreground across multiple TurtleBlock subsystems.",
+    "uncertainty": "This may be a recurring engineering rule rather than a distinct theoretical construct; perceived pressure remains untested.",
+    "disposition": [
+      "relationship",
+      "test_candidate",
+      "next_edge_candidate"
+    ]
+  },
+  "uncaptured_observations": [
+    "Formal resurfacing authority does not prove a learner experiences the return as neutral.",
+    "Expiration semantics for learner-authored resurfacing permission remain unresolved.",
+    "Quiet returnability must not become a durable person-wide default.",
+    "No new CTC domain is promoted.",
+    "R2 metadata and consent-safe visitor evidence were unavailable."
+  ],
+  "provenance": {
+    "actor": "machine_synthesis_under_human_direction",
+    "privacy_class": "public",
+    "consent_safe_try_it_used": false,
+    "live_d1_write_claimed": false
+  }
+}

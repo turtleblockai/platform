@@ -1,0 +1,88 @@
+{
+  "version": "1.0",
+  "updated_at": "2026-10-06",
+  "status": "open_question",
+  "title": "Can permission expire without forgetting?",
+  "question": "When a learner explicitly authorizes Turtle to resurface retained context, how can that permission expire or be revoked cleanly while the underlying context remains returnable later?",
+  "why_now": "The Resurfacing Authority Envelope separates relevance from permission. The next pressure point is whether valid learner-authored permission can stay bounded over time without becoming a permanent default or forcing deletion of useful retained context.",
+  "follows_commit": "b6c578a16dced7f758bc56d358c2d34ae7d96bcb",
+  "follows_commit_role": "completed_resurfacing_authority_semantic_validator",
+  "inputs": [
+    "worldspec/schema/resurfacing-authority-envelope.schema.json",
+    "worldspec/tests/resurfacing-authority-cases.json",
+    "worldspec/schema/initiative-authority-envelope.schema.json",
+    "research/daily-build/2026-10-01-sunshine-pce.md",
+    "research/TURTLE_ASK.md"
+  ],
+  "source_classes_consulted": [
+    "repository_state",
+    "reconciliation_staging",
+    "primary_sources",
+    "terraria_architecture"
+  ],
+  "possible_possibles": [
+    "A one-shot learner watchpoint that consumes itself after one authorized return.",
+    "A scope-and-time bounded resurfacing token the learner can inspect and revoke.",
+    "A quiet pull-tab history that stays returnable without maintaining active resurfacing permission."
+  ],
+  "x_factor": "whoooo knooooowwwssssssssssss — maybe the cleanest permission model is not a timer at all, but a little door the learner has to reopen each time.",
+  "constraints": [
+    "Expiration or revocation must not erase the underlying learner-owned context.",
+    "Expired permission cannot be silently revived by relevance scoring.",
+    "Do not create person-wide defaults from a local authorization.",
+    "Human silence or availability must not be inferred as renewed permission."
+  ],
+  "ontology_mappings": [
+    {
+      "concept_key": "freedom_and_individuality",
+      "rationale": "Learners retain authority to grant, revoke, or let permission lapse."
+    },
+    {
+      "concept_key": "shared_democracy",
+      "rationale": "Authority remains explicit and contestable rather than becoming a durable machine default."
+    },
+    {
+      "concept_key": "predetermined_outcomes",
+      "rationale": "Past permission cannot predetermine future resurfacing."
+    },
+    {
+      "concept_key": "provenance_aware_retrieval",
+      "rationale": "Context remains returnable through canonical pointers after permission expires."
+    }
+  ],
+  "ctc_mappings": [
+    {
+      "domain": "Personal Inquiry",
+      "rationale": "The learner controls when prior inquiry re-enters the foreground."
+    },
+    {
+      "domain": "Technology as Tool to Think With",
+      "rationale": "Permission state should be inspectable and revisable."
+    },
+    {
+      "domain": "Reflection as Learning",
+      "rationale": "Return to prior material should be a deliberate reflective act."
+    },
+    {
+      "domain": "Social and Cultural Critique",
+      "rationale": "Durable permission raises questions of power over attention and salience."
+    }
+  ],
+  "uncaptured_residue": [
+    {
+      "observation": "It is unresolved whether learners will prefer one-shot, timed, scope-bounded, or manually reopened resurfacing permission.",
+      "status": "open"
+    },
+    {
+      "observation": "Formal revocability does not by itself guarantee that a resurfacing interaction feels non-pressuring.",
+      "status": "open"
+    }
+  ],
+  "provenance": {
+    "evidence_class": "repository_and_primary_source_synthesis",
+    "privacy_class": "public",
+    "selection_method": "repo_plus_reconciliation_plus_source_hunt_plus_wait_a_minute"
+  },
+  "selected_by": "daily_build_synthesis_under_human_direction",
+  "scope": "system_research_horizon"
+}
