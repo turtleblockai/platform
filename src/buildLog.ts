@@ -17,6 +17,39 @@ export interface BuildLogEntry {
 // through the Worker. Open inquiry belongs in Next Edge, not in completed entries.
 export const BUILD_LOG_ENTRIES: BuildLogEntry[] = [
   {
+    id: "2026-10-06-retained-conflict-resurfacing-regression",
+    date: "Oct 6, 2026",
+    title: "Relevance is no longer permission to knock",
+    body: "A six-case retained-context regression now runs against the existing Selective Attention contract: three valid cases preserve quiet deferral, learner watchpoints, and explicit learner requests, while three hostile cases reject machine-relevance interruption, resurfacing against a current do-not-interrupt direction, and collection expansion. The bounded replay matched all six expectations. This tests the attention contract around retained unresolved context; it does not introduce generalized personal memory or authorize proactive Turtle messaging. Product remains v0.1.0.",
+    done: true,
+    waitAMinute: {
+      summary: "Selective Attention, TurtleAsk, Temporary Hold, and PCE quiet continuity now repeat the same separation: something can be retained, noticed, or formed without gaining authority to re-enter the learner's foreground. The open question moves from whether relevance permits a knock to how long a valid permission to knock should last.",
+      evidence: ["worldspec/tests/resurfacing-authority-selective-attention-cases.json", "worldspec/schema/selective-attention-envelope.schema.json", "research/TURTLE_ASK.md", "worldspec/schema/initiative-authority-temporary-hold.schema.json", "research/daily-build/2026-10-01-sunshine-pce.md"]
+    }
+  },
+  {
+    id: "2026-10-05-conflict-explanation-standing-regression",
+    date: "Oct 5, 2026",
+    title: "Conflict explanation neutrality becomes a standing regression",
+    body: "The existing fourteen-case Conflict Explanation regression now runs in standing GitHub validation. Three expected-valid and eleven hostile cases make neutral presentation a repeatable project constraint rather than a one-off check. The prior Oct 4 command exposure is treated as part of this same evaluation milestone rather than a separate Build Log row. Product remains v0.1.0.",
+    done: true,
+    waitAMinute: {
+      summary: "Neutral framing is separate from resurfacing authority: relevance may justify noticing without authorizing an old conflict to return to the foreground.",
+      evidence: ["worldspec/schema/conflict-explanation-envelope.schema.json", "research/daily-build/2026-10-01-sunshine-pce.md", "worldspec/schema/selective-attention-envelope.schema.json", "research/TURTLE_ASK.md"]
+    }
+  },
+  {
+    id: "2026-10-02-conflict-explanation-regression",
+    date: "Oct 2, 2026",
+    title: "Conflict explanations get hostile neutrality tests",
+    body: "A fourteen-case Conflict Explanation regression tests symmetric presentation, deferral, inspection without selection, and rejection of ranking or machine resolution. This entry backfills already-committed work into public history. Product remains v0.1.0.",
+    done: true,
+    waitAMinute: {
+      summary: "State neutrality and presentation neutrality are different: preserving every valid rule is not enough if explanation order or emphasis quietly changes what feels primary.",
+      evidence: ["worldspec/schema/conflict-explanation-envelope.schema.json", "worldspec/tests/conflict-explanation-cases.json", "research/daily-build/2026-10-01-sunshine-pce.md"]
+    }
+  },
+  {
     id: "2026-10-01-pce-persistence-salience",
     date: "Oct 1, 2026",
     title: "PCE research separates persistence from foregrounding",
