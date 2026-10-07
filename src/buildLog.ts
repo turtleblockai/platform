@@ -17,6 +17,31 @@ export interface BuildLogEntry {
 // through the Worker. Open inquiry belongs in Next Edge, not in completed entries.
 export const BUILD_LOG_ENTRIES: BuildLogEntry[] = [
   {
+    id: "2026-10-06-resurfacing-authority",
+    date: "Oct 6, 2026",
+    title: "Relevance and resurfacing authority become separate research objects",
+    body: "A provisional Resurfacing Authority Envelope now tests whether retained context can be noticed as relevant without automatically returning to the foreground. The 14-case suite accepts quiet retention and explicit learner-authorized return while rejecting hidden defaults, scope drift, automatic carryover, and copied source dialogue. The semantic replay passed 14/14. Product remains v0.1.0.",
+    done: true,
+    waitAMinute: {
+      summary: "The same structural split recurs across Selective Attention, TurtleAsk, quiet continuity, and Initiative Authority: a signal can create a possibility without deciding that possibility should take the foreground.",
+      evidence: ["worldspec/schema/resurfacing-authority-envelope.schema.json", "worldspec/schema/selective-attention-envelope.schema.json", "research/TURTLE_ASK.md", "research/daily-build/2026-10-01-sunshine-pce.md"]
+    }
+  },
+  {
+    id: "2026-10-05-conflict-explanation-standing-regression",
+    date: "Oct 5, 2026",
+    title: "Conflict Explanation becomes part of the standing evaluation surface",
+    body: "The existing fourteen-case Conflict Explanation regression now runs in the standing validation workflow. It checks that competing rules stay inspectable without hidden ranking or forced resolution. Product remains v0.1.0.",
+    done: true
+  },
+  {
+    id: "2026-10-02-conflict-explanation-regression",
+    date: "Oct 2, 2026",
+    title: "Conflict explanations get a non-directive regression contract",
+    body: "A Conflict Explanation Envelope and fourteen-case suite now test whether competing learner-authored rules can be shown without directional framing. Three valid cases preserve inspection and deferral; eleven hostile cases reject structural bias. Product remains v0.1.0.",
+    done: true
+  },
+  {
     id: "2026-10-01-pce-persistence-salience",
     date: "Oct 1, 2026",
     title: "PCE research separates persistence from foregrounding",

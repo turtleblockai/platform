@@ -69,6 +69,9 @@ jobs:
       - name: Validate conflict explanation neutrality
         run: npm run validate:conflict-explanation
 
+      - name: Validate retained-context resurfacing authority
+        run: npm run validate:resurfacing-authority
+
       - name: Validate Discord Turtle conversation contract
         run: npm run validate:discord-conversation
 

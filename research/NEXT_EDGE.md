@@ -91,8 +91,8 @@ This keeps the open question separate from the historical Build Log. Daily build
 
 ## Current theoretical question
 
-**Is “do less” secretly a precedence rule?**
+**Can permission expire without forgetting?**
 
-When Turtle conservatively does less while valid project-, branch-, and purpose-scoped learner rules conflict, how can that temporary restraint remain inspectable, contestable, and human-revisable instead of hardening into an invisible machine-authored hierarchy?
+When a learner explicitly authorizes Turtle to resurface retained context, how can that permission expire or be revoked cleanly while the underlying context remains returnable later?
 
-The public source of truth remains `public/data/next-edge.json`. This edge follows the scope-conflict evaluation fixture and deliberately turns its safest provisional behavior back into a research question: fail-closed restraint protects authority, but the legitimacy and legibility of that default still require examination.
+The public source of truth remains `public/data/next-edge.json`. This edge follows the Resurfacing Authority regression and turns its learner-authority boundary into the next pressure test: valid permission should not silently become permanent permission.
