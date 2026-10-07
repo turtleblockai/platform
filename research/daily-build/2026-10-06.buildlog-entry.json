@@ -1,0 +1,17 @@
+{
+  "id": "2026-10-06-resurfacing-authority",
+  "date": "Oct 6, 2026",
+  "title": "Relevance can notice an old conflict without earning permission to bring it back",
+  "body": "A provisional Resurfacing Authority Envelope now separates machine-noticed relevance from learner authority to return retained context to the foreground. Fourteen deterministic cases accept quiet retention, a scoped learner watchpoint, and an explicit learner request while rejecting relevance-as-authority, machine scoring as action authority, machine-authored watchpoints, scope leakage, person-wide defaults, automatic session carry, inferred human availability, interruptive resurfacing, and raw-dialogue copying. The semantic suite passed 14/14 locally. The connected repository safety layer blocked promotion to main during this cycle, so the contribution remains staged on the daily-build branch and product remains v0.1.0.",
+  "done": true,
+  "waitAMinute": {
+    "summary": "The same split keeps recurring: noticing is not interrupting, remembering is not restoring authority, TurtleAsk formation is not permission to surface, persistence is not foregrounding, and relevance is not resurfacing authority. This may be a reusable proposal/authority invariant rather than a new CTC domain.",
+    "evidence": [
+      "worldspec/schema/resurfacing-authority-envelope.schema.json",
+      "worldspec/schema/selective-attention-envelope.schema.json",
+      "worldspec/schema/initiative-authority-envelope.schema.json",
+      "research/TURTLE_ASK.md",
+      "research/daily-build/2026-10-01-sunshine-pce.md"
+    ]
+  }
+}
