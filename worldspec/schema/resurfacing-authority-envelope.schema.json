@@ -1,0 +1,17 @@
+{
+  "version": "0.1",
+  "title": "Resurfacing Authority Envelope",
+  "purpose": "Separate noticing that retained context is relevant from authority to return that context to the learner's foreground.",
+  "rules": [
+    "Relevance may justify noticing, but relevance alone never grants resurfacing authority.",
+    "Immediate resurfacing requires an active learner-authored authority in the same declared scope.",
+    "A Turtle or system proposal cannot silently upgrade itself into a learner watchpoint or request.",
+    "Resurfacing authority is not interruption authority; this envelope cannot authorize a proactive interruption.",
+    "A local resurfacing authority cannot become a generalized person-wide preference or cross-scope default.",
+    "Authority does not silently carry across sessions and machine scoring cannot decide that it should.",
+    "Human availability, receptivity, attention, and silence are not inferred as permission.",
+    "Quiet non-resurfacing remains a valid outcome even when retained context is relevant.",
+    "The learner may mute or revoke resurfacing authority without negotiating with Turtle.",
+    "The envelope references canonical retained context and does not copy raw private dialogue or authorize broader collection."
+  ]
+}
