@@ -1,0 +1,42 @@
+{
+  "schema": "turtleblockai.build-log-coverage.v0.4",
+  "date": "2026-10-06",
+  "d1_persistence": "staged_only",
+  "live_d1_write_attempted": false,
+  "live_d1_write_claimed": false,
+  "opening_sweep": {
+    "public_main_build_log_entry_count": 27,
+    "covered_public_entries": 27,
+    "uncovered_public_entry_ids": [],
+    "material_gaps": [
+      "Oct 2 Conflict Explanation milestone is committed research history but absent from src/buildLog.ts on main.",
+      "Oct 5 standing-CI milestone is absent from src/buildLog.ts on main.",
+      "public/data/next-edge.json and research/NEXT_EDGE.md lag completed research."
+    ]
+  },
+  "today": {
+    "contribution_status": "staged_on_branch",
+    "branch": "daily-build-2026-10-06",
+    "contribution_commit": "b6c578a16dced7f758bc56d358c2d34ae7d96bcb",
+    "canonical_pointer": "research/daily-build/2026-10-06.tags.json",
+    "test": "14 cases; 3 valid; 11 hostile; 0 mismatches",
+    "promotion_to_main": "blocked_by_connected_write_safety_layer"
+  },
+  "closing_sweep": {
+    "public_main_build_log_entry_count": 27,
+    "covered_public_entries": 27,
+    "new_research_objects_staged": true,
+    "unresolved_gaps": [
+      "Oct 2 Build Log backfill still not published on main.",
+      "Oct 5 Build Log entry still not published on main.",
+      "Oct 6 Build Log entry staged but not published on main.",
+      "Both Next Edge surfaces remain stale on main.",
+      "Daily research metadata not persisted to live D1."
+    ],
+    "privacy_boundaries": [
+      "No raw private dialogue copied.",
+      "No non-consented TRY IT evidence used.",
+      "No secret/private configuration inspected."
+    ]
+  }
+}
