@@ -25,7 +25,8 @@
     "validate:runtime-secrets": "node scripts/validate-runtime-secrets.mjs",
     "validate:initiative-authority-scope-conflict": "node scripts/validate-initiative-authority-scope-conflict.mjs",
     "validate:initiative-authority-temporary-hold": "node scripts/validate-initiative-authority-temporary-hold.mjs",
-    "validate:conflict-explanation": "node scripts/validate-conflict-explanation.mjs"
+    "validate:conflict-explanation": "node scripts/validate-conflict-explanation.mjs",
+    "validate:publication-state": "node scripts/validate-publication-state.mjs"
   },
   "devDependencies": {
     "@cloudflare/workers-types": "latest",
