@@ -1,0 +1,32 @@
+{
+  "schema": "turtleblockai.build-log-backfill.v0.1",
+  "date": "2026-10-08",
+  "repository": "turtleblockai/platform",
+  "reason": "Canonical Build Log on main stopped at Oct 1 while later completed main milestones existed.",
+  "repaired_ids": [
+    "2026-10-02-library-catalog-34",
+    "2026-10-02-conflict-explanation-regression",
+    "2026-10-04-conflict-explanation-repeatable-command",
+    "2026-10-05-conflict-explanation-standing-ci",
+    "2026-10-07-publication-state-validator",
+    "2026-10-08-publication-reconciliation"
+  ],
+  "intentionally_excluded": [
+    {
+      "id": "2026-10-06-resurfacing-authority",
+      "reason": "Research exists on an unmerged branch and is not completed main-branch public history."
+    }
+  ],
+  "d1": {
+    "new_write_performed": false,
+    "library_status": "historically_verified_live_d1",
+    "library_source_count": 34,
+    "special_note_count": 92,
+    "public_source_count": 34
+  },
+  "public_surfaces": {
+    "canonical_build_log": "src/buildLog.ts",
+    "direct_asset_fallback": "public/assets/site-runtime.js"
+  },
+  "capture_batch_closed": true
+}

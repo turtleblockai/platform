@@ -17,6 +17,64 @@ export interface BuildLogEntry {
 // through the Worker. Open inquiry belongs in Next Edge, not in completed entries.
 export const BUILD_LOG_ENTRIES: BuildLogEntry[] = [
   {
+    id: "2026-10-08-publication-reconciliation",
+    date: "Oct 8, 2026",
+    title: "Publication drift is made explicit instead of silently looking current",
+    body: "A repository reconciliation pass classified completed main milestones separately from unmerged research and recorded the Build Log and Next Edge publication gaps with canonical pointers. It preserved the distinction between code existing somewhere and work actually becoming public project history. Product remains v0.1.0.",
+    done: true,
+    waitAMinute: {
+      summary: "The project itself hit the same boundary Turtle studies: representation is not authority. A branch, staging record, or reconciliation object may preserve a possibility without acquiring the status of completed public history.",
+      evidence: ["research/d1-reconciliation/2026-10-08-publication-coverage.json", "scripts/validate-publication-state.mjs", "src/buildLog.ts"]
+    }
+  },
+  {
+    id: "2026-10-07-publication-state-validator",
+    date: "Oct 7, 2026",
+    title: "Public research state gets a validator for chronology and horizon drift",
+    body: "A canonical publication-state validator now checks that the Build Log stays newest-first, that the public Next Edge follows completed history, and that the narrative and machine-readable horizon surfaces do not silently diverge. The validator itself landed on main and the connected GitHub and Cloudflare checks passed. Product remains v0.1.0.",
+    done: true
+  },
+  {
+    id: "2026-10-05-conflict-explanation-standing-ci",
+    date: "Oct 5, 2026",
+    title: "Conflict Explanation moves from an ad hoc replay into standing CI",
+    body: "The 14-case Conflict Explanation regression now runs in the standing validation workflow through npm run validate:conflict-explanation. Three expected-valid and eleven hostile cases guard against explanations that quietly choose among competing learner-authored rules. GitHub validation and the connected Cloudflare build passed. Product remains v0.1.0.",
+    done: true,
+    waitAMinute: {
+      summary: "Neutral framing is separate from resurfacing authority: even a symmetric explanation can steer inquiry if Turtle itself decides an old conflict deserves the foreground.",
+      evidence: ["worldspec/tests/conflict-explanation-cases.json", "scripts/validate-conflict-explanation.mjs", ".github/workflows/deploy.yml", "research/daily-build/2026-10-05.md"]
+    }
+  },
+  {
+    id: "2026-10-04-conflict-explanation-repeatable-command",
+    date: "Oct 4, 2026",
+    title: "Conflict Explanation becomes a repeatable repository evaluation",
+    body: "The existing Conflict Explanation regression gained a stable npm validation command so the boundary test no longer depends on remembering a raw script path. The underlying 14-case suite remains 3 expected-valid and 11 hostile cases. Product remains v0.1.0.",
+    done: true
+  },
+  {
+    id: "2026-10-02-conflict-explanation-regression",
+    date: "Oct 2, 2026",
+    title: "Conflict explanations get hostile tests before they become interface behavior",
+    body: "A Conflict Explanation Envelope, fixture, and semantic validator now test whether Turtle can expose competing learner-authored rules without quietly choosing a winner. The regression requires visible competing rules, symmetric presentation, separation of inspection from selection, deferral, and no mutation of the underlying rule state. Fourteen cases passed: 3 expected-valid and 11 hostile. Product remains v0.1.0.",
+    done: true,
+    waitAMinute: {
+      summary: "Persistence is not foregrounding, and represented authority is not presentation salience. Structural symmetry can be tested, but it cannot prove that a learner experiences a presentation as neutral.",
+      evidence: ["worldspec/schema/conflict-explanation-envelope.schema.json", "worldspec/tests/conflict-explanation-cases.json", "scripts/validate-conflict-explanation.mjs", "research/daily-build/2026-10-02.md"]
+    }
+  },
+  {
+    id: "2026-10-02-library-catalog-34",
+    date: "Oct 2, 2026",
+    title: "The live D1 research library reaches 34 public sources",
+    body: "Six photographed-source records were added in two verified D1 batches, moving the public research library from 28 to 34 sources. The additions include Pedagogy of the Oppressed, On the Road, The Menaechmi, Waiting for Godot, Grenadine, and Course in General Linguistics. Live verification recorded 34 library sources, 92 special notes, and 34 public sources while keeping photographed facts, interpretation, and unknowns distinct. Product remains v0.1.0.",
+    done: true,
+    waitAMinute: {
+      summary: "The library is increasingly a provenance-bearing research substrate rather than a reading list: physical artifact, catalog record, special note, and later interpretation remain separate but linkable.",
+      evidence: ["research/d1-reconciliation/2026-10-02-library-0029-0032.json", "research/d1-reconciliation/2026-10-02-library-0033-0034.json", "migrations/0031_library_sources_0029_0032.sql", "migrations/0032_library_sources_0033_0034.sql"]
+    }
+  },
+  {
     id: "2026-10-01-pce-persistence-salience",
     date: "Oct 1, 2026",
     title: "PCE research separates persistence from foregrounding",
