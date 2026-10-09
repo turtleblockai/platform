@@ -1,0 +1,70 @@
+{
+  "schema": "turtleblockai.publication-reconciliation.v0.1",
+  "date": "2026-10-08",
+  "repository": "turtleblockai/platform",
+  "main_head_before": "3aa3beac3714865b3e0c68bec95165f77327cc81",
+  "main_build_log_count": 27,
+  "state": "staged_only",
+  "live_research_d1_written": false,
+  "contribution": "Classify completed main milestones separately from unmerged research and preserve canonical pointers.",
+  "findings": [
+    {
+      "id": "2026-10-02-conflict-explanation-regression",
+      "status": "unresolved_publication_gap",
+      "canonical_source": "worldspec/tests/conflict-explanation-cases.json",
+      "implementation_commit": "501d77d65ef7d3aaef93dd875b39c7e66beeb036",
+      "intended_table": "research_objects",
+      "object_type": "build_log_entry"
+    },
+    {
+      "id": "2026-10-05-conflict-explanation-standing-regression",
+      "status": "unresolved_publication_gap",
+      "canonical_source": ".github/workflows/deploy.yml",
+      "implementation_commit": "301cb9ae1498c026727fbfc85f4ed91466d8ecec",
+      "intended_table": "research_objects",
+      "object_type": "build_log_entry"
+    },
+    {
+      "id": "2026-10-07-publication-state-validator",
+      "status": "unresolved_publication_gap",
+      "canonical_source": "scripts/validate-publication-state.mjs",
+      "implementation_commit": "91fc10f6e8835fd7b5c2d1e2db4a88060c1dfd34",
+      "intended_table": "research_objects",
+      "object_type": "build_log_entry"
+    },
+    {
+      "id": "2026-10-06-resurfacing-authority",
+      "status": "intentionally_not_public_completed",
+      "branch": "daily-build-2026-10-06",
+      "canonical_source": "research/daily-build/2026-10-06.tags.json",
+      "reason": "Unmerged divergent branch, proposed research rather than main-branch completed milestone."
+    },
+    {
+      "id": "next_edge_narrative",
+      "status": "unresolved_publication_gap",
+      "canonical_source": "research/NEXT_EDGE.md",
+      "reason": "Narrative title differs from canonical JSON; both lag completed main work."
+    },
+    {
+      "id": "next_edge_predecessor",
+      "status": "unresolved_publication_gap",
+      "canonical_source": "public/data/next-edge.json",
+      "reason": "follows_build_log_entry_id required by validator is absent."
+    },
+    {
+      "id": "library",
+      "status": "historically_verified_live_d1",
+      "canonical_source": "research/d1-reconciliation/2026-10-02-library-0033-0034.json",
+      "count": 34,
+      "special_notes": 92,
+      "reason": "Previous recorded successful apply; not a new live D1 query."
+    }
+  ],
+  "consent_boundary": "No visitor evidence included without explicit research consent.",
+  "provenance": {
+    "evidence_class": "system_record",
+    "privacy_class": "public",
+    "authority": "repo_main_and_canonical_staging_pointers"
+  },
+  "capture_batch_closed": true
+}
