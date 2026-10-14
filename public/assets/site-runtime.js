@@ -1,5 +1,5 @@
 (()=>{
-  const VERSION='2026-10-08.2';
+  const VERSION='2026-10-14.1';
   const summaries={
     home:'We built a place to build places: learner ideas become persistent, revisable worlds through dialogue, construction, experience, and reflection.',
     try:'Talk with Turtle inside the Human + Turtle Terrarium: wander, build, or throw in something weird while provenance stays visible.',
@@ -16,6 +16,7 @@
     terms:'These terms define experimental use, learner responsibility, acceptable conduct, data boundaries, third-party services, and the limits of TurtleBlock AI.'
   };
   let dailyEntries=[
+    {date:'Oct 14, 2026',title:'PCE research separates fading help from revising the aim',body:'A bounded Sunshine Machine / PCE corpus pass cross-read Skinner with Dewey: fading assistance is not the same as revising the aim, and local mastery can support open inquiry without granting a completed lesson ongoing authority over the learner’s larger question.',done:true,waitAMinute:{summary:'Turtle should be able to finish an authorized lesson without treating that lesson as authority to finish the learner’s larger question.',evidence:['research/daily-build/2026-10-14-sunshine-pce.md','worldspec/INTERACTION_CAPTURE.md','worldspec/schema/initiative-authority-envelope.schema.json']}},
     {date:'Oct 8, 2026',title:'Publication drift is made explicit instead of silently looking current',body:'A reconciliation pass classified completed main milestones separately from unmerged research and recorded Build Log and Next Edge publication gaps with canonical pointers.',done:true},
     {date:'Oct 7, 2026',title:'Public research state gets a validator for chronology and horizon drift',body:'A canonical publication-state validator now checks newest-first Build Log chronology and catches drift between completed history and the two Next Edge surfaces.',done:true},
     {date:'Oct 5, 2026',title:'Conflict Explanation moves from an ad hoc replay into standing CI',body:'The 14-case Conflict Explanation regression now runs in the standing validation workflow: 3 expected-valid and 11 hostile cases.',done:true},
