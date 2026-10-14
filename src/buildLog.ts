@@ -17,6 +17,17 @@ export interface BuildLogEntry {
 // through the Worker. Open inquiry belongs in Next Edge, not in completed entries.
 export const BUILD_LOG_ENTRIES: BuildLogEntry[] = [
   {
+    id: "2026-10-14-pce-finish-lesson-open-question",
+    date: "Oct 14, 2026",
+    title: "PCE research separates fading help from revising the aim",
+    body: "A bounded Sunshine Machine / Persistent Computing Environment corpus pass cross-read Skinner with Dewey to distinguish completing a legitimate instructional task from granting that task ongoing authority over the learner’s inquiry. The working result is that fading assistance is not the same as revising the aim, and local mastery can support open inquiry. This is conceptual research synthesis, not learner-outcome evidence, and the canonical essay remains human-owned. Product remains v0.1.0.",
+    done: true,
+    waitAMinute: {
+      summary: "The implementation question now moves beyond nudge depth: Turtle should be able to finish an authorized lesson without treating that lesson as authority to finish the learner’s larger question.",
+      evidence: ["research/daily-build/2026-10-14-sunshine-pce.md", "worldspec/INTERACTION_CAPTURE.md", "worldspec/schema/initiative-authority-envelope.schema.json"]
+    }
+  },
+  {
     id: "2026-10-08-publication-reconciliation",
     date: "Oct 8, 2026",
     title: "Publication drift is made explicit instead of silently looking current",
