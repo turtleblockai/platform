@@ -17,6 +17,17 @@ export interface BuildLogEntry {
 // through the Worker. Open inquiry belongs in Next Edge, not in completed entries.
 export const BUILD_LOG_ENTRIES: BuildLogEntry[] = [
   {
+    id: "2026-10-18-pce-social-navigation-scope",
+    date: "Oct 18, 2026",
+    title: "PCE research separates social navigation from social permission",
+    body: "A bounded Sunshine Machine corpus pass cross-read Dillenbourg et al. (2002) with Chou and Liu (2005). Virtual learning environments already offer shared traces and learner control within courses; neither property authorizes later individualized machine inference from group history. The source comparison and unresolved method discrepancy are recorded as research, not learner-outcome evidence or a new product feature. Product remains v0.1.0.",
+    done: true,
+    waitAMinute: {
+      summary: "A group can preserve a useful conversation without granting a computational participant the right to turn every contributor into a continuing personal interpretation.",
+      evidence: ["research/daily-build/2026-10-18-sunshine-pce.md", "worldspec/INTERACTION_CAPTURE.md", "worldspec/schema/selective-attention-envelope.schema.json"]
+    }
+  },
+  {
     id: "2026-10-14-pce-finish-lesson-open-question",
     date: "Oct 14, 2026",
     title: "PCE research separates fading help from revising the aim",
