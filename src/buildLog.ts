@@ -17,6 +17,17 @@ export interface BuildLogEntry {
 // through the Worker. Open inquiry belongs in Next Edge, not in completed entries.
 export const BUILD_LOG_ENTRIES: BuildLogEntry[] = [
   {
+    id: "2026-10-19-pce-elicitation-provenance",
+    date: "Oct 19, 2026",
+    title: "PCE research distinguishes learner evidence from designed opportunity",
+    body: "A bounded Sunshine Machine research pass cross-read Foster et al. (2018) on possible selves and designed role-play with McKnight et al. (2016) on digital feedback, collaboration, and differentiated pedagogy. The provisional result is that participation elicited by an environment cannot independently establish a stable learner identity or standing purpose. This records conceptual scholarship, not a tested learner-profile safeguard or product feature. Product remains v0.1.0.",
+    done: true,
+    waitAMinute: {
+      summary: "Who helped make the question and the available choices? A machine's later memory of a learner's answer should not erase the machine's or institution's part in producing that answer.",
+      evidence: ["research/daily-build/2026-10-19-sunshine-pce.md", "worldspec/INTERACTION_CAPTURE.md", "worldspec/schema/plural-foreground-envelope.schema.json"]
+    }
+  },
+  {
     id: "2026-10-18-pce-social-navigation-scope",
     date: "Oct 18, 2026",
     title: "PCE research separates social navigation from social permission",
