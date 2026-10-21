@@ -17,6 +17,17 @@ export interface BuildLogEntry {
 // through the Worker. Open inquiry belongs in Next Edge, not in completed entries.
 export const BUILD_LOG_ENTRIES: BuildLogEntry[] = [
   {
+    id: "2026-10-21-pce-closure-and-return",
+    date: "Oct 21, 2026",
+    title: "Sunshine inquiry closure separates possibility from obligation",
+    body: "A bounded PCE corpus pass reread Sanders's Possible Possibles and the co-active emergence draft. An open possibility space must still permit learner-authored completion: preserved artifacts do not automatically confer authority to revive a retired educational purpose. A local 15-case synthetic research fixture matched five expected-valid and ten hostile examples under its own validator; this is not a deployed safeguard or learner-outcome evidence. Product remains v0.1.0.",
+    done: true,
+    waitAMinute: {
+      summary: "The possibility of more is not the requirement for more. Turtle can keep a return path open without demanding that someone return.",
+      evidence: ["research/daily-build/2026-10-21-sunshine-pce.md", "research/fixtures/2026-10-21-inquiry-closure-cases.json", "worldspec/schema/initiative-authority-envelope.schema.json"]
+    }
+  },
+  {
     id: "2026-10-19-pce-elicitation-provenance",
     date: "Oct 19, 2026",
     title: "PCE research distinguishes learner evidence from designed opportunity",
