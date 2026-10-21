@@ -1,0 +1,135 @@
+{
+  "schema": "turtleblockai.research.inquiry-closure-cases.v0.1",
+  "date": "2026-10-21",
+  "evidence_class": "synthetic_contract_examples",
+  "status": "research_only_not_deployed",
+  "scope": "learner-authorized project-a inquiry, not institutional obligations",
+  "description": "Synthetic cases distinguish archived traces from renewed authority for Turtle to prompt or act.",
+  "cases": [
+    {
+      "id": "valid-retired-stays-quiet",
+      "expected_valid": true,
+      "status": "retired",
+      "closure_source": "learner_explicit",
+      "event": "similar_world_event",
+      "action": "remain_silent"
+    },
+    {
+      "id": "valid-archived-trace-on-request",
+      "expected_valid": true,
+      "status": "retired",
+      "closure_source": "learner_explicit",
+      "event": "learner_archive_request",
+      "action": "respond_with_trace"
+    },
+    {
+      "id": "valid-explicit-reopen",
+      "expected_valid": true,
+      "status": "retired",
+      "closure_source": "learner_explicit",
+      "event": "learner_explicit_reopen",
+      "action": "restore_purpose",
+      "same_scope": true
+    },
+    {
+      "id": "valid-paused-stays-quiet",
+      "expected_valid": true,
+      "status": "paused",
+      "closure_source": "learner_explicit",
+      "event": "similar_world_event",
+      "action": "remain_silent"
+    },
+    {
+      "id": "valid-institution-separate",
+      "expected_valid": true,
+      "status": "retired",
+      "closure_source": "learner_explicit",
+      "event": "institutional_task_due",
+      "action": "remain_silent",
+      "institutional_scope_kept_separate": true
+    },
+    {
+      "id": "invalid-retired-prompts",
+      "expected_valid": false,
+      "status": "retired",
+      "closure_source": "learner_explicit",
+      "event": "similar_world_event",
+      "action": "offer_nudge"
+    },
+    {
+      "id": "invalid-predicted-interest-restores",
+      "expected_valid": false,
+      "status": "retired",
+      "closure_source": "learner_explicit",
+      "event": "prediction_of_interest",
+      "action": "restore_purpose"
+    },
+    {
+      "id": "invalid-paused-prompts",
+      "expected_valid": false,
+      "status": "paused",
+      "closure_source": "learner_explicit",
+      "event": "similar_world_event",
+      "action": "offer_nudge"
+    },
+    {
+      "id": "invalid-archive-request-reopens",
+      "expected_valid": false,
+      "status": "retired",
+      "closure_source": "learner_explicit",
+      "event": "learner_archive_request",
+      "action": "restore_purpose"
+    },
+    {
+      "id": "invalid-machine-inferred-closure",
+      "expected_valid": false,
+      "status": "retired",
+      "closure_source": "machine_inferred",
+      "event": "silence",
+      "action": "remain_silent"
+    },
+    {
+      "id": "invalid-silence-personal-trait",
+      "expected_valid": false,
+      "status": "retired",
+      "closure_source": "learner_explicit",
+      "event": "silence",
+      "action": "infer_enduring_personal_trait"
+    },
+    {
+      "id": "invalid-cross-scope-restore",
+      "expected_valid": false,
+      "status": "retired",
+      "closure_source": "learner_explicit",
+      "event": "learner_explicit_reopen",
+      "action": "restore_purpose",
+      "same_scope": false
+    },
+    {
+      "id": "invalid-deletes-archive",
+      "expected_valid": false,
+      "status": "retired",
+      "closure_source": "learner_explicit",
+      "event": "similar_world_event",
+      "action": "delete_preserved_traces"
+    },
+    {
+      "id": "invalid-provenance-collapse",
+      "expected_valid": false,
+      "status": "retired",
+      "closure_source": "learner_explicit",
+      "event": "learner_archive_request",
+      "action": "respond_with_trace",
+      "provenance_preserved": false
+    },
+    {
+      "id": "invalid-new-collection",
+      "expected_valid": false,
+      "status": "retired",
+      "closure_source": "learner_explicit",
+      "event": "similar_world_event",
+      "action": "remain_silent",
+      "broader_collection": true
+    }
+  ]
+}
