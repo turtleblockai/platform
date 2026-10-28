@@ -1,5 +1,5 @@
 (()=>{
-  const VERSION='2026-10-14.1';
+  const VERSION='2026-10-27.1';
   const summaries={
     home:'We built a place to build places: learner ideas become persistent, revisable worlds through dialogue, construction, experience, and reflection.',
     try:'Talk with Turtle inside the Human + Turtle Terrarium: wander, build, or throw in something weird while provenance stays visible.',
@@ -16,6 +16,12 @@
     terms:'These terms define experimental use, learner responsibility, acceptable conduct, data boundaries, third-party services, and the limits of TurtleBlock AI.'
   };
   let dailyEntries=[
+    {"date":"Oct 27, 2026","title":"Next Edge cannot quietly follow yesterday's Build Log","body":"A publication-state regression now requires the public horizon to follow the newest completed canonical Build Log entry. Historical pointers remain inspectable but cannot silently act as current authority.","done":true,"waitAMinute":{"summary":"A preserved pointer does not acquire present authority merely by remaining available; this mirrors the learner-purpose boundary in the Turtle Charter.","evidence":["scripts/validate-publication-state.mjs","research/daily-build/2026-10-22-sunshine-pce.md"]}},
+    {"date":"Oct 22, 2026","title":"A refusal of wording is not a refusal of inquiry","body":"An authorized PCE corpus pass distinguished rejection of wording or one nudge from rejection of a task, purpose, or future collaboration. Research only, not deployed behavior.","done":true},
+    {"date":"Oct 21, 2026","title":"Sunshine inquiry closure separates possibility from obligation","body":"A bounded PCE corpus pass preserved learner-authored completion: keeping an artifact or return path does not authorize Turtle to revive a retired purpose.","done":true},
+    {"date":"Oct 19, 2026","title":"PCE research distinguishes learner evidence from designed opportunity","body":"Participation elicited by an environment is not by itself evidence of a durable learner identity or standing purpose.","done":true},
+    {"date":"Oct 18, 2026","title":"PCE research separates social navigation from social permission","body":"Shared traces can support navigation and collaboration without authorizing individualized inference from group history.","done":true},
+    {"date":"Oct 16, 2026","title":"PCE research keeps question origin visible","body":"A bounded corpus pass distinguished machine-offered questions from learner-authored purposes and later human adoption.","done":true},
     {date:'Oct 14, 2026',title:'PCE research separates fading help from revising the aim',body:'A bounded Sunshine Machine / PCE corpus pass cross-read Skinner with Dewey: fading assistance is not the same as revising the aim, and local mastery can support open inquiry without granting a completed lesson ongoing authority over the learner’s larger question.',done:true,waitAMinute:{summary:'Turtle should be able to finish an authorized lesson without treating that lesson as authority to finish the learner’s larger question.',evidence:['research/daily-build/2026-10-14-sunshine-pce.md','worldspec/INTERACTION_CAPTURE.md','worldspec/schema/initiative-authority-envelope.schema.json']}},
     {date:'Oct 8, 2026',title:'Publication drift is made explicit instead of silently looking current',body:'A reconciliation pass classified completed main milestones separately from unmerged research and recorded Build Log and Next Edge publication gaps with canonical pointers.',done:true},
     {date:'Oct 7, 2026',title:'Public research state gets a validator for chronology and horizon drift',body:'A canonical publication-state validator now checks newest-first Build Log chronology and catches drift between completed history and the two Next Edge surfaces.',done:true},
@@ -45,14 +51,7 @@
     {date:'Sep 8, 2026',title:'Turtle Terraria + exhaustive research tagging architecture',body:'Turtle Lab became Turtle Terraria with multiple bounded habitats, universal research objects, CTC/ontology/emergent tags, uncaptured observations, and provenance-preserving research traces.',done:true},
     {date:'Sep 8, 2026',title:'Daily co-active build loop activated',body:'TurtleBlock AI now runs a daily primary-source hunt, ontology comparison, one bounded contribution, testing, exhaustive research capture, Build Log update, and Next Edge synthesis.',done:true}
   ];
-  const nextEdgeFallback={
-    updated_at:'2026-09-17',
-    title:'Can difference survive being built?',
-    question:'Can TurtleBlock AI stage a human-originated perturbation as a parallel WorldSpec branch and let people inhabit and compare its consequences without turning world evidence, Turtle interpretation, or later reflection into a verdict that one branch is the canonical truth?',
-    why_now:'The translation contract can preserve a human perturbation as source-distinct from Turtle interpretation and WorldSpec effect. The next collapse risk arrives after construction: measurable world consequences can become a hidden winner-selection mechanism even when representation stayed plural.',
-    possible_possibles:['Inhabit two branches serially or side by side without requiring a winner.','Keep factual World Evidence separate from human interpretation of which consequence matters.','Let participants preserve, reject, revisit, or recombine branches without compulsory merge.'],
-    x_factor:'whoooo knooooowwwssssssssssss — what if the branch that looks worse by every easy metric is the one that teaches the group something the neater branch cannot?'
-  };
+  const nextEdgeFallback={"updated_at":"2026-10-27","title":"Can refusal remain local across time?","question":"When a learner rejects one proposed wording, nudge, or task, how can Turtle preserve that exact refusal across later turns without treating it as a rejection of the whole inquiry or permission to revive the declined proposal?","why_now":"A stale research horizon was still public despite newer completed work. Today's publication guard tests that current authority requires the latest committed predecessor, while the October 22 bounded PCE reading exposed the parallel learner-level problem: a refusal has an object and scope, and persistence must not inflate either. A research-only refusal-scope contract is not yet implemented.","possible_possibles":["Represent the refused object and its source scope as a revisable canonical pointer without copying raw private dialogue.","Distinguish wording revision, nudge suppression, task retirement, and purpose retirement in a small hostile synthetic fixture.","Treat ambiguous silence and later partial uptake as unresolved rather than durable identity or global refusal."],"x_factor":"whoooo knooooowwwssssssssssss — what if the smallest useful memory is not 'this person said no' but 'this exact little door stayed shut until its owner chose otherwise'?"};
   let nextEdge={...nextEdgeFallback};
   const esc=s=>String(s).replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[m]));
   const waitHtml=e=>{

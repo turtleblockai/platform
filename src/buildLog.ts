@@ -17,6 +17,24 @@ export interface BuildLogEntry {
 // through the Worker. Open inquiry belongs in Next Edge, not in completed entries.
 export const BUILD_LOG_ENTRIES: BuildLogEntry[] = [
   {
+    id: "2026-10-27-publication-predecessor-guard",
+    date: "Oct 27, 2026",
+    title: "Next Edge cannot quietly follow yesterday's Build Log",
+    body: "The publication-state validator now rejects a Next Edge that points to an older completed entry instead of the newest completed Build Log entry. This bounded regression closes a repository-level authority gap: an existing historical pointer is not automatically the current horizon. The canonical horizon and direct-asset fallback were reconciled, and the check was added to standing validation. Research and system testing, not learner-outcome evidence. Product remains v0.1.0.",
+    done: true,
+    waitAMinute: {
+      summary: "A stale but valid historical pointer resembles Turtle remembering a learner's old purpose: persistence does not authorize putting that purpose back in charge. This is a testable governance analogy, not proof of a new learning construct.",
+      evidence: ["scripts/validate-publication-state.mjs", "research/daily-build/2026-10-22-sunshine-pce.md", "worldspec/schema/initiative-authority-envelope.schema.json", "research/daily-build/2026-10-27.md"]
+    }
+  },
+  {
+    id: "2026-10-22-pce-refusal-object-scope",
+    date: "Oct 22, 2026",
+    title: "A refusal of wording is not a refusal of inquiry",
+    body: "A bounded authorized source pass compared Papert (1972) and Sanders (2023) and recorded why a learner rejecting one proposed wording, nudge, or suggestion must not be silently treated as rejecting a task, purpose, or future collaboration. A local synthetic test reported 16 expected cases under its own uncommitted validator; no deployed refusal-scope enforcement or learning outcomes were demonstrated. The original source and later PCE inference remain distinct. Product remains v0.1.0.",
+    done: true
+  },
+  {
     id: "2026-10-21-pce-closure-and-return",
     date: "Oct 21, 2026",
     title: "Sunshine inquiry closure separates possibility from obligation",
@@ -48,6 +66,13 @@ export const BUILD_LOG_ENTRIES: BuildLogEntry[] = [
       summary: "A group can preserve a useful conversation without granting a computational participant the right to turn every contributor into a continuing personal interpretation.",
       evidence: ["research/daily-build/2026-10-18-sunshine-pce.md", "worldspec/INTERACTION_CAPTURE.md", "worldspec/schema/selective-attention-envelope.schema.json"]
     }
+  },
+  {
+    id: "2026-10-16-pce-question-origin",
+    date: "Oct 16, 2026",
+    title: "Remember whose question opened the inquiry",
+    body: "A bounded authorized source comparison reread Sanders on purposeful play and Strobel and Tillberg-Webb on critical instructional-technology aims. Turtle's future memory must distinguish a question it introduced from a learner-authored question; original authorship does not prevent later learner adoption. This is a conceptual provenance question, not verified runtime or learner-effect evidence. Product remains v0.1.0.",
+    done: true
   },
   {
     id: "2026-10-14-pce-finish-lesson-open-question",
@@ -366,10 +391,10 @@ export const BUILD_LOG_ENTRIES: BuildLogEntry[] = [
 ];
 
 export const NEXT_EDGE_FALLBACK = {
-  date: "Sep 30, 2026",
-  title: "Can restraint stay temporary?",
-  question: "When conflicting learner rules force Turtle to do less, should the temporary hold itself become a provenance-bearing research object so a human can inspect, contest, and replace it without turning restraint into durable precedence?",
-  xFactor: "whoooo knooooowwwssssssssssss — what if the important thing to preserve is not the winning rule, but the fact that Turtle deliberately refused to invent one?"
+  date: "Oct 27, 2026",
+  title: "Can refusal remain local across time?",
+  question: "When a learner rejects one proposed wording, nudge, or task, how can Turtle preserve that exact refusal across later turns without treating it as a rejection of the whole inquiry or permission to revive the declined proposal?",
+  xFactor: "whoooo knooooowwwssssssssssss — what if the smallest useful memory is not 'this person said no' but 'this exact little door stayed shut until its owner chose otherwise'?"
 };
 
 function escapeHtml(value: string) {

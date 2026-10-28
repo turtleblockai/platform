@@ -91,8 +91,8 @@ This keeps the open question separate from the historical Build Log. Daily build
 
 ## Current theoretical question
 
-**Is “do less” secretly a precedence rule?**
+**Can refusal remain local across time?**
 
-When Turtle conservatively does less while valid project-, branch-, and purpose-scoped learner rules conflict, how can that temporary restraint remain inspectable, contestable, and human-revisable instead of hardening into an invisible machine-authored hierarchy?
+When a learner rejects one proposed wording, nudge, or task, how can Turtle preserve that exact refusal across later turns without treating it as a rejection of the whole inquiry or permission to revive the declined proposal?
 
-The public source of truth remains `public/data/next-edge.json`. This edge follows the scope-conflict evaluation fixture and deliberately turns its safest provisional behavior back into a research question: fail-closed restraint protects authority, but the legitimacy and legibility of that default still require examination.
+This horizon follows the October 27 publication-predecessor guard (commit `02d8396d2b645e021bb940c335db5fa9e746a25e`) and the bounded October 22 source reading. It is future-facing: no deployed refusal-scope interpretation is claimed. The project must preserve exact source and scope, human silence and partial uptake, and a return path without a compulsory nudge. The public machine-readable source of truth is `public/data/next-edge.json`.

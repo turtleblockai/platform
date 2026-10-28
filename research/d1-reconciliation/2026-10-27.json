@@ -1,0 +1,16 @@
+{
+  "schema":"turtleblockai.publication-reconciliation.v0.2",
+  "date":"2026-10-27",
+  "state":"staged_only",
+  "live_research_d1_written":false,
+  "contribution_commit":"02d8396d2b645e021bb940c335db5fa9e746a25e",
+  "coverage_pointer":"research/daily-build/2026-10-27.coverage.json",
+  "daily_pointer":"research/daily-build/2026-10-27.md",
+  "tags_pointer":"research/daily-build/2026-10-27.tags.json",
+  "next_edge_pointer":"public/data/next-edge.json",
+  "historical_live_d1_pointer":"research/d1-reconciliation/2026-10-02-library-0033-0034.json",
+  "historical_live_d1_note":"34 sources and 92 notes were recorded Oct 2; not re-queried today.",
+  "ctc_domains_preserved":7,
+  "new_domain_promoted":false,
+  "capture_batch_closed":true
+}

@@ -1,54 +1,105 @@
 {
   "version": "1.0",
-  "updated_at": "2026-10-01",
+  "updated_at": "2026-10-27",
   "status": "open_question",
-  "title": "Can an explanation stay neutral?",
-  "question": "When Turtle shows why initiative is on hold, how can it expose the conflict without steering the learner toward one resolution?",
-  "why_now": "The temporary hold is now explicit, reversible, and non-precedential. Explanation is the next research surface because framing can still shape a learner's choice.",
-  "follows_commit": "b0f7b1d0103edfe43626904f3e93609b9167ea85",
-  "follows_commit_role": "completed_temporary_hold_envelope_and_evaluation",
+  "title": "Can refusal remain local across time?",
+  "question": "When a learner rejects one proposed wording, nudge, or task, how can Turtle preserve that exact refusal across later turns without treating it as a rejection of the whole inquiry or permission to revive the declined proposal?",
+  "why_now": "A stale research horizon was still public despite newer completed work. Today's publication guard tests that current authority requires the latest committed predecessor, while the October 22 bounded PCE reading exposed the parallel learner-level problem: a refusal has an object and scope, and persistence must not inflate either. A research-only refusal-scope contract is not yet implemented.",
+  "follows_commit": "02d8396d2b645e021bb940c335db5fa9e746a25e",
+  "follows_commit_role": "completed_publication_predecessor_validation_contribution",
+  "follows_build_log_entry_id": "2026-10-27-publication-predecessor-guard",
   "inputs": [
-    "worldspec/schema/initiative-authority-temporary-hold.schema.json",
-    "worldspec/tests/initiative-authority-temporary-hold-cases.json",
-    "research/TURTLE_ASK.md",
-    "research/daily-build/2026-10-01.md"
+    "scripts/validate-publication-state.mjs",
+    "research/daily-build/2026-10-22-sunshine-pce.md",
+    "research/daily-build/2026-10-21-sunshine-pce.md",
+    "worldspec/INTERACTION_CAPTURE.md",
+    "worldspec/schema/initiative-authority-envelope.schema.json",
+    "research/daily-build/2026-10-27.md"
   ],
   "source_classes_consulted": [
-    "repository_state",
-    "reconciliation_staging",
-    "primary_sources"
+    "live_repository_and_build_log",
+    "research_reconciliation_staging",
+    "authorized_primary_project_sources",
+    "external_primary_source_hunt"
   ],
   "possible_possibles": [
-    "Show the unresolved structure without ranking it.",
-    "Let the learner choose which scope to inspect.",
-    "List available choices without recommending one."
+    "Represent the refused object and its source scope as a revisable canonical pointer without copying raw private dialogue.",
+    "Distinguish wording revision, nudge suppression, task retirement, and purpose retirement in a small hostile synthetic fixture.",
+    "Treat ambiguous silence and later partial uptake as unresolved rather than durable identity or global refusal."
   ],
-  "x_factor": "whoooo knooooowwwssssssssssss — what if a diagram is sometimes more neutral than more Turtle prose?",
+  "x_factor": "whoooo knooooowwwssssssssssss — what if the smallest useful memory is not 'this person said no' but 'this exact little door stayed shut until its owner chose otherwise'?",
   "constraints": [
-    "Do not infer precedence.",
-    "Keep source material at canonical pointers.",
-    "Keep a local conflict local.",
-    "Explanation must not alter the represented authority state."
+    "Human scholarly authority remains final; no autonomous promotion.",
+    "No automatic generalized personal memory, inferred enduring disengagement, or surveillance expansion.",
+    "A revived scope requires an appropriately explicit human-authored request.",
+    "Human, synthetic, system, and scholarly source provenance remain distinct."
   ],
   "ontology_mappings": [
-    {"concept_key":"shared_democracy","rationale":"Competing rules remain open to learner resolution."},
-    {"concept_key":"freedom_and_individuality","rationale":"Human direction remains revisable."},
-    {"concept_key":"problem_posing_education","rationale":"The unresolved conflict remains visible as a problem rather than being hidden."}
+    {
+      "concept_key": "freedom_and_individuality",
+      "rationale": "The learner can revoke or revise a particular invitation without surrendering inquiry."
+    },
+    {
+      "concept_key": "problem_posing_education",
+      "rationale": "A localized refusal leaves the problem available for human redefinition."
+    },
+    {
+      "concept_key": "predetermined_outcomes",
+      "rationale": "The machine must not treat any continued nudge as an obligatory destination."
+    },
+    {
+      "concept_key": "shared_democracy",
+      "rationale": "Distinguishing who authored a question protects voice and collaborative negotiation."
+    },
+    {
+      "concept_key": "co_active_emergence",
+      "rationale": "A person may correct the machine's proposal without being absorbed into machine preference history."
+    }
   ],
   "ctc_mappings": [
-    {"domain":"Reflection as Learning","rationale":"Explanation supports inspection without deciding for the learner."},
-    {"domain":"Technology as Tool to Think With","rationale":"The conflict can become a representation for thought."},
-    {"domain":"Sharing and Collaborating","rationale":"Resolution remains a human collaborative act."},
-    {"domain":"Social and Cultural Critique","rationale":"Framing and precedence concern voice and power."}
+    {
+      "domain": "Personal Inquiry",
+      "rationale": "Inquiry ownership is not erased by refusing one proposed action."
+    },
+    {
+      "domain": "Compelling Problem or Question",
+      "rationale": "A learner's rejection can refine the question rather than close it."
+    },
+    {
+      "domain": "Technology as Tool to Think With",
+      "rationale": "A scoped refusal can be an inspectable representation to revise."
+    },
+    {
+      "domain": "Reflection as Learning",
+      "rationale": "Partial uptake and change of mind remain distinct from general disengagement."
+    },
+    {
+      "domain": "Social and Cultural Critique",
+      "rationale": "Whose purposes persist, and who may nudge again, are power questions."
+    },
+    {
+      "domain": "Sharing and Collaborating",
+      "rationale": "A correction to Turtle's wording need not terminate collaboration."
+    }
   ],
   "uncaptured_residue": [
-    {"observation":"An explanation can nudge even when the represented hold is neutral.","status":"open"}
+    {
+      "observation": "Natural-language deixis ('not that') may be unresolved without the local conversation and WorldSpec context; no raw dialogue was imported into this synthesis.",
+      "status": "open"
+    },
+    {
+      "observation": "A structurally exact refusal scope does not prove that a learner experiences future quiet as respect.",
+      "status": "open"
+    }
   ],
   "provenance": {
-    "evidence_class": "repository_and_primary_source_synthesis",
+    "actor": "machine_synthesis_under_human_research_direction",
+    "evidence_class": "repository_records_project_primary_corpus_and_public_primary_sources",
     "privacy_class": "public",
-    "selection_method": "repo_plus_reconciliation_plus_source_hunt_plus_wait_a_minute"
+    "selection_method": "bounded_reconciliation_plus_cross_connection_plus_authorized_source_hunt",
+    "consent_safe_try_it_used": false,
+    "d1_write_status": "staged_only_not_verified_live"
   },
-  "selected_by": "daily_build_synthesis_under_human_direction",
+  "selected_by": "daily_build_synthesis_subject_to_human_override",
   "scope": "system_research_horizon"
 }

@@ -1,0 +1,133 @@
+{
+  "schema": "turtleblockai.daily-build-tags.v0.1",
+  "date": "2026-10-27",
+  "ontology_version": "sanders-ontology-v0.1",
+  "d1_persistence": "staged_only",
+  "capture_batch_closed": true,
+  "research_objects": [
+    {
+      "id": "selected",
+      "type": "selection",
+      "summary": "Publication predecessor freshness guard"
+    },
+    {
+      "id": "change",
+      "type": "repo_change",
+      "repo_path": "scripts/validate-publication-state.mjs",
+      "commit": "02d8396d2b645e021bb940c335db5fa9e746a25e"
+    },
+    {
+      "id": "wait",
+      "type": "wait_a_minute",
+      "summary": "Persistence does not confer present authority"
+    },
+    {
+      "id": "horizon",
+      "type": "next_edge",
+      "summary": "Can refusal remain local across time?"
+    }
+  ],
+  "ctc_tags": [
+    {
+      "domain": "Personal Inquiry",
+      "rationale": "Current learner purpose remains current."
+    },
+    {
+      "domain": "Compelling Problem or Question",
+      "rationale": "The horizon tracks the newest open question."
+    },
+    {
+      "domain": "Technology as Tool to Think With",
+      "rationale": "Publication state is inspectable."
+    },
+    {
+      "domain": "Formative Demonstration of Learning",
+      "rationale": "System evidence only; no learner outcome claim."
+    },
+    {
+      "domain": "Reflection as Learning",
+      "rationale": "History is preserved without becoming current authority."
+    },
+    {
+      "domain": "Social and Cultural Critique",
+      "rationale": "Foregrounding authority is made visible."
+    },
+    {
+      "domain": "Sharing and Collaborating",
+      "rationale": "Collaborators share a synchronized public state."
+    }
+  ],
+  "ontology_tags": [
+    {
+      "concept": "freedom_and_individuality",
+      "rationale": "Human direction remains revisable."
+    },
+    {
+      "concept": "shared_democracy",
+      "rationale": "State remains inspectable and contestable."
+    },
+    {
+      "concept": "predetermined_outcomes",
+      "rationale": "No stale pointer silently determines the future."
+    },
+    {
+      "concept": "problem_posing_education",
+      "rationale": "The unresolved question stays visible."
+    },
+    {
+      "concept": "co_active_emergence",
+      "rationale": "New human direction can alter trajectory."
+    },
+    {
+      "concept": "possible_possibles",
+      "rationale": "Alternatives remain possible."
+    },
+    {
+      "concept": "provenance_aware_retrieval",
+      "rationale": "Historical pointers retain provenance."
+    }
+  ],
+  "emergent_tags": [
+    "publication_predecessor_freshness",
+    "historical_validity_vs_current_authority",
+    "refusal_object_scope"
+  ],
+  "reconciliation_findings": [
+    {
+      "id": "coverage",
+      "status": "represented_by_canonical_pointers",
+      "count": 40,
+      "pointer": "research/daily-build/2026-10-27.coverage.json"
+    },
+    {
+      "id": "today",
+      "status": "staged_for_d1",
+      "pointer": "research/d1-reconciliation/2026-10-27.json"
+    },
+    {
+      "id": "live-d1",
+      "status": "not_written"
+    }
+  ],
+  "wait_a_minute": {
+    "pointers": [
+      "scripts/validate-publication-state.mjs",
+      "worldspec/schema/initiative-authority-envelope.schema.json"
+    ],
+    "overlap": "Persistence proves existence, not present authority.",
+    "disposition": [
+      "relationship",
+      "test_candidate",
+      "next_edge_candidate"
+    ]
+  },
+  "uncaptured_observations": [
+    "Structural freshness does not prove perceived neutrality.",
+    "No new CTC domain is promoted."
+  ],
+  "provenance": {
+    "privacy_class": "public",
+    "consent_safe_try_it_used": false,
+    "synthetic_evidence_used_as_human": false
+  }
+}

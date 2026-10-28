@@ -33,6 +33,9 @@ jobs:
       - name: Validate Next Edge research contract
         run: npm run validate:next-edge
 
+      - name: Validate public research publication state
+        run: npm run validate:publication-state
+
       - name: Validate learner-authored verification contract
         run: npm run validate:learner-verification
 
