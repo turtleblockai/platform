@@ -55,6 +55,13 @@ const buildLogArray = buildLog.match(/export const BUILD_LOG_ENTRIES: BuildLogEn
 if (!buildLogArray) {
   fail("Could not locate canonical Build Log array.");
 } else {
+  const completedIds = [...buildLogArray[1].matchAll(/^\s+id:\s*"([^"]+)"/gm)].map((match) => match[1]);
+  if (!completedIds.length) {
+    fail("Canonical Build Log has no completed entries.");
+  } else if (edge.follows_build_log_entry_id !== completedIds[0]) {
+    fail(`Next Edge must follow newest completed Build Log entry '${completedIds[0]}', not '${edge.follows_build_log_entry_id || "(missing)"}'.`);
+  }
+  if (new Set(completedIds).size !== completedIds.length) fail("Canonical Build Log contains duplicate entry IDs.");
   const dates = [...buildLogArray[1].matchAll(/date:\s*"([^"]+)"/g)].map((match) => match[1]);
   for (let i = 1; i < dates.length; i += 1) {
     if (Date.parse(dates[i]) > Date.parse(dates[i - 1])) {
