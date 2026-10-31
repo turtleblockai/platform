@@ -1,104 +1,115 @@
 {
   "version": "1.0",
-  "updated_at": "2026-10-27",
+  "updated_at": "2026-10-31",
   "status": "open_question",
-  "title": "Can refusal remain local across time?",
-  "question": "When a learner rejects one proposed wording, nudge, or task, how can Turtle preserve that exact refusal across later turns without treating it as a rejection of the whole inquiry or permission to revive the declined proposal?",
-  "why_now": "A stale research horizon was still public despite newer completed work. Today's publication guard tests that current authority requires the latest committed predecessor, while the October 22 bounded PCE reading exposed the parallel learner-level problem: a refusal has an object and scope, and persistence must not inflate either. A research-only refusal-scope contract is not yet implemented.",
-  "follows_commit": "02d8396d2b645e021bb940c335db5fa9e746a25e",
-  "follows_commit_role": "completed_publication_predecessor_validation_contribution",
-  "follows_build_log_entry_id": "2026-10-27-publication-predecessor-guard",
+  "title": "Can “not that” remain uncertain?",
+  "question": "When a learner rejects something with deictic or partial language — “not that,” “keep this part,” “no, the other one” — how can Turtle bind the refusal to the smallest defensible object using local context while leaving unresolved ambiguity unresolved instead of inventing a broader intent?",
+  "why_now": "The Refusal Scope Envelope can now preserve an exact refused object and scope across later turns, but it assumes the target object is already known. Interaction Capture explicitly notes that deictic language is uninterpretable without local conversational and world context. The next edge therefore moves from persistence to target resolution: how to identify the smallest defensible object without converting uncertainty into machine-authored meaning.",
+  "follows_commit": "d6c8a78239a645d7a417e010f3cb7a75a261ffd4",
+  "follows_commit_role": "completed_refusal_scope_envelope_regression",
+  "follows_build_log_entry_id": "2026-10-31-refusal-scope-regression",
   "inputs": [
-    "scripts/validate-publication-state.mjs",
-    "research/daily-build/2026-10-22-sunshine-pce.md",
-    "research/daily-build/2026-10-21-sunshine-pce.md",
+    "worldspec/tests/refusal-scope-envelope-cases.json",
+    "scripts/validate-refusal-scope-envelope.mjs",
     "worldspec/INTERACTION_CAPTURE.md",
     "worldspec/schema/initiative-authority-envelope.schema.json",
-    "research/daily-build/2026-10-27.md"
+    "research/daily-build/2026-10-22-sunshine-pce.md",
+    "research/daily-build/2026-10-31.md",
+    "research/d1-reconciliation/2026-10-31.json"
   ],
   "source_classes_consulted": [
     "live_repository_and_build_log",
-    "research_reconciliation_staging",
+    "live_d1_read_and_write_permission_boundary",
     "authorized_primary_project_sources",
-    "external_primary_source_hunt"
+    "external_primary_source_hunt",
+    "wait_a_minute_cross_connection"
   ],
   "possible_possibles": [
-    "Represent the refused object and its source scope as a revisable canonical pointer without copying raw private dialogue.",
-    "Distinguish wording revision, nudge suppression, task retirement, and purpose retirement in a small hostile synthetic fixture.",
-    "Treat ambiguous silence and later partial uptake as unresolved rather than durable identity or global refusal."
+    "Represent multiple candidate refused-object pointers with explicit uncertainty until later context resolves them.",
+    "Use local WorldSpec and recent world-state references to narrow the target without copying raw dialogue into generalized memory.",
+    "Require learner clarification only when the remaining ambiguity would materially change what Turtle suppresses or resurfaces."
   ],
-  "x_factor": "whoooo knooooowwwssssssssssss — what if the smallest useful memory is not 'this person said no' but 'this exact little door stayed shut until its owner chose otherwise'?",
+  "x_factor": "whoooo knooooowwwssssssssssss — maybe the honest representation of “not that” is temporarily a little cloud with two arrows, not a falsely precise memory.",
   "constraints": [
-    "Human scholarly authority remains final; no autonomous promotion.",
-    "No automatic generalized personal memory, inferred enduring disengagement, or surveillance expansion.",
-    "A revived scope requires an appropriately explicit human-authored request.",
-    "Human, synthetic, system, and scholarly source provenance remain distinct."
+    "Do not infer a broader task, purpose, identity, or enduring preference from a local refusal.",
+    "No private raw dialogue duplication merely to resolve deixis.",
+    "World/context evidence may narrow a target but does not acquire final authority over human meaning.",
+    "Synthetic examples remain synthetic and cannot be treated as human evidence.",
+    "Human scholarly judgment and learner correction remain authoritative."
   ],
   "ontology_mappings": [
     {
       "concept_key": "freedom_and_individuality",
-      "rationale": "The learner can revoke or revise a particular invitation without surrendering inquiry."
+      "rationale": "The learner must remain able to correct what Turtle thinks was refused."
     },
     {
       "concept_key": "problem_posing_education",
-      "rationale": "A localized refusal leaves the problem available for human redefinition."
+      "rationale": "Ambiguity remains an inspectable problem rather than being prematurely closed."
     },
     {
       "concept_key": "predetermined_outcomes",
-      "rationale": "The machine must not treat any continued nudge as an obligatory destination."
+      "rationale": "The system must not let an uncertain referent determine future suppression."
     },
     {
       "concept_key": "shared_democracy",
-      "rationale": "Distinguishing who authored a question protects voice and collaborative negotiation."
+      "rationale": "Human meaning and machine interpretation remain distinguishable and negotiable."
     },
     {
       "concept_key": "co_active_emergence",
-      "rationale": "A person may correct the machine's proposal without being absorbed into machine preference history."
+      "rationale": "Later human correction can reshape the machine's interpretation without erasing the earlier trace."
+    },
+    {
+      "concept_key": "provenance_aware_retrieval",
+      "rationale": "Candidate targets need source/world pointers and uncertainty rather than copied dialogue."
     }
   ],
   "ctc_mappings": [
     {
       "domain": "Personal Inquiry",
-      "rationale": "Inquiry ownership is not erased by refusing one proposed action."
+      "rationale": "The learner retains ownership over what their refusal means."
     },
     {
       "domain": "Compelling Problem or Question",
-      "rationale": "A learner's rejection can refine the question rather than close it."
+      "rationale": "An unresolved referent becomes a legitimate inquiry state instead of a guessed answer."
     },
     {
       "domain": "Technology as Tool to Think With",
-      "rationale": "A scoped refusal can be an inspectable representation to revise."
+      "rationale": "Candidate target representations can make ambiguity inspectable."
     },
     {
       "domain": "Reflection as Learning",
-      "rationale": "Partial uptake and change of mind remain distinct from general disengagement."
+      "rationale": "Learner correction or later reinterpretation can revise the target."
     },
     {
       "domain": "Social and Cultural Critique",
-      "rationale": "Whose purposes persist, and who may nudge again, are power questions."
+      "rationale": "Who gets to decide what a refusal means is an authority question."
     },
     {
       "domain": "Sharing and Collaborating",
-      "rationale": "A correction to Turtle's wording need not terminate collaboration."
+      "rationale": "Clarification and correction remain collaborative rather than machine-final."
     }
   ],
   "uncaptured_residue": [
     {
-      "observation": "Natural-language deixis ('not that') may be unresolved without the local conversation and WorldSpec context; no raw dialogue was imported into this synthesis.",
+      "observation": "World-state evidence may narrow a deictic reference but cannot prove the learner's intended referent.",
       "status": "open"
     },
     {
-      "observation": "A structurally exact refusal scope does not prove that a learner experiences future quiet as respect.",
+      "observation": "The smallest defensible target may still be too broad or too narrow from the learner's perspective.",
       "status": "open"
+    },
+    {
+      "observation": "No new CTC domain is proposed.",
+      "status": "held"
     }
   ],
   "provenance": {
     "actor": "machine_synthesis_under_human_research_direction",
-    "evidence_class": "repository_records_project_primary_corpus_and_public_primary_sources",
+    "evidence_class": "repository_records_live_d1_read_project_primary_sources_and_public_primary_sources",
     "privacy_class": "public",
-    "selection_method": "bounded_reconciliation_plus_cross_connection_plus_authorized_source_hunt",
+    "selection_method": "closing_reconciliation_plus_wait_a_minute_plus_authorized_source_hunt",
     "consent_safe_try_it_used": false,
-    "d1_write_status": "staged_only_not_verified_live"
+    "d1_write_status": "permission_denied_7500_staged_in_git"
   },
   "selected_by": "daily_build_synthesis_subject_to_human_override",
   "scope": "system_research_horizon"

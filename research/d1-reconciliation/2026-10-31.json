@@ -1,0 +1,143 @@
+{
+  "schema": "turtleblockai.d1-reconciliation.v0.3",
+  "date": "2026-10-31",
+  "repository": "turtleblockai/platform",
+  "contribution_commit": "d6c8a78239a645d7a417e010f3cb7a75a261ffd4",
+  "live_read": {
+    "verified": true,
+    "database": "turtleblockai",
+    "database_id": "6ef1f83a-8a5f-41a7-9a9e-e4c45cec9aca",
+    "observed": [
+      "research_objects",
+      "research_object_relationships",
+      "research_object_ctc_tags",
+      "research_object_ontology_tags",
+      "research_tags",
+      "research_object_tags",
+      "ctc_uncaptured_observations",
+      "terraria_habitats",
+      "terraria_runs",
+      "terraria_events"
+    ],
+    "established_ctc_domain_count": 7,
+    "ontology_layers_seen": [
+      "original_dedoose",
+      "published_lineage",
+      "operational_turtle"
+    ]
+  },
+  "live_write": {
+    "attempted": true,
+    "persisted": false,
+    "error_code": 7500,
+    "error_class": "permission_denied",
+    "statement": "The connected Cloudflare route can read D1 but is not authorized to write; no persistence is claimed."
+  },
+  "staged_objects": [
+    {
+      "id": "repo_file:research/daily-build/2026-10-22-sunshine-pce.md",
+      "intended_table": "research_objects",
+      "object_type": "repository_artifact",
+      "repo_path": "research/daily-build/2026-10-22-sunshine-pce.md",
+      "purpose": "Canonical source-study pointer for refusal-target granularity."
+    },
+    {
+      "id": "research_object:2026-10-31-refusal-scope-regression",
+      "intended_table": "research_objects",
+      "object_type": "evaluation",
+      "repo_path": "worldspec/tests/refusal-scope-envelope-cases.json",
+      "evidence_class": "synthetic_contract_examples"
+    }
+  ],
+  "staged_relationships": [
+    {
+      "id": "rel-2026-10-31-refusal-study-to-regression",
+      "intended_table": "research_object_relationships",
+      "subject": "repo_file:research/daily-build/2026-10-22-sunshine-pce.md",
+      "predicate": "motivates",
+      "object": "research_object:2026-10-31-refusal-scope-regression",
+      "rationale": "The Oct 22 source study exposed refusal-target granularity; the Oct 31 regression makes the boundary executable without claiming deployed learner behavior."
+    }
+  ],
+  "staged_ctc_tags": [
+    {
+      "domain_id": "ctc-domain-01",
+      "domain": "Personal Inquiry"
+    },
+    {
+      "domain_id": "ctc-domain-02",
+      "domain": "Compelling Problem or Question"
+    },
+    {
+      "domain_id": "ctc-domain-03",
+      "domain": "Technology as Tool to Think With"
+    },
+    {
+      "domain_id": "ctc-domain-04",
+      "domain": "Formative Demonstration of Learning"
+    },
+    {
+      "domain_id": "ctc-domain-05",
+      "domain": "Reflection as Learning"
+    },
+    {
+      "domain_id": "ctc-domain-06",
+      "domain": "Social and Cultural Critique"
+    },
+    {
+      "domain_id": "ctc-domain-07",
+      "domain": "Sharing and Collaborating"
+    }
+  ],
+  "staged_ontology_tags": [
+    {
+      "concept_id": "code-freedom-individuality",
+      "concept_key": "freedom_and_individuality",
+      "layer": "original_dedoose"
+    },
+    {
+      "concept_id": "code-shared-democracy",
+      "concept_key": "shared_democracy",
+      "layer": "original_dedoose"
+    },
+    {
+      "concept_id": "code-predetermined-outcomes",
+      "concept_key": "predetermined_outcomes",
+      "layer": "original_dedoose"
+    },
+    {
+      "concept_id": "code-problem-posing",
+      "concept_key": "problem_posing_education",
+      "layer": "original_dedoose"
+    },
+    {
+      "concept_id": "concept-coactive-emergence",
+      "concept_key": "co_active_emergence",
+      "layer": "published_lineage"
+    },
+    {
+      "concept_id": "concept-possible-possibles",
+      "concept_key": "possible_possibles",
+      "layer": "published_lineage"
+    },
+    {
+      "concept_id": "concept-provenance-aware-retrieval",
+      "concept_key": "provenance_aware_retrieval",
+      "layer": "operational_turtle"
+    }
+  ],
+  "staged_emergent_tags": [
+    "refusal_scope",
+    "negative_evidence_boundary",
+    "object_specific_authority"
+  ],
+  "staged_uncaptured_observation": {
+    "intended_table": "ctc_uncaptured_observations",
+    "observation": "Natural-language refusals such as 'not that' may remain structurally unresolved without local conversational and WorldSpec context.",
+    "reason": "The seven established CTC domains describe inquiry, reflection, critique, collaboration, and tool use, but do not themselves resolve linguistic deixis or prove respectful interpretation.",
+    "candidate_domain": null,
+    "promote_new_domain": false
+  },
+  "privacy_boundary": "No raw private dialogue, unconsented visitor material, secret values, or synthetic evidence mislabeled as human evidence.",
+  "capture_batch_closed": true
+}

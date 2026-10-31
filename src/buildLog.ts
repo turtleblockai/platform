@@ -17,6 +17,17 @@ export interface BuildLogEntry {
 // through the Worker. Open inquiry belongs in Next Edge, not in completed entries.
 export const BUILD_LOG_ENTRIES: BuildLogEntry[] = [
   {
+    id: "2026-10-31-refusal-scope-regression",
+    date: "Oct 31, 2026",
+    title: "A learner's “no” now has an exact object and scope in the regression suite",
+    body: "The Oct. 22 refusal-object research is now executable as a Refusal Scope Envelope with a 16-case deterministic hostile suite and standing CI. Seven expected-valid cases preserve a local refusal, adjacent possibility, and explicit same-scope reopening; nine hostile cases reject task/purpose generalization, silent revival, silence-as-refusal, partial-uptake inflation, cross-scope carry, machine-authored refusal, raw-dialogue copying, and collection expansion. This is research/evaluation infrastructure, not deployed learner memory or learner-outcome evidence. Product remains v0.1.0.",
+    done: true,
+    waitAMinute: {
+      summary: "Interaction Capture already treats rejection, correction, revision, and ambiguity as different evidence, while Initiative Authority treats quieting as scoped authority. Refusal Scope connects them: negative evidence has provenance and an object; it is not a personality trait or global instruction unless the learner makes it one.",
+      evidence: ["worldspec/INTERACTION_CAPTURE.md", "research/daily-build/2026-10-22-sunshine-pce.md", "worldspec/schema/initiative-authority-envelope.schema.json", "worldspec/tests/refusal-scope-envelope-cases.json"]
+    }
+  },
+  {
     id: "2026-10-27-publication-predecessor-guard",
     date: "Oct 27, 2026",
     title: "Next Edge cannot quietly follow yesterday's Build Log",
@@ -391,10 +402,10 @@ export const BUILD_LOG_ENTRIES: BuildLogEntry[] = [
 ];
 
 export const NEXT_EDGE_FALLBACK = {
-  date: "Oct 27, 2026",
-  title: "Can refusal remain local across time?",
-  question: "When a learner rejects one proposed wording, nudge, or task, how can Turtle preserve that exact refusal across later turns without treating it as a rejection of the whole inquiry or permission to revive the declined proposal?",
-  xFactor: "whoooo knooooowwwssssssssssss — what if the smallest useful memory is not 'this person said no' but 'this exact little door stayed shut until its owner chose otherwise'?"
+  date: "Oct 31, 2026",
+  title: "Can “not that” remain uncertain?",
+  question: "When a learner rejects something with deictic or partial language — “not that,” “keep this part,” “no, the other one” — how can Turtle bind the refusal to the smallest defensible object using local context while leaving unresolved ambiguity unresolved instead of inventing a broader intent?",
+  xFactor: "whoooo knooooowwwssssssssssss — maybe the honest representation of “not that” is temporarily a little cloud with two arrows, not a falsely precise memory."
 };
 
 function escapeHtml(value: string) {
