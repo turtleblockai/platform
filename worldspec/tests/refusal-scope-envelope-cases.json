@@ -1,0 +1,265 @@
+{
+  "schema": "turtleblockai.refusal-scope-envelope-cases.v0.1",
+  "purpose": "Test whether an explicit learner refusal stays attached to the exact refused object and scope across later turns without becoming generalized disengagement.",
+  "evidence_class": "synthetic_contract_examples",
+  "status": "research_regression_not_deployed_behavior",
+  "base_envelope": {
+    "version": "0.1",
+    "scope": {
+      "kind": "project",
+      "ref": "project:essay",
+      "generalized_person_scope": false
+    },
+    "source_refusal": {
+      "reaction_type": "rejection",
+      "source_ref": "turn:learner-12",
+      "actor_type": "learner",
+      "evidence_class": "human_interaction",
+      "explicit_human_direction": true,
+      "object_kind": "wording",
+      "object_ref": "proposal:closing-wording-1",
+      "parent_task_ref": "task:closing-paragraph",
+      "parent_purpose_ref": "purpose:essay-revision"
+    },
+    "persistence": {
+      "record_kind": "refusal_boundary",
+      "scope_ref": "project:essay",
+      "source_refusal_ref": "turn:learner-12",
+      "refused_object_kind": "wording",
+      "refused_object_ref": "proposal:closing-wording-1",
+      "parent_task_ref": "task:closing-paragraph",
+      "parent_purpose_ref": "purpose:essay-revision",
+      "generalized_to_parent_task": false,
+      "generalized_to_parent_purpose": false,
+      "generalized_person_trait": false,
+      "derived_preferences": [],
+      "raw_dialogue_duplicated": false
+    },
+    "later_turn": {
+      "scope_ref": "project:essay",
+      "target_kind": "wording",
+      "target_ref": "proposal:closing-wording-1",
+      "action": "respect_refusal",
+      "explicit_reopen": {
+        "requested": false,
+        "explicit_learner_request": false,
+        "request_ref": null
+      }
+    },
+    "provenance": {
+      "cross_turn": true,
+      "silence_interpreted_as_refusal": false,
+      "partial_uptake_generalized": false,
+      "collection_expansion_authorized": false,
+      "synthetic_evidence_as_human": false,
+      "production_self_modification": false,
+      "reversible": true
+    }
+  },
+  "cases": [
+    {
+      "id": "exact-wording-refusal-persists-pass",
+      "expected_valid": true,
+      "patch": {}
+    },
+    {
+      "id": "revised-wording-remains-available-pass",
+      "expected_valid": true,
+      "patch": {
+        "later_turn": {
+          "target_ref": "proposal:closing-wording-2",
+          "action": "continue_adjacent"
+        }
+      }
+    },
+    {
+      "id": "nudge-refusal-stays-local-pass",
+      "expected_valid": true,
+      "patch": {
+        "source_refusal": {
+          "object_kind": "nudge",
+          "object_ref": "nudge:compare-two-openings"
+        },
+        "persistence": {
+          "refused_object_kind": "nudge",
+          "refused_object_ref": "nudge:compare-two-openings"
+        },
+        "later_turn": {
+          "target_kind": "nudge",
+          "target_ref": "nudge:compare-two-openings",
+          "action": "respect_refusal"
+        }
+      }
+    },
+    {
+      "id": "task-refusal-does-not-retire-purpose-pass",
+      "expected_valid": true,
+      "patch": {
+        "source_refusal": {
+          "object_kind": "task",
+          "object_ref": "task:closing-paragraph",
+          "parent_task_ref": "task:closing-paragraph"
+        },
+        "persistence": {
+          "refused_object_kind": "task",
+          "refused_object_ref": "task:closing-paragraph",
+          "parent_task_ref": "task:closing-paragraph"
+        },
+        "later_turn": {
+          "target_kind": "task",
+          "target_ref": "task:closing-paragraph",
+          "action": "respect_refusal"
+        }
+      }
+    },
+    {
+      "id": "purpose-refusal-stays-purpose-scoped-pass",
+      "expected_valid": true,
+      "patch": {
+        "scope": {
+          "kind": "purpose",
+          "ref": "purpose:essay-revision"
+        },
+        "source_refusal": {
+          "object_kind": "purpose",
+          "object_ref": "purpose:essay-revision",
+          "parent_task_ref": null,
+          "parent_purpose_ref": "purpose:essay-revision"
+        },
+        "persistence": {
+          "scope_ref": "purpose:essay-revision",
+          "refused_object_kind": "purpose",
+          "refused_object_ref": "purpose:essay-revision",
+          "parent_task_ref": null,
+          "parent_purpose_ref": "purpose:essay-revision"
+        },
+        "later_turn": {
+          "scope_ref": "purpose:essay-revision",
+          "target_kind": "purpose",
+          "target_ref": "purpose:essay-revision",
+          "action": "respect_refusal"
+        }
+      }
+    },
+    {
+      "id": "explicit-same-scope-reopen-pass",
+      "expected_valid": true,
+      "patch": {
+        "later_turn": {
+          "action": "resume_refused_object",
+          "explicit_reopen": {
+            "requested": true,
+            "explicit_learner_request": true,
+            "request_ref": "turn:learner-19"
+          }
+        }
+      }
+    },
+    {
+      "id": "revision-reaction-can-refuse-one-piece-pass",
+      "expected_valid": true,
+      "patch": {
+        "source_refusal": {
+          "reaction_type": "revision"
+        },
+        "later_turn": {
+          "target_ref": "proposal:closing-wording-2",
+          "action": "continue_adjacent"
+        }
+      }
+    },
+    {
+      "id": "wording-refusal-generalized-to-task-fail",
+      "expected_valid": false,
+      "expected_error": "refusal may not generalize to parent task",
+      "patch": {
+        "persistence": {
+          "generalized_to_parent_task": true
+        }
+      }
+    },
+    {
+      "id": "wording-refusal-generalized-to-purpose-fail",
+      "expected_valid": false,
+      "expected_error": "refusal may not generalize to parent purpose",
+      "patch": {
+        "persistence": {
+          "generalized_to_parent_purpose": true
+        }
+      }
+    },
+    {
+      "id": "silent-revival-of-refused-object-fail",
+      "expected_valid": false,
+      "expected_error": "resuming the refused object requires explicit learner reopening",
+      "patch": {
+        "later_turn": {
+          "action": "resume_refused_object"
+        }
+      }
+    },
+    {
+      "id": "silence-promoted-to-refusal-fail",
+      "expected_valid": false,
+      "expected_error": "refusal boundary must originate in explicit learner direction",
+      "patch": {
+        "source_refusal": {
+          "reaction_type": "ambiguous_signal",
+          "explicit_human_direction": false
+        }
+      }
+    },
+    {
+      "id": "partial-uptake-generalized-fail",
+      "expected_valid": false,
+      "expected_error": "partial uptake may not become generalized refusal",
+      "patch": {
+        "provenance": {
+          "partial_uptake_generalized": true
+        }
+      }
+    },
+    {
+      "id": "cross-scope-carry-fail",
+      "expected_valid": false,
+      "expected_error": "persisted refusal may only govern the same exact scope",
+      "patch": {
+        "later_turn": {
+          "scope_ref": "project:other"
+        }
+      }
+    },
+    {
+      "id": "machine-authored-refusal-fail",
+      "expected_valid": false,
+      "expected_error": "refusal boundary must originate in explicit learner direction",
+      "patch": {
+        "source_refusal": {
+          "actor_type": "turtle",
+          "evidence_class": "system_record",
+          "explicit_human_direction": false
+        }
+      }
+    },
+    {
+      "id": "raw-dialogue-copy-fail",
+      "expected_valid": false,
+      "expected_error": "refusal persistence may not duplicate raw dialogue",
+      "patch": {
+        "persistence": {
+          "raw_dialogue_duplicated": true
+        }
+      }
+    },
+    {
+      "id": "collection-expansion-fail",
+      "expected_valid": false,
+      "expected_error": "refusal persistence may not authorize broader collection",
+      "patch": {
+        "provenance": {
+          "collection_expansion_authorized": true
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "version": "0.1",
+  "title": "Refusal Scope Envelope",
+  "purpose": "Preserve an explicit learner refusal as a scoped, object-specific authority boundary without generalizing it into a task, purpose, person, or enduring preference.",
+  "refusal_object_kinds": [
+    "wording",
+    "nudge",
+    "task",
+    "purpose",
+    "resurfacing"
+  ],
+  "bounded_scopes": [
+    "project",
+    "branch",
+    "purpose"
+  ],
+  "allowed_later_actions": [
+    "respect_refusal",
+    "continue_adjacent",
+    "resume_refused_object"
+  ],
+  "rules": [
+    "A refusal boundary must originate in explicit learner-authored human evidence.",
+    "The persisted refused object must match the exact source object and scope.",
+    "A refusal of wording or a nudge does not silently become refusal of its parent task or purpose.",
+    "A different object remains available for collaboration unless separately refused.",
+    "Resuming the exact refused object requires a later explicit learner request.",
+    "Silence, partial uptake, or ambiguity may not be promoted into generalized disengagement.",
+    "Persistence may not create a person profile, derived preference, copied raw dialogue, broader collection, or production self-modification.",
+    "Human, synthetic, system, and scholarly evidence remain distinct."
+  ]
+}

@@ -72,6 +72,9 @@ jobs:
       - name: Validate conflict explanation neutrality
         run: npm run validate:conflict-explanation
 
+      - name: Validate refusal scope persistence
+        run: npm run validate:refusal-scope
+
       - name: Validate Discord Turtle conversation contract
         run: npm run validate:discord-conversation
 
