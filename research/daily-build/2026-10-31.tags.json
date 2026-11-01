@@ -307,5 +307,239 @@
     "human_scholarly_authority": "final",
     "model_version": "GPT-5.6 Sol",
     "contribution_commit": "d6c8a78239a645d7a417e010f3cb7a75a261ffd4"
+  },
+  "evening_cycle": {
+    "batch_id": "2026-10-31-deictic-refusal-uncertainty",
+    "branch": "daily-build/2026-10-31-deictic-uncertainty",
+    "contribution_commit": "3940b3244efb15ce62044c6e336bf48201d65a95",
+    "selected": "synthetic deictic referent uncertainty regression",
+    "rejected_candidates": [
+      {
+        "candidate": "live dialogue resolution",
+        "rationale": "No empirical/consent gate."
+      },
+      {
+        "candidate": "automatic clarification interrupt",
+        "rationale": "Ambiguity does not permit interruption."
+      },
+      {
+        "candidate": "bulk D1 write",
+        "rationale": "Permission denied earlier and exceeds bounded cycle."
+      }
+    ],
+    "source_signals": [
+      {
+        "source": "OpenAI",
+        "date": "2026-10-29",
+        "url": "https://alignment.openai.com/how-we-detect-frontier-model-misalignment/",
+        "rationale": "External enforcement analogy, not learner evidence."
+      },
+      {
+        "source": "NVIDIA",
+        "date": "2026-09-28",
+        "url": "https://nvidianews.nvidia.com/news/open-agent-safety-platform",
+        "rationale": "Independent boundary checking."
+      },
+      {
+        "source": "Minecraft Education",
+        "date": "2026-10-02",
+        "url": "https://education.minecraft.net/es-mx/challenges/agent-to-the-rescue",
+        "rationale": "Manips of situated world patterns."
+      },
+      {
+        "source": "MIT Media Lab",
+        "date": "2026-03-17",
+        "url": "https://www.media.mit.edu/publications/simulating-neural-integration-1/",
+        "rationale": "Human agency design provocation."
+      }
+    ],
+    "objects": [
+      {
+        "id": "question",
+        "type": "research_question",
+        "summary": "How to keep a deictic refusal target unresolved?"
+      },
+      {
+        "id": "selected",
+        "type": "evaluation_contract",
+        "repo_path": "worldspec/schema/deictic-refusal-envelope.schema.json"
+      },
+      {
+        "id": "fixture",
+        "type": "synthetic_evidence",
+        "repo_path": "worldspec/tests/deictic-refusal-envelope-cases.json"
+      },
+      {
+        "id": "test",
+        "type": "evaluation",
+        "outcome": "18 expected outcomes matched; 6 accepted, 12 hostile",
+        "test_state": "local_pass_remote_ci_not_executed"
+      },
+      {
+        "id": "d1_gap",
+        "type": "reconciliation",
+        "repo_path": "research/d1-reconciliation/2026-10-31-evening.json"
+      },
+      {
+        "id": "wait",
+        "type": "cross_connection",
+        "summary": "Candidate formation is not human-confirmed meaning or surfacing permission."
+      },
+      {
+        "id": "horizon",
+        "type": "next_edge",
+        "summary": "What makes confirmation genuinely human?"
+      }
+    ],
+    "relationships": [
+      {
+        "from": "question",
+        "predicate": "motivates",
+        "to": "selected"
+      },
+      {
+        "from": "selected",
+        "predicate": "evaluated_by",
+        "to": "test"
+      },
+      {
+        "from": "fixture",
+        "predicate": "classified_as",
+        "to": "synthetic_evidence"
+      },
+      {
+        "from": "selected",
+        "predicate": "staged_for_d1",
+        "to": "d1_gap"
+      },
+      {
+        "from": "wait",
+        "predicate": "raises",
+        "to": "horizon"
+      }
+    ],
+    "ctc_tags": [
+      {
+        "domain": "Personal Inquiry",
+        "rationale": "The learner owns the referent of a refusal."
+      },
+      {
+        "domain": "Compelling Problem or Question",
+        "rationale": "A target can remain a live question."
+      },
+      {
+        "domain": "Technology as Tool to Think With",
+        "rationale": "Explicit pointers make ambiguity inspectable."
+      },
+      {
+        "domain": "Formative Demonstration of Learning",
+        "rationale": "Only system-evaluation evidence; no learner learning claim."
+      },
+      {
+        "domain": "Reflection as Learning",
+        "rationale": "A later correction can revise the referent."
+      },
+      {
+        "domain": "Social and Cultural Critique",
+        "rationale": "Authority to assign the referent is at stake."
+      },
+      {
+        "domain": "Sharing and Collaborating",
+        "rationale": "Clarification remains voluntary."
+      }
+    ],
+    "ontology_tags": [
+      {
+        "concept": "freedom_and_individuality",
+        "layer": "original_dedoose",
+        "rationale": "Learner agency and correction outrank machine inference."
+      },
+      {
+        "concept": "problem_posing_education",
+        "layer": "original_dedoose",
+        "rationale": "Leave an unresolved referent inspectable."
+      },
+      {
+        "concept": "shared_democracy",
+        "layer": "original_dedoose",
+        "rationale": "Meaning remains contested, not machine-final."
+      },
+      {
+        "concept": "predetermined_outcomes",
+        "layer": "original_dedoose",
+        "rationale": "Ambiguity cannot decide the future of a task."
+      },
+      {
+        "concept": "co_active_emergence",
+        "layer": "published_lineage",
+        "rationale": "Human clarification may redirect machine behavior."
+      },
+      {
+        "concept": "possible_possibles",
+        "layer": "published_lineage",
+        "rationale": "Adjacent alternatives stay available."
+      },
+      {
+        "concept": "provenance_aware_retrieval",
+        "layer": "operational_turtle",
+        "rationale": "Source pointers and actor distinctions remain visible."
+      }
+    ],
+    "emergent_tags": [
+      "deictic_refusal",
+      "candidate_target_uncertainty",
+      "human_confirmation_provenance",
+      "no_automatic_interruption"
+    ],
+    "uncaptured_observations": [
+      "A fictional turn ID does not authenticate a real human confirmation.",
+      "System contract tests do not show perceived human respect.",
+      "No new CTC domain."
+    ],
+    "reconciliation": {
+      "opening_log_count": 41,
+      "closing_log_count": 42,
+      "all_entries_classified": true,
+      "live_open_and_close": {
+        "research_objects": 31,
+        "relationships": 0,
+        "ctc_tags": 11,
+        "ontology_tags": 9,
+        "established_ctc_domains": 7,
+        "terraria_runs": 0,
+        "new_deictic_object": 0
+      },
+      "write": {
+        "attempted": false,
+        "persisted": false,
+        "prior_error": 7500
+      },
+      "staged_at": "research/d1-reconciliation/2026-10-31-evening.json",
+      "public_www": "unverified_unavailable"
+    },
+    "wait_a_minute": {
+      "pointers": [
+        "worldspec/INTERACTION_CAPTURE.md",
+        "research/TURTLE_ASK.md",
+        "worldspec/tests/deictic-refusal-envelope-cases.json"
+      ],
+      "overlap": "Hypothesis formation and permission to act or interrupt remain separate.",
+      "uncertainty": "An architectural analogy; no consented empirical test.",
+      "disposition": [
+        "relationship",
+        "test_candidate",
+        "human_review"
+      ]
+    },
+    "provenance": {
+      "actor": "machine_synthesis_under_human_direction",
+      "evidence_class": "synthetic_contract_examples",
+      "privacy_class": "public",
+      "human_scholarly_authority": "final",
+      "human_observations_used": false,
+      "production_modified": false
+    },
+    "version_judgment": "remain v0.1.0",
+    "capture_batch_closed": true
   }
 }

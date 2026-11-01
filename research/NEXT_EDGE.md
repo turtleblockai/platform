@@ -91,8 +91,8 @@ This keeps the open question separate from the historical Build Log. Daily build
 
 ## Current theoretical question
 
-**Can “not that” remain uncertain?**
+**What makes confirmation genuinely human?**
 
-When a learner rejects something with deictic or partial language — “not that,” “keep this part,” “no, the other one” — how can Turtle bind the refusal to the smallest defensible object using local context while leaving unresolved ambiguity unresolved instead of inventing a broader intent?
+When Turtle links a learner's ambiguous “not that” to a candidate, what consent-bound evidence shows that the learner—not Turtle, a synthetic trace, or a guessed context pointer—confirmed the referent, and how can a later correction revise it?
 
-This horizon follows the October 31 Refusal Scope Envelope regression (commit `d6c8a78239a645d7a417e010f3cb7a75a261ffd4`). The completed work now preserves an exact refused object and scope; the open question is how Turtle knows which object the learner meant when natural language is incomplete. Interaction Capture already treats deixis as context-dependent, so the next research move should preserve candidate pointers and uncertainty rather than manufacture precision. No deployed deictic-resolution behavior is claimed. The public machine-readable source of truth is `public/data/next-edge.json`.
+The October 31 research-only Deictic Refusal Uncertainty regression (commit `3940b3244efb15ce62044c6e336bf48201d65a95`) tests provisional pointers and fictional learner-confirmed references. It does not authenticate real human evidence. The earlier “Can ‘not that’ remain uncertain?” horizon is preserved in the October 31 morning note. The machine-readable source of truth is `public/data/next-edge.json`.

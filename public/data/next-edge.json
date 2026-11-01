@@ -2,114 +2,110 @@
   "version": "1.0",
   "updated_at": "2026-10-31",
   "status": "open_question",
-  "title": "Can “not that” remain uncertain?",
-  "question": "When a learner rejects something with deictic or partial language — “not that,” “keep this part,” “no, the other one” — how can Turtle bind the refusal to the smallest defensible object using local context while leaving unresolved ambiguity unresolved instead of inventing a broader intent?",
-  "why_now": "The Refusal Scope Envelope can now preserve an exact refused object and scope across later turns, but it assumes the target object is already known. Interaction Capture explicitly notes that deictic language is uninterpretable without local conversational and world context. The next edge therefore moves from persistence to target resolution: how to identify the smallest defensible object without converting uncertainty into machine-authored meaning.",
-  "follows_commit": "d6c8a78239a645d7a417e010f3cb7a75a261ffd4",
-  "follows_commit_role": "completed_refusal_scope_envelope_regression",
-  "follows_build_log_entry_id": "2026-10-31-refusal-scope-regression",
+  "title": "What makes confirmation genuinely human?",
+  "question": "When Turtle links a learner's ambiguous “not that” to a candidate, what consent-bound evidence shows that the learner—not Turtle, a synthetic trace, or a guessed context pointer—confirmed the referent, and how can a later correction revise it?",
+  "why_now": "An 18-case synthetic regression now distinguishes unresolved and learner-confirmed target pointers. Its fictional turn identifiers cannot verify identity, consent, or experience in real human interaction. The next research problem is trusted provenance and the right of later human correction.",
+  "follows_commit": "3940b3244efb15ce62044c6e336bf48201d65a95",
+  "follows_commit_role": "deictic_refusal_uncertainty_research_regression",
+  "follows_build_log_entry_id": "2026-10-31-deictic-refusal-uncertainty-regression",
   "inputs": [
-    "worldspec/tests/refusal-scope-envelope-cases.json",
-    "scripts/validate-refusal-scope-envelope.mjs",
+    "worldspec/schema/deictic-refusal-envelope.schema.json",
+    "worldspec/tests/deictic-refusal-envelope-cases.json",
+    "scripts/validate-deictic-refusal-envelope.mjs",
     "worldspec/INTERACTION_CAPTURE.md",
-    "worldspec/schema/initiative-authority-envelope.schema.json",
-    "research/daily-build/2026-10-22-sunshine-pce.md",
+    "research/TURTLE_ASK.md",
     "research/daily-build/2026-10-31.md",
-    "research/d1-reconciliation/2026-10-31.json"
+    "research/d1-reconciliation/2026-10-31-evening.json"
   ],
   "source_classes_consulted": [
-    "live_repository_and_build_log",
-    "live_d1_read_and_write_permission_boundary",
-    "authorized_primary_project_sources",
-    "external_primary_source_hunt",
-    "wait_a_minute_cross_connection"
+    "live_repository_and_full_build_log",
+    "live_d1_read_no_authorized_write",
+    "authorized_public_primary_sources",
+    "wait_a_minute_cross_connection",
+    "public_www_attempt_unavailable"
   ],
   "possible_possibles": [
-    "Represent multiple candidate refused-object pointers with explicit uncertainty until later context resolves them.",
-    "Use local WorldSpec and recent world-state references to narrow the target without copying raw dialogue into generalized memory.",
-    "Require learner clarification only when the remaining ambiguity would materially change what Turtle suppresses or resurfaces."
+    "Verify an explicit human confirmation against a consent-scoped canonical episode reference.",
+    "Keep machine-proposed referents unresolved and reversible without duplicating private dialogue.",
+    "Separate invitation to clarify from the independent authority to interrupt."
   ],
-  "x_factor": "whoooo knooooowwwssssssssssss — maybe the honest representation of “not that” is temporarily a little cloud with two arrows, not a falsely precise memory.",
+  "x_factor": "whoooo knooooowwwssssssssssss — maybe an uncertain pointer should keep its question mark instead of masquerading as a fact.",
   "constraints": [
-    "Do not infer a broader task, purpose, identity, or enduring preference from a local refusal.",
-    "No private raw dialogue duplication merely to resolve deixis.",
-    "World/context evidence may narrow a target but does not acquire final authority over human meaning.",
-    "Synthetic examples remain synthetic and cannot be treated as human evidence.",
-    "Human scholarly judgment and learner correction remain authoritative."
+    "Preserve seven authored CTC domains and human scholarly authority.",
+    "Synthetic examples are not observed human evidence.",
+    "No raw dialogue duplication, broader preference inference, assumed consent, or interruption privilege.",
+    "No autonomous production behavior or version promotion."
   ],
   "ontology_mappings": [
     {
       "concept_key": "freedom_and_individuality",
-      "rationale": "The learner must remain able to correct what Turtle thinks was refused."
-    },
-    {
-      "concept_key": "problem_posing_education",
-      "rationale": "Ambiguity remains an inspectable problem rather than being prematurely closed."
-    },
-    {
-      "concept_key": "predetermined_outcomes",
-      "rationale": "The system must not let an uncertain referent determine future suppression."
+      "rationale": "Human meaning ownership and later correction."
     },
     {
       "concept_key": "shared_democracy",
-      "rationale": "Human meaning and machine interpretation remain distinguishable and negotiable."
+      "rationale": "Interpretation remains contestable rather than machine-final."
+    },
+    {
+      "concept_key": "problem_posing_education",
+      "rationale": "Uncertainty remains a genuine question."
     },
     {
       "concept_key": "co_active_emergence",
-      "rationale": "Later human correction can reshape the machine's interpretation without erasing the earlier trace."
+      "rationale": "Human intervention can redirect machine interpretation."
     },
     {
       "concept_key": "provenance_aware_retrieval",
-      "rationale": "Candidate targets need source/world pointers and uncertainty rather than copied dialogue."
+      "rationale": "A reference's source and actor need independent verification."
     }
   ],
   "ctc_mappings": [
     {
       "domain": "Personal Inquiry",
-      "rationale": "The learner retains ownership over what their refusal means."
+      "rationale": "Learner authorizes intended referent."
     },
     {
       "domain": "Compelling Problem or Question",
-      "rationale": "An unresolved referent becomes a legitimate inquiry state instead of a guessed answer."
+      "rationale": "Confirmation source is unresolved."
     },
     {
       "domain": "Technology as Tool to Think With",
-      "rationale": "Candidate target representations can make ambiguity inspectable."
+      "rationale": "Candidate pointers expose uncertainty."
     },
     {
       "domain": "Reflection as Learning",
-      "rationale": "Learner correction or later reinterpretation can revise the target."
+      "rationale": "Correction may revise a confirmation."
     },
     {
       "domain": "Social and Cultural Critique",
-      "rationale": "Who gets to decide what a refusal means is an authority question."
+      "rationale": "Authority over interpretation matters."
     },
     {
       "domain": "Sharing and Collaborating",
-      "rationale": "Clarification and correction remain collaborative rather than machine-final."
+      "rationale": "Clarification is voluntary."
     }
   ],
   "uncaptured_residue": [
     {
-      "observation": "World-state evidence may narrow a deictic reference but cannot prove the learner's intended referent.",
+      "observation": "Fictional source references cannot authenticate a real human confirmation.",
       "status": "open"
     },
     {
-      "observation": "The smallest defensible target may still be too broad or too narrow from the learner's perspective.",
+      "observation": "Synthetic structural tests do not prove perceived respect.",
       "status": "open"
     },
     {
-      "observation": "No new CTC domain is proposed.",
+      "observation": "No eighth CTC domain proposed.",
       "status": "held"
     }
   ],
   "provenance": {
     "actor": "machine_synthesis_under_human_research_direction",
-    "evidence_class": "repository_records_live_d1_read_project_primary_sources_and_public_primary_sources",
+    "evidence_class": "synthetic_contract_examples_plus_public_primary_sources",
     "privacy_class": "public",
-    "selection_method": "closing_reconciliation_plus_wait_a_minute_plus_authorized_source_hunt",
     "consent_safe_try_it_used": false,
-    "d1_write_status": "permission_denied_7500_staged_in_git"
+    "synthetic_as_human": false,
+    "d1_write_status": "staged_only_not_attempted_after_prior_denial_7500",
+    "github_state": "review_branch_not_production"
   },
   "selected_by": "daily_build_synthesis_subject_to_human_override",
   "scope": "system_research_horizon"

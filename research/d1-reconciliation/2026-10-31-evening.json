@@ -1,0 +1,162 @@
+{
+  "schema": "turtleblockai.d1-reconciliation.v0.3",
+  "date": "2026-10-31",
+  "batch_id": "evening_deictic_uncertainty",
+  "branch": "daily-build/2026-10-31-deictic-uncertainty",
+  "contribution_commit": "3940b3244efb15ce62044c6e336bf48201d65a95",
+  "full_build_log_coverage": {
+    "path": "research/daily-build/2026-10-31.coverage.json",
+    "opening": 41,
+    "closing": 42,
+    "uncovered": [],
+    "classification_counts": {
+      "represented_by_canonical_pointer": 38,
+      "safely_backfilled": 1,
+      "historically_verified_live_d1": 1,
+      "represented_in_d1": 2
+    },
+    "note": "Historical status or lossless Git pointer is not proof of a live D1 row."
+  },
+  "live_d1_open_and_close": {
+    "verified": true,
+    "database": "turtleblockai",
+    "research_objects": 31,
+    "relationships": 0,
+    "ctc_tags": 11,
+    "ontology_tags": 9,
+    "established_ctc_domains": 7,
+    "terraria_runs": 0,
+    "new_deictic_object": 0
+  },
+  "live_write": {
+    "attempted": false,
+    "persisted": false,
+    "reason": "Earlier Oct 31 Cloudflare error 7500: known write denial. Staging only."
+  },
+  "staged_objects": [
+    {
+      "id": "research_object:2026-10-31-deictic-refusal-uncertainty",
+      "intended_table": "research_objects",
+      "object_type": "evaluation",
+      "repo_path": "worldspec/tests/deictic-refusal-envelope-cases.json",
+      "source_uri": "https://github.com/turtleblockai/platform/blob/daily-build/2026-10-31-deictic-uncertainty/worldspec/tests/deictic-refusal-envelope-cases.json",
+      "evidence_class": "synthetic_contract_examples",
+      "privacy_class": "public"
+    },
+    {
+      "id": "repo_file:worldspec/schema/deictic-refusal-envelope.schema.json",
+      "intended_table": "research_objects",
+      "object_type": "repository_artifact",
+      "repo_path": "worldspec/schema/deictic-refusal-envelope.schema.json"
+    }
+  ],
+  "staged_relationships": [
+    {
+      "subject": "research_object:2026-10-31-refusal-scope-regression",
+      "predicate": "raises_unresolved_target_for",
+      "object": "research_object:2026-10-31-deictic-refusal-uncertainty",
+      "intended_table": "research_object_relationships",
+      "rationale": "Prior scope regression assumes exact target; new suite treats deictic identity as unresolved."
+    }
+  ],
+  "staged_ctc_tags": [
+    {
+      "domain": "Personal Inquiry",
+      "rationale": "The learner owns the referent of a refusal.",
+      "intended_table": "research_object_ctc_tags"
+    },
+    {
+      "domain": "Compelling Problem or Question",
+      "rationale": "A target can remain a live question.",
+      "intended_table": "research_object_ctc_tags"
+    },
+    {
+      "domain": "Technology as Tool to Think With",
+      "rationale": "Explicit pointers make ambiguity inspectable.",
+      "intended_table": "research_object_ctc_tags"
+    },
+    {
+      "domain": "Formative Demonstration of Learning",
+      "rationale": "Only system-evaluation evidence; no learner learning claim.",
+      "intended_table": "research_object_ctc_tags"
+    },
+    {
+      "domain": "Reflection as Learning",
+      "rationale": "A later correction can revise the referent.",
+      "intended_table": "research_object_ctc_tags"
+    },
+    {
+      "domain": "Social and Cultural Critique",
+      "rationale": "Authority to assign the referent is at stake.",
+      "intended_table": "research_object_ctc_tags"
+    },
+    {
+      "domain": "Sharing and Collaborating",
+      "rationale": "Clarification remains voluntary.",
+      "intended_table": "research_object_ctc_tags"
+    }
+  ],
+  "staged_ontology_tags": [
+    {
+      "concept": "freedom_and_individuality",
+      "layer": "original_dedoose",
+      "rationale": "Learner agency and correction outrank machine inference.",
+      "intended_table": "research_object_ontology_tags"
+    },
+    {
+      "concept": "problem_posing_education",
+      "layer": "original_dedoose",
+      "rationale": "Leave an unresolved referent inspectable.",
+      "intended_table": "research_object_ontology_tags"
+    },
+    {
+      "concept": "shared_democracy",
+      "layer": "original_dedoose",
+      "rationale": "Meaning remains contested, not machine-final.",
+      "intended_table": "research_object_ontology_tags"
+    },
+    {
+      "concept": "predetermined_outcomes",
+      "layer": "original_dedoose",
+      "rationale": "Ambiguity cannot decide the future of a task.",
+      "intended_table": "research_object_ontology_tags"
+    },
+    {
+      "concept": "co_active_emergence",
+      "layer": "published_lineage",
+      "rationale": "Human clarification may redirect machine behavior.",
+      "intended_table": "research_object_ontology_tags"
+    },
+    {
+      "concept": "possible_possibles",
+      "layer": "published_lineage",
+      "rationale": "Adjacent alternatives stay available.",
+      "intended_table": "research_object_ontology_tags"
+    },
+    {
+      "concept": "provenance_aware_retrieval",
+      "layer": "operational_turtle",
+      "rationale": "Source pointers and actor distinctions remain visible.",
+      "intended_table": "research_object_ontology_tags"
+    }
+  ],
+  "emergent_tags": [
+    "deictic_refusal",
+    "candidate_target_uncertainty",
+    "human_confirmation_provenance",
+    "no_automatic_interruption"
+  ],
+  "uncaptured_observation": {
+    "intended_table": "ctc_uncaptured_observations",
+    "text": "A fictional confirmation pointer does not verify a real human actor.",
+    "candidate_domain": null,
+    "promotion": false
+  },
+  "gaps": [
+    "Most Build Log items have Git staging pointers but lack current first-class research objects in live D1.",
+    "No live research-object relationships.",
+    "Public deployed WWW could not be inspected."
+  ],
+  "privacy_boundary": "No raw private dialogue, consent-absent visitors, secrets or synthetic-as-human observations; all three Terraria habitats retain boundaries.",
+  "capture_batch_closed": true
+}

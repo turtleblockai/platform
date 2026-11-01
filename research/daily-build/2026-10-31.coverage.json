@@ -17,6 +17,11 @@
   },
   "coverage": [
     [
+      "2026-10-31-deictic-refusal-uncertainty-regression",
+      "represented_by_canonical_pointer",
+      "research/daily-build/2026-10-31.tags.json"
+    ],
+    [
       "2026-10-31-refusal-scope-regression",
       "represented_by_canonical_pointer",
       "research/daily-build/2026-10-31.tags.json"
@@ -235,18 +240,53 @@
     "claim": "No Oct 31 D1 write persisted."
   },
   "closing_sweep": {
-    "build_log_entry_count": 41,
+    "build_log_entry_count": 42,
     "uncovered_entry_ids": [],
     "repaired": [
-      "Oct 31 refusal-scope research has a committed canonical schema/test/validator and daily staging record.",
-      "Build Log and Next Edge are advanced together in the closing publication batch."
+      "42/42 Build Log identities staged with canonical source pointers.",
+      "One new future Next Edge follows the completed research-only commit."
     ],
     "unresolved": [
-      "Oct 31 D1 objects/tags/relationship remain staged because live write permission was denied.",
-      "Natural-language deictic refusal targeting remains the next research problem.",
-      "Canonical pointer coverage is not equivalent to live D1 row coverage."
+      "Live research-object/relationship coverage remains sparse; staged-only.",
+      "Deployed WWW parity unverified.",
+      "Real learner confirmation provenance is not implemented."
     ]
   },
   "privacy_boundary": "No private raw dialogue, unconsented visitor material, secret configuration, or synthetic trace represented as human evidence.",
-  "capture_batch_closed": true
+  "capture_batch_closed": true,
+  "evening_cycle": {
+    "opening_count": 41,
+    "closing_count": 42,
+    "previous_closing_sweep": {
+      "build_log_entry_count": 41,
+      "uncovered_entry_ids": [],
+      "repaired": [
+        "Oct 31 refusal-scope research has a committed canonical schema/test/validator and daily staging record.",
+        "Build Log and Next Edge are advanced together in the closing publication batch."
+      ],
+      "unresolved": [
+        "Oct 31 D1 objects/tags/relationship remain staged because live write permission was denied.",
+        "Natural-language deictic refusal targeting remains the next research problem.",
+        "Canonical pointer coverage is not equivalent to live D1 row coverage."
+      ]
+    },
+    "live_opening_and_closing": {
+      "research_objects": 31,
+      "relationships": 0,
+      "ctc_tags": 11,
+      "ontology_tags": 9,
+      "established_domains": 7,
+      "terraria_runs": 0
+    },
+    "write": "not_attempted_after_denial_7500",
+    "state": "git_staged_pending_human_review",
+    "public_www_parity": "not_verified",
+    "repository_tree_entries_opening": 268,
+    "classifications": {
+      "represented_by_canonical_pointer": 38,
+      "safely_backfilled": 1,
+      "historically_verified_live_d1": 1,
+      "represented_in_d1": 2
+    }
+  }
 }

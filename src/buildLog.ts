@@ -17,6 +17,17 @@ export interface BuildLogEntry {
 // through the Worker. Open inquiry belongs in Next Edge, not in completed entries.
 export const BUILD_LOG_ENTRIES: BuildLogEntry[] = [
   {
+    id: "2026-10-31-deictic-refusal-uncertainty-regression",
+    date: "Oct 31, 2026",
+    title: "“Not that” stays uncertain in a synthetic refusal-target regression",
+    body: "A Deictic Refusal Uncertainty Envelope now tests that local context and WorldSpec pointers can suggest targets without becoming confirmed learner meaning. An 18-case synthetic suite (6 accepted, 12 hostile; 0 mismatches locally) rejects invented, broadened, or prematurely enforced refusals and unsolicited clarification. Its schema, fixture, validator, npm command, and proposed CI step are committed on a human-review branch. No learner deployment or learning evidence is claimed. Product remains v0.1.0.",
+    done: true,
+    waitAMinute: {
+      summary: "A possible referent is not a human-confirmed meaning, just as a candidate TurtleAsk is not permission to interrupt. Both require an independent human-authority boundary; this is an architectural analogy, not learner evidence.",
+      evidence: ["worldspec/INTERACTION_CAPTURE.md", "worldspec/tests/deictic-refusal-envelope-cases.json", "research/TURTLE_ASK.md"]
+    }
+  },
+  {
     id: "2026-10-31-refusal-scope-regression",
     date: "Oct 31, 2026",
     title: "A learner's “no” now has an exact object and scope in the regression suite",
