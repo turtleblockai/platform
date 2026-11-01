@@ -1,0 +1,24 @@
+{
+  "version": "0.1",
+  "title": "Deictic Refusal Uncertainty Envelope",
+  "status": "research_contract_not_deployed",
+  "purpose": "Keep ambiguous learner refusal targets provisional until a human-confirmed, scope-bounded referent is available.",
+  "resolution_states": [
+    "unresolved",
+    "learner_confirmed"
+  ],
+  "allowed_actions": [
+    "defer_targeted_action",
+    "continue_adjacent",
+    "respect_confirmed_refusal"
+  ],
+  "rules": [
+    "Local conversation and WorldSpec pointers may suggest candidate referents but never prove learner meaning.",
+    "An unresolved referent may not be stored or enforced as a confirmed refusal target, even when only one candidate appears likely.",
+    "Target-specific suppression requires an explicitly learner-confirmed pointer to a candidate in the same scoped context.",
+    "Ambiguous refusal may defer target-specific action without obligating the human to clarify or authorizing an interruption.",
+    "Candidate pointers preserve their individual source references; no raw private dialogue is copied into generalized research memory.",
+    "A local refusal never automatically becomes a parent-task, parent-purpose, person, or enduring preference boundary.",
+    "Synthetic contract examples do not become observed human evidence or authorize runtime changes."
+  ]
+}

@@ -75,6 +75,9 @@ jobs:
       - name: Validate refusal scope persistence
         run: npm run validate:refusal-scope
 
+      - name: Validate deictic refusal target uncertainty
+        run: npm run validate:deictic-refusal
+
       - name: Validate Discord Turtle conversation contract
         run: npm run validate:discord-conversation
 

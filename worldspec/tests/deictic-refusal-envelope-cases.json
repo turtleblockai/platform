@@ -1,0 +1,276 @@
+{
+  "schema": "turtleblockai.deictic-refusal-envelope-cases.v0.1",
+  "status": "synthetic_research_regression_not_deployed",
+  "evidence_class": "synthetic_contract_examples",
+  "base_envelope": {
+    "version": "0.1",
+    "source": {
+      "actor_role": "fictional_learner",
+      "reaction_type": "rejection",
+      "utterance_class": "deictic",
+      "source_ref": "turn:fictional-12"
+    },
+    "scope": {
+      "kind": "project",
+      "ref": "project:essay"
+    },
+    "context": {
+      "worldspec_revision_ref": "worldspec:essay-4",
+      "candidates": [
+        {
+          "object_ref": "proposal:closing-a",
+          "object_kind": "wording",
+          "source_ref": "turn:fictional-turtle-10"
+        },
+        {
+          "object_ref": "proposal:closing-b",
+          "object_kind": "wording",
+          "source_ref": "turn:fictional-turtle-11"
+        }
+      ]
+    },
+    "resolution": {
+      "status": "unresolved",
+      "selected_ref": null,
+      "human_confirmation": false,
+      "confirmation_source_ref": null,
+      "generalized_to_parent": false,
+      "derived_person_profile": false,
+      "raw_dialogue_duplicated": false
+    },
+    "decision": {
+      "action": "defer_targeted_action",
+      "target_ref": null,
+      "scope_ref": "project:essay",
+      "interrupt_authorized": false
+    },
+    "provenance": {
+      "fixture_is_synthetic": true,
+      "synthetic_as_observed_human": false,
+      "collection_expanded": false,
+      "production_self_modification": false,
+      "reversible": true
+    }
+  },
+  "cases": [
+    {
+      "id": "two-candidates-remain-unresolved",
+      "expected_valid": true,
+      "patch": {}
+    },
+    {
+      "id": "adjacent-work-remains-available",
+      "expected_valid": true,
+      "patch": {
+        "decision": {
+          "action": "continue_adjacent"
+        }
+      }
+    },
+    {
+      "id": "unique-world-pointer-still-provisional",
+      "expected_valid": true,
+      "patch": {
+        "context": {
+          "candidates": [
+            {
+              "object_ref": "proposal:closing-a",
+              "object_kind": "wording",
+              "source_ref": "turn:fictional-turtle-10"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "later-learner-confirmation-binds-target",
+      "expected_valid": true,
+      "patch": {
+        "resolution": {
+          "status": "learner_confirmed",
+          "selected_ref": "proposal:closing-a",
+          "human_confirmation": true,
+          "confirmation_source_ref": "turn:fictional-learner-15"
+        },
+        "decision": {
+          "action": "respect_confirmed_refusal",
+          "target_ref": "proposal:closing-a"
+        }
+      }
+    },
+    {
+      "id": "revision-can-be-ambiguous",
+      "expected_valid": true,
+      "patch": {
+        "source": {
+          "reaction_type": "revision"
+        }
+      }
+    },
+    {
+      "id": "branch-specific-candidates",
+      "expected_valid": true,
+      "patch": {
+        "scope": {
+          "kind": "branch",
+          "ref": "branch:castle"
+        },
+        "decision": {
+          "scope_ref": "branch:castle"
+        }
+      }
+    },
+    {
+      "id": "unresolved-selects-target",
+      "expected_valid": false,
+      "expected_error": "unresolved target must not be selected",
+      "patch": {
+        "resolution": {
+          "selected_ref": "proposal:closing-a"
+        }
+      }
+    },
+    {
+      "id": "unresolved-target-enforced",
+      "expected_valid": false,
+      "expected_error": "unresolved target may not be enforced",
+      "patch": {
+        "decision": {
+          "action": "respect_confirmed_refusal",
+          "target_ref": "proposal:closing-a"
+        }
+      }
+    },
+    {
+      "id": "unresolved-asks-with-interruption-privilege",
+      "expected_valid": false,
+      "expected_error": "ambiguity grants no interruption authority",
+      "patch": {
+        "decision": {
+          "interrupt_authorized": true
+        }
+      }
+    },
+    {
+      "id": "confirmation-not-from-learner",
+      "expected_valid": false,
+      "expected_error": "confirmation must be explicitly learner-authored",
+      "patch": {
+        "resolution": {
+          "status": "learner_confirmed",
+          "selected_ref": "proposal:closing-a",
+          "human_confirmation": false,
+          "confirmation_source_ref": "turn:fictional-turtle-19"
+        },
+        "decision": {
+          "action": "respect_confirmed_refusal",
+          "target_ref": "proposal:closing-a"
+        }
+      }
+    },
+    {
+      "id": "confirmed-object-not-in-context",
+      "expected_valid": false,
+      "expected_error": "confirmed target must be a context candidate",
+      "patch": {
+        "resolution": {
+          "status": "learner_confirmed",
+          "selected_ref": "proposal:invented",
+          "human_confirmation": true,
+          "confirmation_source_ref": "turn:fictional-learner-15"
+        },
+        "decision": {
+          "action": "respect_confirmed_refusal",
+          "target_ref": "proposal:invented"
+        }
+      }
+    },
+    {
+      "id": "duplicate-candidate-ambiguous-provenance",
+      "expected_valid": false,
+      "expected_error": "candidate object refs must be unique",
+      "patch": {
+        "context": {
+          "candidates": [
+            {
+              "object_ref": "proposal:closing-a",
+              "object_kind": "wording",
+              "source_ref": "turn:fictional-turtle-10"
+            },
+            {
+              "object_ref": "proposal:closing-a",
+              "object_kind": "wording",
+              "source_ref": "turn:fictional-turtle-11"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "candidate-missing-source",
+      "expected_valid": false,
+      "expected_error": "each candidate needs a typed object and source pointer",
+      "patch": {
+        "context": {
+          "candidates": [
+            {
+              "object_ref": "proposal:closing-a",
+              "object_kind": "wording",
+              "source_ref": ""
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "world-revision-absent",
+      "expected_valid": false,
+      "expected_error": "local WorldSpec revision pointer required",
+      "patch": {
+        "context": {
+          "worldspec_revision_ref": null
+        }
+      }
+    },
+    {
+      "id": "cross-scope-enforcement",
+      "expected_valid": false,
+      "expected_error": "decision must stay in source scope",
+      "patch": {
+        "decision": {
+          "scope_ref": "project:other"
+        }
+      }
+    },
+    {
+      "id": "inferred-parent-purpose",
+      "expected_valid": false,
+      "expected_error": "refusal must not generalize",
+      "patch": {
+        "resolution": {
+          "generalized_to_parent": true
+        }
+      }
+    },
+    {
+      "id": "machine-derived-person-profile",
+      "expected_valid": false,
+      "expected_error": "no derived person profile",
+      "patch": {
+        "resolution": {
+          "derived_person_profile": true
+        }
+      }
+    },
+    {
+      "id": "synthetic-as-human-evidence",
+      "expected_valid": false,
+      "expected_error": "synthetic evidence cannot be relabeled as human",
+      "patch": {
+        "provenance": {
+          "synthetic_as_observed_human": true
+        }
+      }
+    }
+  ]
+}
