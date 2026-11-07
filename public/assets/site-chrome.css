@@ -10,10 +10,13 @@
 @media(max-width:1040px) and (min-width:821px){.navgrid{grid-auto-rows:70px!important}.navcard{height:70px!important;min-height:70px!important;padding:9px 10px!important}.status,.railstatus{min-height:60px!important}}
 @media(max-width:820px){.navgrid{grid-template-columns:repeat(2,minmax(0,1fr))!important;grid-auto-rows:50px!important;gap:8px!important;padding-top:8px!important}.navcard{height:50px!important;min-height:50px!important;padding:9px 11px!important;flex-direction:row!important;align-items:center!important;justify-content:flex-start!important}.navcard strong{margin:0!important}.navcard span{display:none!important}.panel.compact .navgrid{display:none!important}.status,.railstatus{display:none!important}.panel{max-height:none!important;overflow:visible!important}}
 
-/* Hardened menu (2026-11-07): every card one size, text can never stretch a card */
-.navgrid{grid-auto-flow:row!important}
-.navgrid>.navcard{overflow:hidden!important;flex:none!important;min-width:0!important}
-.navcard strong{display:-webkit-box!important;-webkit-box-orient:vertical!important;-webkit-line-clamp:2!important;overflow:hidden!important;max-width:100%!important}
-.navcard span{max-width:100%!important;white-space:nowrap!important;overflow:hidden!important;text-overflow:ellipsis!important}
+/* Hardened menu v2 (2026-11-07): one menu, one font, one size on every page */
+main{padding-top:28px!important}
+.panel{width:288px!important;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif!important}
+.navgrid{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;grid-auto-rows:76px!important;grid-auto-flow:row!important;gap:8px!important}
+.navgrid>.navcard{box-sizing:border-box!important;height:76px!important;min-height:76px!important;overflow:hidden!important;flex:none!important;min-width:0!important;font:inherit!important}
+.navcard strong{display:block!important;font-family:inherit!important;font-size:14px!important;font-weight:700!important;line-height:1.15!important;letter-spacing:0!important;white-space:normal!important}
+.navcard span{display:block!important;font-family:inherit!important;font-size:11px!important;font-weight:400!important;line-height:1.2!important;letter-spacing:0!important;white-space:nowrap!important}
 .navgrid>.navcard:last-child:nth-child(odd){grid-column:1/-1!important}
-@media(max-width:820px){.navcard strong{-webkit-line-clamp:1!important;white-space:nowrap!important;text-overflow:ellipsis!important}.navcard strong br{display:none!important}}
+@media(max-width:1040px) and (min-width:821px){.panel{width:250px!important}.navgrid{grid-auto-rows:70px!important}.navgrid>.navcard{height:70px!important;min-height:70px!important}.navcard strong{font-size:13px!important}.navcard span{font-size:10.5px!important}}
+@media(max-width:820px){.panel{width:100%!important}.navgrid{grid-auto-rows:50px!important}.navgrid>.navcard{height:50px!important;min-height:50px!important}.navcard strong{font-size:14px!important;white-space:nowrap!important}.navcard strong br{display:none!important}.navcard span{display:none!important}}
