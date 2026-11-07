@@ -7,6 +7,8 @@
     "dev": "wrangler dev",
     "deploy": "wrangler deploy",
     "typecheck": "tsc --noEmit",
+    "build:static": "node scripts/build-static-pages.mjs",
+    "validate:static-pages": "node scripts/build-static-pages.mjs --check",
     "validate:next-edge": "node scripts/validate-next-edge.mjs",
     "validate:learner-verification": "node scripts/validate-learner-verification.mjs",
     "validate:world-evidence": "node scripts/validate-world-evidence-envelope.mjs",
@@ -32,6 +34,7 @@
   "devDependencies": {
     "@cloudflare/workers-types": "latest",
     "typescript": "latest",
-    "wrangler": "latest"
+    "wrangler": "latest",
+    "jsdom": "^31.0.0"
   }
 }

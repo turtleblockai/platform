@@ -1,15 +1,15 @@
 const RAIL_SUMMARIES: Record<string, string> = {
   home: "We built a place to build places: learner ideas become persistent, revisable worlds through dialogue, construction, experience, and reflection.",
   try: "Talk with Turtle, shape a WorldSpec, move toward Minecraft construction, experience what was built, and revise through dialogue.",
-  about: "TurtleBlock AI continues decades of recursive educational practice connecting learner agency, construction, research, dialogue, computational environments, and human-machine collaboration.",
+  about: "TurtleBlock AI continues decades of educational practice connecting learner agency, construction, research, dialogue, computational environments, and human-machine collaboration.",
   worldspec: "WorldSpec preserves learner meaning as a persistent, inspectable representation that can move between dialogue, construction, experience, and revision.",
   charter: "The Turtle Charter keeps the learner in control: Turtle may collaborate, question, suggest, and build, but meaning and judgment remain human.",
   research: "The research lineage connects Logo, Critical Techno Constructivism, STEAMHAMLET, Minecraft, AI engagement, co-active emergence, and the developing Sanders research ontology.",
   library: "The TurtleBlock AI Library makes the photographed physical source collection visible as a provenance-aware research layer: bibliography, artifacts, connections, and notes.",
   build: "The Build Log records working infrastructure, reversals, research decisions, failures, and the next edge as TurtleBlock AI is built in public.",
   terraria: "Turtle Terraria contains multiple bounded research habitats where human, Turtle, synthetic, world, and scholarly traces may cohabitate without losing provenance.",
-  steamhamlet: "STEAMHAMLET is the earlier room of possibilities: ideas become manipulable objects, environments generate inquiry, and experience recursively changes representation.",
-  reeducation: "RE/EDUCATION is the focused practice-and-R&D setting where TurtleBlock AI connects live teaching, research, school design, and technical experimentation.",
+  steamhamlet: "STEAMHAMLET is the earlier room of possibilities: ideas become manipulable objects, environments generate inquiry, and experience changes the representation.",
+  reeducation: "RE/EDUCATION is where TurtleBlock AI is field-tested in live teaching, research, school design, and technical experimentation.",
   privacy: "Turtle conversations are private by default; research capture, provenance, redaction, consent, and intentional publication are explicit boundaries.",
   disclaimer: "TurtleBlock AI is experimental software: outputs can be wrong, integrations can fail, and consequential decisions still require human judgment.",
   terms: "These terms define experimental use, learner responsibility, acceptable conduct, data boundaries, third-party services, and the limits of TurtleBlock AI."

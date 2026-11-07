@@ -30,6 +30,9 @@ jobs:
       - name: Typecheck
         run: npm run typecheck
 
+      - name: Validate prerendered static route pages
+        run: npm run validate:static-pages
+
       - name: Validate Next Edge research contract
         run: npm run validate:next-edge
 

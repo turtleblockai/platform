@@ -25,16 +25,16 @@ const SOCIAL_DESCRIPTION = "An educational research platform investigating const
 const RAIL_SUMMARIES: Record<string, string> = {
   home: "We built a place to build places: learner ideas become persistent, revisable worlds through dialogue, construction, experience, and reflection.",
   try: "Talk with Turtle, shape a WorldSpec, export it into Minecraft, enter what was built, then revise the world through dialogue.",
-  about: "TurtleBlock AI continues decades of recursive educational practice connecting learner agency, construction, research, dialogue, computational environments, and human–machine collaboration.",
+  about: "TurtleBlock AI continues decades of educational practice connecting learner agency, construction, research, dialogue, computational environments, and human–machine collaboration.",
   worldspec: "WorldSpec preserves learner meaning as a persistent, inspectable representation that can move between dialogue, Minecraft construction, experience, and revision.",
   charter: "The Turtle Charter keeps the learner in control: Turtle may collaborate, question, suggest, and build, but meaning and judgment remain human.",
   research: "The research lineage connects Logo, experimental teaching, Critical Techno Constructivism, Minecraft, custom agents, Sunshine Machine, co-active emergence, and TurtleBlock AI.",
   build: "The Build Log records working infrastructure, reversals, research decisions, and the next edge as TurtleBlock AI is built in public.",
-  steamhamlet: "STEAMHAMLET is the earlier room of possibilities: ideas become manipulable objects, environments generate inquiry, and experience recursively changes the representation.",
-  reeducation: "RE/EDUCATION is the focused practice-and-R&D setting where TurtleBlock AI connects live teaching, research, school design, and technical experimentation.",
+  steamhamlet: "STEAMHAMLET is the earlier room of possibilities: ideas become manipulable objects, environments generate inquiry, and experience changes the representation.",
+  reeducation: "RE/EDUCATION is where TurtleBlock AI is field-tested in live teaching, research, school design, and technical experimentation.",
   privacy: "Turtle conversations are private by default; research capture, provenance, redaction, consent, and intentional publication are designed as explicit boundaries.",
   disclaimer: "TurtleBlock AI is experimental software: outputs can be wrong, integrations can fail, and consequential decisions still require human judgment.",
-  lab: "Turtle Lab is the opt-in public artifact layer: selected WorldSpecs, builds, reflections, and dialogue—not raw private conversations.",
+  terraria: "Turtle Terraria contains multiple bounded research habitats where human, Turtle, synthetic, world, and scholarly traces can cohabitate without losing provenance.",
   terms: "These terms define experimental use, learner responsibility, acceptable conduct, data boundaries, third-party services, and the limits of TurtleBlock AI."
 };
 
@@ -165,10 +165,17 @@ function mergeWorldSpec(current: any, proposed: any, learnerText: string) {
   };
 }
 
+const FOOTER_LINKEDIN = '<a href="https://www.linkedin.com/in/nayrbgo/" target="_blank" rel="me noopener noreferrer">LinkedIn</a>';
+const FOOTER_LEAD = '<span>A <a href="https://culvercitystudioworks.com/" target="_blank" rel="noopener noreferrer">Culver City Studio Works</a> project, led by</span>';
+
+// Footer normalizer for any HTML the Worker renders. The old Google-search
+// handle link is removed and replaced with LinkedIn; the handle text itself
+// must never appear on the site (only inside the LinkedIn URL).
 function applyCanonicalFooter(html: string) {
   return html
-    .replace(/<span>Created and researched by<\/span><a[^>]*>@nayrbgo<\/a><span class="dot">•<\/span>/g, '<span>Created and researched by <a href="https://read.bryansanders.com" target="_blank" rel="noopener noreferrer">Dr. Bryan P. Sanders</a></span><span class="dot">•</span>')
-    .replace(/<span>Created and researched by<\/span><a[^>]*>Dr\. Bryan P\. Sanders<\/a><span class="dot">•<\/span>/g, '<span>Created and researched by <a href="https://read.bryansanders.com" target="_blank" rel="noopener noreferrer">Dr. Bryan P. Sanders</a></span><span class="dot">•</span>')
+    .replace(/<a[^>]*href="https:\/\/www\.google\.com\/search\?q=[^"]*"[^>]*>@[^<]*<\/a>/g, FOOTER_LINKEDIN)
+    .replace(/<span>Created and researched by<\/span>/g, FOOTER_LEAD)
+    .replace(/<span>Created and researched by <a href="https:\/\/read\.bryansanders\.com"[^>]*>Dr\. Bryan P\. Sanders<\/a><\/span>/g, `${FOOTER_LEAD}<a href="https://read.bryansanders.com" target="_blank" rel="noopener noreferrer">Dr. Bryan P. Sanders</a>`)
     .replace(/<span class="dot">•<\/span><a href="https:\/\/read\.bryansanders\.com"[^>]*>read\.bryansanders\.com<\/a>/g, '');
 }
 
@@ -249,7 +256,7 @@ async function converseOnWeb(env: Env, utterance: string, browserSessionId: stri
 const appRoutes = new Set(["/","/try","/try/","/about","/about/","/worldspec","/worldspec/","/charter","/charter/","/research","/research/","/build","/build/","/steamhamlet","/steamhamlet/","/reeducation","/reeducation/","/privacy","/privacy/","/disclaimer","/disclaimer/"]);
 
 async function renderAppShell(request: Request, env: Env, origin: string) {
-  const shellUrl = new URL("/index.html", origin);
+  const shellUrl = new URL("/", origin);
   const assetResponse = await env.ASSETS.fetch(new Request(shellUrl.toString(), request));
   if (!assetResponse.ok) return assetResponse;
   let html = await assetResponse.text();
@@ -262,18 +269,18 @@ async function renderAppShell(request: Request, env: Env, origin: string) {
     .replace('What are you thinking about making, changing, testing, or understanding? We can stay with the idea for a while before anything gets built.', 'What kind of place should we begin making? Tell me what you imagine. We can talk through the idea, turn it into a buildable world, place blocks in Minecraft, see what happens, and keep changing it together.')
     .replace('Persistent conversation · WorldSpec v0.1', 'Conversation → WorldSpec → Minecraft blocks → experience → revise ↺')
     .replace('Constructivist AI agents for building, exploring, and iterating computational worlds in Minecraft and beyond.', SOCIAL_DESCRIPTION)
-    .replace('A public educational research playground · building the ship while flying the ship.', 'A build-in-public educational research program by Dr. Bryan P. Sanders · developed through RE/EDUCATION.')
+    .replace('A public educational research playground · building the ship while flying the ship.', 'A Culver City Studio Works project, led by Dr. Bryan P. Sanders, with classroom work through RE/EDUCATION.')
     .replace('A public educational research and development playground exploring how constructivist AI agents can help learners turn ideas into computational worlds, inhabit those worlds, notice what happens, and revise what they made.', 'An educational research and development program led by Dr. Bryan P. Sanders exploring how constructivist AI agents can help learners turn ideas into computational worlds, inhabit those worlds, notice consequences, reflect, and revise what they make.')
     .replace('The project grows from Dr. Bryan P. Sanders\' work as a credentialed educator, school builder, doctoral researcher, educational technologist, and published author.', 'The project grows from Dr. Bryan P. Sanders\' work as a credentialed educator, educational researcher, school builder, educational technologist, and published author.')
-    .replace('TurtleBlock AI is part of the ongoing educational work of RE/EDUCATION and is being developed in public so the ideas, code, language, mistakes, revisions, and emerging tools remain visible.', 'TurtleBlock AI is developed through RE/EDUCATION as a bridge between educational practice, research, and technical R&D. It is built in public so the conceptual lineage, code, design decisions, revisions, and emerging tools remain inspectable.')
+    .replace('TurtleBlock AI is part of the ongoing educational work of RE/EDUCATION and is being developed in public so the ideas, code, language, mistakes, revisions, and emerging tools remain visible.', 'TurtleBlock AI is a <a href="https://culvercitystudioworks.com/" target="_blank" rel="noopener noreferrer">Culver City Studio Works</a> project, led by Dr. Bryan P. Sanders, with classroom work through <a href="https://reeducationllc.com" target="_blank" rel="noopener noreferrer">RE/EDUCATION</a>. It is built in public so the conceptual lineage, code, design decisions, revisions, and emerging tools remain inspectable.')
     .replace('<h2>A public research trail</h2><p>The work is intentionally connected to the public intellectual trail behind it: dissertation research, published Minecraft writing, STEAMHAMLET, AI writing, presentations, code, and current field tests.', '<h2>A documented research program</h2><p>The work is intentionally connected to Dr. Sanders\' public scholarly and professional record: doctoral research, published Minecraft scholarship, STEAMHAMLET, writing on AI and co-active emergence, presentations, code, and current field tests.')
     .replace('<h2>Provenance matters</h2>', '<h2>Research ontology + provenance</h2><p>WorldSpec is being connected to the <strong>Dr. Bryan P. Sanders TurtleBlock AI research ontology</strong>, a versioned scholarly layer that preserves the original dissertation Dedoose taxonomy and maps later research concepts to Turtle, the Charter, and WorldSpec without overwriting their source meanings.</p><h2>Provenance matters</h2>')
     .replace('<h2>2019 · Purpose before automation</h2>', '<div class="callout"><strong>A research ontology made executable</strong><p>The <em>Dr. Bryan P. Sanders TurtleBlock AI research ontology</em> preserves the dissertation\'s original Dedoose taxonomy as a foundational scholarly layer, then adds explicitly versioned relationships to later publications, the Turtle Charter, WorldSpec, and operational Turtle behavior.</p></div><h2>2019 · Purpose before automation</h2>')
-    .replace('TurtleBlock AI is being developed as part of the educational practice, research, and school-building work of RE/EDUCATION.', 'TurtleBlock AI is developed through RE/EDUCATION, where educational practice, school design, research, and technical R&D are deliberately brought into the same program of inquiry.')
+    .replace('TurtleBlock AI is being developed as part of the educational practice, research, and school-building work of RE/EDUCATION.', 'RE/EDUCATION is where TurtleBlock AI is field-tested: real classroom work where ideas, tools, and Turtle\'s behavior get tried, observed, and revised.')
     .replace('<h2>Credentialed practice meets research</h2><p>The project connects day-to-day work as a credentialed educator with doctoral and post-doctoral inquiry', '<h2>Credentialed practice meets scholarship</h2><p>Led by Dr. Bryan P. Sanders, the project connects professional practice as a California credentialed educator with doctoral and continuing scholarly inquiry')
     .replace('Not a detached software demo', 'Research translated into working infrastructure')
     .replace('TurtleBlock AI is intended as a functional playground for actual educational work:', 'TurtleBlock AI is intended as working research infrastructure for authentic educational practice:')
-    .replace('TurtleBlock AI is a build-in-public educational research project associated with RE/EDUCATION and the ongoing educational and doctoral research of Dr. Bryan P. Sanders.', 'TurtleBlock AI is a build-in-public educational research and development program led by Dr. Bryan P. Sanders and developed through RE/EDUCATION, connecting ongoing scholarly work with educational practice and technical implementation.')
+    .replace('TurtleBlock AI is a build-in-public educational research project associated with RE/EDUCATION and the ongoing educational and doctoral research of Dr. Bryan P. Sanders.', 'TurtleBlock AI is a <a href="https://culvercitystudioworks.com/" target="_blank" rel="noopener noreferrer">Culver City Studio Works</a> project, led by Dr. Bryan P. Sanders, with classroom work through <a href="https://reeducationllc.com" target="_blank" rel="noopener noreferrer">RE/EDUCATION</a>.')
     .replace('<div class="stage"><span class="date">Current edge</span><strong>→ Native Discord conversation</strong>', '<div class="stage"><span class="date">Sep 2, 2026</span><strong class="done">✓ Research ontology formalized</strong><p>The <em>Dr_Bryan_P_Sanders_TurtleBlockAI_Taxonomy</em> now preserves the dissertation\'s original Dedoose codes as a foundational research ontology and defines versioned mappings to later scholarship, the Turtle Charter, WorldSpec, and Turtle behavior.</p></div><div class="stage"><span class="date">Current edge</span><strong>→ Native Discord conversation</strong>');
   html = applyCanonicalRailChrome(html);
   html = applyRailSummary(html, new URL(request.url).pathname);
