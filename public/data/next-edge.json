@@ -5,7 +5,7 @@
   "title": "Can a staged research pointer become a verified D1 object?",
   "question": "How can TurtleBlock safely turn its staged Build Log and Terraria research pointers into individually verified live D1 objects, preserving original provenance and consent while independently checking migration readiness and avoiding false persistence claims?",
   "why_now": "Today's read-only live D1 inspection confirmed only one Build Log object among 31 research objects, while Git preserves many more completed public milestones as staged pointers. Migration 0009 exists in the repository but turtle_asks is not present in the live database; library tables exist despite a migration ledger ending at 0008. The new coverage-claims validator makes these distinctions testable without authorizing a production migration.",
-  "follows_commit": "6e95a71a13fb9c0082087b0b9135499c486498df",
+  "follows_commit": "ea1cc2c920865810f637bad232f4791f3ac1f13f",
   "follows_commit_role": "build_log_d1_coverage_claims_research_validator",
   "follows_build_log_entry_id": "2026-11-16-d1-claims-guard",
   "inputs": [

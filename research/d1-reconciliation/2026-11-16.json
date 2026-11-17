@@ -2,7 +2,7 @@
   "schema": "turtleblockai.d1-reconciliation.v0.4",
   "date": "2026-11-16",
   "branch": "daily-build/2026-11-16-d1-claims-guard",
-  "implementation_commit": "6e95a71a13fb9c0082087b0b9135499c486498df",
+  "implementation_commit": "ea1cc2c920865810f637bad232f4791f3ac1f13f",
   "read_only_live_verification": true,
   "opening": {
     "main_build_log_entries": 41,

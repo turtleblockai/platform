@@ -72,7 +72,7 @@
       "id": "validator",
       "type": "repo_change",
       "repo_path": "scripts/validate-build-log-d1-coverage.mjs",
-      "commit": "6e95a71a13fb9c0082087b0b9135499c486498df"
+      "commit": "ea1cc2c920865810f637bad232f4791f3ac1f13f"
     },
     {
       "id": "workflow",
@@ -278,6 +278,6 @@
     "synthetic_evidence_used_as_human": false,
     "live_write_attempted": false,
     "live_write_claimed": false,
-    "contribution_commit": "6e95a71a13fb9c0082087b0b9135499c486498df"
+    "contribution_commit": "ea1cc2c920865810f637bad232f4791f3ac1f13f"
   }
 }
