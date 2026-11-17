@@ -1,0 +1,283 @@
+{
+  "schema": "turtleblockai.daily-build-tags.v0.1",
+  "date": "2026-11-16",
+  "branch": "daily-build/2026-11-16-d1-claims-guard",
+  "capture_batch_closed": true,
+  "d1_persistence": "staged_only_no_new_write",
+  "source_signals": [
+    {
+      "source": "OpenAI",
+      "date": "2026-11-13",
+      "title": "Our first phase of embedded assessments",
+      "url": "https://openai.com/index/our-first-phase-of-embedded-assessments/",
+      "signal": "Independent assessors receive deep access and context.",
+      "relevance": "Evidence of checking—not self-certification—matters for architectural claims."
+    },
+    {
+      "source": "NVIDIA",
+      "date": "2026-07-30",
+      "title": "Four Ways to Deploy More Secure AI Agents",
+      "url": "https://developer.nvidia.com/blog/four-ways-to-deploy-more-secure-ai-agents/",
+      "signal": "Agent access controls and sandbox boundaries.",
+      "relevance": "Keep read and write authorization separate."
+    },
+    {
+      "source": "Minecraft Education",
+      "date": "2026-10-13",
+      "title": "Velocity Prize",
+      "url": "https://education.minecraft.net/es-es/blog/launching-the-velocity-prize",
+      "signal": "Reproducible, explainable problem-solving in a world.",
+      "relevance": "Methods can be evaluated without asserting learner outcomes."
+    },
+    {
+      "source": "MIT Media Lab",
+      "date": "2026-11-02",
+      "title": "Media Lab at UIST 2026",
+      "url": "https://www.media.mit.edu/events/media-lab-uist-2026/",
+      "signal": "Human control versus automation at interface research conference.",
+      "relevance": "Scholarly/publishing gates remain human."
+    }
+  ],
+  "research_objects": [
+    {
+      "id": "question",
+      "type": "research_question",
+      "summary": "Are Git pointer coverage and live D1 identity distinguishable?"
+    },
+    {
+      "id": "candidate-migration",
+      "type": "candidate",
+      "disposition": "rejected",
+      "rationale": "Production SQL requires human gate and authorized write."
+    },
+    {
+      "id": "candidate-backfill",
+      "type": "candidate",
+      "disposition": "rejected",
+      "rationale": "Too broad; prior write access denied and still unverified."
+    },
+    {
+      "id": "candidate-runtime-memory",
+      "type": "candidate",
+      "disposition": "rejected",
+      "rationale": "No consent-grounded human provenance; prior branch unmerged."
+    },
+    {
+      "id": "selected",
+      "type": "selection",
+      "disposition": "selected",
+      "summary": "Build Log to D1 evidence-claims guard"
+    },
+    {
+      "id": "validator",
+      "type": "repo_change",
+      "repo_path": "scripts/validate-build-log-d1-coverage.mjs",
+      "commit": "ea1cc2c920865810f637bad232f4791f3ac1f13f"
+    },
+    {
+      "id": "workflow",
+      "type": "repo_change",
+      "repo_path": ".github/workflows/deploy.yml",
+      "commit": "6e95a71a13fb9c0082087b0b9135499c486498df"
+    },
+    {
+      "id": "coverage",
+      "type": "reconciliation",
+      "repo_path": "research/daily-build/2026-11-16.coverage.json",
+      "summary": "42 branch entries with an explicit status/pointer; one verified live D1 Build Log object."
+    },
+    {
+      "id": "test",
+      "type": "synthetic_evaluation",
+      "summary": "Baseline accepted, nine hostile mutations rejected by identical pure validator function."
+    },
+    {
+      "id": "d1-read",
+      "type": "live_metadata_read",
+      "summary": "31 research objects, one Build Log object, zero relationships, seven established domains, migration 0009 absent."
+    },
+    {
+      "id": "d1-write",
+      "type": "staged_gap",
+      "summary": "No D1 write attempted or persistence claimed."
+    },
+    {
+      "id": "wait",
+      "type": "wait_a_minute",
+      "summary": "Storing a pointer is not certifying a row; forming TurtleAsk is not permission to surface."
+    },
+    {
+      "id": "horizon",
+      "type": "next_edge",
+      "summary": "Can a staged research pointer become a verified D1 object?"
+    },
+    {
+      "id": "version",
+      "type": "version_judgment",
+      "summary": "Remain v0.1.0"
+    }
+  ],
+  "relationships": [
+    {
+      "from": "d1-read",
+      "predicate": "motivates",
+      "to": "selected"
+    },
+    {
+      "from": "test",
+      "predicate": "evaluates",
+      "to": "validator"
+    },
+    {
+      "from": "coverage",
+      "predicate": "preserves_unverified_gaps_for",
+      "to": "d1-write"
+    },
+    {
+      "from": "wait",
+      "predicate": "suggests",
+      "to": "horizon"
+    }
+  ],
+  "ctc_tags": [
+    {
+      "domain": "Personal Inquiry",
+      "rationale": "Future learner-authored corrections remain distinct from system reconciliation and machine-derived interpretation.",
+      "evidence_class": "system_research_only"
+    },
+    {
+      "domain": "Compelling Problem or Question",
+      "rationale": "The live-vs-staged mismatch poses an inspectable research architecture question.",
+      "evidence_class": "system_research_only"
+    },
+    {
+      "domain": "Technology as Tool to Think With",
+      "rationale": "The coverage validator turns metadata status into testable computational representation.",
+      "evidence_class": "system_research_only"
+    },
+    {
+      "domain": "Formative Demonstration of Learning",
+      "rationale": "Tests only demonstrate research infrastructure behavior, never evidence of learner learning.",
+      "evidence_class": "system_research_only"
+    },
+    {
+      "domain": "Reflection as Learning",
+      "rationale": "Opening and closing audits expose discrepancies before revision or promotion.",
+      "evidence_class": "system_research_only"
+    },
+    {
+      "domain": "Social and Cultural Critique",
+      "rationale": "Who decides a claim is verified and what is captured remains a question of authority.",
+      "evidence_class": "system_research_only"
+    },
+    {
+      "domain": "Sharing and Collaborating",
+      "rationale": "Human review and contestable provenance are required for shared research data.",
+      "evidence_class": "system_research_only"
+    }
+  ],
+  "ontology_tags": [
+    {
+      "concept": "shared_democracy",
+      "layer": "original_dedoose",
+      "rationale": "Human decision-makers retain authority over the validity and public meaning of a persistence claim."
+    },
+    {
+      "concept": "predetermined_outcomes",
+      "layer": "original_dedoose",
+      "rationale": "A historical pointer cannot decide live row status in advance."
+    },
+    {
+      "concept": "co_active_emergence",
+      "layer": "published_lineage",
+      "rationale": "Machine-generated reconciliation remains revisable by human review."
+    },
+    {
+      "concept": "possible_possibles",
+      "layer": "published_lineage",
+      "rationale": "Missing rows remain a research possibility rather than an automatic migration order."
+    },
+    {
+      "concept": "provenance_aware_retrieval",
+      "layer": "operational_turtle",
+      "rationale": "Repository source identity and verified live database identity must remain distinguishable."
+    }
+  ],
+  "emergent_tags": [
+    "build_log_d1_coverage",
+    "unverified_persistence",
+    "migration_schema_drift",
+    "turtle_ask_unapplied",
+    "staging_vs_live",
+    "synthetic_hostile_mutation"
+  ],
+  "reconciliation_findings": [
+    {
+      "kind": "opening",
+      "count": 41,
+      "basis": "research/daily-build/2026-10-31.coverage.json"
+    },
+    {
+      "kind": "live",
+      "research_objects": 31,
+      "build_log_objects": 1,
+      "ctc_domains": 7,
+      "terraria_habitats": 2,
+      "turtle_asks_table": false,
+      "migration_rows": 8
+    },
+    {
+      "kind": "closing",
+      "count": 42,
+      "uncovered": [],
+      "write_persisted": false,
+      "manifest": "research/daily-build/2026-11-16.coverage.json"
+    }
+  ],
+  "wait_a_minute": {
+    "evidence": [
+      "research/D1_RECONCILIATION.md",
+      "research/TURTLE_ASK.md",
+      "scripts/validate-build-log-d1-coverage.mjs",
+      "research/d1-reconciliation/2026-11-16.json"
+    ],
+    "overlap": "Representing a possibility is not authorization to treat it as present fact.",
+    "uncertainty": "Analogy is conceptual; live D1 and consent requirements need independent human review.",
+    "disposition": [
+      "relationship",
+      "test_candidate",
+      "human_review"
+    ]
+  },
+  "uncaptured_observations": [
+    {
+      "observation": "Only one Build Log research object is live today; historical pointer coverage does not imply D1 row coverage.",
+      "status": "staged_gap"
+    },
+    {
+      "observation": "Migration ledger ends at 0008 while library tables seeded later are present; application history needs independent explanation.",
+      "status": "open"
+    },
+    {
+      "observation": "Live turtle_asks table is absent even though migration 0009 exists in Git; no runtime TurtleAsk claims are justified.",
+      "status": "open"
+    },
+    {
+      "observation": "No new authored CTC domain proposed.",
+      "status": "held"
+    }
+  ],
+  "provenance": {
+    "actor": "machine_synthesis_under_human_research_direction",
+    "model_family": "GPT-6",
+    "privacy_class": "public",
+    "evidence_class": "read_only_database_metadata_and_synthetic_contract_tests",
+    "human_scholarly_authority": "final",
+    "consent_safe_try_it_used": false,
+    "private_raw_dialogue_used": false,
+    "synthetic_evidence_used_as_human": false,
+    "live_write_attempted": false,
+    "live_write_claimed": false,
+    "contribution_commit": "ea1cc2c920865810f637bad232f4791f3ac1f13f"
+  }
+}
