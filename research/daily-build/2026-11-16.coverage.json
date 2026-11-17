@@ -1,0 +1,275 @@
+{
+  "schema": "turtleblockai.build-log-coverage.v0.6",
+  "date": "2026-11-16",
+  "branch": "daily-build/2026-11-16-d1-claims-guard",
+  "d1_persistence": "staged_only_no_new_write",
+  "historical_status_not_current_assertion": true,
+  "opening_sweep": {
+    "build_log_entry_count": 41,
+    "basis": "research/daily-build/2026-10-31.coverage.json",
+    "uncovered_entry_ids": [],
+    "notes": "All 41 canonical main Build Log IDs have historical pointer/status classifications, not 41 verified live D1 research rows. Another Oct 31 research branch is unmerged."
+  },
+  "coverage": [
+    [
+      "2026-11-16-d1-claims-guard",
+      "staged_canonical_pointer",
+      "research/daily-build/2026-11-16.tags.json"
+    ],
+    [
+      "2026-10-31-refusal-scope-regression",
+      "represented_by_canonical_pointer",
+      "research/daily-build/2026-10-31.tags.json"
+    ],
+    [
+      "2026-10-27-publication-predecessor-guard",
+      "represented_by_canonical_pointer",
+      "research/daily-build/2026-10-27.tags.json"
+    ],
+    [
+      "2026-10-22-pce-refusal-object-scope",
+      "represented_by_canonical_pointer",
+      "research/daily-build/2026-10-22-sunshine-pce.md"
+    ],
+    [
+      "2026-10-21-pce-closure-and-return",
+      "represented_by_canonical_pointer",
+      "research/daily-build/2026-10-21-sunshine-pce.md"
+    ],
+    [
+      "2026-10-19-pce-elicitation-provenance",
+      "represented_by_canonical_pointer",
+      "research/daily-build/2026-10-19-sunshine-pce.md"
+    ],
+    [
+      "2026-10-18-pce-social-navigation-scope",
+      "represented_by_canonical_pointer",
+      "research/daily-build/2026-10-18-sunshine-pce.md"
+    ],
+    [
+      "2026-10-16-pce-question-origin",
+      "represented_by_canonical_pointer",
+      "research/daily-build/2026-10-16-sunshine-pce.md"
+    ],
+    [
+      "2026-10-14-pce-finish-lesson-open-question",
+      "represented_by_canonical_pointer",
+      "research/daily-build/2026-10-14-sunshine-pce.md"
+    ],
+    [
+      "2026-10-08-publication-reconciliation",
+      "represented_by_canonical_pointer",
+      "research/d1-reconciliation/2026-10-08-publication-coverage.json"
+    ],
+    [
+      "2026-10-07-publication-state-validator",
+      "represented_by_canonical_pointer",
+      "scripts/validate-publication-state.mjs"
+    ],
+    [
+      "2026-10-05-conflict-explanation-standing-ci",
+      "represented_by_canonical_pointer",
+      "research/daily-build/2026-10-05.tags.json"
+    ],
+    [
+      "2026-10-04-conflict-explanation-repeatable-command",
+      "represented_by_canonical_pointer",
+      "package.json"
+    ],
+    [
+      "2026-10-02-conflict-explanation-regression",
+      "safely_backfilled",
+      "research/daily-build/2026-10-05.tags.json"
+    ],
+    [
+      "2026-10-02-library-catalog-34",
+      "historically_verified_live_d1",
+      "research/d1-reconciliation/2026-10-02-library-0033-0034.json"
+    ],
+    [
+      "2026-10-01-pce-persistence-salience",
+      "represented_by_canonical_pointer",
+      "research/daily-build/2026-10-01-sunshine-pce.tags.json"
+    ],
+    [
+      "2026-10-01-initiative-authority-temporary-hold",
+      "represented_by_canonical_pointer",
+      "research/daily-build/2026-10-01.tags.json"
+    ],
+    [
+      "2026-09-30-initiative-authority-scope-conflict-validator",
+      "represented_by_canonical_pointer",
+      "research/daily-build/2026-09-30.tags.json"
+    ],
+    [
+      "2026-09-30-library-catalog-28",
+      "represented_in_d1",
+      "research/d1-reconciliation/2026-09-29-library-0026-0028.json"
+    ],
+    [
+      "2026-09-29-initiative-authority-scope-conflict",
+      "represented_by_canonical_pointer",
+      "research/daily-build/2026-09-29-cycle.md"
+    ],
+    [
+      "2026-09-28-initiative-authority-session-boundary",
+      "represented_by_canonical_pointer",
+      "research/daily-build/2026-09-28.coverage.json"
+    ],
+    [
+      "2026-09-28-build-log-d1-coverage-repair",
+      "represented_by_canonical_pointer",
+      "research/daily-build/2026-09-28.tags.json"
+    ],
+    [
+      "2026-09-27-discord-conversation-provenance",
+      "represented_by_canonical_pointer",
+      "research/daily-build/2026-09-27.tags.json"
+    ],
+    [
+      "2026-09-27-initiative-authority-regression",
+      "represented_by_canonical_pointer",
+      "research/daily-build/2026-09-27.tags.json"
+    ],
+    [
+      "2026-09-26-initiative-authority",
+      "represented_by_canonical_pointer",
+      "research/daily-build/2026-09-26.tags.json"
+    ],
+    [
+      "2026-09-22-cross-branch-perturbation",
+      "represented_by_canonical_pointer",
+      "research/daily-build/2026-09-22.tags.json"
+    ],
+    [
+      "2026-09-18-branch-experience-comparison",
+      "represented_by_canonical_pointer",
+      "research/daily-build/2026-09-18.tags.json"
+    ],
+    [
+      "2026-09-17-human-perturbation-translation",
+      "represented_by_canonical_pointer",
+      "research/daily-build/2026-09-17.tags.json"
+    ],
+    [
+      "2026-09-17-physical-library-d1",
+      "represented_in_d1",
+      "research/d1-reconciliation/2026-09-17-library.json"
+    ],
+    [
+      "2026-09-16-wait-a-minute-build-log",
+      "represented_by_canonical_pointer",
+      "research/d1-reconciliation/2026-09-16.json"
+    ],
+    [
+      "2026-09-16-plural-foreground-regression",
+      "represented_by_canonical_pointer",
+      "research/daily-build/2026-09-16.tags.json"
+    ],
+    [
+      "2026-09-15-plural-foreground-envelope",
+      "represented_by_canonical_pointer",
+      "research/daily-build/2026-09-15.tags.json"
+    ],
+    [
+      "2026-09-12-d1-reconciliation-terraria-try",
+      "represented_by_canonical_pointer",
+      "research/d1-reconciliation/2026-09-12.json"
+    ],
+    [
+      "2026-09-12-selective-attention-envelope",
+      "represented_by_canonical_pointer",
+      "research/daily-build/2026-09-12.tags.json"
+    ],
+    [
+      "2026-09-11-human-tamagotchi-turtle-ask",
+      "represented_by_canonical_pointer",
+      "migrations/0009_human_tamagotchi_terrarium_and_turtle_ask.sql"
+    ],
+    [
+      "2026-09-11-world-evidence-envelope",
+      "represented_by_canonical_pointer",
+      "research/daily-build/2026-09-11.tags.json"
+    ],
+    [
+      "2026-09-10-learner-verification-card",
+      "represented_by_canonical_pointer",
+      "research/daily-build/2026-09-10.tags.json"
+    ],
+    [
+      "2026-09-09-next-edge-validator",
+      "represented_by_canonical_pointer",
+      "research/daily-build/2026-09-09.tags.json"
+    ],
+    [
+      "2026-09-08-next-edge-horizon",
+      "represented_by_canonical_pointer",
+      "research/daily-build/2026-09-08-next-edge.tags.json"
+    ],
+    [
+      "2026-09-08-www-direct-asset-repair",
+      "represented_by_canonical_pointer",
+      "research/daily-build/2026-09-08-www-repair.tags.json"
+    ],
+    [
+      "2026-09-08-turtle-terraria-tagging",
+      "represented_by_canonical_pointer",
+      "migrations/0008_seed_terraria_and_autobuild_tags.sql"
+    ],
+    [
+      "2026-09-08-daily-coactive-loop",
+      "represented_by_canonical_pointer",
+      "migrations/0007_turtle_terraria_and_exhaustive_tagging.sql"
+    ]
+  ],
+  "live_d1_observation": {
+    "read_verified": true,
+    "observed_date": "2026-11-16",
+    "queries": [
+      "SELECT COUNT(*) FROM research_objects",
+      "SELECT COUNT(*) FROM research_objects WHERE object_type='build_log_entry'",
+      "SELECT name FROM sqlite_master WHERE type='table' AND name='turtle_asks'",
+      "SELECT * FROM d1_migrations ORDER BY id DESC LIMIT 8"
+    ],
+    "research_objects": 31,
+    "build_log_objects": 1,
+    "relationships": 0,
+    "ctc_tags": 11,
+    "ontology_tags": 9,
+    "established_ctc_domains": 7,
+    "terraria_runs": 0,
+    "live_terraria_habitats": 2,
+    "library_sources": 34,
+    "library_special_notes": 92,
+    "migration_ledger_rows": 8,
+    "live_write_attempted": false,
+    "live_write_persisted": false
+  },
+  "migration_gaps": [
+    {
+      "repo_migration": "migrations/0009_human_tamagotchi_terrarium_and_turtle_ask.sql",
+      "table_name": "turtle_asks",
+      "status": "absent_live",
+      "observed_live_table": false,
+      "recorded_in_ledger": false,
+      "read_verified": true,
+      "disposition": "stage_for_human_review",
+      "rationale": "Migration exists in Git but live D1 sqlite_master and migration ledger do not show its TurtleAsk table; runtime implementation must not presume it."
+    }
+  ],
+  "closing_sweep": {
+    "build_log_entry_count": 42,
+    "uncovered_entry_ids": [],
+    "staged_new_entries": 1,
+    "new_live_rows_verified": 0,
+    "notes": "The 42-entry branch Build Log is completely covered by staging/historical pointers, while the live D1 count of Build Log objects remains 1; no live write was attempted."
+  },
+  "gaps": [
+    "41 of 42 branch Build Log IDs cannot be individually affirmed as live D1 Build Log research objects from this snapshot.",
+    "TurtleAsk migration 0009 and third habitat are repository concepts but not live D1 tables/rows.",
+    "Library tables exist and contain 34 sources / 92 special notes, though d1_migrations ledger has only eight records; no explanation inferred.",
+    "The Oct 31 deictic-uncertainty branch is ahead of main but unmerged, and has separate staged research state."
+  ],
+  "capture_batch_closed": true,
+  "privacy_boundary": "No private dialogue or consent-absent visitor data was read or copied. Synthetic validation is not human learning evidence."
+}

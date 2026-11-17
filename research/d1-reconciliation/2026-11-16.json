@@ -1,0 +1,163 @@
+{
+  "schema": "turtleblockai.d1-reconciliation.v0.4",
+  "date": "2026-11-16",
+  "branch": "daily-build/2026-11-16-d1-claims-guard",
+  "implementation_commit": "6e95a71a13fb9c0082087b0b9135499c486498df",
+  "read_only_live_verification": true,
+  "opening": {
+    "main_build_log_entries": 41,
+    "main_coverage_path": "research/daily-build/2026-10-31.coverage.json",
+    "existing_live_build_log_objects": 1
+  },
+  "closing": {
+    "branch_build_log_entries": 42,
+    "full_matrix_path": "research/daily-build/2026-11-16.coverage.json",
+    "uncovered": [],
+    "live_d1_write_persisted": false,
+    "live_build_log_objects": 1
+  },
+  "coverage_classification_counts": {
+    "staged_canonical_pointer": 1,
+    "represented_by_canonical_pointer": 37,
+    "safely_backfilled": 1,
+    "historically_verified_live_d1": 1,
+    "represented_in_d1": 2
+  },
+  "live_d1": {
+    "read_verified": true,
+    "observed_date": "2026-11-16",
+    "queries": [
+      "SELECT COUNT(*) FROM research_objects",
+      "SELECT COUNT(*) FROM research_objects WHERE object_type='build_log_entry'",
+      "SELECT name FROM sqlite_master WHERE type='table' AND name='turtle_asks'",
+      "SELECT * FROM d1_migrations ORDER BY id DESC LIMIT 8"
+    ],
+    "research_objects": 31,
+    "build_log_objects": 1,
+    "relationships": 0,
+    "ctc_tags": 11,
+    "ontology_tags": 9,
+    "established_ctc_domains": 7,
+    "terraria_runs": 0,
+    "live_terraria_habitats": 2,
+    "library_sources": 34,
+    "library_special_notes": 92,
+    "migration_ledger_rows": 8,
+    "live_write_attempted": false,
+    "live_write_persisted": false
+  },
+  "migration_gap": {
+    "repo_migration": "migrations/0009_human_tamagotchi_terrarium_and_turtle_ask.sql",
+    "table_name": "turtle_asks",
+    "status": "absent_live",
+    "observed_live_table": false,
+    "recorded_in_ledger": false,
+    "read_verified": true,
+    "disposition": "stage_for_human_review",
+    "rationale": "Migration exists in Git but live D1 sqlite_master and migration ledger do not show its TurtleAsk table; runtime implementation must not presume it."
+  },
+  "stage_only": {
+    "object_id": "research_object:2026-11-16-d1-claims-guard",
+    "intended_table": "research_objects",
+    "repo_path": "scripts/validate-build-log-d1-coverage.mjs",
+    "evidence_class": "synthetic_contract_test_and_read_only_schema_evidence",
+    "privacy_class": "public"
+  },
+  "staging_relationships": [
+    {
+      "from": "research_object:2026-11-16-d1-claims-guard",
+      "predicate": "audits_provenance_for",
+      "to": "build_log_entry:2026-09-08-turtle-terraria-tagging",
+      "rationale": "Only one historical Build Log object is present in live D1; matrix records all others without inventing them."
+    },
+    {
+      "from": "research_object:2026-11-16-d1-claims-guard",
+      "predicate": "detects_unapplied_migration_for",
+      "to": "repo_file:migrations/0009_human_tamagotchi_terrarium_and_turtle_ask.sql",
+      "rationale": "Live turtle_asks table absent and ledger ends at 0008."
+    }
+  ],
+  "staged_ctc_tags": [
+    {
+      "domain": "Personal Inquiry",
+      "rationale": "Future learner-authored corrections remain distinct from system reconciliation and machine-derived interpretation."
+    },
+    {
+      "domain": "Compelling Problem or Question",
+      "rationale": "The live-vs-staged mismatch poses an inspectable research architecture question."
+    },
+    {
+      "domain": "Technology as Tool to Think With",
+      "rationale": "The coverage validator turns metadata status into testable computational representation."
+    },
+    {
+      "domain": "Formative Demonstration of Learning",
+      "rationale": "Tests only demonstrate research infrastructure behavior, never evidence of learner learning."
+    },
+    {
+      "domain": "Reflection as Learning",
+      "rationale": "Opening and closing audits expose discrepancies before revision or promotion."
+    },
+    {
+      "domain": "Social and Cultural Critique",
+      "rationale": "Who decides a claim is verified and what is captured remains a question of authority."
+    },
+    {
+      "domain": "Sharing and Collaborating",
+      "rationale": "Human review and contestable provenance are required for shared research data."
+    }
+  ],
+  "staged_ontology_tags": [
+    {
+      "concept_key": "provenance_aware_retrieval",
+      "rationale": "A Git pointer and a verified D1 row are distinct retrieval evidence with different provenance."
+    },
+    {
+      "concept_key": "co_active_emergence",
+      "rationale": "A machine-generated reconciliation proposal remains subject to human scholarly review before promotion."
+    },
+    {
+      "concept_key": "shared_democracy",
+      "rationale": "Governance of research capture and correction must not become a silent machine decision."
+    },
+    {
+      "concept_key": "predetermined_outcomes",
+      "rationale": "Historical representation cannot be presumed to prove current live persistence."
+    },
+    {
+      "concept_key": "possible_possibles",
+      "rationale": "The staging gap permits future safe approaches without forcing a production backfill."
+    }
+  ],
+  "emergent_tags": [
+    "live_d1_provenance_gap",
+    "full_build_log_sweep",
+    "migration_ledger_mismatch",
+    "turtle_ask_not_applied",
+    "synthetic_claim_regression"
+  ],
+  "material_uncaptured_observations": [
+    {
+      "observation": "Only one Build Log research object is live today; historical pointer coverage does not imply D1 row coverage.",
+      "status": "staged_gap"
+    },
+    {
+      "observation": "Migration ledger ends at 0008 while library tables seeded later are present; application history needs independent explanation.",
+      "status": "open"
+    },
+    {
+      "observation": "Live turtle_asks table is absent even though migration 0009 exists in Git; no runtime TurtleAsk claims are justified.",
+      "status": "open"
+    },
+    {
+      "observation": "No new authored CTC domain proposed.",
+      "status": "held"
+    }
+  ],
+  "write": {
+    "attempted": false,
+    "persisted": false,
+    "reason": "Prior documented Cloudflare D1 write permission denial. Current task commits research-only staging on a review branch; never infer live writes from local or Git success."
+  },
+  "capture_batch_closed": true
+}

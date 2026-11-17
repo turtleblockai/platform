@@ -1,115 +1,121 @@
 {
   "version": "1.0",
-  "updated_at": "2026-10-31",
+  "updated_at": "2026-11-16",
   "status": "open_question",
-  "title": "Can “not that” remain uncertain?",
-  "question": "When a learner rejects something with deictic or partial language — “not that,” “keep this part,” “no, the other one” — how can Turtle bind the refusal to the smallest defensible object using local context while leaving unresolved ambiguity unresolved instead of inventing a broader intent?",
-  "why_now": "The Refusal Scope Envelope can now preserve an exact refused object and scope across later turns, but it assumes the target object is already known. Interaction Capture explicitly notes that deictic language is uninterpretable without local conversational and world context. The next edge therefore moves from persistence to target resolution: how to identify the smallest defensible object without converting uncertainty into machine-authored meaning.",
-  "follows_commit": "d6c8a78239a645d7a417e010f3cb7a75a261ffd4",
-  "follows_commit_role": "completed_refusal_scope_envelope_regression",
-  "follows_build_log_entry_id": "2026-10-31-refusal-scope-regression",
+  "title": "Can a staged research pointer become a verified D1 object?",
+  "question": "How can TurtleBlock safely turn its staged Build Log and Terraria research pointers into individually verified live D1 objects, preserving original provenance and consent while independently checking migration readiness and avoiding false persistence claims?",
+  "why_now": "Today's read-only live D1 inspection confirmed only one Build Log object among 31 research objects, while Git preserves many more completed public milestones as staged pointers. Migration 0009 exists in the repository but turtle_asks is not present in the live database; library tables exist despite a migration ledger ending at 0008. The new coverage-claims validator makes these distinctions testable without authorizing a production migration.",
+  "follows_commit": "6e95a71a13fb9c0082087b0b9135499c486498df",
+  "follows_commit_role": "build_log_d1_coverage_claims_research_validator",
+  "follows_build_log_entry_id": "2026-11-16-d1-claims-guard",
   "inputs": [
-    "worldspec/tests/refusal-scope-envelope-cases.json",
-    "scripts/validate-refusal-scope-envelope.mjs",
-    "worldspec/INTERACTION_CAPTURE.md",
-    "worldspec/schema/initiative-authority-envelope.schema.json",
-    "research/daily-build/2026-10-22-sunshine-pce.md",
-    "research/daily-build/2026-10-31.md",
-    "research/d1-reconciliation/2026-10-31.json"
+    "scripts/validate-build-log-d1-coverage.mjs",
+    "research/daily-build/2026-11-16.coverage.json",
+    "research/d1-reconciliation/2026-11-16.json",
+    "research/D1_RECONCILIATION.md",
+    "research/TURTLE_TERRARIA.md",
+    "worldspec/RESEARCH_ONTOLOGY_CATALOG.md"
   ],
   "source_classes_consulted": [
-    "live_repository_and_build_log",
-    "live_d1_read_and_write_permission_boundary",
-    "authorized_primary_project_sources",
-    "external_primary_source_hunt",
+    "live_repository_full_build_log_and_staged_branches",
+    "verified_read_only_live_d1_queries",
+    "openai_primary_source_2026_11_13",
+    "nvidia_primary_agent_security_source",
+    "minecraft_education_primary_classroom_source",
+    "mit_media_lab_primary_human_control_source",
     "wait_a_minute_cross_connection"
   ],
   "possible_possibles": [
-    "Represent multiple candidate refused-object pointers with explicit uncertainty until later context resolves them.",
-    "Use local WorldSpec and recent world-state references to narrow the target without copying raw dialogue into generalized memory.",
-    "Require learner clarification only when the remaining ambiguity would materially change what Turtle suppresses or resurfaces."
+    "Backfill only public repository research objects with verified canonical pointers and read-after-write receipts, once human-gated D1 write access is available.",
+    "Compare schema/migration inventory with actual live sqlite_master and migration ledger before any TurtleAsk research-event deployment.",
+    "Treat staged Git coverage as discoverability, not as evidence that an object or relationship persisted in D1."
   ],
-  "x_factor": "whoooo knooooowwwssssssssssss — maybe the honest representation of “not that” is temporarily a little cloud with two arrows, not a falsely precise memory.",
+  "x_factor": "whoooo knooooowwwssssssssssss — perhaps a research database first needs to admit what it cannot remember before Turtle can trust its memory.",
   "constraints": [
-    "Do not infer a broader task, purpose, identity, or enduring preference from a local refusal.",
-    "No private raw dialogue duplication merely to resolve deixis.",
-    "World/context evidence may narrow a target but does not acquire final authority over human meaning.",
-    "Synthetic examples remain synthetic and cannot be treated as human evidence.",
-    "Human scholarly judgment and learner correction remain authoritative."
+    "Preserve the seven Sanders-authored CTC domains and human scholarly authority.",
+    "No private dialogue duplication, consent bypass, fabricated live writes, or inferred human meaning.",
+    "No synthetic-to-human provenance conversion or TurtleAsk interruption authority.",
+    "No production migration, deployment, autonomous self-modification, or version inflation."
   ],
   "ontology_mappings": [
     {
-      "concept_key": "freedom_and_individuality",
-      "rationale": "The learner must remain able to correct what Turtle thinks was refused."
-    },
-    {
-      "concept_key": "problem_posing_education",
-      "rationale": "Ambiguity remains an inspectable problem rather than being prematurely closed."
-    },
-    {
-      "concept_key": "predetermined_outcomes",
-      "rationale": "The system must not let an uncertain referent determine future suppression."
-    },
-    {
-      "concept_key": "shared_democracy",
-      "rationale": "Human meaning and machine interpretation remain distinguishable and negotiable."
+      "concept_key": "provenance_aware_retrieval",
+      "rationale": "A Git pointer and a verified D1 row are distinct retrieval evidence with different provenance."
     },
     {
       "concept_key": "co_active_emergence",
-      "rationale": "Later human correction can reshape the machine's interpretation without erasing the earlier trace."
+      "rationale": "A machine-generated reconciliation proposal remains subject to human scholarly review before promotion."
     },
     {
-      "concept_key": "provenance_aware_retrieval",
-      "rationale": "Candidate targets need source/world pointers and uncertainty rather than copied dialogue."
+      "concept_key": "shared_democracy",
+      "rationale": "Governance of research capture and correction must not become a silent machine decision."
+    },
+    {
+      "concept_key": "predetermined_outcomes",
+      "rationale": "Historical representation cannot be presumed to prove current live persistence."
+    },
+    {
+      "concept_key": "possible_possibles",
+      "rationale": "The staging gap permits future safe approaches without forcing a production backfill."
     }
   ],
   "ctc_mappings": [
     {
       "domain": "Personal Inquiry",
-      "rationale": "The learner retains ownership over what their refusal means."
+      "rationale": "Future learner-authored corrections remain distinct from system reconciliation and machine-derived interpretation."
     },
     {
       "domain": "Compelling Problem or Question",
-      "rationale": "An unresolved referent becomes a legitimate inquiry state instead of a guessed answer."
+      "rationale": "The live-vs-staged mismatch poses an inspectable research architecture question."
     },
     {
       "domain": "Technology as Tool to Think With",
-      "rationale": "Candidate target representations can make ambiguity inspectable."
+      "rationale": "The coverage validator turns metadata status into testable computational representation."
+    },
+    {
+      "domain": "Formative Demonstration of Learning",
+      "rationale": "Tests only demonstrate research infrastructure behavior, never evidence of learner learning."
     },
     {
       "domain": "Reflection as Learning",
-      "rationale": "Learner correction or later reinterpretation can revise the target."
+      "rationale": "Opening and closing audits expose discrepancies before revision or promotion."
     },
     {
       "domain": "Social and Cultural Critique",
-      "rationale": "Who gets to decide what a refusal means is an authority question."
+      "rationale": "Who decides a claim is verified and what is captured remains a question of authority."
     },
     {
       "domain": "Sharing and Collaborating",
-      "rationale": "Clarification and correction remain collaborative rather than machine-final."
+      "rationale": "Human review and contestable provenance are required for shared research data."
     }
   ],
   "uncaptured_residue": [
     {
-      "observation": "World-state evidence may narrow a deictic reference but cannot prove the learner's intended referent.",
+      "observation": "Only one Build Log research object is live today; historical pointer coverage does not imply D1 row coverage.",
+      "status": "staged_gap"
+    },
+    {
+      "observation": "Migration ledger ends at 0008 while library tables seeded later are present; application history needs independent explanation.",
       "status": "open"
     },
     {
-      "observation": "The smallest defensible target may still be too broad or too narrow from the learner's perspective.",
+      "observation": "Live turtle_asks table is absent even though migration 0009 exists in Git; no runtime TurtleAsk claims are justified.",
       "status": "open"
     },
     {
-      "observation": "No new CTC domain is proposed.",
+      "observation": "No new authored CTC domain proposed.",
       "status": "held"
     }
   ],
   "provenance": {
     "actor": "machine_synthesis_under_human_research_direction",
-    "evidence_class": "repository_records_live_d1_read_project_primary_sources_and_public_primary_sources",
+    "evidence_class": "read_only_live_d1_and_repository_plus_primary_sources",
     "privacy_class": "public",
-    "selection_method": "closing_reconciliation_plus_wait_a_minute_plus_authorized_source_hunt",
+    "selection_method": "full_coverage_read_and_source_hunt_then_one_research_validator",
     "consent_safe_try_it_used": false,
-    "d1_write_status": "permission_denied_7500_staged_in_git"
+    "synthetic_as_human": false,
+    "d1_write_status": "staged_only_no_new_write",
+    "github_state": "review_branch_not_production"
   },
   "selected_by": "daily_build_synthesis_subject_to_human_override",
   "scope": "system_research_horizon"

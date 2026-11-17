@@ -91,8 +91,8 @@ This keeps the open question separate from the historical Build Log. Daily build
 
 ## Current theoretical question
 
-**Can “not that” remain uncertain?**
+**Can a staged research pointer become a verified D1 object?**
 
-When a learner rejects something with deictic or partial language — “not that,” “keep this part,” “no, the other one” — how can Turtle bind the refusal to the smallest defensible object using local context while leaving unresolved ambiguity unresolved instead of inventing a broader intent?
+How can TurtleBlock safely turn its staged Build Log and Terraria research pointers into individually verified live D1 objects, preserving original provenance and consent while independently checking migration readiness and avoiding false persistence claims?
 
-This horizon follows the October 31 Refusal Scope Envelope regression (commit `d6c8a78239a645d7a417e010f3cb7a75a261ffd4`). The completed work now preserves an exact refused object and scope; the open question is how Turtle knows which object the learner meant when natural language is incomplete. Interaction Capture already treats deixis as context-dependent, so the next research move should preserve candidate pointers and uncertainty rather than manufacture precision. No deployed deictic-resolution behavior is claimed. The public machine-readable source of truth is `public/data/next-edge.json`.
+This research horizon follows the November 16 Build Log–D1 evidence-claims validator (implementation commit `6e95a71a13fb9c0082087b0b9135499c486498df`). It explicitly distinguishes 42 staged/historical branch Build Log pointers from the single observed live D1 Build Log research row and treats migration 0009's absent TurtleAsk table as an unapplied schema boundary. The possible next steps require independent read-after-write evidence and human authorization. No live D1 write, product promotion, or runtime TurtleAsk behavior is claimed. The public machine-readable source of truth is `public/data/next-edge.json`.

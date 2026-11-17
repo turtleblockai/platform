@@ -17,6 +17,17 @@ export interface BuildLogEntry {
 // through the Worker. Open inquiry belongs in Next Edge, not in completed entries.
 export const BUILD_LOG_ENTRIES: BuildLogEntry[] = [
   {
+    id: "2026-11-16-d1-claims-guard",
+    date: "Nov 16, 2026",
+    title: "Build Log ↔ D1 claims now have a testable evidence boundary",
+    body: "An independent research-only coverage validator now checks the entire Build Log against dated canonical pointers and refuses unsupported live-D1 claims. Its base contract and nine hostile mutations passed in-memory validation. Fresh read-only D1 found 31 research objects but only one Build Log object; migration 0009's turtle_asks table is absent, while the library exists despite an eight-row migration ledger. The 42-entry branch matrix and all gaps are staged, not represented as D1 writes. No production deployment or learner-outcome claim. Product remains v0.1.0.",
+    done: true,
+    waitAMinute: {
+      summary: "A Git pointer is not a live D1 row, just as forming TurtleAsk does not grant permission to surface it. Both boundaries need external verification before a possibility becomes an authorized fact.",
+      evidence: ["research/D1_RECONCILIATION.md", "research/TURTLE_ASK.md", "scripts/validate-build-log-d1-coverage.mjs", "research/d1-reconciliation/2026-11-16.json"]
+    }
+  },
+  {
     id: "2026-10-31-refusal-scope-regression",
     date: "Oct 31, 2026",
     title: "A learner's “no” now has an exact object and scope in the regression suite",
@@ -402,10 +413,10 @@ export const BUILD_LOG_ENTRIES: BuildLogEntry[] = [
 ];
 
 export const NEXT_EDGE_FALLBACK = {
-  date: "Oct 31, 2026",
-  title: "Can “not that” remain uncertain?",
-  question: "When a learner rejects something with deictic or partial language — “not that,” “keep this part,” “no, the other one” — how can Turtle bind the refusal to the smallest defensible object using local context while leaving unresolved ambiguity unresolved instead of inventing a broader intent?",
-  xFactor: "whoooo knooooowwwssssssssssss — maybe the honest representation of “not that” is temporarily a little cloud with two arrows, not a falsely precise memory."
+  date: "Nov 16, 2026",
+  title: "Can a staged research pointer become a verified D1 object?",
+  question: "How can TurtleBlock safely turn its staged Build Log and Terraria research pointers into individually verified live D1 objects, preserving original provenance and consent while independently checking migration readiness and avoiding false persistence claims?",
+  xFactor: "whoooo knooooowwwssssssssssss — perhaps a research database first needs to admit what it cannot remember before Turtle can trust its memory."
 };
 
 function escapeHtml(value: string) {
