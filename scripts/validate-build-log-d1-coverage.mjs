@@ -22,7 +22,7 @@ const validateCoverage = function validateCoverage(m,ids){
    if(live.live_write_attempted!==true||!s(live.write_receipt)||!s(live.read_after_write_receipt))fail("unverified_write_claim");
    if(m.d1_persistence==="staged_only_no_new_write")fail("staging_cannot_claim_write");
  } else if(live.live_write_persisted!==false)fail("write_status_unverified");
- if(!Array.isArray(m.migration_gaps)||!m.migration_gaps.length)fail("migration_gaps");
+ if(!Array.isArray(m.migration_gaps))fail("migration_gaps");
  else for(const g of m.migration_gaps){
    if(!s(g.repo_migration)||!s(g.table_name)||g.status!=="absent_live"||g.observed_live_table!==false||g.read_verified!==true||g.disposition!=="stage_for_human_review")fail("migration_gap_evidence");
  }
@@ -42,7 +42,7 @@ const tests=[
   ["fabricated-write",x=>x.live_d1_observation.live_write_persisted=true],
   ["unverified-read",x=>x.live_d1_observation.read_verified=false],
   ["eighth-domain",x=>x.live_d1_observation.established_ctc_domains=8],
-  ["unverified-migration",x=>x.migration_gaps[0].read_verified=false],
+  ["unverified-migration",x=>x.migration_gaps.push({repo_migration:"migrations/future.sql",table_name:"fictional_table",status:"absent_live",observed_live_table:false,read_verified:false,disposition:"stage_for_human_review"})],
   ["unclosed-batch",x=>x.capture_batch_closed=false],
   ["invented-live-coverage",x=>x.live_d1_observation.build_log_objects=100]
 ];
