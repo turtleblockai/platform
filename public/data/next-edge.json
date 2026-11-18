@@ -1,121 +1,116 @@
 {
   "version": "1.0",
-  "updated_at": "2026-11-16",
+  "updated_at": "2026-11-17",
   "status": "open_question",
-  "title": "Can a staged research pointer become a verified D1 object?",
-  "question": "How can TurtleBlock safely turn its staged Build Log and Terraria research pointers into individually verified live D1 objects, preserving original provenance and consent while independently checking migration readiness and avoiding false persistence claims?",
-  "why_now": "Today's read-only live D1 inspection confirmed only one Build Log object among 31 research objects, while Git preserves many more completed public milestones as staged pointers. Migration 0009 exists in the repository but turtle_asks is not present in the live database; library tables exist despite a migration ledger ending at 0008. The new coverage-claims validator makes these distinctions testable without authorizing a production migration.",
-  "follows_commit": "ea1cc2c920865810f637bad232f4791f3ac1f13f",
-  "follows_commit_role": "build_log_d1_coverage_claims_research_validator",
-  "follows_build_log_entry_id": "2026-11-16-d1-claims-guard",
+  "title": "What would count as a real D1 readback receipt?",
+  "question": "After an explicitly human-authorized public research-object backfill, what independent read-after-write evidence would establish that its identity, canonical Git pointer, provenance, CTC/ontology tags and relationships actually persisted, while treating unapplied TurtleAsk migrations and absent human observations as unknown rather than negative evidence?",
+  "why_now": "Today's bounded preflight guard makes the conditions for human review inspectable, but its 15 synthetic cases do not grant D1 write authority or prove persistence. A live read shows the migration ledger through 0008, the missing TurtleAsk table, and one live Build Log object versus a 43-entry staged branch history.",
+  "follows_commit": "ede7b6416c3e7530bb117b5f81830934c8667a6a",
+  "follows_commit_role": "d1_backfill_preflight_synthetic_research_guard",
+  "follows_build_log_entry_id": "2026-11-17-d1-preflight-boundary",
   "inputs": [
-    "scripts/validate-build-log-d1-coverage.mjs",
-    "research/daily-build/2026-11-16.coverage.json",
-    "research/d1-reconciliation/2026-11-16.json",
+    "scripts/validate-d1-backfill-preflight.mjs",
+    "research/fixtures/2026-11-17-d1-backfill-preflight-cases.json",
+    "research/daily-build/2026-11-17.coverage.json",
+    "research/d1-reconciliation/2026-11-17.json",
     "research/D1_RECONCILIATION.md",
-    "research/TURTLE_TERRARIA.md",
-    "worldspec/RESEARCH_ONTOLOGY_CATALOG.md"
+    "research/TURTLE_ASK.md"
   ],
   "source_classes_consulted": [
-    "live_repository_full_build_log_and_staged_branches",
-    "verified_read_only_live_d1_queries",
-    "openai_primary_source_2026_11_13",
-    "nvidia_primary_agent_security_source",
+    "live_repository_full_build_log_and_project_rules",
+    "verified_read_only_live_d1_metadata",
+    "openai_primary_assessment_source",
+    "nvidia_primary_agent_evaluation_source",
     "minecraft_education_primary_classroom_source",
-    "mit_media_lab_primary_human_control_source",
+    "mit_media_lab_primary_human_ai_source",
     "wait_a_minute_cross_connection"
   ],
   "possible_possibles": [
-    "Backfill only public repository research objects with verified canonical pointers and read-after-write receipts, once human-gated D1 write access is available.",
-    "Compare schema/migration inventory with actual live sqlite_master and migration ledger before any TurtleAsk research-event deployment.",
-    "Treat staged Git coverage as discoverability, not as evidence that an object or relationship persisted in D1."
+    "Specify a read-after-write proof that matches canonical source, row identity, evidence class, actor and tags without copying raw private content.",
+    "Keep migration readiness, write authorization and human scholarly approval separately auditable.",
+    "Represent a missing observation channel as unknown—not as a human refusal, consent, or lack of participation."
   ],
-  "x_factor": "whoooo knooooowwwssssssssssss — perhaps a research database first needs to admit what it cannot remember before Turtle can trust its memory.",
+  "x_factor": "whoooo knooooowwwssssssssssss — perhaps a database should prove exactly what it remembers, and also admit which questions it never had the means to ask.",
   "constraints": [
-    "Preserve the seven Sanders-authored CTC domains and human scholarly authority.",
-    "No private dialogue duplication, consent bypass, fabricated live writes, or inferred human meaning.",
-    "No synthetic-to-human provenance conversion or TurtleAsk interruption authority.",
-    "No production migration, deployment, autonomous self-modification, or version inflation."
+    "Do not write to D1, migrate production, or claim persistence without explicit human authorization and a verified independent readback.",
+    "Preserve all seven Sanders-authored CTC domains, original ontology-code provenance and human scholarly judgment.",
+    "No private dialogue duplication, consent bypass, human evidence invented from synthetic fixtures or inferred human silence.",
+    "Keep TurtleAsk candidate formation distinct from surfacing authority and hold product at v0.1.0."
   ],
   "ontology_mappings": [
     {
       "concept_key": "provenance_aware_retrieval",
-      "rationale": "A Git pointer and a verified D1 row are distinct retrieval evidence with different provenance."
-    },
-    {
-      "concept_key": "co_active_emergence",
-      "rationale": "A machine-generated reconciliation proposal remains subject to human scholarly review before promotion."
+      "rationale": "An authenticated future readback must match the canonical public repository source and preserve its evidence class."
     },
     {
       "concept_key": "shared_democracy",
-      "rationale": "Governance of research capture and correction must not become a silent machine decision."
+      "rationale": "Approval and scholarly meaning of captured evidence remain human-governed."
     },
     {
       "concept_key": "predetermined_outcomes",
-      "rationale": "Historical representation cannot be presumed to prove current live persistence."
+      "rationale": "Staging metadata cannot predetermine a successful write or interpretation of a missing human event."
+    },
+    {
+      "concept_key": "co_active_emergence",
+      "rationale": "Human feedback can contest machine-proposed reconciliation; this is a later conceptual mapping."
     },
     {
       "concept_key": "possible_possibles",
-      "rationale": "The staging gap permits future safe approaches without forcing a production backfill."
+      "rationale": "The absence of an operational table leaves future inquiry open without inventing a completed interaction."
     }
   ],
   "ctc_mappings": [
     {
       "domain": "Personal Inquiry",
-      "rationale": "Future learner-authored corrections remain distinct from system reconciliation and machine-derived interpretation."
+      "rationale": "No learner-intent claim is created from system research metadata."
     },
     {
       "domain": "Compelling Problem or Question",
-      "rationale": "The live-vs-staged mismatch poses an inspectable research architecture question."
+      "rationale": "The gap between staged pointers and readback proof becomes an explicit inquiry."
     },
     {
       "domain": "Technology as Tool to Think With",
-      "rationale": "The coverage validator turns metadata status into testable computational representation."
+      "rationale": "A validation fixture makes provenance boundaries inspectable without new production behavior."
     },
     {
       "domain": "Formative Demonstration of Learning",
-      "rationale": "Tests only demonstrate research infrastructure behavior, never evidence of learner learning."
+      "rationale": "Only infrastructure tests are observed; no learner-learning outcome is inferred."
     },
     {
       "domain": "Reflection as Learning",
-      "rationale": "Opening and closing audits expose discrepancies before revision or promotion."
+      "rationale": "Readback and contradiction invite revision without rewriting the original source."
     },
     {
       "domain": "Social and Cultural Critique",
-      "rationale": "Who decides a claim is verified and what is captured remains a question of authority."
+      "rationale": "Human review governs who can declare evidence captured and interpreted."
     },
     {
       "domain": "Sharing and Collaborating",
-      "rationale": "Human review and contestable provenance are required for shared research data."
+      "rationale": "Review-ready artifacts enable collaborative scrutiny without granting autonomous execution."
     }
   ],
   "uncaptured_residue": [
     {
-      "observation": "Only one Build Log research object is live today; historical pointer coverage does not imply D1 row coverage.",
-      "status": "staged_gap"
-    },
-    {
-      "observation": "Migration ledger ends at 0008 while library tables seeded later are present; application history needs independent explanation.",
+      "observation": "A future read-after-write receipt could still be structurally complete but mismatched in scholarly meaning.",
       "status": "open"
     },
     {
-      "observation": "Live turtle_asks table is absent even though migration 0009 exists in Git; no runtime TurtleAsk claims are justified.",
+      "observation": "Absent TurtleAsk tables and visitor traces do not establish human silence or refusal.",
       "status": "open"
     },
     {
-      "observation": "No new authored CTC domain proposed.",
+      "observation": "No new CTC domain is proposed or promoted.",
       "status": "held"
     }
   ],
   "provenance": {
     "actor": "machine_synthesis_under_human_research_direction",
-    "evidence_class": "read_only_live_d1_and_repository_plus_primary_sources",
+    "evidence_class": "repository_live_read_only_d1_and_synthetic_preflight_contract",
     "privacy_class": "public",
-    "selection_method": "full_coverage_read_and_source_hunt_then_one_research_validator",
+    "selection_method": "full_reconciliation_then_exactly_one_preflight_guard",
     "consent_safe_try_it_used": false,
-    "synthetic_as_human": false,
     "d1_write_status": "staged_only_no_new_write",
-    "github_state": "review_branch_not_production"
+    "github_state": "stacked_review_branch_not_main"
   },
   "selected_by": "daily_build_synthesis_subject_to_human_override",
   "scope": "system_research_horizon"
