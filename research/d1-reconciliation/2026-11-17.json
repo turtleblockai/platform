@@ -1,0 +1,178 @@
+{
+  "schema": "turtleblockai.d1-reconciliation.v0.4",
+  "date": "2026-11-17",
+  "branch": "daily-build/2026-11-17-d1-preflight-boundary",
+  "implementation_commit": "ede7b6416c3e7530bb117b5f81830934c8667a6a",
+  "read_only_live_verification": true,
+  "opening": {
+    "branch_build_log_entries": 42,
+    "coverage_path": "research/daily-build/2026-11-16.coverage.json",
+    "uncovered": [],
+    "canonical_pointers_verified_in_git_tree": true,
+    "live_d1_build_log_objects": 1
+  },
+  "closing": {
+    "branch_build_log_entries": 43,
+    "coverage_path": "research/daily-build/2026-11-17.coverage.json",
+    "uncovered": [],
+    "live_write_persisted": false,
+    "live_build_log_objects": 1
+  },
+  "coverage_classification_counts": {
+    "staged_canonical_pointer": 2,
+    "represented_by_canonical_pointer": 37,
+    "safely_backfilled": 1,
+    "historically_verified_live_d1": 1,
+    "represented_in_d1": 2
+  },
+  "live_d1": {
+    "read_verified": true,
+    "observed_date": "2026-11-17",
+    "queries": [
+      "research and library table inventory (sqlite_master)",
+      "research_objects aggregate by object_type",
+      "research_object_relationships aggregate",
+      "research_object_ctc_tags aggregate",
+      "research_object_ontology_tags aggregate",
+      "ctc_domains count",
+      "terraria_runs and terraria_habitats counts",
+      "library_sources count",
+      "d1_migrations count and latest names"
+    ],
+    "research_objects": 31,
+    "build_log_objects": 1,
+    "relationships": 0,
+    "ctc_tags": 11,
+    "ontology_tags": 9,
+    "established_ctc_domains": 7,
+    "terraria_runs": 0,
+    "live_terraria_habitats": 2,
+    "library_sources": 34,
+    "migration_ledger_rows": 8,
+    "live_write_attempted": false,
+    "live_write_persisted": false
+  },
+  "migration_gap": {
+    "repo_migration": "migrations/0009_human_tamagotchi_terrarium_and_turtle_ask.sql",
+    "table_name": "turtle_asks",
+    "status": "absent_live",
+    "observed_live_table": false,
+    "recorded_in_ledger": false,
+    "read_verified": true,
+    "disposition": "stage_for_human_review"
+  },
+  "additional_provenance_gap": "Later library tables and 34 sources exist despite d1_migrations ending at 0008; no application pathway is asserted.",
+  "stage_only": {
+    "object_id": "research_object:2026-11-17-d1-preflight-boundary",
+    "intended_table": "research_objects",
+    "repo_path": "scripts/validate-d1-backfill-preflight.mjs",
+    "pointer": "research/daily-build/2026-11-17.tags.json",
+    "evidence_class": "synthetic_contract_tests_and_read_only_database_metadata",
+    "privacy_class": "public"
+  },
+  "staged_relationships": [
+    {
+      "from": "research_object:2026-11-17-d1-preflight-boundary",
+      "predicate": "tests_authorization_boundary_for",
+      "to": "research_object:2026-11-16-d1-claims-guard",
+      "rationale": "Research preflight extends validated staging distinctions; neither review branch object is confirmed live in D1."
+    },
+    {
+      "from": "research_object:2026-11-17-d1-preflight-boundary",
+      "predicate": "separates_absence_of_channel_from_absence_of_evidence",
+      "to": "repo_file:research/TURTLE_ASK.md",
+      "rationale": "No turtle_asks table is not evidence that a real human ignored an ask."
+    }
+  ],
+  "staged_ctc_tags": [
+    {
+      "domain": "Personal Inquiry",
+      "rationale": "A system audit cannot infer learner purpose or approval from missing records."
+    },
+    {
+      "domain": "Compelling Problem or Question",
+      "rationale": "The difference between source pointers and verified persistence is a meaningful falsifiable research question."
+    },
+    {
+      "domain": "Technology as Tool to Think With",
+      "rationale": "A preflight validator makes authorization and provenance assumptions inspectable before data mutation."
+    },
+    {
+      "domain": "Formative Demonstration of Learning",
+      "rationale": "Fifteen synthetic contract tests demonstrate software checks only; there is no learner learning measurement."
+    },
+    {
+      "domain": "Reflection as Learning",
+      "rationale": "Comparing an opening and closing full sweep can prompt revision without changing source history."
+    },
+    {
+      "domain": "Social and Cultural Critique",
+      "rationale": "The authority to declare records captured and classify human contributions belongs to human governance."
+    },
+    {
+      "domain": "Sharing and Collaborating",
+      "rationale": "A review-ready staged candidate permits disagreement, correction and human approval without autonomous deployment."
+    }
+  ],
+  "staged_ontology_tags": [
+    {
+      "concept_key": "shared_democracy",
+      "layer": "original_dedoose",
+      "rationale": "Human scholarly and technical gatekeeping determines whether a candidate is captured or promoted."
+    },
+    {
+      "concept_key": "predetermined_outcomes",
+      "layer": "original_dedoose",
+      "rationale": "A staged pointer cannot predetermine whether a write succeeded or a learner was silent."
+    },
+    {
+      "concept_key": "co_active_emergence",
+      "layer": "published_lineage",
+      "rationale": "Human review can revise a machine-proposed reconciliation without absorbing human judgment into the machine record."
+    },
+    {
+      "concept_key": "possible_possibles",
+      "layer": "published_lineage",
+      "rationale": "An unavailable TurtleAsk observation channel leaves future inquiry open rather than fabricating a negative result."
+    },
+    {
+      "concept_key": "provenance_aware_retrieval",
+      "layer": "operational_turtle",
+      "rationale": "Public Git paths, live query metadata and synthetic tests have different evidence classes and must remain separable."
+    }
+  ],
+  "emergent_tags": [
+    "d1_backfill_preflight",
+    "human_gate_before_write",
+    "staging_not_live_persistence",
+    "unapplied_turtle_ask_migration",
+    "missing_observation_channel",
+    "synthetic_hostile_replay"
+  ],
+  "material_uncaptured_observations": [
+    {
+      "observation": "No verified independent read-after-write receipt exists for this cycle's staging.",
+      "status": "open"
+    },
+    {
+      "observation": "Migration ledger ends at 0008 although later library tables are present; application route unresolved.",
+      "status": "open"
+    },
+    {
+      "observation": "An absent turtle_asks table is an unavailable observation channel, not an observed human non-response.",
+      "status": "open"
+    },
+    {
+      "observation": "No new authored CTC domain proposed.",
+      "status": "held"
+    }
+  ],
+  "write": {
+    "attempted": false,
+    "persisted": false,
+    "reason": "No authorized live write or human migration gate. Research-only preflight evaluates hypothetical metadata and cannot create a row."
+  },
+  "privacy_boundary": "System aggregate counts and published repo evidence only; human/consented and synthetic habitats remain distinct; no raw private dialogue copied.",
+  "publication_verification": "Git branch confirmed; public WWW deployment and D1 persistence unverified.",
+  "capture_batch_closed": true
+}
