@@ -91,8 +91,8 @@ This keeps the open question separate from the historical Build Log. Daily build
 
 ## Current theoretical question
 
-**Can a staged research pointer become a verified D1 object?**
+**What would count as a real D1 readback receipt?**
 
-How can TurtleBlock safely turn its staged Build Log and Terraria research pointers into individually verified live D1 objects, preserving original provenance and consent while independently checking migration readiness and avoiding false persistence claims?
+After an explicitly human-authorized public research-object backfill, what independent read-after-write evidence would establish that its identity, canonical Git pointer, provenance, CTC/ontology tags and relationships actually persisted, while treating unapplied TurtleAsk migrations and absent human observations as unknown rather than negative evidence?
 
-This research horizon follows the November 16 Build Log–D1 evidence-claims validator (implementation commit `ea1cc2c920865810f637bad232f4791f3ac1f13f`). It explicitly distinguishes 42 staged/historical branch Build Log pointers from the single observed live D1 Build Log research row and treats migration 0009's absent TurtleAsk table as an unapplied schema boundary. The possible next steps require independent read-after-write evidence and human authorization. No live D1 write, product promotion, or runtime TurtleAsk behavior is claimed. The public machine-readable source of truth is `public/data/next-edge.json`.
+This is the single open horizon following the November 17 research-only D1 Backfill Preflight regression (implementation and CI commit `ede7b6416c3e7530bb117b5f81830934c8667a6a`). The fixture is synthetic and does not write, grant human approval or certify a live D1 row. A separate authenticated and human-authorized read-after-write process remains to be designed. TurtleAsk migration 0009 and any missing human observation channel stay unresolved rather than being interpreted as silence or refusal. The machine-readable horizon is `public/data/next-edge.json`.
