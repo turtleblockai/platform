@@ -1,0 +1,295 @@
+{
+  "schema": "turtleblockai.build-log-coverage.v0.6",
+  "date": "2026-11-17",
+  "branch": "daily-build/2026-11-17-d1-preflight-boundary",
+  "d1_persistence": "staged_only_no_new_write",
+  "historical_status_not_current_assertion": true,
+  "opening_sweep": {
+    "build_log_entry_count": 42,
+    "basis": "research/daily-build/2026-11-16.coverage.json",
+    "uncovered_entry_ids": [],
+    "notes": "Full 42-entry predecessor-branch matrix verified against actual Git tree; all historical source pointers exist, but are not equivalent to live D1 rows."
+  },
+  "coverage": [
+    [
+      "2026-11-17-d1-preflight-boundary",
+      "staged_canonical_pointer",
+      "research/daily-build/2026-11-17.tags.json"
+    ],
+    [
+      "2026-11-16-d1-claims-guard",
+      "staged_canonical_pointer",
+      "research/daily-build/2026-11-16.tags.json"
+    ],
+    [
+      "2026-10-31-refusal-scope-regression",
+      "represented_by_canonical_pointer",
+      "research/daily-build/2026-10-31.tags.json"
+    ],
+    [
+      "2026-10-27-publication-predecessor-guard",
+      "represented_by_canonical_pointer",
+      "research/daily-build/2026-10-27.tags.json"
+    ],
+    [
+      "2026-10-22-pce-refusal-object-scope",
+      "represented_by_canonical_pointer",
+      "research/daily-build/2026-10-22-sunshine-pce.md"
+    ],
+    [
+      "2026-10-21-pce-closure-and-return",
+      "represented_by_canonical_pointer",
+      "research/daily-build/2026-10-21-sunshine-pce.md"
+    ],
+    [
+      "2026-10-19-pce-elicitation-provenance",
+      "represented_by_canonical_pointer",
+      "research/daily-build/2026-10-19-sunshine-pce.md"
+    ],
+    [
+      "2026-10-18-pce-social-navigation-scope",
+      "represented_by_canonical_pointer",
+      "research/daily-build/2026-10-18-sunshine-pce.md"
+    ],
+    [
+      "2026-10-16-pce-question-origin",
+      "represented_by_canonical_pointer",
+      "research/daily-build/2026-10-16-sunshine-pce.md"
+    ],
+    [
+      "2026-10-14-pce-finish-lesson-open-question",
+      "represented_by_canonical_pointer",
+      "research/daily-build/2026-10-14-sunshine-pce.md"
+    ],
+    [
+      "2026-10-08-publication-reconciliation",
+      "represented_by_canonical_pointer",
+      "research/d1-reconciliation/2026-10-08-publication-coverage.json"
+    ],
+    [
+      "2026-10-07-publication-state-validator",
+      "represented_by_canonical_pointer",
+      "scripts/validate-publication-state.mjs"
+    ],
+    [
+      "2026-10-05-conflict-explanation-standing-ci",
+      "represented_by_canonical_pointer",
+      "research/daily-build/2026-10-05.tags.json"
+    ],
+    [
+      "2026-10-04-conflict-explanation-repeatable-command",
+      "represented_by_canonical_pointer",
+      "package.json"
+    ],
+    [
+      "2026-10-02-conflict-explanation-regression",
+      "safely_backfilled",
+      "research/daily-build/2026-10-05.tags.json"
+    ],
+    [
+      "2026-10-02-library-catalog-34",
+      "historically_verified_live_d1",
+      "research/d1-reconciliation/2026-10-02-library-0033-0034.json"
+    ],
+    [
+      "2026-10-01-pce-persistence-salience",
+      "represented_by_canonical_pointer",
+      "research/daily-build/2026-10-01-sunshine-pce.tags.json"
+    ],
+    [
+      "2026-10-01-initiative-authority-temporary-hold",
+      "represented_by_canonical_pointer",
+      "research/daily-build/2026-10-01.tags.json"
+    ],
+    [
+      "2026-09-30-initiative-authority-scope-conflict-validator",
+      "represented_by_canonical_pointer",
+      "research/daily-build/2026-09-30.tags.json"
+    ],
+    [
+      "2026-09-30-library-catalog-28",
+      "represented_in_d1",
+      "research/d1-reconciliation/2026-09-29-library-0026-0028.json"
+    ],
+    [
+      "2026-09-29-initiative-authority-scope-conflict",
+      "represented_by_canonical_pointer",
+      "research/daily-build/2026-09-29-cycle.md"
+    ],
+    [
+      "2026-09-28-initiative-authority-session-boundary",
+      "represented_by_canonical_pointer",
+      "research/daily-build/2026-09-28.coverage.json"
+    ],
+    [
+      "2026-09-28-build-log-d1-coverage-repair",
+      "represented_by_canonical_pointer",
+      "research/daily-build/2026-09-28.tags.json"
+    ],
+    [
+      "2026-09-27-discord-conversation-provenance",
+      "represented_by_canonical_pointer",
+      "research/daily-build/2026-09-27.tags.json"
+    ],
+    [
+      "2026-09-27-initiative-authority-regression",
+      "represented_by_canonical_pointer",
+      "research/daily-build/2026-09-27.tags.json"
+    ],
+    [
+      "2026-09-26-initiative-authority",
+      "represented_by_canonical_pointer",
+      "research/daily-build/2026-09-26.tags.json"
+    ],
+    [
+      "2026-09-22-cross-branch-perturbation",
+      "represented_by_canonical_pointer",
+      "research/daily-build/2026-09-22.tags.json"
+    ],
+    [
+      "2026-09-18-branch-experience-comparison",
+      "represented_by_canonical_pointer",
+      "research/daily-build/2026-09-18.tags.json"
+    ],
+    [
+      "2026-09-17-human-perturbation-translation",
+      "represented_by_canonical_pointer",
+      "research/daily-build/2026-09-17.tags.json"
+    ],
+    [
+      "2026-09-17-physical-library-d1",
+      "represented_in_d1",
+      "research/d1-reconciliation/2026-09-17-library.json"
+    ],
+    [
+      "2026-09-16-wait-a-minute-build-log",
+      "represented_by_canonical_pointer",
+      "research/d1-reconciliation/2026-09-16.json"
+    ],
+    [
+      "2026-09-16-plural-foreground-regression",
+      "represented_by_canonical_pointer",
+      "research/daily-build/2026-09-16.tags.json"
+    ],
+    [
+      "2026-09-15-plural-foreground-envelope",
+      "represented_by_canonical_pointer",
+      "research/daily-build/2026-09-15.tags.json"
+    ],
+    [
+      "2026-09-12-d1-reconciliation-terraria-try",
+      "represented_by_canonical_pointer",
+      "research/d1-reconciliation/2026-09-12.json"
+    ],
+    [
+      "2026-09-12-selective-attention-envelope",
+      "represented_by_canonical_pointer",
+      "research/daily-build/2026-09-12.tags.json"
+    ],
+    [
+      "2026-09-11-human-tamagotchi-turtle-ask",
+      "represented_by_canonical_pointer",
+      "migrations/0009_human_tamagotchi_terrarium_and_turtle_ask.sql"
+    ],
+    [
+      "2026-09-11-world-evidence-envelope",
+      "represented_by_canonical_pointer",
+      "research/daily-build/2026-09-11.tags.json"
+    ],
+    [
+      "2026-09-10-learner-verification-card",
+      "represented_by_canonical_pointer",
+      "research/daily-build/2026-09-10.tags.json"
+    ],
+    [
+      "2026-09-09-next-edge-validator",
+      "represented_by_canonical_pointer",
+      "research/daily-build/2026-09-09.tags.json"
+    ],
+    [
+      "2026-09-08-next-edge-horizon",
+      "represented_by_canonical_pointer",
+      "research/daily-build/2026-09-08-next-edge.tags.json"
+    ],
+    [
+      "2026-09-08-www-direct-asset-repair",
+      "represented_by_canonical_pointer",
+      "research/daily-build/2026-09-08-www-repair.tags.json"
+    ],
+    [
+      "2026-09-08-turtle-terraria-tagging",
+      "represented_by_canonical_pointer",
+      "migrations/0008_seed_terraria_and_autobuild_tags.sql"
+    ],
+    [
+      "2026-09-08-daily-coactive-loop",
+      "represented_by_canonical_pointer",
+      "migrations/0007_turtle_terraria_and_exhaustive_tagging.sql"
+    ]
+  ],
+  "live_d1_observation": {
+    "read_verified": true,
+    "observed_date": "2026-11-17",
+    "queries": [
+      "SELECT name FROM sqlite_master WHERE type='table' AND (... research, ctc, terraria, turtle_ask, migrations, library prefixes ...)",
+      "SELECT COUNT(*) FROM research_objects",
+      "SELECT object_type, COUNT(*) FROM research_objects GROUP BY object_type",
+      "SELECT COUNT(*) FROM research_object_relationships",
+      "SELECT COUNT(*) FROM research_object_ctc_tags",
+      "SELECT COUNT(*) FROM research_object_ontology_tags",
+      "SELECT COUNT(*) FROM ctc_domains",
+      "SELECT COUNT(*) FROM terraria_runs",
+      "SELECT COUNT(*) FROM terraria_habitats",
+      "SELECT COUNT(*) FROM library_sources",
+      "SELECT COUNT(*) FROM d1_migrations",
+      "SELECT name FROM d1_migrations ORDER BY name DESC LIMIT 4"
+    ],
+    "research_objects": 31,
+    "build_log_objects": 1,
+    "relationships": 0,
+    "ctc_tags": 11,
+    "ontology_tags": 9,
+    "established_ctc_domains": 7,
+    "terraria_runs": 0,
+    "live_terraria_habitats": 2,
+    "library_sources": 34,
+    "migration_ledger_rows": 8,
+    "live_write_attempted": false,
+    "live_write_persisted": false
+  },
+  "migration_gaps": [
+    {
+      "repo_migration": "migrations/0009_human_tamagotchi_terrarium_and_turtle_ask.sql",
+      "table_name": "turtle_asks",
+      "status": "absent_live",
+      "observed_live_table": false,
+      "recorded_in_ledger": false,
+      "read_verified": true,
+      "disposition": "stage_for_human_review",
+      "rationale": "Migration exists in Git but live D1 sqlite_master and migration ledger do not show its TurtleAsk table; runtime implementation must not presume it."
+    }
+  ],
+  "closing_sweep": {
+    "build_log_entry_count": 43,
+    "uncovered_entry_ids": [],
+    "staged_new_entries": 1,
+    "new_live_rows_verified": 0,
+    "notes": "All 43 stacked-review-branch Build Log entries have source pointers, while live D1 still has only 1 build_log_entry object. Preflight fixtures do not execute a D1 write."
+  },
+  "historical_status_counts": {
+    "staged_canonical_pointer": 2,
+    "represented_by_canonical_pointer": 37,
+    "safely_backfilled": 1,
+    "historically_verified_live_d1": 1,
+    "represented_in_d1": 2
+  },
+  "gaps": [
+    "Current PR2 and PR3 review branch entries are not on public main.",
+    "Live D1 Build Log objects: 1; canonical Git pointers do not constitute D1 row persistence.",
+    "Live turtle_asks table absent; migration 0009 not recorded in the observed ledger.",
+    "Later library schema exists with a ledger ending at 0008; provenance of application remains unresolved.",
+    "Public WWW Build Log and Next Edge routes were inaccessible to external verification."
+  ],
+  "capture_batch_closed": true,
+  "privacy_boundary": "Read-only schema and aggregate metadata only; no raw private dialogue, consent-absent visitor traces, credentials, or synthetic-as-human evidence."
+}
