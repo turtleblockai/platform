@@ -93,5 +93,8 @@ jobs:
       - name: Validate Build Log to D1 evidence claims
         run: npm run validate:d1-build-log
 
+      - name: Validate D1 research backfill preflight gate
+        run: npm run validate:d1-backfill-preflight
+
       - name: Deployment note
         run: echo "Production deployment is handled by the connected Cloudflare Workers Builds GitHub integration."
