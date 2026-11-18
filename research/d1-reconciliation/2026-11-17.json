@@ -174,5 +174,39 @@
   },
   "privacy_boundary": "System aggregate counts and published repo evidence only; human/consented and synthetic habitats remain distinct; no raw private dialogue copied.",
   "publication_verification": "Git branch confirmed; public WWW deployment and D1 persistence unverified.",
-  "capture_batch_closed": true
+  "capture_batch_closed": true,
+  "closing_live_read": {
+    "verified": true,
+    "read_only": true,
+    "observation": "Second authenticated Cloudflare D1 aggregate sweep after branch research/publication updates",
+    "research_objects": 31,
+    "build_log_objects": 1,
+    "relationships": 0,
+    "ctc_tags": 11,
+    "ontology_tags": 9,
+    "established_ctc_domains": 7,
+    "terraria_habitats": 2,
+    "terraria_runs": 0,
+    "library_sources": 34,
+    "library_special_notes": 92,
+    "migration_ledger_rows": 8,
+    "turtle_asks_table_present": false,
+    "write_attempted": false,
+    "write_persisted": false,
+    "queries": [
+      "SELECT COUNT(*) FROM research_objects",
+      "SELECT COUNT(*) FROM research_objects WHERE object_type='build_log_entry'",
+      "SELECT COUNT(*) FROM research_object_relationships",
+      "SELECT COUNT(*) FROM research_object_ctc_tags",
+      "SELECT COUNT(*) FROM research_object_ontology_tags",
+      "SELECT COUNT(*) FROM ctc_domains",
+      "SELECT COUNT(*) FROM terraria_habitats",
+      "SELECT COUNT(*) FROM terraria_runs",
+      "SELECT COUNT(*) FROM library_sources",
+      "SELECT COUNT(*) FROM library_special_notes",
+      "SELECT COUNT(*) FROM d1_migrations",
+      "SELECT name FROM sqlite_master WHERE type='table' AND name='turtle_asks'"
+    ]
+  },
+  "opening_and_closing_conclusion": "Counts unchanged before and after branch commits; neither a D1 write nor new live persistence is claimed. 43 Git source pointers are not 43 D1 rows."
 }
