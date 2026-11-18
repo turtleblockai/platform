@@ -28,7 +28,8 @@
     "validate:conflict-explanation": "node scripts/validate-conflict-explanation.mjs",
     "validate:publication-state": "node scripts/validate-publication-state.mjs",
     "validate:refusal-scope": "node scripts/validate-refusal-scope-envelope.mjs",
-    "validate:d1-build-log": "node scripts/validate-build-log-d1-coverage.mjs"
+    "validate:d1-build-log": "node scripts/validate-build-log-d1-coverage.mjs",
+    "validate:d1-backfill-preflight": "node scripts/validate-d1-backfill-preflight.mjs"
   },
   "devDependencies": {
     "@cloudflare/workers-types": "latest",
