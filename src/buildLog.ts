@@ -17,14 +17,14 @@ export interface BuildLogEntry {
 // through the Worker. Open inquiry belongs in Next Edge, not in completed entries.
 export const BUILD_LOG_ENTRIES: BuildLogEntry[] = [
   {
-    "id": "2026-11-17-d1-preflight-boundary",
-    "date": "Nov 17, 2026",
-    "title": "D1 backfill readiness becomes testable before any write",
-    "body": "A research-only D1 Backfill Preflight contract now rejects fictional persistence, unapproved writes, missing migration/read authority, privacy expansion, synthetic-as-human evidence, eighth-domain claims, and premature capture closure. Fifteen in-memory synthetic cases passed (2 valid, 13 hostile). The complete 43-entry branch Build Log remains pointer-staged against read-only D1; no writes, runtime change, or learner-outcome evidence. Product stays v0.1.0.",
-    "done": true,
-    "waitAMinute": {
-      "summary": "An absent TurtleAsk table cannot tell us that no one asked or that a human stayed silent. A missing observation channel is not negative human evidence; migration status must remain separate from learner reaction.",
-      "evidence": [
+    id: "2026-11-17-d1-preflight-boundary",
+    date: "Nov 17, 2026",
+    title: "D1 backfill readiness becomes testable before any write",
+    body: "A research-only D1 Backfill Preflight contract now rejects fictional persistence, unapproved writes, missing migration/read authority, privacy expansion, synthetic-as-human evidence, eighth-domain claims, and premature capture closure. Fifteen in-memory synthetic cases passed (2 valid, 13 hostile). The complete 43-entry branch Build Log remains pointer-staged against read-only D1; no writes, runtime change, or learner-outcome evidence. Product stays v0.1.0.",
+    done: true,
+    waitAMinute: {
+      summary: "An absent TurtleAsk table cannot tell us that no one asked or that a human stayed silent. A missing observation channel is not negative human evidence; migration status must remain separate from learner reaction.",
+      evidence: [
         "research/TURTLE_ASK.md",
         "worldspec/INTERACTION_CAPTURE.md",
         "migrations/0009_human_tamagotchi_terrarium_and_turtle_ask.sql",
