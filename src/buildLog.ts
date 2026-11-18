@@ -17,6 +17,22 @@ export interface BuildLogEntry {
 // through the Worker. Open inquiry belongs in Next Edge, not in completed entries.
 export const BUILD_LOG_ENTRIES: BuildLogEntry[] = [
   {
+    "id": "2026-11-17-d1-preflight-boundary",
+    "date": "Nov 17, 2026",
+    "title": "D1 backfill readiness becomes testable before any write",
+    "body": "A research-only D1 Backfill Preflight contract now rejects fictional persistence, unapproved writes, missing migration/read authority, privacy expansion, synthetic-as-human evidence, eighth-domain claims, and premature capture closure. Fifteen in-memory synthetic cases passed (2 valid, 13 hostile). The complete 43-entry branch Build Log remains pointer-staged against read-only D1; no writes, runtime change, or learner-outcome evidence. Product stays v0.1.0.",
+    "done": true,
+    "waitAMinute": {
+      "summary": "An absent TurtleAsk table cannot tell us that no one asked or that a human stayed silent. A missing observation channel is not negative human evidence; migration status must remain separate from learner reaction.",
+      "evidence": [
+        "research/TURTLE_ASK.md",
+        "worldspec/INTERACTION_CAPTURE.md",
+        "migrations/0009_human_tamagotchi_terrarium_and_turtle_ask.sql",
+        "research/d1-reconciliation/2026-11-17.json"
+      ]
+    }
+  },
+  {
     id: "2026-11-16-d1-claims-guard",
     date: "Nov 16, 2026",
     title: "Build Log ↔ D1 claims now have a testable evidence boundary",
@@ -413,10 +429,10 @@ export const BUILD_LOG_ENTRIES: BuildLogEntry[] = [
 ];
 
 export const NEXT_EDGE_FALLBACK = {
-  date: "Nov 16, 2026",
-  title: "Can a staged research pointer become a verified D1 object?",
-  question: "How can TurtleBlock safely turn its staged Build Log and Terraria research pointers into individually verified live D1 objects, preserving original provenance and consent while independently checking migration readiness and avoiding false persistence claims?",
-  xFactor: "whoooo knooooowwwssssssssssss — perhaps a research database first needs to admit what it cannot remember before Turtle can trust its memory."
+  date: "Nov 17, 2026",
+  title: "What would count as a real D1 readback receipt?",
+  question: "After an explicitly human-authorized public research-object backfill, what independent read-after-write evidence would establish that its identity, canonical Git pointer, provenance, CTC/ontology tags and relationships actually persisted, while treating unapplied TurtleAsk migrations and absent human observations as unknown rather than negative evidence?",
+  xFactor: "whoooo knooooowwwssssssssssss — perhaps a database should prove exactly what it remembers, and also admit which questions it never had the means to ask."
 };
 
 function escapeHtml(value: string) {
