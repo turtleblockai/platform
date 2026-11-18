@@ -1,0 +1,279 @@
+{
+  "schema": "turtleblockai.daily-build-tags.v0.1",
+  "date": "2026-11-17",
+  "branch": "daily-build/2026-11-17-d1-preflight-boundary",
+  "ontology_version": "sanders-ontology-v0.1",
+  "d1_persistence": "staged_only_no_new_write",
+  "capture_batch_closed": true,
+  "source_signals": [
+    {
+      "source": "OpenAI",
+      "date": "2026-11-16",
+      "title": "Our first phase of embedded assessments",
+      "url": "https://openai.com/index/our-first-phase-of-embedded-assessments/",
+      "signal": "Independent assessors need scoped access to primary evidence and context.",
+      "relevance": "A test fixture and staged Git pointer cannot independently certify a D1 write or scholarly finding."
+    },
+    {
+      "source": "NVIDIA",
+      "date": "2026-11-04",
+      "title": "Use NVIDIA NeMo to Turn Agent Failures into Tests and Harness Fixes",
+      "url": "https://developer.nvidia.com/blog/use-nvidia-nemo-to-turn-agent-failures-into-tests-and-harness-fixes/",
+      "signal": "Failure traces can generate domain-specific hostile tests; example treats sending without human confirmation as a failure.",
+      "relevance": "Supports a deterministic no-autonomous-write preflight, not an automatic Turtle research promotion."
+    },
+    {
+      "source": "Minecraft Education",
+      "date": "2026-10-13",
+      "title": "The global Velocity Prize officially opens",
+      "url": "https://education.minecraft.net/en-us/discover/velocity-prize",
+      "signal": "As of Nov 17 submission deadline, the challenge expects an explainable reproducible route and code/solution.",
+      "relevance": "Method reproducibility is relevant; timed performance is not learner learning evidence."
+    },
+    {
+      "source": "MIT Media Lab",
+      "date": "2026-11-19",
+      "title": "AHA Seminar: Introducing ImpactBench and AI Nutrition Labels",
+      "url": "https://www.media.mit.edu/events/introducing-impactbench/",
+      "signal": "Upcoming announced seminar about surfacing AI impacts for users.",
+      "relevance": "Transparency and human ability to inspect impacts are research leads; the future event is not an observed result."
+    }
+  ],
+  "research_objects": [
+    {
+      "id": "question",
+      "type": "research_question",
+      "summary": "What evidence is needed before a staged D1 backfill may even be considered for human review?"
+    },
+    {
+      "id": "candidate-migration",
+      "type": "candidate",
+      "disposition": "rejected",
+      "rationale": "Live migration 0009 and its TurtleAsk table are absent; production migration is beyond this authority."
+    },
+    {
+      "id": "candidate-write",
+      "type": "candidate",
+      "disposition": "rejected",
+      "rationale": "No verified live D1 write permission or separate human approval; no writes attempted."
+    },
+    {
+      "id": "candidate-deictic-runtime",
+      "type": "candidate",
+      "disposition": "rejected",
+      "rationale": "Separate prior research branch remains unmerged and learner consent evidence is absent."
+    },
+    {
+      "id": "selected",
+      "type": "selection",
+      "disposition": "selected",
+      "summary": "Research-only D1 Backfill Preflight validator with synthetic hostile fixtures."
+    },
+    {
+      "id": "validator",
+      "type": "repo_change",
+      "repo_path": "scripts/validate-d1-backfill-preflight.mjs",
+      "commit": "ede7b6416c3e7530bb117b5f81830934c8667a6a"
+    },
+    {
+      "id": "fixture",
+      "type": "repo_change",
+      "repo_path": "research/fixtures/2026-11-17-d1-backfill-preflight-cases.json",
+      "commit": "ede7b6416c3e7530bb117b5f81830934c8667a6a"
+    },
+    {
+      "id": "test",
+      "type": "synthetic_evaluation",
+      "summary": "15 in-memory cases: 2 structurally valid (including hypothetical human review), 13 hostile, zero mismatches; branch CI not verified."
+    },
+    {
+      "id": "d1-read",
+      "type": "read_only_metadata",
+      "summary": "31 objects, one Build Log row, zero relationships, 11 CTC tags, 9 ontology tags, 7 authored domains, 2 live Terraria habitats, no turtle_asks table."
+    },
+    {
+      "id": "d1-write",
+      "type": "staged_gap",
+      "summary": "No live write attempted or persistence claimed."
+    },
+    {
+      "id": "cross-connection",
+      "type": "wait_a_minute",
+      "summary": "A missing TurtleAsk observation channel does not constitute human silence or refusal."
+    },
+    {
+      "id": "horizon",
+      "type": "next_edge",
+      "summary": "What would count as a real D1 readback receipt?"
+    },
+    {
+      "id": "version",
+      "type": "version_judgment",
+      "summary": "remain v0.1.0"
+    }
+  ],
+  "relationships": [
+    {
+      "from": "d1-read",
+      "predicate": "motivates",
+      "to": "selected"
+    },
+    {
+      "from": "test",
+      "predicate": "evaluates",
+      "to": "validator"
+    },
+    {
+      "from": "cross-connection",
+      "predicate": "motivates",
+      "to": "horizon"
+    },
+    {
+      "from": "d1-write",
+      "predicate": "must_remain_unverified_for",
+      "to": "selected"
+    }
+  ],
+  "ctc_tags": [
+    {
+      "domain": "Personal Inquiry",
+      "rationale": "A system audit cannot infer learner purpose or approval from missing records.",
+      "evidence_class": "system_research_only"
+    },
+    {
+      "domain": "Compelling Problem or Question",
+      "rationale": "The difference between source pointers and verified persistence is a meaningful falsifiable research question.",
+      "evidence_class": "system_research_only"
+    },
+    {
+      "domain": "Technology as Tool to Think With",
+      "rationale": "A preflight validator makes authorization and provenance assumptions inspectable before data mutation.",
+      "evidence_class": "system_research_only"
+    },
+    {
+      "domain": "Formative Demonstration of Learning",
+      "rationale": "Fifteen synthetic contract tests demonstrate software checks only; there is no learner learning measurement.",
+      "evidence_class": "system_research_only"
+    },
+    {
+      "domain": "Reflection as Learning",
+      "rationale": "Comparing an opening and closing full sweep can prompt revision without changing source history.",
+      "evidence_class": "system_research_only"
+    },
+    {
+      "domain": "Social and Cultural Critique",
+      "rationale": "The authority to declare records captured and classify human contributions belongs to human governance.",
+      "evidence_class": "system_research_only"
+    },
+    {
+      "domain": "Sharing and Collaborating",
+      "rationale": "A review-ready staged candidate permits disagreement, correction and human approval without autonomous deployment.",
+      "evidence_class": "system_research_only"
+    }
+  ],
+  "ontology_tags": [
+    {
+      "concept": "shared_democracy",
+      "layer": "original_dedoose",
+      "rationale": "Human scholarly and technical gatekeeping determines whether a candidate is captured or promoted."
+    },
+    {
+      "concept": "predetermined_outcomes",
+      "layer": "original_dedoose",
+      "rationale": "A staged pointer cannot predetermine whether a write succeeded or a learner was silent."
+    },
+    {
+      "concept": "co_active_emergence",
+      "layer": "published_lineage",
+      "rationale": "Human review can revise a machine-proposed reconciliation without absorbing human judgment into the machine record."
+    },
+    {
+      "concept": "possible_possibles",
+      "layer": "published_lineage",
+      "rationale": "An unavailable TurtleAsk observation channel leaves future inquiry open rather than fabricating a negative result."
+    },
+    {
+      "concept": "provenance_aware_retrieval",
+      "layer": "operational_turtle",
+      "rationale": "Public Git paths, live query metadata and synthetic tests have different evidence classes and must remain separable."
+    }
+  ],
+  "emergent_tags": [
+    "d1_backfill_preflight",
+    "human_gate_before_write",
+    "staging_not_live_persistence",
+    "unapplied_turtle_ask_migration",
+    "missing_observation_channel",
+    "synthetic_hostile_replay"
+  ],
+  "reconciliation_findings": [
+    {
+      "status": "verified_git_coverage",
+      "count": 42,
+      "basis": "research/daily-build/2026-11-16.coverage.json"
+    },
+    {
+      "status": "verified_read_only_d1",
+      "research_objects": 31,
+      "build_log_objects": 1,
+      "relationships": 0,
+      "ctc_domains": 7,
+      "terraria_habitats": 2,
+      "turtle_asks_table": false,
+      "migration_rows": 8
+    },
+    {
+      "status": "staged_only",
+      "count": 43,
+      "uncovered": [],
+      "pointer": "research/daily-build/2026-11-17.coverage.json"
+    }
+  ],
+  "wait_a_minute": {
+    "evidence": [
+      "research/TURTLE_ASK.md",
+      "worldspec/INTERACTION_CAPTURE.md",
+      "migrations/0009_human_tamagotchi_terrarium_and_turtle_ask.sql",
+      "research/d1-reconciliation/2026-11-17.json"
+    ],
+    "overlap": "A missing TurtleAsk schema prevents observing events; absence is not proof that humans were silent, refused, or were never asked.",
+    "alternative": "It is possible no asks happened, but no present research stream can establish that; no human evidence is inferred.",
+    "disposition": [
+      "relationship",
+      "human_review",
+      "next_edge_candidate"
+    ]
+  },
+  "uncaptured_observations": [
+    {
+      "observation": "No verified independent read-after-write receipt exists for this cycle's staging.",
+      "status": "open"
+    },
+    {
+      "observation": "Migration ledger ends at 0008 although later library tables are present; application route unresolved.",
+      "status": "open"
+    },
+    {
+      "observation": "An absent turtle_asks table is an unavailable observation channel, not an observed human non-response.",
+      "status": "open"
+    },
+    {
+      "observation": "No new authored CTC domain proposed.",
+      "status": "held"
+    }
+  ],
+  "provenance": {
+    "actor": "machine_synthesis_under_human_research_direction",
+    "model_family": "GPT-6",
+    "privacy_class": "public",
+    "evidence_class": "read_only_live_d1_plus_git_plus_synthetic_contract_tests",
+    "human_scholarly_authority": "final",
+    "consent_safe_try_it_used": false,
+    "private_raw_dialogue_used": false,
+    "synthetic_evidence_used_as_human": false,
+    "live_d1_write_attempted": false,
+    "live_d1_write_claimed": false,
+    "contribution_commit": "ede7b6416c3e7530bb117b5f81830934c8667a6a",
+    "main_deployment": false
+  }
+}
