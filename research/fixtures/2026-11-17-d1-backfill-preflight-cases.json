@@ -1,0 +1,157 @@
+{
+  "schema": "turtleblockai.d1-backfill-preflight-fixtures.v0.1",
+  "evidence_class": "synthetic_contract_only_not_live_d1_proof",
+  "base": {
+    "schema": "turtleblockai.d1-backfill-preflight.v0.1",
+    "candidate": {
+      "id": "build_log_entry:2026-11-16-d1-claims-guard",
+      "repo_path": "research/daily-build/2026-11-16.md",
+      "object_type": "build_log_entry",
+      "source_class": "public_repository_artifact",
+      "privacy_class": "public",
+      "actor": "machine_synthesis_under_human_research_direction",
+      "evidence_class": "system_research",
+      "capture_batch_closed": true
+    },
+    "established_ctc_domains": 7,
+    "live_readiness": {
+      "observed_date": "2026-11-17",
+      "query_reference": "research/d1-reconciliation/2026-11-17.json",
+      "read_verified": true,
+      "research_objects_table_present": true,
+      "migration_ledger_aligned": false,
+      "write_permission_verified": false
+    },
+    "gate": {
+      "disposition": "staged_for_review",
+      "human_approval_recorded": false,
+      "human_approval_scope": null,
+      "write_performed": false,
+      "claims_live_persistence": false,
+      "auto_deploy": false
+    },
+    "provenance_boundaries": {
+      "synthetic_as_human": false,
+      "collection_expansion": false,
+      "consent_bypassed": false,
+      "source_overwritten": false
+    }
+  },
+  "cases": [
+    {
+      "id": "staged_current_live_state",
+      "expected": "valid",
+      "set": {}
+    },
+    {
+      "id": "hypothetical_human_review_candidate",
+      "expected": "valid",
+      "set": {
+        "live_readiness.migration_ledger_aligned": true,
+        "live_readiness.write_permission_verified": true,
+        "gate.disposition": "human_review_candidate",
+        "gate.human_approval_recorded": true,
+        "gate.human_approval_scope": "public_system_research_backfill_test_only"
+      }
+    },
+    {
+      "id": "invented_live_persistence",
+      "expected": "invalid",
+      "set": {
+        "gate.claims_live_persistence": true
+      }
+    },
+    {
+      "id": "unapproved_write",
+      "expected": "invalid",
+      "set": {
+        "gate.write_performed": true
+      }
+    },
+    {
+      "id": "review_without_human_gate",
+      "expected": "invalid",
+      "set": {
+        "gate.disposition": "human_review_candidate",
+        "live_readiness.migration_ledger_aligned": true,
+        "live_readiness.write_permission_verified": true
+      }
+    },
+    {
+      "id": "review_without_migration_alignment",
+      "expected": "invalid",
+      "set": {
+        "gate.disposition": "human_review_candidate",
+        "live_readiness.write_permission_verified": true,
+        "gate.human_approval_recorded": true,
+        "gate.human_approval_scope": "fixture_only"
+      }
+    },
+    {
+      "id": "review_without_write_permission",
+      "expected": "invalid",
+      "set": {
+        "gate.disposition": "human_review_candidate",
+        "live_readiness.migration_ledger_aligned": true,
+        "gate.human_approval_recorded": true,
+        "gate.human_approval_scope": "fixture_only"
+      }
+    },
+    {
+      "id": "raw_dialogue_copy",
+      "expected": "invalid",
+      "set": {
+        "candidate.raw_dialogue": "synthetic canary"
+      }
+    },
+    {
+      "id": "synthetic_mislabeled_human",
+      "expected": "invalid",
+      "set": {
+        "provenance_boundaries.synthetic_as_human": true
+      }
+    },
+    {
+      "id": "eighth_ctc_domain",
+      "expected": "invalid",
+      "set": {
+        "established_ctc_domains": 8
+      }
+    },
+    {
+      "id": "unclosed_capture_batch",
+      "expected": "invalid",
+      "set": {
+        "candidate.capture_batch_closed": false
+      }
+    },
+    {
+      "id": "private_source_pointer",
+      "expected": "invalid",
+      "set": {
+        "candidate.repo_path": "private/learner-dialogue.txt"
+      }
+    },
+    {
+      "id": "collection_expansion",
+      "expected": "invalid",
+      "set": {
+        "provenance_boundaries.collection_expansion": true
+      }
+    },
+    {
+      "id": "consent_bypass",
+      "expected": "invalid",
+      "set": {
+        "provenance_boundaries.consent_bypassed": true
+      }
+    },
+    {
+      "id": "machine_production_deploy",
+      "expected": "invalid",
+      "set": {
+        "gate.auto_deploy": true
+      }
+    }
+  ]
+}
