@@ -93,5 +93,8 @@ jobs:
       - name: Audit repository-to-D1 reconciliation candidates
         run: npm run audit:d1-coverage
 
+      - name: Validate Build Log to D1 evidence claims
+        run: npm run validate:d1-build-log
+
       - name: Deployment note
         run: echo "Production deployment is handled by the connected Cloudflare Workers Builds GitHub integration."
