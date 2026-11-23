@@ -1,0 +1,11 @@
+-- Ideas Lab archive finds (Nov 23 2026) added to the experiments timeline.
+-- Lines are Bryan's lab text. Years: "c. 2014" and "2020" as given in the lab;
+-- the other three are undated (their Drive copies all share one bulk-import date,
+-- June 2 2018, which is not a made-year).
+INSERT OR IGNORE INTO pedagogical_experiments
+(id,ontology_version_id,experiment_key,title,start_year,end_year,date_label,date_precision,experiment_type,description,evidence_status,status,provenance_json) VALUES
+('exp-new-roads-school-is-an-idea','sanders-ontology-v0.1','new_roads_school_is_an_idea','New Roads School Is an Idea',2014,2014,'c. 2014','approximate','faculty_talk','A faculty talk that turns a class''s revision history and screen captures into a mirror for teaching, and asks to revise the handbook together.','author_reported','provisional','{"source":"Drive file \"New Roads School is an idea.\""}'),
+('exp-prgmd','sanders-ontology-v0.1','prgmd','PRGMD: Programming, Robotics, Game Design',2020,NULL,'2020','approximate','workshop_design','A RE:EDUCATION workshop plan where students create more than they consume, grown out of building worlds together on Zoom in 2020.','author_reported','provisional','{"source":"Drive file \"PRGMD Workshop Description\""}'),
+('exp-nrscraftia','sanders-ontology-v0.1','nrscraftia','NRSCraftia',NULL,NULL,'undated','unknown','constructionist_world','A school Minecraft server for engineering, art, math, and architecture, run on trust, block protection, and "Learn through play!"','author_reported','provisional','{"source":"Drive file \"Welcome to NRSCraftia!\""}'),
+('exp-snapchat-story-writing','sanders-ontology-v0.1','snapchat_story_writing','Snapchat Story Writing',NULL,NULL,'undated','unknown','writing_lesson','Teams build a Snapchat Story where all that matters is what comes next, then read it back as a draft of an essay.','author_reported','provisional','{"source":"Drive file \"Using Snapchat as a Writing Tool\""}'),
+('exp-emulation-twains-river','sanders-ontology-v0.1','emulation_twains_river','Emulation: Twain''s River',NULL,NULL,'undated','unknown','writing_lesson','Copy the shape of one Huckleberry Finn paragraph, sentence by sentence, and pour a new scene into it.','author_reported','provisional','{"source":"Drive file \"TwainRiver\""}');
