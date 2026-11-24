@@ -310,6 +310,65 @@
       else { never[pendingOffer.kind] = 1; ledger("you", "never this kind"); speak("Got it. No more " + pendingOffer.kind + " offers. That's about this kind of idea, not about you."); }
       pendingOffer = null;
     });
+    var lastIdea = "";
+    function seqOf() {
+      // The user's own drawing as a list of moves: how far, then how much it turned before the next one.
+      var mine = strokes.filter(function (s) { return s[5] === "you"; }), seq = [];
+      for (var i = 0; i < mine.length && seq.length < 60; i++) {
+        var s = mine[i], L = Math.hypot(s[2] - s[0], s[3] - s[1]); if (L < 0.5) continue;
+        var t = 0;
+        if (i > 0) { var p = mine[i - 1], a1 = Math.atan2(p[3] - p[1], p[2] - p[0]), a2 = Math.atan2(s[3] - s[1], s[2] - s[0]); t = ((a2 - a1) * 180 / Math.PI + 540) % 360 - 180; }
+        seq.push([L, t]);
+      }
+      return seq;
+    }
+    function walk(seq, out, st) {
+      seq.forEach(function (m) { st.h += m[1]; var r = st.h * Math.PI / 180; st.x += Math.sin(r) * m[0]; st.y -= Math.cos(r) * m[0]; out.push([st.x, st.y, 0]); });
+    }
+    function makeIdea(spots) {
+      // Builds the turtle's sketch from what it noticed: your drawing's own moves and turns,
+      // or, with nothing drawn yet, the spots where it stopped to look while roaming.
+      var n = notice(), seq = seqOf(), opts = [];
+      if (n && seq.length) {
+        var turns = seq.filter(function (m) { return Math.abs(m[1]) > 25; }).length;
+        if (n.closed) opts.push("ring");
+        if (n.corners && (n.rights === 0 || n.lefts === 0)) opts.push("mirror");
+        if (seq.length >= 2) opts.push("spiral");
+        if (turns >= 2) opts.push("stretch");
+        opts.push("echo");
+        var pick = opts.filter(function (o) { return o !== lastIdea; }); pick = pick.length ? pick : opts;
+        var kind = pick[Math.floor(Math.random() * pick.length)], pts = [[0, 0, 1]], st = { x: 0, y: 0, h: 0 }, say;
+        if (kind === "ring") {
+          var c = Math.max(3, Math.min(9, n.corners + 1 + Math.floor(Math.random() * 3)));
+          for (var k = 0; k < c; k++) { st = { x: 0, y: 0, h: k * 360 / c }; pts.push([0, 0, 1]); walk(seq, pts, st); }
+          say = "Your shape closed, so I'm spinning it in a ring of " + c + ".";
+        } else if (kind === "mirror") {
+          var side = n.lefts ? "left" : "right";
+          walk(seq, pts, st); st = { x: 0, y: 0, h: 0 }; pts.push([0, 0, 1]);
+          walk(seq.map(function (m) { return [m[0], -m[1]]; }), pts, st);
+          say = "You only turned " + side + ", so I'm trying your path turning the other way too.";
+        } else if (kind === "spiral") {
+          var g = 1.08 + Math.random() * 0.12, f = 1, reps = Math.max(3, Math.min(12, Math.round(36 / seq.length)));
+          for (var r2 = 0; r2 < reps; r2++) { walk(seq.map(function (m) { return [m[0] * f, m[1]]; }), pts, st); f *= g; }
+          say = "I'm repeating your " + seq.length + " moves, a little longer each time, to see where they spiral.";
+        } else if (kind === "stretch") {
+          var bend = 6 + Math.floor(Math.random() * 14);
+          walk(seq.map(function (m) { return [m[0], m[1] + (m[1] > 0 ? bend : m[1] < 0 ? -bend : 0)]; }), pts, st);
+          walk(seq.map(function (m) { return [m[0], m[1] + (m[1] > 0 ? bend : m[1] < 0 ? -bend : 0)]; }), pts, st);
+          say = "Your " + turns + " turns, each bent " + bend + " degrees more. Small changes, new shape.";
+        } else {
+          var sc2 = 0.5 + Math.random() * 0.3;
+          walk(seq, pts, st); pts.push([st.x, st.y, 1]); walk(seq.map(function (m) { return [m[0] * sc2, m[1]]; }), pts, st);
+          say = "I'm echoing your drawing, then a smaller copy right where it ends.";
+        }
+        lastIdea = kind; return { pts: pts, say: say, kind: kind };
+      }
+      // Nothing drawn yet: it connects the places it stopped to look.
+      var sp = spots.length >= 3 ? spots : spots.concat([[0, 0], [30, 10], [10, 35]]).slice(0, 3);
+      var q = sp.map(function (a, i) { return [a[0], a[1], i === 0 ? 1 : 0]; }); q.push([sp[0][0], sp[0][1], 0]);
+      lastIdea = "spots"; return { pts: q, say: "Your page is empty, so I joined the " + sp.length + " spots where I stopped to look around.", kind: "spots" };
+    }
+
     var roamId = 0;
     function roam() {
       // One tap: the turtle starts wandering its studio right away, pen up, pausing to look around
@@ -320,14 +379,14 @@
       var k = Math.max(0.55, Math.min(1, Math.min(w, h) / 140));
       var T = { x: w / 2, y: h / 2, h: Math.random() * 360 }, path = [], t0 = performance.now(), last = t0;
       var thinkFor = 2600 + Math.random() * 1800, look = 0, lookUntil = 0, turnRate = 0, cue = "?";
-      var petals = 5 + Math.floor(Math.random() * 8), side = Math.min(w, h) * 0.3, hd = Math.random() * 360;
+      var spots = [], idea = null;
       function plan() {
-        var pts = [];
-        for (var p = 0; p < petals; p++) {
-          var x = w / 2, y = h / 2, hh = hd + p * 360 / petals; pts.push([x, y, 1]);
-          for (var q = 0; q < 4; q++) { var rad = hh * Math.PI / 180; x += Math.sin(rad) * side; y -= Math.cos(rad) * side; pts.push([x, y, 0]); hh += 90; }
-        }
-        return pts;
+        idea = makeIdea(spots);
+        var P = idea.pts, x0 = 1e9, y0 = 1e9, x1 = -1e9, y1 = -1e9;
+        P.forEach(function (a) { x0 = Math.min(x0, a[0]); y0 = Math.min(y0, a[1]); x1 = Math.max(x1, a[0]); y1 = Math.max(y1, a[1]); });
+        var m = 10, f = Math.min((w - 2 * m) / Math.max(1, x1 - x0), (h - 2 * m) / Math.max(1, y1 - y0));
+        var ox = (w - (x1 - x0) * f) / 2 - x0 * f, oy = (h - (y1 - y0) * f) / 2 - y0 * f;
+        return P.map(function (a) { return [a[0] * f + ox, a[1] * f + oy, a[2]]; });
       }
       var sketch = null, si = 0, seg = 0;
       function paint(now) {
@@ -352,16 +411,16 @@
           if (now < lookUntil) { look = Math.sin((lookUntil - now) / 180) * 35; cue = "\u2026"; }
           else {
             look = 0; cue = "?";
-            if (Math.random() < 0.012) lookUntil = now + 700 + Math.random() * 600;
+            if (Math.random() < 0.012) { lookUntil = now + 700 + Math.random() * 600; if (spots.length < 7) spots.push([T.x, T.y]); }
             turnRate += (Math.random() - 0.5) * 0.6; turnRate *= 0.92; T.h += turnRate * dt / 16;
             var rad = T.h * Math.PI / 180, sp = 0.045 * dt;
             T.x += Math.sin(rad) * sp; T.y -= Math.cos(rad) * sp;
             var m = 10;
             if (T.x < m || T.x > w - m || T.y < m || T.y > h - m) { T.x = Math.max(m, Math.min(w - m, T.x)); T.y = Math.max(m, Math.min(h - m, T.y)); T.h += 150 + Math.random() * 60; }
           }
-          if (now - t0 > thinkFor) { sketch = plan(); cue = "!"; speak("Got an idea. Sketching it in my studio. It stays here unless I KNOCK and you let me in."); }
+          if (now - t0 > thinkFor) { sketch = plan(); cue = "!"; speak(idea.say + " It stays in my studio unless I KNOCK and you let me in."); }
         } else {
-          var tgt = sketch[si]; if (!tgt) { cue = ""; paint(now); ledger("turtle", "sketched " + petals + " petals in its studio"); return; }
+          var tgt = sketch[si]; if (!tgt) { cue = ""; paint(now); ledger("turtle", "sketched a " + idea.kind + " from what it noticed"); return; }
           if (tgt[2]) { T.x = tgt[0]; T.y = tgt[1]; path.push([T.x, T.y, 1]); si++; }
           else {
             var dx = tgt[0] - T.x, dy = tgt[1] - T.y, d = Math.hypot(dx, dy), v = 0.12 * dt;
