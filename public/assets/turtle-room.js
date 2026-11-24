@@ -288,8 +288,8 @@
         ledger("turtle", "retreated, kept the trace");
       } else if (m === "ROAM") {
         studio.hidden = false; roam();
-        speak("That's my studio, up in the corner. Nothing I make there lands on your page unless I KNOCK and you let me in.");
-        ledger("turtle", "roamed in its own studio");
+        speak("Roaming. I'm wandering my studio, up in the corner, looking for an idea. Nothing I make there lands on your page.");
+        ledger("turtle", "started roaming its studio");
       }
       spark();
     }
@@ -310,17 +310,70 @@
       else { never[pendingOffer.kind] = 1; ledger("you", "never this kind"); speak("Got it. No more " + pendingOffer.kind + " offers. That's about this kind of idea, not about you."); }
       pendingOffer = null;
     });
+    var roamId = 0;
     function roam() {
+      // One tap: the turtle starts wandering its studio right away, pen up, pausing to look around
+      // with a thinking cue. After a few seconds it settles on an idea and sketches it, dashed and signed.
+      var id = ++roamId;
       var r = sc.getBoundingClientRect(), w = Math.max(80, r.width), h = Math.max(60, r.height);
       sc.width = Math.round(w * dpr); sc.height = Math.round(h * dpr); sg.setTransform(dpr, 0, 0, dpr, 0, 0);
-      sg.clearRect(0, 0, w, h); sg.strokeStyle = TURTLE; sg.lineWidth = 1.4; sg.setLineDash([4, 3]);
+      var k = Math.max(0.55, Math.min(1, Math.min(w, h) / 140));
+      var T = { x: w / 2, y: h / 2, h: Math.random() * 360 }, path = [], t0 = performance.now(), last = t0;
+      var thinkFor = 2600 + Math.random() * 1800, look = 0, lookUntil = 0, turnRate = 0, cue = "?";
       var petals = 5 + Math.floor(Math.random() * 8), side = Math.min(w, h) * 0.3, hd = Math.random() * 360;
-      sg.beginPath();
-      for (var p = 0; p < petals; p++) {
-        var x = w / 2, y = h / 2, hh = hd + p * 360 / petals; sg.moveTo(x, y);
-        for (var q = 0; q < 4; q++) { var rad = hh * Math.PI / 180; x += Math.sin(rad) * side; y -= Math.cos(rad) * side; sg.lineTo(x, y); hh += 90; }
+      function plan() {
+        var pts = [];
+        for (var p = 0; p < petals; p++) {
+          var x = w / 2, y = h / 2, hh = hd + p * 360 / petals; pts.push([x, y, 1]);
+          for (var q = 0; q < 4; q++) { var rad = hh * Math.PI / 180; x += Math.sin(rad) * side; y -= Math.cos(rad) * side; pts.push([x, y, 0]); hh += 90; }
+        }
+        return pts;
       }
-      sg.stroke();
+      var sketch = null, si = 0, seg = 0;
+      function paint(now) {
+        sg.clearRect(0, 0, w, h);
+        if (path.length > 1) {
+          sg.strokeStyle = TURTLE; sg.lineWidth = 1.4; sg.setLineDash([4, 3]); sg.beginPath();
+          path.forEach(function (pt, i) { if (i === 0 || pt[2]) sg.moveTo(pt[0], pt[1]); else sg.lineTo(pt[0], pt[1]); }); sg.stroke(); sg.setLineDash([]);
+        }
+        turtle(sg, [T.x, T.y], T.h + look, 1, k * 0.8);
+        if (cue) {
+          var bob = Math.sin(now / 260) * 2, bx = Math.min(w - 12, T.x + 12 * k), by = Math.max(12, T.y - 20 * k + bob);
+          sg.fillStyle = "rgba(255,255,255,.92)"; sg.strokeStyle = TURTLE; sg.lineWidth = 1;
+          sg.beginPath(); sg.arc(bx, by, 8, 0, 7); sg.fill(); sg.stroke();
+          sg.beginPath(); sg.arc(bx - 7, by + 9, 2, 0, 7); sg.fill(); sg.stroke();
+          sg.fillStyle = TURTLE; sg.font = "bold 11px ui-monospace, monospace"; sg.textAlign = "center"; sg.textBaseline = "middle"; sg.fillText(cue, bx, by + 0.5);
+        }
+      }
+      function step(now) {
+        if (id !== roamId || studio.hidden) return;
+        var dt = Math.min(50, now - last); last = now;
+        if (!sketch) {
+          if (now < lookUntil) { look = Math.sin((lookUntil - now) / 180) * 35; cue = "\u2026"; }
+          else {
+            look = 0; cue = "?";
+            if (Math.random() < 0.012) lookUntil = now + 700 + Math.random() * 600;
+            turnRate += (Math.random() - 0.5) * 0.6; turnRate *= 0.92; T.h += turnRate * dt / 16;
+            var rad = T.h * Math.PI / 180, sp = 0.045 * dt;
+            T.x += Math.sin(rad) * sp; T.y -= Math.cos(rad) * sp;
+            var m = 10;
+            if (T.x < m || T.x > w - m || T.y < m || T.y > h - m) { T.x = Math.max(m, Math.min(w - m, T.x)); T.y = Math.max(m, Math.min(h - m, T.y)); T.h += 150 + Math.random() * 60; }
+          }
+          if (now - t0 > thinkFor) { sketch = plan(); cue = "!"; speak("Got an idea. Sketching it in my studio. It stays here unless I KNOCK and you let me in."); }
+        } else {
+          var tgt = sketch[si]; if (!tgt) { cue = ""; paint(now); ledger("turtle", "sketched " + petals + " petals in its studio"); return; }
+          if (tgt[2]) { T.x = tgt[0]; T.y = tgt[1]; path.push([T.x, T.y, 1]); si++; }
+          else {
+            var dx = tgt[0] - T.x, dy = tgt[1] - T.y, d = Math.hypot(dx, dy), v = 0.12 * dt;
+            T.h = Math.atan2(dx, -dy) * 180 / Math.PI;
+            if (d <= v) { T.x = tgt[0]; T.y = tgt[1]; si++; } else { T.x += dx / d * v; T.y += dy / d * v; }
+            path.push([T.x, T.y, 0]);
+          }
+          if (++seg > 40 && cue === "!") cue = "";
+        }
+        paint(now); requestAnimationFrame(step);
+      }
+      paint(t0); requestAnimationFrame(step);
     }
 
     function submitDraw(cmd) {

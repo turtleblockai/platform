@@ -26,9 +26,9 @@ html.troom-on,html.troom-on body{overflow:hidden;height:100%}
 .tr-answers{display:flex;flex-wrap:wrap;gap:.35rem}
 .tr-answers button{border:1px solid #8f8370;background:#fffaf0;border-radius:999px;padding:.35rem .7rem;cursor:pointer;min-height:34px;font-family:"IBM Plex Mono",monospace;font-size:.76rem}
 .tr-answers button[data-a=yes]{background:#b5651d;border-color:#b5651d;color:#fff}
-.tr-studio{position:absolute;right:.5rem;bottom:.5rem;width:min(34%,190px);background:#fffaf0;border:1px dashed #b5651d;border-radius:10px;padding:.25rem}
+.tr-studio{position:absolute;right:.5rem;bottom:.5rem;width:min(42%,250px);background:#fffaf0;border:1px dashed #b5651d;border-radius:10px;padding:.25rem}
 .tr-studio span{display:block;font-family:"IBM Plex Mono",monospace;font-size:.6rem;line-height:1.2;color:#7a4a17}
-.tr-studio canvas{display:block;width:100%;height:clamp(54px,10vh,110px)}
+.tr-studio canvas{display:block;width:100%;height:clamp(84px,17vh,160px)}
 .tr-knock:not([hidden])~.tr-studio{display:none}
 .tr-ledger-btn{position:absolute;right:.5rem;top:.5rem;border:1px solid #c9bda6;background:rgba(255,250,240,.9);border-radius:999px;font-family:"IBM Plex Mono",monospace;font-size:.68rem;padding:.25rem .55rem;cursor:pointer;color:#004946;opacity:0;pointer-events:none}
 .troom.drawn .tr-ledger-btn{opacity:1;pointer-events:auto}
